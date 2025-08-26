@@ -1,0 +1,31 @@
+{
+    // dónde dejar el PDF (vacío = misma carpeta que el .md)
+    "markdown-pdf.outputDirectory": "",
+  
+    // tamaño y márgenes de página
+    "markdown-pdf.paperFormat": "A4",
+    "markdown-pdf.paperMargin": {
+      "top": "1cm",
+      "right": "1cm",
+      "bottom": "1cm",
+      "left": "1cm"
+    },
+ 
+      "markdown-pdf.pageBreakAfter": [], 
+ 
+    // Desactiva cabecera y pie de página
+    "markdown-pdf.displayHeaderFooter": false,
+
+    // Asegúrate de que no haya plantillas ocultas
+    "markdown-pdf.headerTemplate": "",
+    "markdown-pdf.footerTemplate": "" ,
+
+    // tiempo de espera para que carguen bien las imágenes
+    "markdown-pdf.renderDelay": 1000,
+  
+    
+    // incluye tu CSS
+    "markdown-pdf.styles": [
+      ".vscode/markdown.css"
+    ]
+  }

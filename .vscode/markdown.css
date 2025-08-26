@@ -1,0 +1,128 @@
+/* markdown.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.4;
+  padding: 1cm;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5em auto;
+}
+
+pre, code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  page-break-inside: avoid; /* Evita que la tabla se corte entre páginas */
+  table-layout: fixed; /* Asegura que las celdas tengan un tamaño controlado */
+  margin-bottom: 20px; /* Añade espacio después de cada tabla para mejor legibilidad */
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 0.8em; /* Aumenta el padding para mejorar la legibilidad */
+  text-align: left;
+  max-width: 150px; /* Limita el ancho máximo de las celdas */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el contenido es demasiado largo */
+}
+
+table th {
+  background-color: #f2f2f2; /* Mejora la visibilidad de los encabezados */
+  font-weight: bold; /* Hace los encabezados más visibles */
+}
+
+td {
+  white-space: normal; /* Permite que el texto se ajuste automáticamente */
+  word-wrap: break-word; /* Asegura que las palabras largas no desborden */
+  padding-right: 10px; /* Añade un pequeño espacio a la derecha de las celdas */
+}
+
+/* Mejoras para la visibilidad de la tabla y una apariencia más limpia */
+table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alterna el color de fondo de las filas para mejor legibilidad */
+}
+
+table tr:hover {
+  background-color: #e0e0e0; /* Resalta una fila cuando el ratón pasa sobre ella */
+}
+
+table caption {
+  font-size: 1.2em; /* Hace que el título de la tabla sea más prominente */
+  font-weight: bold;
+  margin-bottom: 10px; /* Añade espacio debajo del título de la tabla */
+}
+
+table {
+  page-break-before: auto; /* Evita el salto de página innecesario */
+}
+
+.page {
+ display: block;
+  page-break-after: always;
+  margin: 0;       /* sin margen arriba ni abajo */
+  padding: 0;      /* sin relleno */
+  height: 0;       /* sin altura visible */
+  overflow: hidden;
+}
+ 
+.no-break {
+  page-break-after: always;    /* salto antes del bloque */
+  page-break-inside: avoid;    /* no fragmentar lo que haya dentro */
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+/* 1) Permitir fragmentar la tabla salvo la cabecera + primera fila */
+table {
+  page-break-inside: auto !important;
+  break-inside: auto !important;
+}
+
+/* 2) Nunca cortar _entre_ el <thead> y la primera fila */
+thead {
+  page-break-after: avoid !important;
+}
+tbody tr:first-child {
+  page-break-inside: avoid !important;
+}
+
+/* 3) (Opcional) Si no quieres repetir la cabecera en cada página: */
+thead {
+  /* desactiva la “repetición” automática */
+  display: table-row-group !important;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.center * {
+  text-align: center !important;
+}
+
+.center table {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.center img {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#cover-page * {
+  text-align: center !important;
+}
+#cover-page table {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
