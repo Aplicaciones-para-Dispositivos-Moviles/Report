@@ -80,6 +80,19 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 
 <br>
 
+**Piero Hugo Elescano Leon (u202313354)**
+
+<div style="display: flex; align-items: center;">
+  <img src="assets/images/piero.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <div style="flex: 1;">
+  <p> Soy estudiante del sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me apasiona aprender sobre las tecnologias innovadoras<br>
+  Actualmente mi mayor interes es en el desarrollo de aplicaciones frontend y backend, donde he desarrollado proyectos de software usando los lenguajes de java y c#. <br>
+  Por otro lado, he desarrollado mis habilidades en el trabajo en equipo y liderazgo lo que beneficia mucho en los proyectos donde se requiere el compromiso y dedicacion de todos los integrantes. </p>
+  </div> 
+</div>
+
+<br>
+
 ## 1.2 Solution Profile
 
 ### 1.2.1 Antecedente y Problemática
