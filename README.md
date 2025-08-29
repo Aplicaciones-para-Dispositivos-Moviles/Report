@@ -1,7 +1,6 @@
 <div id="cover-page">
----
-# Informe de Trabajo Final**
----
+
+# Informe de Trabajo Final
 <img src="assets/images/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
 
 _Universidad Peruana de Ciencias Aplicadas_
@@ -41,7 +40,7 @@ _Agosto 2025_
 
 </div>
 
-## **Registro de Versiones**
+## egistro de Versiones
 
 | *Versión* | *Fecha* | *Autor*          | *Descripción de modificación*                                                                                                                                                                                                                                        |
 | :----------: | :-------: | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
