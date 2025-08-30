@@ -342,6 +342,9 @@ Además, se completaron las secciones finales del informe, incluyendo la validac
 - [Video About-the-Team](conclusiones.md#video-about-the-team)
 
 ## [Bibliografía](bibliography.md)
+Cross, D. (2024). Innovating Restaurant Inventory Management Application Enhancing Quality And Efficiency Through Extreme Pro-gramming Approach. _JURNAL EKONOMI, 13_(2), 696-698. [https://ejournal.seaninstitute.or.id/index.php/Ekonomi/article/view/4476](https://ejournal.seaninstitute.or.id/index.php/Ekonomi/article/view/4476)
+
+Valenzuela, A., Vera, B., Castillo, L., Valenzuela, J. (2024). Industry 4.0 in Logistics Management in Latin America: A Bibliometric Review. _Journal of Indutrial Ingineering and Management, 18_(1), 115-129. [https://www.jiem.org/index.php/jiem/article/view/8147/1117](https://www.jiem.org/index.php/jiem/article/view/8147/1117)
 
 ## [Anexos](anexos.md)
 
