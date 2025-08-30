@@ -141,33 +141,45 @@ Porque la falta de automatización:
 - Por tanto, se evidencia una clara necesidad de una solución tecnológica accesible, fácil de usar y que permita automatizar la administración de inventario, con reportes útiles, alertas y una interfaz intuitiva adaptada a las necesidades reales de los propietarios de restaurantes.
 
 ### 1.2.2 Lean UX Proccess
+En esta sección se implementa el proceso Lean UX, abordando la visión del modelo de negocio que el producto de software respaldará. Se incluyen declaraciones del problema (Problem Statements), suposiciones (Assumptions) e hipótesis (Hypothesis Statements) conforme al enfoque Lean UX. Al final, se presenta el Lean UX Canvas correspondiente.
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-El estado actual de la operación en restaurantes ha dependido principalmente de la gestión manual de inventarios y pedidos por parte de administradores y proveedores. Utilizan hojas de cálculo, cuadernos físicos y mensajería informal. Estos procesos generan errores, desperdicio de insumos y falta de control operativo.
+Actualmente, administradores y proveedores de restaurantes dependen de procesos manuales (hojas de cálculo, cuadernos y mensajería informal) para gestionar inventarios y pedidos. Esta situación genera errores, desperdicio de insumos, retrasos en el abastecimiento y falta de control operativo (Cross, 2024, citado en Chen & Peng, 2023; El-Said & Al Hajri, 2022; Opazo, 2012; Staley & Jucker, 2021; Wang, 2017).
 
-Lo que los productos actuales no resuelven es la necesidad de una solución accesible y sencilla que integre a proveedores y permita automatizar la operación sin requerir conocimientos muy técnicos.
+Las soluciones existentes no resuelven la necesidad de una herramienta accesible y sencilla que conecte proveedores y restaurantes, permitiendo automatizar pedidos e integrar la comunicación sin requerir conocimientos técnicos avanzados (Cross, 2024).
 
 Nuestro producto abordará esta brecha mediante una plataforma que digitaliza la gestión de inventario, automatiza pedidos a proveedores y centraliza la comunicación entre las dos partes.
 
-Nuestro enfoque inicial estará dirigido a administradores de restaurantes y proveedores. Sabremos que hemos tenido éxito cuando veamos una reducción del desperdicio, una mejora en los tiempos de abastecimiento, y un uso recurrente de la plataforma para registrar inventario y coordinar pedidos por parte de los usuarios
+Nuestro enfoque inicial estará dirigido a administradores de restaurantes y proveedores. Sabremos que hemos tenido éxito cuando veamos una reducción del 30% en desperdicios, una mejora en los tiempos de abastecimiento en un 20%, y un uso recurrente de la plataforma para registrar inventario y coordinar pedidos por parte de los usuarios en un 50%.
 
 #### 1.2.2.2 Lean UX Assumptions
 
 ##### A. Business Assumptions
 
-1. **Creemos que nuestros clientes necesitan** reducir mermas y errores operativos en la gestión de insumos.
-2. **Estas necesidades se resuelven con** una plataforma SaaS ligera que unifique inventario, pedidos y pagos.
-3. **Nuestros primeros clientes serán** administradores de restaurantes medianos urbanos y sus proveedores habituales.
-4. **Valor #1 esperado**: visibilidad y control operativo en tiempo real.
-5. **Beneficios adicionales**: ahorro de tiempo, trazabilidad de pagos, mejor relación restaurante-proveedor.
-6. **Adquisición**: referencias boca-a-boca, visitas comerciales y redes sociales del sector HORECA.
-7. **Ingresos**: suscripción mensual escalonada por rol (restaurante / proveedor).
-8. **Competencia principal**: Oracle Simphony, RestroWorks, SoftRestaurant.
-9. **Ventaja competitiva**: interfaz simple, pricing accesible y personalización sin alta curva técnica.
-10. **Mayor riesgo de producto**: baja adopción por falta de familiaridad digital.
-11. **Mitigación**: onboarding guiado, soporte 1-a-1 y quick-wins configurados por defecto.
-12. **Otros supuestos críticos**: conectividad estable en cocinas y almacenes; disposición de los proveedores a digitalizar su catálogo.
+1. Creemos que nuestros clientes (administradores de restaurantes y proveedores) necesitan reducir mermas y errores operativos en la gestión de insumos.
+
+2. Creemos que estas necesidades pueden resolverse con una plataforma SaaS ligera que unifique inventario, pedidos y pagos.
+
+3. Creemos que nuestros primeros clientes serán administradores de restaurantes medianos urbanos y sus proveedores habituales.
+
+4. Creemos que el valor #1 que buscan nuestros clientes es la visibilidad y el control operativo en tiempo real.
+
+5. Creemos que los beneficios adicionales que valorarán son el ahorro de tiempo, la trazabilidad de pagos y la mejora en la relación restaurante–proveedor.
+
+6. Creemos que podremos adquirir a nuestros primeros clientes a través de referencias boca a boca, visitas comerciales y redes sociales del sector HORECA.
+
+7. Creemos que nuestros ingresos vendrán de un modelo de suscripción mensual escalonado por rol (restaurante / proveedor).
+
+8. Creemos que nuestra competencia principal serán soluciones como Oracle Simphony, RestroWorks y SoftRestaurant.
+
+9. Creemos que nuestra ventaja competitiva será ofrecer una interfaz simple, un pricing accesible y la posibilidad de personalización sin alta curva técnica.
+
+10. Creemos que el mayor riesgo de producto es la baja adopción por falta de familiaridad digital.
+
+11. Creemos que podremos mitigar este riesgo mediante un onboarding guiado, soporte 1-a-1 y quick-wins configurados por defecto.
+
+12. Creemos que existen otros supuestos críticos para la adopción, como la necesidad de conectividad estable en cocinas y almacenes, y la disposición de los proveedores a digitalizar su catálogo.
 
 ##### B. User Assumptions
 
@@ -180,24 +192,33 @@ Nuestro enfoque inicial estará dirigido a administradores de restaurantes y pro
 
 ##### C. User Outcome & Benefit Assumptions
 
-- Stock actualizado sin hojas de cálculo.
-- Menos desperdicio y compras urgentes.
-- Proveedores entregan y cobran más rápido.
-- Decisiones operativas basadas en datos, no intuición.
+- Creemos que los usuarios podrán mantener su stock actualizado sin depender de hojas de cálculo.
+
+- Creemos que los usuarios tendrán menos desperdicio y reducirán la necesidad de compras urgentes.
+
+- Creemos que los proveedores podrán entregar y cobrar más rápido al centralizar sus procesos en la plataforma.
+
+- Creemos que los administradores tomarán decisiones operativas basadas en datos y no en intuición.
 
 ##### D. Business Outcome Assumptions (métricas objetivo)
 
-- Aumentar en un 30 % el DAU (Daily Active Users) en 2 meses.
-- Incrementar 40 % en pedidos gestionados por la app y menos del 25 % en errores de pedido.
-- Disminuir un 35 % en desperdicio de insumos reportado.
-- 500 usuarios activos en 6 meses (2025).
+- Creemos que podremos aumentar en un 30 % el DAU (Daily Active Users) en los primeros 2 meses.
+
+- Creemos que podremos incrementar en un 40 % los pedidos gestionados por la app y reducir en un 25 % los errores de pedido.
+
+- Creemos que podremos disminuir en un 35 % el desperdicio de insumos reportado por los restaurantes.
+
+- Creemos que podremos alcanzar 500 usuarios activos en los primeros 6 meses de 2025.
 
 ##### E. Feature Assumptions
 
-1. **Inventario automatizado** con alertas reduce mermas y errores.
-2. **Interfaz + onboarding simple** acelera la adopción inicial.
-3. **Reportes KPI automáticos** mejora decisiones de compra.
-4. **Canal proveedor-restaurante (catálogo + tracking + chat)** centraliza pedidos y reduce fricción.
+- Creemos que un módulo de inventario automatizado con alertas en tiempo real reducirá mermas y errores en la gestión de insumos.
+
+- Creemos que una interfaz simple con onboarding guiado acelerará la adopción inicial de la plataforma.
+
+- Creemos que los reportes automáticos con KPIs ayudarán a los administradores a mejorar sus decisiones de compra.
+
+- Creemos que un canal integrado proveedor–restaurante (catálogo, tracking y chat) centralizará los pedidos y reducirá la fricción en la comunicación.
 
 ---
 
