@@ -1,8 +1,8 @@
 <div id="cover-page">
 
-
 # Informe de Trabajo Final
-<img src="assets/images/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
+
+<img src="assets/images/presentation/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
 
 _Universidad Peruana de Ciencias Aplicadas_
 
@@ -42,7 +42,6 @@ _Agosto 2025_
 </div>
 
 ## Registro de Versiones
-
 
 | *Versión* | *Fecha* | *Autor*         | *Descripción de modificación*                                                                                                                                        |
 | :----------: | :-------: | :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -87,7 +86,6 @@ Se redactaron las secciones base del informe: Introducción, Justificación, Obj
   - Prototipo inicial en Figma.
   - Página informativa y formulario de contacto en Landing.
 - **Commits por integrante:**
-
 
 TO-DO
 
@@ -155,7 +153,7 @@ TO-DO
     - [4.1.3.2. Software Architecture Container Level Diagrams](cap4-product-design.md#4132-software-architecture-container-level-diagrams)
     - [4.1.3.3. Software Architecture Deployment Diagrams](cap4-product-design.md#4133-software-architecture-deployment-diagrams)
 - [4.2. Tactical-Level Domain-Driven Design](cap4-product-design.md#42-tactical-level-domain-driven-design)
-  - [4.2.1. Bounded Context: <Resource>](cap4-product-design.md#42x-bounded-context)
+  - [4.2.1. Bounded Context: `<Resource>`](cap4-product-design.md#42x-bounded-context)
     - [4.2.1.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
     - [4.2.1.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
     - [4.2.1.3. Application Layer](cap4-product-design.md#42x3-application-layer)
@@ -164,7 +162,7 @@ TO-DO
     - [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
     - [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
     - [4.2.1.6.2. Bounded Context Database Design Diagram](cap4-product-design.md#42x62-bounded-context-database-design-diagram)
-  - [4.2.2. Bounded Context: <Subscriptions>](cap4-product-design.md#42x-bounded-context)
+  - [4.2.2. Bounded Context: `<Subscriptions>`](cap4-product-design.md#42x-bounded-context)
     - [4.2.2.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
     - [4.2.2.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
     - [4.2.2.3. Application Layer](cap4-product-design.md#42x3-application-layer)
@@ -172,7 +170,7 @@ TO-DO
     - [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
     - [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
     - [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
-  - [4.2.3. Bounded Context: <Analytics>](cap4-product-design.md#42x-bounded-context)
+  - [4.2.3. Bounded Context: `<Analytics>`](cap4-product-design.md#42x-bounded-context)
     - [4.2.3.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
     - [4.2.3.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
     - [4.2.3.3. Application Layer](cap4-product-design.md#42x3-application-layer)
@@ -180,7 +178,7 @@ TO-DO
     - [4.2.3.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
     - [4.2.3.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
     - [4.2.3.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
-  - [4.2.4. Bounded Context: <Identity and Guess Managements>](cap4-product-design.md#42x-bounded-context)
+  - [4.2.4. Bounded Context: `<Identity and Guess Managements>`](cap4-product-design.md#42x-bounded-context)
     - [4.2.4.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
     - [4.2.4.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
     - [4.2.4.3. Application Layer](cap4-product-design.md#42x3-application-layer)
@@ -188,7 +186,7 @@ TO-DO
     - [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
     - [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
     - [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
-  - [4.2.5. Bounded Context: <Monitoring>](cap4-product-design.md#42x-bounded-context)
+  - [4.2.5. Bounded Context: `<Monitoring>`](cap4-product-design.md#42x-bounded-context)
     - [4.2.5.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
     - [4.2.5.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
     - [4.2.5.3. Application Layer](cap4-product-design.md#42x3-application-layer)
@@ -196,7 +194,7 @@ TO-DO
     - [4.2.5.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
     - [4.2.5.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
     - [4.2.5.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
-  - [4.2.6. Bounded Context: <Profiles>](cap4-product-design.md#42x-bounded-context)
+  - [4.2.6. Bounded Context: `<Profiles>`](cap4-product-design.md#42x-bounded-context)
     - [4.2.6.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
     - [4.2.6.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
     - [4.2.6.3. Application Layer](cap4-product-design.md#42x3-application-layer)
@@ -204,7 +202,7 @@ TO-DO
     - [4.2.6.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
     - [4.2.6.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
     - [4.2.6.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
-  - [4.2.7. Bounded Context: <Planning>](cap4-product-design.md#42x-bounded-context)
+  - [4.2.7. Bounded Context: `<Planning>`](cap4-product-design.md#42x-bounded-context)
     - [4.2.7.1 Domain Layer](cap4-product-design.md#42x1-domain-layer)
     - [4.2.7.2 Interface Layer](cap4-product-design.md#42x2-interface-layer)
     - [4.2.7.3 Application Layer](cap4-product-design.md#42x3-application-layer)
@@ -212,7 +210,6 @@ TO-DO
     - [4.2.7.5 Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
     - [4.2.7.6 Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
     - [4.2.7.6.1 Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
-
 
 ## [Capítulo V: Product Implementation, Validation &amp; Deployment](cap5-prod-implementation-validation-deployment.md)
 
@@ -254,4 +251,18 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 # Objetivos SMART
 
-*2 objs por integrante
+A continuación, se presentarán los objetivos SMART (Specific, Measurable, Achievable, Relevant y Time-bound) relacionados al desarrollo profesional de cada integrante del equipo una vez finalizada su carrera.
+
+**-- Julio Castro --**
+
+**-- Piero Elescano --**
+
+**-- Jahaziel Guerra --**
+
+**-- Sergio Julca --**
+
+
+**-- Gabriela Shapiama --**
+
+* En los 12 meses posteriores a mi graduación, rotar por 3 áreas de software (por ejemplo, frontend, backend/API y DevOps/QA), realizando al menos 1 proyecto entregable por área y publicando una bitácora de aprendizaje por cada una. Esto me permitirá colaborar con equipos diversos, fortalecer habilidades end-to-end y, con evidencia de resultados, definir con mayor precisión mi futura especialización.
+* En 18 meses ampliaré mi exposición a tecnología para entretenimiento participando en 1–2 eventos del sector (meetups, game jams o showcases académicos) para conocer prácticas y hacer networking; contribuiré con 1 o más PR(s) a un proyecto open source afín (por ejemplo, librerías de audio/gráficos, motores o tooling de streaming) y realizaré 1 entrega pública (demo técnica reproducible). Además, estableceré una mentoría con un profesional del área para revisar portafolio, priorizar habilidades y definir oportunidades concretas de siguiente paso.
