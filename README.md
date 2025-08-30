@@ -2,7 +2,7 @@
 ---
 # **Informe de Trabajo Final**
 ---
-<img src="assets/images/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
+<img src="assets/images/presentation/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
 
 _Universidad Peruana de Ciencias Aplicadas_
 
@@ -59,7 +59,7 @@ Esta sección detalla cómo el equipo colaboró para construir el **Final Projec
 **Repositorio del informe del proyecto:**
 [https://shorturl.at/ujj4j](https://shorturl.at/ujj4j)
 
-![Evidencia de commits del repositorio](assets/images/ci-overview.png)
+![Evidencia de commits del repositorio](assets/images/presentation/ci-overview.png)
 
 - **Total de commits:** 507
 - **Autores contribuyentes:**
@@ -77,7 +77,7 @@ Todas las entregas se desarrollaron sobre ramas específicas con *pull requests*
 
 Se redactaron las secciones base del informe: Introducción, Justificación, Objetivos, Guias de estilo, Usuarios y Flujo de Valor. Se construyó una **Landing Page estática** con HTML5, CSS3 y JS. Las decisiones se documentaron en Trello, y se utilizó Figma para el primer prototipo visual. Cada sección del informe fue escrita en ramas separadas y luego unificada en `develop`.
 
-![Colaboraciones TB1](assets/images/ci-tb1.png)
+![Colaboraciones TB1](assets/images/presentation/ci-tb1.png)
 
 - **Contribuciones destacadas del informe:**
 
@@ -104,7 +104,7 @@ Se desarrolló el **frontend** con Angular 19, Angular Material, PrimeNG y arqui
 
 Se añadieron diagramas de carpetas y estructuras en PlantUML. Se mejoró la Landing Page con animaciones y optimización SEO.
 
-![Colaboraciones TP1](assets/images/ci-tp1.png)
+![Colaboraciones TP1](assets/images/presentation/ci-tp1.png)
 
 - **Contribuciones destacadas del informe:**
 
@@ -130,7 +130,7 @@ Se diseñó e implementó el **backend con Spring Boot**, siguiendo los principi
 
 En el informe se documentó el trabajo realizado durante el **Sprint 3**, incluyendo el avance del *Product Backlog*, la implementación y despliegue de los primeros servicios del sistema. Se incluyeron diagramas de arquitectura generados con **Structurizr DSL**, abarcando los niveles C1 (Contexto), C2 (Contenedores) y C3 (Componentes), junto con capturas de Swagger UI y evidencia de los endpoints REST ya operativos.
 
-![Colaboraciones TB2](assets/images/ci-tb2.png)
+![Colaboraciones TB2](assets/images/presentation/ci-tb2.png)
 
 - **Contribuciones destacadas del informe:**
 
@@ -153,7 +153,7 @@ Durante esta etapa se consolidó el sistema completo, asegurando su funcionamien
 
 Además, se completaron las secciones finales del informe, incluyendo la validación por entrevistas, resultados del proyecto, **Conclusiones**, **Bibliografía** y **Anexos**. Se incorporaron capturas funcionales del sistema, flujos de autenticación, y scripts de ejemplo. También se aplicó una revisión final al estilo Markdown y se actualizaron tablas y artefactos previos.
 
-![Colaboraciones TF](assets/images/ci-tf.png)
+![Colaboraciones TF](assets/images/presentation/ci-tf.png)
 
 - **Contribuciones destacadas del informe:**
 

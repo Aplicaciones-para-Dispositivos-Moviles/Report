@@ -27,7 +27,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 **Williams Eduardo Avendaño Balarezo (u202315325)**
 
 <div style="display: flex; align-items: center;">
-  <img src="assets/images/williams.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="assets/images/cap1/williams.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p>Soy estudiante de Ingeniería de Software, con un fuerte enfoque en el desarrollo de soluciones eficientes a través de la programación y los algoritmos. Tengo experiencia en desarrollo web, tanto en frontend como en backend, y conocimientos en AWS (como S3 Storage y AWS Lex). Me apasiona aprender nuevas tecnologías y mejorar continuamente mis habilidades. <br> Puedo aportar al equipo una capacidad sólida para desarrollar aplicaciones escalables y optimizadas, integrando servicios de AWS para mejorar la eficiencia. Mi mentalidad orientada a resultados y mi enfoque en la resolución de problemas me permiten mantener altos estándares de calidad en el desarrollo. </p>
   </div>
@@ -38,7 +38,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 **Julio Castro Alejos (u202021885)**
 
 <div style="display: flex; align-items: center;">
-  <img src="assets/images/julio.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="assets/images/cap1/julio.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p> Soy estudiante de Ingeniería de Software con un gran interés en el desarrollo web y el enfoque DevOps. Me apasiona entender cómo funcionan los sistemas a nivel técnico y cómo integrarlos de forma eficiente para ofrecer soluciones escalables.  <br>
   Me motiva trabajar en equipo, aprender nuevas herramientas y metodologías que potencien tanto el desarrollo como la entrega continua de software de calidad.  <br>
@@ -54,7 +54,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 **José Jahaziel Guerra Perez (u202319831)**
 
 <div style="display: flex; align-items: center;">
-  <img src="assets/images/jahaziel.jpg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="assets/images/cap1/jahaziel.jpg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p>Soy estudiante de Ingeniería de Software, actualmente en el quinto ciclo de la carrera. Me apasiona el aprendizaje continuo, la planificación detallada y la búsqueda de soluciones eficientes a problemas reales. <br>
   Mi enfoque profesional está orientado al desarrollo backend, con especial interés en la construcción de sistemas distribuidos, escalables y resilientes, aplicando arquitecturas basadas en microservicios, mensajería asincrónica y herramientas de CI/CD modernas. <br>
@@ -68,7 +68,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 **Yaku Mateo Guzmán Cabrejos (u20231b173)**
 
 <div style="display: flex; align-items: center;">
-  <img src="assets/images/yaku.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="assets/images/cap1/yaku.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p> Soy estudiante de Ingeniería de Software, motivado por el desarrollo de aplicaciones y por entender cómo funcionan las tecnologías detrás de ellas. Me gusta crear soluciones útiles, eficientes y seguras. Tengo experiencia en frontend y backend, y conocimientos sólidos en estructuras de datos, patrones de diseño y arquitectura de software, lo que me permite construir sistemas bien organizados y escalables. <br>
   A futuro, me gustaría especializarme en informática forense y ciberseguridad. Me interesa aprender nuevas herramientas y metodologías que mejoren el desarrollo y la calidad del software. <br>
@@ -81,7 +81,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 **Antonio Jhair Navarro Chinga (u202314101)**
 
 <div style="display: flex; align-items: center;">
-  <img src="assets/images/antonio.jpeg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="assets/images/cap1/antonio.jpeg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p> 
   Mi nombre es Antonio Jhair Navarro Chinga, tengo 19 años y soy estudiante del quinto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Desde mis primeros cursos descubrí mi interés por la tecnología y el desarrollo de soluciones innovadoras, lo que me ha motivado a fortalecer mis conocimientos día a día. <br>
@@ -96,7 +96,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 **Gabriela Nicole Shapiama Rivera (u202319448)**
 
 <div style="display: flex; align-items: center;">
-  <img src="assets/images/gaby.jpeg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="assets/images/cap1/gaby.jpeg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p> Soy estudiante del sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas, motivada por una fuerte pasión por la lógica y el razonamiento, pilares fundamentales en la programación.<br>
   Me interesa comprender a fondo cómo funcionan los sistemas de software que usamos a diario; por ello he desarrollado habilidades en C++, Python y Java, así como una base sólida en tecnologías web: Angular y Vue (frontend), Spring Boot, ASP.NET y FastAPI (backend), además de HTML. Manejo herramientas de control de versiones como Git y plataformas colaborativas como GitHub, siguiendo Gitflow y convenciones como Conventional Commits. Asimismo, trabajo con Power Automate y Power Apps integradas con SharePoint, realizo modelado y consultas en SQL, y cuento con conocimientos de Azure y Docker para el desarrollo y despliegue de aplicaciones.<br>

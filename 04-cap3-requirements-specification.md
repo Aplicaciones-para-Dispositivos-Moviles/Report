@@ -6,13 +6,13 @@
 
 Este escenario To-Be fue construido tras una revisión detallada del escenario As-Is de Carolina Rivas y de las oportunidades de mejora identificadas a partir de las entrevistas. Se definieron las fases del proceso y se contrastaron con las actuales. Se priorizaron mejoras en eficiencia, control, automatización y reducción de frustraciones operativas.
 
-![Foto de To-Be Scenario Mapping Sector 1](assets/images/to-be_sector1.png)
+![Foto de To-Be Scenario Mapping Sector 1](assets/images/cap3/to-be_sector1.png)
 
 **Segmento objetivo 2:** Proveedores de Restaurantes
 
 Este escenario To-Be fue construido a partir del análisis del escenario As-Is de Jorge Torres. se incorporaron mejoras basadas en las necesidades y frustraciones. El equipo propuso una experiencia futura donde Jorge cuenta con una plataforma digital para gestionar pedidos, organizar rutas, registrar pagos y comunicarse con los restaurantes
 
-![Foto de To-Be Scenario Mapping Sector 1](assets/images/to-be_sector2.png)
+![Foto de To-Be Scenario Mapping Sector 1](assets/images/cap3/to-be_sector2.png)
 
 ## 3.2 User Stories
 
@@ -628,7 +628,7 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
 
 A continuación se presenta el Impact Map de Restock , el cual permite visualizar de manera clara cómo las funcionalidades clave de la aplicación se alinean con los objetivos de negocio, considerando a los actores involucrados y los impactos esperados en su comportamiento.
 
-![Foto de Impact Mapping](assets/images/impact-map.png)
+![Foto de Impact Mapping](assets/images/cap3/impact-map.png)
 
 ## 3.4 Product Backlog
 
@@ -1133,7 +1133,7 @@ A continuación, se presenta una captura de pantalla del backlog de historias de
 
 El tablero está estructurado en torno a diversas épicas que agrupan funcionalidades afines, y cada historia está vinculada a su correspondiente epic.
 
-![Vista del Product Backlog en Trello](assets/images/trello-backlog.png)
+![Vista del Product Backlog en Trello](assets/images/cap3/trello-backlog.png)
 
 Asimismo, se puede acceder directamente al backlog mediante el siguiente enlace:
 
