@@ -48,9 +48,9 @@ _Abril 2025_
 | :----------: | :-------: | :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     1.1     | 14/09/25 | Julio Castro      | Se adjuntó segmentos objetivos, diseño de entrevistas, registro de entrevistas, User Stories, Software Architecture y Bounded Context Resource.                        |
 |     1.2     | 15/09/25 | Piero Elescano    | Se elaboró Lean UX Hypothesis Statements, User personas, Empathy Mapping, User Stories, Bounded Context IAM y Profiles, y Bounded Context Canvases.                    |
-|     1.3     | 15/04/25 | Jahaziel Guerra   | Se redactó analisis competitivo, User Stories, Ubiquitous Language, Product Backlog, Software Architecture Deployment Diagrams y Bounded Context Planning y Monitoring. |
-|     1.4     | 16/04/25 | Sergio Julca      | Se redactó Lean UX Problem Statements y Assumptions, User Stories, Context Mappin, As-Is y To-Be Scenario Mapping y Bounded Context Analytics y Subscriptions.          |
-|     1.5     | 16/04/25 | Gabriela Shapiama | Se adjuntó Lean UX Canvas, competidores, registro de entrevistas, Impact Mapping, User Stories, Event Storming y Bounded Context Resource.                             |
+|     1.3     | 15/09/25 | Jahaziel Guerra   | Se redactó analisis competitivo, User Stories, Ubiquitous Language, Product Backlog, Software Architecture Deployment Diagrams y Bounded Context Planning y Monitoring. |
+|     1.4     | 16/09/25 | Sergio Julca      | Se redactó Lean UX Problem Statements y Assumptions, User Stories, Context Mappin, As-Is y To-Be Scenario Mapping y Bounded Context Analytics y Subscriptions.          |
+|     1.5     | 16/09/25 | Gabriela Shapiama | Se adjuntó Lean UX Canvas, competidores, registro de entrevistas, Impact Mapping, User Stories, Event Storming y Bounded Context Resource.                             |
 
 # Project Report Collaboration Insights
 
