@@ -98,9 +98,9 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 <div style="display: flex; align-items: center;">
   <img src="assets/images/gaby.jpeg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
-  <p> Soy estudiante del quinto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas, motivada por una fuerte pasión por la lógica y el razonamiento, pilares fundamentales en la programación.<br>
-  Mi interés por comprender a fondo el funcionamiento de los sistemas de software que utilizamos   diariamente me ha llevado a desarrollar habilidades en el lenguaje de programación C++, así como una base   sólida en tecnologías web como HTML y CSS. Además, manejo herramientas de control de versiones como Git y   plataformas colaborativas como GitHub. <br>
-  También, he fortalecido mis competencias en el diseño de proyectos de software, acompañado de un   liderazgo asertivo. Estoy comprometida con seguir aprendiendo y aportar valor a cada equipo en el que   participo. </p>
+  <p> Soy estudiante del sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas, motivada por una fuerte pasión por la lógica y el razonamiento, pilares fundamentales en la programación.<br>
+  Me interesa comprender a fondo cómo funcionan los sistemas de software que usamos a diario; por ello he desarrollado habilidades en C++, Python y Java, así como una base sólida en tecnologías web: Angular y Vue (frontend), Spring Boot, ASP.NET y FastAPI (backend), además de HTML. Manejo herramientas de control de versiones como Git y plataformas colaborativas como GitHub, siguiendo Gitflow y convenciones como Conventional Commits. Asimismo, trabajo con Power Automate y Power Apps integradas con SharePoint, realizo modelado y consultas en SQL, y cuento con conocimientos de Azure y Docker para el desarrollo y despliegue de aplicaciones.<br>
+  También, he fortalecido mis competencias en el diseño de proyectos de software, acompañado de un liderazgo asertivo. Estoy comprometida con seguir aprendiendo y aportar valor a cada equipo en el que participo. </p>
   </div> 
 </div>
 
