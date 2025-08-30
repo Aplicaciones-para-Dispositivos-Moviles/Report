@@ -116,29 +116,15 @@ Esta situación es constante y persistente. Aunque el avance tecnológico ha mej
 
 #### Why (¿Por qué es un problema?)
 
-Porque la falta de automatización:
-
-- Aumenta el **desperdicio de insumos** debido a errores de reposición o falta de planificación.
-- Genera **pérdidas económicas** por sobrecompra, desabastecimiento o pedidos erróneos.
-- Dificulta la **coordinación entre áreas**: el front of house puede requerir productos que no están disponibles, generando demoras o baja satisfacción del cliente.
-- Limita la **reacción ante cambios en la demanda**, como promociones o alta rotación de clientes.
-- Reduce la **capacidad de planificación estratégica** al no contar con datos consolidados en tiempo real.
-- Impide la **toma de decisiones informadas**, afectando el control financiero y operativo.
+La falta de automatización genera desperdicio por errores de reposición o planificación, pérdidas económicas por sobrecompra o desabastecimiento, y dificultades de coordinación entre áreas, afectando la satisfacción del cliente y el control financiero. También limita la reacción ante cambios de demanda y reduce la capacidad de planificación estratégica al no contar con datos en tiempo real. Esto coincide con Lévesque et al. (2024), quienes señalan que los restaurantes independientes enfrentan barreras como falta de planificación, altos costos y limitadas habilidades de gestión, lo que refuerza la necesidad de sistemas automatizados para mejorar la eficiencia operativa.
 
 #### How (¿Cómo se manifiesta?)
 
-- Pedidos hechos de forma verbal o informal que se olvidan, repiten o ejecutan tarde.
-- Procesos fragmentados entre cocina y compras, sin visibilidad compartida del inventario.
-- Falta de alertas automatizadas que adviertan sobre bajo stock o insumos con alta rotación.
-- Dificultad para generar reportes, analizar patrones de consumo y mejorar la operación día a día.
-- Dependencia total del juicio del administrador, sin respaldo de un sistema que facilite el control.
+Los pedidos verbales suelen olvidarse o repetirse, los procesos entre cocina y compras son fragmentados y no hay alertas sobre bajo stock. Además, es difícil generar reportes, analizar patrones de consumo y el control depende del criterio del administrador. Lévesque et al. (2024) subrayan que las estrategias de reducción de desperdicio requieren factores organizacionales y herramientas de planificación, mientras que Tan et al. (2022) evidencian que los sistemas de información y estrategias de red mejoran la coordinación y reducen pérdidas, mostrando que la digitalización resuelve estas ineficiencias.
 
 #### How Much (¿Cuál es el impacto cuantitativo?)
 
-- Solo el 28% de restaurantes en Perú monitorean adecuadamente sus residuos con métodos manuales (Cordova-Buiza et al., 2022).
-- Un sistema automatizado puede reducir significativamente los costos operativos y de adquisición, como lo demuestran Zamora Saltos & Rodríguez Borges (2024).
-- Modelos digitales aplicados en PyMEs alimentarias permiten optimizar tiempos, disminuir errores y mejorar la trazabilidad, reduciendo hasta un 15% de los costos operativos (Cabrera-Gala et al., 2021).
-- Por tanto, se evidencia una clara necesidad de una solución tecnológica accesible, fácil de usar y que permita automatizar la administración de inventario, con reportes útiles, alertas y una interfaz intuitiva adaptada a las necesidades reales de los propietarios de restaurantes.
+En Perú, solo el 28% de restaurantes monitorean sus residuos con métodos manuales (Cordova-Buiza et al., 2022). La automatización puede reducir costos operativos y de adquisición (Zamora Saltos & Rodríguez Borges, 2024). Modelos digitales en PyMEs alimentarias mejoran trazabilidad y reducen hasta un 15% de costos (Cabrera-Gala et al., 2021). Además, Tan et al. (2022) aportan evidencia con un modelo de ecuaciones estructurales, mostrando que los sistemas de información tienen un efecto significativo en la reducción de desperdicio, validando que las herramientas digitales generan impactos medibles en la eficiencia y rentabilidad.
 
 ### 1.2.2 Lean UX Proccess
 En esta sección se implementa el proceso Lean UX, abordando la visión del modelo de negocio que el producto de software respaldará. Se incluyen declaraciones del problema (Problem Statements), suposiciones (Assumptions) e hipótesis (Hypothesis Statements) conforme al enfoque Lean UX. Al final, se presenta el Lean UX Canvas correspondiente.
