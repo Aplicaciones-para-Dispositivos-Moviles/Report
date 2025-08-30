@@ -1,8 +1,8 @@
 <div id="cover-page">
----
-# **Informe de Trabajo Final**
----
-<img src="assets/images/presentation/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
+
+
+# Informe de Trabajo Final
+<img src="assets/images/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
 
 _Universidad Peruana de Ciencias Aplicadas_
 
@@ -10,11 +10,11 @@ _Ingeniería de Software_
 
 _2025-10_
 
-**Curso:** _Desarrollo de Aplicaciones Open Source - 1ASI0729_
+**Curso:** _Aplicaciones para Dispositivos Móviles - 1ACC0238_
 
-_Sección 4292_
+_Sección 12617_
 
-_Prof. Velásquez Núñez, Ángel Augusto_
+_Prof. Mayta Guillermo, Jorge Luis_
 
 ## Nombre del Startup
 
@@ -29,20 +29,20 @@ _Prof. Velásquez Núñez, Ángel Augusto_
 |  Código  |       Apellidos y Nombres       |
 | :--------: | :------------------------------: |
 | u202021885 |       Castro Alejos, Julio       |
-|            |    Elescano Leon, Piero Hugo    |
+| u202313354 |    Elescano Leon, Piero Hugo    |
 | u202319831 |   Guerra Perez, José Jahaziel   |
-|            |    Julca Minaya, Sergio Gino    |
+| u202318274 |    Julca Minaya, Sergio Gino    |
 | u202319448 | Shapiama Rivera, Gabriela Nicole |
-|            |                                  |
 
 ---
 
 **Mes y Año**
-_Abril 2025_
+_Agosto 2025_
 
 </div>
 
-## **Registro de Versiones**
+## Registro de Versiones
+
 
 | *Versión* | *Fecha* | *Autor*         | *Descripción de modificación*                                                                                                                                        |
 | :----------: | :-------: | :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,14 +57,14 @@ _Abril 2025_
 Esta sección detalla cómo el equipo colaboró para construir el **Final Project Documentation Report** del sistema Restock, mostrando evidencia de trabajo conjunto mediante commits, revisiones, herramientas de organización y resultados integrados en el informe final. Se refleja la contribución de cada integrante en la planificación, desarrollo, documentación y presentación de la solución.
 
 **Repositorio del informe del proyecto:**
-[https://shorturl.at/ujj4j](https://shorturl.at/ujj4j)
+[https://shorturl.at/i6Ps8](https://shorturl.at/i6Ps8)
 
 ![Evidencia de commits del repositorio](assets/images/presentation/ci-overview.png)
 
 - **Total de commits:** 507
 - **Autores contribuyentes:**
-  - Williams Avendaño (`dev-willy-code`)
-  - Yaku Guzmán (`yak-cod`)
+  - Piero Elescano (`PieroHugo`)
+  - Sergio Julca (`sergioJM05`)
   - Julio Castro (`JulioXC4`)
   - Gabriela Shapiama (`GabrielaShapiama28`)
   - Jahaziel Guerra (`jahazielgg`)
@@ -73,7 +73,7 @@ Todas las entregas se desarrollaron sobre ramas específicas con *pull requests*
 
 ## TB1 – Informe inicial y Landing Page
 
-*Periodo:* 5 de abril – 27 de abril de 2025
+*Periodo:* 27 de agosto – 18 de setiembre de 2025
 
 Se redactaron las secciones base del informe: Introducción, Justificación, Objetivos, Guias de estilo, Usuarios y Flujo de Valor. Se construyó una **Landing Page estática** con HTML5, CSS3 y JS. Las decisiones se documentaron en Trello, y se utilizó Figma para el primer prototipo visual. Cada sección del informe fue escrita en ramas separadas y luego unificada en `develop`.
 
@@ -88,88 +88,8 @@ Se redactaron las secciones base del informe: Introducción, Justificación, Obj
   - Página informativa y formulario de contacto en Landing.
 - **Commits por integrante:**
 
-  - Williams Avendaño: 34 commits – 619 adiciones / 189 eliminaciones
-  - Yaku Guzmán: 42 commits – 812 adiciones / 200 eliminaciones
-  - Julio Castro: 26 commits – 387 adiciones / 61 eliminaciones
-  - Gabriela Shapiama: 33 commits – 485 adiciones / 150 eliminaciones
-  - Jahaziel Guerra: 10 commits – 1037 adiciones / 770 eliminaciones
 
----
-
-## TP1 – Desarrollo del Frontend y mejoras al Landing Page
-
-*Periodo:* 28 de abril – 25 de mayo de 2025
-
-Se desarrolló el **frontend** con Angular 19, Angular Material, PrimeNG y arquitectura basada en dominios (`public`, `global`). Se aplicaron patrones como *Request/Response* y *Assembler*. El informe fue ampliado con secciones sobre estructura técnica del frontend, componentes reutilizables, rutas, internacionalización (i18n), y control de roles.
-
-Se añadieron diagramas de carpetas y estructuras en PlantUML. Se mejoró la Landing Page con animaciones y optimización SEO.
-
-![Colaboraciones TP1](assets/images/presentation/ci-tp1.png)
-
-- **Contribuciones destacadas del informe:**
-
-  - Explicación de la estructura modular del frontend.
-  - Documentación de componentes, servicios y rutas protegidas.
-  - Capturas de vistas funcionales (`Home`, `Inventory`, `Orders`, etc.).
-  - Detalle de decisiones técnicas y librerías empleadas.
-- **Commits por integrante:**
-
-  - Williams Avendaño: 9 commits – 225 adiciones / 58 eliminaciones
-  - Yaku Guzmán: 10 commits – 853 adiciones / 409 eliminaciones
-  - Julio Castro: 16 commits – 405 adiciones / 415 eliminaciones
-  - Gabriela Shapiama: 11 commits – 696 adiciones / 552 eliminaciones
-  - Jahaziel Guerra: 8 commits – 364 adiciones / 360 eliminaciones
-
----
-
-## TB2 – Backend, mejoras e integración
-
-*Periodo:* 26 de mayo – 21 de junio de 2025
-
-Se diseñó e implementó el **backend con Spring Boot**, siguiendo los principios de **Domain-Driven Design (DDD)**. Se construyeron los agregados `Supply`, `Batch`, `Recipe` y `Order`, junto a value objects (`UnitMeasurement`) y entidades referenciadas (`Category`). El equipo aplicó validaciones, control de excepciones personalizadas y estructura de paquetes clara (`aggregates`, `commands`, `resources`, etc.).
-
-En el informe se documentó el trabajo realizado durante el **Sprint 3**, incluyendo el avance del *Product Backlog*, la implementación y despliegue de los primeros servicios del sistema. Se incluyeron diagramas de arquitectura generados con **Structurizr DSL**, abarcando los niveles C1 (Contexto), C2 (Contenedores) y C3 (Componentes), junto con capturas de Swagger UI y evidencia de los endpoints REST ya operativos.
-
-![Colaboraciones TB2](assets/images/presentation/ci-tb2.png)
-
-- **Contribuciones destacadas del informe:**
-
-  - Correcciones y mejoras en los diagramas Structurizr C1 y C2.
-  - Descripción actualizada de la organización por boundeds del backend.
-  - Registro del trabajo realizado en el Sprint 3, incluyendo backlog, implementación de servicios y despliegue.
-- **Commits por integrante:**
-
-  - Williams Avendaño: 3 commits – 481 adiciones / 55 eliminaciones
-  - Yaku Guzmán: 2 commits – 462 adiciones / 1 eliminación
-  - Julio Castro: 9 commits – 255 adiciones / 30 eliminaciones
-  - Gabriela Shapiama: 7 commits – 4708 adiciones / 4227 eliminaciones
-  - Jahaziel Guerra: 7 commits – 349 adiciones / 131 eliminaciones
-
-## TF – Integración final, autenticación y despliegue
-
-**Periodo:** 22 de junio – 6 de julio de 2025
-
-Durante esta etapa se consolidó el sistema completo, asegurando su funcionamiento integrado y seguro. Se implementó autenticación basada en **JWT (Bearer Tokens)**, gestión de roles, guards, validaciones y redirecciones. El frontend y backend se conectaron exitosamente, y se configuró el **despliegue final** de los productos digitales.
-
-Además, se completaron las secciones finales del informe, incluyendo la validación por entrevistas, resultados del proyecto, **Conclusiones**, **Bibliografía** y **Anexos**. Se incorporaron capturas funcionales del sistema, flujos de autenticación, y scripts de ejemplo. También se aplicó una revisión final al estilo Markdown y se actualizaron tablas y artefactos previos.
-
-![Colaboraciones TF](assets/images/presentation/ci-tf.png)
-
-- **Contribuciones destacadas del informe:**
-
-  - Documentación de la arquitectura final integrada.
-  - Registro de actividades y evidencias correspondientes al Sprint 4.
-  - Validación de requisitos mediante entrevistas y user flows.
-  - Capturas funcionales de la aplicación desplegada, incluyendo autenticación.
-  - Versión final de Conclusiones, lecciones aprendidas, y evaluación de objetivos alcanzados.
-  - Bibliografía actualizada y créditos de herramientas utilizadas.
-- **Commits por integrante:**
-
-  - Antonio Navarro: 5 commits – 285 adiciones / 314 eliminaciones
-  - Yaku Guzmán: 3 commits – 295 adiciones / 394 eliminaciones
-  - Julio Castro: 8 commits – 185 adiciones / 147 eliminaciones
-  - Gabriela Shapiama: 6 commits – 2316 adiciones / 1006 eliminaciones
-  - Jahaziel Guerra: 5 commits – 3024 adiciones / 535 eliminaciones
+TO-DO
 
 ## Herramientas colaborativas utilizadas
 
@@ -224,34 +144,75 @@ Además, se completaron las secciones finales del informe, incluyendo la validac
 
 ## [Capítulo IV: Product Design](cap4-product-design.md)
 
-- [4.1 Style Guidelines](cap4-product-design.md#41-style-guidelines)
-  - [4.1.1 General Style Guidelines](cap4-product-design.md#411-general-style-guidelines)
-  - [4.1.2 Web Style Guidelines](cap4-product-design.md#412-web-style-guidelines)
-- [4.2 Information Architecture](cap4-product-design.md#42-information-architecture)
-  - [4.2.1 Organization Systems](cap4-product-design.md#421-organization-systems)
-  - [4.2.2 Labeling Systems](cap4-product-design.md#422-labeling-systems)
-  - [4.2.3 SEO Tags and Meta Tags](cap4-product-design.md#423-seo-tags-and-meta-tags)
-  - [4.2.4 Searching Systems](cap4-product-design.md#424-searching-systems)
-  - [4.2.5 Navigation Systems](cap4-product-design.md#425-navigation-systems)
-- [4.3 Landing Page UI Design](cap4-product-design.md#43-landing-page-ui-design)
-  - [4.3.1 Landing Page Wireframe](cap4-product-design.md#431-landing-page-wireframe)
-  - [4.3.2 Landing Page Mock-up](cap4-product-design.md#432-landing-page-mock-up)
-- [4.4 Web Applications UX/UI Design](cap4-product-design.md#44-web-applications-uxui-design)
-  - [4.4.1 Web Applications Wireframes](cap4-product-design.md#441-web-applications-wireframes)
-  - [4.4.2 Web Applications Wireflow Diagrams](cap4-product-design.md#442-web-applications-wireflow-diagrams)
-  - [4.4.3 Web Applications Mock-ups](cap4-product-design.md#443-web-applications-mock-ups)
-  - [4.4.4 Web Applications User Flow Diagrams](cap4-product-design.md#444-web-applications-user-flow-diagrams)
-- [4.5 Web Applications Prototyping](cap4-product-design.md#45-web-applications-prototyping)
-- [4.6 Domain-Driven Software Architecture](cap4-product-design.md#46-domain-driven-software-architecture)
-  - [4.6.1 Software Architecture Context Diagram](cap4-product-design.md#461-software-architecture-context-diagram)
-  - [4.6.2 Software Architecture Container Diagrams](cap4-product-design.md#462-software-architecture-container-diagrams)
-  - [4.6.3 Software Architecture Components Diagrams](cap4-product-design.md#463-software-architecture-components-diagrams)
-- [4.7 Software Object-Oriented Design](cap4-product-design.md#47-software-object-oriented-design)
-  - [4.7.1 Class Diagrams](cap4-product-design.md#471-class-diagrams)
-  - [4.7.2 Class Dictionary](cap4-product-design.md#472-class-dictionary)
-- [4.8 Database Design](cap4-product-design.md#48-database-design)
-  - [4.8.1 Database Diagram](cap4-product-design.md#481-database-diagram)
-- [4.9 DDD Estratégico](cap4-product-design.md#49-DDD-estratégico)
+- [4.1. Strategic-Level Domain-Driven Design](cap4-product-design.md#41-strategic-level-domain-driven-design)
+  - [4.1.1. EventStorming](cap4-product-design.md#411-eventstorming)
+    - [4.1.1.1. Candidate Context Discovery](cap4-product-design.md#4111-candidate-context-discovery)
+    - [4.1.1.2. Domain Message Flows Modeling](cap4-product-design.md#4112-domain-message-flows-modeling)
+    - [4.1.1.3. Bounded Context Canvases](cap4-product-design.md#4113-bounded-context-canvases)
+  - [4.1.2. Context Mapping](cap4-product-design.md#412-context-mapping)
+  - [4.1.3. Software Architecture](cap4-product-design.md#413-software-architecture)
+    - [4.1.3.1. Software Architecture Context Level Diagrams](cap4-product-design.md#4131-software-architecture-context-level-diagrams)
+    - [4.1.3.2. Software Architecture Container Level Diagrams](cap4-product-design.md#4132-software-architecture-container-level-diagrams)
+    - [4.1.3.3. Software Architecture Deployment Diagrams](cap4-product-design.md#4133-software-architecture-deployment-diagrams)
+- [4.2. Tactical-Level Domain-Driven Design](cap4-product-design.md#42-tactical-level-domain-driven-design)
+  - [4.2.1. Bounded Context: <Resource>](cap4-product-design.md#42x-bounded-context)
+    - [4.2.1.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
+    - [4.2.1.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
+    - [4.2.1.3. Application Layer](cap4-product-design.md#42x3-application-layer)
+    - [4.2.1.4. Infrastructure Layer](cap4-product-design.md#42x4-infrastructure-layer)
+    - [4.2.1.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
+    - [4.2.1.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
+    - [4.2.1.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
+    - [4.2.1.6.2. Bounded Context Database Design Diagram](cap4-product-design.md#42x62-bounded-context-database-design-diagram)
+  - [4.2.2. Bounded Context: <Subscriptions>](cap4-product-design.md#42x-bounded-context)
+    - [4.2.2.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
+    - [4.2.2.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
+    - [4.2.2.3. Application Layer](cap4-product-design.md#42x3-application-layer)
+    - [4.2.2.4. Infrastructure Layer](cap4-product-design.md#42x4-infrastructure-layer)
+    - [4.2.2.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
+    - [4.2.2.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
+    - [4.2.2.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
+  - [4.2.3. Bounded Context: <Analytics>](cap4-product-design.md#42x-bounded-context)
+    - [4.2.3.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
+    - [4.2.3.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
+    - [4.2.3.3. Application Layer](cap4-product-design.md#42x3-application-layer)
+    - [4.2.3.4. Infrastructure Layer](cap4-product-design.md#42x4-infrastructure-layer)
+    - [4.2.3.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
+    - [4.2.3.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
+    - [4.2.3.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
+  - [4.2.4. Bounded Context: <Identity and Guess Managements>](cap4-product-design.md#42x-bounded-context)
+    - [4.2.4.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
+    - [4.2.4.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
+    - [4.2.4.3. Application Layer](cap4-product-design.md#42x3-application-layer)
+    - [4.2.4.4. Infrastructure Layer](cap4-product-design.md#42x4-infrastructure-layer)
+    - [4.2.4.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
+    - [4.2.4.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
+    - [4.2.4.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
+  - [4.2.5. Bounded Context: <Monitoring>](cap4-product-design.md#42x-bounded-context)
+    - [4.2.5.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
+    - [4.2.5.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
+    - [4.2.5.3. Application Layer](cap4-product-design.md#42x3-application-layer)
+    - [4.2.5.4. Infrastructure Layer](cap4-product-design.md#42x4-infrastructure-layer)
+    - [4.2.5.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
+    - [4.2.5.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
+    - [4.2.5.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
+  - [4.2.6. Bounded Context: <Profiles>](cap4-product-design.md#42x-bounded-context)
+    - [4.2.6.1. Domain Layer](cap4-product-design.md#42x1-domain-layer)
+    - [4.2.6.2. Interface Layer](cap4-product-design.md#42x2-interface-layer)
+    - [4.2.6.3. Application Layer](cap4-product-design.md#42x3-application-layer)
+    - [4.2.6.4. Infrastructure Layer](cap4-product-design.md#42x4-infrastructure-layer)
+    - [4.2.6.5. Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
+    - [4.2.6.6. Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
+    - [4.2.6.6.1. Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
+  - [4.2.7. Bounded Context: <Planning>](cap4-product-design.md#42x-bounded-context)
+    - [4.2.7.1 Domain Layer](cap4-product-design.md#42x1-domain-layer)
+    - [4.2.7.2 Interface Layer](cap4-product-design.md#42x2-interface-layer)
+    - [4.2.7.3 Application Layer](cap4-product-design.md#42x3-application-layer)
+    - [4.2.7.4 Infrastructure Layer](cap4-product-design.md#42x4-infrastructure-layer)
+    - [4.2.7.5 Bounded Context Software Architecture Component Level Diagrams](cap4-product-design.md#42x5-bounded-context-software-architecture-component-level-diagrams)
+    - [4.2.7.6 Bounded Context Software Architecture Code Level Diagrams](cap4-product-design.md#42x6-bounded-context-software-architecture-code-level-diagrams)
+    - [4.2.7.6.1 Bounded Context Domain Layer Class Diagrams](cap4-product-design.md#42x61-bounded-context-domain-layer-class-diagrams)
+
 
 ## [Capítulo V: Product Implementation, Validation &amp; Deployment](cap5-prod-implementation-validation-deployment.md)
 
