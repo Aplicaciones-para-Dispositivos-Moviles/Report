@@ -59,8 +59,8 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 <div style="display: flex; align-items: center;">
   <img src="assets/images/sergio.jpg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
-  <p> Soy estudiante del sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas, apasionado y con muchas ganas de aprender las mejores prácticas y diseño, tanto en la programación como en la arquitectura de un software.<br>
-  Actualmente mi interés está en el desarrollo fullstack, con el objetivo de crear aplicaciones completas y con gran soporte tanto en el backend como en el frontend.<br> De esta manera, busco aportar a mi grupo, cumpliendo con mis tareas, plazos y objetivos del curso.
+  <p> Soy estudiante del sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas, apasionado y con muchas ganas de aprender de las mejores prácticas y diseño, tanto en la programación como en la arquitectura de un software.<br>
+  Actualmente mi interés está en el desarrollo fullstack, con el objetivo de crear aplicaciones completas y con gran soporte tanto en el backend como en el frontend. <br> De esta manera, busco aportar a mi grupo al cumplir con mis tareas, plazos y objetivos del curso.
     </p>
   </div> 
 </div>
@@ -99,19 +99,20 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 
 #### Who (¿Quiénes se ven afectados?)
 
-Pequeños y medianos restaurantes en América Latina, especialmente aquellos con recursos limitados, procesos informales y bajo acceso a tecnología digital. Tanto los encargados de cocina (back of house) como el personal de atención al cliente (front of house) se ven afectados por una gestión ineficiente de inventarios y pedidos.
+Pequeños y medianos restaurantes en América Latina y todo el mundo, especialmente aquellos con recursos limitados, procesos informales y bajo acceso a tecnología digital. Tanto los encargados de cocina (back of house) como el personal de atención al cliente (front of house) se ven afectados por una gestión ineficiente de inventarios y pedidos (Cross, 2024).
 
 #### What (¿Qué ocurre?)
 
-La gestión de inventarios y pedidos en estos restaurantes aún depende de métodos manuales como hojas de cálculo, cuadernos físicos o mensajes informales (vía WhatsApp o verbalmente). Esto conlleva errores humanos, retrasos en el abastecimiento y una falta de trazabilidad en el uso y consumo de insumos. Además, no existe una conexión eficiente entre el área operativa (cocina) y administrativa (compras y abastecimiento), lo que afecta la coordinación y la eficiencia del servicio.
+El monitereo, gestión de recursos, pedidos e inventarios son inexactos y tardíos, por la inclusión de métodos manuales, lo cual conlleva a perdidas monetarias, ineficiencia laboral y poca satisfacción del cliente (Cross, 2024, como se cita en Chen & Peng, 2023; El-Said & Al Hajri, 2022; Opazo, 2012; Staley & Jucker, 2021; Wang, 2017). De esta manera, se vuelve crucial desarrollar una gestión eficiente de las operaciones en este tipo de negocios
+
 
 #### Where (¿Dónde sucede?)
 
-La problemática ha sido identificada en diversos países de América Latina como Perú, México, Honduras y Ecuador, donde múltiples estudios han evidenciado que la digitalización en los procesos operativos de restaurantes aún es baja, afectando directamente la eficiencia y la rentabilidad de los negocios.
+La problemática ha sido identificada en diversos países de América Latina como Perú, México, Honduras y Ecuador, donde múltiples estudios han evidenciado que la digitalización en los procesos operativos de restaurantes aún es baja de esta manera la automatización efectiva en restaurantes todavía está en una etapa muy inicial (Valenzuela, 2024; Vera, 2024; Castillo, 2024; Valenzuela, 2024).
 
 #### When (¿Desde cuándo y con qué frecuencia?)
 
-Esta situación es constante y persistente. Aunque el avance tecnológico ha mejorado otras industrias, el sector gastronómico —especialmente en el segmento PyME— aún no ha adoptado soluciones automatizadas que conecten en tiempo real los procesos de inventario, pedidos internos (cocina) y reposiciones externas (proveedores).
+Esta situación es constante y persistente. Aunque el avance tecnológico ha mejorado otras industrias, el sector gastronómico —especialmente en el segmento PyME— aún no ha adoptado soluciones automatizadas que conecten en tiempo real los procesos de inventario, pedidos internos (cocina) y reposiciones externas (proveedores), lo cual resulta a exceso de inventario o poca disponibilidad del producto (Cross, 2024, como se cita en Omar, 2016).
 
 #### Why (¿Por qué es un problema?)
 
