@@ -256,6 +256,11 @@ A continuación, se presentarán los objetivos SMART (Specific, Measurable, Achi
 
 **-- Julio Castro --**
 
+* En los primeros 6 meses posteriores a mi graduación, desarrollaré y publicaré en GitHub al menos 3 proyectos profesionales (uno en desarrollo web, uno en móvil y uno con enfoque en ciberseguridad básica). Cada proyecto deberá incluir documentación técnica y pruebas de funcionamiento. Esto me permitirá explorar las tres áreas con resultados tangibles para mi portafolio y decidir en cuál especializarme.
+
+* En un plazo de 24 meses, obtendré un puesto de trabajo en el área que haya elegido (web, móvil o ciberseguridad) y habré alcanzado al menos una certificación internacional reconocida (ejemplo: AWS Certified Developer, Google Associate Android Developer o CompTIA Security+). Además, me fijaré como meta contribuir en al menos dos proyectos colaborativos open source relacionados a mi área para demostrar experiencia práctica y fortalecer mi red profesional.
+
+
 **-- Piero Elescano --**
 
 **-- Jahaziel Guerra --**
