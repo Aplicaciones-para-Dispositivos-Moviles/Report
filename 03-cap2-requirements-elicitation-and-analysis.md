@@ -19,19 +19,19 @@
       <th></th>
       <th style="text-align: center;">
         <b>Restock (Nuestro producto)</b><br>
-        <img src="assets/images/restock_logo.jpg" width="64" height="64" style="border-radius: 50%; border: 2px solid black;">
+        <img src="assets/images/cap2/restock_logo.jpg" width="64" height="64" style="border-radius: 50%; border: 2px solid black;">
       </th>
       <th style="text-align: center;">
         <b>Oracle Simphony</b><br>
-        <img src="assets/images/oracle_simphony_logo.jpg" width="64" height="64" style="border-radius: 50%; border: 2px solid black;">
+        <img src="assets/images/cap2/oracle_simphony_logo.jpg" width="64" height="64" style="border-radius: 50%; border: 2px solid black;">
       </th>
       <th style="text-align: center;">
         <b>RestroWorks</b><br>
-        <img src="assets/images/restroworks_logo.jpg" width="64" height="64" style="border-radius: 50%; border: 2px solid black;">
+        <img src="assets/images/cap2/restroworks_logo.jpg" width="64" height="64" style="border-radius: 50%; border: 2px solid black;">
       </th>
       <th style="text-align: center;">
         <b>SoftRestaurant</b><br>
-        <img src="assets/images/softrestaurant_logo.jpg" width="64" height="64" style="border-radius: 50%; border: 2px solid black;">
+        <img src="assets/images/cap2/softrestaurant_logo.jpg" width="64" height="64" style="border-radius: 50%; border: 2px solid black;">
       </th>
     </tr>
   </thead>
@@ -139,7 +139,7 @@ UI-Topic surge como una solución enfocada y especializada en la **gestión auto
 **Distrito:** Chorrillos
 **Timing:** (00:05- 05:00 min)
 
-![Foto de Entrevista](assets/images/entrevista1.png)
+![Foto de Entrevista](assets/images/cap2/entrevista1.png)
 Ver entrevista (00:05 - 05:00 min): https://short-link.me/16bOx
 
 **Resumen:**
@@ -156,7 +156,7 @@ En cuanto a la gestión de inventarios, realiza controles físicos diarios y ver
 **Distrito:** Breña
 **Timing:** (05:01 - 09:09 min)
 
-![Foto de Entrevista](assets/images/entrevista2.png)
+![Foto de Entrevista](assets/images/cap2/entrevista2.png)
 Ver entrevista (05:01 - 09:09 min): https://short-link.me/16bOx
 
 **Resumen:**
@@ -178,7 +178,7 @@ Respecto a los proveedores, trabaja con 2 o 3 distintos con el objetivo de conse
 **Distrito:** Bellavista
 **Timing:** (09:10 - 14:12 min)
 
-![Foto de Entrevista](assets/images/entrevista3.png)
+![Foto de Entrevista](assets/images/cap2/entrevista3.png)
 Ver entrevista (09:10 - 14:12 min): https://short-link.me/16bOx
 
 **Resumen:**
@@ -202,7 +202,7 @@ En cuanto a sus proveedores, valora mucho la seriedad, puntualidad y calidad de 
 **Distrito:** Chorrillos
 **Timing:** (14:27 - 09:09 min)
 
-![Foto de Entrevista](assets/images/entrevista4.png)
+![Foto de Entrevista](assets/images/cap2/entrevista4.png)
 Ver entrevista (14:27 - 09:09 min): https://short-link.me/16bOx
 
 **Resumen:**
@@ -221,7 +221,7 @@ Valora la calidad del producto, la atención al cliente y las facilidades de pag
 **Distrito:** Chorrillos
 **Timing:** (19:22 - 23:40 min)
 
-![Foto de Entrevista](assets/images/entrevista5.png)
+![Foto de Entrevista](assets/images/cap2/entrevista5.png)
 Ver entrevista (19:22 - 23:40 min):[ https://short-link.me/16bOx](https://short-link.me/16bOx)
 
 **Resumen:**
@@ -241,7 +241,7 @@ Percy considera que la buena atención al cliente es clave para mantener relacio
 **Distrito:** Miraflores
 **Timing:** (23:41 - 29:13 min)
 
-![Foto de Entrevista](assets/images/entrevista6.png)
+![Foto de Entrevista](assets/images/cap2/entrevista6.png)
 Ver entrevista (23:41 - 29:13 min): https://short-link.me/16bOx
 
 **Resumen:**
@@ -335,11 +335,11 @@ En esta sección se presentan dos User Personas que representan los segmentos cl
 
 El User Persona **Carolina Rivas** representa a las administradoras y propietarias de restaurantes con trayectoria, principalmente medianos y grandes negocios ubicados en zonas urbanas de alta competencia. Carolina tiene amplia experiencia en la gestión operativa, y aunque ha intentado digitalizar procesos clave como el inventario o la facturación, se ha encontrado con soluciones poco intuitivas y difíciles de adaptar. Su motivación principal es lograr un control más riguroso de su inventario y aumentar la eficiencia general del negocio sin perder autonomía. Busca una plataforma accesible, personalizable y fácil de usar, que le permita mejorar la toma de decisiones operativas sin requerir soporte técnico constante.
 
-![user persona carolina rivas](./assets/images/user-persona-carolina-rivas.png)
+![user persona carolina rivas](./assets/images/cap2/user-persona-carolina-rivas.png)
 
 Por otro lado, el User Persona **Jorge Torres** encarna al proveedor tradicional de productos para restaurantes, especialmente aquellos dedicados a la distribución de abarrotes y bebidas. Con más de una década en el rubro, Jorge opera principalmente con métodos manuales apoyados por WhatsApp y Excel. Valora las relaciones comerciales de confianza con sus clientes y la puntualidad en las entregas como pilares de su éxito. Aunque no es nativo digital, muestra alta apertura hacia plataformas tecnológicas que le permitan organizar mejor sus rutas, facturación y seguimiento de pagos. Su mayor necesidad es una solución que simplifique su operación sin romper la cercanía con los restaurantes a los que abastece.
 
-![user persona jorge torres](./assets/images/user-persona-jorge-torres.png)
+![user persona jorge torres](./assets/images/cap2/user-persona-jorge-torres.png)
 
 ### 2.3.2. User Task Matrix
 
@@ -380,13 +380,13 @@ En esta sección se presentan los User Journey Maps (As-Is) de los segmentos rep
 
 A continuacion se presenta el User Journey Map de Carolina Rivas.
 
-![user journey mapping carolina rivas](./assets/images/user-journey-map-1.png)
+![user journey mapping carolina rivas](./assets/images/cap2/user-journey-map-1.png)
 
 #### Jorge Torres
 
 A continuacion se presenta el User Journey Map de Jorge Torres.
 
-![user journey mapping jorge torres](./assets/images/user-journey-map-2.png)
+![user journey mapping jorge torres](./assets/images/cap2/user-journey-map-2.png)
 
 ### 2.3.4. Empathy Mapping
 
@@ -396,13 +396,13 @@ En esta sección, el equipo resume el proceso de elaboración y presenta los Emp
 
 Esta sección presenta el Empathy Map elaborado para Carolina Rivas, nuestra User Persona clave que representa a la propietaria de un restaurante. Este mapa visualiza de forma integral sus pensamientos, sentimientos, necesidades y desafíos en el contexto de la gestión de su negocio. A través de este análisis empático, hemos identificado sus principales frustraciones (Pains) y las oportunidades de valor (Gains) que nuestra solución podría ofrecerle.
 
-![empathy map carolina rivas](./assets/images/empathy-map-carolina.png)
+![empathy map carolina rivas](./assets/images/cap2/empathy-map-carolina.png)
 
 #### Jorge Torres
 
 Por otro lado, esta sección presenta el Empathy Map elaborado para Jorge Torres, nuestro User Persona clave que representa a un distribuidor de bebidas y abarrotes en Arequipa, Perú. Este mapa visualiza de forma integral sus pensamientos, sentimientos, necesidades y desafíos en el contexto de la gestión y optimización de su negocio de distribución. A través de este análisis empático, hemos identificado sus principales frustraciones (Pains) y las oportunidades de valor (Gains) que nuestra solución podría ofrecerle.
 
-![empathy map jorge torres](./assets/images/empathy-map-jorge.png)
+![empathy map jorge torres](./assets/images/cap2/empathy-map-jorge.png)
 
 ### 2.3.5 As-is Scenario Mapping
 
@@ -410,13 +410,13 @@ Por otro lado, esta sección presenta el Empathy Map elaborado para Jorge Torres
 
 El siguiente escenario As-Is fue desarrollado a partir de entrevistas y análisis de comportamiento del perfil de Carolina Rivas. Se identificaron las principales fases que conforman su flujo de trabajo diario como administradora de un restaurante
 
-![Foto de As-Is Scenario Mapping Sector 1](assets/images/as-is_sector1.png)
+![Foto de As-Is Scenario Mapping Sector 1](assets/images/cap2/as-is_sector1.png)
 
 **Segmento objetivo 2:** Proveedores de Restaurantes
 
 El siguiente escenario As-Is fue desarrollado a partir de entrevistas y análisis del comportamiento del perfil de Jorge Torres. Se identificaron las principales fases que conforman su flujo de trabajo diario como proveedor tradicional de abarrotes y bebidas para restaurantes.
 
-![Foto de As-Is Scenario Mapping Sector 2](assets/images/as-is_sector2.png)
+![Foto de As-Is Scenario Mapping Sector 2](assets/images/cap2/as-is_sector2.png)
 
 ## 2.4. Ubiquitous Language
 
