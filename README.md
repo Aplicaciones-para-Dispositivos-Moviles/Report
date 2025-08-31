@@ -6,7 +6,7 @@
 
 ---
 
-<img src="assets/images/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
+<img src="assets/images/presentation/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
 
 
 _Universidad Peruana de Ciencias Aplicadas_
@@ -47,7 +47,6 @@ _Agosto 2025_
 </div>
 
 ## Registro de Versiones
-
 | *Versión* | *Fecha* | *Autor*         | *Descripción de modificación*                                                                                                                                        |
 | :----------: | :-------: | :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     1.1     | 14/09/25 | Julio Castro      | Se adjuntó segmentos objetivos, diseño de entrevistas, registro de entrevistas, User Stories, Software Architecture y Bounded Context Resource.                        |
@@ -279,6 +278,8 @@ A continuación, se presentarán los objetivos SMART (Specific, Measurable, Achi
 **-- Jahaziel Guerra --**
 
 **-- Sergio Julca --**
+* En los 15 meses posteriores a mi graduación, completaré 2 proyectos aplicados de Data Science integrados a aplicaciones web (por ejemplo, un sistema de predicción de series temporales con dashboard interactivo y una API de recomendación con visualización en frontend). Del mismo modo, cada proyecto estará documentado en GitHub con repositorio, README técnico y despliegue funcional. Además, presentaré los aprendizajes en al menos 3 publicaciones en LinkedIn para construir visibilidad profesional y consolidar un portafolio orientado a roles de Data Scientist/Fullstack Developer.
+* En los próximos 18 meses, obtendré una certificación básica en Ciberseguridad (por ejemplo, CompTIA Security+ o una especialización en Coursera) y aplicaré sus principios en al menos 1 proyecto personal de desarrollo fullstack (implementando autenticación segura, cifrado de datos y pruebas de penetración en la aplicación). De este modo, con el objetivo de lograr un desarrollo profesional conciso en base a los principios de un Ingeniero de Software.
 
 
 **-- Gabriela Shapiama --**

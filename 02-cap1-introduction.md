@@ -24,15 +24,6 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
-**Williams Eduardo Avendaño Balarezo (u202315325)**
-
-<div style="display: flex; align-items: center;">
-  <img src="assets/images/cap1/williams.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
-  <div style="flex: 1;">
-  <p>Soy estudiante de Ingeniería de Software, con un fuerte enfoque en el desarrollo de soluciones eficientes a través de la programación y los algoritmos. Tengo experiencia en desarrollo web, tanto en frontend como en backend, y conocimientos en AWS (como S3 Storage y AWS Lex). Me apasiona aprender nuevas tecnologías y mejorar continuamente mis habilidades. <br> Puedo aportar al equipo una capacidad sólida para desarrollar aplicaciones escalables y optimizadas, integrando servicios de AWS para mejorar la eficiencia. Mi mentalidad orientada a resultados y mi enfoque en la resolución de problemas me permiten mantener altos estándares de calidad en el desarrollo. </p>
-  </div>
-</div>
-
 <br>
 
 **Julio Castro Alejos (u202021885)**
@@ -68,7 +59,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 **Sergio Gino Julca Minaya (u202318274)**
 
 <div style="display: flex; align-items: center;">
-  <img src="assets/images/sergio.jpg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="assets/images/cap1/sergio.jpg" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p> Soy estudiante del sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas, apasionado y con muchas ganas de aprender de las mejores prácticas y diseño, tanto en la programación como en la arquitectura de un software.<br>
   Actualmente mi interés está en el desarrollo fullstack, con el objetivo de crear aplicaciones completas y con gran soporte tanto en el backend como en el frontend. <br> De esta manera, busco aportar a mi grupo al cumplir con mis tareas, plazos y objetivos del curso.
@@ -94,7 +85,7 @@ Visualizamos un futuro donde todos los restaurantes, sin importar su tamaño, cu
 **Piero Hugo Elescano Leon (u202313354)**
 
 <div style="display: flex; align-items: center;">
-  <img src="assets/images/piero.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
+  <img src="assets/images/cap1/piero.png" alt="Descripción de la imagen" style="width: 150px; margin-right: 20px; border-radius: 10%;">
   <div style="flex: 1;">
   <p> Soy estudiante del sexto ciclo de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me apasiona aprender sobre las tecnologias innovadoras<br>
   Actualmente mi mayor interes es en el desarrollo de aplicaciones frontend y backend, donde he desarrollado proyectos de software usando los lenguajes de java y c#. <br>
