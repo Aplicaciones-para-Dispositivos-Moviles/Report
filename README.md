@@ -276,6 +276,9 @@ A continuación, se presentarán los objetivos SMART (Specific, Measurable, Achi
 **-- Piero Elescano --**
 
 **-- Jahaziel Guerra --**
+* En los primeros 12 meses posteriores a mi graduación, desarrollaré y publicaré al menos 3 aplicaciones o MVPs funcionales orientados a resolver problemas cotidianos o de negocio (ejemplo: apps de productividad, automatización empresarial o soluciones móviles). Cada proyecto deberá estar documentado, desplegado en producción y con evidencia de usuarios reales (mínimo 100 descargas/usuarios activos por aplicación), con el fin de fortalecer mi portafolio y generar oportunidades de monetización temprana.
+
+* En un plazo de 24 meses, consolidaré una agencia de desarrollo de software con alcance internacional, logrando al menos 3 clientes en el extranjero y un ingreso acumulado mínimo de USD 15,000 provenientes de servicios de software. Para alcanzarlo, ampliaré mi networking global participando en al menos 4 eventos internacionales de tecnología o emprendimiento (presenciales o virtuales), y estableceré alianzas estratégicas con profesionales de otras regiones, posicionándome como un referente en el desarrollo de soluciones tecnológicas exportables desde Perú.
 
 **-- Sergio Julca --**
 * En los 15 meses posteriores a mi graduación, completaré 2 proyectos aplicados de Data Science integrados a aplicaciones web (por ejemplo, un sistema de predicción de series temporales con dashboard interactivo y una API de recomendación con visualización en frontend). Del mismo modo, cada proyecto estará documentado en GitHub con repositorio, README técnico y despliegue funcional. Además, presentaré los aprendizajes en al menos 3 publicaciones en LinkedIn para construir visibilidad profesional y consolidar un portafolio orientado a roles de Data Scientist/Fullstack Developer.
