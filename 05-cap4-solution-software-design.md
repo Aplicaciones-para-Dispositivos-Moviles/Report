@@ -118,9 +118,7 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 
 #### 4.1.1.3. Bounded Context Canvases
 
-
 ### 4.1.2. Context Mapping
-
 
 ### 4.1.3. Software Architecture
 
@@ -130,6 +128,9 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
 
+A continuación se presentan los diagramas de despliegue para el sistema a implementar, los cuales muestran cómo se distribuirán los diferentes componentes del sistema en la infraestructura y otros entornos. Este diagrama visualiza la interacción entre los diferentes servicios y bases de datos, así como su implementación en contenedores y máquinas virtuales. El principal objetivo de estos diagramas es proporcionar una visión clara de la arquitectura del sistema y facilitar su implementación y mantenimiento.
+
+<img src="assets/uml/software-deployment-diagram.png" alt=“DDD” height="400px">
 
 ## 4.2. Tactical-Level Domain-Driven Design
 
@@ -151,7 +152,6 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
 
-
 ### 4.2.2. Bounded Context: Subscriptions and Payments
 
 ### 4.2.2.1. Domain Layer
@@ -169,7 +169,6 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 ##### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
 
 ##### 2.6.2.6.2. Bounded Context Database Design Diagram
-
 
 ### 4.2.3. Bounded Context: Profiles and Preferences
 
@@ -189,7 +188,6 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
 
-
 ### 4.2.4. Bounded Context: Asset and Resource Management
 
 ### 4.2.4.1. Domain Layer
@@ -208,7 +206,6 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 
 ##### 2.6.4.6.2. Bounded Context Database Design Diagram
 
-
 ### 4.2.5. Bounded Context: Service Design and Planning
 
 ### 4.2.5.1. Domain Layer
@@ -226,7 +223,6 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 ##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
 
 ##### 2.6.5.6.2. Bounded Context Database Design Diagram
-
 
 ### 4.2.6. Bounded Context: Service Operation and Monitoring
 
