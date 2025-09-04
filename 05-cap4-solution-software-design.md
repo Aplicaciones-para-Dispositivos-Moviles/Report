@@ -120,11 +120,33 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 
 ### 4.1.2. Context Mapping
 
+**Introducción**  
+En este apartado se listan y mapean brevemente los *bounded contexts* del sistema **Restock** y sus actores/sistemas externos más relevantes. El objetivo es delimitar responsabilidades y mostrar las dependencias externas principales.
+
+**Bounded contexts (resumen muy breve)**  
+- **IAM** — Autenticación / autorización (login, registro, emisión de tokens).  
+- **Subscription** — Suscripciones y pagos.  
+- **Profile** — Datos y preferencias de usuario.  
+- **Resource** — Gestión de insumos, lotes y pedidos a proveedores.  
+- **Planning** — Diseño/creación de recetas usando el inventario.  
+- **Monitoring** — Registro de ventas y gestión básica de órdenes.
+
+**Actores y sistemas externos clave**  
+- *Restaurant Administrator* (app Android)  
+- *Supplier* (app Flutter)  
+- *Stripe* (pagos) — *SendGrid* (correo) — *OneSignal/FCM* (push) — *Cloudinary* (media)
+
+---
+
 ### 4.1.3. Software Architecture
 
 #### 4.1.3.1. Software Architecture Context Level Diagrams
 
-#### 4.1.3.2. Software Architecture Container Level Diagrams
+![Figura 4.1 - Context Diagram](assets/images/cap4/software_architecture/context.png)
+
+El Context Diagram muestra **Restock** como un recuadro central con dos actores (Administrador y Proveedor) y los servicios externos principales alrededor (Stripe, SendGrid, Push, Cloudinary). Su propósito es dejar claro el alcance del sistema: todo lo que está dentro del recuadro es responsabilidad del equipo; pagos, email, push y media se delegan a terceros.
+
+#### 4.1.3.2. Software Architecture Container Level Diagrams 
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
 
