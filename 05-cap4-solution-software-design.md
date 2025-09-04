@@ -140,6 +140,8 @@ En este apartado se listan y mapean brevemente los *bounded contexts* del sistem
 
 ### 4.1.3. Software Architecture
 
+Esta sección aplica el *C4 Model* en dos niveles: **Context** (visión externa / de alto nivel) y **Container** (visión interna / de alto nivel técnico). Se explica cada diagrama y se justifican las decisiones tecnológicas principales.
+
 #### 4.1.3.1. Software Architecture Context Level Diagrams
 
 ![Figura 4.1 - Context Diagram](assets/images/cap4/software_architecture/context.png)
