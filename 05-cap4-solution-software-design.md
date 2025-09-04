@@ -146,7 +146,18 @@ En este apartado se listan y mapean brevemente los *bounded contexts* del sistem
 
 El Context Diagram muestra **Restock** como un recuadro central con dos actores (Administrador y Proveedor) y los servicios externos principales alrededor (Stripe, SendGrid, Push, Cloudinary). Su propósito es dejar claro el alcance del sistema: todo lo que está dentro del recuadro es responsabilidad del equipo; pagos, email, push y media se delegan a terceros.
 
-#### 4.1.3.2. Software Architecture Container Level Diagrams 
+#### 4.1.3.2. Software Architecture Container Level Diagrams
+ 
+![Figura 4.2 - Container Diagram](assets/images/cap4/software_architecture/container.png) 
+
+El Container Diagram descompone Restock en: apps móviles (Android para administradores, Flutter para proveedores), y los containers backend por bounded context (IAM, Subscription, Profile, Resource, Planning, Monitoring). También muestra la persistencia (MongoDB) y las integraciones externas.
+
+**Decisiones tecnológicas principales (bullet points, muy breves)**  
+- **Mobile first**: Android nativo (Kotlin) para administradores; Flutter (Dart) para proveedores.  
+- **Backend**: microservicios por bounded context con **Java + Spring Boot** (REST).  
+- **Persistencia**: **MongoDB** (schema flexible para insumos/recetas).  
+- **Integraciones**: **Stripe** (pagos), **SendGrid** (emails), **OneSignal/FCM** (push), **Cloudinary** (medios).  
+- **Autenticación**: IAM emite JWT; los servicios validan tokens para evitar consultas síncronas constantes.
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
 
