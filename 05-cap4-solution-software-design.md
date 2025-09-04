@@ -120,24 +120,6 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 
 ### 4.1.2. Context Mapping
 
-**Introducción**  
-En este apartado se listan y mapean brevemente los *bounded contexts* del sistema **Restock** y sus actores/sistemas externos más relevantes. El objetivo es delimitar responsabilidades y mostrar las dependencias externas principales.
-
-**Bounded contexts (resumen muy breve)**  
-- **IAM** — Autenticación / autorización (login, registro, emisión de tokens).  
-- **Subscription** — Suscripciones y pagos.  
-- **Profile** — Datos y preferencias de usuario.  
-- **Resource** — Gestión de insumos, lotes y pedidos a proveedores.  
-- **Planning** — Diseño/creación de recetas usando el inventario.  
-- **Monitoring** — Registro de ventas y gestión básica de órdenes.
-
-**Actores y sistemas externos clave**  
-- *Restaurant Administrator* (app Android)  
-- *Supplier* (app Flutter)  
-- *Stripe* (pagos) — *SendGrid* (correo) — *OneSignal/FCM* (push) — *Cloudinary* (media)
-
----
-
 ### 4.1.3. Software Architecture
 
 Esta sección aplica el *C4 Model* en dos niveles: **Context** (visión externa / de alto nivel) y **Container** (visión interna / de alto nivel técnico). Se explica cada diagrama y se justifican las decisiones tecnológicas principales.
