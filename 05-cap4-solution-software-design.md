@@ -119,6 +119,40 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
 #### 4.1.1.3. Bounded Context Canvases
 
 ### 4.1.2. Context Mapping
+En esta sección se explica el proceso de elaboración de los contexts maps. Asimismo, se permite la visualizacón de las relaciones estructurales entre vounded contexts, junto a los patrones de relaciones entre Bounded contexts establecidos en Domain Driven Design, como Anti-corruption Layer, Conformist, Customer/Supplier ó Shared Kernel.
+
+Posterior al debate grupal para la contextualización del proyecto, nos hemos proyectado los siguientes Bounded context:
+
+- Profiles and Preferences (PAP)
+- Identity and Access Management (IAM)
+- Subscriptions and Payments (SAP)
+- Assets and Resource Management (ARM)
+- Service Design and Planning (SDP)
+- Service Operation and Monitoring (SOM)
+
+##### *Profiles and Preferences(PAP) - Identity and Access Management (IAM)*
+![pap-iam](assets/images/cap4/context_mapping/pap-iam.jpg)
+
+##### *Identity and Access Management (IAM) - Subscriptions and Payments (SAP)*
+![iam-sap](assets/images/cap4/context_mapping/iam-sap.jpg)
+
+
+##### *Subscriptions and Payments (SAP) - Assets and Resource Management (ASM)*
+![sap-asm](assets/images/cap4/context_mapping/sap-asm.jpg)
+
+
+##### *Assets and Resource Management (ARM) - Service Design and Planning (SDP)*
+![arm-sdp](assets/images/cap4/context_mapping/arm-sdp.jpg)
+
+
+##### *Service Design and Planning (SDP) - Service Operation and Monitoring (SOM)*
+![sdp-som](assets/images/cap4/context_mapping/sdp-som.jpg)
+
+
+##### *Final Context Map*
+![main-context-map](assets/images/cap4/context_mapping/main_context_map.jpg)
+
+
 
 ### 4.1.3. Software Architecture
 
