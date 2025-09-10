@@ -130,27 +130,61 @@ Posterior al debate grupal para la contextualización del proyecto, nos hemos pr
 - Service Design and Planning (SDP)
 - Service Operation and Monitoring (SOM)
 
-##### *Profiles and Preferences(PAP) - Identity and Access Management (IAM)*
-![pap-iam](assets/images/cap4/context_mapping/pap-iam.jpg)
+### *Profiles and Preferences(PAP) - Identity and Access Management (IAM)*
+![pap-iam](assets/images/cap4/context_mapping/pap-iam.png)
+En la presente imagen se puede identificar la relación entre Profiles and preferences(PAP) e Identity and Access Management (IAM), los cuales están enfocados en lógicas similares y comparten un subconjunto del modelo de dominio común para evitar la duplicación de código y lógica.
+***Profiles and Preferences (PAP)***: 
+Está enfocada en el listado de accesos y la segmentación de usuarios, ya que nuestro producto está en un contexto de cliente - administrador. De esta manera, se reutiliza (Shared kernel) el modelo de "usuario", el cual comparte logica con cliente y adminsitrador.
+***Identity and Access Management (IAM)***:
+Está enfocada en la administración y validación de acceso al sistema. Asimismo, comprende la verificacion de usuario con user y contraseña. De esta manera, también se reutiliza (Shared Kernel) la lógica de un usuario.
 
-##### *Identity and Access Management (IAM) - Subscriptions and Payments (SAP)*
-![iam-sap](assets/images/cap4/context_mapping/iam-sap.jpg)
+### *Identity and Access Management (IAM) - Subscriptions and Payments (SAP)*
+![iam-sap](assets/images/cap4/context_mapping/iam-sap.png)
+En la presente imagen se puede identificar la relación entre Identity and Access Management (IAM) y subscriptions and payments (SAP), los cuales está enfocada en la comunicación por medio de un acl hacia subscriptions and payment por el uso Stripe como servicio externo que se comunica por medio de OSH y Pl el cual permite la comunicacion entre contextos y la definición de servicios.
+
+***Identity and Access Management (IAM)***:
+Está enfocada en la administración, validación y actualización de datos en el acceso al sistema. Asimismo, comprende la verificacion de usuario con user, contraseña y pago por medio de stripe.
+
+***Subscriptions and Payments (SAP)***
+Está enfocada en la validación y proceso de pagos, a través de las subscripciones existentes. De esta manera, por medio de Stripe, se puede validar e influenciar en otros bounded contexts.
+
+### *Subscriptions and Payments (SAP) - Assets and Resource Management (ARM)*
+![sap-asm](assets/images/cap4/context_mapping/sap-arm.png)
+En la presente imagen se puede identificar la relación entre Subscriptions and Payments (SAP) y Assets and Resource Management (ASM) por medio del patrón Customer / Supplier. Ya que el bounded context ASM actúa o se activa bajo influencia de subscripcions and payments, el cual genera una dependecia enntre estos dos bounded contexts.
+
+***Subscriptions and Payments (SAP)***:
+Está enfocada en la validación y proceso de pagos, a través de las subscripciones existentes. De esta manera, por medio de Stripe, se puede validar e influenciar en otros bounded contexts.
+
+***Assets and Resource Management (ARM)***
+Está enfocada en la gestión y permisos de inventario, de manera que depende de una subscripción para poder ser usado.
 
 
-##### *Subscriptions and Payments (SAP) - Assets and Resource Management (ASM)*
-![sap-asm](assets/images/cap4/context_mapping/sap-asm.jpg)
+
+### *Assets and Resource Management (ARM) - Service Design and Planning (SDP)*
+![arm-sdp](assets/images/cap4/context_mapping/arm-sdp.png)
+En la presente imagen se puede identificar el patrón partnership porque existe un trabajo coordinado entre estos dos boundeds contexts. 
+***Assets and Resource Management (ARM)***
+Está enfocada en la gestión y permisos de inventario. 
 
 
-##### *Assets and Resource Management (ARM) - Service Design and Planning (SDP)*
-![arm-sdp](assets/images/cap4/context_mapping/arm-sdp.jpg)
+***Service Design and Planning (SDP)***
+Está enfocado en la creación de recetas, y trabaja junto a Assets and Resource Management por el inventario que se actualiza constantemente
 
 
-##### *Service Design and Planning (SDP) - Service Operation and Monitoring (SOM)*
-![sdp-som](assets/images/cap4/context_mapping/sdp-som.jpg)
+### *Service Design and Planning (SDP) - Service Operation and Monitoring (SOM)*
+![sdp-som](assets/images/cap4/context_mapping/sdp-som.png)
+En la presente imagen se puede identificar el patron conformista de manera que el downstream adopta el modelo del upstream tal cual. Y las ventas son dependientes a las recetgas.
+
+***Service Design and Planning (SDP)***
+Está enfocado en la creación de recetas, y trabaja junto a Assets and Resource Management.
+
+***Service Operation and Monitoring(SDM)***
+Es un bounded context con relación conformista. Ya que el bounded context Service Operation and Monitoring(SDM) solo recibe parte de las recetas, y de esta manera es influenciado por SDP.
 
 
-##### *Final Context Map*
-![main-context-map](assets/images/cap4/context_mapping/main_context_map.jpg)
+
+### *Final Context Map*
+![main-context-map](assets/images/cap4/context_mapping/main_context_map.png)
 
 
 
