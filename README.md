@@ -275,17 +275,25 @@ A continuación, se presentarán los objetivos SMART (Specific, Measurable, Achi
 
 **-- Piero Elescano --**
 
+* En los primeros 12 meses posteriores a mi graduación, desarrollaré y publicaré al menos 2 proyectos aplicados en el ámbito FinTech o automatización de procesos (por ejemplo una aplicación web para gestión financiera personal). Cada proyecto deberá estar documentado, desplegado en un entorno de prueba/producción y presentado en al menos una red profesional (LinkedIn), con el fin de fortalecer mi portafolio en la intersección entre software e innovación financiera.
+  
+* En un plazo de 24 meses, consolidaré al menos un emprendimiento tecnológico con modelo de ingresos validado, obteniendo ingresos a través de licencias o servicios asociados a mis aplicaciones desarrolladas. Para lograrlo, escalaré mis plataformas con estrategias de crecimiento digital (marketing en redes, integraciones API, automatización de pagos) y estableceré alianzas estratégicas con empresas o instituciones que potencien la adopción de mis soluciones en el mercado.
+
 **-- Jahaziel Guerra --**
+
 * En los primeros 12 meses posteriores a mi graduación, desarrollaré y publicaré al menos 3 aplicaciones o MVPs funcionales orientados a resolver problemas cotidianos o de negocio (ejemplo: apps de productividad, automatización empresarial o soluciones móviles). Cada proyecto deberá estar documentado, desplegado en producción y con evidencia de usuarios reales (mínimo 100 descargas/usuarios activos por aplicación), con el fin de fortalecer mi portafolio y generar oportunidades de monetización temprana.
 
 * En un plazo de 24 meses, consolidaré una agencia de desarrollo de software con alcance internacional, logrando al menos 3 clientes en el extranjero y un ingreso acumulado mínimo de USD 15,000 provenientes de servicios de software. Para alcanzarlo, ampliaré mi networking global participando en al menos 4 eventos internacionales de tecnología o emprendimiento (presenciales o virtuales), y estableceré alianzas estratégicas con profesionales de otras regiones, posicionándome como un referente en el desarrollo de soluciones tecnológicas exportables desde Perú.
 
 **-- Sergio Julca --**
+
 * En los 15 meses posteriores a mi graduación, completaré 2 proyectos aplicados de Data Science integrados a aplicaciones web (por ejemplo, un sistema de predicción de series temporales con dashboard interactivo y una API de recomendación con visualización en frontend). Del mismo modo, cada proyecto estará documentado en GitHub con repositorio, README técnico y despliegue funcional. Además, presentaré los aprendizajes en al menos 3 publicaciones en LinkedIn para construir visibilidad profesional y consolidar un portafolio orientado a roles de Data Scientist/Fullstack Developer.
+
 * En los próximos 18 meses, obtendré una certificación básica en Ciberseguridad (por ejemplo, CompTIA Security+ o una especialización en Coursera) y aplicaré sus principios en al menos 1 proyecto personal de desarrollo fullstack (implementando autenticación segura, cifrado de datos y pruebas de penetración en la aplicación). De este modo, con el objetivo de lograr un desarrollo profesional conciso en base a los principios de un Ingeniero de Software.
 
 
 **-- Gabriela Shapiama --**
 
 * En los 12 meses posteriores a mi graduación, rotar por 3 áreas de software (por ejemplo, frontend, backend/API y DevOps/QA), realizando al menos 1 proyecto entregable por área y publicando una bitácora de aprendizaje por cada una. Esto me permitirá colaborar con equipos diversos, fortalecer habilidades end-to-end y, con evidencia de resultados, definir con mayor precisión mi futura especialización.
+
 * En 18 meses ampliaré mi exposición a tecnología para entretenimiento participando en 1–2 eventos del sector (meetups, game jams o showcases académicos) para conocer prácticas y hacer networking; contribuiré con 1 o más PR(s) a un proyecto open source afín (por ejemplo, librerías de audio/gráficos, motores o tooling de streaming) y realizaré 1 entrega pública (demo técnica reproducible). Además, estableceré una mentoría con un profesional del área para revisar portafolio, priorizar habilidades y definir oportunidades concretas de siguiente paso.
