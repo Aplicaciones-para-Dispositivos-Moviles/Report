@@ -293,21 +293,218 @@ A continuación se presentan los diagramas de despliegue para el sistema a imple
 
 ### 4.2.5. Bounded Context: Service Design and Planning
 
-### 4.2.5.1. Domain Layer
+Este BC diseña y planifica el catálogo de recetas (platos del menú) y su composición de insumos; exponer una grilla de menús para operación y ventas.
 
-### 4.2.5.2. Interface Layer
+**Relaciones con otros BCs:**
+* Resource (Inventario): upstream para consultar/validar insumos y downstream para descontar inventario cuando una receta es consumida.
 
-### 4.2.5.3. Application Layer
+* Monitoring (Ventas): emite eventos de venta de platos. SDP consume esos eventos para generar la orden de consumo de insumos hacia Resource.
 
-### 4.2.5.4. Infrastructure Layer
+ACL: se implementa un Anti-Corruption Layer para traducir términos/IDs entre SDP y Resource/Monitoring (evita que modelos externos contaminen el dominio de SDP).
 
-### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
+Lenguaje ubicuo (Ubiquitous Language): Recipe, RecipeIngredient, Supply, Quantity, Price, Menu Grid, Sale/Consumption.
 
-### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
+**Políticas clave:**
+
+Una Recipe no es consumible si cualquiera de sus RecipeIngredients (insumos requeridos) no existe o su Quantity ≤ 0.
+
+La consumición de una Recipe sólo procede si Resource confirma stock suficiente (consistencia eventual con reserva/confirmación).
+
+Una Recipe confirmada mantiene invariantes: nombre no vacío; precio ≥ 0; cada item con cantidad > 0; sin duplicados de insumo.
+
+#### 4.2.5.1. Domain Layer
+**Aggregates:**
+
+* Recipe (Aggregate Root)
+
+  * Atributos: RecipeId, Name, Price, Items: List<RecipeIngredient>, Status (Draft|Active|Archived), Audit (createdBy, createdAt, …).
+
+  * Invariantes:
+
+    * Name no vacío; Price >= 0.
+
+    * Items no vacía cuando Status = Active.
+
+    * Cada RecipeIngredient.Quantity > 0.
+
+    * No hay dos RecipeIngredient con el mismo SupplyId.
+
+  * Comportamientos:
+
+    * addItem(SupplyId, Quantity) (merge quantities si ya existe).
+
+    * updateItemQuantity(SupplyId, Quantity) (revalida invariantes).
+
+    * removeItem(SupplyId) (no permite quedar vacía si está Active).
+
+    * activate() / archive().
+
+**Entities & Value Objects:**
+
+* RecipeIngredient (VO embebido):
+
+  * SupplyId (referencia externa a Resource), Quantity (decimal > 0, p.ej. kg, L, unid), Unit (opcional, si aplica).
+
+  * Validación: Quantity > 0; SupplyId no nulo.
+
+* Price (VO opcional)
+
+  * amount (decimal >= 0), currency (ISO).
+
+* Quantity (VO)
+
+  * value (decimal > 0), unit (enum opcional).
+
+**Domain Services (reglas que no encajan en una sola entidad)**
+
+* RecipeConsumptionPolicy: Dado un Recipe y una solicitud de consumo (de Monitoring), produce el pedido de descuento a Resource (lista de {SupplyId, Quantity}), aplicando transformaciones de unidades/redondeos si fuese necesario.
+
+* RecipeValidationService: Verifica existencia y vigencia de SupplyId en Resource (vía ACL), antes de activar una receta.
+
+**Factories:**
+
+* RecipeFactory:
+
+  * create(name, price, items?) → Recipe(Draft) (permite crear en Draft incluso sin items; al activar se exige items válidos).
+
+**Domain Events (propios de Service Design and Planning)**
+
+* RecipeCreated {recipeId, name}
+
+* RecipeUpdated {recipeId, changedFields}
+
+* RecipeActivated {recipeId} / RecipeArchived {recipeId}
+
+* RecipeConsumptionRequested {recipeId, saleId, lines: [{supplyId, qty}]} (emitido hacia Resource tras evento de venta de Monitoring, vía Application)
+
+* RecipeConsumptionRejected {recipeId, saleId, reason} (si Resource niega stock)
+
+* RecipeConsumptionCommitted {recipeId, saleId}
+
+**Repositories (interfaces del dominio)**
+
+    interface RecipeRepository {
+        fun findById(id: RecipeId): Recipe?
+        fun findByName(name: String): Recipe?
+        fun save(recipe: Recipe): Unit
+        fun delete(id: RecipeId): Unit
+        fun search(filter: RecipeFilter, page: Int, 
+        size: Int): Paged<Recipe>
+    }
+
+
+Queries complejas para grilla (búsqueda por nombre, rango de precio, estado) se modelan con Specifications/Filters.
+
+#### 4.2.5.2. Interface Layer
+
+**Usuarios:** Restaurant Administrators (Android).
+
+**Pantallas principales (Android):**
+
+* Menu Grid (RecipeListScreen): grid de recetas con búsqueda/orden y estados (Active/Archived).
+
+* Recipe Editor (RecipeEditorScreen): crear/editar nombre, precio e items (selector de Supply remoto con ACL a Resource).
+
+* Recipe Details: vista de receta con lista de insumos y validaciones.
+
+* Activation Flow: activar/archivar con confirmaciones e impactos.
+
+**Controladores/Consumers (frontera de la app móvil):**
+
+* Controllers (Activities/Fragments) + ViewModels (invocan casos de uso de Application).
+
+* Consumers de notificaciones: para feedback de consumo (p.ej., cuando Resource confirma/rechaza consumo post-venta).
+
+**Controllers:**
+* RecipeController
+  * Responsabilidad: frontera HTTP para CRUD y ciclo de vida de recetas.
+  * Colabora con: CreateRecipeHandler, SearchRecipesHandler, GetRecipeByIdHandler, ActivateRecipeHandler, ArchiveRecipeHandler.
+
+#### 4.2.5.3. Application Layer
+
+**Capabilities (casos de uso):**
+
+* Commands (mutaciones):
+
+  * CreateRecipeCommand {name, price, currency}
+
+  * AddRecipeIngredientCommand {recipeId, supplyId, qty, unit?}
+
+  * UpdateRecipeIngredientQuantityCommand {recipeId, supplyId, qty}
+
+  * RemoveRecipeIngredientCommand {recipeId, supplyId}
+
+  * ActivateRecipeCommand {recipeId} / ArchiveRecipeCommand {recipeId}
+
+  * (Opcional) RenameRecipeCommand, UpdateRecipePriceCommand
+
+* Queries (lecturas):
+
+  * GetRecipeByIdQuery {recipeId}
+
+  * SearchRecipesQuery {text?, status?, minPrice?, maxPrice?, page, size}
+
+**Command Handlers (ejemplos):**
+
+* CreateRecipeHandler: valida nombre/price, crea Recipe(Draft), emite RecipeCreated.
+
+* AddRecipeIngredientHandler: carga aggregate, agrega/merge item, revalida invariantes, save.
+
+* ActivateRecipeHandler: llama a RecipeValidationService (consulta a Resource vía ACL para validar supplies); si ok → activate() → RecipeActivated.
+
+**Event Handlers (integración con Monitoring/Resource):**
+
+* OnSaleRegistered (de Monitoring, externo):
+
+  * Verifica recipeId involucrados.
+  * Usa RecipeConsumptionPolicy para construir RecipeConsumptionRequested.
+  * Publica evento a Resource (MessageBroker).
+
+* OnInventoryConsumptionConfirmed/Rejected (de Resource, externo):
+
+  * Publica RecipeConsumptionCommitted o RecipeConsumptionRejected (para auditoría/UX).
+
+#### 4.2.5.4. Infrastructure Layer
+
+**Persistencia (Backend NoSQL – MongoDB):**
+Colección recipes (un documento por aggregate):
+```json
+{
+  "_id": "recipeId",
+  "name": "Spaghetti Carbonara",
+  "price": { "amount": 12.5, "currency": "USD" },
+  "items": [
+    { "supplyId": "supply1", "quantity": 0.2, "unit": "kg" },
+    { "supplyId": "supply2", "quantity": 0.1, "unit": "L" }
+  ],
+  "status": "Active",
+  "audit": { "createdBy": "...", "createdAt": "...", ... }
+}
+```
+
+**Repositorios (implementación):**
+
+* RecipeRepository (mapea Aggregate ↔ documento embebido).
+
+**Mensajería / Integraciones:**
+
+* MessageBroker:
+
+  * Tópico de entrada (desde Monitoring): sales.registered.
+  * Tópicos de salida (hacia Resource): inventory.consumption.requested, inventory.consumption.compensate.
+  * Tópicos de confirmación (desde Resource): inventory.consumption.confirmed/rejected.
+
+#### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+#### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
 
-##### 2.6.5.6.2. Bounded Context Database Design Diagram
+<img src="assets/images/cap4/class_diagram/dc-web-planning.png" alt=“DDD” height="400px">
+
+##### 4.2.5.6.2. Bounded Context Database Design Diagram
+
+<img src="assets/images/cap4/db_diagram/db_planning.png" alt=“DDD” height="400px">
 
 ### 4.2.6. Bounded Context: Service Operation and Monitoring
 
