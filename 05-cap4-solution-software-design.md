@@ -239,53 +239,53 @@ A continuación se presentan los diagramas de despliegue para el sistema a imple
 
 ### 4.2.2. Bounded Context: Subscriptions and Payments
 
-### 4.2.2.1. Domain Layer
+#### 4.2.2.1. Domain Layer
 
-### 4.2.2.2. Interface Layer
+#### 4.2.2.2. Interface Layer
 
-### 4.2.2.3. Application Layer
+#### 4.2.2.3. Application Layer
 
-### 4.2.2.4. Infrastructure Layer
+#### 4.2.2.4. Infrastructure Layer
 
-### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+#### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
+#### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
 
 ##### 2.6.2.6.2. Bounded Context Database Design Diagram
 
-### 4.2.3. Bounded Context: Profiles and Preferences
+#### 4.2.3. Bounded Context: Profiles and Preferences
 
-### 4.2.3.1. Domain Layer
+#### 4.2.3.1. Domain Layer
 
-### 4.2.3.2. Interface Layer
+#### 4.2.3.2. Interface Layer
 
-### 4.2.3.3. Application Layer
+#### 4.2.3.3. Application Layer
 
-### 4.2.3.4. Infrastructure Layer
+#### 4.2.3.4. Infrastructure Layer
 
-### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+#### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
+#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
 
-### 4.2.4. Bounded Context: Asset and Resource Management
+#### 4.2.4. Bounded Context: Asset and Resource Management
 
-### 4.2.4.1. Domain Layer
+#### 4.2.4.1. Domain Layer
 
-### 4.2.4.2. Interface Layer
+#### 4.2.4.2. Interface Layer
 
-### 4.2.4.3. Application Layer
+#### 4.2.4.3. Application Layer
 
-### 4.2.4.4. Infrastructure Layer
+#### 4.2.4.4. Infrastructure Layer
 
-### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
+#### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
 
-### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
+#### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
 
@@ -506,15 +506,166 @@ Colección recipes (un documento por aggregate):
 
 <img src="assets/images/cap4/db_diagram/db_planning.png" alt=“DDD” height="400px">
 
-### 4.2.6. Bounded Context: Service Operation and Monitoring
+### 4.2.6. Bounded Context: Service Operation and Monitoring (SOM)
 
-### 4.2.6.1. Domain Layer
+Este BC opera y monitorea el día a día en dos frentes:
 
-### 4.2.6.2. Interface Layer
+1. **Ventas** registradas por *restaurant administrators*.
+2. **Órdenes de proveedor** gestionadas por *suppliers* (ciclo PO: crear→aprobar→enviar→recibir).
 
-### 4.2.6.3. Application Layer
+**Relaciones con otros BCs:**
 
-### 4.2.6.4. Infrastructure Layer
+* **SDP (Service Design & Planning):** usa `recipeId` y `price` vigentes; tras una venta SOM **publica** `SaleRegistered` y SDP deriva el consumo de insumos.
+* **Resource (Inventario):** recibe `GoodsReceiptPosted` (aumentos) y confirma/alerta niveles (bajo stock); confirma/rehúsa descuentos por consumo.
+
+**ACL:** traduce ids/unidades con SDP/Resource; todas las cantidades viajan en **unidad base** del supply.
+
+**Lenguaje ubicuo:** *Sale, SaleLine, AdditionalSupply, Ticket, PurchaseOrder (PO), POLine, Supplier*.
+
+**Políticas clave**
+
+* **Sale**: cantidades > 0; totales coherentes; **snapshot** de precio/nombre de receta al momento de la venta.
+
+#### 4.2.6.1. Domain Layer
+
+**Aggregates**
+
+* **Sale** *(Aggregate Root)*
+
+  * **Atributos:** SaleId, adminRestaurantId, dinerName?, occurredAt, currency,
+    recipeLines: List<RecipeLine>, additionalSupplies: List<SupplyLine>,
+    totals {subtotal, tax, total}, status (Registered|Voided|Refunded),
+    inventoryApplied: Boolean, audit.
+  * **Invariantes:** cantidades > 0; total = Σ lineTotal; estados consistentes.
+  * **Comportamientos:** register(...), void(reason), markInventoryApplied().
+
+* **PurchaseOrder** *(Aggregate Root)*
+
+  * **Atributos:** PurchaseOrderId, supplierId, orderedAt, expectedAt?,
+    lines: List<POLine>, receipts: List<GoodsReceipt>, status, audit.
+  * **Comportamientos:** addLine(...), submit(), approve(), send(), receive(lines), cancel().
+
+**Entities & Value Objects**
+
+* RecipeLine (VO): { recipeId, recipeName_snapshot, unitPrice_snapshot: Money, quantity: Decimal, lineTotal: Money }.
+* SupplyLine (VO): { supplyId, quantity: Decimal } *(unidad base de Resource; sin unit en SOM)*.
+* PurchaseOrderLine (VO): { supplyId, quantity: Decimal, unitPrice?: Money, currency }.
+* GoodsReceipt (Entity): { receiptId, receivedAt, lines[{ supplyId, receivedQty: Decimal }] }.
+* Money(amount: Decimal128, currency), Quantity(Decimal128).
+
+
+**Domain Events (SOM)**
+
+* SaleRegistered {saleId, occurredAt, recipeLines[], additionalSupplies[], totals}
+* SaleVoided {saleId, reason}
+* InventoryAppliedForSale {saleId}
+* PurchaseOrderCreated|Submitted|Approved|Sent
+* GoodsReceiptPosted {poId, receiptId, lines[]}
+
+**Repositories (interfaces)**
+
+```kotlin
+interface SaleRepository {
+  fun findById(id: SaleId): Sale?
+  fun save(sale: Sale)
+  fun search(filter: SaleFilter, page: Int, size: Int): Paged<Sale>
+}
+interface PurchaseOrderRepository {
+  fun findById(id: PoId): PurchaseOrder?
+  fun save(po: PurchaseOrder)
+  fun search(filter: PoFilter, page: Int, size: Int): Paged<PurchaseOrder>
+}
+```
+
+#### 4.2.6.2. Interface Layer
+
+**Usuarios / plataformas**
+
+* *Restaurant Admin* → **Android** (ventas, reportes, POs).
+* *Supplier* → **Flutter** (inbox de PO, confirmar envío/entrega).
+
+**Controllers (HTTP – REST)**
+
+* **SalesController**
+* **PurchaseOrdersController**
+
+**Consumers (mensajería)**
+
+* InventoryConfirmationsConsumer (Resource: inventory.consumption.confirmed|rejected) → marca inventoryApplied.
+* InventoryAlertsConsumer (Resource: inventory.low) → crea/actualiza alertas en UI.
+
+#### 4.2.6.3. Application Layer
+
+**Commands**
+
+* RegisterSaleCommand { dinerName?, adminRestaurantId, occurredAt, currency, recipeLines[{recipeId, quantity}], additionalSupplies[{supplyId, quantity}] }
+* VoidSaleCommand { saleId, reason }
+* CreatePoCommand { supplierId }, AddPoLineCommand { ... }, SubmitPoCommand, ApprovePoCommand, SendPoCommand, PostGoodsReceiptCommand {poId, lines[{supplyId, receivedQty}]}
+
+**Queries**
+
+* GetSaleByIdQuery, SearchSalesQuery, SalesSummaryQuery, TopRecipesQuery
+* GetPurchaseOrderByIdQuery, SearchPurchaseOrdersQuery
+
+**Handlers (ejemplos)**
+
+* RegisterSaleHandler: valida líneas, calcula totales, persiste, **emite SaleRegistered** y despacha consumo (SDP/Resource).
+
+
+#### 4.2.6.4. Infrastructure Layer
+
+**Colecciones:**
+
+* **sales** — *Aggregate = 1 documento; reemplaza “sales\_recipes” y “sales\_additionalSupplies” con arrays embebidos*:
+
+```json
+{
+  "_id": "sale_01JKM...",
+  "adminRestaurantId": "rest_123",
+  "dinerName": "Mesa 5",
+  "occurredAt": "2025-09-10T13:15:00Z",
+  "currency": "PEN",
+  "recipeLines": [
+    { "recipeId": "rec_01HZY...", "recipeName_snapshot": "Lomo Saltado",
+      "unitPrice_snapshot": { "$numberDecimal": "28.90" },
+      "quantity": { "$numberDecimal": "2" },
+      "lineTotal": { "$numberDecimal": "57.80" }
+    }
+  ],
+  "additionalSupplies": [
+    { "supplyId": "sup_extra_napkins", "quantity": { "$numberDecimal": "3" } }
+  ],
+  "totals": {
+    "subtotal": { "$numberDecimal": "57.80" },
+    "tax":      { "$numberDecimal": "10.40" },
+    "total":    { "$numberDecimal": "68.20" }
+  },
+  "status": "Registered",
+  "inventoryApplied": false,
+  "audit": { "createdBy": "admin_1", "createdAt": "2025-09-10T13:15:01Z" }
+}
+```
+
+* **purchase_orders** — *Aggregate con líneas y recepciones embebidas*:
+
+```json
+{
+  "_id": "po_2025_001",
+  "supplierId": "sup_ABC",
+  "orderedAt": "2025-09-10T09:00:00Z",
+  "expectedAt": "2025-09-12T18:00:00Z",
+  "status": "Sent",
+  "lines": [
+    { "supplyId": "sup_beef_topside", "quantity": { "$numberDecimal": "15.0" },
+      "unitPrice": { "$numberDecimal": "18.50" }, "currency": "PEN" }
+  ],
+  "receipts": [
+    { "receiptId": "gr_01", "receivedAt": "2025-09-12T19:10:00Z",
+      "lines": [{ "supplyId": "sup_beef_topside", "receivedQty": { "$numberDecimal": "15.0" } }] }
+  ],
+  "audit": { "createdBy": "admin_1", "createdAt": "2025-09-10T09:00:00Z" }
+}
+```
 
 ### 4.2.6.5. Bounded Context Software Architecture Component Level Diagrams
 
@@ -522,4 +673,8 @@ Colección recipes (un documento por aggregate):
 
 ##### 4.2.6.6.1. Bounded Context Domain Layer Class Diagrams
 
-##### 2.6.6.6.2. Bounded Context Database Design Diagram
+<img src="assets/images/cap4/class_diagram/dc-web-monitoring.png" alt=“DDD” height="400px">
+
+##### 4.2.6.6.2. Bounded Context Database Design Diagram
+
+<img src="assets/images/cap4/db_diagram/db_monitoring.png" alt=“DDD” height="400px">
