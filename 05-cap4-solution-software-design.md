@@ -277,6 +277,151 @@ A continuación se presentan los diagramas de despliegue para el sistema a imple
 
 #### 4.2.4.1. Domain Layer
 
+En esta sección se documentan las clases que forman el core del bounded context: Aggregates, Entities, Value Objects, Domain Services e interfaces (Repositories).
+
+### Aggregates
+
+#### Batch (Aggregate Root)
+**Propósito:** Representa una porción de inventario (lote) con cantidad, expiración y referencia al `CustomSupply` que lo originó.
+
+**Atributos:**
+- id
+- userId
+- customSupplyId (referencia al insumo personalizado)
+- stock
+- expirationDate
+
+**Métodos:**
+- increaseQuantity(delta)
+- decreaseQuantity(delta) — valida stock disponible
+- reserve(qty, orderId)
+- releaseReservation(orderId)
+- updateExpirationDate(newDate)
+- isExpired()
+
+**Invarianzas / reglas:** No permitir stock < 0; lote expirado no puede reservarse.
+
+#### CustomSupply (Aggregate Root)
+
+**Propósito:** Insumo definido por un usuario; mantiene un snapshot del `supply` del catálogo para referencia histórica y datos de unidad.
+
+**Atributos:**
+- id
+- userId (owner)
+- minStock
+- maxStock
+- price
+- supply (embebido: id, name, description, perishable, category)
+- unit (embebido: name, abbreviation)
+- auditInfo
+
+**Métodos:**
+- updateDetails(name, description, price, unit, minStock, maxStock)
+- isOwnedBy(userId)
+
+**Reglas:** Solo el owner puede modificar/eliminar.
+
+#### Order (Aggregate Root)
+
+**Propósito:** Pedido enviado a un proveedor; contiene un array embebido `batches` que funciona como *snapshot* de las líneas de la orden para trazabilidad. Las líneas de órdenes (los *order batches*) difieren de los `batches` del inventario: aquí se guarda la **cantidad solicitada** (`quantity`) y el estado de **aceptación** (`accepted`) porque la línea ya forma parte de una orden concreta.
+
+**Atributos:**
+- id  
+- supplierId  
+- adminRestaurantId  
+- date  
+- description  
+- state  
+- situation  
+- totalPrice  
+- partiallyAccepted  
+- estimatedShipDate  
+- estimatedShipTime  
+- batches (lista embebida con snapshot de cada línea)  
+- auditInfo
+
+**Estructura de cada elemento en `batches` (order batch - snapshot):**
+- id (identificador de la línea)
+- userId (owner / quien añadió la línea)
+- customSupplyId (referencia al insumo personalizado)
+- stock (valor del stock al momento del snapshot — informativo)
+- expirationDate (snapshot del lote/insumo al momento)
+- quantity (cantidad solicitada en la orden)         
+- accepted (boolean)                                 
+- unitPrice (precio por unidad al momento)
+- lineTotal (unitPrice * quantity)
+- reservedBatchId (opcional — referencia al `batch` real reservado en inventario, si se asignó)
+- notes (opcional)
+
+**Métodos (signatures) específicos y comportamiento:**
+- `addRequestedBatch(batchSnapshot)` — agrega una línea; evita duplicados por `customSupplyId`/userId.
+- `removeRequestedBatch(batchId)` — elimina una línea (solo si no está aceptada/procesada según reglas).
+- `updateRequestedBatchQuantity(batchId, newQty)` — actualiza la cantidad solicitada (validar límites y estado).
+- `setLineAccepted(batchId)` — marca la línea como aceptada (sólo por actor autorizado / tras comprobaciones de stock).
+- `setLineRejected(batchId, reason)` — marca la línea como rechazada (razón registrada).
+- `allocateReservation(batchId, reservedBatchId)` — asocia la línea de orden a un `batch` real en inventario (uso por InventoryService).
+- `revertAllocation(batchId)` — revierte la asignación si falla la transacción de reserva.
+- `approve()` — aprueba la orden completa (orquesta reservas, valida stock, publica eventos).
+- `cancel()` — cancela la orden (libera reservas, publica eventos).
+- `markPreparing()`, `markOnTheWay()`, `markDelivered()` — transiciones de estado de la orden.
+- `calculateTotal()` — suma `lineTotal` de las líneas (considerar accepted / partiallyAccepted según política).
+
+**Reglas / restricciones importantes:**
+- **Diferencia con `batches` de inventario:**  
+  - `batches` en la colección `batches` representan lotes físicos en inventario (stock disponible).  
+  - `batches` embebidos en `orders_to_suppliers` son **snapshots** históricos de la línea en la orden y contienen `quantity` y `accepted`.
+- **Inmutabilidad parcial:** Una vez que una línea ha sido **aceptada** y la orden avanzó (p. ej. aprobada o preparada), los campos críticos del snapshot (quantity, unitPrice, stock snapshot) deben considerarse inmutables para efectos de trazabilidad. Cambios posteriores deben registrarse mediante eventos (nota de crédito / ajuste / nueva orden).
+- **Aceptación y reserva de stock:**  
+  - La transición `approve()` debería orquestar la reserva/consumo de stock en la colección `batches` (p. ej. `findOneAndUpdate` con condición `stock >= quantity`) y, en caso de éxito, marcar `accepted = true` y registrar `reservedBatchId`.  
+  - Si la reserva falla (stock insuficiente), la orden puede quedar parcialmente aceptada o rechazada según la política; actualizar `partiallyAccepted` y cada `accepted` por línea.
+- **Auditoría y trazabilidad:** Registrar quién aceptó/rechazó una línea y timestamps; mantener `batches` de orden como historial inmutable para auditoría y reporting.
+
+### Value Objects (conceptuales)
+- Quantity
+- Money
+- ExpirationDate
+- AuditInfo
+
+### Domain Services
+#### InventoryService
+- reserveForOrder(orderId, requests) -> ReservationResult
+- releaseReservation(orderId)
+- lógica FEFO / priorización por expiración
+
+#### OrderWorkflowService
+- transitionToApproved(order, approver)
+- transitionToDelivered(order)
+- publicar eventos (OrderApprovedEvent, OrderDeliveredEvent)
+
+### Repositories (Interfaces en Domain)
+
+#### BatchRepository
+- findById(id)
+- findByCustomSupplyId(customSupplyId)
+- findAvailableByCustomSupplyId(customSupplyId)
+- findExpiringBefore(date)
+- save(batch)
+- delete(id)
+
+#### CustomSupplyRepository
+- findById(id)
+- findByOwnerId(ownerId)
+- save(customSupply)
+- delete(id)
+
+#### OrderRepository
+- findById(id)
+- findBySupplierId(supplierId)
+- findByState(state)
+- save(order)
+- delete(id)
+
+#### SupplyRepository
+- findById(id)
+- findByNameOrCode(query)
+- findAll()
+- save(supply)
+
 #### 4.2.4.2. Interface Layer
 
 En esta capa se definen los puntos de entrada/salida del sistema y cómo se exponen los casos de uso a clientes externos (front-end, integraciones en la app móvil). Aquí se transforman solicitudes HTTP (o mensajes) en comandos/consultas hacia la *Application Layer* y mapear las respuestas del dominio a objetos aptos para transporte (DTOs).
@@ -395,13 +540,87 @@ Se encargan de resolver consultas del sistema. Tenemos:
 
 ### 4.2.4.4. Infrastructure Layer
 
+En esta capa se encuentran las clases que acceden a servicios externos (base de datos, proveedores de terceros, mensajería) y las implementaciones concretas de los *Repositories* definidos en el Domain Layer. También contiene adaptadores / clients para Cloudinary, OneSignal y Stripe, así como componentes de infraestructura transaccional, mapeadores persistencia↔dominio y utilidades de resiliencia, logging y observabilidad.
+
+## 1. Paquetes y componentes principales (sugeridos)
+Persistence
+  - `MongoBatchRepository` (implementa `BatchRepository`)  
+  - `MongoCustomSupplyRepository` (implementa `CustomSupplyRepository`)  
+  - `MongoOrderRepository` (implementa `OrderRepository`)  
+  - `MongoSupplyRepository` (implementa `SupplyRepository`)  
+  - `mappers` (Document ↔ Aggregate assemblers)
+
+Adapters
+  - `CloudinaryImageAdapter` / `CloudinaryService`  
+  - `OneSignalNotificationAdapter` / `OneSignalService`  
+  - `StripePaymentAdapter` / `StripeService`
+
+Events
+  - `DomainEventPublisher` (interface)  
+  - `MongoDomainEventStore` (opcional: persistencia de eventos)  
+  - `EventPublisherImpl` (publicador a broker si aplica)
+
+Configuration
+  - `MongoConfig` (MongoTransactionManager, indexes, auditing)  
+  - `ThirdPartyClientsConfig` (Cloudinary, OneSignal, Stripe clients)
+
+## 2. Implementación de Repositories
+
+### Contrato (Domain)
+Las interfaces están en Domain (ej.: `BatchRepository`, `OrderRepository`), con métodos como `findById`, `findByCustomSupplyId`, `findAvailableByCustomSupplyId`, `save`, `delete`.
+
+### Implementación (Infrastructure)
+**Nombre sugerido:** `MongoBatchRepository` (implementa `BatchRepository`)
+
+**Responsabilidad:**  
+- Mapear `BatchDocument` ↔ `Batch` (aggregate).  
+- Realizar queries eficientes sobre colecciones Mongo (`batches`): búsquedas por `custom_supply_id`, `expiration_date`, `stock >= X`.  
+- Exponer operaciones atómicas para reservas (ej.: `reserveStock(batchId, qty)` con `findOneAndUpdate`).
+
+
 #### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
 
 #### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
 
+En esta sección se presenta el diagrama de clases UML.  
+El diagrama fue modelado en Java con Spring Boot, siguiendo principios de Domain-Driven Design (DDD).  
+
+El nivel de detalle incluye:
+
+- Clases de dominio principales: `OrderToSupplier`, `Inventory`, `Supply`, `CustomSupply`, `Batch`, `Report`, `Notification`, `Comment`.  
+- Atributos con su tipo de dato y visibilidad (`private`).  
+- Métodos con su visibilidad (`public`).  
+- Relaciones entre clases, indicando multiplicidad, dirección y calificación.  
+- Dependencias con agregaciones y composiciones según corresponda.  
+
+A continuación, se muestra el diagrama:
+
+![Domain Layer Class Diagram](./assets/images/cap4/bc_resources/dc.png)
+
+Este diagrama permite visualizar la estructura del modelo de dominio y las responsabilidades principales de cada clase dentro del bounded context, sirviendo como base para la implementación en Java.
+
+
 ##### 2.6.4.6.2. Bounded Context Database Design Diagram
+
+En esta sección se presenta el diagrama de base de datos para la persistencia de los objetos del bounded context.  
+La implementación se realiza sobre MongoDB, en la cual cada entidad del dominio se mapea a una colección.
+
+El diagrama incluye:
+
+- Colecciones principales: `supplies`, `custom_supplies`, `orders_to_suppliers`, `batches`.  
+- Campos de cada colección con su tipo (`str`, `num`, `bool`, `date`, `doc`, `fk`).  
+- Relaciones entre documentos mediante referencias (`_id`, claves foráneas simuladas).  
+- Estructura embebida para documentos anidados, optimizando consultas.  
+
+A continuación, se muestra el diagrama:
+
+![Database Design Diagram](./assets/images/cap4/bc_resources/dbd.jpeg)
+
+Este modelo de base de datos facilita la persistencia de información del dominio y permite gestionar de manera eficiente los objetos, relaciones y consultas en un entorno document-oriented con MongoDB.
+
+
 
 ### 4.2.5. Bounded Context: Service Design and Planning
 
