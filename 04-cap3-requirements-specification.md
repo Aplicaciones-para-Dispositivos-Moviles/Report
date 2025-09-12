@@ -1152,6 +1152,27 @@ En esta sección se presenta el Product Backlog de Restock, que contiene las his
         <td>Como desarrollador, quiero permitir que los usuarios eliminen su cuenta a través de un endpoint REST, para que puedan ejercer control sobre su información personal y cerrar su cuenta cuando lo deseen.</td>
         <td>1</td>
     </tr>
+    <tr>
+      <td>70</td>
+        <td>SP001</td>
+        <td>Evaluación de Pagos con Stripe</td>
+        <td>Como equipo de desarrollo (móvil y backend) quiero investigar y prototipar la integración de Stripe en nuestra aplicación móvil Kotlin y Flutter. Y backend Spring Boot Java para la plataforma Restock, para que podamos entender las aplicaciones técnicas, riesgos potenciales y esfuerzo requerido para la implementación completa en los componentes móvil y backend.</td>
+        <td>1</td>
+    </tr>
+    <tr>
+      <td>71</td>
+        <td>SP002</td>
+        <td>Evaluación de Gestión de imágenes con Cloudinary</td>
+        <td>Como equipo de desarrollo (móvil y backend), quiero investigar y prototipar la integración de Cloudinary en la app móvil (Kotlin y Flutter) y en el backend (Spring Boot), para entender cómo almacenar, optimizar y servir imágenes de manera eficiente y segura en la plataforma Restock.</td>
+        <td>1</td>
+    </tr>
+    <tr>
+      <td>72</td>
+        <td>SP003</td>
+        <td>Evaluación de Notificaciones Push con OneSignal.</td>
+        <td>Como equipo de desarrollo (móvil y backend), quiero investigar y prototipar la integración de OneSignal en la app móvil (Kotlin y Flutter) y en el backend (Spring Boot), para habilitar notificaciones push confiables que permitan alertar a los usuarios sobre eventos relevantes en Restock.</td>
+        <td>1</td>
+    </tr>
 </table>
 
 ### 3.4.1 Evidencia del Product Backlog
