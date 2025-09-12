@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="8zdhC9HHEgQ_rZb6lmvf" name="Page-1">
-        <mxGraphModel dx="1595" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1232" dy="991" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -35,13 +35,10 @@
                     <mxGeometry x="80" y="60" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="Data Layer" style="swimlane;fontStyle=1;startSize=30;fillColor=#f0fff0;strokeColor=#66aa66;" parent="1" vertex="1">
-                    <mxGeometry x="1000" y="650" width="370" height="170" as="geometry"/>
+                    <mxGeometry x="1000" y="650" width="240" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Supabase (Postgres)&lt;/span&gt;&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Auth + DB + Realtime&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" parent="11" vertex="1">
-                    <mxGeometry x="30" y="60" width="150" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="41" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;MongoDB Atlas&lt;/span&gt;&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Logs / Flexible Catalog&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" parent="11" vertex="1">
-                    <mxGeometry x="210" y="60" width="140" height="80" as="geometry"/>
+                <mxCell id="39" value="&lt;span style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(0, 0, 0);&quot;&gt;MongoDB Atlas&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" parent="11" vertex="1">
+                    <mxGeometry x="50" y="60" width="150" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="External Services" style="swimlane;fontStyle=1;startSize=30;fillColor=#fff7e6;strokeColor=#d79b00;" parent="1" vertex="1">
                     <mxGeometry x="1090" y="150" width="440" height="240" as="geometry"/>
@@ -50,13 +47,10 @@
                     <mxGeometry x="20" y="40" width="180" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="Stripe&lt;br&gt;(Payments)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;" parent="14" vertex="1">
-                    <mxGeometry x="220" y="40" width="180" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="17" value="SendGrid&#xa;(Emails)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;" parent="14" vertex="1">
-                    <mxGeometry x="20" y="130" width="180" height="70" as="geometry"/>
+                    <mxGeometry x="210" y="30" width="180" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="OneSignal/FCM&#xa;(Notificaciones Push)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;" parent="14" vertex="1">
-                    <mxGeometry x="220" y="130" width="180" height="70" as="geometry"/>
+                    <mxGeometry x="120" y="140" width="180" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="REST (HTTPS)" style="endArrow=block;strokeColor=#555555;entryX=0.027;entryY=0.58;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.992;exitY=0.411;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="42" target="10" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -136,11 +130,11 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="28" value="Logs/Analytics (TLS)" style="dashed=1;endArrow=block;strokeColor=#2d7d2d;" parent="1" source="10" target="41" edge="1">
+                <mxCell id="28" value="Logs/Analytics (TLS)" style="dashed=1;endArrow=block;strokeColor=#2d7d2d;entryX=0.41;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="10" target="39" edge="1">
                     <mxGeometry x="-0.0806" y="3" relative="1" as="geometry">
-                        <mxPoint x="1399.756374279656" y="681.0911618608185" as="targetPoint"/>
+                        <mxPoint x="1294" y="710" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="1230" y="550"/>
+                            <mxPoint x="1060" y="540"/>
                         </Array>
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -155,14 +149,9 @@
                 <mxCell id="30" value="Payments" style="endArrow=block;strokeColor=#d79b00;" parent="1" source="10" target="16" edge="1">
                     <mxGeometry x="-0.1219" y="15" relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1310" y="360"/>
+                            <mxPoint x="1180" y="300"/>
                         </Array>
                         <mxPoint x="-1" y="1" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="31" value="Emails" style="endArrow=block;strokeColor=#d79b00;" parent="1" source="10" target="17" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="32" value="Push notifications" style="endArrow=block;strokeColor=#d79b00;" parent="1" source="10" target="18" edge="1">

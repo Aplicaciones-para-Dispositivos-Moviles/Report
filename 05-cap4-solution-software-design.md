@@ -587,7 +587,7 @@ interface PurchaseOrderRepository {
 **Controllers (HTTP – REST)**
 
 * **SalesController**
-* **PurchaseOrdersController**
+
 
 **Consumers (mensajería)**
 
@@ -599,13 +599,10 @@ interface PurchaseOrderRepository {
 **Commands**
 
 * RegisterSaleCommand { dinerName?, adminRestaurantId, occurredAt, currency, recipeLines[{recipeId, quantity}], additionalSupplies[{supplyId, quantity}] }
-* VoidSaleCommand { saleId, reason }
-* CreatePoCommand { supplierId }, AddPoLineCommand { ... }, SubmitPoCommand, ApprovePoCommand, SendPoCommand, PostGoodsReceiptCommand {poId, lines[{supplyId, receivedQty}]}
 
 **Queries**
 
 * GetSaleByIdQuery, SearchSalesQuery, SalesSummaryQuery, TopRecipesQuery
-* GetPurchaseOrderByIdQuery, SearchPurchaseOrdersQuery
 
 **Handlers (ejemplos)**
 
@@ -623,7 +620,6 @@ interface PurchaseOrderRepository {
   "_id": "sale_01JKM...",
   "adminRestaurantId": "rest_123",
   "dinerName": "Mesa 5",
-  "occurredAt": "2025-09-10T13:15:00Z",
   "currency": "PEN",
   "recipeLines": [
     { "recipeId": "rec_01HZY...", "recipeName_snapshot": "Lomo Saltado",
@@ -639,33 +635,10 @@ interface PurchaseOrderRepository {
     "subtotal": { "$numberDecimal": "57.80" },
     "tax":      { "$numberDecimal": "10.40" },
     "total":    { "$numberDecimal": "68.20" }
-  },
-  "status": "Registered",
-  "inventoryApplied": false,
-  "audit": { "createdBy": "admin_1", "createdAt": "2025-09-10T13:15:01Z" }
+  }
 }
 ```
 
-* **purchase_orders** — *Aggregate con líneas y recepciones embebidas*:
-
-```json
-{
-  "_id": "po_2025_001",
-  "supplierId": "sup_ABC",
-  "orderedAt": "2025-09-10T09:00:00Z",
-  "expectedAt": "2025-09-12T18:00:00Z",
-  "status": "Sent",
-  "lines": [
-    { "supplyId": "sup_beef_topside", "quantity": { "$numberDecimal": "15.0" },
-      "unitPrice": { "$numberDecimal": "18.50" }, "currency": "PEN" }
-  ],
-  "receipts": [
-    { "receiptId": "gr_01", "receivedAt": "2025-09-12T19:10:00Z",
-      "lines": [{ "supplyId": "sup_beef_topside", "receivedQty": { "$numberDecimal": "15.0" } }] }
-  ],
-  "audit": { "createdBy": "admin_1", "createdAt": "2025-09-10T09:00:00Z" }
-}
-```
 
 ### 4.2.6.5. Bounded Context Software Architecture Component Level Diagrams
 
