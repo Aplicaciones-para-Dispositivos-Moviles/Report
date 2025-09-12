@@ -221,21 +221,227 @@ A continuación se presentan los diagramas de despliegue para el sistema a imple
 
 ### 4.2.1. Bounded Context: Identity and Access Management
 
+**Propósito:** Autenticar y autorizar usuarios. Administra credenciales (en **hash**), el **rol** asignado a cada usuario y expone endpoints para login y la gestión básica de cuentas de los usuarios. Ademas, el diagrama muestra `User` (con `username`, `password`) y `Roles` (con `name`) con relación **Roles (1) — User (1..*)**.
+
 ### 4.2.1.1. Domain Layer
+
+En esta sección se documentan las clases que forman el core del bounded context: Aggregates, Entities, Value Objects, Domain Services e interfaces (Repositories).
+
+#### Aggregates
+
+##### User (Aggregate Root)
+**Propósito:** Representa a una cuenta de usuario autenticable y su relación con un rol.
+
+**Atributos:**
+- `id` 
+- `username:String`
+- `password:String` 
+- `roleName:String` *(nombre del rol asociado; referencia lógica a `Roles`)*
+
+**Métodos:**
+- `displayData()`
+- `editData`
+
+**Invarianzas / reglas:**
+- `username` **único** y no vacío.
+- `password` siempre presente (no texto plano).
+- `roleName` no nulo; debe existir en el catálogo `Roles`.
+
+##### Roles (Entity – catálogo)
+**Propósito:** Define el rol asignable a uno o varios usuarios.
+
+**Atributos:**
+- `name:String` *(`Admin`, `Supplier`, `Customer`)*
+
+**Métodos:**
+- `getStringName(): String`
+- `getDefaultRole(): Roles`
+- `toRoleFromName(name:String): Roles`
+
+**Relación:** **Roles (1)** — **User (1..*)** → cada usuario tiene exactamente **un** rol; un rol pertenece a **muchos** usuarios.
+
+### Value Objects (conceptuales)
+- `Username`
+- `Password`
+
+### Domain Services 
+- **PasswordPolicy**: reglas de complejidad y vencimiento.
+- **RoleResolutionService**: obtiene el rol por defecto y valida transiciones de rol.
+
+
+### Repositories (Interfaces en Domain)
+
+**UserRepository**
+- `findByUsername(username:String): User?`
+- `existsByUsername(username:String): boolean`
+- `save(user:User): void`
+- `deleteByUsername(username:String): void`
+
+**RolesRepository**
+- `findByName(name:String): Roles?`
+- `getDefault(): Roles`
+- `save(role:Roles): void`
+
+### Domain Events
+- `UserCreated`
+- `UserPasswordChanged`
+- `UserRoleChanged`
+
 
 ### 4.2.1.2. Interface Layer
 
+En esta capa se definen los puntos de entrada/salida del sistema y cómo se exponen los casos de uso a clientes externos. Transforma solicitudes HTTP en *commands/queries* a la **Application Layer** y mapea respuestas del dominio a DTOs.
+
+**Controllers (REST)**
+- **AuthController**
+  - **POST** `/api/v1/auth/login` → autentica (`username`, `password`) y retorna tokens (infra).
+  - **POST** `/api/v1/auth/logout` → invalida refresh token (si aplica).
+- **UsersController**
+  - **POST** `/api/v1/users` → crea usuario con rol por defecto.
+  - **GET** `/api/v1/users/{username}` → obtiene datos básicos del usuario.
+  - **PUT** `/api/v1/users/{username}` → renombra usuario o reasigna rol.
+  - **PUT** `/api/v1/users/{username}/password` → cambia contraseña.
+- **RolesController**
+  - **GET** `/api/v1/roles` → lista roles.
+  - **GET** `/api/v1/roles/{name}` → detalle de rol.
+
+**Resources (DTOs / Request & Response Models)**
+- `LoginRequest { username, password }`
+- `TokenResponse { accessToken, refreshToken }`
+- `CreateUserRequest { username, password }`
+- `UserResource { username, roleName }`
+- `ChangePasswordRequest { oldPassword, newPassword }`
+- `RoleResource { name }`
+
+**Assemblers / Mappers**
+- `CreateUserCommandFromResourceAssembler`
+- `UserResourceFromEntityAssembler`
+- `ChangePasswordCommandFromResourceAssembler`
+- `AssignRoleCommandFromResourceAssembler`
+
 ### 4.2.1.3. Application Layer
+
+Coordina interacciones entre dominio e infraestructura, asegurando reglas de negocio y orquestación de casos de uso.
+
+**Command Handlers**
+- `CreateUserCommandHandler`  
+  Valida unicidad de `username`, calcula `passwordHash`, obtiene `Roles.getDefaultRole()` y persiste.
+- `ChangePasswordCommandHandler`  
+  Aplica `PasswordPolicy`, recalcula hash y guarda.
+- `AssignRoleCommandHandler`  
+  Verifica existencia del rol y asigna con reglas de `RoleResolutionService`.
+
+**Query Handlers**
+- `GetUserQueryHandler`
+- `ListRolesQueryHandler`
+
+**Event Handlers (opcionales)**
+- `OnUserCreated` → auditar / notificar.
+- `OnUserPasswordChanged` → auditar / invalidar sesiones antiguas si aplica.
 
 ### 4.2.1.4. Infrastructure Layer
 
+Clases que acceden a servicios externos (base de datos, emisión de tokens, email, mensajería) y **implementaciones concretas** de los *Repositories*.
+
+#### 1 Paquetes y componentes principales 
+
+**Persistence**
+- `MongoUserRepository` (implementa `UserRepository`)
+- `MongoRolesRepository` (implementa `RolesRepository`)
+- `mappers` *(Document ↔ Entity)*
+
+**Security / Crypto**
+- `BCryptPasswordHasher` 
+
+**Auth**
+- `JwtTokenProvider` *(emite/valida access/refresh tokens)* 
+
+**Events**
+- `DomainEventPublisher` *(si se publican eventos a un broker)*
+
+**Configuration**
+- `MongoConfig` *(índices, auditoría)*  
+- `SecurityConfig` *(JWT filters, CORS, CSRF, rate-limiting)*
+
+#### 2 Modelo de datos (MongoDB) y mapeos
+
+**Colección `users`**
+```json
+{
+  "_id": "u:<username>",
+  "username": "Robert",
+  "password": "password:$2b$...",
+  "roleName": "Supplier",
+  "audit": { "createdAt": "2025-09-01T00:00:00Z", "updatedAt": "2025-09-01T00:05:00Z" }
+}
+```
+**Índices:**  
+- Único en `username`.  
+- Compuesto `{ roleName, username }`.
+  
+**Colección `roles`**
+```json
+{ "_id": "r:Admin", "name": "Admin" }
+```
+**Índice:** único en `name`.  
+**Seed inicial:** `Admin`, `Supplier`, `Customer`.
+
+**Colección `refresh_tokens`**
+```json
+{
+  "_id": "rt:uuid",
+  "userId": "u:robert",
+  "tokenHash": "lewa256:...",
+  "issuedAt": "2025-09-01T00:00:02Z",
+  "expiresAt": "2025-10-01T00:00:02Z",
+  "revoked": false,
+  "deviceInfo": "Chrome 140"
+}
+```
+**Índices:** `{ userId, revoked }`, TTL en `expiresAt`.
+
+**Colecciones `email_verifications` / `password_resets`** con **TTL** sobre `expiresAt`.
+
+#### 3 Repositories – Implementación
+
+**MongoUserRepository**
+- Mapea `User` ↔ documento `users`.  
+- Operaciones atómicas para cambios de contraseña.  
+- Asegura índice único en `username`.
+
+**MongoRolesRepository**
+- Resuelve rol por nombre y rol por defecto.  
+- Provee *seed* inicial (al iniciar la app).
+
+#### 4 Seguridad & Resiliencia
+- Nunca almacenar contraseñas en claro; usar **salt + KDF**.  
+- Firmar JWT con clave rotativa; considerar expiración corta de `accessToken` y rotación de `refreshToken`.  
+- Rate-limiting en `/auth/login`.  
+- Auditoría mínima (`createdAt`, `updatedAt`).
+
 ### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+**Descripción C4–Component:**
+- **Interface/Presentation:** *AuthController*, *UsersController*, *RolesController*.  
+- **Application:** *IAM Application Service* (handlers de commands/queries).  
+- **Domain:** *User*, *Roles*, *PasswordPolicy*, *RoleResolutionService*, *Repositories (interfaces)*.  
+- **Infrastructure:** *MongoUserRepository*, *MongoRolesRepository*, *BCryptPasswordHasher*, *JwtTokenProvider*.
+
+**Flujo típico:**
+1. `AuthController.login` → *Application* valida credenciales (hash), emite tokens con *JwtTokenProvider*.  
+2. `UsersController.create` → *Application* aplica reglas de dominio y persiste vía *MongoUserRepository*.  
+3. `UsersController.changePassword` → *Domain.User.changePassword* → guarda; (opc.) invalida refresh tokens.
 
 ### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
+- **Concordancia con tu UML:** `Roles (1) — User (1..*)`.  
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
+- **Colecciones:** `users`, `roles`.  
+- **Relaciones:** `users.roleName` referencia lógica a `roles.name`.  
+- **Índices:** `users.username` (único), `roles.name` (único), TTL en expirables.  
+- **Seguridad:** password **siempre** en hash; tokens de refresco **hasheados** si se almacenan.
 
 ### 4.2.2. Bounded Context: Subscriptions and Payments
 
@@ -255,23 +461,228 @@ A continuación se presentan los diagramas de despliegue para el sistema a imple
 
 ##### 2.6.2.6.2. Bounded Context Database Design Diagram
 
-#### 4.2.3. Bounded Context: Profiles and Preferences
+### 4.2.3. Bounded Context: Profiles and Preferences
 
-#### 4.2.3.1. Domain Layer
+**Propósito:** Gestionar el **perfil** del usuario (datos públicos y de contacto) y sus **preferencias**. Mantiene independencia de IAM: la relación con el usuario se modela como `userId` (referencia externa). El modelo contiene: `Profile` como Aggregate Root con **composición** de `Business`; se incorporan mínimos ajustes Domain Driven Degign.
 
-#### 4.2.3.2. Interface Layer
+### 4.2.3.1. Domain Layer
 
-#### 4.2.3.3. Application Layer
+En esta sección se documentan las clases que forman el core del bounded context: Aggregates, Entities, Value Objects, Domain Services e interfaces (Repositories).
 
-#### 4.2.3.4. Infrastructure Layer
+#### Aggregates
 
-#### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+##### Profile (Aggregate Root)
+**Propósito:** Representa el perfil visible/administrable del usuario y centraliza sus datos de contacto, ubicación, avatar y preferencias. Contiene a `Business` por **composición** (ciclo de vida dependiente).
 
-#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
+**Atributos:**
+- `id` 
+- `userId:String`
+- `name:String`  
+- `lastName:String`  
+- `email:String`  
+- `avatar:String` 
+- `phone:String`  
+- `address:String`  
+- `country:String`  
+- `business:Business`  
+
+**Métodos:**
+- `getFullName():String`
+- `updateContact():void`
+
+**Invarianzas / reglas:**
+- `userId` obligatorio y único por perfil.  
+- `email` válido; coherente con formato.  
+- `business` no nulo (por composición).  
+- `getFullName()` retorna nombre normalizado `name + " " + lastName`.
+
+##### Business (Entity – **composición** de Profile)
+**Propósito:** Datos del negocio del usuario integrados al perfil.
+
+**Atributos:**
+- `name:String`
+- `address:String`
+- `categories:String` 
+- `phone:String`
+- `email:String`
+
+**Métodos:**
+- `getCategoryList():List<String>`
+- `updateInfo():void`
+
+**Invarianzas / reglas:**
+- `email` válido.  
+- `name` no vacío.  
+
+### Value Objects (conceptuales)
+- `Email`
+- `PhoneNumber`
+- `Address`
+- `CountryCode`
+
+### Domain Services
+- **ProfileCompletenessService**: evalúa completitud del perfil.
+- **AvatarPolicy**: valida tamaños/formatos soportados para `avatar`.
+
+### Repositories (Interfaces en Domain)
+
+**ProfileRepository**
+- `findByUserId(userId:String): Profile?`
+- `existsByUserId(userId:String): boolean`
+- `save(profile:Profile): void`
+- `deleteByUserId(userId:String): void`
+
+**BusinessCategoryRepository** 
+- `findAll(): List<Category>`
+
+### Domain Events 
+- `ProfileCreated`
+- `ProfileUpdated`
+- `BusinessUpdated`
+- `PreferencesUpdated`
+
+### 4.2.3.2. Interface Layer
+
+En esta capa se definen los puntos de entrada/salida del sistema y cómo se exponen los casos de uso a clientes externos. Transforma solicitudes HTTP en *commands/queries* a la **Application Layer** y mapea respuestas del dominio a DTOs.
+
+**Controllers (REST)**
+- **ProfileController**
+  - **GET** `/api/v1/profiles/me` → detalle del perfil para el `userId` del token.
+  - **PUT** `/api/v1/profiles/me` → actualizar datos de contacto (equivale a `updateContact`).
+  - **POST** `/api/v1/profiles/me/avatar` → actualizar `avatar` (equivale a `updateAvatar`).
+  - **PUT** `/api/v1/profiles/me/preferences` → actualizar preferencias (equivale a `updatePreferences`).
+  - **GET** `/api/v1/profiles/{userId}` → vista pública básica (datos no sensibles).
+- **BusinessController** 
+  - **PUT** `/api/v1/profiles/me/business` → actualizar datos del negocio (equivale a `updateInfo`).
+
+**Resources (DTOs / Request & Response Models)**
+- `ProfileResource { userId, name, lastName, email, avatar, phone, address, country, business, notificationPrefs? }`
+- `UpdateContactRequest { email, phone, address, country }`
+- `UpdateAvatarRequest { avatar }`
+- `UpdatePreferencesRequest { email:Boolean, push:Boolean }`
+- `UpdateBusinessRequest { name, address, categories, phone, email }`
+- `ProfileSummary { userId, fullName, businessName, country, avatar }`
+
+**Assemblers / Mappers**
+- `ProfileResourceFromEntityAssembler`
+- `UpdateContactCommandFromResourceAssembler`
+- `UpdateBusinessCommandFromResourceAssembler`
+- `UpdatePreferencesCommandFromResourceAssembler`
+
+### 4.2.3.3. Application Layer
+
+Coordina interacciones entre dominio e infraestructura, garantizando reglas de negocio y orquestación de casos de uso.
+
+**Command Handlers**
+- `CreateProfileOnUserVerifiedCommandHandler`  
+  Crea perfil inicial al recibir `userId` desde IAM (evento).
+- `UpdateContactCommandHandler`  
+  Valida email/teléfono y aplica `updateContact`.
+- `UpdateBusinessInfoCommandHandler`  
+  Normaliza `categories`  y aplica `updateInfo`.
+- `UpdatePreferencesCommandHandler`   
+  Valida estructura de preferencias y aplica `updatePreferences`.
+- `UpdateAvatarCommandHandler` 
+  Aplica `AvatarPolicy` y actualiza `avatar`.
+
+**Query Handlers**
+- `GetProfileByUserIdQueryHandler`
+- `SearchProfilesQueryHandler(text?, category?)`
+
+**Event Handlers**
+- `OnUserVerified(userId, email)` → ejecuta `CreateProfileOnUserVerifiedCommand`.
+
+### 4.2.3.4. Infrastructure Layer
+
+Clases que acceden a servicios externos (base de datos, almacenamiento de imágenes, mensajería) y **implementaciones concretas** de los *Repositories*.
+
+#### 1 Paquetes y componentes principales
+
+**Persistence**
+- `MongoProfileRepository` (implementa `ProfileRepository`)
+- `mappers` *(Document ↔ Aggregate)*
+
+**Media / External Services**
+- `ImageStorageAdapter` para `avatar`
+
+**Search**
+- Índices de texto en Mongo o integración con motor de búsqueda.
+
+**Events**
+- `DomainEventPublisher` / `EventSubscriber` (para `OnUserVerified`).
+
+**Configuration**
+- `MongoConfig`
+- `ExternalClientsConfig` 
+
+#### 2 Modelo de datos (MongoDB) y mapeos
+
+**Colección `profiles`** 
+```json
+{
+  "_id": "p:<userId>",
+  "userId": "u:robert",
+  "name": "Robert",
+  "lastName": "Doe",
+  "email": "robert@example.com",
+  "avatar": "https://cdn/...",
+  "phone": "+51...",
+  "address": "Calle ...",
+  "country": "PE",
+  "business": {
+    "name": "Mi Tienda",
+    "address": "Av ...",
+    "categories": "comida",  
+    "phone": "+51...",
+    "email": "ventas@mitienda.com"
+  },
+  "notificationPrefs": { "email": true, "push": true },
+  "audit": { "createdAt": "2025-09-01T00:00:00Z", "updatedAt": "2025-09-01T00:05:00Z" }
+}
+```
+**Índices sugeridos:**  
+- Único en `userId`.  
+- Índice de texto en `name`, `lastName`, `business.name` y, si se busca por categorías, en `business.categories`.  
+- Índice por país `country` para filtros comunes.
+
+**Mappers utilitarios (CSV ↔ lista)**
+- **Doc → Dominio**: `categories.split(",").map(trim).filter(notEmpty).unique()`  
+- **Dominio → Doc**: `categoriesList.map(trim).unique().join(",")`
+
+#### 3 Repositories – Implementación
+
+**MongoProfileRepository**
+- Mapea `Profile` ↔ documento `profiles`.  
+- Asegura índice único en `userId`.  
+- Expone proyecciones eficientes para listados.
+
+#### 4 Seguridad & Consistencia
+- `userId` es referencia lógica a IAM.  
+- Validar `email`/`phone` en Application antes de persistir.  
+- Auditar `createdAt`/`updatedAt` y, si aplica, `updatedBy`.  
+
+### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+**Descripción C4–Component:**
+- **Interface/Presentation:** *ProfileController*  
+- **Application:** *Profiles Application Service*   
+- **Domain:** *Profile*, *Business*, *ProfileRepository*, *ProfileCompletenessService*, *AvatarPolicy*.  
+- **Infrastructure:** *MongoProfileRepository*, *ImageStorageAdapter*.
+
+**Flujo típico:**
+1. `ProfileController.updateContact` → *Application* valida → *Domain.Profile.updateContact* → *MongoProfileRepository.save*.
+2. `ProfileController.updateBusiness` → *Application* normaliza categorías → *Domain.Business.updateInfo* → guardar.  
+3. `OnUserVerified` (evento IAM) → *Application* crea `Profile` inicial (idempotente).
+
+### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
+- **Concordancia con tu UML:** `Profile` **compone** a `Business`.  
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
+- **Colección principal:** `profiles` con `business` **embebido** (por composición).  
+- **Claves e índices:** `userId` (único), índices de texto para búsqueda, filtros por `country`.  
+- **Relaciones:** `userId` referencia lógica a IAM.
 
 #### 4.2.4. Bounded Context: Asset and Resource Management
 
