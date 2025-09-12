@@ -615,6 +615,47 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
         <td> Escenario 1: Cambio de contraseña exitoso   <br> Dado que el recurso /api/v1/auth/change-password está disponible  <br> Y el usuario está autenticado correctamente  <br> Y proporciona la contraseña actual correcta  <br> Y la nueva contraseña cumple con los requisitos de seguridad  <br> Cuando se realiza una solicitud POST con los datos requeridos (current\_password, new\_password, new\_password\_confirmation) <br> Entonces el sistema actualiza la contraseña del usuario  <br> Y responde con código 200 OK  <br> Y retorna un mensaje de confirmación del cambio de contraseñaet  <br>  Escenario 2: Contraseña actual incorrecta   <br> Dado que el usuario está autenticado correctamente  <br> Y el recurso /api/v1/auth/change-password está disponible  <br> Cuando se realiza una solicitud POST con una contraseña actual incorrecta  <br> Entonces el sistema responde con código 400 Bad Request  <br> Y retorna un mensaje indicando que la contraseña actual es incorrecta  <br>  Escenario 3: Nueva contraseña inválida   <br> Dado que el usuario está autenticado correctamente  <br> Y el recurso /api/v1/auth/change-password está disponible  <br> Cuando se realiza una solicitud POST con una nueva contraseña que no cumple las reglas de seguridad  <br> Entonces el sistema responde con código 422 Unprocessable Entity  <br> Y retorna un mensaje detallando los errores de validación de la nueva contraseña</td>
         <td>EP-03</td>
     </tr>
+    <tr>
+        <td>SP001</td>
+        <td>Evaluación de Pagos con Stripe</td>
+        <td>Como equipo de desarrollo (móvil y backend) quiero investigar y prototipar la integración de Stripe en nuestra aplicación móvil Kotlin y Flutter. Y backend Spring Boot Java para la plataforma Restock, para que podamos entender las aplicaciones técnicas, riesgos potenciales y esfuerzo requerido para la implementación completa en los componentes móvil y backend</td>
+        <td>Escenario 1: Revisa la Documentación de la API de Stripe.
+        Dado que el equipo de desarrollo necesita entender las capacidades de Stripe para el procesamiento de pagos en web y móvil, cuando el desarrollador revisa la documentación de la API de Stripe. Entonces el desarrollador identifica y documenta el producto o flujo de Stripe más adecuado para la plataforma Restock en un informe compartido.
+        Escenario 2: Evalúa la Compatibilidad Móvil con kotlin.
+        Dado la arquitectura Kotlin para android e iOS, cuando el desarrollador evalúa la compatibilidad con los Mobile SDKs de Stripe, Entonces el desarrollador documenta los requisitos de integración móvil en el informe compartido.
+        Escenario 3: Evalúa la Compatibilidad del Backend.
+        Dado el backend Spring Boot 3.5.5 usando Java 24 para servicios RESTful, cuando el desarrollador evalúa la compatibilidad con la librería Java de Stripe, entonces el desarrollador documenta los requisitos de integración del backend en el informe compartido.
+        Escenario 4: Identifica Implicaciones de Seguridad.
+        Dado la necesidad de garantizar un procesamiento de pagos seguro en móvil y backend, Cuando el desarrollador analiza los riesgos de seguridad potenciales, Entonces el desarrollador incluye un resumen de riesgos y las características de mitigación de Stripe en el informe. 
+        </td>
+    </tr>
+    <tr>
+        <td>SP002</td>
+        <td>Evaluación de Gestión de imágeens con Cloudinary</td>
+        <td>Como equipo de desarrollo (móvil y backend), quiero investigar y prototipar la integración de Cloudinary en la app móvil (Kotlin y Flutter) y en el backend (Spring Boot), para entender cómo almacenar, optimizar y servir imágenes de manera eficiente y segura en la plataforma Restock.</td>
+        <td>
+        Escenario 1: Revisión de la API de Cloudinary.
+        Dado que el equipo necesita conocer las capacidad de Cloudinary, Cunado se revisa la documentación oficial de la API, Entonces se identifican y documenta los ednpoints de clave para subida y entrga de imágenes.
+        Escenario 2: Compatibilidad móvil (Kotlin/Flutter).
+        Dado que la aplicación móvul requere gestión de imágenes, Cuando se integran los sdks de cloudinary en kotlin y flutter, Entonces se valida la compatibilidad y se documentan los requisitos de integración.
+        Escenario 3: Compatibilidad Backend (Spring Boot).
+        Dado que el backend usa Spring Boot con Java, Cuando se prueba la librería de Cloudinary para Java, Entonces se documentan los pasos de integhración y los resultados de la prueba.
+        </td>
+    </tr>
+      <tr>
+        <td>SP003</td>
+        <td>Evaluación de Notificaciones Push con OneSignal</td>
+        <td>Como equipo de desarrollo (móvil y backend), quiero investigar y prototipar la integración de OneSignal en la app móvil (Kotlin y Flutter) y en el backend (Spring Boot), para habilitar notificaciones push confiables que permitan alertar a los usuarios sobre eventos relevantes en Restock.</td>
+        <td>
+        Escenario 1: Revisión de la API de OneSignal.
+        Dado que el equipo necesita entender el flujo de integración, Cuando se revisa la documentación de la API y el panel de OneSignal, Entonces se documentan los pasoso el flujo de OneSignal requeridos para móvil y backend.
+        Escenario 2: Compatibilidad móvil (Kotlin/Flutter).
+        Dado que el equipo necesita una automatización de mensaje y/o notificaciones, Cuando se integra el sdk de OneSignal en Kotlin y Flutter, Entonces el desarrollador documenta los requisitos de integración móvil en el informe.
+        Escenario 3: Integración backend (Spring Boot).
+        Esceario 4: Identificación de limitaciones.
+        Dado que el backend maneja servicios RESTful, Cuando se implementa un endpoint para enviar notificaciones vía OneSignal,Entonces el backend logra enviar una notificación de prueba a la aplicación móvil, Dado que se requiere garantizar la escalabilidad, Cuando se analizan las restricciones del plan gratuito y compatibilidad con iOS y Android, Entonces se documentan limitaciones y consideraciones para la implementación final.
+        </td>
+    </tr>
 </table>
 
 ## 3.3 Impact Mapping
