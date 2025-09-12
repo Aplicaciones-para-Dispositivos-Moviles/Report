@@ -239,9 +239,8 @@ En esta sección se documentan las clases que forman el core del bounded context
 - `roleName:String` *(nombre del rol asociado; referencia lógica a `Roles`)*
 
 **Métodos:**
-- `rename(newUsername:String)`
-- `changePassword(newHash:String)`
-- `assignRole(roleName:String)`
+- `displayData()`
+- `editData`
 
 **Invarianzas / reglas:**
 - `username` **único** y no vacío.
@@ -254,7 +253,7 @@ En esta sección se documentan las clases que forman el core del bounded context
 **Atributos:**
 - `name:String` *(`Admin`, `Supplier`, `Customer`)*
 
-**Métodos (afinados respecto al UML):**
+**Métodos:**
 - `getStringName(): String`
 - `getDefaultRole(): Roles`
 - `toRoleFromName(name:String): Roles`
@@ -401,7 +400,7 @@ Clases que acceden a servicios externos (base de datos, emisión de tokens, emai
 ```
 **Índices:** `{ userId, revoked }`, TTL en `expiresAt`.
 
-**Colecciones `email_verifications` / `password_resets`** *(si aplica)* con **TTL** sobre `expiresAt`.
+**Colecciones `email_verifications` / `password_resets`** con **TTL** sobre `expiresAt`.
 
 #### 3 Repositories – Implementación
 
@@ -418,7 +417,7 @@ Clases que acceden a servicios externos (base de datos, emisión de tokens, emai
 - Nunca almacenar contraseñas en claro; usar **salt + KDF**.  
 - Firmar JWT con clave rotativa; considerar expiración corta de `accessToken` y rotación de `refreshToken`.  
 - Rate-limiting en `/auth/login`.  
-- Auditoría mínima (`createdAt`, `updatedAt`, `by` si aplica).
+- Auditoría mínima (`createdAt`, `updatedAt`).
 
 ### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
 
