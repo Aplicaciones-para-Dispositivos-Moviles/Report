@@ -462,23 +462,228 @@ Clases que acceden a servicios externos (base de datos, emisión de tokens, emai
 
 ##### 2.6.2.6.2. Bounded Context Database Design Diagram
 
-#### 4.2.3. Bounded Context: Profiles and Preferences
+### 4.2.3. Bounded Context: Profiles and Preferences
 
-#### 4.2.3.1. Domain Layer
+**Propósito:** Gestionar el **perfil** del usuario (datos públicos y de contacto) y sus **preferencias**. Mantiene independencia de IAM: la relación con el usuario se modela como `userId` (referencia externa). El modelo contiene: `Profile` como Aggregate Root con **composición** de `Business`; se incorporan mínimos ajustes Domain Driven Degign.
 
-#### 4.2.3.2. Interface Layer
+### 4.2.3.1. Domain Layer
 
-#### 4.2.3.3. Application Layer
+En esta sección se documentan las clases que forman el core del bounded context: Aggregates, Entities, Value Objects, Domain Services e interfaces (Repositories).
 
-#### 4.2.3.4. Infrastructure Layer
+#### Aggregates
 
-#### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+##### Profile (Aggregate Root)
+**Propósito:** Representa el perfil visible/administrable del usuario y centraliza sus datos de contacto, ubicación, avatar y preferencias. Contiene a `Business` por **composición** (ciclo de vida dependiente).
 
-#### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
+**Atributos:**
+- `id` 
+- `userId:String`
+- `name:String`  
+- `lastName:String`  
+- `email:String`  
+- `avatar:String` 
+- `phone:String`  
+- `address:String`  
+- `country:String`  
+- `business:Business`  
+
+**Métodos:**
+- `getFullName():String`
+- `updateContact():void`
+
+**Invarianzas / reglas:**
+- `userId` obligatorio y único por perfil.  
+- `email` válido; coherente con formato.  
+- `business` no nulo (por composición).  
+- `getFullName()` retorna nombre normalizado `name + " " + lastName`.
+
+##### Business (Entity – **composición** de Profile)
+**Propósito:** Datos del negocio del usuario integrados al perfil.
+
+**Atributos:**
+- `name:String`
+- `address:String`
+- `categories:String` 
+- `phone:String`
+- `email:String`
+
+**Métodos:**
+- `getCategoryList():List<String>`
+- `updateInfo():void`
+
+**Invarianzas / reglas:**
+- `email` válido.  
+- `name` no vacío.  
+
+### Value Objects (conceptuales)
+- `Email`
+- `PhoneNumber`
+- `Address`
+- `CountryCode`
+
+### Domain Services
+- **ProfileCompletenessService**: evalúa completitud del perfil.
+- **AvatarPolicy**: valida tamaños/formatos soportados para `avatar`.
+
+### Repositories (Interfaces en Domain)
+
+**ProfileRepository**
+- `findByUserId(userId:String): Profile?`
+- `existsByUserId(userId:String): boolean`
+- `save(profile:Profile): void`
+- `deleteByUserId(userId:String): void`
+
+**BusinessCategoryRepository** 
+- `findAll(): List<Category>`
+
+### Domain Events 
+- `ProfileCreated`
+- `ProfileUpdated`
+- `BusinessUpdated`
+- `PreferencesUpdated`
+
+### 4.2.3.2. Interface Layer
+
+En esta capa se definen los puntos de entrada/salida del sistema y cómo se exponen los casos de uso a clientes externos. Transforma solicitudes HTTP en *commands/queries* a la **Application Layer** y mapea respuestas del dominio a DTOs.
+
+**Controllers (REST)**
+- **ProfileController**
+  - **GET** `/api/v1/profiles/me` → detalle del perfil para el `userId` del token.
+  - **PUT** `/api/v1/profiles/me` → actualizar datos de contacto (equivale a `updateContact`).
+  - **POST** `/api/v1/profiles/me/avatar` → actualizar `avatar` (equivale a `updateAvatar`).
+  - **PUT** `/api/v1/profiles/me/preferences` → actualizar preferencias (equivale a `updatePreferences`).
+  - **GET** `/api/v1/profiles/{userId}` → vista pública básica (datos no sensibles).
+- **BusinessController** 
+  - **PUT** `/api/v1/profiles/me/business` → actualizar datos del negocio (equivale a `updateInfo`).
+
+**Resources (DTOs / Request & Response Models)**
+- `ProfileResource { userId, name, lastName, email, avatar, phone, address, country, business, notificationPrefs? }`
+- `UpdateContactRequest { email, phone, address, country }`
+- `UpdateAvatarRequest { avatar }`
+- `UpdatePreferencesRequest { email:Boolean, push:Boolean }`
+- `UpdateBusinessRequest { name, address, categories, phone, email }`
+- `ProfileSummary { userId, fullName, businessName, country, avatar }`
+
+**Assemblers / Mappers**
+- `ProfileResourceFromEntityAssembler`
+- `UpdateContactCommandFromResourceAssembler`
+- `UpdateBusinessCommandFromResourceAssembler`
+- `UpdatePreferencesCommandFromResourceAssembler`
+
+### 4.2.3.3. Application Layer
+
+Coordina interacciones entre dominio e infraestructura, garantizando reglas de negocio y orquestación de casos de uso.
+
+**Command Handlers**
+- `CreateProfileOnUserVerifiedCommandHandler`  
+  Crea perfil inicial al recibir `userId` desde IAM (evento).
+- `UpdateContactCommandHandler`  
+  Valida email/teléfono y aplica `updateContact`.
+- `UpdateBusinessInfoCommandHandler`  
+  Normaliza `categories`  y aplica `updateInfo`.
+- `UpdatePreferencesCommandHandler`   
+  Valida estructura de preferencias y aplica `updatePreferences`.
+- `UpdateAvatarCommandHandler` 
+  Aplica `AvatarPolicy` y actualiza `avatar`.
+
+**Query Handlers**
+- `GetProfileByUserIdQueryHandler`
+- `SearchProfilesQueryHandler(text?, category?)`
+
+**Event Handlers**
+- `OnUserVerified(userId, email)` → ejecuta `CreateProfileOnUserVerifiedCommand`.
+
+### 4.2.3.4. Infrastructure Layer
+
+Clases que acceden a servicios externos (base de datos, almacenamiento de imágenes, mensajería) y **implementaciones concretas** de los *Repositories*.
+
+#### 1 Paquetes y componentes principales
+
+**Persistence**
+- `MongoProfileRepository` (implementa `ProfileRepository`)
+- `mappers` *(Document ↔ Aggregate)*
+
+**Media / External Services**
+- `ImageStorageAdapter` para `avatar`
+
+**Search**
+- Índices de texto en Mongo o integración con motor de búsqueda.
+
+**Events**
+- `DomainEventPublisher` / `EventSubscriber` (para `OnUserVerified`).
+
+**Configuration**
+- `MongoConfig`
+- `ExternalClientsConfig` 
+
+#### 2 Modelo de datos (MongoDB) y mapeos
+
+**Colección `profiles`** 
+```json
+{
+  "_id": "p:<userId>",
+  "userId": "u:robert",
+  "name": "Robert",
+  "lastName": "Doe",
+  "email": "robert@example.com",
+  "avatar": "https://cdn/...",
+  "phone": "+51...",
+  "address": "Calle ...",
+  "country": "PE",
+  "business": {
+    "name": "Mi Tienda",
+    "address": "Av ...",
+    "categories": "comida",  
+    "phone": "+51...",
+    "email": "ventas@mitienda.com"
+  },
+  "notificationPrefs": { "email": true, "push": true },
+  "audit": { "createdAt": "2025-09-01T00:00:00Z", "updatedAt": "2025-09-01T00:05:00Z" }
+}
+```
+**Índices sugeridos:**  
+- Único en `userId`.  
+- Índice de texto en `name`, `lastName`, `business.name` y, si se busca por categorías, en `business.categories`.  
+- Índice por país `country` para filtros comunes.
+
+**Mappers utilitarios (CSV ↔ lista)**
+- **Doc → Dominio**: `categories.split(",").map(trim).filter(notEmpty).unique()`  
+- **Dominio → Doc**: `categoriesList.map(trim).unique().join(",")`
+
+#### 3 Repositories – Implementación
+
+**MongoProfileRepository**
+- Mapea `Profile` ↔ documento `profiles`.  
+- Asegura índice único en `userId`.  
+- Expone proyecciones eficientes para listados.
+
+#### 4 Seguridad & Consistencia
+- `userId` es referencia lógica a IAM.  
+- Validar `email`/`phone` en Application antes de persistir.  
+- Auditar `createdAt`/`updatedAt` y, si aplica, `updatedBy`.  
+
+### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+**Descripción C4–Component:**
+- **Interface/Presentation:** *ProfileController*  
+- **Application:** *Profiles Application Service*   
+- **Domain:** *Profile*, *Business*, *ProfileRepository*, *ProfileCompletenessService*, *AvatarPolicy*.  
+- **Infrastructure:** *MongoProfileRepository*, *ImageStorageAdapter*.
+
+**Flujo típico:**
+1. `ProfileController.updateContact` → *Application* valida → *Domain.Profile.updateContact* → *MongoProfileRepository.save*.
+2. `ProfileController.updateBusiness` → *Application* normaliza categorías → *Domain.Business.updateInfo* → guardar.  
+3. `OnUserVerified` (evento IAM) → *Application* crea `Profile` inicial (idempotente).
+
+### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
+- **Concordancia con tu UML:** `Profile` **compone** a `Business`.  
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
+- **Colección principal:** `profiles` con `business` **embebido** (por composición).  
+- **Claves e índices:** `userId` (único), índices de texto para búsqueda, filtros por `country`.  
+- **Relaciones:** `userId` referencia lógica a IAM.
 
 #### 4.2.4. Bounded Context: Asset and Resource Management
 
