@@ -930,92 +930,92 @@ En esta sección se presenta el Product Backlog de Restock, que contiene las his
         <td>2</td>
     </tr>
     <tr>
-        <td>44</td>
-        <td>TS003</td>
+        <td>43</td>
+        <td>TS002</td>
         <td>Gestión del estado de suscripción mediante API RESTful</td>
         <td>Como desarrollador, quiero consultar el estado de suscripción de un usuario mediante una API, para que el sistema pueda determinar su nivel de acceso según su vigencia y ofrecer opciones de renovación.</td>
         <td>2</td>
     </tr>
     <tr>
-        <td>45</td>
-        <td>TS004</td>
-        <td>Sistema de notificaciones de inventario mediante API RESTful</td>
-        <td>Como desarrollador, quiero obtener notificaciones de inventario (vencimiento próximo y exceso de stock) mediante una API REST, para que pueda construir funcionalidades de notificación y visualización en la aplicación del administrador de restaurante.</td>
+        <td>44</td>
+        <td>TS003</td>
+        <td>Sistema de notificaciones de inventario mediante API RESTful Y One Signal</td>
+        <td>Como desarrollador, quiero integrar los endpoints de notificaciones de inventario (vencimiento próximo y exceso de stock) con OneSignal, para que los administradores de restaurante reciban notificaciones automáticas en sus dispositivos y puedan actuar de inmediato.</td>
         <td>3</td>
     </tr>
     <tr>
-        <td>46</td>
-        <td>TS005</td>
+        <td>45</td>
+        <td>TS004</td>
         <td>Gestión de proveedores mediante API RESTful</td>
         <td>Como desarrollador, quiero gestionar proveedores (crear, editar, eliminar, buscar y filtrar) mediante una API REST, para que pueda construir funcionalidades de gestión de proveedores en la aplicación del administrador de restaurante.</td>
         <td>3</td>
     </tr>
     <tr>
-        <td>47</td>
-        <td>TS006</td>
+        <td>46</td>
+        <td>TS005</td>
         <td>Gestionar insumos  mediante API RESTful</td>
         <td>Como desarrollador, quiero gestionar productos (listar, crear, actualizar, eliminar, activar y desactivar) a través de una API REST, para que pueda construir funcionalidades que permitan a los proveedores mantener actualizado su catálogo en la plataforma.</td>
         <td>2</td>
     </tr>
     <tr>
-        <td>48</td>
-        <td>TS007</td>
+        <td>47</td>
+        <td>TS006</td>
         <td>Registrar comentarios y calificaciones sobre pedidos mediante API RESTful</td>
         <td>Como desarrollador, quiero registrar comentarios y calificaciones sobre pedidos mediante una API REST, para que pueda construir funcionalidades que permitan a los administradores de restaurante dejar retroalimentación útil sobre los proveedores.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>49</td>
-        <td>TS008</td>
+        <td>48</td>
+        <td>TS007</td>
         <td>Registro histórico de eventos críticos de insumos</td>
         <td>Como desarrollador, quiero implementar un sistema de registro automático de eventos críticos (vencimientos, bajo stock, sobre stock) en una colección de historial, para que el administrador de restaurante pueda auditar cuándo y por qué ocurrieron problemas con insumos.</td>
         <td>5</td>
     </tr>
     <tr>
-        <td>50</td>
-        <td>TS009</td>
+        <td>49</td>
+        <td>TS008</td>
         <td>Crear recetas mediante API RESTful</td>
         <td>Como desarrollador, quiero crear una receta mediante un API REST, para registrar nuevas recetas y permitir su integración con el módulo de gestión de platos e inventario.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>51</td>
-        <td>TS010</td>
+        <td>50</td>
+        <td>TS009</td>
         <td>Consultar recetas mediante API RESTful</td>
         <td>Como desarrollador, quiero consultar recetas mediante una API REST, para permitir la obtención de la lista completa de recetas registradas y facilitar su visualización o integración con otros módulos del sistema.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>52</td>
-        <td>TS011</td>
+        <td>51</td>
+        <td>TS010</td>
         <td>Actualizar recetas mediante API RESTful</td>
         <td>Como desarrollador, quiero actualizar recetas mediante una API REST, para permitir la actualización de recetas existentes, corrigiendo o ajustando sus ingredientes y otros detalles relevantes.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>53</td>
-        <td>TS012</td>
+        <td>52</td>
+        <td>TS011</td>
         <td>Eliminar una receta mediante API RESTful</td>
         <td>Como desarrollador, quiero eliminar una receta mediante una API REST, para permitir la eliminación de recetas que ya no se utilizan o fueron creadas por error.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>54</td>
-        <td>TS013</td>
+        <td>53</td>
+        <td>TS012</td>
         <td>Obtener perfil mediante API RESTful</td>
         <td>Como desarrollador, quiero acceder a los datos del perfil del usuario autenticado mediante una API REST, para que el sistema pueda utilizarlos en funcionalidades que dependan de la identidad y atributos del usuario.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>55</td>
-        <td>TS014</td>
+        <td>54</td>
+        <td>TS013</td>
         <td>Actualizar perfil mediante API RESTful</td>
         <td>Como desarrollador, quiero permitir la actualización del perfil del usuario autenticado mediante una API REST, para asegurar que la información personal pueda mantenerse actualizada.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>56</td>
-        <td>TS015</td>
+        <td>55</td>
+        <td>TS014</td>
         <td>Subir imagen de perfil mediante API RESTful usando Cloudinary</td>
         <td>Como desarrollador, quiero subir una imagen al servicio Cloudinary desde una API REST, para almacenarla de forma centralizada y referenciarla mediante una URL, permitiendo su uso tanto en el perfil como en la sección de recetas.</td>
         <td>1</td>
