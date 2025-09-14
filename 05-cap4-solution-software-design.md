@@ -444,22 +444,287 @@ Clases que acceden a servicios externos (base de datos, emisión de tokens, emai
 - **Seguridad:** password **siempre** en hash; tokens de refresco **hasheados** si se almacenan.
 
 ### 4.2.2. Bounded Context: Subscriptions and Payments
+En esta sección para cada uno de los productos, se presenta las clases identificadas y las detalla a manera de diccionario, explicando para cada una su nombre, propósito y la documentación de atributos y métodos considerados, junto con las relaciones entre ellas. 
+- El propósito de este bounded context contiene y maneja el flujo del proceso de suscripción con respecto a los planes junto a la API de Stripe
+- Administra el estado de suscripciones, renovación de planes y pago inmediato con monedas nativas y/o transacciones rápidas.
+- Algunos de los modelos del core business hace referencia al plan de suscripción y pago. 
 
 #### 4.2.2.1. Domain Layer
+En esta capa se explica por medio de clases la representación core de la
+aplicación y las reglas de negocio que pertenecen al dominio para el bounded context IAM.
+De esta manera se presentan clases de categorías como Entities, Value Objects, Aggregates,
+Factories, Domain Services, o abstracciones representadas por interfaces como en el
+caso de Repositories. 
+
+<table>
+  <tr>
+    <th>Modelos</th>
+    <th>Atributos</th>
+    <th>Métodos</th>
+    <th>Invarianza / Reglas</th>
+  </tr>
+  <tr>
+    <td>Subscription Plan (Aggregate)</td>
+    <td>
+      <ul>
+        <li> Type (Value Object): Hace referencia a los planes de subscripción disponibles</li>
+        <li> Price: Es el costo de un plan de suscripción</li>
+        <li> Duration (Value Object): Es el intervalo de tiempo que dura una suuscripcion a un plan (1 mes)</li>
+        <li> Auto Renewal: Guarda el permiso para el próximo pago (Sí/No)</li>
+        <li> Start Date: Día del pago del plan de suscripción</li>
+        <li> End Date: Día de vencimiento del pago del plan de suscripción</li>
+        <li> Status: Hace referencia al estado del plan, si sigue vigente o no </li>
+      </ul>
+    </td>
+    <td>
+       <ul>
+        <li>activate()</li>
+        <li>changePlan()</li>
+      </ul>
+    </td>
+    <td>
+       Start date y End Date son obligatorios, define el tipo de plan para su próximo manejo en otros bounded y permisos de usuario.
+    </td>
+  </tr>
+  <tr>
+    <td>Payment (Entity)</td>
+    <td>
+      <ul>
+        <li> Amount (Value Object): Hace referencia a los planes de subscripción disponibles</li>
+        <li> Status: Hace referencia al estado del pago</li>
+        <li> Currency: Hace referencia al tipo de moneda del pago </li>
+        <li> CreatedAt (Value Object): Fecha el cual se realizó el pago</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>changeStatus()</li>
+      </ul>
+    </td>
+    <td>
+      Registrar intentos de pago y su resultado.
+    </td>
+  </tr>
+</table>
 
 #### 4.2.2.2. Interface Layer
+En esta sección se introduce introduce, presenta y explica las clases que forman parte de
+Interface/Presentation Layer, como clases del tipo Controllers o Consumers.
+<table>
+  <tr>
+    <th>Controllers</th>
+    <th>Definiciones</th>
+    <th>Endpoints / Propósito</th>
+  </tr>
+  <tr>
+    <td>SubscriptionPlanController</td>
+    <td>
+      Se crea con el propósito de manejar todos los endpoints de los planes de suscripciones. De esta manera, se permite consultar y crear planes de suscripción.
+    </td>
+    <td>
+       <ul>
+        <li>GET /api/v1/subscription-plans → lista de planes</li>
+        <li>POST /api/v1/subscription-plans → añadir un plan de suscripción</li>
+        <li>GET /api/v1/subscription-plans/{id} → plan de suscripción en específico por id.</li>
+        <li>GET /api/v1/subscription-plans?name=basic → plan de suscripción básico.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>PaymentController</td>
+    <td>
+      Se crea con el porpósito de manejar todos los endpoints de los pagos. De esta manera se permite consultar, crear y autorrealizarse junto a el API Externo, Stripe.
+    </td>
+    <td>
+      <ul>
+        <li>GET /api/v1/payments → lista de pagos</li>
+        <li>POST /api/v1/payments → publicar un pago</li>
+        <li>GET /api/v1/payments/{id} -> Buscar el pago con id "id"</li>
+        <li>PUT /api/v1/payments/{id}/status -> Cambiar el estado del pago</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
 
 #### 4.2.2.3. Application Layer
+En esta sección se explica a través de qué clases se maneja los flujos de procesos del negocio. Asimismo, se evidencia los capabilities de la aplicación en relación al bounded context.
+
+<table>
+  <tr>
+    <th>Flujo</th>
+    <th>Nombre</th>
+    <th>Definición</th>
+  </tr>
+  <tr>
+    <td>Command Handlers</td>
+    <td>
+     <ul>
+      <li>CreateSubscriptionCommandHandler</li>
+      <li>CreatePaymentCommandHandler</li>
+      <li>UpdatePaymentStatusCommandHandler</li>
+     </ul>
+    </td>
+    <td>
+       <ul>
+        <li> Maneja la creación de nuevos suscripciones nuevas.</li>
+        <li> Maneja la creación de pagos de suscripciones.</li>
+        <li> Administra las actualizaciones del estado de un pago</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Event Handlers</td>
+    <td>
+      <ul>
+        <li>PaymentCompletedEventHandler</li>
+     </ul>
+    </td>
+    <td>
+      <ul>
+        <li>Este event handler se encaragará de avisar a otros contextos sobre el pago exitosos y de esta manear acceder a las funcioanldiades de otros boundeds.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 #### 4.2.2.4. Infrastructure Layer
+En esta se presenta aquellas clases que acceden a servicios externos como
+databases, messaging systems o email services. Es en esta capa que se ubica la
+implementación de Repositories para las interfaces definidas en Domain Layer.
+
+Asimismo, se muestra la colleción de "Payments", el cual contiene un documento, también conocido como una colección con documetnos anidados.
+
+```
+  {
+    "_id": ObjectId("5ad5d9cc9f11aed10b84938b"),
+    "amount": 98,
+    "status": true,
+    "currency": "Lorem",
+    "created_at": ISODate("2016-04-08T15:06:21.595Z"),
+    "subscription_plans": {
+        "type": "Lorem",
+        "price": 72,
+        "duration": ISODate("2016-04-08T15:06:21.595Z"),
+        "auto_renewal": true,
+        "start_date": ISODate("2016-04-08T15:06:21.595Z"),
+        "end_date": ISODate("2016-04-08T15:06:21.595Z"),
+        "status": true
+    }
+  }
+```
+
+<table>
+  <tr>
+    <th>Repositories</th>
+    <th>Definición</th>
+  </tr>
+  <tr>
+    <td>PaymentRepositoryImpl</td>
+    <td>
+     Se implementan los contratos que se definieiron en la capa de domini, tales como: los fetch, find o exists.
+    </td>
+  </tr>
+  <tr>
+    <td>SubscriptionRepositoryImpl</td>
+    <td>
+      Se implementan los contratos que se definieiron en la capa de domini, tales como: los fetch, find o exists.
+    </td>
+  </tr>
+</table>
 
 #### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+En esta sección, se explica y presenta los Component Diagrams de C4 Model para cada uno de los Containers considerados para el bounded context correspondiente.
+
+<table>
+  <tr>
+    <th>Interface/Controller</th>
+    <th>Application</th>
+    <th>Domain</th>
+    <th>Infrastructure</th>
+  </tr>
+  <tr>
+    <th>SubscriptionPlanController: expone endpoints REST para listar, consultar y administrar planes y precios. </th>
+    <th>SubscriptionCommandService: aplica las reglas de negocio asignadas al contexto, para la validación y flujo de una suscripción. Asimismo se usa los command handlers y queries</th>
+    <th>Modelos centrales como Subscription, Status y SubscriptionAuditory</th>
+    <th>Se aplica los endpoints del controller respectivo</th>
+  </tr>
+  <tr>
+    <th>PaymentController: expone endpoints REST para registrar intentos de pago, consultar pagos y actualizar su estado.</th>
+    <th>PaymentCommandService: aplica las reglas de negocio asignadas al contexto, para la validación y flujo de un pago. Asimismo se usa los command handlers y queries. </th>
+    <th>Modelos centrales como Payment y PaymentAuditory</th>
+    <th>Se aplica los endpoints del controller respectivo</th>
+  </tr>
+    <tr>
+    <th>StripeWebhookController: recibe webhooks de Stripe, verifica la firma e invoca el mapeo a eventos de dominio.</th>
+    <th>StripeService: Fuera del domino pero se aplicará para la orquestación de pagos, de esta manera interactua con los demás servicios para verificar la lógica de negocio.
+    </th>
+    <th>-</th>
+    <th>Se implementa el repository de stripe y a la ves se integra para validaciones.</th>
+  </tr>
+</table>
+
+1. POST /payments → se valida en Application → se invoca Stripe → se recibe webhook invoice.paid → Event Handler payment y actualiza Subscription.
+
+2. POST /subscription-plans → administra planes y precios → persiste en Mongo → visible en GET /subscription-plans.
+
+3. POST /stripe/webhooks → Stripe envía evento → Infrastructure valida firma → Application despacha Event Handler apropiado.
 
 #### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
+En esta sección, se presenta y explica los diagramas que presentan un mayor detalle sobre la implementación de componentes en el bounded context
 
 ##### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
+En esta sección se presenta el Class Diagram de UML para las clases del Domain
+Layer en el bounded context.
 
-##### 2.6.2.6.2. Bounded Context Database Design Diagram
+En esta sección se demuestra la relación de composicion entre Payments y Subscriptions. Ya que para la creación de un objeto payment, se necesita una suscripción inherenemente.
+![dc-web-subscriptions-and-payments](assets/images/cap4/class_diagram/dc-web-subscriptions-and-payments.png)
+
+
+##### 4.2.2.6.2. Bounded Context Database Design Diagram
+En esta sección se presenta y explica para cada producto donde se implementa
+el bounded context correspondiente, el Database Diagram que incluye los objetos de base de datos que permitirán la persistencia de información para los objetos del bounded context.
+Colección: payments
+
+```
+Esquema lógico (snake_case):
+_id : ObjectId o string
+amount : number (minor units recomendado; ej. 499 para 4.99)
+status : string (o boolean si mantienes el actual)
+currency : string (ISO-4217, p. ej. “USD”, “PEN”)
+created_at : date
+subscription_plans : document (snapshot embebido)
+type : string
+price : number (minor units) [o price : { amount_minor_units, currency }]
+duration : string o object [opcional si usas ciclo: “Monthly/Annual/Trial”]
+auto_renewal : bool
+start_date : date
+end_date : date
+status : bool
+```
+
+Ejemplo de documento:
+```
+{
+"_id": "pi_01JABCDE123",
+"amount": 499,
+"status": "succeeded",
+"currency": "USD",
+"created_at": ISODate("2025-09-14T15:20:03Z"),
+"subscription_plans": {
+"type": "STARTER",
+"price": 499,
+"duration": "Monthly",
+"auto_renewal": true,
+"start_date": ISODate("2025-09-14T00:00:00Z"),
+"end_date": ISODate("2025-10-14T00:00:00Z"),
+"status": true
+}
+}
+```
+
+A continuación el diagrama de base de datos:
+![db_subscriptions_and_payments](assets/images/cap4/db_diagram/db_subscriptions_and_payments.png)
 
 ### 4.2.3. Bounded Context: Profiles and Preferences
 
