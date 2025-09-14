@@ -195,13 +195,13 @@ Esta sección aplica el *C4 Model* en dos niveles: **Context** (visión externa 
 
 ![Figura 4.1 - Context Diagram](assets/images/cap4/software_architecture/context.png)
 
-El Context Diagram muestra **Restock** como un recuadro central con dos actores (Administrador y Proveedor) y los servicios externos principales alrededor (Stripe, SendGrid, Push, Cloudinary). Su propósito es dejar claro el alcance del sistema: todo lo que está dentro del recuadro es responsabilidad del equipo; pagos, email, push y media se delegan a terceros.
+El Context Diagram muestra **Restock** como un recuadro central con dos actores (Administrador y Proveedor) y los servicios externos principales alrededor (Stripe, OneSignal, Cloudinary). Su propósito es dejar claro el alcance del sistema: todo lo que está dentro del recuadro es responsabilidad del equipo; pagos, email, push y media se delegan a terceros.
 
 #### 4.1.3.2. Software Architecture Container Level Diagrams
 
 ![Figura 4.2 - Container Diagram](assets/images/cap4/software_architecture/container.png)
 
-El Container Diagram descompone Restock en: apps móviles (Android para administradores, Flutter para proveedores), y los containers backend por bounded context (IAM, Subscription, Profile, Resource, Planning, Monitoring). También muestra la persistencia (MongoDB) y las integraciones externas.
+El Container Diagram descompone Restock en: landing page (sitio público), apps móviles (Android para administradores y Flutter para proveedores), y un único container de backend que concentra toda la lógica del sistema (los bounded contexts lógicos: IAM, Subscription, Profile, Resource, Planning y Monitoring), la persistencia (MongoDB) y las integraciones externas.
 
 **Decisiones tecnológicas principales (bullet points, muy breves)**
 
