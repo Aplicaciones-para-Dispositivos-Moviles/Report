@@ -1,20 +1,6 @@
 # Capítulo III: Requirements Specification
 
-## 3.1 To-Be Scenario Mapping
-
-**Segmento Objetivo 1:** Dueños o Administradores de Restaurantes
-
-Este escenario To-Be fue construido tras una revisión detallada del escenario As-Is de Carolina Rivas y de las oportunidades de mejora identificadas a partir de las entrevistas. Se definieron las fases del proceso y se contrastaron con las actuales. Se priorizaron mejoras en eficiencia, control, automatización y reducción de frustraciones operativas.
-
-![Foto de To-Be Scenario Mapping Sector 1](assets/images/cap3/to-be_sector1.png)
-
-**Segmento objetivo 2:** Proveedores de Restaurantes
-
-Este escenario To-Be fue construido a partir del análisis del escenario As-Is de Jorge Torres. se incorporaron mejoras basadas en las necesidades y frustraciones. El equipo propuso una experiencia futura donde Jorge cuenta con una plataforma digital para gestionar pedidos, organizar rutas, registrar pagos y comunicarse con los restaurantes
-
-![Foto de To-Be Scenario Mapping Sector 1](assets/images/cap3/to-be_sector2.png)
-
-## 3.2 User Stories
+## 3.1 User Stories
 
 Para el presente proyecto, se definieron historias de usuario a partir de las epics principales identificadas durante la fase de análisis. Estas historias permiten describir, de forma concreta y centrada en el usuario, las funcionalidades clave del sistema, sirviendo como base para su diseño, desarrollo y validación.
 
@@ -658,13 +644,13 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
     </tr>
 </table>
 
-## 3.3 Impact Mapping
+## 3.2 Impact Mapping
 
 A continuación se presenta el Impact Map de Restock , el cual permite visualizar de manera clara cómo las funcionalidades clave de la aplicación se alinean con los objetivos de negocio, considerando a los actores involucrados y los impactos esperados en su comportamiento.
 
 ![Foto de Impact Mapping](assets/images/cap3/impact-map.png)
 
-## 3.4 Product Backlog
+## 3.3 Product Backlog
 
 En esta sección se presenta el Product Backlog de Restock, que contiene las historias de usuario priorizadas y sus respectivas estimaciones de esfuerzo en puntos de historia. Este backlog es una herramienta clave para la planificación y gestión del desarrollo del producto, permitiendo al equipo enfocarse en las funcionalidades más importantes y valiosas para los usuarios.
 
@@ -1175,7 +1161,7 @@ En esta sección se presenta el Product Backlog de Restock, que contiene las his
     </tr>
 </table>
 
-### 3.4.1 Evidencia del Product Backlog
+### 3.3.1 Evidencia del Product Backlog
 
 A continuación, se presenta una captura de pantalla del backlog de historias de usuario gestionado en la herramienta Trello.
 
