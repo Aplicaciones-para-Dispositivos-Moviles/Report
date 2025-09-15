@@ -230,30 +230,37 @@ En esta sección se documentan las clases que forman el core del bounded context
 #### Aggregates
 
 ##### User (Aggregate Root)
+
 **Propósito:** Representa a una cuenta de usuario autenticable y su relación con un rol.
 
 **Atributos:**
-- `id` 
+
+- `id`
 - `username:String`
-- `password:String` 
+- `password:String`
 - `roleName:String` *(nombre del rol asociado; referencia lógica a `Roles`)*
 
 **Métodos:**
+
 - `displayData()`
 - `editData`
 
 **Invarianzas / reglas:**
+
 - `username` **único** y no vacío.
 - `password` siempre presente (no texto plano).
 - `roleName` no nulo; debe existir en el catálogo `Roles`.
 
 ##### Roles (Entity – catálogo)
+
 **Propósito:** Define el rol asignable a uno o varios usuarios.
 
 **Atributos:**
+
 - `name:String` *(`Admin`, `Supplier`, `Customer`)*
 
 **Métodos:**
+
 - `getStringName(): String`
 - `getDefaultRole(): Roles`
 - `toRoleFromName(name:String): Roles`
@@ -261,38 +268,42 @@ En esta sección se documentan las clases que forman el core del bounded context
 **Relación:** **Roles (1)** — **User (1..*)** → cada usuario tiene exactamente **un** rol; un rol pertenece a **muchos** usuarios.
 
 ### Value Objects (conceptuales)
+
 - `Username`
 - `Password`
 
-### Domain Services 
+### Domain Services
+
 - **PasswordPolicy**: reglas de complejidad y vencimiento.
 - **RoleResolutionService**: obtiene el rol por defecto y valida transiciones de rol.
-
 
 ### Repositories (Interfaces en Domain)
 
 **UserRepository**
+
 - `findByUsername(username:String): User?`
 - `existsByUsername(username:String): boolean`
 - `save(user:User): void`
 - `deleteByUsername(username:String): void`
 
 **RolesRepository**
+
 - `findByName(name:String): Roles?`
 - `getDefault(): Roles`
 - `save(role:Roles): void`
 
 ### Domain Events
+
 - `UserCreated`
 - `UserPasswordChanged`
 - `UserRoleChanged`
-
 
 ### 4.2.1.2. Interface Layer
 
 En esta capa se definen los puntos de entrada/salida del sistema y cómo se exponen los casos de uso a clientes externos. Transforma solicitudes HTTP en *commands/queries* a la **Application Layer** y mapea respuestas del dominio a DTOs.
 
 **Controllers (REST)**
+
 - **AuthController**
   - **POST** `/api/v1/auth/login` → autentica (`username`, `password`) y retorna tokens (infra).
   - **POST** `/api/v1/auth/logout` → invalida refresh token (si aplica).
@@ -306,6 +317,7 @@ En esta capa se definen los puntos de entrada/salida del sistema y cómo se expo
   - **GET** `/api/v1/roles/{name}` → detalle de rol.
 
 **Resources (DTOs / Request & Response Models)**
+
 - `LoginRequest { username, password }`
 - `TokenResponse { accessToken, refreshToken }`
 - `CreateUserRequest { username, password }`
@@ -314,6 +326,7 @@ En esta capa se definen los puntos de entrada/salida del sistema y cómo se expo
 - `RoleResource { name }`
 
 **Assemblers / Mappers**
+
 - `CreateUserCommandFromResourceAssembler`
 - `UserResourceFromEntityAssembler`
 - `ChangePasswordCommandFromResourceAssembler`
@@ -324,18 +337,19 @@ En esta capa se definen los puntos de entrada/salida del sistema y cómo se expo
 Coordina interacciones entre dominio e infraestructura, asegurando reglas de negocio y orquestación de casos de uso.
 
 **Command Handlers**
-- `CreateUserCommandHandler`  
-  Valida unicidad de `username`, calcula `passwordHash`, obtiene `Roles.getDefaultRole()` y persiste.
-- `ChangePasswordCommandHandler`  
-  Aplica `PasswordPolicy`, recalcula hash y guarda.
-- `AssignRoleCommandHandler`  
+
+- `CreateUserCommandHandler`Valida unicidad de `username`, calcula `passwordHash`, obtiene `Roles.getDefaultRole()` y persiste.
+- `ChangePasswordCommandHandler`Aplica `PasswordPolicy`, recalcula hash y guarda.
+- `AssignRoleCommandHandler`
   Verifica existencia del rol y asigna con reglas de `RoleResolutionService`.
 
 **Query Handlers**
+
 - `GetUserQueryHandler`
 - `ListRolesQueryHandler`
 
 **Event Handlers (opcionales)**
+
 - `OnUserCreated` → auditar / notificar.
 - `OnUserPasswordChanged` → auditar / invalidar sesiones antiguas si aplica.
 
@@ -343,29 +357,35 @@ Coordina interacciones entre dominio e infraestructura, asegurando reglas de neg
 
 Clases que acceden a servicios externos (base de datos, emisión de tokens, email, mensajería) y **implementaciones concretas** de los *Repositories*.
 
-#### 1 Paquetes y componentes principales 
+#### 1 Paquetes y componentes principales
 
 **Persistence**
+
 - `MongoUserRepository` (implementa `UserRepository`)
 - `MongoRolesRepository` (implementa `RolesRepository`)
 - `mappers` *(Document ↔ Entity)*
 
 **Security / Crypto**
-- `BCryptPasswordHasher` 
+
+- `BCryptPasswordHasher`
 
 **Auth**
-- `JwtTokenProvider` *(emite/valida access/refresh tokens)* 
+
+- `JwtTokenProvider` *(emite/valida access/refresh tokens)*
 
 **Events**
+
 - `DomainEventPublisher` *(si se publican eventos a un broker)*
 
 **Configuration**
-- `MongoConfig` *(índices, auditoría)*  
+
+- `MongoConfig` *(índices, auditoría)*
 - `SecurityConfig` *(JWT filters, CORS, CSRF, rate-limiting)*
 
 #### 2 Modelo de datos (MongoDB) y mapeos
 
 **Colección `users`**
+
 ```json
 {
   "_id": "u:<username>",
@@ -375,18 +395,23 @@ Clases que acceden a servicios externos (base de datos, emisión de tokens, emai
   "audit": { "createdAt": "2025-09-01T00:00:00Z", "updatedAt": "2025-09-01T00:05:00Z" }
 }
 ```
-**Índices:**  
-- Único en `username`.  
+
+**Índices:**
+
+- Único en `username`.
 - Compuesto `{ roleName, username }`.
-  
+
 **Colección `roles`**
+
 ```json
 { "_id": "r:Admin", "name": "Admin" }
 ```
-**Índice:** único en `name`.  
+
+**Índice:** único en `name`.
 **Seed inicial:** `Admin`, `Supplier`, `Customer`.
 
 **Colección `refresh_tokens`**
+
 ```json
 {
   "_id": "rt:uuid",
@@ -398,6 +423,7 @@ Clases que acceden a servicios externos (base de datos, emisión de tokens, emai
   "deviceInfo": "Chrome 140"
 }
 ```
+
 **Índices:** `{ userId, revoked }`, TTL en `expiresAt`.
 
 **Colecciones `email_verifications` / `password_resets`** con **TTL** sobre `expiresAt`.
@@ -405,56 +431,66 @@ Clases que acceden a servicios externos (base de datos, emisión de tokens, emai
 #### 3 Repositories – Implementación
 
 **MongoUserRepository**
-- Mapea `User` ↔ documento `users`.  
-- Operaciones atómicas para cambios de contraseña.  
+
+- Mapea `User` ↔ documento `users`.
+- Operaciones atómicas para cambios de contraseña.
 - Asegura índice único en `username`.
 
 **MongoRolesRepository**
-- Resuelve rol por nombre y rol por defecto.  
+
+- Resuelve rol por nombre y rol por defecto.
 - Provee *seed* inicial (al iniciar la app).
 
 #### 4 Seguridad & Resiliencia
-- Nunca almacenar contraseñas en claro; usar **salt + KDF**.  
-- Firmar JWT con clave rotativa; considerar expiración corta de `accessToken` y rotación de `refreshToken`.  
-- Rate-limiting en `/auth/login`.  
+
+- Nunca almacenar contraseñas en claro; usar **salt + KDF**.
+- Firmar JWT con clave rotativa; considerar expiración corta de `accessToken` y rotación de `refreshToken`.
+- Rate-limiting en `/auth/login`.
 - Auditoría mínima (`createdAt`, `updatedAt`).
 
 ### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
 
 **Descripción C4–Component:**
-- **Interface/Presentation:** *AuthController*, *UsersController*, *RolesController*.  
-- **Application:** *IAM Application Service* (handlers de commands/queries).  
-- **Domain:** *User*, *Roles*, *PasswordPolicy*, *RoleResolutionService*, *Repositories (interfaces)*.  
+
+- **Interface/Presentation:** *AuthController*, *UsersController*, *RolesController*.
+- **Application:** *IAM Application Service* (handlers de commands/queries).
+- **Domain:** *User*, *Roles*, *PasswordPolicy*, *RoleResolutionService*, *Repositories (interfaces)*.
 - **Infrastructure:** *MongoUserRepository*, *MongoRolesRepository*, *BCryptPasswordHasher*, *JwtTokenProvider*.
 
 **Flujo típico:**
-1. `AuthController.login` → *Application* valida credenciales (hash), emite tokens con *JwtTokenProvider*.  
-2. `UsersController.create` → *Application* aplica reglas de dominio y persiste vía *MongoUserRepository*.  
+
+1. `AuthController.login` → *Application* valida credenciales (hash), emite tokens con *JwtTokenProvider*.
+2. `UsersController.create` → *Application* aplica reglas de dominio y persiste vía *MongoUserRepository*.
 3. `UsersController.changePassword` → *Domain.User.changePassword* → guarda; (opc.) invalida refresh tokens.
 
 ### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
-- **Concordancia con tu UML:** `Roles (1) — User (1..*)`.  
+
+- **Concordancia con tu UML:** `Roles (1) — User (1..*)`.
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
-- **Colecciones:** `users`, `roles`.  
-- **Relaciones:** `users.roleName` referencia lógica a `roles.name`.  
-- **Índices:** `users.username` (único), `roles.name` (único), TTL en expirables.  
+
+- **Colecciones:** `users`, `roles`.
+- **Relaciones:** `users.roleName` referencia lógica a `roles.name`.
+- **Índices:** `users.username` (único), `roles.name` (único), TTL en expirables.
 - **Seguridad:** password **siempre** en hash; tokens de refresco **hasheados** si se almacenan.
 
 ### 4.2.2. Bounded Context: Subscriptions and Payments
-En esta sección para cada uno de los productos, se presenta las clases identificadas y las detalla a manera de diccionario, explicando para cada una su nombre, propósito y la documentación de atributos y métodos considerados, junto con las relaciones entre ellas. 
+
+En esta sección para cada uno de los productos, se presenta las clases identificadas y las detalla a manera de diccionario, explicando para cada una su nombre, propósito y la documentación de atributos y métodos considerados, junto con las relaciones entre ellas.
+
 - El propósito de este bounded context contiene y maneja el flujo del proceso de suscripción con respecto a los planes junto a la API de Stripe
 - Administra el estado de suscripciones, renovación de planes y pago inmediato con monedas nativas y/o transacciones rápidas.
-- Algunos de los modelos del core business hace referencia al plan de suscripción y pago. 
+- Algunos de los modelos del core business hace referencia al plan de suscripción y pago.
 
 #### 4.2.2.1. Domain Layer
+
 En esta capa se explica por medio de clases la representación core de la
 aplicación y las reglas de negocio que pertenecen al dominio para el bounded context IAM.
 De esta manera se presentan clases de categorías como Entities, Value Objects, Aggregates,
 Factories, Domain Services, o abstracciones representadas por interfaces como en el
-caso de Repositories. 
+caso de Repositories.
 
 <table>
   <tr>
@@ -508,8 +544,10 @@ caso de Repositories.
 </table>
 
 #### 4.2.2.2. Interface Layer
+
 En esta sección se introduce introduce, presenta y explica las clases que forman parte de
 Interface/Presentation Layer, como clases del tipo Controllers o Consumers.
+
 <table>
   <tr>
     <th>Controllers</th>
@@ -546,8 +584,8 @@ Interface/Presentation Layer, como clases del tipo Controllers o Consumers.
   </tr>
 </table>
 
-
 #### 4.2.2.3. Application Layer
+
 En esta sección se explica a través de qué clases se maneja los flujos de procesos del negocio. Asimismo, se evidencia los capabilities de la aplicación en relación al bounded context.
 
 <table>
@@ -589,6 +627,7 @@ En esta sección se explica a través de qué clases se maneja los flujos de pro
 </table>
 
 #### 4.2.2.4. Infrastructure Layer
+
 En esta se presenta aquellas clases que acceden a servicios externos como
 databases, messaging systems o email services. Es en esta capa que se ubica la
 implementación de Repositories para las interfaces definidas en Domain Layer.
@@ -634,6 +673,7 @@ Asimismo, se muestra la colleción de "Payments", el cual contiene un documento,
 </table>
 
 #### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+
 En esta sección, se explica y presenta los Component Diagrams de C4 Model para cada uno de los Containers considerados para el bounded context correspondiente.
 
 <table>
@@ -665,23 +705,23 @@ En esta sección, se explica y presenta los Component Diagrams de C4 Model para 
 </table>
 
 1. POST /payments → se valida en Application → se invoca Stripe → se recibe webhook invoice.paid → Event Handler payment y actualiza Subscription.
-
 2. POST /subscription-plans → administra planes y precios → persiste en Mongo → visible en GET /subscription-plans.
-
 3. POST /stripe/webhooks → Stripe envía evento → Infrastructure valida firma → Application despacha Event Handler apropiado.
 
 #### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
+
 En esta sección, se presenta y explica los diagramas que presentan un mayor detalle sobre la implementación de componentes en el bounded context
 
 ##### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
+
 En esta sección se presenta el Class Diagram de UML para las clases del Domain
 Layer en el bounded context.
 
 En esta sección se demuestra la relación de composicion entre Payments y Subscriptions. Ya que para la creación de un objeto payment, se necesita una suscripción inherenemente.
 ![dc-web-subscriptions-and-payments](assets/images/cap4/class_diagram/dc-web-subscriptions-and-payments.png)
 
-
 ##### 4.2.2.6.2. Bounded Context Database Design Diagram
+
 En esta sección se presenta y explica para cada producto donde se implementa
 el bounded context correspondiente, el Database Diagram que incluye los objetos de base de datos que permitirán la persistencia de información para los objetos del bounded context.
 Colección: payments
@@ -704,6 +744,7 @@ status : bool
 ```
 
 Ejemplo de documento:
+
 ```
 {
 "_id": "pi_01JABCDE123",
@@ -737,70 +778,83 @@ En esta sección se documentan las clases que forman el core del bounded context
 #### Aggregates
 
 ##### Profile (Aggregate Root)
+
 **Propósito:** Representa el perfil visible/administrable del usuario y centraliza sus datos de contacto, ubicación, avatar y preferencias. Contiene a `Business` por **composición** (ciclo de vida dependiente).
 
 **Atributos:**
-- `id` 
+
+- `id`
 - `userId:String`
-- `name:String`  
-- `lastName:String`  
-- `email:String`  
-- `avatar:String` 
-- `phone:String`  
-- `address:String`  
-- `country:String`  
-- `business:Business`  
+- `name:String`
+- `lastName:String`
+- `email:String`
+- `avatar:String`
+- `phone:String`
+- `address:String`
+- `country:String`
+- `business:Business`
 
 **Métodos:**
+
 - `getFullName():String`
 - `updateContact():void`
 
 **Invarianzas / reglas:**
-- `userId` obligatorio y único por perfil.  
-- `email` válido; coherente con formato.  
-- `business` no nulo (por composición).  
+
+- `userId` obligatorio y único por perfil.
+- `email` válido; coherente con formato.
+- `business` no nulo (por composición).
 - `getFullName()` retorna nombre normalizado `name + " " + lastName`.
 
 ##### Business (Entity – **composición** de Profile)
+
 **Propósito:** Datos del negocio del usuario integrados al perfil.
 
 **Atributos:**
+
 - `name:String`
 - `address:String`
-- `categories:String` 
+- `categories:String`
 - `phone:String`
 - `email:String`
 
 **Métodos:**
+
 - `getCategoryList():List<String>`
 - `updateInfo():void`
 
 **Invarianzas / reglas:**
-- `email` válido.  
-- `name` no vacío.  
+
+- `email` válido.
+- `name` no vacío.
 
 ### Value Objects (conceptuales)
+
 - `Email`
 - `PhoneNumber`
 - `Address`
 - `CountryCode`
 
 ### Domain Services
+
 - **ProfileCompletenessService**: evalúa completitud del perfil.
 - **AvatarPolicy**: valida tamaños/formatos soportados para `avatar`.
 
 ### Repositories (Interfaces en Domain)
 
 **ProfileRepository**
+
 - `findByUserId(userId:String): Profile?`
 - `existsByUserId(userId:String): boolean`
 - `save(profile:Profile): void`
 - `deleteByUserId(userId:String): void`
 
-**BusinessCategoryRepository** 
+**BusinessCategoryRepository**
+
 - `findAll(): List<Category>`
 
-### Domain Events 
+### Domain Events
+
 - `ProfileCreated`
 - `ProfileUpdated`
 - `BusinessUpdated`
@@ -811,16 +865,18 @@ En esta sección se documentan las clases que forman el core del bounded context
 En esta capa se definen los puntos de entrada/salida del sistema y cómo se exponen los casos de uso a clientes externos. Transforma solicitudes HTTP en *commands/queries* a la **Application Layer** y mapea respuestas del dominio a DTOs.
 
 **Controllers (REST)**
+
 - **ProfileController**
   - **GET** `/api/v1/profiles/me` → detalle del perfil para el `userId` del token.
   - **PUT** `/api/v1/profiles/me` → actualizar datos de contacto (equivale a `updateContact`).
   - **POST** `/api/v1/profiles/me/avatar` → actualizar `avatar` (equivale a `updateAvatar`).
   - **PUT** `/api/v1/profiles/me/preferences` → actualizar preferencias (equivale a `updatePreferences`).
   - **GET** `/api/v1/profiles/{userId}` → vista pública básica (datos no sensibles).
-- **BusinessController** 
+- **BusinessController**
   - **PUT** `/api/v1/profiles/me/business` → actualizar datos del negocio (equivale a `updateInfo`).
 
 **Resources (DTOs / Request & Response Models)**
+
 - `ProfileResource { userId, name, lastName, email, avatar, phone, address, country, business, notificationPrefs? }`
 - `UpdateContactRequest { email, phone, address, country }`
 - `UpdateAvatarRequest { avatar }`
@@ -829,6 +885,7 @@ En esta capa se definen los puntos de entrada/salida del sistema y cómo se expo
 - `ProfileSummary { userId, fullName, businessName, country, avatar }`
 
 **Assemblers / Mappers**
+
 - `ProfileResourceFromEntityAssembler`
 - `UpdateContactCommandFromResourceAssembler`
 - `UpdateBusinessCommandFromResourceAssembler`
@@ -839,22 +896,21 @@ En esta capa se definen los puntos de entrada/salida del sistema y cómo se expo
 Coordina interacciones entre dominio e infraestructura, garantizando reglas de negocio y orquestación de casos de uso.
 
 **Command Handlers**
-- `CreateProfileOnUserVerifiedCommandHandler`  
-  Crea perfil inicial al recibir `userId` desde IAM (evento).
-- `UpdateContactCommandHandler`  
-  Valida email/teléfono y aplica `updateContact`.
-- `UpdateBusinessInfoCommandHandler`  
-  Normaliza `categories`  y aplica `updateInfo`.
-- `UpdatePreferencesCommandHandler`   
-  Valida estructura de preferencias y aplica `updatePreferences`.
-- `UpdateAvatarCommandHandler` 
+
+- `CreateProfileOnUserVerifiedCommandHandler`Crea perfil inicial al recibir `userId` desde IAM (evento).
+- `UpdateContactCommandHandler`Valida email/teléfono y aplica `updateContact`.
+- `UpdateBusinessInfoCommandHandler`Normaliza `categories`  y aplica `updateInfo`.
+- `UpdatePreferencesCommandHandler`Valida estructura de preferencias y aplica `updatePreferences`.
+- `UpdateAvatarCommandHandler`
   Aplica `AvatarPolicy` y actualiza `avatar`.
 
 **Query Handlers**
+
 - `GetProfileByUserIdQueryHandler`
 - `SearchProfilesQueryHandler(text?, category?)`
 
 **Event Handlers**
+
 - `OnUserVerified(userId, email)` → ejecuta `CreateProfileOnUserVerifiedCommand`.
 
 ### 4.2.3.4. Infrastructure Layer
@@ -864,25 +920,31 @@ Clases que acceden a servicios externos (base de datos, almacenamiento de imáge
 #### 1 Paquetes y componentes principales
 
 **Persistence**
+
 - `MongoProfileRepository` (implementa `ProfileRepository`)
 - `mappers` *(Document ↔ Aggregate)*
 
 **Media / External Services**
+
 - `ImageStorageAdapter` para `avatar`
 
 **Search**
+
 - Índices de texto en Mongo o integración con motor de búsqueda.
 
 **Events**
+
 - `DomainEventPublisher` / `EventSubscriber` (para `OnUserVerified`).
 
 **Configuration**
+
 - `MongoConfig`
-- `ExternalClientsConfig` 
+- `ExternalClientsConfig`
 
 #### 2 Modelo de datos (MongoDB) y mapeos
 
-**Colección `profiles`** 
+**Colección `profiles`**
+
 ```json
 {
   "_id": "p:<userId>",
@@ -905,48 +967,57 @@ Clases que acceden a servicios externos (base de datos, almacenamiento de imáge
   "audit": { "createdAt": "2025-09-01T00:00:00Z", "updatedAt": "2025-09-01T00:05:00Z" }
 }
 ```
-**Índices sugeridos:**  
-- Único en `userId`.  
-- Índice de texto en `name`, `lastName`, `business.name` y, si se busca por categorías, en `business.categories`.  
+
+**Índices sugeridos:**
+
+- Único en `userId`.
+- Índice de texto en `name`, `lastName`, `business.name` y, si se busca por categorías, en `business.categories`.
 - Índice por país `country` para filtros comunes.
 
 **Mappers utilitarios (CSV ↔ lista)**
-- **Doc → Dominio**: `categories.split(",").map(trim).filter(notEmpty).unique()`  
+
+- **Doc → Dominio**: `categories.split(",").map(trim).filter(notEmpty).unique()`
 - **Dominio → Doc**: `categoriesList.map(trim).unique().join(",")`
 
 #### 3 Repositories – Implementación
 
 **MongoProfileRepository**
-- Mapea `Profile` ↔ documento `profiles`.  
-- Asegura índice único en `userId`.  
+
+- Mapea `Profile` ↔ documento `profiles`.
+- Asegura índice único en `userId`.
 - Expone proyecciones eficientes para listados.
 
 #### 4 Seguridad & Consistencia
-- `userId` es referencia lógica a IAM.  
-- Validar `email`/`phone` en Application antes de persistir.  
-- Auditar `createdAt`/`updatedAt` y, si aplica, `updatedBy`.  
+
+- `userId` es referencia lógica a IAM.
+- Validar `email`/`phone` en Application antes de persistir.
+- Auditar `createdAt`/`updatedAt` y, si aplica, `updatedBy`.
 
 ### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
 
 **Descripción C4–Component:**
-- **Interface/Presentation:** *ProfileController*  
-- **Application:** *Profiles Application Service*   
-- **Domain:** *Profile*, *Business*, *ProfileRepository*, *ProfileCompletenessService*, *AvatarPolicy*.  
+
+- **Interface/Presentation:** *ProfileController*
+- **Application:** *Profiles Application Service*
+- **Domain:** *Profile*, *Business*, *ProfileRepository*, *ProfileCompletenessService*, *AvatarPolicy*.
 - **Infrastructure:** *MongoProfileRepository*, *ImageStorageAdapter*.
 
 **Flujo típico:**
+
 1. `ProfileController.updateContact` → *Application* valida → *Domain.Profile.updateContact* → *MongoProfileRepository.save*.
-2. `ProfileController.updateBusiness` → *Application* normaliza categorías → *Domain.Business.updateInfo* → guardar.  
+2. `ProfileController.updateBusiness` → *Application* normaliza categorías → *Domain.Business.updateInfo* → guardar.
 3. `OnUserVerified` (evento IAM) → *Application* crea `Profile` inicial (idempotente).
 
 ### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
-- **Concordancia con tu UML:** `Profile` **compone** a `Business`.  
+
+- **Concordancia con tu UML:** `Profile` **compone** a `Business`.
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
-- **Colección principal:** `profiles` con `business` **embebido** (por composición).  
-- **Claves e índices:** `userId` (único), índices de texto para búsqueda, filtros por `country`.  
+
+- **Colección principal:** `profiles` con `business` **embebido** (por composición).
+- **Claves e índices:** `userId` (único), índices de texto para búsqueda, filtros por `country`.
 - **Relaciones:** `userId` referencia lógica a IAM.
 
 #### 4.2.4. Bounded Context: Asset and Resource Management
@@ -955,19 +1026,22 @@ Clases que acceden a servicios externos (base de datos, almacenamiento de imáge
 
 En esta sección se documentan las clases que forman el core del bounded context: Aggregates, Entities, Value Objects, Domain Services e interfaces (Repositories).
 
-### Aggregates
+**Aggregates**
 
-#### Batch (Aggregate Root)
-**Propósito:** Representa una porción de inventario (lote) con cantidad, expiración y referencia al `CustomSupply` que lo originó.
+**Batch (Aggregate Root)**
 
-**Atributos:**
+Propósito: Representa una porción de inventario (lote) con cantidad, expiración y referencia al `CustomSupply` que lo originó.
+
+Atributos:
+
 - id
 - userId
 - customSupplyId (referencia al insumo personalizado)
 - stock
 - expirationDate
 
-**Métodos:**
+Métodos:
+
 - increaseQuantity(delta)
 - decreaseQuantity(delta) — valida stock disponible
 - reserve(qty, orderId)
@@ -975,13 +1049,14 @@ En esta sección se documentan las clases que forman el core del bounded context
 - updateExpirationDate(newDate)
 - isExpired()
 
-**Invarianzas / reglas:** No permitir stock < 0; lote expirado no puede reservarse.
+Invarianzas / reglas:No permitir stock < 0; lote expirado no puede reservarse.
 
-#### CustomSupply (Aggregate Root)
+**CustomSupply (Aggregate Root)**
 
-**Propósito:** Insumo definido por un usuario; mantiene un snapshot del `supply` del catálogo para referencia histórica y datos de unidad.
+Propósito: Insumo definido por un usuario; mantiene un snapshot del `supply` del catálogo para referencia histórica y datos de unidad.
 
-**Atributos:**
+Atributos:
+
 - id
 - userId (owner)
 - minStock
@@ -991,45 +1066,49 @@ En esta sección se documentan las clases que forman el core del bounded context
 - unit (embebido: name, abbreviation)
 - auditInfo
 
-**Métodos:**
+Métodos:
+
 - updateDetails(name, description, price, unit, minStock, maxStock)
 - isOwnedBy(userId)
 
-**Reglas:** Solo el owner puede modificar/eliminar.
+Reglas: Solo el owner puede modificar/eliminar.
 
-#### Order (Aggregate Root)
+**Order (Aggregate Root)**
 
-**Propósito:** Pedido enviado a un proveedor; contiene un array embebido `batches` que funciona como *snapshot* de las líneas de la orden para trazabilidad. Las líneas de órdenes (los *order batches*) difieren de los `batches` del inventario: aquí se guarda la **cantidad solicitada** (`quantity`) y el estado de **aceptación** (`accepted`) porque la línea ya forma parte de una orden concreta.
+Propósito: Pedido enviado a un proveedor; contiene un array embebido `batches` que funciona como *snapshot* de las líneas de la orden para trazabilidad. Las líneas de órdenes (los *order batches*) difieren de los `batches` del inventario: aquí se guarda la **cantidad solicitada** (`quantity`) y el estado de **aceptación** (`accepted`) porque la línea ya forma parte de una orden concreta.
 
-**Atributos:**
-- id  
-- supplierId  
-- adminRestaurantId  
-- date  
-- description  
-- state  
-- situation  
-- totalPrice  
-- partiallyAccepted  
-- estimatedShipDate  
-- estimatedShipTime  
-- batches (lista embebida con snapshot de cada línea)  
+Atributos:
+
+- id
+- supplierId
+- adminRestaurantId
+- date
+- description
+- state
+- situation
+- totalPrice
+- partiallyAccepted
+- estimatedShipDate
+- estimatedShipTime
+- batches (lista embebida con snapshot de cada línea)
 - auditInfo
 
-**Estructura de cada elemento en `batches` (order batch - snapshot):**
+Estructura de cada elemento en `batches` (order batch - snapshot):
+
 - id (identificador de la línea)
 - userId (owner / quien añadió la línea)
 - customSupplyId (referencia al insumo personalizado)
 - stock (valor del stock al momento del snapshot — informativo)
 - expirationDate (snapshot del lote/insumo al momento)
-- quantity (cantidad solicitada en la orden)         
-- accepted (boolean)                                 
+- quantity (cantidad solicitada en la orden)
+- accepted (boolean)
 - unitPrice (precio por unidad al momento)
 - lineTotal (unitPrice * quantity)
 - reservedBatchId (opcional — referencia al `batch` real reservado en inventario, si se asignó)
 - notes (opcional)
 
-**Métodos (signatures) específicos y comportamiento:**
+Métodos (signatures) específicos y comportamiento:
+
 - `addRequestedBatch(batchSnapshot)` — agrega una línea; evita duplicados por `customSupplyId`/userId.
 - `removeRequestedBatch(batchId)` — elimina una línea (solo si no está aceptada/procesada según reglas).
 - `updateRequestedBatchQuantity(batchId, newQty)` — actualiza la cantidad solicitada (validar límites y estado).
@@ -1042,36 +1121,42 @@ En esta sección se documentan las clases que forman el core del bounded context
 - `markPreparing()`, `markOnTheWay()`, `markDelivered()` — transiciones de estado de la orden.
 - `calculateTotal()` — suma `lineTotal` de las líneas (considerar accepted / partiallyAccepted según política).
 
-**Reglas / restricciones importantes:**
-- **Diferencia con `batches` de inventario:**  
-  - `batches` en la colección `batches` representan lotes físicos en inventario (stock disponible).  
-  - `batches` embebidos en `orders_to_suppliers` son **snapshots** históricos de la línea en la orden y contienen `quantity` y `accepted`.
-- **Inmutabilidad parcial:** Una vez que una línea ha sido **aceptada** y la orden avanzó (p. ej. aprobada o preparada), los campos críticos del snapshot (quantity, unitPrice, stock snapshot) deben considerarse inmutables para efectos de trazabilidad. Cambios posteriores deben registrarse mediante eventos (nota de crédito / ajuste / nueva orden).
-- **Aceptación y reserva de stock:**  
-  - La transición `approve()` debería orquestar la reserva/consumo de stock en la colección `batches` (p. ej. `findOneAndUpdate` con condición `stock >= quantity`) y, en caso de éxito, marcar `accepted = true` y registrar `reservedBatchId`.  
-  - Si la reserva falla (stock insuficiente), la orden puede quedar parcialmente aceptada o rechazada según la política; actualizar `partiallyAccepted` y cada `accepted` por línea.
-- **Auditoría y trazabilidad:** Registrar quién aceptó/rechazó una línea y timestamps; mantener `batches` de orden como historial inmutable para auditoría y reporting.
+Reglas / restricciones importantes:
 
-### Value Objects (conceptuales)
+- Diferencia con `batches` de inventario:
+  - `batches` en la colección `batches` representan lotes físicos en inventario (stock disponible).
+  - `batches` embebidos en `orders_to_suppliers` son **snapshots** históricos de la línea en la orden y contienen `quantity` y `accepted`.
+- Inmutabilidad parcial: Una vez que una línea ha sido **aceptada** y la orden avanzó (p. ej. aprobada o preparada), los campos críticos del snapshot (quantity, unitPrice, stock snapshot) deben considerarse inmutables para efectos de trazabilidad. Cambios posteriores deben registrarse mediante eventos (nota de crédito / ajuste / nueva orden).
+- Aceptación y reserva de stock:
+  - La transición `approve()` debería orquestar la reserva/consumo de stock en la colección `batches` (p. ej. `findOneAndUpdate` con condición `stock >= quantity`) y, en caso de éxito, marcar `accepted = true` y registrar `reservedBatchId`.
+  - Si la reserva falla (stock insuficiente), la orden puede quedar parcialmente aceptada o rechazada según la política; actualizar `partiallyAccepted` y cada `accepted` por línea.
+- Auditoría y trazabilidad: Registrar quién aceptó/rechazó una línea y timestamps; mantener `batches` de orden como historial inmutable para auditoría y reporting.
+
+**Value Objects (conceptuales)**
+
 - Quantity
 - Money
 - ExpirationDate
 - AuditInfo
 
-### Domain Services
-#### InventoryService
+**Domain Services**
+
+**InventoryService**
+
 - reserveForOrder(orderId, requests) -> ReservationResult
 - releaseReservation(orderId)
 - lógica FEFO / priorización por expiración
 
-#### OrderWorkflowService
+**OrderWorkflowService**
+
 - transitionToApproved(order, approver)
 - transitionToDelivered(order)
 - publicar eventos (OrderApprovedEvent, OrderDeliveredEvent)
 
-### Repositories (Interfaces en Domain)
+**Repositories (Interfaces en Domain)**
 
-#### BatchRepository
+**BatchRepository**
+
 - findById(id)
 - findByCustomSupplyId(customSupplyId)
 - findAvailableByCustomSupplyId(customSupplyId)
@@ -1079,20 +1164,23 @@ En esta sección se documentan las clases que forman el core del bounded context
 - save(batch)
 - delete(id)
 
-#### CustomSupplyRepository
+**CustomSupplyRepository**
+
 - findById(id)
 - findByOwnerId(ownerId)
 - save(customSupply)
 - delete(id)
 
-#### OrderRepository
+**OrderRepository**
+
 - findById(id)
 - findBySupplierId(supplierId)
 - findByState(state)
 - save(order)
 - delete(id)
 
-#### SupplyRepository
+**SupplyRepository**
+
 - findById(id)
 - findByNameOrCode(query)
 - findAll()
@@ -1218,41 +1306,48 @@ Se encargan de resolver consultas del sistema. Tenemos:
 
 En esta capa se encuentran las clases que acceden a servicios externos (base de datos, proveedores de terceros, mensajería) y las implementaciones concretas de los *Repositories* definidos en el Domain Layer. También contiene adaptadores / clients para Cloudinary, OneSignal y Stripe, así como componentes de infraestructura transaccional, mapeadores persistencia↔dominio y utilidades de resiliencia, logging y observabilidad.
 
-## 1. Paquetes y componentes principales (sugeridos)
+**1. Paquetes y componentes principales (sugeridos)**
+
 Persistence
-  - `MongoBatchRepository` (implementa `BatchRepository`)  
-  - `MongoCustomSupplyRepository` (implementa `CustomSupplyRepository`)  
-  - `MongoOrderRepository` (implementa `OrderRepository`)  
-  - `MongoSupplyRepository` (implementa `SupplyRepository`)  
-  - `mappers` (Document ↔ Aggregate assemblers)
+
+- `MongoBatchRepository` (implementa `BatchRepository`)
+- `MongoCustomSupplyRepository` (implementa `CustomSupplyRepository`)
+- `MongoOrderRepository` (implementa `OrderRepository`)
+- `MongoSupplyRepository` (implementa `SupplyRepository`)
+- `mappers` (Document ↔ Aggregate assemblers)
 
 Adapters
-  - `CloudinaryImageAdapter` / `CloudinaryService`  
-  - `OneSignalNotificationAdapter` / `OneSignalService`  
-  - `StripePaymentAdapter` / `StripeService`
+
+- `CloudinaryImageAdapter` / `CloudinaryService`
+- `OneSignalNotificationAdapter` / `OneSignalService`
+- `StripePaymentAdapter` / `StripeService`
 
 Events
-  - `DomainEventPublisher` (interface)  
-  - `MongoDomainEventStore` (opcional: persistencia de eventos)  
-  - `EventPublisherImpl` (publicador a broker si aplica)
+
+- `DomainEventPublisher` (interface)
+- `MongoDomainEventStore` (opcional: persistencia de eventos)
+- `EventPublisherImpl` (publicador a broker si aplica)
 
 Configuration
-  - `MongoConfig` (MongoTransactionManager, indexes, auditing)  
-  - `ThirdPartyClientsConfig` (Cloudinary, OneSignal, Stripe clients)
 
-## 2. Implementación de Repositories
+- `MongoConfig` (MongoTransactionManager, indexes, auditing)
+- `ThirdPartyClientsConfig` (Cloudinary, OneSignal, Stripe clients)
 
-### Contrato (Domain)
+**2. Implementación de Repositories**
+
+**Contrato (Domain)**
+
 Las interfaces están en Domain (ej.: `BatchRepository`, `OrderRepository`), con métodos como `findById`, `findByCustomSupplyId`, `findAvailableByCustomSupplyId`, `save`, `delete`.
 
-### Implementación (Infrastructure)
-**Nombre sugerido:** `MongoBatchRepository` (implementa `BatchRepository`)
+**Implementación (Infrastructure)**
 
-**Responsabilidad:**  
-- Mapear `BatchDocument` ↔ `Batch` (aggregate).  
-- Realizar queries eficientes sobre colecciones Mongo (`batches`): búsquedas por `custom_supply_id`, `expiration_date`, `stock >= X`.  
+Nombre sugerido: `MongoBatchRepository` (implementa `BatchRepository`)
+
+Responsabilidad:
+
+- Mapear `BatchDocument` ↔ `Batch` (aggregate).
+- Realizar queries eficientes sobre colecciones Mongo (`batches`): búsquedas por `custom_supply_id`, `expiration_date`, `stock >= X`.
 - Exponer operaciones atómicas para reservas (ej.: `reserveStock(batchId, qty)` con `findOneAndUpdate`).
-
 
 #### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
 
@@ -1260,16 +1355,16 @@ Las interfaces están en Domain (ej.: `BatchRepository`, `OrderRepository`), con
 
 ##### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
 
-En esta sección se presenta el diagrama de clases UML.  
-El diagrama fue modelado en Java con Spring Boot, siguiendo principios de Domain-Driven Design (DDD).  
+En esta sección se presenta el diagrama de clases UML.
+El diagrama fue modelado en Java con Spring Boot, siguiendo principios de Domain-Driven Design (DDD).
 
 El nivel de detalle incluye:
 
-- Clases de dominio principales: `OrderToSupplier`, `Inventory`, `Supply`, `CustomSupply`, `Batch`, `Report`, `Notification`, `Comment`.  
-- Atributos con su tipo de dato y visibilidad (`private`).  
-- Métodos con su visibilidad (`public`).  
-- Relaciones entre clases, indicando multiplicidad, dirección y calificación.  
-- Dependencias con agregaciones y composiciones según corresponda.  
+- Clases de dominio principales: `OrderToSupplier`, `Inventory`, `Supply`, `CustomSupply`, `Batch`, `Report`, `Notification`, `Comment`.
+- Atributos con su tipo de dato y visibilidad (`private`).
+- Métodos con su visibilidad (`public`).
+- Relaciones entre clases, indicando multiplicidad, dirección y calificación.
+- Dependencias con agregaciones y composiciones según corresponda.
 
 A continuación, se muestra el diagrama:
 
@@ -1277,26 +1372,23 @@ A continuación, se muestra el diagrama:
 
 Este diagrama permite visualizar la estructura del modelo de dominio y las responsabilidades principales de cada clase dentro del bounded context, sirviendo como base para la implementación en Java.
 
-
 ##### 2.6.4.6.2. Bounded Context Database Design Diagram
 
-En esta sección se presenta el diagrama de base de datos para la persistencia de los objetos del bounded context.  
+En esta sección se presenta el diagrama de base de datos para la persistencia de los objetos del bounded context.
 La implementación se realiza sobre MongoDB, en la cual cada entidad del dominio se mapea a una colección.
 
 El diagrama incluye:
 
-- Colecciones principales: `supplies`, `custom_supplies`, `orders_to_suppliers`, `batches`.  
-- Campos de cada colección con su tipo (`str`, `num`, `bool`, `date`, `doc`, `fk`).  
-- Relaciones entre documentos mediante referencias (`_id`, claves foráneas simuladas).  
-- Estructura embebida para documentos anidados, optimizando consultas.  
+- Colecciones principales: `supplies`, `custom_supplies`, `orders_to_suppliers`, `batches`.
+- Campos de cada colección con su tipo (`str`, `num`, `bool`, `date`, `doc`, `fk`).
+- Relaciones entre documentos mediante referencias (`_id`, claves foráneas simuladas).
+- Estructura embebida para documentos anidados, optimizando consultas.
 
 A continuación, se muestra el diagrama:
 
 ![Database Design Diagram](./assets/images/cap4/bc_resources/dbd.jpeg)
 
 Este modelo de base de datos facilita la persistencia de información del dominio y permite gestionar de manera eficiente los objetos, relaciones y consultas en un entorno document-oriented con MongoDB.
-
-
 
 ### 4.2.5. Bounded Context: Service Design and Planning
 
@@ -1325,7 +1417,7 @@ Una Recipe confirmada mantiene invariantes: nombre no vacío; precio ≥ 0; cada
 
 * Recipe (Aggregate Root)
 
-  * Atributos: RecipeId, Name, Price, Items: List`<RecipeIngredient>`, Status (Draft|Active|Archived), Audit (createdBy, createdAt, …).
+  * Atributos: RecipeId, Name, Price, Items: List `<RecipeIngredient>`, Status (Draft|Active|Archived), Audit (createdBy, createdAt, …).
   * Invariantes:
 
     * Name no vacío; Price >= 0.
@@ -1511,16 +1603,15 @@ Este BC opera y monitorea el día a día en dos frentes:
 * **Sale** *(Aggregate Root)*
 
   * **Atributos:** SaleId, adminRestaurantId, dinerName?, occurredAt, currency,
-    recipeLines: List<RecipeLine>, additionalSupplies: List<SupplyLine>,
+    recipeLines: List`<RecipeLine>`, additionalSupplies: List`<SupplyLine>`,
     totals {subtotal, tax, total}, status (Registered|Voided|Refunded),
     inventoryApplied: Boolean, audit.
   * **Invariantes:** cantidades > 0; total = Σ lineTotal; estados consistentes.
   * **Comportamientos:** register(...), void(reason), markInventoryApplied().
-
 * **PurchaseOrder** *(Aggregate Root)*
 
   * **Atributos:** PurchaseOrderId, supplierId, orderedAt, expectedAt?,
-    lines: List<POLine>, receipts: List<GoodsReceipt>, status, audit.
+    lines: List`<POLine>`, receipts: List`<GoodsReceipt>`, status, audit.
   * **Comportamientos:** addLine(...), submit(), approve(), send(), receive(lines), cancel().
 
 **Entities & Value Objects**
@@ -1530,7 +1621,6 @@ Este BC opera y monitorea el día a día en dos frentes:
 * PurchaseOrderLine (VO): { supplyId, quantity: Decimal, unitPrice?: Money, currency }.
 * GoodsReceipt (Entity): { receiptId, receivedAt, lines[{ supplyId, receivedQty: Decimal }] }.
 * Money(amount: Decimal128, currency), Quantity(Decimal128).
-
 
 **Domain Events (SOM)**
 
@@ -1588,7 +1678,6 @@ interface PurchaseOrderRepository {
 **Handlers (ejemplos)**
 
 * RegisterSaleHandler: valida líneas, calcula totales, persiste, **emite SaleRegistered** y despacha consumo (SDP/Resource).
-
 
 #### 4.2.6.4. Infrastructure Layer
 
