@@ -117,6 +117,30 @@ Adicionalmente, se presentan flujos de escenarios relevantes para los usuarios, 
   <img src="assets/images/cap4/message_flows/message_flow_supply.jpg" alt=“DDD” height="500px">
 
 #### 4.1.1.3. Bounded Context Canvases
+Para mejorar la organización del dominio y facilitar una comunicación consistente, se elaboraron Bounded Context Canvases para cada subdominio. Estos canvases delimitan claramente las responsabilidades, establecen el lenguaje ubicuo y los modelos clave, y describen los puntos de integración y los flujos de mensajes entre contextos. Los diagramas que siguen consolidan estas decisiones y sirvieron como guía para alinear la arquitectura, las interfaces y la evolución del sistema.
+### Identity and Access Management - IAM
+
+![pap-iam](assets/images/cap4/bounded-canvases/canvas-bc-IAM.JPG)
+
+### Profiles and Preferences - PFP
+
+![pap-iam](assets/images/cap4/bounded-canvases/canvas-bc-PFP.JPG)
+
+### Subscriptions and Payments - SAP
+
+![pap-iam](assets/images/cap4/bounded-canvases/canvas-bc-SAP.JPG)
+
+### Service Design and Planning - SDP
+
+![pap-iam](assets/images/cap4/bounded-canvases/canvas-bc-SDP.JPG)
+
+### Assets and Resource Management - ARM
+
+![pap-iam](assets/images/cap4/bounded-canvases/canvas-bc-ARM.JPG)
+
+### Service Operation and Monitoring - SOM
+
+![pap-iam](assets/images/cap4/bounded-canvases/canvas-bc-SOM.JPG)
 
 ### 4.1.2. Context Mapping
 
