@@ -644,6 +644,1003 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
     </tr>
 </table>
 
+## NUEVA TABLA DE USER STORIES
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-01</td>
+      <td>Visitante</td>
+      <td>High</td>
+      <td>EP-01</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Comunicación de Valor y Conversión en la Página de Inicio</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como visitante, quiero entender claramente el valor de la plataforma y ser guiado mediante acciones concretas, para sentirme motivado a registrarme o descargar la aplicación.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-02</td>
+      <td>Visitante (todos los segmentos)</td>
+      <td>High</td>
+      <td>EP-02</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Accesibilidad de la plataforma</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como visitante con cualquier tipo de dispositivo o capacidad, quiero que la página de inicio sea clara, rápida y accesible, para navegar sin dificultades y tener una buena primera impresión de la plataforma.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-03</td>
+      <td>Visitante / Usuario</td>
+      <td>High</td>
+      <td>EP-03</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de autenticación y acceso de usuarios</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como usuario de la plataforma, quiero poder registrarme, iniciar sesión y recuperar mi contraseña, para acceder a mis funcionalidades de forma segura y sin inconvenientes, incluso si olvido mis credenciales.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-04</td>
+      <td>Usuario</td>
+      <td>Medium</td>
+      <td>EP-04</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de Suscripción y Acceso al Dashboard</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como usuario, quiero gestionar mi suscripción desde el dashboard, para poder renovar, ver el estado de mi plan y saber cuándo expira.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-05</td>
+      <td>Usuario</td>
+      <td>Medium</td>
+      <td>EP-05</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de perfil</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como usuario, quiero poder visualizar y actualizar mi información personal o comercial, para mantener mis datos actualizados, generar confianza y facilitar la comunicación dentro de la plataforma.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-06</td>
+      <td>Usuario (admin restaurante / proveedor)</td>
+      <td>High</td>
+      <td>EP-06</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de Stock de Inventario</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como usuario, quiero gestionar los niveles de inventario de todos los insumos, para asegurar la continuidad operativa, reducir el desperdicio y mantener el control del stock en todo momento.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-07</td>
+      <td>Administrador de restaurante</td>
+      <td>High</td>
+      <td>EP-07</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de Compras de Insumos</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero registrar y consultar las compras de insumos realizadas, para tener control del abastecimiento, reducir pérdidas y mantener actualizado el inventario.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-08</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de recetas para pedidos</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero gestionar recetas vinculadas a insumos del inventario, para controlar mejor el consumo y tener trazabilidad en la preparación de platos.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-09</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-09</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Panel de control y estadísticas</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador del restaurante, quiero visualizar un panel con métricas clave, para tomar decisiones estratégicas.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-10</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-10</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Notificaciones inteligentes</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero recibir notificaciones automáticas sobre el estado del inventario y eventos importantes, para tomar decisiones oportunas que eviten la escasez de insumos o el exceso de stock.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-11</td>
+      <td>Administrador de restaurante / Proveedor</td>
+      <td>Medium</td>
+      <td>EP-11</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Seguimiento de entregas</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero consultar el estado actual de mis pedidos, para tener visibilidad en tiempo real del progreso de cada entrega y planificar mejor mi operación interna. Y como proveedor, quiero actualizar el estado de las órdenes, para mantener informados a los restaurantes y organizar mis despachos de forma eficiente.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-12</td>
+      <td>Administrador de restaurante</td>
+      <td>Low</td>
+      <td>EP-12</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Calificaciones y feedback a proveedores</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero calificar y dejar comentarios sobre los proveedores con los que trabajo, para compartir mi experiencia, ayudar a otros restaurantes a tomar decisiones informadas y brindar retroalimentación útil a los proveedores.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-13</td>
+      <td>Proveedor</td>
+      <td>Medium</td>
+      <td>EP-13</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de Productos Ofrecidos</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como proveedor, quiero registrar, editar y eliminar los productos que ofrezco a los restaurantes, para asegurar que mi catálogo esté siempre actualizado y facilitar la gestión de pedidos.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-14</td>
+      <td>Proveedor</td>
+      <td>Medium</td>
+      <td>EP-14</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Recepción y Gestión de Órdenes</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como proveedor, quiero recibir, visualizar y actualizar el estado de las órdenes realizadas por restaurantes, para organizar mis entregas, garantizar puntualidad y mantener una buena comunicación con mis clientes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-15</td>
+      <td>Proveedor</td>
+      <td>Low</td>
+      <td>EP-15</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Historial de Ventas, para Proveedores</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como proveedor, quiero acceder a un historial detallado de mis ventas a cada restaurante, para poder descargar reportes e identificar a mis mejores clientes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Epic ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>EP-16</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-16</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de Proveedores</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero poder agregar, editar, visualizar y eliminar proveedores desde la plataforma, para tener un control eficiente de quiénes suministran los insumos y facilitar la comunicación.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-01</td>
+      <td>Visitante / Usuario</td>
+      <td>High</td>
+      <td>EP-03</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Acceso a la plataforma (Registro/Login)</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como visitante o usuario, quiero registrarme si no tengo una cuenta o iniciar sesión si ya la tengo, para poder acceder a los servicios de la plataforma.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Registro de nuevo usuario:</strong> Dado que el visitante no posee una cuenta registrada, cuando solicita registrarse proporcionando datos válidos, entonces el sistema crea la cuenta y confirma el registro.</li>
+          <li><strong>Escenario 2 - Inicio de sesión usuario existente:</strong> Dado que el usuario ya cuenta con una cuenta registrada, cuando proporciona credenciales válidas, entonces el sistema valida y concede acceso.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-02</td>
+      <td>Usuario</td>
+      <td>High</td>
+      <td>EP-03</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Recuperación de contraseña</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como usuario, quiero recuperar el acceso a mi cuenta mediante la restauración de mi contraseña, para continuar utilizando la plataforma incluso si olvidé mis credenciales.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Solicitud de recuperación de contraseña:</strong> Dado que el usuario no ha iniciado sesión y desea recuperar el acceso, cuando solicita iniciar el proceso de recuperación de contraseña, entonces el sistema le permite ingresar su dirección de correo electrónico asociada a la cuenta.</li>
+          <li><strong>Escenario 2 - Envío de instrucciones de recuperación:</strong> Dado que el usuario ha proporcionado una dirección de correo electrónico válida, cuando envía la solicitud de recuperación, entonces el sistema genera un medio seguro para restablecer la contraseña y notifica al usuario que se han enviado instrucciones al canal correspondiente.</li>
+          <li><strong>Escenario 3 - Enlace inválido o expirado:</strong> Dado que el usuario accede a un medio de recuperación previamente generado, cuando dicho recurso ya no es válido o ha expirado, entonces el sistema informa que la recuperación no puede completarse y ofrece la posibilidad de generar una nueva solicitud.</li>
+          <li><strong>Escenario 4 - Restablecimiento exitoso:</strong> Dado que el usuario accede a un recurso válido para restaurar su contraseña, cuando proporciona una nueva contraseña que cumple con las reglas establecidas, entonces el sistema actualiza su información de acceso y confirma que podrá ingresar con sus nuevas credenciales.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-15</td>
+      <td>Administrador de restaurante</td>
+      <td>High</td>
+      <td>EP-06</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Actualización manual de estado del inventario</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero actualizar manualmente el estado del inventario, para asegurar que los insumos sean descontados correctamente y el inventario refleje información actualizada.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Visualización previa a la actualización del inventario:</strong> Dado que existen ventas registradas pendientes de aplicar al inventario cuando el administrador de restaurante accede a la sección de actualización manual del inventario entonces el sistema muestra una lista con información completa de cada venta pendiente a registrar en el inventario.</li>
+          <li><strong>Escenario 2 - Actualización manual del estado del inventario:</strong> Dado que existen ventas registradas pendientes de aplicar al inventario cuando el administrador de restaurante confirma la acción entonces el sistema descuenta los insumos correspondientes y actualiza el stock del inventario.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-16</td>
+      <td>Empleado del restaurante</td>
+      <td>Medium</td>
+      <td>EP-15</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de ventas</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como empleado del restaurante, quiero registrar y gestionar las ventas del restaurante según las recetas e insumos disponibles, para para mantener un registro preciso del consumo.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Selección de platos e insumos adicionales:</strong> Dado que el cliente del restaurante realiza una compra cuando el empleado indica los platos e insumos adicionales vendidos entonces el sistema registra la venta incluyendo fecha, hora y los elementos seleccionados.</li>
+          <li><strong>Escenario 2 - Registro de venta pendiente de actualización en el inventario:</strong> Dado que la venta incluye platos con recetas registradas e insumos adicionales cuando se confirma la venta entonces el sistema marca la venta como pendiente de descontar del inventario y la registra en el sistema para futuras actualizaciones de stock.</li>
+          <li><strong>Escenario 3 - Edición previa a la actualización de inventario:</strong> Dado que el administrador de restaurante visualiza ventas aún no aplicadas al inventario cuando edita o elimina una venta entonces el sistema ajusta el estado de las ventas pendientes antes de que se confirme su aplicación al inventario.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-17</td>
+      <td>Proveedor</td>
+      <td>High</td>
+      <td>EP-14</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Seguimiento de una orden</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como proveedor, quiero establecer el estado de una orden, para que el restaurante conozca la etapa actual de la orden.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Cambio exitoso de estado de una orden:</strong> Dado que el proveedor visualiza una orden pendiente de actualización cuando establece el nuevo estado de la orden con “Preparando”, “En camino” o “Entregado” entonces el sistema actualiza el estado y notifica al restaurante sobre el cambio.</li>
+          <li><strong>Escenario 2 - Fallo al cambiar el estado por falta de permisos:</strong> Dado que el proveedor intenta modificar una orden ya finalizada cuando intenta establecer un nuevo estado entonces el sistema muestra un mensaje de error indicando que no se puede modificar una orden finalizada.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-18</td>
+      <td>Proveedor</td>
+      <td>Low</td>
+      <td>EP-12</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Visualización de calificaciones recibidas</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como proveedor, quiero ver los comentarios y calificaciones de mis órdenes completadas, para evaluar mi desempeño y mejorar la calidad de mis servicios.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Consulta general de feedback:</strong> Dado que el proveedor desea revisar su desempeño cuando accede a la sección de calificaciones entonces el sistema muestra los puntajes y comentarios asociados a sus servicios.</li>
+          <li><strong>Escenario 2 - Visualizar promedio total de calificaciones:</strong> Dado que el proveedor accede a la sección de calificaciones cuando el sistema carga todos los comentarios y puntajes de las órdenes completadas entonces muestra un valor numérico con el promedio total de las calificaciones recibidas.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-19</td>
+      <td>Proveedor</td>
+      <td>High</td>
+      <td>EP-14</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Visualizar y gestionar ordenes recibidas</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como proveedor, quiero visualizar la lista de órdenes solicitadas por los restaurantes, para preparar las entregas y gestionar los despachos eficientemente.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Visualizar todas las órdenes entrantes:</strong> Dado que hay órdenes pendientes asignadas al proveedor cuando accede a la sección de órdenes entonces el sistema muestra una lista con el nombre del restaurante los ítems solicitados las cantidades y la fecha de entrega requerida.</li>
+          <li><strong>Escenario 2 - Confirmar una orden para despacho:</strong> Dado que una orden está en situación “pendiente” cuando el proveedor la confirma entonces el sistema cambia su estado a “aprobada” y notifica al restaurante.</li>
+          <li><strong>Escenario 3 - Rechazar una orden:</strong> Dado que una orden no es viable cuando el proveedor la rechaza entonces el sistema marca la orden como “rechazada” y notifica al restaurante con el motivo.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-20</td>
+      <td>Proveedor</td>
+      <td>Medium</td>
+      <td>EP-14</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Visualizar información específica de una orden</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como proveedor, quiero ver todos los datos asociados a una orden específica, para prepararla correctamente.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Seleccionar una orden desde el listado:</strong> Dado que el proveedor ha seleccionado una orden desde el listado, cuando se presenta la vista de detalle de la orden entonces el sistema muestra todos los productos incluidos, sus cantidades, precios y descripción de la orden.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-21</td>
+      <td>Administrador de restaurante</td>
+      <td>Low</td>
+      <td>EP-12</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Registrar calificación a proveedor</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero registrar una calificación y comentario sobre un proveedor después de recibir una orden, para evaluar la calidad de su servicio y productos.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Calificación exitosa tras una orden completada:</strong> Dado que una orden ha sido entregada correctamente cuando el administrador accede a la opción de calificar al proveedor entonces el sistema permite asignar un puntaje y un comentario que quedan registrados.</li>
+          <li><strong>Escenario 2 - Intento de calificación sin orden completada:</strong> Dado que el administrador intenta calificar a un proveedor sin órdenes finalizadas cuando realiza la acción entonces el sistema muestra un mensaje de error indicando que no hay órdenes completadas para evaluar.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-22</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-11</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de proveedores registrados</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero visualizar y gestionar a los proveedores registrados, para elegir con cuál trabajar y realizar pedidos de insumos.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Listado de proveedores disponibles:</strong> Dado que existen proveedores registrados cuando el administrador de restaurante accede a la sección de proveedores entonces el sistema muestra una lista con nombre, productos ofrecidos, calificación y datos de contacto de cada proveedor.</li>
+          <li><strong>Escenario 2 - Selección de un proveedor específico:</strong> Dado que el administrador visualiza la lista de proveedores cuando selecciona uno en específico entonces el sistema muestra la información detallada del proveedor y los insumos que ofrece.</li>
+          <li><strong>Escenario 3 - Eliminación de un proveedor:</strong> Dado que el administrador desea dejar de trabajar con un proveedor cuando selecciona la opción de eliminarlo entonces el sistema lo quita de su lista de proveedores registrados.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-23</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-11</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Visualizar información específica de proveedor</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero visualizar toda la información de un proveedor específico, para revisar sus insumos, calificación y detalles de contacto antes de realizar pedidos.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Acceso al detalle de un proveedor:</strong> Dado que el administrador de restaurante selecciona un proveedor de la lista cuando ingresa a la vista de detalles entonces el sistema muestra nombre, productos disponibles, calificaciones, contacto y condiciones de entrega del proveedor.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-24</td>
+      <td>Administrador de restaurante</td>
+      <td>High</td>
+      <td>EP-11</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de pedidos de insumos a proveedor</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero realizar pedidos de insumos a un proveedor, para mantener el stock del inventario abastecido.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Creación de un nuevo pedido:</strong> Dado que el administrador necesita insumos cuando selecciona un proveedor y genera un pedido entonces el sistema permite indicar los productos, cantidades y fecha de entrega requerida.</li>
+          <li><strong>Escenario 2 - Registro exitoso del pedido:</strong> Dado que el administrador completa la información requerida cuando confirma el pedido entonces el sistema registra la orden con estado “pendiente” y la notifica al proveedor.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-25</td>
+      <td>Administrador de restaurante</td>
+      <td>High</td>
+      <td>EP-11</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Visualización de órdenes enviadas a proveedores</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero visualizar la lista de órdenes enviadas a los proveedores, para hacer seguimiento de su estado y entrega.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Listado de órdenes creadas:</strong> Dado que el administrador de restaurante tiene pedidos generados cuando accede a la sección de órdenes enviadas entonces el sistema muestra una lista con proveedor, insumos solicitados, fecha y estado de cada pedido.</li>
+          <li><strong>Escenario 2 - Filtro por estado de orden:</strong> Dado que el administrador accede a la lista de órdenes enviadas cuando selecciona un estado específico como “pendiente” o “en camino” entonces el sistema muestra únicamente las órdenes con dicho estado.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-26</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-11</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Visualizar información específica de una orden enviada</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero visualizar toda la información de una orden enviada a proveedor, para verificar detalles de los insumos solicitados y el estado actual de la orden.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Selección de una orden enviada:</strong> Dado que el administrador de restaurante selecciona una orden de la lista cuando ingresa a la vista de detalles entonces el sistema muestra proveedor, insumos, cantidades, fecha de entrega, estado actual y situación de la orden.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-27</td>
+      <td>Administrador de restaurante</td>
+      <td>High</td>
+      <td>EP-11</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Actualizar estado de una orden enviada a proveedor</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero actualizar el estado de una orden enviada, para registrar correctamente el avance de su procesamiento y recepción de insumos.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Actualización de estado a “recibido”:</strong> Dado que una orden ha sido entregada cuando el administrador de restaurante actualiza el estado a “recibido” entonces el sistema marca la orden como finalizada y actualiza el historial de órdenes.</li>
+          <li><strong>Escenario 2 - Estado intermedio “en espera”:</strong> Dado que la orden aún no ha sido despachada completamente cuando el administrador de restaurante lo indica entonces el sistema registra la orden como “en espera” manteniendo su seguimiento activo.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-28</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-06</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Visualización del historial de inventario</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como administrador de restaurante, quiero visualizar el historial de movimientos del inventario, para revisar los cambios realizados en stock por ventas, compras o ajustes manuales.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1 - Acceso al historial completo:</strong> Dado que existen movimientos registrados cuando el administrador de restaurante accede a la sección de historial entonces el sistema muestra una lista con fecha, tipo de movimiento, insumos afectados y cantidades.</li>
+          <li><strong>Escenario 2 - Filtro por rango de fechas:</strong> Dado que el administrador necesita revisar un período específico cuando aplica un rango de fechas al historial entonces el sistema muestra solo los movimientos comprendidos en dicho rango.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 ## 3.2 Impact Mapping
 
 A continuación se presenta el Impact Map de Restock , el cual permite visualizar de manera clara cómo las funcionalidades clave de la aplicación se alinean con los objetivos de negocio, considerando a los actores involucrados y los impactos esperados en su comportamiento.
