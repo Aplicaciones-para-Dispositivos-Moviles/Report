@@ -1159,6 +1159,204 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
       <th>Epic</th>
     </tr>
     <tr>
+      <td>US-05</td>
+      <td>Administrador de restaurante</td>
+      <td>High</td>
+      <td>EP-10</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión integral de notificaciones de inventario</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como administrador de restaurante, quiero recibir notificaciones automáticas por vencimiento próximo, exceso o escasez de stock en los insumos,
+        para tomar decisiones logísticas y oportunas, y evitar pérdidas, desperdicios o quiebres de stock.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Notificación por vencimiento próximo.</li>
+          <li>Escenario 2 - Notificación automática por vencimiento.</li>
+          <li>Escenario 3 - Notificación por exceso de stock.</li>
+          <li>Escenario 4 - Notificación por bajo stock.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-09</td>
+      <td>Administrador de restaurante</td>
+      <td>High</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de receta</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como administrador de restaurante, quiero mantener actualizadas las recetas del menú según las necesidades del negocio,
+        para asegurar que solo estén disponibles las preparaciones activas y relevantes.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Agregar nueva receta: Registrar nombre, ingredientes y valor de venta.</li>
+          <li>Escenario 2 - Ajustar receta existente: Actualizar detalles y reflejar cambios.</li>
+          <li>Escenario 3 - Retirar receta no vigente: Eliminarla de las activas conservando trazabilidad histórica.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-10</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Consultar detalles de una receta registrada</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como administrador de restaurante, quiero consultar la información detallada de una receta,
+        para revisar los ingredientes utilizados y sus cantidades por porción.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Consulta general: Mostrar nombre, porciones, insumos y cantidades.</li>
+          <li>Escenario 2 - Receta inexistente: Mostrar mensaje de error si no se encuentra.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-13</td>
+      <td>Administrador de restaurante</td>
+      <td>Medium</td>
+      <td>EP-10</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Ver notificaciones recientes</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como administrador, quiero ver alertas importantes (productos por vencer, bajo stock, etc.),
+        para tomar acciones correctivas a tiempo.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Visualización de alertas.</li>
+          <li>Escenario 2 - Archivado de alertas revisadas.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>US-14</td>
+      <td>Proveedor</td>
+      <td>Medium</td>
+      <td>EP-09</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Identificar a los Mejores Clientes</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como proveedor, quiero ver qué restaurantes me compran más, para poder enfocarme en mantener relaciones sólidas con ellos.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Ordenamiento por volumen de ventas: Listar restaurantes según monto total adquirido en un periodo.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
       <td>US-15</td>
       <td>Administrador de restaurante</td>
       <td>High</td>
@@ -1639,6 +1837,239 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
     </tr>
   </tbody>
 </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS008</td>
+      <td>Desarrollador</td>
+      <td>High</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Crear recetas mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero crear una receta mediante un API REST, para registrar nuevas recetas y permitir su integración con el módulo de gestión de platos e inventario.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Creación exitosa: Retorna ID único de la receta creada.</li>
+          <li>Escenario 2 - Datos inválidos: Responde con error detallando campos inválidos.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS009</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Consultar recetas mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero consultar recetas mediante una API REST, para obtener la lista completa de recetas y facilitar su visualización o integración con otros módulos.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Consulta exitosa: Retorna arreglo JSON con recetas.</li>
+          <li>Escenario 2 - Sin resultados: Retorna arreglo vacío.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS010</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Actualizar recetas mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero actualizar recetas mediante una API REST, para corregir o ajustar ingredientes y otros detalles relevantes de recetas existentes.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Actualización exitosa: Retorna receta actualizada.</li>
+          <li>Escenario 2 - Error de validación: Mensaje con campos inválidos.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS011</td>
+      <td>Desarrollador</td>
+      <td>Low</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Eliminar receta mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero eliminar una receta mediante una API REST, para borrar recetas obsoletas o creadas por error.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Eliminación exitosa: Retorna 204 No Content.</li>
+          <li>Escenario 2 - Receta inexistente: Retorna 404 con mensaje de error.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS003</td>
+      <td>Desarrollador</td>
+      <td>High</td>
+      <td>EP-10</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Sistema de notificaciones de inventario mediante API RESTful y One Signal</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero integrar notificaciones de inventario (vencimiento próximo y exceso de stock) con OneSignal,
+        para que los administradores reciban alertas automáticas en sus dispositivos.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Consultar insumos con vencimiento próximo.</li>
+          <li>Escenario 2 - Consultar insumos con exceso de stock.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS007</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-10</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Registro histórico de eventos críticos de insumos</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero registrar automáticamente eventos críticos (vencimiento, bajo stock, sobre stock) en un historial,
+        para que el administrador pueda auditar problemas con insumos.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1 - Registro de vencimiento próximo.</li>
+          <li>Escenario 2 - Registro de exceso de stock.</li>
+          <li>Escenario 3 - Registro de bajo stock.</li>
+          <li>Escenario 4 - Consulta de historial filtrable.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 ## 3.2 Impact Mapping
