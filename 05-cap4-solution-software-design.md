@@ -491,14 +491,11 @@ Clases que acceden a servicios externos (base de datos, emisión de tokens, emai
 
 ##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
 
-- **Concordancia con tu UML:** `Roles (1) — User (1..*)`.
+![dc-web-subscriptions-and-payments](assets/images/cap4/bc_diagrams/class-diagram-IAM.jpg)
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
 
-- **Colecciones:** `users`, `roles`.
-- **Relaciones:** `users.roleName` referencia lógica a `roles.name`.
-- **Índices:** `users.username` (único), `roles.name` (único), TTL en expirables.
-- **Seguridad:** password **siempre** en hash; tokens de refresco **hasheados** si se almacenan.
+![dc-web-subscriptions-and-payments](assets/images/cap4/bc_diagrams/data_base_diagram_IAM.png)  
 
 ### 4.2.2. Bounded Context: Subscriptions and Payments
 
@@ -1036,13 +1033,12 @@ Clases que acceden a servicios externos (base de datos, almacenamiento de imáge
 
 ##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-- **Concordancia con tu UML:** `Profile` **compone** a `Business`.
+![dc-web-subscriptions-and-payments](assets/images/cap4/bc_diagrams/class-diagram-PFP.jpg)
+
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
 
-- **Colección principal:** `profiles` con `business` **embebido** (por composición).
-- **Claves e índices:** `userId` (único), índices de texto para búsqueda, filtros por `country`.
-- **Relaciones:** `userId` referencia lógica a IAM.
+![dc-web-subscriptions-and-payments](assets/images/cap4/bc_diagrams/data_base_diagram_PFP.png)  
 
 #### 4.2.4. Bounded Context: Asset and Resource Management
 
