@@ -2070,6 +2070,503 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
   </tbody>
 </table>
 
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS016</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-09</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Obtener lista para ingredientes más usados mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero consultar los ingredientes más utilizados en un período determinado mediante una API REST, para permitir el análisis de su frecuencia de uso y facilitar decisiones sobre abastecimiento.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Obtener ingredientes más usados por periodo.<br>
+          Dado que el endpoint <code>/api/v1/ingredients/most-used</code> está disponible y se especifica un parámetro de período como <code>?period=7d</code>, cuando se realiza una petición GET al endpoint, entonces se recibe una respuesta con código 200 OK y el cuerpo de la respuesta incluye una lista de ingredientes con los campos id, nombre y cantidad_utilizada.</li>
+          <li>Escenario 2: Periodo no especificado.<br>
+          Dado que el endpoint <code>/api/v1/ingredients/most-used</code> está disponible y no se especifica el parámetro period, cuando se realiza una petición GET al endpoint, entonces se recibe una respuesta con código 400 Bad Request y un mensaje que indique que el parámetro period es obligatorio.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS017</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-10</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Obtener lista de alertas recientes  mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero consultar las alertas recientes generadas por el sistema mediante una API REST, para integrarlas en paneles de monitoreo o activar respuestas automatizadas.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Obtener alertas recientes.<br>
+          Dado que el endpoint <code>/api/v1/alerts</code> está disponible y existen productos con bajo stock o próximos a vencer, cuando se realiza una petición GET, entonces se recibe una respuesta con código 200 OK y el cuerpo de la respuesta incluye una lista de alertas con los campos id, tipo, mensaje, fecha y producto.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS018</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-09</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Obtener lista de mejores clientes mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero consultar los restaurantes con mayor volumen de compras a un proveedor mediante una API REST, para mostrar un ranking de clientes prioritarios por período definido.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario: Obtener ranking de mejores clientes.<br>
+          Dado que el endpoint <code>/api/v1/supplier/top-clients</code> está disponible y se proporcionan los parámetros <code>startDate</code> y <code>endDate</code> en la consulta, cuando se realiza una petición GET al endpoint, entonces se recibe una respuesta con código 200 OK y el cuerpo de la respuesta incluye una lista ordenada de clientes con los campos id, nombre y monto_total.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS019</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-14</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Actualizar estado de orden mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero actualizar el estado de una orden mediante una API RESTful, para que pueda integrarse fácilmente con otros módulos del sistema y automatizar flujos relacionados.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Estado actualizado correctamente.<br>
+          Dado que el endpoint <code>/api/v1/orders/:id/status</code> está disponible, cuando el método PATCH es enviado con el campo <code>estado</code> en el cuerpo, entonces la orden debe actualizar su estado correctamente y responder con código 200 OK y la orden actualizada.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS020</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-11</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Consultar estado de entrega mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero consultar el estado de una orden mediante una API RESTful, para monitorear el progreso de la entrega.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Recuperación exitosa del estado.<br>
+          Dado que el endpoint <code>/api/v1/orders/:id/status</code> está disponible, el desarrollador está autenticado y el id de orden existe, cuando se realiza una petición GET, entonces se recibe una respuesta con código 200 OK y el cuerpo incluye el estado actual de la orden.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS021</td>
+      <td>Desarrollador</td>
+      <td>Low</td>
+      <td>EP-12</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Obtener calificaciones de servicios de proveedores mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero obtener las calificaciones relacionadas a las ordenes completadas de un proveedor, para integrarlas en servicios analíticos que respalden decisiones automatizadas.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Calificaciones disponibles.<br>
+          Dado que el endpoint <code>/api/v1/ratings/supplierId</code> está disponible y el proveedor tiene ratings registrados, cuando se realiza una petición GET, entonces se recibe una respuesta con código 200 OK y un arreglo con las calificaciones y comentarios asociados.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS022</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-14</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestionar órdenes recibidas mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero visualizar y gestionar órdenes recibidas, para consultar y actualizar el estado de órdenes recibidas, de forma que se pueda coordinar correctamente el despacho de productos y la comunicación entre proveedor y restaurante.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Obtener órdenes recibidas.<br>
+          Dado que el endpoint <code>/api/v1/orders/supplierId</code> está disponible, cuando se realiza una petición GET con el ID del proveedor, entonces se recibe una respuesta con código 200 OK y una lista de órdenes asignadas al proveedor.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS023</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-14</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Consultar detalles de una orden mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero consultar detalles de una orden específica mediante API RESTful, para obtener los detalles de una orden específica por su ID y visualizar toda la información relevante.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: ID válido de orden.<br>
+          Dado que el endpoint <code>/api/v1/orders/supplierId/id</code> está disponible, cuando se realiza una petición GET con un ID válido de orden, entonces se recibe una respuesta con código 200 OK y los detalles completos de la orden.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS024</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-14</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Obtener historial de ordenes mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero obtener todas las órdenes que un proveedor realizó a un restaurante, ordenadas por fecha, para construir funcionalidades que permitan visualizar cronológicamente el historial de pedidos y facilitar análisis de desempeño.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Recuperación cronológica de órdenes.<br>
+          Dado que el endpoint <code>/api/v1/supplier/orders/restaurantId</code> está disponible y se proporciona un restaurantId válido, cuando se realiza una petición GET, entonces se recibe una respuesta con código 200 OK y una lista ordenada de órdenes por fecha.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS025</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-14</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Exportar reporte de historial de órdenes completados mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero generar un reporte en Excel de las órdenes completadas de un proveedor, para facilitar el análisis, la contabilidad y la toma de decisiones mediante la exportación de datos.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Exportación exitosa del reporte en Excel.<br>
+          Dado que el endpoint <code>/api/v1/supplier/orders/supplierId/export</code> está disponible y el proveedor tiene órdenes completadas, cuando se solicita el reporte, entonces el sistema genera y responde con un archivo Excel descargable con el historial de órdenes completadas.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS026</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-15</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestionar ventas e inventario mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero implementar funcionalidades, para registrar y gestionar ventas, así como actualizar manualmente el estado del inventario mediante APIs RESTful.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Registro de venta con platos e insumos adicionales.<br>
+          Dado que el endpoint <code>/api/v1/restaurant/sales</code> está disponible para registrar ventas, cuando se recibe una solicitud POST con los datos de la venta, entonces el sistema registra la venta y responde con un identificador único.</li>
+          <li>Escenario 2: Actualización manual del estado del inventario.<br>
+          Dado que el endpoint <code>/api/v1/restaurant/inventory/update</code> está disponible, cuando se recibe una solicitud PATCH con los datos de actualización, entonces el sistema ajusta los niveles de inventario y responde con los datos actualizados.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS027</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-03</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Cambio de contraseña mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero permitir el cambio de contraseña mediante un endpoint REST, para que los usuarios puedan mantener su cuenta segura actualizando sus credenciales cuando lo deseen.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Cambio de contraseña exitoso.<br>
+          Dado que el recurso <code>/api/v1/auth/change-password</code> está disponible y el usuario está autenticado correctamente y proporciona la contraseña actual junto con la nueva, cuando realiza la petición PATCH, entonces el sistema actualiza la contraseña y responde con código 200 OK.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS028</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-03</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Eliminar cuenta mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Description</strong><br/>
+        Como desarrollador, quiero permitir que los usuarios eliminen su cuenta a través de un endpoint REST, para que puedan ejercer control sobre su información personal y cerrar su cuenta cuando lo deseen.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left">
+        <strong>Acceptance Criteria</strong>
+        <ul>
+          <li>Escenario 1: Eliminación exitosa de cuenta.<br>
+          Dado que el recurso <code>/api/v1/auth/delete-account</code> está disponible y el usuario está autenticado correctamente y confirma la eliminación, cuando realiza la petición DELETE, entonces el sistema elimina la cuenta y responde con código 204 No Content.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## 3.2 Impact Mapping
