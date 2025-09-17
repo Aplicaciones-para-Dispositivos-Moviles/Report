@@ -1380,18 +1380,17 @@ El diagrama refleja los siguientes elementos clave:
 - **Usuarios principales**:  
   - *Restaurant Administrator* y *Supplier*, quienes interactúan con el sistema a través de las aplicaciones móviles.  
 
-- **Aplicaciones cliente**:  
-  - **Landing Page**: desarrollada en *HTML, CSS y JS*, sirve como punto de entrada al sistema con información de marketing y acceso a la aplicación.  
+- **Aplicaciones cliente**:   
   - **Android App (Admin)**: aplicación nativa en *Kotlin*, enfocada en la gestión de inventario.  
   - **Flutter App (Supplier)**: aplicación multiplataforma en *Flutter*, enfocada en la gestión de insumos y pedidos.  
 
 - **Persistencia de datos**:  
-  - **MongoDB Database**, representada como un cilindro, almacena la información de *batches*, *supplies* y *orders*.  
+  - **Database**, representada como un cilindro, almacena la información de *batches*, *supplies* y *orders*.  
 
 - **Backend principal (Spring Boot Backend)**:  
   Este container se descompone en múltiples capas y componentes:  
   - **API Layer (Spring MVC Controllers)**:  
-    - *BatchController*, *OrderController* y *SupplyController* exponen los endpoints REST.  
+    - *BatchController*, *OrderController* y *SupplyController* exponen los endpoints REST, consumidos directamente por las aplicaciones móviles.
   - **Application Layer (Java Services)**:  
     - *Batch Application Service*, *Order Application Service* y *Supply Application Service* procesan comandos y queries para cada agregado.  
   - **Domain Layer (Domain Services)**:  
@@ -1409,10 +1408,11 @@ El diagrama refleja los siguientes elementos clave:
   - *Cloudinary API* gestiona la subida y optimización de imágenes.  
 
 - **Flujos de comunicación destacados**:  
+  - Las aplicaciones cliente (Android App y Flutter App) consumen los endpoints REST expuestos en los *Controllers*.  
   - Los *Controllers* delegan a los *Application Services*.  
   - Los *Application Services* utilizan *Domain Services* para lógica compleja.  
   - La persistencia se realiza a través de *Repositories* y *Mongo Repositories* hacia la base de datos.  
-  - Los adaptadores gestionan la integración con servicios externos de terceros (Cloudinary y Push).  
+  - Los adaptadores gestionan la integración con servicios externos de terceros (Cloudinary y One signal).  
 
 #### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
 
