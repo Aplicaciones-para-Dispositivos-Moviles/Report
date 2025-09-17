@@ -57,42 +57,43 @@ _Agosto 2025_
 
 # Project Report Collaboration Insights
 
-Esta sección detalla cómo el equipo colaboró para construir el **Final Project Documentation Report** del sistema Restock, mostrando evidencia de trabajo conjunto mediante commits, revisiones, herramientas de organización y resultados integrados en el informe final. Se refleja la contribución de cada integrante en la planificación, desarrollo, documentación y presentación de la solución.
+Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dentro de la organización en GitHub. A continuación, se presenta la evidencia de colaboración correspondiente al **TB1**, en coherencia con el **Registro de Versiones del Informe**.
 
-**Repositorio del informe del proyecto:**
-[https://shorturl.at/i6Ps8](https://shorturl.at/i6Ps8)
+**Repositorio del informe del proyecto:**  
+[https://shorturl.at/NKl2Z](https://shorturl.at/NKl2Z)
 
-![Evidencia de commits del repositorio](assets/images/presentation/ci-overview.png)
+![Evidencia de commits del repositorio](assets/images/ci-overview.png)
 
-- **Total de commits:** 507
-- **Autores contribuyentes:**
-  - Piero Elescano (`PieroHugo`)
-  - Sergio Julca (`sergioJM05`)
-  - Julio Castro (`JulioXC4`)
-  - Gabriela Shapiama (`GabrielaShapiama28`)
-  - Jahaziel Guerra (`jahazielgg`)
+- **Total de commits:** XXX (al corte de TB1)  
+- **Autores contribuyentes:**  
+  - Julio Castro Alejos (`JulioXC4`)  
+  - José Jahaziel Guerra Pérez (`jahazielgg`)  
+  - Sergio Gino Julca Minaya (`sergioJM05`)  
+  - Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)  
+  - Piero Hugo Elescano León (`PieroHugo`)  
+- La actividad se distribuyó en ramas temáticas por secciones del informe, asegurando revisiones cruzadas mediante *pull requests*.  
 
-Todas las entregas se desarrollaron sobre ramas específicas con _pull requests_ revisados en equipo. Se utilizaron issues de GitHub y tableros Trello para distribuir tareas, y herramientas como Figma, Draw.io, PlantUML y Structurizr para la elaboración de diagramas incluidos en el informe.
+## TB1 - Informe inicial (Semana 4)
 
-## TB1 – Informe inicial y Landing Page
+Durante esta fase, el equipo elaboró el **informe inicial**, que incluyó los siguientes aspectos:  
 
-*Periodo:* 27 de agosto – 18 de setiembre de 2025
+- **Carátula** con información institucional y de la startup.  
+- **Registro de Versiones del Informe**, documentando los cambios realizados.  
+- **Contenido preliminar** con tabla de contenidos, *Student Outcomes* y Capítulo I (*Presentación*).  
+- **Capítulo II** con los primeros avances en *Requirements Development and Software Solution Design*.  
+- **Conclusiones preliminares, bibliografía y anexos*.  
 
-Se redactaron las secciones base del informe: Introducción, Justificación, Objetivos, Guias de estilo, Usuarios y Flujo de Valor. Se construyó una **Landing Page estática** con HTML5, CSS3 y JS. Las decisiones se documentaron en Trello, y se utilizó Figma para el primer prototipo visual. Cada sección del informe fue escrita en ramas separadas y luego unificada en `develop`.
+![Colaboraciones TB1](assets/images/ci-tb1.png)
 
-![Colaboraciones TB1](assets/images/presentation/ci-tb1.png)
+- **Julio Castro Alejos (`JulioXC4`)**: XX commits, XXX adiciones, XXX eliminaciones  
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: XX commits, XXX adiciones, XXX eliminaciones  
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: XX commits, XXX adiciones, XXX eliminaciones  
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: XX commits, XXX adiciones, XXX eliminaciones  
+- **Piero Hugo Elescano León (`PieroHugo`)**: XX commits, XXX adiciones, XXX eliminaciones  
+- **Total de commits en TB1:** XXX  
 
-- **Contribuciones destacadas del informe:**
+La colaboración fue activa y equitativa, con aportes sustanciales de todos los integrantes en la redacción y organización del informe.  
 
-  - Definición de problema y objetivos.
-  - Análisis de herramientas similares.
-  - Diseño de flujo de valor y tipos de usuario.
-  - Prototipo inicial en Figma.
-  - Página informativa y formulario de contacto en Landing.
-
-- **Commits por integrante:**
-
-TO-DO
 
 ## Herramientas colaborativas utilizadas
 
