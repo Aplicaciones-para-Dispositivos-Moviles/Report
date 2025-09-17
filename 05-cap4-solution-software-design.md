@@ -1371,6 +1371,49 @@ Responsabilidad:
 
 #### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
 
+En este nivel se presenta la descomposición del **bounded context Restock Resource** a nivel de **componentes internos** de cada container.  
+
+![Resource Bounded Context Software Architecture Component Diagram](./assets/images/cap4/bc_resources/bounded.png)
+
+El diagrama refleja los siguientes elementos clave:  
+
+- **Usuarios principales**:  
+  - *Restaurant Administrator* y *Supplier*, quienes interactúan con el sistema a través de las aplicaciones móviles.  
+
+- **Aplicaciones cliente**:  
+  - **Landing Page**: desarrollada en *HTML, CSS y JS*, sirve como punto de entrada al sistema con información de marketing y acceso a la aplicación.  
+  - **Android App (Admin)**: aplicación nativa en *Kotlin*, enfocada en la gestión de inventario.  
+  - **Flutter App (Supplier)**: aplicación multiplataforma en *Flutter*, enfocada en la gestión de insumos y pedidos.  
+
+- **Persistencia de datos**:  
+  - **MongoDB Database**, representada como un cilindro, almacena la información de *batches*, *supplies* y *orders*.  
+
+- **Backend principal (Spring Boot Backend)**:  
+  Este container se descompone en múltiples capas y componentes:  
+  - **API Layer (Spring MVC Controllers)**:  
+    - *BatchController*, *OrderController* y *SupplyController* exponen los endpoints REST.  
+  - **Application Layer (Java Services)**:  
+    - *Batch Application Service*, *Order Application Service* y *Supply Application Service* procesan comandos y queries para cada agregado.  
+  - **Domain Layer (Domain Services)**:  
+    - *InventoryService* implementa la lógica de reservas y liberación de lotes siguiendo FEFO.  
+    - *OrderWorkflowService* orquesta los cambios de estado de las órdenes.  
+  - **Persistence Layer (Spring Data + Mongo)**:  
+    - *Repositories* definen interfaces de persistencia.  
+    - *Mongo Repositories* son las implementaciones concretas sobre *MongoDB*.  
+  - **Infrastructure Layer (Adapters)**:  
+    - *CloudinaryAdapter* conecta con el servicio externo *Cloudinary API* para gestión de imágenes.  
+    - *PushNotificationAdapter* se integra con el *Push Notification Service* para enviar notificaciones en tiempo real.  
+
+- **Servicios externos**:  
+  - *Push Notification Service* entrega notificaciones a administradores y proveedores.  
+  - *Cloudinary API* gestiona la subida y optimización de imágenes.  
+
+- **Flujos de comunicación destacados**:  
+  - Los *Controllers* delegan a los *Application Services*.  
+  - Los *Application Services* utilizan *Domain Services* para lógica compleja.  
+  - La persistencia se realiza a través de *Repositories* y *Mongo Repositories* hacia la base de datos.  
+  - Los adaptadores gestionan la integración con servicios externos de terceros (Cloudinary y Push).  
+
 #### 4.2.4.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
