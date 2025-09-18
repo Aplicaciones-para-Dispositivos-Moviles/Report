@@ -753,15 +753,15 @@ Colección: payments
 
 ```
 Esquema lógico (snake_case):
-_id : ObjectId o string
-amount : number (minor units recomendado; ej. 499 para 4.99)
-status : string (o boolean si mantienes el actual)
-currency : string (ISO-4217, p. ej. “USD”, “PEN”)
+_id : ObjectId
+amount : number
+status : bool
+currency : string
 created_at : date
-subscription_plans : document (snapshot embebido)
+subscription_plans : document
 type : string
-price : number (minor units) [o price : { amount_minor_units, currency }]
-duration : string o object [opcional si usas ciclo: “Monthly/Annual/Trial”]
+price : number
+duration : string
 auto_renewal : bool
 start_date : date
 end_date : date
@@ -790,6 +790,8 @@ Ejemplo de documento:
 ```
 
 A continuación el diagrama de base de datos:
+
+
 ![db_subscriptions_and_payments](assets/images/cap4/db_diagram/db_subscriptions_and_payments.png)
 
 ### 4.2.3. Bounded Context: Profiles and Preferences

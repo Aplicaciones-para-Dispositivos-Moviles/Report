@@ -1,0 +1,9 @@
+1. El análisis de la competencia nos permitió identificar las fortalezas y debilidades de las soluciones actuales de gestión de inventario en el sector manejo de inventario de un restaurante. De esta manera nos brindó una visión clara de las brechas existentes y nos dio la oportunidad de diseñar un sistema más ajustado a las necesidades reales de los restaurantes, especialmente en el control de stock y en la optimización de insumos para recetas.
+  
+2. Las entrevistas a los segmentos objetivo representaron un aporte fundamental para el proyecto, ya que nos acercaron a la experiencia y problemática diaria de los administradores y proveedores. Asimismo, la información obtenida nos ayudó a priorizar funcionalidades como alertas de bajo stock, reportes dinámicos de consumo y la integración fluida de recetas con el inventario.
+
+3. El uso de artefactos de UX como User Personas, Journey Maps y Empathy Maps facilitó la construcción de un lenguaje compartido sobre los usuarios. Gracias a ello, logramos entender no solo los procesos técnicos que enfrentan, sino también sus frustraciones y motivaciones, lo que se tradujo en un diseño de solución más humano y centrado en el usuario.
+
+4. La aplicación de Domain-Driven Design (DDD) nos permitió organizar el sistema en bounded contexts coherentes, donde procesos como “Pagos y suscriptiones”, “Control de acceso” y "Monitoreo de inventario” tienen fronteras claras y responsabilidades bien definidas. Es así como esto incrementa la mantenibilidad de la solución y facilita su escalabilidad futura.
+
+5. El desarrollo colaborativo con herramientas ágiles y de control de versiones (como Trello para la gestión de backlog y GitHub para registro de versiones) fortaleció la dinámica del equipo.
