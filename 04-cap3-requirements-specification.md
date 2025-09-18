@@ -1078,275 +1078,45 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
   </tbody>
 </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-01</td>
-      <td>Visitante / Usuario</td>
-      <td>High</td>
-      <td>EP-03</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Acceso a la plataforma (Registro/Login)</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left"><strong>Description</strong><br/>
-      Como visitante o usuario, quiero registrarme si no tengo una cuenta o iniciar sesión si ya la tengo, para poder acceder a los servicios de la plataforma.</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
-        <ul>
-          <li><strong>Escenario 1 - Registro de nuevo usuario:</strong> Dado que el visitante no posee una cuenta registrada, cuando solicita registrarse proporcionando datos válidos, entonces el sistema crea la cuenta y confirma el registro.</li>
-          <li><strong>Escenario 2 - Inicio de sesión usuario existente:</strong> Dado que el usuario ya cuenta con una cuenta registrada, cuando proporciona credenciales válidas, entonces el sistema valida y concede acceso.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-01</td> <td>Visitante o usuario</td> <td>High</td> <td>EP-03</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Acceso a la plataforma</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como visitante o usuario, quiero tener la posibilidad de registrarme si no tengo una cuenta o iniciar sesión si ya la tengo, para poder acceder a los servicios de la plataforma.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Registro de nuevo usuario</strong> <br/> Dado que el visitante no posee una cuenta registrada, <br/> cuando solicita iniciar el registro como nuevo usuario, <br/> entonces el sistema debe permitir el ingreso de datos personales requeridos <br/> y registrar al visitante como nuevo usuario de la plataforma</li> <li><strong>Escenario 2: Inicio de sesión de usuario existente</strong> <br/> Dado que el usuario ya cuenta con una cuenta registrada, <br/> cuando proporciona sus credenciales para iniciar sesión, <br/> entonces el sistema debe validarlas <br/> y permitir el acceso a la plataforma.</li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-02</td>
-      <td>Usuario</td>
-      <td>High</td>
-      <td>EP-03</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Recuperación de contraseña</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left"><strong>Description</strong><br/>
-      Como usuario, quiero recuperar el acceso a mi cuenta mediante la restauración de mi contraseña, para continuar utilizando la plataforma incluso si olvidé mis credenciales.</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
-        <ul>
-          <li><strong>Escenario 1 - Solicitud de recuperación de contraseña:</strong> Dado que el usuario no ha iniciado sesión y desea recuperar el acceso, cuando solicita iniciar el proceso de recuperación de contraseña, entonces el sistema le permite ingresar su dirección de correo electrónico asociada a la cuenta.</li>
-          <li><strong>Escenario 2 - Envío de instrucciones de recuperación:</strong> Dado que el usuario ha proporcionado una dirección de correo electrónico válida, cuando envía la solicitud de recuperación, entonces el sistema genera un medio seguro para restablecer la contraseña y notifica al usuario que se han enviado instrucciones al canal correspondiente.</li>
-          <li><strong>Escenario 3 - Enlace inválido o expirado:</strong> Dado que el usuario accede a un medio de recuperación previamente generado, cuando dicho recurso ya no es válido o ha expirado, entonces el sistema informa que la recuperación no puede completarse y ofrece la posibilidad de generar una nueva solicitud.</li>
-          <li><strong>Escenario 4 - Restablecimiento exitoso:</strong> Dado que el usuario accede a un recurso válido para restaurar su contraseña, cuando proporciona una nueva contraseña que cumple con las reglas establecidas, entonces el sistema actualiza su información de acceso y confirma que podrá ingresar con sus nuevas credenciales.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-02</td> <td>Visitante</td> <td>Low</td> <td>EP-01</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Inclusión de videos explicativos en el sitio web</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como visitante, quiero visualizar videos sobre el equipo de Restock y sobre el funcionamiento del producto para conocer quiénes están detrás del proyecto y entender mejor cómo funciona antes de usarlo.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Visualización del video sobre el equipo.</strong><br />Dado que el visitante ha interactuado hasta la sección “Sobre nosotros” <br />cuando llega al final de dicha sección <br />entonces debe visualizarse un video incrustado con una breve presentación del equipo<br /> y este debe estar embebido, ser responsivo y reproducible desde diferentes dispositivos.</li> <li><strong>Escenario 2: Visualización del video sobre el producto.</strong> <br />Dado que el visitante ha interactuado hasta la sección “Tutorial” <br />cuando llega al final de dicha sección <br />entonces debe visualizar un video incrustado que explique brevemente cómo funciona la plataforma <br />y este debe mostrarse con diseño limpio, accesibilidad adecuada y compatibilidad móvil y de escritorio.</li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-05</td>
-      <td>Administrador de restaurante</td>
-      <td>High</td>
-      <td>EP-10</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Gestión integral de notificaciones de inventario</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como administrador de restaurante, quiero recibir notificaciones automáticas por vencimiento próximo, exceso o escasez de stock en los insumos,
-        para tomar decisiones logísticas y oportunas, y evitar pérdidas, desperdicios o quiebres de stock.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Notificación por vencimiento próximo.</li>
-          <li>Escenario 2 - Notificación automática por vencimiento.</li>
-          <li>Escenario 3 - Notificación por exceso de stock.</li>
-          <li>Escenario 4 - Notificación por bajo stock.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-03</td> <td>Usuario</td> <td>Medium</td> <td>EP-04</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Soporte de acceso según estado de suscripción</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como usuario, quiero poder usar todas las funcionalidades del sistema solo mientras mi suscripción esté activa, para tener control sobre mi acceso y asegurarme de que no se me cobre ni se me brinde el servicio si ya no quiero continuar con el plan.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Acceso completo con suscripción activa</strong> <br/> Dado que el usuario posee una suscripción vigente, <br/>cuando inicia sesión en la plataforma, <br/> entonces el sistema permite el uso completo de las funcionalidades habilitadas por su plan</li> <li><strong>Escenario 2: Acceso restringido con suscripción inactiva</strong> <br/> Dado que el usuario tiene una suscripción vencida o inactiva, <br/>cuando intenta acceder a funcionalidades del sistema, <br/>entonces el sistema restringe su acceso, muestra un mensaje que informa sobre el estado de la suscripción <br/> y ofrece la opción de renovar o actualizar su plan.</li> <li><strong>Escenario 3: Restauración del acceso tras renovación.</strong> <br/> Dado que el usuario ha renovado su suscripción de forma exitosa, <br/> cuando vuelve a ingresar al sistema,<br/> entonces el sistema actualiza su estado<br /> y permite nuevamente el uso de todas las funcionalidades correspondientes a su plan.</li> </ul> </td> </tr> </tbody> </table>
 
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-04</td> <td>Administrador de restaurante</td> <td>High</td> <td>EP-06</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestión manual de stock e insumos</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como administrador de restaurante, quiero gestionar manualmente el stock de los insumos en el inventario, para asegurar una gestión precisa de existencias y evitar errores en la disponibilidad de productos.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Registro de insumo</strong><br/> Dado que el administrador de restaurante se encuentra en la sección de inventario, <br/> cuando agrega un insumo al catalogo de insumos y registra el stock mínimo y máximo, <br/> entonces el sistema actualiza el inventario y muestra un mensaje de éxito.</li> <li><strong>Escenario 2: Registro manual de stock</strong> <br/> Dado que el administrador de restaurante está en la sección de inventario, <br/> cuando agrega un insumo del catálogo, registra el stock actual y, si es perecible, la fecha de expiración, <br/> entonces, el sistema actualiza el inventario y muestra un mensaje de éxito</li> <li><strong>Escenario 3: Validación de datos de stock</strong> <br/> Dado que el administrador ingresa datos para el stock, <br/> cuando los datos son negativos o no numéricos, <br />entonces el sistema muestra un mensaje de error y evita la actualización <br/><br/></li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-09</td>
-      <td>Administrador de restaurante</td>
-      <td>High</td>
-      <td>EP-08</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Gestión de receta</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como administrador de restaurante, quiero mantener actualizadas las recetas del menú según las necesidades del negocio,
-        para asegurar que solo estén disponibles las preparaciones activas y relevantes.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Agregar nueva receta: Registrar nombre, ingredientes y valor de venta.</li>
-          <li>Escenario 2 - Ajustar receta existente: Actualizar detalles y reflejar cambios.</li>
-          <li>Escenario 3 - Retirar receta no vigente: Eliminarla de las activas conservando trazabilidad histórica.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-05</td> <td>Administrador de restaurante</td> <td>Medium</td> <td>EP-10</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestión integral de notificaciones de inventario</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como administrador de restaurante, quiero recibir notificaciones automáticas por vencimiento próximo, exceso o escasez de stock en los insumos, para tomar decisiones logísticas y oportunas, y evitar pérdidas, desperdicios o quiebres de stock.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Notificación del sistema por vencimiento próximo.</strong><br />Dado que un insumo tiene una fecha de vencimiento registrada <br />cuando faltan 5 días o menos para su vencimiento <br />entonces el sistema marca el insumo en la lista de inventario.</li> <li><strong>Escenario 2: Notificación del sistema por exceso de stock.</strong> <br />Dado que un insumo tiene definido un stock máximo permitido <br />cuando el stock actual es igual o mayor a ese valor <br />entonces el sistema resalta el insumo como excedente en el listado de inventario.</li> <li><strong>Escenario 3: Notificación del sistema por bajo stock.</strong> <br />Dado que un insumo tiene un stock mínimo de referencia <br />cuando el stock actual es menor o igual al mínimo establecido <br />entonces el sistema resalta el insumo como escaso en el listado de inventario.</li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-10</td>
-      <td>Administrador de restaurante</td>
-      <td>Medium</td>
-      <td>EP-08</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Consultar detalles de una receta registrada</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como administrador de restaurante, quiero consultar la información detallada de una receta,
-        para revisar los ingredientes utilizados y sus cantidades por porción.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Consulta general: Mostrar nombre, porciones, insumos y cantidades.</li>
-          <li>Escenario 2 - Receta inexistente: Mostrar mensaje de error si no se encuentra.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-06</td> <td>Administrador de restaurante</td> <td>Low</td> <td>EP-12</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Enviar comentarios y calificaciones sobre pedidos</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como administrador de restaurante, quiero calificar y dejar comentarios sobre los pedidos recibidos de los proveedores, para dar retroalimentación sobre la calidad del servicio y los productos.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Registro exitoso de retroalimentación.</strong><br />Dado que el pedido ha sido entregado, <br/>cuando el administrador de restaurante proporciona una calificación válida y un comentario <br />entonces el sistema registra la retroalimentación y la asocia al pedido y proveedor correspondiente.</li> <li><strong>Escenario 2: Intento de calificación de pedido no entregado.</strong> <br />Dado que el pedido aún no ha sido marcado como entregado <br />cuando el administrador de restaurante intenta registrar una calificación <br />entonces el sistema rechaza la operación e informa que solo se pueden calificar pedidos entregados.</li> <li><strong>Escenario 3: Datos inválidos en la retroalimentación.</strong> <br />Dado que el administrador de restaurante proporciona un comentario vacío, <br />cuando intenta registrar la retroalimentación <br />entonces el sistema muestra un mensaje de error indicando los datos inválidos.</li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-13</td>
-      <td>Administrador de restaurante</td>
-      <td>Medium</td>
-      <td>EP-10</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Ver notificaciones recientes</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como administrador, quiero ver alertas importantes (productos por vencer, bajo stock, etc.),
-        para tomar acciones correctivas a tiempo.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Visualización de alertas.</li>
-          <li>Escenario 2 - Archivado de alertas revisadas.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-07</td> <td>Proveedor de restaurante</td> <td>High</td> <td>EP-06</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestionar productos en el inventario</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como proveedor, quiero gestionar la información de los productos que ofrezco a los restaurantes, para mantener mi catálogo de productos actualizado y facilitar los pedidos de mis clientes.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Visualizar listado de productos</strong><br />Dado que el proveedor ha iniciado sesión <br />cuando accede a la sección de inventario, <br />entonces el sistema muestra todos los productos que tiene registrados y que están actualmente ofrecidos.</li> <li><strong>Escenario 2: Registrar un nuevo producto.</strong> <br />Dado que el proveedor selecciona un insumo, proporciona descripción y proporciona precio unitario del producto, <br />cuando confirma el registro del nuevo producto, <br />entonces el sistema agrega el producto en el inventario.</li> <li><strong>Escenario 3: Editar un producto existente.</strong><br /> Dado que un producto ya existe en el inventario del proveedor, <br />cuando actualiza uno o más de sus datos, <br />entonces el sistema guarda los cambios y los refleja en el inventario actualizado.</li> <li><strong>Escenario 4: Eliminar un producto.</strong> <br />Dado que un producto existe en el inventario del proveedor <br />cuando el proveedor decide eliminarlo y confirma la acción, <br />entonces el sistema remueve el producto del inventario.</li> <li><strong>Escenario 5: Intento de gestión con datos incompletos o inválidos.</strong> <br />Dado que el proveedor omite uno o más campos obligatorios al crear o actualizar un producto, <br />cuando intenta completar la acción <br />entonces el sistema muestra un mensaje de error indicando que faltan datos o son incorrectos.</li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-14</td>
-      <td>Proveedor</td>
-      <td>Medium</td>
-      <td>EP-09</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Identificar a los Mejores Clientes</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como proveedor, quiero ver qué restaurantes me compran más, para poder enfocarme en mantener relaciones sólidas con ellos.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Ordenamiento por volumen de ventas: Listar restaurantes según monto total adquirido en un periodo.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-08</td> <td>Visitante</td> <td>Medium</td> <td>EP-02</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Navegación fluida entre secciones</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como visitante, quiero que cada sección del sitio esté claramente diferenciada, para comprender fácilmente la estructura del contenido y recorrerlo sin perderme.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Identificación clara de secciones.</strong><br />Dado que un visitante accede al sitio web desde cualquier dispositivo <br />cuando se desplaza por el contenido <br />entonces identifica cada sección como una unidad separada <br />y comprende el flujo natural de lectura sin necesidad de interacción adicional.</li> <li><strong>Escenario 2: Separación visual consistente de secciones.</strong><br />
+Dado que un visitante accede al sitio web desde cualquier dispositivo <br />
+cuando recorre el contenido <br />
+entonces cada sección presenta un encabezado visible y un espaciado que delimita su inicio y fin, permitiendo distinguirla sin confusiones.</li>
+</ul> </td> </tr> </tbody> </table>
 
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-09</td> <td>Administrador de restaurante</td> <td>Medium</td> <td>EP-08</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestión de receta</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como administrador de restaurante, quiero mantener actualizadas las recetas del menú según las necesidades del negocio, para asegurar que solo estén disponibles las preparaciones activas y relevantes.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Agregar una nueva receta.</strong><br />Dado que el administrador necesita incluir una nueva preparación en el menú, <br />cuando indica su nombre, ingredientes e insumos adicionales, <br />entonces el sistema registra la receta.</li> <li><strong>Escenario 2: Ajustar una receta existente.</strong> <br />Dado que una receta contiene información desactualizada o requiere cambios, <br />cuando el administrador actualiza sus detalles, <br /> entonces el sistema almacena los cambios.</li> <li><strong>Escenario 3: Retirar una receta no vigente.</strong> <br />Dado que una receta ya no forma parte del menú actual, <br /> cuando el administrador solicita su retiro,<br />entonces el sistema la remueve de sus recetas.</li> </ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-10</td> <td>Administrador de restaurante</td> <td>Medium</td> <td>EP-08</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Consultar detalles de una receta registrada</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como administrador de restaurante, quiero consultar la información detallada de una receta, para revisar los ingredientes utilizados y sus cantidades por porción.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Consulta general.</strong><br />Dado que existen recetas registradas, <br />cuando el administrador de restaurante accede a una receta específica, <br />entonces el sistema muestra el nombre porciones insumos y cantidades asociadas.</li> <li><strong>Escenario 2: Receta inexistente.</strong> <br />Dado que el administrador de restaurante busca una receta eliminada o inexistente, <br/> cuando el administrador de restaurante la busca por nombre, <br />entonces el sistema muestra un mensaje indicando que no se encontraron resultados.</li> </ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-11</td> <td>Usuario</td> <td>Low</td> <td>EP-05</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestión de perfil</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como usuario quiero actualizar mi perfil para mantener mi información al día y asegurar que sea correctamente mostrada a otros usuarios en la plataforma.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Edición de datos básicos.</strong><br />Dado que el usuario ha accedido a su sección de perfil, <br />cuando actualiza datos como nombre, correo electrónico, teléfono, dirección o descripción del negocio, <br /> entonces el sistema guarda los cambios y los refleja en su perfil.</li> <li><strong>Escenario 2: Carga de imagen de perfil o logo.</strong> <br />Dado que el usuario desea personalizar la imagen de su perfil, <br />cuando selecciona una imagen válida y la carga, <br/>entonces el sistema la almacena y la muestra correctamente en el panel de perfil.</li> <li><strong>Escenario 3: Validación de campos obligatorios.</strong> <br />Dado que el usuario está editando su perfil, <br />cuando deja campos obligatorios en blanco o introduce datos inválidos como un correo con formato incorrecto, <br />entonces el sistema muestra mensajes de error claros <br />y no permite guardar los cambios hasta que los datos sean válidos.</li> </ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-12</td> <td>Visitante</td> <td>Low</td> <td>EP-02</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Optimización para dispositivos móviles</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como visitante del sitio web que accede desde un dispositivo móvil, quiero que el contenido de inicio se ajuste adecuadamente al tamaño de pantalla, para poder leer la información sin dificultad e interactuar por el contenido de forma cómoda.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Visualización optimizada en pantallas móviles.</strong><br />Dado que el visitante accede al sitio web desde un dispositivo con resolución menor a 768px <br />cuando se carga el sitio <br />entonces el contenido debe reorganizarse en una disposición vertical con bloques apilados<br /> y los textos e imágenes deben escalarse correctamente para garantizar legibilidad <br />y evitar desbordes o desplazamiento horizontal innecesario.</li> <li><strong>Escenario 2: Navegación y gestos táctiles accesibles.</strong><br />
+Dado que el visitante navega desde un dispositivo móvil <br />
+cuando interactúa con menús, botones y campos de formulario mediante toque <br />
+entonces los objetivos táctiles tienen un tamaño adecuado, el foco es visible y no se producen superposiciones ni desplazamiento horizontal; además los formularios muestran teclados apropiados según el tipo de campo</li>
+</ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-13</td> <td>Administrador de restaurante</td> <td>Low</td> <td>EP-10</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Ver notificaciones recientes</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como administrador, quiero ver notificaciones importantes (productos por vencer, bajo stock, etc.), para tomar acciones correctivas a tiempo.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Visualización de notificaciones.</strong><br />Dado que el administrador accede al panel de control, <br />cuando el sistema detecta productos por vencer o con bajo stock<br /> entonces se muestran notificaciones clasificadas por tipo (vencimiento, stock, etc.).</li> <li><strong>Escenario 2: Filtro de notificaciones por tipo</strong> <br />Dado que el administrador accede a la sección de notificaciones, <br />cuando selecciona un panel de un tipo de notificaciones, <br />entonces el sistema muestra únicamente las notificaciones de ese tipo.</li> </ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-14</td> <td>Usuario o visitante</td> <td>Low</td> <td>EP-02</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Optimización para pantallas de tablet</td> </tr> <tr> <td colspan="4" align="left"><strong>Description</strong><br/> Como usuario o visitante que accede desde una tablet u otro dispositivo con pantalla intermedia, quiero que el contenido de la plataforma se reorganice para ese formato,, para acceder a las funcionalidades sin esfuerzo adicional y con la información claramente presentada.</td> </tr> <tr> <td colspan="4" align="left"><strong>Acceptance Criteria</strong> <ul> <li><strong>Escenario 1: Visualización optimizada en pantallas intermedias.</strong><br />Dado que el usuario o visitante accede a la plataforma desde un dispositivo con resolución entre 768px y 1024px <br />cuando se carga la interfaz principal <br />entonces el contenido debe presentarse con una estructura ajustada a ese ancho <br />y la información clave debe estar organizada de forma que sea legible <br />y accesible sin acciones adicionales</li> <li><strong>Escenario 2: Disposición y componentes adaptados a pantallas intermedias.</strong><br />
+Dado que el usuario o visitante accede desde un dispositivo con resolución entre 768px y 1024px <br />
+cuando visualiza listados, tarjetas o formularios <br />
+entonces el contenido se organiza en dos columnas con espaciado adecuado, los formularios se muestran en una sola columna con agrupación clara de campos y no se produce desplazamiento horizontal</li>
+ </ul> </td> </tr> </tbody> </table>
 
 <table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
   <thead>
@@ -2567,7 +2337,6 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
     </tr>
   </tbody>
 </table>
-
 
 ## 3.2 Impact Mapping
 
