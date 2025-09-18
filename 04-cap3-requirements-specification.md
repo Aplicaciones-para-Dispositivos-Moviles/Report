@@ -1150,203 +1150,29 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
   </tbody>
 </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-05</td>
-      <td>Administrador de restaurante</td>
-      <td>High</td>
-      <td>EP-10</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Gestión integral de notificaciones de inventario</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como administrador de restaurante, quiero recibir notificaciones automáticas por vencimiento próximo, exceso o escasez de stock en los insumos,
-        para tomar decisiones logísticas y oportunas, y evitar pérdidas, desperdicios o quiebres de stock.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Notificación por vencimiento próximo.</li>
-          <li>Escenario 2 - Notificación automática por vencimiento.</li>
-          <li>Escenario 3 - Notificación por exceso de stock.</li>
-          <li>Escenario 4 - Notificación por bajo stock.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-03</td> <td>Usuario</td> <td>—</td> <td>EP-04</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Soporte de acceso según estado de suscripción</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como usuario, quiero que mi acceso al sistema esté condicionado al estado activo de mi suscripción, para garantizar que solo pueda utilizar todas las funcionalidades mientras mi plan esté vigente. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Acceso completo con suscripción activa<br/> Dado que el usuario posee una suscripción vigente,<br/> cuando inicia sesión en la plataforma,<br/> entonces el sistema permite el uso completo de las funcionalidades habilitadas por su plan. </li> <li> Escenario 2: Acceso restringido con suscripción inactiva<br/> Dado que el usuario tiene una suscripción vencida o inactiva,<br/> cuando intenta acceder a funcionalidades del sistema,<br/> entonces el sistema restringe su acceso y muestra un mensaje que informa sobre el estado de la suscripción. </li> <li> Escenario 3: Acceso denegado a funcionalidades exclusivas<br/> Dado que el usuario no posee una suscripción activa,<br/> cuando intenta utilizar una funcionalidad reservada para suscriptores,<br/> entonces el sistema bloquea el acceso a dicha funcionalidad y ofrece la opción de renovar o actualizar su plan. </li> <li> Escenario 4: Restauración del acceso tras renovación<br/> Dado que el usuario ha renovado su suscripción de forma exitosa,<br/> cuando vuelve a ingresar al sistema,<br/> entonces el sistema actualiza su estado y permite nuevamente el uso de todas las funcionalidades correspondientes a su plan. </li> </ul> </td> </tr> </tbody> </table>
 
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-04</td> <td>Visitante del sitio web</td> <td>—</td> <td>EP-06</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestión manual de stock e insumos</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como visitante del sitio web, quiero acceder fácilmente a información sobre redes sociales, contacto y aspectos legales, para obtener soporte o informarme sobre las condiciones de uso de la plataforma. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Registro manual de stock<br/> Dado que el administrador de restaurante se encuentra en la sección de inventario,<br/> cuando agrega un insumo al catalogo de insumos registra el tipo de insumo,<br/> así como el stock mínimo y máximo,<br/> entonces el sistema actualiza el inventario y muestra un mensaje de éxito. </li> <li> Escenario 2: Registro manual de stock<br/> Dado que el administrador de restaurante está en la sección de inventario,<br/> cuando agrega un insumo del catálogo registra el stock actual y la fecha de expiración si es perecible,<br/> entonces el sistema actualiza el inventario y muestra un mensaje de éxito. </li> <li> Escenario 3: Validación de datos de stock<br/> Dado que el administrador ingresa datos para el stock,<br/> cuando los datos son negativos o no numéricos,<br/> entonces el sistema muestra un mensaje de error y evita la actualización. </li> <li> Escenario 4: Descuento manual de stock<br/> Dado que el administrador identifica un insumo para descontar del stock del inventario,<br/> cuando registra una cantidad válida para descuento,<br/> entonces el sistema actualiza el stock y confirma la operación. </li> <li> Escenario 5: Advertencia por descuento excesivo<br/> Dado que el administrador ingresa una cantidad de descuento de stock mayor al stock actual,<br/> cuando intenta guardar el descuento,<br/> entonces el sistema muestra una advertencia y solicita confirmación antes de proceder. </li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-09</td>
-      <td>Administrador de restaurante</td>
-      <td>High</td>
-      <td>EP-08</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Gestión de receta</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como administrador de restaurante, quiero mantener actualizadas las recetas del menú según las necesidades del negocio,
-        para asegurar que solo estén disponibles las preparaciones activas y relevantes.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Agregar nueva receta: Registrar nombre, ingredientes y valor de venta.</li>
-          <li>Escenario 2 - Ajustar receta existente: Actualizar detalles y reflejar cambios.</li>
-          <li>Escenario 3 - Retirar receta no vigente: Eliminarla de las activas conservando trazabilidad histórica.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-05</td> <td>Administrador de restaurante</td> <td>—</td> <td>EP-10</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestión integral de notificaciones de inventario</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como administrador de restaurante, quiero recibir notificaciones automáticas por vencimiento próximo, exceso o escasez de stock en los insumos, para tomar decisiones logísticas y oportunas, y evitar pérdidas, desperdicios o quiebres de stock. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Notificación del sistema por vencimiento próximo<br/> Dado que un insumo tiene una fecha de vencimiento registrada<br/> cuando faltan 5 días o menos para su vencimiento<br/> entonces el sistema marca el insumo en la lista de inventario. </li> <li> Escenario 2: Notificación automática por vencimiento<br/> Dado que existen insumos en el inventario<br/> cuando el sistema detecta insumos con vencimiento próximo<br/> entonces envía una notificación al administrador de restaurante. </li> <li> Escenario 3: Notificación del sistema por exceso de stock<br/> Dado que un insumo tiene definido un stock máximo permitido<br/> cuando el stock actual es igual o mayor a ese valor<br/> entonces el sistema resalta el insumo como excedente en el listado de inventario. </li> <li> Escenario 4: Notificación del sistema por bajo stock<br/> Dado que un insumo tiene un stock mínimo de referencia<br/> cuando el stock actual es menor o igual al mínimo establecido<br/> entonces el sistema resalta el insumo como escaso en el listado de inventario. </li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-10</td>
-      <td>Administrador de restaurante</td>
-      <td>Medium</td>
-      <td>EP-08</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Consultar detalles de una receta registrada</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como administrador de restaurante, quiero consultar la información detallada de una receta,
-        para revisar los ingredientes utilizados y sus cantidades por porción.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Consulta general: Mostrar nombre, porciones, insumos y cantidades.</li>
-          <li>Escenario 2 - Receta inexistente: Mostrar mensaje de error si no se encuentra.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-06</td> <td>Administrador de restaurante</td> <td>—</td> <td>EP-12</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Enviar comentarios y calificaciones sobre pedidos</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como administrador de restaurante, quiero calificar y dejar comentarios sobre los pedidos recibidos de los proveedores, para dar retroalimentación sobre la calidad del servicio y los productos. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Registro exitoso de retroalimentación<br/> Dado que el pedido ha sido entregado<br/> cuando el administrador de restaurante proporciona una calificación válida y un comentario<br/> entonces el sistema registra la retroalimentación y la asocia al pedido y proveedor correspondiente. </li> <li> Escenario 2: Intento de calificación de pedido no entregado<br/> Dado que el pedido aún no ha sido marcado como entregado<br/> cuando el administrador de restaurante intenta registrar una calificación<br/> entonces el sistema rechaza la operación e informa que solo se pueden calificar pedidos entregados. </li> <li> Escenario 3: Datos inválidos en la retroalimentación<br/> Dado que el administrador de restaurante proporciona una calificación fuera del rango permitido o un comentario vacío<br/> cuando intenta registrar la retroalimentación<br/> entonces el sistema muestra un mensaje de error indicando los datos inválidos. </li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-13</td>
-      <td>Administrador de restaurante</td>
-      <td>Medium</td>
-      <td>EP-10</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Ver notificaciones recientes</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como administrador, quiero ver alertas importantes (productos por vencer, bajo stock, etc.),
-        para tomar acciones correctivas a tiempo.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Visualización de alertas.</li>
-          <li>Escenario 2 - Archivado de alertas revisadas.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-07</td> <td>Proveedor</td> <td>—</td> <td>EP-06</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestionar productos en el inventario</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como proveedor, quiero gestionar la información de los productos que ofrezco a los restaurantes, para mantener mi catálogo de productos actualizado y facilitar los pedidos de mis clientes. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Visualizar listado de productos<br/> Dado que el proveedor ha iniciado sesión<br/> cuando accede a la sección de productos<br/> entonces el sistema muestra todos los productos que tiene registrados y que están actualmente ofrecidos. </li> <li> Escenario 2: Registrar un nuevo producto<br/> Dado que el proveedor proporciona nombre, descripción, categoría y precio unitario del producto<br/> cuando confirma el registro del nuevo producto y lo agrega a su inventario<br/> entonces el sistema añade el producto al catálogo y lo hace visible para los restaurantes asociados. </li> <li> Escenario 3: Editar un producto existente<br/> Dado que un producto ya existe en el inventario del proveedor<br/> cuando actualiza uno o más de sus atributos<br/> entonces el sistema guarda los cambios y los refleja en el inventario actualizado. </li> <li> Escenario 4: Eliminar un producto<br/> Dado que un producto existe en el inventario del proveedor<br/> cuando el proveedor decide eliminarlo y confirma la acción<br/> entonces el sistema remueve el producto y deja de mostrarlo a los restaurantes asociados. </li> <li> Escenario 5: Desactivar un producto temporalmente<br/> Dado que un producto no está disponible<br/> cuando el proveedor cambia su estado a inactivo<br/> entonces el sistema oculta el producto y deja de mostrarlo a los restaurantes. </li> <li> Escenario 6: Reactivar un producto<br/> Dado que un producto inactivo vuelve a estar disponible<br/> cuando el proveedor cambia su estado a activo<br/> entonces el sistema muestra nuevamente el producto en el catálogo disponible para los restaurantes. </li> <li> Escenario 7: Intento de gestión con datos incompletos o inválidos<br/> Dado que el proveedor omite uno o más campos obligatorios o ingresa datos inválidos al crear o actualizar un producto<br/> cuando intenta completar la acción<br/> entonces el sistema muestra un mensaje de error indicando qué datos faltan o son incorrectos. </li> </ul> </td> </tr> </tbody> </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>US-14</td>
-      <td>Proveedor</td>
-      <td>Medium</td>
-      <td>EP-09</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Identificar a los Mejores Clientes</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como proveedor, quiero ver qué restaurantes me compran más, para poder enfocarme en mantener relaciones sólidas con ellos.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Ordenamiento por volumen de ventas: Listar restaurantes según monto total adquirido en un periodo.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-08</td> <td>Administrador de restaurante</td> <td>—</td> <td>EP-16</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestión de Proveedores</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como administrador de restaurante, quiero seleccionar proveedores disponibles en la plataforma y guardarlos en mi lista personal, para acceder fácilmente a su información cuando necesite realizar pedidos. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Agregar nuevo proveedor<br/> Dado que el administrador de restaurante accede a la sección de proveedores<br/> cuando ingresa el nombre del proveedor que busca lo selecciona y lo confirma<br/> entonces el sistema guarda al proveedor y lo incluye en su lista de proveedores. </li> <li> Escenario 2: Visualizar lista de proveedores<br/> Dado que existen proveedores registrados<br/> cuando el administrador de restaurante accede a la sección de proveedores<br/> entonces el sistema muestra la lista con nombre contacto y estado de cada proveedor. </li> <li> Escenario 4: Eliminar proveedor<br/> Dado que el administrador desea eliminar un proveedor de su lista<br/> cuando confirma la eliminación<br/> entonces el sistema elimina al proveedor y se actualiza la lista de proveedores. </li> <li> Escenario 5: Búsqueda por nombre<br/> Dado que hay múltiples proveedores registrados<br/> cuando el administrador ingresa un nombre parcial o completo en la búsqueda<br/> entonces el sistema actualiza la lista mostrando solo los proveedores cuyo nombre coincide. </li> <li> Escenario 6: Filtrado por categoría<br/> Dado que existen proveedores con diferentes categorías<br/> cuando el administrador selecciona una categoría para filtrar<br/> entonces el sistema muestra solo los proveedores que coinciden con esa categoría. </li> <li> Escenario 7: Combinación de filtros<br/> Dado que el administrador aplica múltiples criterios de búsqueda<br/> cuando utiliza nombre y categoría simultáneamente<br/> entonces el sistema muestra solo los proveedores que cumplen con todos los criterios aplicados. </li> </ul> </td> </tr> </tbody> </table>
 
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-09</td> <td>Administrador de restaurante</td> <td>—</td> <td>EP-08</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestión de receta</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como administrador de restaurante, quiero mantener actualizadas las recetas del menú según las necesidades del negocio, para asegurar que solo estén disponibles las preparaciones activas y relevantes. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Agregar una nueva receta<br/> Dado que el administrador necesita incluir una nueva preparación en el menú<br/> cuando indica su nombre, ingredientes y valor de venta<br/> entonces el sistema registra la preparación como receta activa<br/> y la hace disponible para futuras operaciones del restaurante. </li> <li> Escenario 2: Ajustar una receta existente<br/> Dado que una receta contiene información desactualizada o requiere cambios<br/> cuando el administrador actualiza sus detalles<br/> entonces el sistema almacena los cambios y asegura que se reflejen en las funciones que dependen de esa receta. </li> <li> Escenario 3: Retirar una receta no vigente<br/> Dado que una receta ya no forma parte del menú actual y no está vinculada a operaciones recientes<br/> cuando el administrador solicita su retiro<br/> entonces el sistema la remueve de las recetas activas y conserva la trazabilidad histórica correspondiente. </li> </ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-10</td> <td>Administrador de restaurante</td> <td>—</td> <td>EP-08</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Consultar detalles de una receta registrada</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como administrador de restaurante, quiero consultar la información detallada de una receta, para revisar los ingredientes utilizados y sus cantidades por porción. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Consulta general<br/> Dado que existen recetas registradas<br/> cuando el administrador de restaurante accede a una receta específica<br/> entonces el sistema muestra el nombre porciones insumos y cantidades asociadas. </li> <li> Escenario 2: Receta inexistente<br/> Dado que se intenta acceder a una receta eliminada o inexistente<br/> cuando el administrador de restaurante la consulta por ID o nombre<br/> entonces el sistema muestra un mensaje indicando que no se encuentra disponible. </li> </ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-11</td> <td>Usuario</td> <td>—</td> <td>EP-05</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Gestión de perfil</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como usuario quiero actualizar mi perfil para mantener mi información al día y asegurar que sea correctamente mostrada a otros usuarios en la plataforma. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Edición de datos básicos<br/> Dado que el usuario ha accedido a su sección de perfil<br/> cuando actualiza datos como nombre correo electrónico teléfono dirección o descripción del negocio<br/> entonces el sistema guarda los cambios y los refleja en su perfil. </li> <li> Escenario 2: Subida de imagen de perfil o logo<br/> Dado que el usuario desea personalizar la imagen de su perfil<br/> cuando selecciona una imagen válida y la carga<br/> entonces el sistema la almacena y la muestra correctamente en el panel de perfil. </li> <li> Escenario 3: Validación de campos obligatorios<br/> Dado que el usuario está editando su perfil<br/> cuando deja campos obligatorios en blanco o introduce datos inválidos (por ejemplo un correo con formato incorrecto)<br/> entonces el sistema muestra mensajes de error claros y no permite guardar los cambios hasta que los datos sean válidos. </li> </ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-12</td> <td>Administrador de restaurante</td> <td>—</td> <td>EP-02</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Visualizar ingredientes más usados</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como administrador, quiero ver los ingredientes más usados durante un período definido (semana, mes), para entender el consumo frecuente y anticipar reposiciones. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Visualización de ingredientes frecuentes<br/> Dado que el administrador de restaurante ha ingresado al dashboard<br/> cuando selecciona un período de análisis (por ejemplo, “últimos 7 días”)<br/> entonces el sistema muestra los ingredientes más utilizados durante ese período. </li> <li> Escenario 2: Cambio de período<br/> Dado que el administrador de restaurante visualiza los ingredientes más usados<br/> cuando cambia el período de análisis a otro (por ejemplo, “último mes”)<br/> entonces el sistema actualiza la información mostrada con los datos correspondientes. </li> </ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-13</td> <td>Administrador</td> <td>—</td> <td>EP-10</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Ver notificaciones recientes</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como administrador, quiero ver alertas importantes (productos por vencer, bajo stock, etc.), para tomar acciones correctivas a tiempo. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Visualización de alertas<br/> Dado que el administrador accede al panel de control<br/> cuando el sistema detecta productos por vencer o con bajo stock<br/> entonces se muestran alertas clasificadas por tipo (vencimiento, stock, etc.). </li> <li> Escenario 2: Archivado de alertas<br/> Dado que una alerta ha sido revisada por el administrador<br/> cuando esta se marca como revisada<br/> entonces desaparece del panel principal y se almacena en un historial de alertas. </li> </ul> </td> </tr> </tbody> </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;"> <thead> <tr> <th>Story ID</th> <th>User</th> <th>Priority</th> <th>Epic</th> </tr> <tr> <td>US-14</td> <td>Proveedor</td> <td>—</td> <td>EP-09</td> </tr> </thead> <tbody> <tr> <td><strong>Title</strong></td> <td colspan="3">Identificar a los Mejores Clientes</td> </tr> <tr> <td colspan="4" align="left"> <strong>Description</strong><br/> Como proveedor, quiero ver qué restaurantes me compran más, para poder enfocarme en mantener relaciones sólidas con ellos. </td> </tr> <tr> <td colspan="4" align="left"> <strong>Acceptance Criteria</strong> <ul> <li> Escenario 1: Ordenamiento de clientes por volumen de ventas<br/> Dado que el proveedor solicita información sobre sus mejores clientes,<br/> cuando define un rango de fechas válido,<br/> entonces el sistema presenta una lista ordenada de restaurantes según el monto total adquirido durante ese periodo. </li> </ul> </td> </tr> </tbody> </table>
 
 <table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
   <thead>
@@ -2567,7 +2393,6 @@ Para el presente proyecto, se definieron historias de usuario a partir de las ep
     </tr>
   </tbody>
 </table>
-
 
 ## 3.2 Impact Mapping
 
