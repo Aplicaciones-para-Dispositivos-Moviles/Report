@@ -1608,43 +1608,6 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
   </tbody>
 </table>
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>TS008</td>
-      <td>Desarrollador</td>
-      <td>High</td>
-      <td>EP-08</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Crear recetas mediante API RESTful</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como desarrollador, quiero crear una receta mediante un API REST, para registrar nuevas recetas y permitir su integración con el módulo de gestión de platos e inventario.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Creación exitosa: Retorna ID único de la receta creada.</li>
-          <li>Escenario 2 - Datos inválidos: Responde con error detallando campos inválidos.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
   <thead>
@@ -1655,29 +1618,28 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS009</td>
+      <td>TS-01</td>
       <td>Desarrollador</td>
       <td>Medium</td>
-      <td>EP-08</td>
+      <td>EP-03</td>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Title</strong></td>
-      <td colspan="3">Consultar recetas mediante API RESTful</td>
+      <td colspan="3">Registro y autenticación de usuarios mediante API RESTful	</td>
     </tr>
     <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como desarrollador, quiero consultar recetas mediante una API REST, para obtener la lista completa de recetas y facilitar su visualización o integración con otros módulos.
-      </td>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero enviar enlaces de recuperación de contraseña a través del servicio de correo Resend, para que los usuarios puedan restablecer su contraseña de forma segura desde la aplicación web.</td>
     </tr>
     <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
         <ul>
-          <li>Escenario 1 - Consulta exitosa: Retorna arreglo JSON con recetas.</li>
-          <li>Escenario 2 - Sin resultados: Retorna arreglo vacío.</li>
+          <li><strong>Escenario 1 - Solicitud de recuperación exitosa:</strong> Dado que el endpoint /api/v1/auth/forgot-password está disponible Y existe un usuario registrado con el correo proporcionado Cuando se envía una solicitud POST con un email válido Entonces el sistema responde con estado 200 OK Y se envía un correo electrónico con un enlace único de recuperación Y el enlace contiene un token de restablecimiento con expiración temporal</li>
+          <li><strong>Escenario 2 - Correo no registrado:</strong> Dado que el endpoint /api/v1/auth/forgot-password está disponible Y el correo enviado no pertenece a ningún usuario registrado Cuando se envía la solicitud POST con ese email Entonces el sistema responde con estado 404 Not Found Y se incluye un mensaje indicando que el correo no está asociado a ninguna cuenta</li>
+          <li><strong>Escenario 3 - Campo de email faltante o inválido:</strong> Dado que se envía una solicitud POST sin el campo email o con un formato inválido Cuando el sistema intenta procesarla Entonces responde con estado 422 Unprocessable Entity Y se incluye un mensaje de error describiendo la validación fallida</li>
+           <li><strong>Escenario 4 - Falla al enviar el correo con Resend:</strong> Dado que se envía una solicitud POST sin el campo email o con un formato inválido Cuando el sistema intenta procesarla Entonces responde con estado 422 Unprocessable Entity Y se incluye un mensaje de error describiendo la validación fallida</li>
         </ul>
       </td>
     </tr>
@@ -1693,29 +1655,26 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS010</td>
+      <td>TS-02</td>
       <td>Desarrollador</td>
       <td>Medium</td>
-      <td>EP-08</td>
+      <td>EP-04</td>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Title</strong></td>
-      <td colspan="3">Actualizar recetas mediante API RESTful</td>
+      <td colspan="3">Gestión del estado de suscripción mediante API RESTful</td>
     </tr>
     <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como desarrollador, quiero actualizar recetas mediante una API REST, para corregir o ajustar ingredientes y otros detalles relevantes de recetas existentes.
-      </td>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero consultar el estado de suscripción de un usuario mediante una API, para que el sistema pueda determinar su nivel de acceso según su vigencia y ofrecer opciones de renovación.</td>
     </tr>
     <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
         <ul>
-          <li>Escenario 1 - Actualización exitosa: Retorna receta actualizada.</li>
-          <li>Escenario 2 - Error de validación: Mensaje con campos inválidos.</li>
+          <li><strong>Escenario 1: Obtener estado actual de suscripción:</strong> Dado que el endpoint /api/v1/subscription/status/:id está disponible Y el usuario está autenticado correctamente Cuando se realiza una solicitud GET Entonces el sistema responde con estado 200 OK Y retorna un objeto JSON con el estado de la suscripción: active, expired, expiring_soon o none, Y también incluye campos como start_date, end_date y days_remaining si aplica</li>
+          <li><strong>Escenario 2: Renovación de suscripción:</strong> Dado que el endpoint /api/v1/subscription/renew está disponible Y el usuario tiene una suscripción expired o expiring_soon Cuando se envía una solicitud POST con los datos de pago o plan Entonces el sistema responde con estado 200 OK Y la suscripción se reactiva con una nueva start_date y end_date</li>
         </ul>
       </td>
     </tr>
@@ -1731,45 +1690,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS011</td>
-      <td>Desarrollador</td>
-      <td>Low</td>
-      <td>EP-08</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Title</strong></td>
-      <td colspan="3">Eliminar receta mediante API RESTful</td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como desarrollador, quiero eliminar una receta mediante una API REST, para borrar recetas obsoletas o creadas por error.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
-        <ul>
-          <li>Escenario 1 - Eliminación exitosa: Retorna 204 No Content.</li>
-          <li>Escenario 2 - Receta inexistente: Retorna 404 con mensaje de error.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
-  <thead>
-    <tr>
-      <th>Story ID</th>
-      <th>User</th>
-      <th>Priority</th>
-      <th>Epic</th>
-    </tr>
-    <tr>
-      <td>TS003</td>
+      <td>TS-03</td>
       <td>Desarrollador</td>
       <td>High</td>
       <td>EP-10</td>
@@ -1778,21 +1699,17 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
   <tbody>
     <tr>
       <td><strong>Title</strong></td>
-      <td colspan="3">Sistema de notificaciones de inventario mediante API RESTful y One Signal</td>
+      <td colspan="3">Sistema de notificaciones de inventario mediante API RESTful Y One Signal</td>
     </tr>
     <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como desarrollador, quiero integrar notificaciones de inventario (vencimiento próximo y exceso de stock) con OneSignal,
-        para que los administradores reciban alertas automáticas en sus dispositivos.
-      </td>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero integrar los endpoints de notificaciones de inventario (vencimiento próximo y exceso de stock) con OneSignal, para que los administradores de restaurante reciban notificaciones automáticas en sus dispositivos y puedan actuar de inmediato.</td>
     </tr>
     <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
         <ul>
-          <li>Escenario 1 - Consultar insumos con vencimiento próximo.</li>
-          <li>Escenario 2 - Consultar insumos con exceso de stock.</li>
+          <li><strong>Escenario: Obtener insumos con vencimiento próximo:</strong> Dado que el endpoint /api/v1/notifications/expiring-supplies está disponible, cuando se hace una solicitud GET, entonces se recibe una lista JSON de insumos con vencimiento en 5 días o menos, incluyendo nombre, fecha de vencimiento y días restantes.</li>
+          <li><strong>Escenario: Obtener insumos con exceso de stock:</strong> Dado que el endpoint /api/v1/notifications/exceeding-stock está disponible, cuando se hace una solicitud GET, entonces se recibe una lista JSON de insumos que superan su stock máximo, incluyendo nombre, stock actual y stock máximo permitido.</li>
         </ul>
       </td>
     </tr>
@@ -1808,7 +1725,123 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS007</td>
+      <td>TS-04</td>
+      <td>Desarrollador</td>
+      <td>High</td>
+      <td>EP-16</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestión de proveedores mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero gestionar proveedores (crear, editar, eliminar, buscar y filtrar) mediante una API REST, para que pueda construir funcionalidades de gestión de proveedores en la aplicación del administrador de restaurante.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario: Agregar nuevo proveedor:</strong> Dado que el endpoint /api/v1/proveedores está disponible, cuando se envía una solicitud POST con datos válidos (nombre, contacto, tipo de insumo), entonces se recibe una respuesta 201 con el proveedor creado.</li>
+          <li><strong>Escenario: Visualizar lista de proveedores:</strong> Dado que el endpoint /api/v1/proveedores está disponible, cuando se hace una solicitud GET, entonces se recibe una lista JSON con nombre, contacto y estado de cada proveedor.</li>
+          <li><strong>Escenario: Editar información de proveedor:</strong> Dado que el endpoint /api/v1/proveedores/{id} está disponible, cuando se envía una solicitud PUT con nueva información, entonces el sistema actualiza los datos y devuelve el proveedor actualizado.</li>
+          <li><strong>Escenario: Eliminar proveedor:</strong> Dado que el endpoint /api/v1/proveedores/{id} está disponible, cuando se envía una solicitud DELETE y se confirma la operación, entonces el proveedor es eliminado y se recibe una respuesta 204.</li>
+          <li><strong>Escenario: Búsqueda por nombre:</strong> Dado que el endpoint /api/v1/proveedores?nombre=valor está disponible, cuando se envía un parámetro de búsqueda por nombre, entonces la respuesta incluye solo proveedores cuyo nombre coincide parcial o totalmente.</li>
+          <li><strong>Escenario: Filtrado por estado:</strong> Dado que existen proveedores con estados distintos, cuando se usa el parámetro estado=activo inactivo, entonces la lista devuelta corresponde a proveedores en ese estado.</li>
+          <li><strong>Escenario: Combinación de filtros:</strong> Dado que se usa una consulta como /api/v1/proveedores?nombre=agua&estado=activo, cuando se hace la solicitud, entonces solo se retornan proveedores activos cuyo nombre coincide.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS-05</td>
+      <td>Desarrollador</td>
+      <td>High</td>
+      <td>EP-06</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestionar insumos mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero gestionar productos (listar, crear, actualizar, eliminar, activar y desactivar) a través de una API REST, para  o en la plataforma.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario: Visualizar listado de productos:</strong> Dado que el endpoint /api/v1/supplies está disponible, cuando se hace una solicitud GET con el token del proveedor, entonces se recibe una lista JSON con todos los productos registrados.</li>
+          <li><strong>Escenario: Registrar un nuevo producto:</strong> Dado que el endpoint /api/v1/supplies está disponible, cuando se envía una solicitud POST con name, description, category y price, entonces se recibe una respuesta 201 y el producto es creado con un ID único y visible en el catálogo del proveedor.</li>
+          <li><strong>Escenario: Editar un producto existente:</strong> Dado que el endpoint /api/v1/supplies/{id} está disponible, cuando se envía una solicitud PUT con nuevos valores para uno o más atributos, entonces se recibe una respuesta 200 y el producto es actualizado correctamente.</li>
+          <li><strong>Escenario: Eliminar un producto:</strong> Dado que el endpoint /api/v1/supplies/{id} está disponible, cuando se envía una solicitud DELETE con un producto válido, entonces se recibe una respuesta 204 y el producto deja de estar disponible para los restaurantes.</li>
+          <li><strong>Escenario: Desactivar un producto temporalmente:</strong> Dado que el endpoint /api/v1/supplies/{id}/estado está disponible, cuando se envía una solicitud PATCH con el estado "inactivo", entonces el sistema actualiza el estado y deja de mostrar el producto en el catálogo.</li>
+          <li><strong>Escenario: Reactivar un producto:</strong> Dado que el producto está inactivo, cuando se envía una solicitud PATCH a /api/v1/supplies/{id}/status con estado "active", entonces el producto vuelve a mostrarse en el catálogo disponible.</li>
+          <li><strong>Escenario: Gestión con datos incompletos o inválidos:</strong> Dado que el endpoint /api/v1/supplies está disponible, cuando se envía una solicitud POST o PUT con datos faltantes o inválidos, entonces se recibe una respuesta 400 o 422 Y un mensaje de error detallado en el cuerpo de la respuesta.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS-06</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-12</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Registrar comentarios y calificaciones sobre pedidos mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero registrar comentarios y calificaciones sobre pedidos mediante una API REST, para que pueda construir funcionalidades que permitan a los administradores de restaurante dejar retroalimentación útil sobre los proveedores.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario: Registro exitoso de retroalimentación:</strong> Dado que el endpoint /api/v1/feedback está disponible, cuando se envía una solicitud POST con un pedidoId, calificación válida y comentario, entonces se recibe una respuesta con estado 201 y el cuerpo contiene la retroalimentación registrada con su respectivo ID, pedido asociado y proveedor correspondiente.</li>
+          <li><strong>Escenario: Intento de calificación de pedido no entregado:</strong> Dado que el endpoint /api/v1/feedback está disponible, cuando se envía una solicitud POST con pedidoId no entregado, entonces se recibe una respuesta con estado 400 y el cuerpo contiene el mensaje: "No se puede registrar calificación: el pedido aún no ha sido entregado."</li>
+          <li><strong>Escenario: Datos inválidos en la retroalimentación:</strong> Dado que el endpoint /api/v1/feedback está disponible, cuando se envía una solicitud POST con una calificación fuera del rango permitido o un comentario vacío, entonces se recibe una respuesta con estado 422 y el cuerpo contiene un mensaje de error indicando los campos inválidos.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS-07</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-10</td>
@@ -1820,20 +1853,16 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <td colspan="3">Registro histórico de eventos críticos de insumos</td>
     </tr>
     <tr>
-      <td colspan="4" align="left">
-        <strong>Description</strong><br/>
-        Como desarrollador, quiero registrar automáticamente eventos críticos (vencimiento, bajo stock, sobre stock) en un historial,
-        para que el administrador pueda auditar problemas con insumos.
-      </td>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero implementar un sistema de registro automático de eventos críticos (vencimientos, bajo stock, sobre stock) en una colección de historial, para que el administrador de restaurante pueda auditar cuándo y por qué ocurrieron problemas con insumos.</td>
     </tr>
     <tr>
-      <td colspan="4" align="left">
-        <strong>Acceptance Criteria</strong>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
         <ul>
-          <li>Escenario 1 - Registro de vencimiento próximo.</li>
-          <li>Escenario 2 - Registro de exceso de stock.</li>
-          <li>Escenario 3 - Registro de bajo stock.</li>
-          <li>Escenario 4 - Consulta de historial filtrable.</li>
+          <li><strong>Escenario: Registro de vencimiento próximo:</strong> Dado que un insumo se encuentra a 5 días o menos de su fecha de vencimiento, cuando se detecta esta condición en el proceso automático, entonces se guarda un evento en la colección supply_event_logs con el tipo "EXPIRATION_SOON" y los datos del insumo afectado.</li>
+          <li><strong>Escenario: Registro de exceso de stock:</strong> Dado que el stock actual supera el stock máximo, cuando se detecta esta condición, entonces se guarda un evento "OVERSTOCKED" con los valores relevantes en supply_event_logs.</li>
+          <li><strong>Escenario: Registro de bajo stock:</strong> Dado que el stock actual está por debajo del stock mínimo, cuando se detecta esta condición, entonces se guarda un evento "LOW_STOCK" con los valores relevantes en supply_event_logs.</li>
+          <li><strong>Escenario: Consulta del historial de eventos:</strong> Dado que el endpoint /api/v1/supplies/events permite consultar registros, cuando se hace una petición GET, entonces se devuelve una lista paginada de eventos filtrables por fecha, tipo y código de insumo.</li>
         </ul>
       </td>
     </tr>
@@ -1849,7 +1878,254 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS016</td>
+      <td>TS-08</td>
+      <td>Desarrollador</td>
+      <td>High</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Crear recetas mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero crear una receta mediante un API REST, para registrar nuevas recetas y permitir su integración con el módulo de gestión de platos e inventario.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Creación exitosa de una receta:</strong> Dado que se recibe una solicitud POST con nombre y lista de ingredientes válidos Cuando se envía la solicitud al recurso /api/v1/recipes Entonces el sistema responde con estado 201 Created Y retorna en el cuerpo de la respuesta el identificador único de la receta creada.</li>
+          <li><strong>Escenario 2: Solicitud rechazada por datos inválidos:</strong> Dado que se recibe una solicitud POST con información faltante o inválida Cuando se intenta registrar una receta mediante el recurso /api/v1/recipes Entonces el sistema responde con estado 422 Unprocessable Entity Y retorna en el cuerpo de la respuesta un mensaje de error detallando los campos inválidos o ausentes.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS-09</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Consultar recetas mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero consultar recetas mediante una API REST, para permitir la obtención de la lista completa de recetas registradas y facilitar su visualización o integración con otros módulos del sistema.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Consulta exitosa de recetas registradas:</strong> Dado que existen recetas previamente registradas en el sistema Cuando se envía una solicitud GET al recurso /api/v1/recipes Entonces el sistema responde con estado 200 OK Y retorna en el cuerpo de la respuesta un arreglo JSON con los datos de las recetas registradas.</li>
+          <li><strong>Escenario 2: Consulta sin resultados:</strong> Dado que no existen recetas registradas en el sistema Cuando se envía una solicitud GET al recurso /api/v1/recipes Entonces el sistema responde con estado 200 OK Y retorna en el cuerpo de la respuesta un arreglo JSON vacío.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS-10</td>
+      <td>Desarrollador</td>
+      <td>Medium</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Actualizar recetas mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero actualizar recetas mediante una API REST, para permitir la actualización de recetas existentes, corrigiendo o ajustando sus ingredientes y otros detalles relevantes.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Actualización exitosa de receta existente:</strong> Dado que existe una receta registrada con identificador 10 Cuando se envía una solicitud PUT al recurso /api/v1/recipes/10 con datos válidos, incluyendo una nueva lista de ingredientes Entonces el sistema actualiza la receta correspondiente Y responde con estado 200 OK Y retorna en el cuerpo de la respuesta la receta actualizada o un mensaje confirmando la modificación.</li>
+          <li><strong>Escenario 2: Solicitud rechazada por errores de validación:</strong> Dado que se prepara una solicitud PUT con datos incompletos o inválidos Cuando se intenta actualizar la receta con identificador 10 mediante el recurso /api/v1/recipes/10 Entonces el sistema responde con estado 422 Unprocessable Entity Y retorna un mensaje de error detallando los campos que no cumplen con las reglas de validación.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS-11</td>
+      <td>Desarrollador</td>
+      <td>Low</td>
+      <td>EP-08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Eliminar una receta mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero eliminar una receta mediante una API REST, para permitir la eliminación de recetas que ya no se utilizan o fueron creadas por error.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Eliminación exitosa de receta existente:</strong> Dado que existe una receta registrada con identificador 7 Cuando se envía una solicitud DELETE al recurso /api/v1/recipes/7 Entonces el sistema elimina la receta correspondiente Y responde con estado 204 No Content.</li>
+          <li><strong>Escenario 2: Eliminación de receta inexistente:</strong> Dado que no existe una receta registrada con identificador 999 Cuando se envía una solicitud DELETE al recurso /api/v1/recipes/999 Entonces el sistema responde con estado 404 Not Found Y retorna en el cuerpo de la respuesta un mensaje indicando que la receta no fue encontrada.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS-12</td>
+      <td>Desarollador</td>
+      <td>Low</td>
+      <td>EP-05</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Obtener perfil mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero acceder a los datos del perfil del usuario autenticado mediante una API REST, para que el sistema pueda utilizarlos en funcionalidades que dependan de la identidad y atributos del usuario.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Obtener perfil exitosamente:</strong> Dado que el endpoint "api/v1/profile/:id" está disponible Y que se proporciona un token JWT válido en la solicitud Cuando se realiza una petición GET al endpoint Entonces se recibe una respuesta con código 200 Y el cuerpo de la respuesta incluye el id, nombre, email, rol, URL de imagen y estado (activo/inactivo) del usuario.</li>
+          <li><strong>Escenario 2: Solicitud no autorizada:</strong> Dado que el endpoint "api/v1/profile/:id" está disponible Y no se proporciona un token válido o el token ha expirado Cuando se realiza una petición GET al endpoint Entonces se recibe una respuesta con código 401 Y el cuerpo de la respuesta indica que el acceso no está autorizado.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS-13</td>
+      <td>Desarrollador</td>
+      <td>Low</td>
+      <td>EP-05</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Actualizar perfil mediante API RESTful</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero permitir la actualización del perfil del usuario autenticado mediante una API REST, para asegurar que la información personal pueda mantenerse actualizada.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Actualización exitosa:</strong> Dado que el endpoint "api/v1/profile/:id" está disponible Y que se incluye un token JWT válido y un cuerpo con campos válidos (nombre, descripción, teléfono) Cuando se realiza una solicitud PUT al endpoint Entonces se recibe una respuesta con código 200 Y el cuerpo de la respuesta contiene los datos actualizados junto con el id del usuario.</li>
+          <li><strong>Escenario 2: Datos inválidos:</strong> Dado que el endpoint "api/v1/profile/:id" está disponible Y que el cuerpo de la solicitud contiene al menos un campo con formato inválido (por ejemplo, un teléfono con letras) Cuando se realiza una solicitud PUT al endpoint Entonces se recibe una respuesta con código 400 Y el cuerpo de la respuesta contiene detalles de los errores de validación.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS-14</td>
+      <td>Desarrollador</td>
+      <td>High</td>
+      <td>EP-05</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Subir imagen de perfil mediante API RESTful usando Cloudinary</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como desarrollador, quiero subir una imagen al servicio Cloudinary desde una API REST, para almacenarla de forma centralizada y referenciarla mediante una URL, permitiendo su uso tanto en el perfil como en la sección de recetas.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Imagen válida:</strong> Dado que el endpoint "api/v1/profile/images/:id" está disponible Y que se recibe un archivo de imagen válido (JPG, PNG o WEBP) junto con un id de usuario Cuando se realiza una solicitud POST al endpoint Entonces se recibe una respuesta con código 200 Y el sistema sube la imagen a Cloudinary, guarda la URL y la asocia al usuario correspondiente.</li>
+          <li><strong>Escenario 2: Imagen no válida:</strong> Dado que el endpoint "api/v1/profile/images/:id" está disponible Y que el archivo recibido no corresponde a un formato soportado Cuando se realiza una solicitud POST al endpoint Entonces se recibe una respuesta con código 415 Y el cuerpo de la respuesta indica que el tipo de archivo no es soportado.</li>
+          <li><strong>Escenario 3: Imagen faltante en la solicitud:</strong> Dado que se realiza una solicitud POST al endpoint "api/v1/profile/images/:id" Y que no se incluye ningún archivo de imagen en el cuerpo de la solicitud Cuando se procesa la solicitud Entonces se recibe una respuesta con un código 400 Bad Request.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>TS015</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-09</td>
@@ -1889,7 +2165,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS017</td>
+      <td>TS016</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-10</td>
@@ -1927,7 +2203,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS018</td>
+      <td>TS017</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-09</td>
@@ -1965,7 +2241,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS019</td>
+      <td>TS018</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-14</td>
@@ -2003,7 +2279,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS020</td>
+      <td>TS019</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-11</td>
@@ -2041,7 +2317,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS021</td>
+      <td>TS020</td>
       <td>Desarrollador</td>
       <td>Low</td>
       <td>EP-12</td>
@@ -2079,7 +2355,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS022</td>
+      <td>TS021</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-14</td>
@@ -2117,7 +2393,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS023</td>
+      <td>TS022</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-14</td>
@@ -2155,7 +2431,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS024</td>
+      <td>TS023</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-14</td>
@@ -2193,7 +2469,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS025</td>
+      <td>TS024</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-14</td>
@@ -2231,7 +2507,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS026</td>
+      <td>TS025</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-15</td>
@@ -2271,7 +2547,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS027</td>
+      <td>TS026</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-03</td>
@@ -2309,7 +2585,7 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
       <th>Epic</th>
     </tr>
     <tr>
-      <td>TS028</td>
+      <td>TS027</td>
       <td>Desarrollador</td>
       <td>Medium</td>
       <td>EP-03</td>
@@ -2337,6 +2613,118 @@ entonces el contenido se organiza en dos columnas con espaciado adecuado, los fo
     </tr>
   </tbody>
 </table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>SP-01</td>
+      <td>Equipo de desarollo</td>
+      <td>High</td>
+      <td>EP-07</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Evaluación de Pagos con Stripe</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como equipo de desarrollo (móvil y backend) quiero investigar y prototipar la integración de Stripe en nuestra aplicación móvil Kotlin y Flutter. Y backend Spring Boot Java para la plataforma Restock, para que podamos entender las aplicaciones técnicas, riesgos potenciales y esfuerzo requerido para la implementación completa en los componentes móvil y backend.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Revisa la Documentación de la API de Stripe:</strong> Dado que el equipo de desarrollo necesita entender las capacidades de Stripe para el procesamiento de pagos en web y móvil, cuando el desarrollador revisa la documentación de la API de Stripe. Entonces el desarrollador identifica y documenta el producto o flujo de Stripe más adecuado para la plataforma Restock en un informe compartido.</li>
+          <li><strong>Escenario 2: Evalúa la Compatibilidad Móvil con Kotlin:</strong> Dado la arquitectura Kotlin para android e iOS, cuando el desarrollador evalúa la compatibilidad con los Mobile SDKs de Stripe, Entonces el desarrollador documenta los requisitos de integración móvil en el informe compartido.</li>
+          <li><strong>Escenario 3: Evalúa la Compatibilidad del Backend:</strong> Dado el backend Spring Boot 3.5.5 usando Java 24 para servicios RESTful, cuando el desarrollador evalúa la compatibilidad con la librería Java de Stripe, entonces el desarrollador documenta los requisitos de integración del backend en el informe compartido.</li>
+          <li><strong>Escenario 4: Identifica Implicaciones de Seguridad:</strong> Dado la necesidad de garantizar un procesamiento de pagos seguro en móvil y backend, Cuando el desarrollador analiza los riesgos de seguridad potenciales, Entonces el desarrollador incluye un resumen de riesgos y las características de mitigación de Stripe en el informe.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>SP-02</td>
+      <td>Equipo de desarollo</td>
+      <td>High</td>
+      <td>EP08</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Evaluación de Gestión de imágenes con Cloudinary</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como equipo de desarrollo (móvil y backend), quiero investigar y prototipar la integración de Cloudinary en la app móvil (Kotlin y Flutter) y en el backend (Spring Boot), para entender cómo almacenar, optimizar y servir imágenes de manera eficiente y segura en la plataforma Restock.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Revisión de la API de Cloudinary:</strong> Dado que el equipo necesita conocer las capacidad de Cloudinary, Cuando se revisa la documentación oficial de la API, Entonces se identifican y documenta los endpoints clave para subida y entrega de imágenes.</li>
+          <li><strong>Escenario 2: Compatibilidad móvil (Kotlin/Flutter):</strong> Dado que la aplicación móvil requiere gestión de imágenes, Cuando se integran los SDKs de Cloudinary en Kotlin y Flutter, Entonces se valida la compatibilidad y se documentan los requisitos de integración.</li>
+          <li><strong>Escenario 3: Compatibilidad Backend (Spring Boot):</strong> Dado que el backend usa Spring Boot con Java, Cuando se prueba la librería de Cloudinary para Java, Entonces se documentan los pasos de integración y los resultados de la prueba.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px;">
+  <thead>
+    <tr>
+      <th>Story ID</th>
+      <th>User</th>
+      <th>Priority</th>
+      <th>Epic</th>
+    </tr>
+    <tr>
+      <td>SP-03</td>
+      <td>Equipo de desarrollo</td>
+      <td>Medium</td>
+      <td>EP10</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Evaluación de Notificaciones Push con OneSignal</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Description</strong><br/>
+      Como equipo de desarrollo (móvil y backend), quiero investigar y prototipar la integración de OneSignal en la app móvil (Kotlin y Flutter) y en el backend (Spring Boot), para habilitar notificaciones push confiables que permitan alertar a los usuarios sobre eventos relevantes en Restock.</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="left"><strong>Acceptance Criteria</strong>
+        <ul>
+          <li><strong>Escenario 1: Revisión de la API de OneSignal:</strong> Dado que el equipo necesita entender el flujo de integración, Cuando se revisa la documentación de la API y el panel de OneSignal, Entonces se documentan los pasos o el flujo de OneSignal requeridos para móvil y backend.</li>
+          <li><strong>Escenario 2: Compatibilidad móvil (Kotlin/Flutter):</strong> Dado que el equipo necesita una automatización de mensaje y/o notificaciones, Cuando se integra el SDK de OneSignal en Kotlin y Flutter, Entonces el desarrollador documenta los requisitos de integración móvil en el informe.</li>
+          <li><strong>Escenario 3: Integración backend (Spring Boot):</strong> Dado que el backend maneja servicios RESTful, Cuando se implementa un endpoint para enviar notificaciones vía OneSignal, Entonces el backend logra enviar una notificación de prueba a la aplicación móvil.</li>
+          <li><strong>Escenario 4: Identificación de limitaciones:</strong> Dado que se requiere garantizar la escalabilidad, Cuando se analizan las restricciones del plan gratuito y compatibilidad con iOS y Android, Entonces se documentan limitaciones y consideraciones para la implementación final.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 ## 3.2 Impact Mapping
 
