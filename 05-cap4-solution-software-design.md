@@ -697,6 +697,10 @@ Asimismo, se muestra la colleción de "Payments", el cual contiene un documento,
 
 En esta sección, se explica y presenta los Component Diagrams de C4 Model para cada uno de los Containers considerados para el bounded context correspondiente.
 
+![Resource Bounded Context Software Architecture Component Diagram](./assets/images/cap4/bc_resources/bounded_subscriptions_and_payments_components_diagram.png)
+
+En la imagen se puede observar lo siguiente:
+
 <table>
   <tr>
     <th>Interface/Controller</th>
