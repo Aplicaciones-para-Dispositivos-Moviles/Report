@@ -474,18 +474,7 @@ Clases que acceden a servicios externos (base de datos, emisión de tokens, emai
 
 ### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-**Descripción C4–Component:**
-
-- **Interface/Presentation:** *AuthController*, *UsersController*, *RolesController*.
-- **Application:** *IAM Application Service* (handlers de commands/queries).
-- **Domain:** *User*, *Roles*, *PasswordPolicy*, *RoleResolutionService*, *Repositories (interfaces)*.
-- **Infrastructure:** *MongoUserRepository*, *MongoRolesRepository*, *BCryptPasswordHasher*, *JwtTokenProvider*.
-
-**Flujo típico:**
-
-1. `AuthController.login` → *Application* valida credenciales (hash), emite tokens con *JwtTokenProvider*.
-2. `UsersController.create` → *Application* aplica reglas de dominio y persiste vía *MongoUserRepository*.
-3. `UsersController.changePassword` → *Domain.User.changePassword* → guarda; (opc.) invalida refresh tokens.
+![dc-web-subscriptions-and-payments](/assets/images/cap4/bc_diagrams/content-diagram-IAM.png)
 
 ### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -1022,18 +1011,7 @@ Clases que acceden a servicios externos (base de datos, almacenamiento de imáge
 
 ### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-**Descripción C4–Component:**
-
-- **Interface/Presentation:** *ProfileController*
-- **Application:** *Profiles Application Service*
-- **Domain:** *Profile*, *Business*, *ProfileRepository*, *ProfileCompletenessService*, *AvatarPolicy*.
-- **Infrastructure:** *MongoProfileRepository*, *ImageStorageAdapter*.
-
-**Flujo típico:**
-
-1. `ProfileController.updateContact` → *Application* valida → *Domain.Profile.updateContact* → *MongoProfileRepository.save*.
-2. `ProfileController.updateBusiness` → *Application* normaliza categorías → *Domain.Business.updateInfo* → guardar.
-3. `OnUserVerified` (evento IAM) → *Application* crea `Profile` inicial (idempotente).
+![dc-web-subscriptions-and-payments](/assets/images/cap4/bc_diagrams/content-diagram-PFP.png)
 
 ### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 
