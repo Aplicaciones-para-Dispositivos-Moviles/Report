@@ -1614,6 +1614,8 @@ Colección recipes (un documento por aggregate):
 #### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
 
 #### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
+<img src="assets/images/cap4/bc_planning_monitoring/bc_comp_planning.png" alt=“DDD” height="400px">
+
 
 ##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
 
@@ -1781,9 +1783,11 @@ interface PurchaseOrderRepository {
 }
 ```
 
-### 4.2.6.5. Bounded Context Software Architecture Component Level Diagrams
+### 4.2.6.5. Bounded Context Software Architecture Code Level Diagrams
 
-### 4.2.6.6. Bounded Context Software Architecture Code Level Diagrams
+### 4.2.6.6. Bounded Context Software Architecture Component Level Diagrams
+
+<img src="assets/images/cap4/bc_planning_monitoring/bc_comp_monitoring.png" alt=“DDD” height="400px">
 
 ##### 4.2.6.6.1. Bounded Context Domain Layer Class Diagrams
 
