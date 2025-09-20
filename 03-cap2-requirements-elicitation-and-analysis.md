@@ -222,7 +222,7 @@ Valora la calidad del producto, la atención al cliente y las facilidades de pag
 **Timing:** (19:22 - 23:40 min)
 
 ![Foto de Entrevista](assets/images/cap2/entrevista5.png)
-Ver entrevista (19:22 - 23:40 min):[ https://shorturl.at/aNnes](https://shorturl.at/aNnes)
+Ver entrevista (19:22 - 23:40 min): https://shorturl.at/aNnes
 
 **Resumen:**
 
