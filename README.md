@@ -34,7 +34,7 @@ _Prof. Jorge Luis, Mayta Guillermo_
 |   Código   |       Apellidos y Nombres        |
 | :--------: | :------------------------------: |
 | u202021885 |       Castro Alejos, Julio       |
-|            |    Elescano Leon, Piero Hugo     |
+| u202313354 |    Elescano Leon, Piero Hugo     |
 | u202319831 |   Guerra Perez, José Jahaziel    |
 | u202318274 |    Julca Minaya, Sergio Gino     |
 | u202319448 | Shapiama Rivera, Gabriela Nicole |
