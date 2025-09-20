@@ -62,9 +62,7 @@ Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dent
 **Repositorio del informe del proyecto:**  
 [https://shorturl.at/NKl2Z](https://shorturl.at/NKl2Z)
 
-![Evidencia de commits del repositorio](assets/images/ci-overview.png)
-
-- **Total de commits:** XXX (al corte de TB1)  
+- **Total de commits:** 50
 - **Autores contribuyentes:**  
   - Julio Castro Alejos (`JulioXC4`)  
   - José Jahaziel Guerra Pérez (`jahazielgg`)  
@@ -85,12 +83,12 @@ Durante esta fase, el equipo elaboró el **informe inicial**, que incluyó los s
 
 ![Colaboraciones TB1](assets/images/ci-tb1.png)
 
-- **Julio Castro Alejos (`JulioXC4`)**: XX commits, XXX adiciones, XXX eliminaciones  
-- **José Jahaziel Guerra Pérez (`jahazielgg`)**: XX commits, XXX adiciones, XXX eliminaciones  
-- **Sergio Gino Julca Minaya (`sergioJM05`)**: XX commits, XXX adiciones, XXX eliminaciones  
-- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: XX commits, XXX adiciones, XXX eliminaciones  
-- **Piero Hugo Elescano León (`PieroHugo`)**: XX commits, XXX adiciones, XXX eliminaciones  
-- **Total de commits en TB1:** XXX  
+- **Julio Castro Alejos (`JulioXC4`)**: 14 commits
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 20 commits
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 15 commits
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 28 commits 
+- **Piero Hugo Elescano León (`PieroHugo`)**: 22 commits
+- **Total de commits en TB1:** 50 
 
 La colaboración fue activa y equitativa, con aportes sustanciales de todos los integrantes en la redacción y organización del informe.  
 
