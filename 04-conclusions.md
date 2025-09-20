@@ -1,0 +1,9 @@
+1. El análisis de la competencia permitió confirmar los Problem Statements iniciales: la gestión manual de inventarios y pedidos en restaurantes sigue siendo una causa crítica de desperdicios, sobrecostos y baja eficiencia operativa. Esto nos brindó una visión clara de las brechas del mercado y la oportunidad de diseñar una solución centrada en las necesidades reales del sector.
+  
+2. Las entrevistas realizadas a administradores y proveedores validaron varios de nuestros Assumptions, destacando que la principal prioridad de los usuarios es contar con visibilidad en tiempo real del stock y un control más ordenado de los pedidos. Además, se corroboró que la baja familiaridad digital constituye un factor de riesgo, lo que justifica un diseño simple y un onboarding guiado.
+
+3. En relación con los Hypothesis Statements, se obtuvieron hallazgos positivos: la hipótesis de que un módulo de inventario automatizado reduciría hasta un 35% las mermas fue considerada relevante y alcanzable; los reportes automáticos fueron vistos como una funcionalidad esencial para la toma de decisiones; y el canal centralizado proveedor–restaurante fue validado como un mecanismo clave para disminuir errores y retrasos en el abastecimiento.
+
+4. Finalmente, los criterios de éxito definidos en el proceso Lean UX encontraron respaldo en los resultados obtenidos: las validaciones sugieren la posibilidad real de disminuir los errores en pedidos en un 25% y reducir las pérdidas de insumos en un rango del 30–35%, demostrando la pertinencia de la solución propuesta y su alineación con las necesidades del mercado gastronómico.
+
+5. El desarrollo colaborativo con herramientas ágiles y de control de versiones (como Trello para la gestión de backlog y GitHub para registro de versiones) fortaleció la dinámica del equipo.
