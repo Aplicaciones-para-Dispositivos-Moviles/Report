@@ -2956,188 +2956,279 @@ En esta sección se presenta el Product Backlog de Restock, que contiene las his
     </tr>
     <tr>
         <td>29</td>
+        <td>US-29</td>
+        <td>Acceso a secciones principales del sitio</td>
+        <td>Como visitante del sitio web, quiero acceder fácilmente a las distintas secciones del sitio desde la página principal, para orientarme y navegar sin dificultad.</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>US-30</td>
+        <td>Conocer el funcionamiento general de la plataforma</td>
+        <td>Como visitante del sitio web, quiero que se presenten de forma clara y estructurada las etapas para usar la plataforma, para comprender rápidamente el flujo general de funcionamiento.</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>US-31</td>
+        <td>Opción de comprender el funcionamiento mediante recurso audiovisual</td>
+        <td>Como visitante del sitio web, quiero tener la opción de acceder a un video explicativo acerca del funcionamiento de la plataforma, para entender su uso de forma visual y dinámica.</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>32</td>
+        <td>US-32</td>
+        <td>Comprensión del propósito y valor desde el inicio</td>
+        <td>Como visitante del sitio web, quiero entender de inmediato el propósito y los beneficios de la plataforma, para decidir si es relevante para mis necesidades.</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td>US-33</td>
+        <td>Visualización de beneficios según perfil de usuario</td>
+        <td>Como visitante del sitio web, quiero ver beneficios adaptados a mi perfil (dueño o administrador de restaurante, o proveedor), para entender cómo la plataforma me ayuda específicamente.</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>34</td>
+        <td>US-34</td>
+        <td>Selección de idioma para una experiencia personalizada</td>
+        <td>Como visitante o usuario, quiero cambiar entre los idiomas inglés y español fácilmente, para interactuar con la plataforma en el idioma que me resulte más cómodo.</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>35</td>
+        <td>US-35</td>
+        <td>Navegación accesible para personas con discapacidad visual</td>
+        <td>Como visitante o usuario con discapacidad visual, quiero utilizar un lector de pantalla para acceder al contenido del sitio, para comprender toda la información disponible en la plataforma sin barreras.</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>36</td>
+        <td>US-36</td>
+        <td>Optimización para pantallas de escritorio</td>
+        <td>Como proveedor, quiero marcar el estado de una entrega, para que el restaurante sepa en qué etapa va.</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td>US-37</td>
+        <td>Optimización para pantallas de tablet</td>
+        <td>Como usuario o visitante que accede desde una tablet u otro dispositivo con pantalla intermedia, quiero que el contenido de la plataforma se reorganice para ese formato, para acceder a las funcionalidades sin esfuerzo adicional y con la información claramente presentada.</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>38</td>
+        <td>US-38</td>
+        <td>Optimización para dispositivos móviles</td>
+        <td>Como visitante del sitio web que accede desde un dispositivo móvil, quiero que el contenido de inicio se ajuste adecuadamente al tamaño de pantalla, para poder leer la información sin dificultad e interactuar por el contenido de forma cómoda.</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>39</td>
+        <td>US-39</td>
+        <td>Navegación fluida entre secciones</td>
+        <td>Como visitante, quiero que cada sección del sitio esté claramente diferenciada, para comprender fácilmente la estructura del contenido y recorrerlo sin perderme.</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>40</td>
+        <td>US-40</td>
+        <td>Inclusión de videos explicativos en el sitio web</td>
+        <td>Como visitante, quiero visualizar videos sobre el equipo de Restock y sobre el funcionamiento del producto para conocer quiénes están detrás del proyecto y entender mejor cómo funciona antes de usarlo.</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>41</td>
+        <td>US-41</td>
+        <td>Acceso a la plataforma</td>
+        <td>Como visitante o usuario, quiero tener la posibilidad de registrarme si no tengo una cuenta o iniciar sesión si ya la tengo, para poder acceder a los servicios de la plataforma.</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>42</td>
         <td>TS-01</td>
         <td>Registro y autenticación de usuarios mediante API RESTful </td>
         <td>Como desarrollador, quiero enviar enlaces de recuperación de contraseña a través del servicio de correo Resend, para que los usuarios puedan restablecer su contraseña de forma segura desde la aplicación web.</td>
         <td>2</td>
     </tr>
     <tr>
-        <td>30</td>
+        <td>43</td>
         <td>TS-02</td>
         <td>Gestión del estado de suscripción mediante API RESTful</td>
         <td>Como desarrollador, quiero consultar el estado de suscripción de un usuario mediante una API, para que el sistema pueda determinar su nivel de acceso según su vigencia y ofrecer opciones de renovación.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>31</td>
+        <td>44</td>
         <td>TS-03</td>
         <td>Sistema de notificaciones de inventario mediante API RESTful Y One Signal</td>
         <td>Como desarrollador, quiero integrar los endpoints de notificaciones de inventario (vencimiento próximo y exceso de stock) con OneSignal, para que los administradores de restaurante reciban notificaciones automáticas en sus dispositivos y puedan actuar de inmediato.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>32</td>
+        <td>45</td>
         <td>TS-04</td>
         <td>Gestión de proveedores mediante API RESTful</td>
         <td>Como desarrollador, quiero gestionar proveedores (crear, editar, eliminar, buscar y filtrar) mediante una API REST, para que pueda construir funcionalidades de gestión de proveedores en la aplicación del administrador de restaurante.</td>
         <td>2</td>
     </tr>
     <tr>
-        <td>33</td>
+        <td>46</td>
         <td>TS-05</td>
         <td>Gestionar insumos mediante API RESTful</td>
         <td>Como desarrollador, quiero gestionar productos (listar, crear, actualizar, eliminar, activar y desactivar) a través de una API REST, para o en la plataforma.</td>
         <td>2</td>
     </tr>
     <tr>
-        <td>34</td>
+        <td>47</td>
         <td>TS-06</td>
         <td>Registrar comentarios y calificaciones sobre pedidos mediante API RESTful</td>
         <td>Como desarrollador, quiero registrar comentarios y calificaciones sobre pedidos mediante una API REST, para que pueda construir funcionalidades que permitan a los administradores de restaurante dejar retroalimentación útil sobre los proveedores.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>35</td>
+        <td>48</td>
         <td>TS-07</td>
         <td>Registro histórico de eventos críticos de insumos</td>
         <td>Como desarrollador, quiero implementar un sistema de registro automático de eventos críticos (vencimientos, bajo stock, sobre stock) en una colección de historial, para que el administrador de restaurante pueda auditar cuándo y por qué ocurrieron problemas con insumos.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>36</td>
+        <td>49</td>
         <td>TS-08</td>
         <td>Crear recetas mediante API RESTful</td>
         <td>Como desarrollador, quiero crear una receta mediante un API REST, para registrar nuevas recetas y permitir su integración con el módulo de gestión de platos e inventario.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>37</td>
+        <td>50</td>
         <td>TS-09</td>
         <td>Consultar recetas mediante API RESTful</td>
         <td>Como desarrollador, quiero consultar recetas mediante una API REST, para permitir la obtención de la lista completa de recetas registradas y facilitar su visualización o integración con otros módulos del sistema.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>38</td>
+        <td>51</td>
         <td>TS-10</td>
         <td>Actualizar recetas mediante API RESTful</td>
         <td>Como desarrollador, quiero actualizar recetas mediante una API REST, para permitir la actualización de recetas existentes, corrigiendo o ajustando sus ingredientes y otros detalles relevantes.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>39</td>
+        <td>52</td>
         <td>TS-11</td>
         <td>Eliminar una receta mediante API RESTful</td>
         <td>Como desarrollador, quiero eliminar una receta mediante una API REST, para permitir la eliminación de recetas que ya no se utilizan o fueron creadas por error.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>40</td>
+        <td>53</td>
         <td>TS-12</td>
         <td>Obtener perfil mediante API RESTful</td>
         <td>Como desarrollador, quiero acceder a los datos del perfil del usuario autenticado mediante una API REST, para que el sistema pueda utilizarlos en funcionalidades que dependan de la identidad y atributos del usuario.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>41</td>
+        <td>54</td>
         <td>TS-13</td>
         <td>Actualizar perfil mediante API RESTful</td>
         <td>Como desarrollador, quiero permitir la actualización del perfil del usuario autenticado mediante una API REST, para asegurar que la información personal pueda mantenerse actualizada.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>42</td>
+        <td>55</td>
         <td>TS-14</td>
         <td>Subir imagen de perfil mediante API RESTful usando Cloudinary</td>
         <td>Como desarrollador, quiero subir una imagen al servicio Cloudinary desde una API REST, para almacenarla de forma centralizada y referenciarla mediante una URL, permitiendo su uso tanto en el perfil como en la sección de recetas.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>43</td>
+        <td>56</td>
         <td>TS015</td>
         <td>Obtener lista para ingredientes más usados mediante API RESTful</td>
         <td>Como desarrollador, quiero consultar los ingredientes más utilizados en un período determinado mediante una API REST, para permitir el análisis de su frecuencia de uso y facilitar decisiones sobre abastecimiento.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>44</td>
+        <td>57</td>
         <td>TS016</td>
         <td>Obtener lista de alertas recientes mediante API RESTful</td>
         <td>Como desarrollador, quiero consultar las alertas recientes generadas por el sistema mediante una API REST, para integrarlas en paneles de monitoreo o activar respuestas automatizadas.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>45</td>
+        <td>58</td>
         <td>TS017</td>
         <td>Obtener lista de mejores clientes mediante API RESTful</td>
         <td>Como desarrollador, quiero consultar los restaurantes con mayor volumen de compras a un proveedor mediante una API REST, para mostrar un ranking de clientes prioritarios por período definido.</td>
         <td>2</td>
     </tr>
     <tr>
-        <td>46</td>
+        <td>59</td>
         <td>TS018</td>
         <td>Actualizar estado de orden mediante API RESTful</td>
         <td>Como desarrollador, quiero actualizar el estado de una orden mediante una API RESTful, para que pueda integrarse fácilmente con otros módulos del sistema y automatizar flujos relacionados.</td>
         <td>2</td>
     </tr>
     <tr>
-        <td>47</td>
+        <td>60</td>
         <td>TS019</td>
         <td>Consultar estado de entrega mediante API RESTful</td>
         <td>Como desarrollador, quiero consultar el estado de una orden mediante una API RESTful, para monitorear el progreso de la entrega.</td>
         <td>3</td>
     </tr>
     <tr>
-        <td>48</td>
+        <td>61</td>
         <td>TS020</td>
         <td>Obtener calificaciones de servicios de proveedores mediante API RESTful</td>
         <td>Como desarrollador, quiero obtener las calificaciones relacionadas a las ordenes completadas de un proveedor, para integrarlas en servicios analíticos que respalden decisiones automatizadas.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>49</td>
+        <td>62</td>
         <td>TS021</td>
         <td>Gestionar órdenes recibidas mediante API RESTful</td>
         <td>Como desarrollador, quiero visualizar y gestionar órdenes recibidas, para consultar y actualizar el estado de órdenes recibidas, de forma que se pueda coordinar correctamente el despacho de productos y la comunicación entre proveedor y restaurante.</td>
         <td>2</td>
     </tr>
     <tr>
-        <td>50</td>
+        <td>63</td>
         <td>TS022</td>
         <td>Consultar detalles de una orden mediante API RESTful</td>
         <td>Como desarrollador, quiero consultar detalles de una orden específica mediante API RESTful, para obtener los detalles de una orden específica por su ID y visualizar toda la información relevante.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>51</td>
+        <td>64</td>
         <td>TS023</td>
         <td>Obtener historial de ordenes mediante API RESTful</td>
         <td>Como desarrollador, quiero obtener todas las órdenes que un proveedor realizó a un restaurante, ordenadas por fecha, para construir funcionalidades que permitan visualizar cronológicamente el historial de pedidos y facilitar análisis de desempeño.</td>
         <td>1</td>
     </tr>
     <tr>
-        <td>52</td>
+        <td>65</td>
         <td>TS024</td>
         <td>Exportar reporte de historial de órdenes completados mediante API RESTful</td>
         <td>Como desarrollador, quiero generar un reporte en Excel de las órdenes completadas de un proveedor, para facilitar el análisis, la contabilidad y la toma de decisiones mediante la exportación de datos.</td>
         <td>2</td>
     </tr>
     <tr>
-        <td>53</td>
+        <td>66</td>
         <td>TS025</td>
         <td>Gestionar ventas e inventario mediante API RESTful</td>
         <td>Como desarrollador, quiero implementar funcionalidades, para registrar y gestionar ventas, así como actualizar manualmente el estado del inventario mediante APIs RESTful.</td>
         <td>3</td>
     </tr>
     <tr>
-        <td>54</td>
+        <td>67</td>
         <td>TS026</td>
         <td>Cambio de contraseña mediante API RESTful</td>
         <td>Como desarrollador, quiero permitir el cambio de contraseña mediante un endpoint REST, para que los usuarios puedan mantener su cuenta segura actualizando sus credenciales cuando lo deseen.</td>
         <td>3</td>
     </tr>
     <tr>
-        <td>55</td>
+        <td>68</td>
         <td>TS027</td>
         <td>Eliminar cuenta mediante API RESTful</td>
         <td>Como desarrollador, quiero permitir que los usuarios eliminen su cuenta a través de un endpoint REST, para que puedan ejercer control sobre su información personal y cerrar su cuenta cuando lo deseen.</td>
