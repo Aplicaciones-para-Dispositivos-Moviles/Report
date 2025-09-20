@@ -108,22 +108,22 @@ La colaboración fue activa y equitativa, con aportes sustanciales de todos los 
 
 # Tabla de contenidos
 
-## [Capítulo I: Presentación](cap1-introduction.md)
+## [Capítulo I: Presentación](02-cap1-introduction.md)
 
-* [1.1 Startup Profile](cap1-introduction.md#11-startup-profile)
+* [1.1 Startup Profile](02-cap1-introduction.md#11-startup-profile)
 
-  * [1.1.1 Descripción de la Startup](cap1-introduction.md#111-descripción-de-la-startup)
-  * [1.1.2 Perfiles de integrantes del equipo](cap1-introduction.md#112-perfiles-de-integrantes-del-equipo)
-* [1.2 Solution Profile](cap1-introduction.md#12-solution-profile)
+  * [1.1.1 Descripción de la Startup](02-cap1-introduction.md#111-descripción-de-la-startup)
+  * [1.1.2 Perfiles de integrantes del equipo](02-cap1-introduction.md#112-perfiles-de-integrantes-del-equipo)
+* [1.2 Solution Profile](02-cap1-introduction.md#12-solution-profile)
 
-  * [1.2.1 Antecedentes y problemática](cap1-introduction.md#121-antecedentes-y-problemática)
-  * [1.2.2 Lean UX Process](cap1-introduction.md#122-lean-ux-process)
+  * [1.2.1 Antecedentes y problemática](02-cap1-introduction.md#121-antecedentes-y-problemática)
+  * [1.2.2 Lean UX Process](02-cap1-introduction.md#122-lean-ux-process)
 
-    * [1.2.2.1 Lean UX Problem Statements](cap1-introduction.md#1221-lean-ux-problem-statements)
-    * [1.2.2.2 Lean UX Assumptions](cap1-introduction.md#1222-lean-ux-assumptions)
-    * [1.2.2.3 Lean UX Hypothesis Statements](cap1-introduction.md#1223-lean-ux-hypothesis-statements)
-    * [1.2.2.4 Lean UX Canvas](cap1-introduction.md#1224-lean-ux-canvas)
-* [1.3 Segmentos objetivo](cap1-introduction.md#13-segmentos-objetivo)
+    * [1.2.2.1 Lean UX Problem Statements](02-cap1-introduction.md#1221-lean-ux-problem-statements)
+    * [1.2.2.2 Lean UX Assumptions](02-cap1-introduction.md#1222-lean-ux-assumptions)
+    * [1.2.2.3 Lean UX Hypothesis Statements](02-cap1-introduction.md#1223-lean-ux-hypothesis-statements)
+    * [1.2.2.4 Lean UX Canvas](02-cap1-introduction.md#1224-lean-ux-canvas)
+* [1.3 Segmentos objetivo](02-cap1-introduction.md#13-segmentos-objetivo)
 
 ## [Capítulo II: Requirements Development and Software Solution Design](cap2-requirements-elicitation-and-analysis.md)
 
