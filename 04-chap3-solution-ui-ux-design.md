@@ -174,7 +174,7 @@ Esta línea de código declara el idioma principal del contenido de la página. 
 
 Esta línea de código establece el aviso de derechos de autor para el contenido de la página. Su función es indicar legalmente la titularidad de los derechos de autor y el año correspondiente.
 
-**2. Web Applicatio (Frontend)**
+**2. Web Application (Frontend)**
 
  **Charset**
 
@@ -223,6 +223,75 @@ Esta línea de código declara el idioma principal del contenido de la aplicaci�
     `<meta name="copyright" content="UI-Topic 2025">`
 
 Esta línea de código establece el aviso de derechos de autor para el código y el contenido de la aplicación web. Su función es indicar legalmente la titularidad de los derechos de autor del software y el año correspondiente de su creación o actualización.
+
+**3. Aplicación Móvil (Mobile App)**
+
+La aplicación móvil de Restock se desarrolla en **Android Studio** utilizando el lenguaje **Kotlin**, garantizando eficiencia, seguridad y modernidad en su construcción. Para el backend, autenticación, base de datos, pruebas y distribución, se emplea **Firebase**, lo que permite un desarrollo ágil y validación continua.
+
+A continuación, se presentan los principales metadatos y configuraciones relevantes para la publicación y optimización de la aplicacion:
+
+ **Application Label**
+
+    `<application android:label="Restock">`
+
+Esta línea de código define el nombre visible de la aplicación en el dispositivo y en Google Play. Su función es representar de forma clara y concisa la misión de la app, facilitando su identificación por parte de los usuarios.
+
+ **Descripción**
+
+    `<meta-data android:name="description" android:value="App para restaurantes y proveedores que optimiza inventarios, pedidos y ventas. Visualiza métricas, gestiona productos y recibe alertas en tiempo real."/>`
+
+Esta línea de código provee una descripción breve sobre el propósito y funcionalidades principales de la aplicación. Su función es informar a los usuarios y a las tiendas de aplicaciones sobre los beneficios clave de Restock, alineados con la arquitectura y experiencia de usuario descritas en el capítulo.
+
+ **Palabras clave**
+
+    `<meta-data android:name="keywords" android:value="restaurantes, inventario, pedidos, proveedores, ventas, recetas, stock, gestión, móvil, Kotlin, Firebase"/>`
+
+Esta línea de código agrega palabras clave relevantes para la búsqueda y clasificación en Google Play. Su función es mejorar la visibilidad y el posicionamiento de la app en los resultados, resaltando tanto el sector como las tecnologías empleadas.
+
+ **Autoría**
+
+    `<meta-data android:name="author" android:value="UI-Topic Team"/>`
+
+Esta línea de código identifica al equipo creador de la aplicación. Su función es atribuir la autoría, fortalecer la credibilidad y facilitar el contacto para soporte o referencias técnicas.
+
+ **Idioma principal**
+
+    `<meta-data android:name="language" android:value="en"/>`
+
+Esta línea de configuración declara el idioma español como principal para la interfaz y la ficha de la aplicación. Su función es informar a la tienda y a los dispositivos sobre el idioma predominante, ayudando a la correcta renderización y segmentación geográfica.
+
+ **Configuraciones de pruebas y distribución (Firebase)**
+
+    // Fragmento de configuración:
+    - Firebase Authentication, Firestore, Crashlytics y Test Lab integrados para gestionar usuarios, datos, errores y pruebas automáticas.
+    - Firebase App Distribution habilitado para compartir versiones preliminares con testers internos.
+    - Firebase Analytics activado para seguimiento de comportamiento y métricas de uso.
+
+Estas configuraciones permiten la validación, monitoreo y mejora continua de la aplicación durante el desarrollo y las fases de prueba.
+
+ **Título de la App**
+
+    Restock - Control inteligente de inventarios y pedidos
+
+Este campo define el nombre comercial bajo el cual los usuarios encuentran la aplicación en la tienda. Su función es captar la atención y comunicar el valor principal del producto.
+
+ **Descripción extendida**
+
+    Plataforma móvil desarrollada en Kotlin y respaldada por servicios de Firebase, diseñada para dueños y administradores de restaurantes, así como proveedores. Permite gestionar inventario, realizar pedidos, consultar métricas, recibir alertas y organizar recetas de forma intuitiva y eficiente.
+
+Este texto ofrece una visión detallada de los beneficios y funcionalidades, guiando la decisión de descarga del usuario.
+
+ **Categoría**
+
+    Negocios / Productividad / Gastronomía
+
+Esta configuración asigna la app al segmento adecuado en la tienda, facilitando la búsqueda por parte de los usuarios interesados en el sector gastronómico y de gestión.
+
+ **Capturas de pantalla y mock-ups**
+
+    Imágenes de las principales pantallas presentadas en los wireframes y mock-ups del capítulo.
+
+Las capturas permiten a los usuarios visualizar la experiencia, accesibilidad y arquitectura de la información antes de instalar la app.
 
 #### 3.1.2.4. Searching Systems
 
