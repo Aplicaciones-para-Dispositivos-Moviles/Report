@@ -77,6 +77,96 @@
 #### 4.2.1.2. Sprint Backlog 1
 
 #### 4.2.1.3. Development Evidence for Sprint Review
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
+  <thead>
+    <tr>
+      <th style="margin-bottom:18px; text-align: center">Repository</th>
+      <th style="margin-bottom:18px; text-align: center">Branch</th>
+      <th style="margin-bottom:18px; text-align: center">Commit id</th>
+      <th style="margin-bottom:18px; text-align: center">Commit Message Body</th>
+      <th style="margin-bottom:18px; text-align: center">Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody style="margin-bottom:18px; text-align: center">
+  <tr>
+    <td> JulioXC4/restock-landing-page</td>
+    <td>feature/menu</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add responsive menu</td>
+    <td>04/10/2025</td>
+  </tr>
+  <tr>
+    <td>jahazielgg/restock-landing-page</td>
+    <td>feature/home</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add home section and first call to action</td>
+    <td>04/10/2025</td>
+  </tr>
+  <tr>
+    <td>PieroHugo/restock-landing-page</td>
+    <td>feature/about-us</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add about us section and development team presentation</td>
+    <td>04/10/2025</td>
+  </tr>
+  <tr>
+    <td>GrabrielaShapiama28/restock-landing-page</td>
+    <td>feature/benefits</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add benefits section to restaurant owners and restaurant suppliers</td>
+    <td>04/10/2025</td>
+  </tr>
+  <tr>
+    <td>sergioJM05/restock-landing-page</td>
+    <td>feature/testimonials</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add representative testimonials section</td>
+    <td>04/10/2025</td>
+  </tr>
+  <tr>
+    <td>sergioJM05/restock-landing-page</td>
+    <td>feature/questions</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add frequently questions</td>
+    <td>04/10/2025</td>
+  </tr>
+  <tr>
+    <td>GrabrielaShapiama28/restock-landing-page</td>
+    <td>feature/tutorial</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add steps to download and use the app on phones.</td>
+    <td>04/10/2025</td>
+  </tr>
+  </tbody>
+  <tr>
+    <td>PieroHugo/restock-landing-page</td>
+    <td>feature/contact</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add contact form.</td>
+    <td>04/10/2025</td>
+  </tr>
+  <tr>
+    <td>jahazielgg/restock-landing-page</td>
+    <td>feature/download</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add call to action to download restock App</td>
+    <td>04/10/2025</td>
+  </tr>
+    <tr>
+    <td>JulioXC4/restock-landing-page</td>
+    <td>feature/menu</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add internacionalization EN / ES</td>
+    <td>04/10/2025</td>
+  </tr>
+    <tr>
+    <td>sergioJM05/restock-landing-page</td>
+    <td>feature/footer</td>
+    <td>dsadsadasdasdasdasd</td>
+    <td>feat: add footer with social medias and rights reserved</td>
+    <td>04/10/2025</td>
+  </tr>
+</table>
 
 #### 4.2.1.4. Testing Suite Evidence for Sprint Review
 
