@@ -281,6 +281,187 @@
 
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
 
+Durante este sprint se avanzó significativamente en la <strong>documentación de los servicios web (REST API)</strong> del sistema <em>Restock</em>, cubriendo los módulos de <strong>Profiles</strong>, <strong>Recipes</strong>, <strong>Batches</strong> y <strong>Authentication</strong>.  
+La documentación se generó utilizando <strong>OpenAPI (Swagger)</strong> y fue validada mediante peticiones reales desde el entorno de desarrollo (<em>localhost</em> y Railway).  
+Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP <code>GET</code>, <code>POST</code>, <code>PUT</code> y <code>DELETE</code>.
+
+A continuación, se presenta la tabla resumen de los <strong>Endpoints documentados</strong>, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+
+<table>
+  <thead>
+    <tr style="background-color:#f2f2f2;">
+      <th>Endpoint</th>
+      <th>Acción</th>
+      <th>Verbo HTTP</th>
+      <th>Parámetros / Request Body</th>
+      <th>Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/api/v1/authentication/sign-up</td>
+      <td>Registrar una cuenta</td>
+      <td>POST</td>
+      <td><pre>{
+  "email": "string",
+  "password": "string"
+}</pre></td>
+      <td><pre>{
+  "email": "admin@restock.com",
+  "password": "P@ssw0rd"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/authentication/sign-in</td>
+      <td>Iniciar sesión en la cuenta</td>
+      <td>POST</td>
+      <td><pre>{
+  "email": "string",
+  "password": "string"
+}</pre></td>
+      <td><pre>{
+  "email": "admin@restock.com",
+  "password": "P@ssw0rd"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}/personal</td>
+      <td>Actualizar información personal del usuario</td>
+      <td>PUT</td>
+      <td><pre>{
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "phone": "string",
+  "address": "string",
+  "country": "string",
+  "avatar": "string"
+}</pre></td>
+      <td><pre>{
+  "firstName": "Jahaziel",
+  "lastName": "Guerra",
+  "email": "admin@restock.com",
+  "phone": "987654321",
+  "address": "Av. Primavera 120",
+  "country": "Perú",
+  "avatar": "https://res.cloudinary.com/restock/avatar.png"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}/password</td>
+      <td>Cambiar la contraseña del usuario</td>
+      <td>PUT</td>
+      <td><pre>{
+  "currentPassword": "string",
+  "newPassword": "string"
+}</pre></td>
+      <td><pre>{
+  "currentPassword": "P@ssw0rd",
+  "newPassword": "NuevoP@ss2025"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}/business</td>
+      <td>Actualizar información del negocio</td>
+      <td>PUT</td>
+      <td><pre>{
+  "businessName": "string",
+  "businessAddress": "string",
+  "description": "string",
+  "businessCategoryIds": ["string"]
+}</pre></td>
+      <td><pre>{
+  "businessName": "Restaurante San Miguel",
+  "businessAddress": "Av. La Marina 2400",
+  "description": "Comida criolla peruana",
+  "businessCategoryIds": ["cat_01"]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes</td>
+      <td>Crear una nueva receta</td>
+      <td>POST</td>
+      <td><pre>{
+  "name": "string",
+  "price": { "amount": "number", "currency": "string" }
+}</pre></td>
+      <td><pre>{
+  "name": "Lomo Saltado",
+  "price": { "amount": 28.90, "currency": "PEN" }
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{id}</td>
+      <td>Actualizar una receta existente</td>
+      <td>PUT</td>
+      <td><pre>{
+  "name": "string",
+  "price": { "amount": "number", "currency": "string" }
+}</pre></td>
+      <td><pre>{
+  "name": "Ají de Gallina",
+  "price": { "amount": 25.50, "currency": "PEN" }
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{id}/supplies</td>
+      <td>Agregar insumos a una receta</td>
+      <td>POST</td>
+      <td><pre>{
+  "supplyId": "string",
+  "quantity": "number"
+}</pre></td>
+      <td><pre>{
+  "supplyId": "sup_beef",
+  "quantity": 0.5
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/batches</td>
+      <td>Crear un nuevo lote (batch)</td>
+      <td>POST</td>
+      <td><pre>{
+  "supplyId": "string",
+  "expirationDate": "string",
+  "quantity": "number"
+}</pre></td>
+      <td><pre>{
+  "supplyId": "sup_beef",
+  "expirationDate": "2025-12-15",
+  "quantity": 20
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/batches/{id}</td>
+      <td>Actualizar un lote existente</td>
+      <td>PUT</td>
+      <td><pre>{
+  "quantity": "number"
+}</pre></td>
+      <td><pre>{
+  "quantity": 15
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/batches/{id}</td>
+      <td>Eliminar un lote</td>
+      <td>DELETE</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>N/A</pre></td>
+    </tr>
+  </tbody>
+</table>
+
+Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (<em>Railway</em>).  
+Repositorio de Web Services: <a href="https://github.com/Jahazielgg/restock-backend" target="_blank">https://github.com/Jahazielgg/restock-backend</a>  
+Últimos commits relacionados con documentación:  
+<ul>
+  <li><code>58dcfa1</code> – Update OpenAPI definitions for Profiles and Recipes</li>
+  <li><code>7b23a64</code> – Add Batches endpoints to Swagger spec</li>
+  <li><code>c91bde4</code> – Improve schema examples for Authentication</li>
+</ul>
+
+
 #### 4.2.1.7. Software Deployment Evidence for Sprint Review
 
 #### 4.2.1.8. Team Collaboration Insights during Sprint
