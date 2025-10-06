@@ -102,7 +102,7 @@
     <td>04/10/2025</td>
   </tr>
   <tr>
-    <td>jahazielgg/restock-landing-page</td>
+    <td>Aplicaciones-para-Dispositivos-Moviles/restock-landing-page</td>
     <td>feature/home</td>
     <td>dsadsadasdasdasdasd</td>
     <td>feat: add home section and first call to action</td>
@@ -152,7 +152,7 @@
     <td>04/10/2025</td>
   </tr>
   <tr>
-    <td>jahazielgg/restock-landing-page</td>
+    <td>Aplicaciones-para-Dispositivos-Moviles/restock-landing-page</td>
     <td>feature/download</td>
     <td>dsadsadasdasdasdasd</td>
     <td>feat: add call to action to download restock App</td>
@@ -175,6 +175,107 @@
 </table>
 
 #### 4.2.1.4. Testing Suite Evidence for Sprint Review
+
+<p>A continuación, se presenta la evidencia de los commits relacionados con los <strong>Acceptance Tests</strong> automatizados del sprint, alojados en el repositorio <code>restock-acceptance-tests</code>. Cada archivo corresponde a un <em>Feature File</em> Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>2685de9471a0f83ad75205b618863b31e14e6198</td>
+      <td>feat: add acceptance tests for user login scenarios (AT01.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>ed5ce3208cd2c63a242441f45fedae10d5425bec</td>
+      <td>feat: add CRUD acceptance tests for recipe management (AT02.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>d28da8da0545a20d228ebb03a345149eb03ce84a</td>
+      <td>feat: add acceptance tests for recipe activation with valid and invalid supplies (AT03.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>8aef03d2070aa74505d3434024f1e71bdd1505ca</td>
+      <td>feat: add acceptance tests for menu grid search and pagination (AT04.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
+      <td>feat: add acceptance tests for sale registration and validation (AT05.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
+      <td>feat: add acceptance test for marking inventory as applied after resource confirmation (AT06.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
+      <td>feat: add acceptance tests for Purchase Order lifecycle (AT07.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
+      <td>feat: add acceptance test for posting goods receipt and event publishing (AT08.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
+      <td>feat: add acceptance tests for restock functionality (supplier view and confirmation) (AT09.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>48d728c07104cb5cae35a48000f28c6891ba523b</td>
+      <td>feat: add acceptance tests for profile update and plan limits enforcement (AT10.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Enlace al repositorio:</strong>  
+<a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</a></p>
+
 
 #### 4.2.1.5. Execution Evidence for Sprint Review
 
