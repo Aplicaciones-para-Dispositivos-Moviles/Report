@@ -728,6 +728,88 @@ Perfil del proveedor: información personal, métricas de ventas, y accesos ráp
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
+Cada Wireflow Diagram representa el recorrido visual e interactivo que realiza el usuario dentro de la aplicación para cumplir un objetivo específico (User Goal). En cada flujo se detalla la secuencia de pantallas y acciones que permiten alcanzar dicho propósito, desde la navegación inicial hasta la confirmación o registro de una tarea.
+
+<table width="100%">
+  <tr>
+    <th width="25%">User Goal</th>
+    <th width="75%">Imágen</th>
+  </tr>
+  <tr>
+    <td>UG-01 — Gestión de cuenta del suscriptor: El flujo muestra cómo el usuario accede a su perfil desde el menú principal para actualizar sus datos personales o modificar su contraseña. El proceso concluye al guardar los cambios, asegurando que la información de la cuenta se mantenga actualizada en todo momento.</td>
+    <td>
+      <img src="assets/images/cap3/ug-01.png" alt="Mobile Wireflow 1" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td> 
+      UG-02 — Adquisición de plan de suscripción: El diagrama evidencia el recorrido del suscriptor al revisar los planes disponibles, seleccionar uno y completar la información de pago. El flujo finaliza cuando la transacción es aceptada, habilitando las funciones premium de la plataforma.
+    </td>
+    <td>
+        <img src="assets/images/cap3/ug-02.png" alt="Mobile Wireflow 2" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td> UG-03 — Gestión manual del inventario de insumos: El flujo detalla cómo el usuario crea, edita o cancela insumos dentro del inventario, registrando información relevante como categoría, unidad de medida y stock. Este proceso garantiza un control manual y preciso de los recursos disponibles. </td>
+    <td>
+        <img src="assets/images/cap3/ug-03.png" alt="Mobile Wireflow 3" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td> UG-04 — Consulta del panel de alertas: El usuario accede a la sección de alertas para visualizar el estado de sus insumos, filtrarlos y revisar notificaciones de bajo o alto stock. Al seleccionar un elemento, puede conocer su ubicación y última actualización, facilitando la toma de decisiones.</td>
+    <td>
+        <img src="assets/images/cap3/ug-04.png" alt="Mobile Wireflow 4" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-05 — Consulta de información de proveedores: El diagrama presenta el acceso del administrador a la sección de proveedores, donde puede registrar nuevos contactos, consultar datos de empresas y ver las categorías de productos que ofrecen, manteniendo actualizada la base de proveedores del restaurante.</td>
+    <td>
+        <img src="assets/images/cap3/ug-05.png" alt="Mobile Wireflow 5" width="100%"><br>
+    </td> 
+  </tr>
+  <tr>
+    <td>UG-06 — Solicitud de pedidos a proveedores: Este flujo muestra cómo el administrador genera una nueva orden, selecciona los productos necesarios, define las cantidades y envía la solicitud. El pedido se registra en el sistema, quedando disponible para seguimiento posterior.</td>
+    <td>
+        <img src="assets/images/cap3/ug-06.png" alt="Mobile Wireflow 6" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-07 — Evaluación de pedidos recibidos: El administrador ingresa a la sección de reseñas para evaluar la calidad de los pedidos entregados por los proveedores. Puede calificar, comentar y registrar su experiencia, contribuyendo a un control de calidad y confiabilidad del abastecimiento.</td>
+    <td>
+        <img src="assets/images/cap3/ug-07.png" alt="Mobile Wireflow 7" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-08 — Registro de ventas del restaurante: El flujo describe cómo el empleado registra ventas completas desde la carta, seleccionando platos y agregando insumos adicionales. Cada venta queda vinculada al inventario, permitiendo actualizar automáticamente las existencias.</td>
+    <td>
+        <img src="assets/images/cap3/ug-08.png" alt="Mobile Wireflow 8" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-09 — Creación de recetas vinculadas al inventario: El administrador accede al módulo de recetas para definir nuevos platos, ingresar ingredientes, unidades y precios. Estas recetas se asocian al inventario, optimizando la gestión de insumos y el cálculo de costos de preparación.</td>
+    <td>
+        <img src="assets/images/cap3/ug-09.png" alt="Mobile Wireflow 9" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-10 — Gestión del catálogo de productos del proveedor: El proveedor ingresa a su sección de supplies para crear, editar o desactivar productos según disponibilidad. Este flujo asegura una administración flexible del catálogo, permitiendo actualizaciones sin afectar registros previos. </td>
+    <td>
+        <img src="assets/images/cap3/ug-10.png" alt="Mobile Wireflow 10" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-11 — Control de productos en el inventario del proveedor: El flujo evidencia cómo el proveedor revisa y actualiza el estado de sus productos, modificando unidades, corrigiendo información o eliminando ítems vencidos. Con ello, mantiene un inventario preciso y actualizado.</td>
+    <td>
+        <img src="assets/images/cap3/ug-11.png" alt="Mobile Wireflow 11" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td> UG-12 — Gestión y actualización del estado de órdenes recibidas: El proveedor accede a la sección de órdenes para consultar solicitudes de restaurantes, revisar detalles y decidir si aprobarlas o rechazarlas. Este flujo permite mantener una comunicación ágil y transparente en la cadena de suministro.</td>
+    <td>
+        <img src="assets/images/cap3/ug-12.png" alt="Mobile Wireflow 12" width="100%"><br>
+    </td>
+  </tr>
+</table>
 
 
 #### 3.1.4.3. Mobile Applications Mock-ups
