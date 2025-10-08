@@ -66,6 +66,65 @@
 
 ### 4.1.4. Software Deployment Configuration
 
+Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los componentes digitales de la solución Restock: la Landing Page, la aplicación móvil (Android) y los Web Services (backend), partiendo desde sus respectivos repositorios de código fuente.
+
+#### 1. Landing Page - HTML, CSS y JavaScript
+
+**Tecnología Base:**  
+- Lenguajes: HTML5, CSS3, JavaScript  
+- Hosting: GitHub Pages
+
+**Configuración y Despliegue:**  
+- El código fuente se aloja en un repositorio público de GitHub.
+- El archivo `index.html` debe encontrarse en la raíz del repositorio para que GitHub Pages lo detecte como punto de entrada.
+- Para desplegar la Landing Page, se siguen los siguientes pasos:
+    1. Acceder al repositorio en GitHub.
+    2. Continuar con la sección **Settings** > **Pages**.
+    3. En **Source**, se selecciona la rama principal (`main`) y la carpeta raíz (`/`).
+    4. Se procede a guardar los cambios realizados.  
+- GitHub Pages genera automáticamente una URL pública con el formato `https://<organizacion>.github.io/<repositorio>/` donde el sitio estará disponible.
+- Cada vez que se realiza un commit en la rama `main`, GitHub Pages actualiza de forma automática la versión publicada.
+
+#### 2. Aplicación Móvil - Android (Kotlin + Android Studio)
+
+**Tecnología Base:**  
+- Lenguaje: Kotlin  
+- Framework: Android Studio + Jetpack Compose  
+- Distribución: APK (Android Package)  
+- Hosting de pruebas: Firebase App Distribution
+
+**Configuración y Despliegue:**  
+- El código fuente se gestiona en un repositorio de GitHub.
+- Para la generación de versiones de prueba, se debe compilo el proyecto en Android Studio (`Build > Generate Signed APK`) y se verifico el funcionamiento de la aplicación en dispositivos físicos o emuladores Android.
+- El archivo APK generado se sube a Firebase App Distribution, permitiendo el testeo con usuarios internos y externos seleccionados antes de su publicación oficial.
+- El enlace de descarga puede ser compartido con los testers a través de correo electrónico, Google Drive o mediante un acceso en la Landing Page.
+- Cada nueva versión de la aplicación para testeo se publica y gestiona mediante la plataforma Firebase, facilitando la retroalimentación y el control de versiones.
+
+#### 3. Backend - Java + MongoDB
+
+**Tecnología Base:**  
+- Framework: Spring Boot
+- Lenguaje: Java 21
+- Base de datos: MongoDB 
+- Contenedorización: Docker
+- Hosting: Render o servicio equivalente
+
+**Configuración y Despliegue:**  
+- El backend está estructurado según el enfoque de Domain-Driven Design (DDD), dividiendo el sistema en bounded contexts independientes.
+- El código fuente se mantiene en un repositorio de GitHub.
+- Para el despliegue, el repositorio incluye un archivo `Dockerfile` que define la imagen de la aplicación.
+- El proveedor de hosting detecta automáticamente el Dockerfile y construye la imagen en cada actualización del repositorio.
+- La base de datos MongoDB se configura mediante variables de entorno (por ejemplo, `MONGO_URI`), las cuales se gestionan en el panel de administración del hosting y nunca se almacenan en el código fuente.
+- La API REST expuesta por el backend sigue la convención RESTful y sus endpoints están documentados mediante OpenAPI (Swagger). La interfaz Swagger UI está disponible para consulta y prueba.
+- Los servicios protegidos requieren autorización mediante JWT, implementada con Spring Security, y los roles de usuario definen el nivel de acceso a cada funcionalidad.
+- El despliegue es automático: cada push a la rama principal activa la reconstrucción y publicación en el servicio de hosting, sin necesidad de configurar pipelines de CI/CD adicionales.
+- La aplicación móvil consume la API pública del backend utilizando HTTP para acceder a los servicios.
+
+#### Referencias adicionales
+
+- Documentación oficial de [Spring Boot](https://spring.io/projects/spring-boot), [Spring Data MongoDB](https://spring.io/projects/spring-data-mongodb), [Docker](https://docs.docker.com/), [Android Studio](https://developer.android.com/studio), [Firebase App Distribution](https://firebase.google.com/products/app-distribution) y [GitHub Pages](https://pages.github.com/).
+- Para la gestión de variables de entorno y credenciales, se consulto las guías de los proveedores de hosting utilizados.
+
 ## 4.2. Landing Page & Mobile Application Implementation
 
 ### 4.2.1. Sprint 1
