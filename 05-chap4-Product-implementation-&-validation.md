@@ -152,6 +152,63 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 
 #### 4.2.1.1. Sprint Planning 1
 
+<table>
+  <tr>
+    <td>Sprint #</td>
+    <td>Sprint 1</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Planning Background</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>2025-09-25</td>
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td>08:00 pm (GMT-5)</td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>Modalidad remota mediante la plataforma Discord</td>
+  </tr>
+  <tr>
+    <td>Prepared By</td>
+    <td>Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Attendees (to planning meeting)</td>
+    <td>.Castro Alejos, Julio / Elescano Leon, Piero Hugo / Guerra Perez, José Jahaziel / Julca  Minaya, Sergio Gino / Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Sprint 0 Review Summary</td>
+    <td>Dado que este es el sprint inicial, no se presenta un resumen del sprint anterior.</td>
+  </tr>
+  <tr>
+    <td>Sprint 0 Retrospective Summary</td>
+    <td>Dado que este es el sprint inicial, no se presenta una retroalimentación del sprint anterior.</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Goal & User Stories</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Goal</td>
+    <td>Nuestro enfoque está en presentar de forma efectiva nuestra propuesta de valor y e información detallada del producto a los nuevos visitantes. Además, habilitar funcionalidades clave para los administradores de restaurantes, como la gestión de inventario, la configuración de perfil, la gestión de recetas y la sección de ventas. Asimismo, en proporcionar puntos de acceso mediante el API de la plataforma, con el objetivo de que los desarrolladores frontend puedan integrar funcionalidades relacionadas con autenticación, perfil, inventario, recetas y ventas dentro de la app.
+Creemos que esto ofrece mayor confianza hacia el equipo de trabajo y motiva a los visitantes a registrarse y probar el producto. Del mismo modo, mejora la eficiencia operativa de los administradores de restaurantes al facilitar la creación y gestión de ventas e insumos desde la aplicación móvil. Además, permite a los desarrolladores frontend implementar funcionalidades esenciales de forma más eficiente, incluyendo autenticación, inventario, ventas, recetas y perfil. 
+Esto se confirmará cuando aumente la cantidad de visitantes que se registren en la plataforma. Del mismo modo, cuando se incremente la cantidad de ventas e insumos que registran administradores de restaurantes en la plataforma. Por último, cuando los desarrolladores frontend aumenten la cantidad de funcionalidades relacionadas con ventas, recetas, inventario y perfil en la app móvil.</td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Velocity</td>
+    <td>35</td>
+  </tr>
+  <tr>
+    <td>Sum of Story Points</td>
+    <td>35</td>
+  </tr>
+</table>
+
 #### 4.2.1.2. Sprint Backlog 1
 
 #### 4.2.1.3. Development Evidence for Sprint Review
@@ -360,11 +417,11 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
 
-Durante este sprint se avanzó significativamente en la `<strong>`documentación de los servicios web (REST API)`</strong>` del sistema `<em>`Restock`</em>`, cubriendo los módulos de `<strong>`Profiles`</strong>`, `<strong>`Recipes`</strong>`, `<strong>`Batches`</strong>` y `<strong>`Authentication`</strong>`.
-La documentación se generó utilizando `<strong>`OpenAPI (Swagger)`</strong>` y fue validada mediante peticiones reales desde el entorno de desarrollo (`<em>`localhost`</em>` y Railway).
-Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP `<code>`GET`</code>`, `<code>`POST`</code>`, `<code>`PUT`</code>` y `<code>`DELETE`</code>`.
+Durante este sprint se avanzó significativamente en la `<strong>`documentación de los servicios web (REST API)`</strong>` del sistema `<em>`Restock `</em>`, cubriendo los módulos de `<strong>`Profiles `</strong>`, `<strong>`Recipes `</strong>`, `<strong>`Batches `</strong>` y `<strong>`Authentication `</strong>`.
+La documentación se generó utilizando `<strong>`OpenAPI (Swagger)`</strong>` y fue validada mediante peticiones reales desde el entorno de desarrollo (`<em>`localhost `</em>` y Railway).
+Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP `<code>`GET `</code>`, `<code>`POST `</code>`, `<code>`PUT `</code>` y `<code>`DELETE `</code>`.
 
-A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documentados`</strong>`, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documentados `</strong>`, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
 
 <table>
   <thead>
@@ -531,8 +588,8 @@ A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documen
   </tbody>
 </table>
 
-Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (`<em>`Railway`</em>`).
-Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-backend" target="_blank">`https://github.com/Jahazielgg/restock-backend`</a>`
+Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (`<em>`Railway `</em>`).
+Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-backend" target="_blank">`https://github.com/Jahazielgg/restock-backend `</a>`
 Últimos commits relacionados con documentación:
 
 <ul>
@@ -604,13 +661,3 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
-
-**Herramientas y Recursos para Validación**
-
-Formato de Evaluación Heurística: Se aplicarán los 10 principios heurísticos de Nielsen en cada sesión.
-Instrumento de observación: Lista de verificación + sección de notas abiertas.
-Grabación de pantalla y voz: previa autorización, para análisis posterior.
-
-### 4.3.2. Registro de Entrevistas
-
-### 4.3.3. Evaluaciones según heurísticas
