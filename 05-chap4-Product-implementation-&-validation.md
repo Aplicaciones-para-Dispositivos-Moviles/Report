@@ -21,6 +21,111 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 
 ### 4.1.2. Source Code Management
 
+#### Frontend (Landing Page - HTML, CSS, JavaScript)
+
+##### Convenciones generales:
+
+- **Idioma**: Todo el código, incluyendo nombres de variables, funciones y clases, está escrito en **inglés**.
+- **Indentación**: 2 espacios.
+- **Formato de archivos**: `.html`, `.css`, `.js`
+- **Estilo de código adoptado**:
+  - [W3Schools HTML Style Guide](https://www.w3schools.com/html/html5_syntax.asp)
+  - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
+
+##### Nomenclatura:
+
+- **Clases CSS**: `kebab-case` (ej. `main-container`)
+- **IDs HTML**: `camelCase` (ej. `mainContent`)
+- **Variables JS**: `camelCase` (ej. `userName`)
+- **Funciones JS**: `camelCase` (ej. `handleClick()`)
+
+#### Backend (Java + Spring Boot)
+
+##### Convenciones generales:
+
+- **Idioma**: Código y documentación interna en **inglés**.
+- **Indentación**: 4 espacios.
+- **Formato de archivos**: `.java`
+
+##### Estilo de código adoptado:
+
+- [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+- [Spring Boot Features &amp; Best Practices](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html)
+
+##### Nomenclatura:
+
+- **Clases**: `PascalCase` (ej. `UserService`)
+- **Variables**: `camelCase` (ej. `userRepository`)
+- **Constantes**: `UPPER_SNAKE_CASE` (ej. `MAX_USERS`)
+- **Endpoints**: `kebab-case` para URLs (ej. `/api/user-profile`)
+- **Paquetes**: Todo en minúsculas y separados por punto (ej. `com.project.backend.controller`)
+
+#### Mobile Frontend (Android Studio + Kotlin)
+
+##### Convenciones generales:
+
+- **Idioma**: Todo el código (nombres de paquetes, clases, variables, funciones, recursos) en **inglés**.  
+- **Indentación**: 4 espacios.  
+- **Formato de archivos**: `.kt` para Kotlin, `.xml` para layouts/resources, `build.gradle` / `build.gradle.kts` para scripts de Gradle.  
+- **Estilo de código adoptado**:  
+  - [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html)  
+  - [Android Kotlin Style Guide (Google)](https://developer.android.com/kotlin/style-guide)  
+- **Comportamiento asíncrono**: Usar **Kotlin Coroutines** y `suspend` functions para llamadas de red/IO; preferir **StateFlow** / **SharedFlow** o `LiveData` para exponer estados desde ViewModels.
+
+##### Nomenclatura:
+
+- **Packages**: todo en minúsculas y con puntos (`com.project.restock.admin`).  
+- **Clases / Activities / ViewModels / Repositories**: `PascalCase` (ej. `InventoryViewModel`, `SuppliesRepository`).  
+- **Funciones y propiedades**: `camelCase` (ej. `fetchSupplies()` , `userId`).  
+- **Constantes**: `UPPER_SNAKE_CASE` (ej. `API_TIMEOUT_SECONDS`).  
+- **Composables (Jetpack Compose)**: `PascalCase` preferible y con sufijos claros cuando aplique (ej. `LoginScreen`, `SupplyItem`).  
+- **Archivos Kotlin**: `PascalCase` para clases (ej. `InventoryViewModel.kt`) o `snake_case` para ficheros que agrupen múltiples composables/pantallas (ej. `login_screen.kt`) según convención del equipo.  
+- **IDs y recursos (drawable, layout, string, color, dimens)**: `lowercase_snake_case` (ej. `activity_main.xml` → `@+id/btn_login`, `ic_supply_placeholder`, `color_primary`).  
+- **Nombres de layouts XML**: `lowercase_snake_case` con prefijos si aplica (ej. `activity_main.xml`, `fragment_recipe_list.xml`, `item_supply.xml`).  
+- **Nombres de pruebas**: sufijo `Test` para unit/instrumented tests (ej. `InventoryViewModelTest`).
+
+##### Archivos y recursos:
+
+- **Kotlin**: `.kt` (packages, ViewModels, Repositories, UseCases, Mappers).  
+- **Layouts**: `.xml` (si no se usa Compose) en `res/layout/`.  
+- **Drawables**: `res/drawable/` → `lowercase_snake_case`.  
+- **Strings**: `res/values/strings.xml` → keys en `lowercase_snake_case`.  
+- **Colors / Dimens / Styles**: `res/values/colors.xml`, `dimens.xml`, `styles.xml` → variables en `lowercase_snake_case`.  
+- **Build scripts**: `build.gradle` o `build.gradle.kts` (módulo/app) con dependencias centralizadas.
+
+##### Arquitectura y patrones recomendados:
+
+- **Arquitectura**: MVVM (View — ViewModel — Repository) o MVI/Unidirectional UI (usando StateFlow) según preferencia del equipo.  
+- **Repository pattern**: separar acceso a datos (remote/local) y exponer modelos de dominio al ViewModel.  
+- **Use Cases / Interactors**: opcionalmente encapsular la lógica de negocio en casos de uso reutilizables.  
+- **Networking**: usar Retrofit + OkHttp + Moshi/Gson para serialización. Utilizar interceptors para auth/token.  
+- **Persistencia local**: Room para almacenamiento local (caches, offline support).  
+- **Asincronía**: Kotlin Coroutines + Flow / StateFlow para streams y estados reactivos.  
+- **State handling**: usar sealed classes o data classes para representar estados UI (Loading / Success / Error / Empty).  
+- **Navigation**: Jetpack Navigation Component (Fragments) o Navigation for Compose según stack elegido.
+
+##### Buenas prácticas y recomendaciones:
+
+- **Código en inglés**: mensajes de commit, comentarios y nombres en inglés.  
+- **Suspension naming**: `suspend` functions con nombres verbales claros (`suspend fun fetchSupplies()`).  
+- **Error handling**: envolver llamadas de red en `Result`/`Either` o usar patrones claros para propagar errores al UI.  
+- **UI/UX**: manejar estados (loading, empty, error) en cada pantalla; mostrar mensajes claros para usuarios de restaurantes.  
+- **Testing**: escribir unit tests para ViewModels y repositorios; usar instrumented tests para flujos críticos.  
+- **Linting & formatting**: integrar `ktlint` y `detekt` en el pipeline; configurar `editorconfig` y `pre-commit hooks`.  
+- **Seguridad**: no guardar tokens en texto plano; usar `EncryptedSharedPreferences` o soluciones seguras.  
+- **Accesibilidad**: labels de contentDescription en imágenes, contrastes adecuados y soporte para tamaños de texto.
+
+##### Herramientas / linters / utilidades:
+
+- **Ktlint** (formato y reglas de estilo).  
+- **Detekt** (análisis estático).  
+- **Android Lint** (recomendaciones Android).  
+- **Retrofit + OkHttp + Moshi/Gson** (networking).  
+- **Room** (persistencia local).  
+- **Jetpack Compose** (opcional para UI moderna) o XML + ViewBinding/Databinding.  
+- **Coroutines + Lifecycle (ViewModelScope)**.  
+- **Navigation Component** (navegación entre pantallas).
+
 ### 4.1.3. Source Code Style Guide & Conventions
 
 #### Mobile Frontend (Kotlin + Android Studio + Jetpack Compose)
