@@ -71,7 +71,7 @@ Para el desarrollo del **Project Report**, el equipo utiliza un repositorio dent
   - Piero Hugo Elescano León (`PieroHugo`)  
 - La actividad se distribuyó en ramas temáticas por secciones del informe, asegurando revisiones cruzadas mediante *pull requests*.  
 
-## TB1 - Informe inicial (Semana 4)
+## TB1 - Informe inicial - (Semana 4)
 
 Durante esta fase, el equipo elaboró el **informe inicial**, que incluyó los siguientes aspectos:  
 
@@ -92,6 +92,34 @@ Durante esta fase, el equipo elaboró el **informe inicial**, que incluyó los s
 
 La colaboración fue activa y equitativa, con aportes sustanciales de todos los integrantes en la redacción y organización del informe.  
 
+
+## TP1 – Desarrollo del Informe, Landing Page, Backend y Aplicación Móvil (Sprint 1) - (Semana 7)
+
+Durante este sprint, el equipo concentró sus esfuerzos en la construcción y documentación integral de los tres productos principales del proyecto: la **Landing Page**, el **Backend** y la **Aplicación Móvil**. De forma paralela, se avanzó en la elaboración del **Project Report**, incorporando nuevas secciones y consolidando el contenido técnico correspondiente al Sprint 1.
+
+La **Landing Page** se desarrolló utilizando **HTML5**, **CSS3** y **JavaScript**, aplicando principios de diseño responsivo y buenas prácticas de accesibilidad. Se realizaron mejoras visuales y estructurales respecto al entregable anterior, optimizando la carga y adaptabilidad para distintos dispositivos.
+
+En el **Backend**, implementado con **Java Spring Boot** y migrado a **MongoDB**, se construyeron y validaron los principales *endpoints* de los *bounded contexts* del sistema: gestión de recursos, recetas, órdenes y perfiles. También se revisó la documentación de servicios y la configuración del entorno de desarrollo para reflejar el nuevo modelo de persistencia.
+
+Por su parte, la **Aplicación Móvil** se desarrolló en **Android Studio** con **Kotlin**, priorizando las pantallas core para el administrador de restaurantes, como *Supplies*, *Recipes* y *Sales*. Estas interfaces se diseñaron siguiendo los lineamientos del prototipo UX/UI y se integraron con el backend para garantizar la funcionalidad de los flujos principales.
+
+En cuanto al **Project Report**, se incluyeron los siguientes apartados requeridos para esta entrega:
+- **Capítulo III: Solution UI/UX Design**, donde se documentaron las guías de estilo, arquitectura de información y diseño de las aplicaciones web y móvil.  
+- **Capítulo IV: Product Implementation & Validation**, que detalla la configuración del entorno de desarrollo, gestión de código, planificación del sprint y evidencias de implementación.  
+- Además, se añadieron las secciones de **Conclusiones**, **Bibliografía** y **Anexos**, completando la estructura formal del informe para el *Stage Review*.  
+
+El trabajo del informe se mantuvo sincronizado con el avance técnico, documentando la estructura de carpetas, decisiones de arquitectura y convenciones de código adoptadas. La colaboración se organizó mediante *commits* individuales y revisiones cruzadas de *pull requests* en GitHub, con comunicación constante por Discord y reuniones breves para validación de avances.
+
+![Colaboraciones TP1](assets/images/ci-tp1.png)
+
+- **Julio Castro Alejos (`JulioXC4`)**: 13 commits
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 18 commits
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 12 commits
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 22 commits 
+- **Piero Hugo Elescano León (`PieroHugo`)**: 20 commits
+- **Total de commits en TP1:** 85 
+
+Este nivel de colaboración refleja una participación activa y equilibrada del equipo, con responsabilidades bien distribuidas entre el desarrollo técnico y la documentación del informe. El trabajo coordinado permitió consolidar una base sólida para los siguientes sprints y el despliegue completo de los productos.
 
 ## Herramientas colaborativas utilizadas
 
