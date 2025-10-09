@@ -4,6 +4,21 @@
 
 ### 4.1.1. Software Development Environment Configuration
 
+A continuación, se listan las herramientas y estándares adoptados por el equipo para el desarrollo colaborativo del sistema:
+
+| Actividad               | Herramienta / Guía                                    | Propósito                                                     | Tipo de acceso / Ruta                                                                                                                 |
+| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                      | [https://trello.com/](https://trello.com/)                                                                                               |
+| Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then.   | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                   |
+| Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                               | SaaS –[https://figma.com](https://figma.com)                                                                                            |
+| Frontend Dev            | Kotlin, Flutter                                        | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/                                                                                       |
+| Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                           | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                         |
+| IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                             | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
+| Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                     | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                               |
+| Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                          |
+| Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.       | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                |
+| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                        |
+
 ### 4.1.2. Source Code Management
 
 ### 4.1.3. Source Code Style Guide & Conventions
@@ -70,30 +85,34 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 
 #### 1. Landing Page - HTML, CSS y JavaScript
 
-**Tecnología Base:**  
-- Lenguajes: HTML5, CSS3, JavaScript  
+**Tecnología Base:**
+
+- Lenguajes: HTML5, CSS3, JavaScript
 - Hosting: GitHub Pages
 
-**Configuración y Despliegue:**  
+**Configuración y Despliegue:**
+
 - El código fuente se aloja en un repositorio público de GitHub.
 - El archivo `index.html` debe encontrarse en la raíz del repositorio para que GitHub Pages lo detecte como punto de entrada.
 - Para desplegar la Landing Page, se siguen los siguientes pasos:
-    1. Acceder al repositorio en GitHub.
-    2. Continuar con la sección **Settings** > **Pages**.
-    3. En **Source**, se selecciona la rama principal (`main`) y la carpeta raíz (`/`).
-    4. Se procede a guardar los cambios realizados.  
+  1. Acceder al repositorio en GitHub.
+  2. Continuar con la sección **Settings** > **Pages**.
+  3. En **Source**, se selecciona la rama principal (`main`) y la carpeta raíz (`/`).
+  4. Se procede a guardar los cambios realizados.
 - GitHub Pages genera automáticamente una URL pública con el formato `https://<organizacion>.github.io/<repositorio>/` donde el sitio estará disponible.
 - Cada vez que se realiza un commit en la rama `main`, GitHub Pages actualiza de forma automática la versión publicada.
 
 #### 2. Aplicación Móvil - Android (Kotlin + Android Studio)
 
-**Tecnología Base:**  
-- Lenguaje: Kotlin  
-- Framework: Android Studio + Jetpack Compose  
-- Distribución: APK (Android Package)  
+**Tecnología Base:**
+
+- Lenguaje: Kotlin
+- Framework: Android Studio + Jetpack Compose
+- Distribución: APK (Android Package)
 - Hosting de pruebas: Firebase App Distribution
 
-**Configuración y Despliegue:**  
+**Configuración y Despliegue:**
+
 - El código fuente se gestiona en un repositorio de GitHub.
 - Para la generación de versiones de prueba, se debe compilo el proyecto en Android Studio (`Build > Generate Signed APK`) y se verifico el funcionamiento de la aplicación en dispositivos físicos o emuladores Android.
 - El archivo APK generado se sube a Firebase App Distribution, permitiendo el testeo con usuarios internos y externos seleccionados antes de su publicación oficial.
@@ -102,14 +121,16 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 
 #### 3. Backend - Java + MongoDB
 
-**Tecnología Base:**  
+**Tecnología Base:**
+
 - Framework: Spring Boot
 - Lenguaje: Java 21
-- Base de datos: MongoDB 
+- Base de datos: MongoDB
 - Contenedorización: Docker
 - Hosting: Render o servicio equivalente
 
-**Configuración y Despliegue:**  
+**Configuración y Despliegue:**
+
 - El backend está estructurado según el enfoque de Domain-Driven Design (DDD), dividiendo el sistema en bounded contexts independientes.
 - El código fuente se mantiene en un repositorio de GitHub.
 - Para el despliegue, el repositorio incluye un archivo `Dockerfile` que define la imagen de la aplicación.
@@ -335,16 +356,15 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 <p><strong>Enlace al repositorio:</strong>  
 <a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</a></p>
 
-
 #### 4.2.1.5. Execution Evidence for Sprint Review
 
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
 
-Durante este sprint se avanzó significativamente en la <strong>documentación de los servicios web (REST API)</strong> del sistema <em>Restock</em>, cubriendo los módulos de <strong>Profiles</strong>, <strong>Recipes</strong>, <strong>Batches</strong> y <strong>Authentication</strong>.  
-La documentación se generó utilizando <strong>OpenAPI (Swagger)</strong> y fue validada mediante peticiones reales desde el entorno de desarrollo (<em>localhost</em> y Railway).  
-Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP <code>GET</code>, <code>POST</code>, <code>PUT</code> y <code>DELETE</code>.
+Durante este sprint se avanzó significativamente en la `<strong>`documentación de los servicios web (REST API)`</strong>` del sistema `<em>`Restock`</em>`, cubriendo los módulos de `<strong>`Profiles`</strong>`, `<strong>`Recipes`</strong>`, `<strong>`Batches`</strong>` y `<strong>`Authentication`</strong>`.
+La documentación se generó utilizando `<strong>`OpenAPI (Swagger)`</strong>` y fue validada mediante peticiones reales desde el entorno de desarrollo (`<em>`localhost`</em>` y Railway).
+Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP `<code>`GET`</code>`, `<code>`POST`</code>`, `<code>`PUT`</code>` y `<code>`DELETE`</code>`.
 
-A continuación, se presenta la tabla resumen de los <strong>Endpoints documentados</strong>, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documentados`</strong>`, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
 
 <table>
   <thead>
@@ -511,15 +531,15 @@ A continuación, se presenta la tabla resumen de los <strong>Endpoints documenta
   </tbody>
 </table>
 
-Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (<em>Railway</em>).  
-Repositorio de Web Services: <a href="https://github.com/Jahazielgg/restock-backend" target="_blank">https://github.com/Jahazielgg/restock-backend</a>  
-Últimos commits relacionados con documentación:  
+Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (`<em>`Railway`</em>`).
+Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-backend" target="_blank">`https://github.com/Jahazielgg/restock-backend`</a>`
+Últimos commits relacionados con documentación:
+
 <ul>
   <li><code>58dcfa1</code> – Update OpenAPI definitions for Profiles and Recipes</li>
   <li><code>7b23a64</code> – Add Batches endpoints to Swagger spec</li>
   <li><code>c91bde4</code> – Improve schema examples for Authentication</li>
 </ul>
-
 
 #### 4.2.1.7. Software Deployment Evidence for Sprint Review
 
@@ -584,40 +604,6 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
-  
-  <tr>
-    <td>Segmento 2: Proveedores de Restaurantes</td>
-    <td>
-      <ul>
-        <li>Claridad del valor en el Landing Page.</li>
-        <li>Gestión de catálogo de productos.</li>
-        <li>Eliminación de insumos no disponibles.</li>
-        <li>Revisión de pedidos realizados por restaurantes.</li>
-        <li>Interacción con comentarios recibidos.</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>Suscripción y pago.</li>
-        <li>Registro y gestión de productos en el catálogo.</li>
-        <li>Eliminación de insumos.</li>
-        <li>Gestión de órdenes recibidas.</li>
-        <li>Panel principal del proveedor.</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>Explorar el Landing Page y describir su comprensión del producto.</li>
-        <li>Simular el proceso de registro y suscripción.</li>
-        <li>Ingresar al sistema y registrar productos en su catálogo.</li>
-        <li>Eliminar productos del catálogo.</li>
-        <li>Revisar pedidos recibidos de restaurantes.</li>
-        <li>Comentar sobre la utilidad de la interfaz de pedidos y feedback.</li>
-      </ul>
-    </td>
-  </tr>
-  </tbody>
-</table>
 
 **Herramientas y Recursos para Validación**
 

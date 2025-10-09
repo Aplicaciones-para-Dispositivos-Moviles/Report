@@ -116,6 +116,26 @@ Se ha priorizado la claridad semántica y la coherencia con el lenguaje visual d
 - **My Products:** Catálogo editable con los productos que el proveedor ofrece. Incluye nombre, precio y stock.
 - **Sales History:** Registro de pedidos completados. Permite consultar por fechas o restaurante.
 
+**Aplicación Móvil – Administradores de Restaurantes**
+
+* **Home:** Pantalla principal con resumen rápido de stock, alertas y accesos directos a funciones clave.
+* **Stock:** Listado de insumos registrados. Muestra cantidades, fechas, vencimientos y permite edición rápida.
+* **Buy:** Registro de compras y agregados de nuevos insumos. Consulta historial de compras.
+* **Suppliers Orders:** Generación y seguimiento de pedidos a proveedores.
+* **Alerts:** Notificaciones de stock crítico, vencimientos y anomalías de consumo.
+* **Menu:** Registro de platos y vinculación con insumos para calcular consumo y optimizar compras.
+* **Reports:** Acceso rápido a reportes resumidos de consumo, compras y desempeño operativo.
+* **Profile:** Gestión de información del restaurante y configuración de notificaciones.
+
+**Aplicación Móvil – Proveedores**
+
+* **Home:** Resumen de pedidos recientes, stock disponible y alertas importantes.
+* **Orders:** Lista de órdenes recibidas de restaurantes con estado y detalles de entrega.
+* **Catalog:** Gestión del catálogo de productos ofrecidos, incluyendo precio, stock y descripción.
+* **Sales:** Historial de ventas completadas, filtrable por fecha o restaurante.
+* **Alerts:** Notificaciones de nuevos pedidos, cambios de estado o incidencias.
+* **Profile:** Información del proveedor y configuración de contacto y notificaciones.
+
 #### 3.1.2.3. SEO Tags and Meta Tags
 
 **1. Landing Page**
@@ -811,10 +831,7 @@ Cada Wireflow Diagram representa el recorrido visual e interactivo que realiza e
   </tr>
 </table>
 
-
 #### 3.1.4.3. Mobile Applications Mock-ups
-
-
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
