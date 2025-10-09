@@ -600,6 +600,63 @@ Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-bac
 
 #### 4.2.1.7. Software Deployment Evidence for Sprint Review
 
+Durante este Sprint, se realizaron actividades de despliegue de la Landing Page utilizando GitHub Pages como plataforma de hosting. A continuación, se detallan los pasos ejecutados:
+
+**1- Se accedió a la sección Settings del repositorio.**
+
+Dentro de Pages, se seleccionó la rama (main o master) y la carpeta (root o /docs) desde la cual GitHub Pages debía publicar el sitio.
+Se guardaron los cambios para activar la publicación automática.
+
+![Foto deployment step 1](assets/images/cap4/sprint1/step-1.png)
+
+2- Por default ya esta activado el https
+
+![Foto deployment step 2](assets/images/cap4/sprint1/step-2.png)
+
+3- En la seccion "All workflows" se puede ver que la app se esta desplegando.
+
+![Foto deployment step 3](assets/images/cap4/sprint1/step-3.png)
+
+4- Se obtuvo y verificó la URL pública proporcionada por GitHub Pages.
+
+![Foto deployment step 4](assets/images/cap4/sprint1/step-4.png)
+
+Link del landing page desplegado:
+
+A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
+
+1. **Conexión del repositorio con Railway** : Se creó un nuevo proyecto en Railway y se conectó directamente el repositorio del backend desde GitHub.
+
+   ![Evidence Step 1](assets/images/cap4/sprint1/evidence-step1.jpeg)
+2. **Selección de rama principal (`main`)**En la configuración del proyecto, se seleccionó la rama `main` como predeterminada para realizar el despliegue continuo.
+
+   ![Evidence Step 2](assets/images/cap4/sprint1/evidence-step2.jpeg)
+3. **Adición de base de datos al proyecto**Desde la opción "Add Plugin" en Railway, se añadió un servicio de base de datos para el proyecto.
+
+   ![Evidence Step 3](assets/images/cap4/sprint1/evidence-step3.jpeg)
+4. **Selección del tipo de base de dato** Se seleccionó el motor de base de datos **MongoDB**.
+
+   ![Evidence Step 4](assets/images/cap4/sprint1/evidence-step4.jpeg)
+5. **Despliegue de imagen MongoDB** Railway desplegó automáticamente una instancia de base de datos con sus credenciales correspondientes.
+
+   ![Evidence Step 5](assets/images/cap4/sprint1/evidence-step5.jpeg)
+6. **Obtención y configuración de credenciales**Se copiaron las credenciales de conexión (usuario, contraseña, host, puerto y nombre de base de datos) y se unificaron en una sola variable de entorno tipo `SPRING_DATASOURCE_URL`.
+
+   ![Evidence Step 6](assets/images/cap4/sprint1/evidence-step6.jpeg)
+7. **Habilitación del link Swagger en la configuración**En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
+
+   ![Evidence Step 7](assets/images/cap4/sprint1/evidence-step7.jpeg)
+8. **Creación de variables de entorno en Railway**Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Railway.
+
+   ![Evidence Step 8](assets/images/cap4/sprint1/evidence-step8.jpeg)
+9. **Despliegue del proyecto**Railway ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
+
+   ![Evidence Step 9](assets/images/cap4/sprint1/evidence-step9.jpeg)
+10. **Verificación con Swagger**
+    Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
+
+   ![Evidence Step 10](assets/images/cap4/sprint1/evidence-step10.jpeg)
+
 #### 4.2.1.8. Team Collaboration Insights during Sprint
 
 ## 4.3. Validation Interviews
