@@ -152,6 +152,63 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 
 #### 4.2.1.1. Sprint Planning 1
 
+<table>
+  <tr>
+    <td>Sprint #</td>
+    <td>Sprint 1</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Planning Background</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>2025-09-25</td>
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td>08:00 pm (GMT-5)</td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>Modalidad remota mediante la plataforma Discord</td>
+  </tr>
+  <tr>
+    <td>Prepared By</td>
+    <td>Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Attendees (to planning meeting)</td>
+    <td>.Castro Alejos, Julio / Elescano Leon, Piero Hugo / Guerra Perez, José Jahaziel / Julca  Minaya, Sergio Gino / Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Sprint 0 Review Summary</td>
+    <td>Dado que este es el sprint inicial, no se presenta un resumen del sprint anterior.</td>
+  </tr>
+  <tr>
+    <td>Sprint 0 Retrospective Summary</td>
+    <td>Dado que este es el sprint inicial, no se presenta una retroalimentación del sprint anterior.</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Goal & User Stories</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Goal</td>
+    <td>Nuestro enfoque está en presentar de forma efectiva nuestra propuesta de valor y e información detallada del producto a los nuevos visitantes. Además, habilitar funcionalidades clave para los administradores de restaurantes, como la gestión de inventario, la configuración de perfil, la gestión de recetas y la sección de ventas. Asimismo, en proporcionar puntos de acceso mediante el API de la plataforma, con el objetivo de que los desarrolladores frontend puedan integrar funcionalidades relacionadas con autenticación, perfil, inventario, recetas y ventas dentro de la app.
+Creemos que esto ofrece mayor confianza hacia el equipo de trabajo y motiva a los visitantes a registrarse y probar el producto. Del mismo modo, mejora la eficiencia operativa de los administradores de restaurantes al facilitar la creación y gestión de ventas e insumos desde la aplicación móvil. Además, permite a los desarrolladores frontend implementar funcionalidades esenciales de forma más eficiente, incluyendo autenticación, inventario, ventas, recetas y perfil. 
+Esto se confirmará cuando aumente la cantidad de visitantes que se registren en la plataforma. Del mismo modo, cuando se incremente la cantidad de ventas e insumos que registran administradores de restaurantes en la plataforma. Por último, cuando los desarrolladores frontend aumenten la cantidad de funcionalidades relacionadas con ventas, recetas, inventario y perfil en la app móvil.</td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Velocity</td>
+    <td>35</td>
+  </tr>
+  <tr>
+    <td>Sum of Story Points</td>
+    <td>35</td>
+  </tr>
+</table>
+
 #### 4.2.1.2. Sprint Backlog 1
 
 #### 4.2.1.3. Development Evidence for Sprint Review
@@ -360,11 +417,11 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
 
-Durante este sprint se avanzó significativamente en la `<strong>`documentación de los servicios web (REST API)`</strong>` del sistema `<em>`Restock`</em>`, cubriendo los módulos de `<strong>`Profiles`</strong>`, `<strong>`Recipes`</strong>`, `<strong>`Batches`</strong>` y `<strong>`Authentication`</strong>`.
-La documentación se generó utilizando `<strong>`OpenAPI (Swagger)`</strong>` y fue validada mediante peticiones reales desde el entorno de desarrollo (`<em>`localhost`</em>` y Railway).
-Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP `<code>`GET`</code>`, `<code>`POST`</code>`, `<code>`PUT`</code>` y `<code>`DELETE`</code>`.
+Durante este sprint se avanzó significativamente en la `<strong>`documentación de los servicios web (REST API)`</strong>` del sistema `<em>`Restock `</em>`, cubriendo los módulos de `<strong>`Profiles `</strong>`, `<strong>`Recipes `</strong>`, `<strong>`Batches `</strong>` y `<strong>`Authentication `</strong>`.
+La documentación se generó utilizando `<strong>`OpenAPI (Swagger)`</strong>` y fue validada mediante peticiones reales desde el entorno de desarrollo (`<em>`localhost `</em>` y Railway).
+Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP `<code>`GET `</code>`, `<code>`POST `</code>`, `<code>`PUT `</code>` y `<code>`DELETE `</code>`.
 
-A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documentados`</strong>`, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documentados `</strong>`, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
 
 <table>
   <thead>
@@ -531,8 +588,8 @@ A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documen
   </tbody>
 </table>
 
-Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (`<em>`Railway`</em>`).
-Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-backend" target="_blank">`https://github.com/Jahazielgg/restock-backend`</a>`
+Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (`<em>`Railway `</em>`).
+Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-backend" target="_blank">`https://github.com/Jahazielgg/restock-backend `</a>`
 Últimos commits relacionados con documentación:
 
 <ul>
@@ -542,6 +599,63 @@ Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-bac
 </ul>
 
 #### 4.2.1.7. Software Deployment Evidence for Sprint Review
+
+Durante este Sprint, se realizaron actividades de despliegue de la Landing Page utilizando GitHub Pages como plataforma de hosting. A continuación, se detallan los pasos ejecutados:
+
+**1- Se accedió a la sección Settings del repositorio.**
+
+Dentro de Pages, se seleccionó la rama (main o master) y la carpeta (root o /docs) desde la cual GitHub Pages debía publicar el sitio.
+Se guardaron los cambios para activar la publicación automática.
+
+![Foto deployment step 1](assets/images/cap4/sprint1/step-1.png)
+
+2- Por default ya esta activado el https
+
+![Foto deployment step 2](assets/images/cap4/sprint1/step-2.png)
+
+3- En la seccion "All workflows" se puede ver que la app se esta desplegando.
+
+![Foto deployment step 3](assets/images/cap4/sprint1/step-3.png)
+
+4- Se obtuvo y verificó la URL pública proporcionada por GitHub Pages.
+
+![Foto deployment step 4](assets/images/cap4/sprint1/step-4.png)
+
+Link del landing page desplegado:
+
+A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
+
+1. **Conexión del repositorio con Railway** : Se creó un nuevo proyecto en Railway y se conectó directamente el repositorio del backend desde GitHub.
+
+   ![Evidence Step 1](assets/images/cap4/sprint1/evidence-step1.jpeg)
+2. **Selección de rama principal (`main`)**En la configuración del proyecto, se seleccionó la rama `main` como predeterminada para realizar el despliegue continuo.
+
+   ![Evidence Step 2](assets/images/cap4/sprint1/evidence-step2.jpeg)
+3. **Adición de base de datos al proyecto**Desde la opción "Add Plugin" en Railway, se añadió un servicio de base de datos para el proyecto.
+
+   ![Evidence Step 3](assets/images/cap4/sprint1/evidence-step3.jpeg)
+4. **Selección del tipo de base de dato** Se seleccionó el motor de base de datos **MongoDB**.
+
+   ![Evidence Step 4](assets/images/cap4/sprint1/evidence-step4.jpeg)
+5. **Despliegue de imagen MongoDB** Railway desplegó automáticamente una instancia de base de datos con sus credenciales correspondientes.
+
+   ![Evidence Step 5](assets/images/cap4/sprint1/evidence-step5.jpeg)
+6. **Obtención y configuración de credenciales**Se copiaron las credenciales de conexión (usuario, contraseña, host, puerto y nombre de base de datos) y se unificaron en una sola variable de entorno tipo `SPRING_DATASOURCE_URL`.
+
+   ![Evidence Step 6](assets/images/cap4/sprint1/evidence-step6.jpeg)
+7. **Habilitación del link Swagger en la configuración**En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
+
+   ![Evidence Step 7](assets/images/cap4/sprint1/evidence-step7.jpeg)
+8. **Creación de variables de entorno en Railway**Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Railway.
+
+   ![Evidence Step 8](assets/images/cap4/sprint1/evidence-step8.jpeg)
+9. **Despliegue del proyecto**Railway ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
+
+   ![Evidence Step 9](assets/images/cap4/sprint1/evidence-step9.jpeg)
+10. **Verificación con Swagger**
+    Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
+
+   ![Evidence Step 10](assets/images/cap4/sprint1/evidence-step10.jpeg)
 
 #### 4.2.1.8. Team Collaboration Insights during Sprint
 
@@ -604,13 +718,3 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
-
-**Herramientas y Recursos para Validación**
-
-Formato de Evaluación Heurística: Se aplicarán los 10 principios heurísticos de Nielsen en cada sesión.
-Instrumento de observación: Lista de verificación + sección de notas abiertas.
-Grabación de pantalla y voz: previa autorización, para análisis posterior.
-
-### 4.3.2. Registro de Entrevistas
-
-### 4.3.3. Evaluaciones según heurísticas
