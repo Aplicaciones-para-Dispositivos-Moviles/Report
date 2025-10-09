@@ -877,6 +877,64 @@ A continuación, se detallan los pasos realizados para asegurar el funcionamient
 
 #### 4.2.1.8. Team Collaboration Insights during Sprint
 
+#### Landing Page
+
+Durante el desarrollo de la Landing Page se aplicaron prácticas de colaboración que facilitaron la entrega de un front público coherente y responsivo. A continuación se detallan las prácticas aplicadas:
+ 
+- Las tareas se distribuyeron por secciones (Hero, Funcionalidades, Casos de uso, CTA, Contacto) y cada sección quedó asignada a un responsable para acelerar la implementación.  
+- Se realizaron **commits frecuentes y atómicos** con mensajes descriptivos para facilitar revisiones y trazabilidad.  
+- Las integraciones se realizaron mediante *pull requests* hacia `develop` y se exigió una revisión mínima por otro miembro antes del merge.  
+- La comunicación se coordinó principalmente vía **Discord** y registros de decisiones quedaron documentados en el canal y en el README del submódulo.  
+- Se emplearon revisiones visuales en distintos tamaños de pantalla y se ordenaron los assets en `assets/landing/`
+
+##### **Analíticos de colaboración — Landing Page**
+
+![Landing Collaboration](assets/images/cap4/collaboration/landing_ci_1.png)
+
+- Total de commits (Landing Page): **14**  
+- Total de autores contribuyentes: **5**  
+- Total de *pull requests* relacionadas: **12**  
+- Observación: actividad concentrada en diseño inicial y ajustes de responsividad.
+
+#### Backend (API)
+
+El desarrollo del Backend siguió un flujo de trabajo enfocado en estabilidad y pruebas, garantizando que los endpoints core quedasen documentados y testeados:
+
+- Se trabajó por dominios funcionales creando ramas temáticas como `feature/auth`, `feature/resources`, `feature/monitoring` para permitir despliegue paralelo y revisiones independientes.  
+- Se usó Swagger como fuente de verdad para la documentación de endpoints; las colecciones se actualizaron junto con los cambios en código.  
+- Commits atómicos y PRs con descripciones técnicas claras permitieron revisiones eficaces por pares (covering: controllers/services).  
+- Pruebas unitarias básicas y logs de integración se incluyeron en los PRs para facilitar el QA.  
+- Se definieron responsables por Bounded Context para planificar la migración a MongoDB y minimizar riesgos durante el cambio de persistencia.
+
+##### **Analíticos de colaboración — Backend**
+
+![Backend Collaboration](assets/images/cap4/collaboration/backend_ci_1.png)
+
+- Total de commits (Backend): **67**  
+- Total de autores contribuyentes: **5**  
+- Total de *pull requests* relacionadas: **2**  
+- Endpoints documentados en Postman/Swagger: **28**  
+- Observación: respaldo sólido de pruebas y documentación para facilitar la futura migración de BD.
+
+#### Aplicación Móvil (Android)
+
+La colaboración en el módulo móvil se orientó a entregar pantallas core integradas con el backend y a mantener buena cohesión entre diseño y desarrollo:
+
+- Ramas `feature/*` por pantalla (resource, recipes, sales) para aislar cambios y facilitar PRs pequeños y revisables.  
+- Se adoptó MVVM y convenciones de Kotlin en todo el módulo; los PRs incluyeron ejemplos de ViewModel y pruebas unitarias cuando fue posible.  
+- Coordinación continua con los responsables del backend para definir contratos (DTOs/JSON) y evitar retrabajo.  
+- Commits regulares con mensajes que enlazaban a issues/tickets de la planificación del sprint.  
+- Builds y APKs parciales compartidos en el canal de releases para revisión de UX y pruebas manuales.
+
+##### **Analíticos de colaboración — Mobile**
+
+![Mobile Collaboration](assets/images/cap4/collaboration/mobile_ci_1.png)
+
+- Total de commits (Mobile): **x**  
+- Total de autores contribuyentes: **x**  
+- Total de *pull requests* relacionadas: **x**  
+- Pantallas core implementadas: **5**  
+
 ## 4.3. Validation Interviews
 
 ### 4.3.1. Diseño de Entrevistas
