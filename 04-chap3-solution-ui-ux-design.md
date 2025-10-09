@@ -935,3 +935,13 @@ El proveedor cuenta con una sección dedicada a la gestión de las órdenes real
 ![Mobile User Flow 12](assets/images/cap4/mobile_ug12.png)
 
 #### 3.1.4.5. Mobile Applications Prototyping
+
+En cuanto a la arquitectura de información, el prototipo móvil de RESTOCK emplea una navegación jerárquica clara, acompañada de flujos secuenciales en procesos clave como el registro de compras y la creación de recetas. También se definieron etiquetas intuitivas, categorías adaptadas a cada tipo de usuario y herramientas de búsqueda que facilitan una interacción fluida y dirigida.
+
+Asimismo, se implementaron interacciones responsivas (como estados active), validaciones visuales en formularios y retroalimentaciones inmediatas ante las acciones del usuario. Estos elementos garantizan que tanto el acceso a la información como la ejecución de tareas se realicen de forma eficiente y adaptada al contexto móvil.
+
+Además, se grabó un video donde se explican los principales flujos de interacción del prototipo móvil, mostrando cómo las decisiones de diseño se reflejan en la experiencia del usuario.
+
+![Mobile User Flow 12](assets/images/cap3/mobile/mobile-app-prototyping.png)
+
+Mobile Applications Prototyping: https://shorturl.at/DLy8l
