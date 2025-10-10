@@ -316,6 +316,173 @@ Esto se confirmará cuando aumente la cantidad de visitantes que se registren en
 
 #### 4.2.1.2. Sprint Backlog 1
 
+Nuestro principal objetivo con este primer sprint es desarrollar las funciones esenciales que permitan a los restaurantes y proveedores interesados en Restock informarse sobre su propósito, conocer sus características destacadas y entender las acciones que podrán realizar dentro de la aplicación móvil.
+
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Sprint #</strong></td>
+			<td colspan="7">Sprint 1</td>
+		</tr>
+		<tr>
+			<td colspan="2"><strong>User Story</strong></td>
+			<td colspan="6"><strong>Work-item / Task</strong></td>
+		</tr>
+		<tr>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Description</strong></td>
+			<td><strong>Estimation (Hours)</strong></td>
+			<td><strong>Assisgned To</strong></td>
+			<td><strong>Status (To-do / In-Process / To-review / Done)</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-01-US01</td>
+			<td rowspan="2">Presentar propuesta de valor y CTA en la Landing Page</td>
+			<td>T1</td>
+			<td>Diseñar sección Hero y propuesta de valor</td>
+			<td>Crear y estilizar la sección de bienvenida resaltando el propósito y ventajas de Restock.</td>
+			<td>2</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T2</td>
+			<td>Agregar botones de registro y descarga</td>
+			<td>Implementar CTA para registro y enlace de descarga de la app móvil.</td>
+			<td>1</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-02-US02</td>
+			<td rowspan="2">Accesibilidad y navegación responsiva</td>
+			<td>T3</td>
+			<td>Implementar menú de navegación responsivo</td>
+			<td>Diseñar el menú principal con acceso a secciones clave y adaptación a dispositivos móviles.</td>
+			<td>2</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T4</td>
+			<td>Estilizar y organizar secciones de la Landing Page</td>
+			<td>Aplicar estilos y organizar el contenido para una navegación clara y accesible.</td>
+			<td>1</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-03-US03</td>
+			<td rowspan="2">Gestión de autenticación y acceso</td>
+			<td>T5</td>
+			<td>Diseñar formulario de registro/login en Landing y App</td>
+			<td>Crear los formularios para registro, inicio de sesión y recuperación de contraseña.</td>
+			<td>2</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T6</td>
+			<td>Integrar validaciones básicas al formulario</td>
+			<td>Asegurar que los campos obligatorios validen correctamente en web y móvil.</td>
+			<td>1</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-06-US15</td>
+			<td rowspan="2">Listado y gestión de supplies (insumos)</td>
+			<td>T7</td>
+			<td>Desarrollar pantalla de lista de supplies en App móvil</td>
+			<td>Mostrar listado de insumos con filtros y barra de búsqueda conectada al backend.</td>
+			<td>2</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T8</td>
+			<td>Implementar modal de creación/edición de supplies</td>
+			<td>Permitir agregar, editar y eliminar insumos en la app móvil.</td>
+			<td>1</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-08-US10</td>
+			<td>Gestión de recetas</td>
+			<td>T9</td>
+			<td>Crear pantalla de listado y detalle de recetas</td>
+			<td>Desarrollar interfaz para mostrar recetas y sus insumos relacionados.</td>
+			<td>2</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-09-US11</td>
+			<td>Panel de estadísticas y métricas</td>
+			<td>T10</td>
+			<td>Implementar dashboard básico en app móvil</td>
+			<td>Mostrar métricas clave del restaurante (inventario, ventas, pedidos) en la app.</td>
+			<td>2</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-13-US16</td>
+			<td>Gestión de ventas</td>
+			<td>T11</td>
+			<td>Desarrollar pantalla de registro y gestión de ventas</td>
+			<td>Permitir registrar y consultar ventas vinculadas a supplies y recetas.</td>
+			<td>2</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-07-US12</td>
+			<td>Gestión de compras de insumos</td>
+			<td>T12</td>
+			<td>Desarrollar interfaz de registro y consulta de compras</td>
+			<td>Permitir a administradores registrar compras y visualizar el historial de abastecimiento.</td>
+			<td>2</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-12-US13</td>
+			<td>Notificaciones </td>
+			<td>T13</td>
+			<td>Configurar notificaciones de inventario y pedidos</td>
+			<td>Implementar alertas automáticas sobre bajo stock y eventos importantes en la app móvil.</td>
+			<td>2</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-14-US17</td>
+			<td>Gestión de órdenes para proveedores</td>
+			<td>T14</td>
+			<td>Desarrollar módulo de recepción y actualización de órdenes</td>
+			<td>Permitir a proveedores visualizar y actualizar el estado de pedidos recibidos desde restaurantes.</td>
+			<td>2</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-16-US18</td>
+			<td>Gestión de proveedores</td>
+			<td>T15</td>
+			<td>Implementar pantalla de gestión de proveedores</td>
+			<td>Agregar, editar, visualizar y eliminar proveedores en la plataforma.</td>
+			<td>2</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+	</tbody>
+</table>
+
 #### 4.2.1.3. Development Evidence for Sprint Review
 
 <table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
