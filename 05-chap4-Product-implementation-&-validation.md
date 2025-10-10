@@ -4,127 +4,7 @@
 
 ### 4.1.1. Software Development Environment Configuration
 
-A continuación, se listan las herramientas y estándares adoptados por el equipo para el desarrollo colaborativo del sistema:
-
-| Actividad               | Herramienta / Guía                                    | Propósito                                                     | Tipo de acceso / Ruta                                                                                                                 |
-| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                      | [https://trello.com/](https://trello.com/)                                                                                               |
-| Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then.   | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                   |
-| Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                               | SaaS –[https://figma.com](https://figma.com)                                                                                            |
-| Frontend Dev            | Kotlin, Flutter                                        | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/                                                                                       |
-| Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                           | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                         |
-| IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                             | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
-| Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                     | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                               |
-| Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                          |
-| Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.       | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                |
-| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                        |
-
 ### 4.1.2. Source Code Management
-
-#### Frontend (Landing Page - HTML, CSS, JavaScript)
-
-##### Convenciones generales:
-
-- **Idioma**: Todo el código, incluyendo nombres de variables, funciones y clases, está escrito en **inglés**.
-- **Indentación**: 2 espacios.
-- **Formato de archivos**: `.html`, `.css`, `.js`
-- **Estilo de código adoptado**:
-  - [W3Schools HTML Style Guide](https://www.w3schools.com/html/html5_syntax.asp)
-  - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
-
-##### Nomenclatura:
-
-- **Clases CSS**: `kebab-case` (ej. `main-container`)
-- **IDs HTML**: `camelCase` (ej. `mainContent`)
-- **Variables JS**: `camelCase` (ej. `userName`)
-- **Funciones JS**: `camelCase` (ej. `handleClick()`)
-
-#### Backend (Java + Spring Boot)
-
-##### Convenciones generales:
-
-- **Idioma**: Código y documentación interna en **inglés**.
-- **Indentación**: 4 espacios.
-- **Formato de archivos**: `.java`
-
-##### Estilo de código adoptado:
-
-- [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
-- [Spring Boot Features &amp; Best Practices](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html)
-
-##### Nomenclatura:
-
-- **Clases**: `PascalCase` (ej. `UserService`)
-- **Variables**: `camelCase` (ej. `userRepository`)
-- **Constantes**: `UPPER_SNAKE_CASE` (ej. `MAX_USERS`)
-- **Endpoints**: `kebab-case` para URLs (ej. `/api/user-profile`)
-- **Paquetes**: Todo en minúsculas y separados por punto (ej. `com.project.backend.controller`)
-
-#### Mobile Frontend (Android Studio + Kotlin)
-
-##### Convenciones generales:
-
-- **Idioma**: Todo el código (nombres de paquetes, clases, variables, funciones, recursos) en **inglés**.  
-- **Indentación**: 4 espacios.  
-- **Formato de archivos**: `.kt` para Kotlin, `.xml` para layouts/resources, `build.gradle` / `build.gradle.kts` para scripts de Gradle.  
-- **Estilo de código adoptado**:  
-  - [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html)  
-  - [Android Kotlin Style Guide (Google)](https://developer.android.com/kotlin/style-guide)  
-- **Comportamiento asíncrono**: Usar **Kotlin Coroutines** y `suspend` functions para llamadas de red/IO; preferir **StateFlow** / **SharedFlow** o `LiveData` para exponer estados desde ViewModels.
-
-##### Nomenclatura:
-
-- **Packages**: todo en minúsculas y con puntos (`com.project.restock.admin`).  
-- **Clases / Activities / ViewModels / Repositories**: `PascalCase` (ej. `InventoryViewModel`, `SuppliesRepository`).  
-- **Funciones y propiedades**: `camelCase` (ej. `fetchSupplies()` , `userId`).  
-- **Constantes**: `UPPER_SNAKE_CASE` (ej. `API_TIMEOUT_SECONDS`).  
-- **Composables (Jetpack Compose)**: `PascalCase` preferible y con sufijos claros cuando aplique (ej. `LoginScreen`, `SupplyItem`).  
-- **Archivos Kotlin**: `PascalCase` para clases (ej. `InventoryViewModel.kt`) o `snake_case` para ficheros que agrupen múltiples composables/pantallas (ej. `login_screen.kt`) según convención del equipo.  
-- **IDs y recursos (drawable, layout, string, color, dimens)**: `lowercase_snake_case` (ej. `activity_main.xml` → `@+id/btn_login`, `ic_supply_placeholder`, `color_primary`).  
-- **Nombres de layouts XML**: `lowercase_snake_case` con prefijos si aplica (ej. `activity_main.xml`, `fragment_recipe_list.xml`, `item_supply.xml`).  
-- **Nombres de pruebas**: sufijo `Test` para unit/instrumented tests (ej. `InventoryViewModelTest`).
-
-##### Archivos y recursos:
-
-- **Kotlin**: `.kt` (packages, ViewModels, Repositories, UseCases, Mappers).  
-- **Layouts**: `.xml` (si no se usa Compose) en `res/layout/`.  
-- **Drawables**: `res/drawable/` → `lowercase_snake_case`.  
-- **Strings**: `res/values/strings.xml` → keys en `lowercase_snake_case`.  
-- **Colors / Dimens / Styles**: `res/values/colors.xml`, `dimens.xml`, `styles.xml` → variables en `lowercase_snake_case`.  
-- **Build scripts**: `build.gradle` o `build.gradle.kts` (módulo/app) con dependencias centralizadas.
-
-##### Arquitectura y patrones recomendados:
-
-- **Arquitectura**: MVVM (View — ViewModel — Repository) o MVI/Unidirectional UI (usando StateFlow) según preferencia del equipo.  
-- **Repository pattern**: separar acceso a datos (remote/local) y exponer modelos de dominio al ViewModel.  
-- **Use Cases / Interactors**: opcionalmente encapsular la lógica de negocio en casos de uso reutilizables.  
-- **Networking**: usar Retrofit + OkHttp + Moshi/Gson para serialización. Utilizar interceptors para auth/token.  
-- **Persistencia local**: Room para almacenamiento local (caches, offline support).  
-- **Asincronía**: Kotlin Coroutines + Flow / StateFlow para streams y estados reactivos.  
-- **State handling**: usar sealed classes o data classes para representar estados UI (Loading / Success / Error / Empty).  
-- **Navigation**: Jetpack Navigation Component (Fragments) o Navigation for Compose según stack elegido.
-
-##### Buenas prácticas y recomendaciones:
-
-- **Código en inglés**: mensajes de commit, comentarios y nombres en inglés.  
-- **Suspension naming**: `suspend` functions con nombres verbales claros (`suspend fun fetchSupplies()`).  
-- **Error handling**: envolver llamadas de red en `Result`/`Either` o usar patrones claros para propagar errores al UI.  
-- **UI/UX**: manejar estados (loading, empty, error) en cada pantalla; mostrar mensajes claros para usuarios de restaurantes.  
-- **Testing**: escribir unit tests para ViewModels y repositorios; usar instrumented tests para flujos críticos.  
-- **Linting & formatting**: integrar `ktlint` y `detekt` en el pipeline; configurar `editorconfig` y `pre-commit hooks`.  
-- **Seguridad**: no guardar tokens en texto plano; usar `EncryptedSharedPreferences` o soluciones seguras.  
-- **Accesibilidad**: labels de contentDescription en imágenes, contrastes adecuados y soporte para tamaños de texto.
-
-##### Herramientas / linters / utilidades:
-
-- **Ktlint** (formato y reglas de estilo).  
-- **Detekt** (análisis estático).  
-- **Android Lint** (recomendaciones Android).  
-- **Retrofit + OkHttp + Moshi/Gson** (networking).  
-- **Room** (persistencia local).  
-- **Jetpack Compose** (opcional para UI moderna) o XML + ViewBinding/Databinding.  
-- **Coroutines + Lifecycle (ViewModelScope)**.  
-- **Navigation Component** (navegación entre pantallas).
 
 ### 4.1.3. Source Code Style Guide & Conventions
 
@@ -186,302 +66,13 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 
 ### 4.1.4. Software Deployment Configuration
 
-Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los componentes digitales de la solución Restock: la Landing Page, la aplicación móvil (Android) y los Web Services (backend), partiendo desde sus respectivos repositorios de código fuente.
-
-#### 1. Landing Page - HTML, CSS y JavaScript
-
-**Tecnología Base:**
-
-- Lenguajes: HTML5, CSS3, JavaScript
-- Hosting: GitHub Pages
-
-**Configuración y Despliegue:**
-
-- El código fuente se aloja en un repositorio público de GitHub.
-- El archivo `index.html` debe encontrarse en la raíz del repositorio para que GitHub Pages lo detecte como punto de entrada.
-- Para desplegar la Landing Page, se siguen los siguientes pasos:
-  1. Acceder al repositorio en GitHub.
-  2. Continuar con la sección **Settings** > **Pages**.
-  3. En **Source**, se selecciona la rama principal (`main`) y la carpeta raíz (`/`).
-  4. Se procede a guardar los cambios realizados.
-- GitHub Pages genera automáticamente una URL pública con el formato `https://<organizacion>.github.io/<repositorio>/` donde el sitio estará disponible.
-- Cada vez que se realiza un commit en la rama `main`, GitHub Pages actualiza de forma automática la versión publicada.
-
-#### 2. Aplicación Móvil - Android (Kotlin + Android Studio)
-
-**Tecnología Base:**
-
-- Lenguaje: Kotlin
-- Framework: Android Studio + Jetpack Compose
-- Distribución: APK (Android Package)
-- Hosting de pruebas: Firebase App Distribution
-
-**Configuración y Despliegue:**
-
-- El código fuente se gestiona en un repositorio de GitHub.
-- Para la generación de versiones de prueba, se debe compilo el proyecto en Android Studio (`Build > Generate Signed APK`) y se verifico el funcionamiento de la aplicación en dispositivos físicos o emuladores Android.
-- El archivo APK generado se sube a Firebase App Distribution, permitiendo el testeo con usuarios internos y externos seleccionados antes de su publicación oficial.
-- El enlace de descarga puede ser compartido con los testers a través de correo electrónico, Google Drive o mediante un acceso en la Landing Page.
-- Cada nueva versión de la aplicación para testeo se publica y gestiona mediante la plataforma Firebase, facilitando la retroalimentación y el control de versiones.
-
-#### 3. Backend - Java + MongoDB
-
-**Tecnología Base:**
-
-- Framework: Spring Boot
-- Lenguaje: Java 21
-- Base de datos: MongoDB
-- Contenedorización: Docker
-- Hosting: Render o servicio equivalente
-
-**Configuración y Despliegue:**
-
-- El backend está estructurado según el enfoque de Domain-Driven Design (DDD), dividiendo el sistema en bounded contexts independientes.
-- El código fuente se mantiene en un repositorio de GitHub.
-- Para el despliegue, el repositorio incluye un archivo `Dockerfile` que define la imagen de la aplicación.
-- El proveedor de hosting detecta automáticamente el Dockerfile y construye la imagen en cada actualización del repositorio.
-- La base de datos MongoDB se configura mediante variables de entorno (por ejemplo, `MONGO_URI`), las cuales se gestionan en el panel de administración del hosting y nunca se almacenan en el código fuente.
-- La API REST expuesta por el backend sigue la convención RESTful y sus endpoints están documentados mediante OpenAPI (Swagger). La interfaz Swagger UI está disponible para consulta y prueba.
-- Los servicios protegidos requieren autorización mediante JWT, implementada con Spring Security, y los roles de usuario definen el nivel de acceso a cada funcionalidad.
-- El despliegue es automático: cada push a la rama principal activa la reconstrucción y publicación en el servicio de hosting, sin necesidad de configurar pipelines de CI/CD adicionales.
-- La aplicación móvil consume la API pública del backend utilizando HTTP para acceder a los servicios.
-
-#### Referencias adicionales
-
-- Documentación oficial de [Spring Boot](https://spring.io/projects/spring-boot), [Spring Data MongoDB](https://spring.io/projects/spring-data-mongodb), [Docker](https://docs.docker.com/), [Android Studio](https://developer.android.com/studio), [Firebase App Distribution](https://firebase.google.com/products/app-distribution) y [GitHub Pages](https://pages.github.com/).
-- Para la gestión de variables de entorno y credenciales, se consulto las guías de los proveedores de hosting utilizados.
-
 ## 4.2. Landing Page & Mobile Application Implementation
 
 ### 4.2.1. Sprint 1
 
 #### 4.2.1.1. Sprint Planning 1
 
-<table>
-  <tr>
-    <td>Sprint #</td>
-    <td>Sprint 1</td>
-  </tr>
-  <tr>
-    <td><strong>Sprint Planning Background</strong></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Date</td>
-    <td>2025-09-25</td>
-  </tr>
-  <tr>
-    <td>Time</td>
-    <td>08:00 pm (GMT-5)</td>
-  </tr>
-  <tr>
-    <td>Location</td>
-    <td>Modalidad remota mediante la plataforma Discord</td>
-  </tr>
-  <tr>
-    <td>Prepared By</td>
-    <td>Shapiama Rivera, Gabriela Nicole</td>
-  </tr>
-  <tr>
-    <td>Attendees (to planning meeting)</td>
-    <td>.Castro Alejos, Julio / Elescano Leon, Piero Hugo / Guerra Perez, José Jahaziel / Julca  Minaya, Sergio Gino / Shapiama Rivera, Gabriela Nicole</td>
-  </tr>
-  <tr>
-    <td>Sprint 0 Review Summary</td>
-    <td>Dado que este es el sprint inicial, no se presenta un resumen del sprint anterior.</td>
-  </tr>
-  <tr>
-    <td>Sprint 0 Retrospective Summary</td>
-    <td>Dado que este es el sprint inicial, no se presenta una retroalimentación del sprint anterior.</td>
-  </tr>
-  <tr>
-    <td><strong>Sprint Goal & User Stories</strong></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Sprint 1 Goal</td>
-    <td>Nuestro enfoque está en presentar de forma efectiva nuestra propuesta de valor y e información detallada del producto a los nuevos visitantes. Además, habilitar funcionalidades clave para los administradores de restaurantes, como la gestión de inventario, la configuración de perfil, la gestión de recetas y la sección de ventas. Asimismo, en proporcionar puntos de acceso mediante el API de la plataforma, con el objetivo de que los desarrolladores frontend puedan integrar funcionalidades relacionadas con autenticación, perfil, inventario, recetas y ventas dentro de la app.
-Creemos que esto ofrece mayor confianza hacia el equipo de trabajo y motiva a los visitantes a registrarse y probar el producto. Del mismo modo, mejora la eficiencia operativa de los administradores de restaurantes al facilitar la creación y gestión de ventas e insumos desde la aplicación móvil. Además, permite a los desarrolladores frontend implementar funcionalidades esenciales de forma más eficiente, incluyendo autenticación, inventario, ventas, recetas y perfil. 
-Esto se confirmará cuando aumente la cantidad de visitantes que se registren en la plataforma. Del mismo modo, cuando se incremente la cantidad de ventas e insumos que registran administradores de restaurantes en la plataforma. Por último, cuando los desarrolladores frontend aumenten la cantidad de funcionalidades relacionadas con ventas, recetas, inventario y perfil en la app móvil.</td>
-  </tr>
-  <tr>
-    <td>Sprint 1 Velocity</td>
-    <td>35</td>
-  </tr>
-  <tr>
-    <td>Sum of Story Points</td>
-    <td>35</td>
-  </tr>
-</table>
-
 #### 4.2.1.2. Sprint Backlog 1
-
-Nuestro principal objetivo con este primer sprint es desarrollar las funciones esenciales que permitan a los restaurantes y proveedores interesados en Restock informarse sobre su propósito, conocer sus características destacadas y entender las acciones que podrán realizar dentro de la aplicación móvil.
-
-<table>
-	<tbody>
-		<tr>
-			<td><strong>Sprint #</strong></td>
-			<td colspan="7">Sprint 1</td>
-		</tr>
-		<tr>
-			<td colspan="2"><strong>User Story</strong></td>
-			<td colspan="6"><strong>Work-item / Task</strong></td>
-		</tr>
-		<tr>
-			<td><strong>Id</strong></td>
-			<td><strong>Title</strong></td>
-			<td><strong>Id</strong></td>
-			<td><strong>Title</strong></td>
-			<td><strong>Description</strong></td>
-			<td><strong>Estimation (Hours)</strong></td>
-			<td><strong>Assisgned To</strong></td>
-			<td><strong>Status (To-do / In-Process / To-review / Done)</strong></td>
-		</tr>
-		<tr>
-			<td rowspan="2">EP-01-US01</td>
-			<td rowspan="2">Presentar propuesta de valor y CTA en la Landing Page</td>
-			<td>T1</td>
-			<td>Diseñar sección Hero y propuesta de valor</td>
-			<td>Crear y estilizar la sección de bienvenida resaltando el propósito y ventajas de Restock.</td>
-			<td>2</td>
-			<td>Gabriela Shapiama</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>T2</td>
-			<td>Agregar botones de registro y descarga</td>
-			<td>Implementar CTA para registro y enlace de descarga de la app móvil.</td>
-			<td>1</td>
-			<td>Gabriela Shapiama</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td rowspan="2">EP-02-US02</td>
-			<td rowspan="2">Accesibilidad y navegación responsiva</td>
-			<td>T3</td>
-			<td>Implementar menú de navegación responsivo</td>
-			<td>Diseñar el menú principal con acceso a secciones clave y adaptación a dispositivos móviles.</td>
-			<td>2</td>
-			<td>Jahaziel Guerra</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>T4</td>
-			<td>Estilizar y organizar secciones de la Landing Page</td>
-			<td>Aplicar estilos y organizar el contenido para una navegación clara y accesible.</td>
-			<td>1</td>
-			<td>Jahaziel Guerra</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td rowspan="2">EP-03-US03</td>
-			<td rowspan="2">Gestión de autenticación y acceso</td>
-			<td>T5</td>
-			<td>Diseñar formulario de registro/login en Landing y App</td>
-			<td>Crear los formularios para registro, inicio de sesión y recuperación de contraseña.</td>
-			<td>2</td>
-			<td>Julio Castro</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>T6</td>
-			<td>Integrar validaciones básicas al formulario</td>
-			<td>Asegurar que los campos obligatorios validen correctamente en web y móvil.</td>
-			<td>1</td>
-			<td>Julio Castro</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td rowspan="2">EP-06-US15</td>
-			<td rowspan="2">Listado y gestión de supplies (insumos)</td>
-			<td>T7</td>
-			<td>Desarrollar pantalla de lista de supplies en App móvil</td>
-			<td>Mostrar listado de insumos con filtros y barra de búsqueda conectada al backend.</td>
-			<td>2</td>
-			<td>Sergio Julca</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>T8</td>
-			<td>Implementar modal de creación/edición de supplies</td>
-			<td>Permitir agregar, editar y eliminar insumos en la app móvil.</td>
-			<td>1</td>
-			<td>Sergio Julca</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>EP-08-US10</td>
-			<td>Gestión de recetas</td>
-			<td>T9</td>
-			<td>Crear pantalla de listado y detalle de recetas</td>
-			<td>Desarrollar interfaz para mostrar recetas y sus insumos relacionados.</td>
-			<td>2</td>
-			<td>Piero Elescano</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>EP-09-US11</td>
-			<td>Panel de estadísticas y métricas</td>
-			<td>T10</td>
-			<td>Implementar dashboard básico en app móvil</td>
-			<td>Mostrar métricas clave del restaurante (inventario, ventas, pedidos) en la app.</td>
-			<td>2</td>
-			<td>Piero Elescano</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>EP-13-US16</td>
-			<td>Gestión de ventas</td>
-			<td>T11</td>
-			<td>Desarrollar pantalla de registro y gestión de ventas</td>
-			<td>Permitir registrar y consultar ventas vinculadas a supplies y recetas.</td>
-			<td>2</td>
-			<td>Gabriela Shapiama</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>EP-07-US12</td>
-			<td>Gestión de compras de insumos</td>
-			<td>T12</td>
-			<td>Desarrollar interfaz de registro y consulta de compras</td>
-			<td>Permitir a administradores registrar compras y visualizar el historial de abastecimiento.</td>
-			<td>2</td>
-			<td>Sergio Julca</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>EP-12-US13</td>
-			<td>Notificaciones </td>
-			<td>T13</td>
-			<td>Configurar notificaciones de inventario y pedidos</td>
-			<td>Implementar alertas automáticas sobre bajo stock y eventos importantes en la app móvil.</td>
-			<td>2</td>
-			<td>Piero Elescano</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>EP-14-US17</td>
-			<td>Gestión de órdenes para proveedores</td>
-			<td>T14</td>
-			<td>Desarrollar módulo de recepción y actualización de órdenes</td>
-			<td>Permitir a proveedores visualizar y actualizar el estado de pedidos recibidos desde restaurantes.</td>
-			<td>2</td>
-			<td>Julio Castro</td>
-			<td>Done</td>
-		</tr>
-		<tr>
-			<td>EP-16-US18</td>
-			<td>Gestión de proveedores</td>
-			<td>T15</td>
-			<td>Implementar pantalla de gestión de proveedores</td>
-			<td>Agregar, editar, visualizar y eliminar proveedores en la plataforma.</td>
-			<td>2</td>
-			<td>Jahaziel Guerra</td>
-			<td>Done</td>
-		</tr>
-	</tbody>
-</table>
 
 #### 4.2.1.3. Development Evidence for Sprint Review
 
@@ -685,6 +276,8 @@ Nuestro principal objetivo con este primer sprint es desarrollar las funciones e
 <p><strong>Enlace al repositorio:</strong>  
 <a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</a></p>
 
+
+
 #### 4.2.1.5. Execution Evidence for Sprint Review
 
 A continuación se presentan los materiales de evidencia correspondientes a los tres productos desarrollados durante el Sprint 1: Landing Page, Backend y Aplicación Móvil. Cada sección incluye una breve descripción del alcance entregado en este sprint, lo que se demuestra en el material audiovisual.
@@ -801,307 +394,12 @@ A continuación se presentan los materiales de evidencia correspondientes a los 
 
 ![Execution Backend](assets/images/cap4/sprint1/execution/exec3.png)
 
+
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
-
-Durante este sprint se avanzó significativamente en la `<strong>`documentación de los servicios web (REST API)`</strong>` del sistema `<em>`Restock `</em>`, cubriendo los módulos de `<strong>`Profiles `</strong>`, `<strong>`Recipes `</strong>`, `<strong>`Batches `</strong>` y `<strong>`Authentication `</strong>`.
-La documentación se generó utilizando `<strong>`OpenAPI (Swagger)`</strong>` y fue validada mediante peticiones reales desde el entorno de desarrollo (`<em>`localhost `</em>` y Railway).
-Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP `<code>`GET `</code>`, `<code>`POST `</code>`, `<code>`PUT `</code>` y `<code>`DELETE `</code>`.
-
-A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documentados `</strong>`, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
-
-<table>
-  <thead>
-    <tr style="background-color:#f2f2f2;">
-      <th>Endpoint</th>
-      <th>Acción</th>
-      <th>Verbo HTTP</th>
-      <th>Parámetros / Request Body</th>
-      <th>Ejemplo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>/api/v1/authentication/sign-up</td>
-      <td>Registrar una cuenta</td>
-      <td>POST</td>
-      <td><pre>{
-  "email": "string",
-  "password": "string"
-}</pre></td>
-      <td><pre>{
-  "email": "admin@restock.com",
-  "password": "P@ssw0rd"
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/authentication/sign-in</td>
-      <td>Iniciar sesión en la cuenta</td>
-      <td>POST</td>
-      <td><pre>{
-  "email": "string",
-  "password": "string"
-}</pre></td>
-      <td><pre>{
-  "email": "admin@restock.com",
-  "password": "P@ssw0rd"
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/profiles/{userId}/personal</td>
-      <td>Actualizar información personal del usuario</td>
-      <td>PUT</td>
-      <td><pre>{
-  "firstName": "string",
-  "lastName": "string",
-  "email": "string",
-  "phone": "string",
-  "address": "string",
-  "country": "string",
-  "avatar": "string"
-}</pre></td>
-      <td><pre>{
-  "firstName": "Jahaziel",
-  "lastName": "Guerra",
-  "email": "admin@restock.com",
-  "phone": "987654321",
-  "address": "Av. Primavera 120",
-  "country": "Perú",
-  "avatar": "https://res.cloudinary.com/restock/avatar.png"
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/profiles/{userId}/password</td>
-      <td>Cambiar la contraseña del usuario</td>
-      <td>PUT</td>
-      <td><pre>{
-  "currentPassword": "string",
-  "newPassword": "string"
-}</pre></td>
-      <td><pre>{
-  "currentPassword": "P@ssw0rd",
-  "newPassword": "NuevoP@ss2025"
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/profiles/{userId}/business</td>
-      <td>Actualizar información del negocio</td>
-      <td>PUT</td>
-      <td><pre>{
-  "businessName": "string",
-  "businessAddress": "string",
-  "description": "string",
-  "businessCategoryIds": ["string"]
-}</pre></td>
-      <td><pre>{
-  "businessName": "Restaurante San Miguel",
-  "businessAddress": "Av. La Marina 2400",
-  "description": "Comida criolla peruana",
-  "businessCategoryIds": ["cat_01"]
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/recipes</td>
-      <td>Crear una nueva receta</td>
-      <td>POST</td>
-      <td><pre>{
-  "name": "string",
-  "price": { "amount": "number", "currency": "string" }
-}</pre></td>
-      <td><pre>{
-  "name": "Lomo Saltado",
-  "price": { "amount": 28.90, "currency": "PEN" }
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/recipes/{id}</td>
-      <td>Actualizar una receta existente</td>
-      <td>PUT</td>
-      <td><pre>{
-  "name": "string",
-  "price": { "amount": "number", "currency": "string" }
-}</pre></td>
-      <td><pre>{
-  "name": "Ají de Gallina",
-  "price": { "amount": 25.50, "currency": "PEN" }
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/recipes/{id}/supplies</td>
-      <td>Agregar insumos a una receta</td>
-      <td>POST</td>
-      <td><pre>{
-  "supplyId": "string",
-  "quantity": "number"
-}</pre></td>
-      <td><pre>{
-  "supplyId": "sup_beef",
-  "quantity": 0.5
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/batches</td>
-      <td>Crear un nuevo lote (batch)</td>
-      <td>POST</td>
-      <td><pre>{
-  "supplyId": "string",
-  "expirationDate": "string",
-  "quantity": "number"
-}</pre></td>
-      <td><pre>{
-  "supplyId": "sup_beef",
-  "expirationDate": "2025-12-15",
-  "quantity": 20
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/batches/{id}</td>
-      <td>Actualizar un lote existente</td>
-      <td>PUT</td>
-      <td><pre>{
-  "quantity": "number"
-}</pre></td>
-      <td><pre>{
-  "quantity": 15
-}</pre></td>
-    </tr>
-    <tr>
-      <td>/api/v1/batches/{id}</td>
-      <td>Eliminar un lote</td>
-      <td>DELETE</td>
-      <td><pre>N/A</pre></td>
-      <td><pre>N/A</pre></td>
-    </tr>
-  </tbody>
-</table>
-
-Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (`<em>`Railway `</em>`).
-Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-backend" target="_blank">`https://github.com/Jahazielgg/restock-backend `</a>`
-Últimos commits relacionados con documentación:
-
-<ul>
-  <li><code>58dcfa1</code> – Update OpenAPI definitions for Profiles and Recipes</li>
-  <li><code>7b23a64</code> – Add Batches endpoints to Swagger spec</li>
-  <li><code>c91bde4</code> – Improve schema examples for Authentication</li>
-</ul>
 
 #### 4.2.1.7. Software Deployment Evidence for Sprint Review
 
-Durante este Sprint, se realizaron actividades de despliegue de la Landing Page utilizando GitHub Pages como plataforma de hosting. A continuación, se detallan los pasos ejecutados:
-
-**1- Se accedió a la sección Settings del repositorio.**
-
-Dentro de Pages, se seleccionó la rama (main o master) y la carpeta (root o /docs) desde la cual GitHub Pages debía publicar el sitio.
-Se guardaron los cambios para activar la publicación automática.
-
-![Foto deployment step 1](assets/images/cap4/sprint1/step-1.png)
-
-2- Por default ya esta activado el https
-
-![Foto deployment step 2](assets/images/cap4/sprint1/step-2.png)
-
-3- En la seccion "All workflows" se puede ver que la app se esta desplegando.
-
-![Foto deployment step 3](assets/images/cap4/sprint1/step-3.png)
-
-4- Se obtuvo y verificó la URL pública proporcionada por GitHub Pages.
-
-![Foto deployment step 4](assets/images/cap4/sprint1/step-4.png)
-
-Link del landing page desplegado:
-
-A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
-
-1. **Conexión del repositorio con Railway** : Se creó un nuevo proyecto en Railway y se conectó directamente el repositorio del backend desde GitHub.
-
-   ![Evidence Step 1](assets/images/cap4/sprint1/evidence-step1.jpeg)
-2. **Selección de rama principal (`main`)**En la configuración del proyecto, se seleccionó la rama `main` como predeterminada para realizar el despliegue continuo.
-
-   ![Evidence Step 2](assets/images/cap4/sprint1/evidence-step2.jpeg)
-3. **Adición de base de datos al proyecto**Desde la opción "Add Plugin" en Railway, se añadió un servicio de base de datos para el proyecto.
-
-   ![Evidence Step 3](assets/images/cap4/sprint1/evidence-step3.jpeg)
-4. **Selección del tipo de base de dato** Se seleccionó el motor de base de datos **MongoDB**.
-
-   ![Evidence Step 4](assets/images/cap4/sprint1/evidence-step4.jpeg)
-5. **Despliegue de imagen MongoDB** Railway desplegó automáticamente una instancia de base de datos con sus credenciales correspondientes.
-
-   ![Evidence Step 5](assets/images/cap4/sprint1/evidence-step5.jpeg)
-6. **Obtención y configuración de credenciales**Se copiaron las credenciales de conexión (usuario, contraseña, host, puerto y nombre de base de datos) y se unificaron en una sola variable de entorno tipo `SPRING_DATASOURCE_URL`.
-
-   ![Evidence Step 6](assets/images/cap4/sprint1/evidence-step6.jpeg)
-7. **Habilitación del link Swagger en la configuración**En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
-
-   ![Evidence Step 7](assets/images/cap4/sprint1/evidence-step7.jpeg)
-8. **Creación de variables de entorno en Railway**Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Railway.
-
-   ![Evidence Step 8](assets/images/cap4/sprint1/evidence-step8.jpeg)
-9. **Despliegue del proyecto**Railway ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
-
-   ![Evidence Step 9](assets/images/cap4/sprint1/evidence-step9.jpeg)
-10. **Verificación con Swagger**
-    Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
-
-   ![Evidence Step 10](assets/images/cap4/sprint1/evidence-step10.jpeg)
-
 #### 4.2.1.8. Team Collaboration Insights during Sprint
-
-#### Landing Page
-
-Durante el desarrollo de la Landing Page se aplicaron prácticas de colaboración que facilitaron la entrega de un front público coherente y responsivo. A continuación se detallan las prácticas aplicadas:
- 
-- Las tareas se distribuyeron por secciones (Hero, Funcionalidades, Casos de uso, CTA, Contacto) y cada sección quedó asignada a un responsable para acelerar la implementación.  
-- Se realizaron **commits frecuentes y atómicos** con mensajes descriptivos para facilitar revisiones y trazabilidad.  
-- Las integraciones se realizaron mediante *pull requests* hacia `develop` y se exigió una revisión mínima por otro miembro antes del merge.  
-- La comunicación se coordinó principalmente vía **Discord** y registros de decisiones quedaron documentados en el canal y en el README del submódulo.  
-- Se emplearon revisiones visuales en distintos tamaños de pantalla y se ordenaron los assets en `assets/landing/`
-
-##### **Analíticos de colaboración — Landing Page**
-
-![Landing Collaboration](assets/images/cap4/collaboration/landing_ci_1.png)
-
-- Total de commits (Landing Page): **14**  
-- Total de autores contribuyentes: **5**  
-- Total de *pull requests* relacionadas: **12**  
-- Observación: actividad concentrada en diseño inicial y ajustes de responsividad.
-
-#### Backend (API)
-
-El desarrollo del Backend siguió un flujo de trabajo enfocado en estabilidad y pruebas, garantizando que los endpoints core quedasen documentados y testeados:
-
-- Se trabajó por dominios funcionales creando ramas temáticas como `feature/auth`, `feature/resources`, `feature/monitoring` para permitir despliegue paralelo y revisiones independientes.  
-- Se usó Swagger como fuente de verdad para la documentación de endpoints; las colecciones se actualizaron junto con los cambios en código.  
-- Commits atómicos y PRs con descripciones técnicas claras permitieron revisiones eficaces por pares (covering: controllers/services).  
-- Pruebas unitarias básicas y logs de integración se incluyeron en los PRs para facilitar el QA.  
-- Se definieron responsables por Bounded Context para planificar la migración a MongoDB y minimizar riesgos durante el cambio de persistencia.
-
-##### **Analíticos de colaboración — Backend**
-
-![Backend Collaboration](assets/images/cap4/collaboration/backend_ci_1.png)
-
-- Total de commits (Backend): **67**  
-- Total de autores contribuyentes: **5**  
-- Total de *pull requests* relacionadas: **2**  
-- Endpoints documentados en Postman/Swagger: **28**  
-- Observación: respaldo sólido de pruebas y documentación para facilitar la futura migración de BD.
-
-#### Aplicación Móvil (Android)
-
-La colaboración en el módulo móvil se orientó a entregar pantallas core integradas con el backend y a mantener buena cohesión entre diseño y desarrollo:
-
-- Ramas `feature/*` por pantalla (resource, recipes, sales) para aislar cambios y facilitar PRs pequeños y revisables.  
-- Se adoptó MVVM y convenciones de Kotlin en todo el módulo; los PRs incluyeron ejemplos de ViewModel y pruebas unitarias cuando fue posible.  
-- Coordinación continua con los responsables del backend para definir contratos (DTOs/JSON) y evitar retrabajo.  
-- Commits regulares con mensajes que enlazaban a issues/tickets de la planificación del sprint.  
-- Builds y APKs parciales compartidos en el canal de releases para revisión de UX y pruebas manuales.
-
-##### **Analíticos de colaboración — Mobile**
-
-![Mobile Collaboration](assets/images/cap4/collaboration/mobile_ci_1.png)
-
-- Total de commits (Mobile): **x**  
-- Total de autores contribuyentes: **x**  
-- Total de *pull requests* relacionadas: **x**  
-- Pantallas core implementadas: **5**  
 
 ## 4.3. Validation Interviews
 
@@ -1163,6 +461,80 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
     </td>
   </tr>
 
+  
+  <tr>
+    <td>Segmento 2: Proveedores de Restaurantes</td>
+    <td>
+      <ul>
+        <li>Claridad del valor en el Landing Page.</li>
+        <li>Gestión de catálogo de productos.</li>
+        <li>Eliminación de insumos no disponibles.</li>
+        <li>Revisión de pedidos realizados por restaurantes.</li>
+        <li>Interacción con comentarios recibidos.</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>Suscripción y pago.</li>
+        <li>Registro y gestión de productos en el catálogo.</li>
+        <li>Eliminación de insumos.</li>
+        <li>Gestión de órdenes recibidas.</li>
+        <li>Panel principal del proveedor.</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>Explorar el Landing Page y describir su comprensión del producto.</li>
+        <li>Simular el proceso de registro y suscripción.</li>
+        <li>Ingresar al sistema y registrar productos en su catálogo.</li>
+        <li>Eliminar productos del catálogo.</li>
+        <li>Revisar pedidos recibidos de restaurantes.</li>
+        <li>Comentar sobre la utilidad de la interfaz de pedidos y feedback.</li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+**Herramientas y Recursos para Validación**
+
+Formato de Evaluación Heurística: Se aplicarán los 10 principios heurísticos de Nielsen en cada sesión.
+Instrumento de observación: Lista de verificación + sección de notas abiertas.
+Grabación de pantalla y voz: previa autorización, para análisis posterior.
+
+### 4.3.2. Registro de Entrevistas
+
+A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
+
+#### **Entrevista 01 – Josue Ramírez**
+
+**Datos del entrevistado:**
+- **Nombre completo:** Josue Ramírez  
+- **Edad:** 26 años  
+- **Distrito:** Chorrillos  
+- **Segmento:** Proveedor de insumos gastronómicos  
+- **Fecha de entrevista:** 07 de octubre de 2025  
+- **Duración:** 8 minutos y 58 segundos  
+- **Registro audiovisual:**  https://shorturl.at/kaGl4
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Josue Ramírez indicó que el diseño del landing le pareció **claro y profesional**, destacando el mensaje principal que resalta la **conexión directa entre proveedores y administradores de restaurantes**.
+
+Comentó que el apartado de **“gestión de catálogo”** le resultó relevante, ya que permitiría mantener actualizados sus productos sin necesidad de depender de terceros. Asimismo, valoró positivamente la posibilidad de **recibir pedidos en tiempo real y mantener comunicación directa con los restaurantes** mediante la plataforma.
+
+Sin embargo, sugirió que sería útil incluir una sección más visible en el landing donde se expliquen los **beneficios específicos para proveedores**, como métricas de venta o testimonios de otros usuarios. También recomendó que el formulario de registro indique con mayor claridad los **requisitos de verificación** o documentos necesarios.
+
+En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
+
+**Conclusión general:**  
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
+
+
+### 4.3.3. Evaluaciones según heurísticas
+
 <table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
   <thead>
     <tr>
@@ -1210,33 +582,3 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
     </tr>
   </tbody>
 </table>
-
-### 4.3.2. Registro de Entrevistas
-
-A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
-
-#### **Entrevista 01 – Josue Ramírez**
-
-**Datos del entrevistado:**
-- **Nombre completo:** Josue Ramírez  
-- **Edad:** 26 años  
-- **Distrito:** Chorrillos  
-- **Segmento:** Proveedor de insumos gastronómicos  
-- **Fecha de entrevista:** 07 de octubre de 2025  
-- **Duración:** 8 minutos y 58 segundos  
-- **Registro audiovisual:**  https://shorturl.at/kaGl4
-- **Captura de entrevista:**  
-  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
-
-#### **Resumen descriptivo de la entrevista:**
-
-Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Josue Ramírez indicó que el diseño del landing le pareció **claro y profesional**, destacando el mensaje principal que resalta la **conexión directa entre proveedores y administradores de restaurantes**.
-
-Comentó que el apartado de **“gestión de catálogo”** le resultó relevante, ya que permitiría mantener actualizados sus productos sin necesidad de depender de terceros. Asimismo, valoró positivamente la posibilidad de **recibir pedidos en tiempo real y mantener comunicación directa con los restaurantes** mediante la plataforma.
-
-Sin embargo, sugirió que sería útil incluir una sección más visible en el landing donde se expliquen los **beneficios específicos para proveedores**, como métricas de venta o testimonios de otros usuarios. También recomendó que el formulario de registro indique con mayor claridad los **requisitos de verificación** o documentos necesarios.
-
-En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
-
-**Conclusión general:**  
-La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
