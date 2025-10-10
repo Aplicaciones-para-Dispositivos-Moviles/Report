@@ -702,9 +702,9 @@ A continuación se presentan los materiales de evidencia correspondientes a los 
 - Comportamiento responsivo en distintas resoluciones.  
 - Enlaces hacia la zona de acceso (login/signup) y descripciones de las funcionalidades que conectan con la app móvil y el backend.
 
-**Video de Landing Page:**  
-FALTAA
-Captura del video → [https://linkcuts.org/5rwvpm3k](https://linkcuts.org/5rwvpm3k)
+**Video de Landing Page:**  https://shorturl.at/NOzSq
+
+![Execution Landing Page](assets/images/cap4/sprint1/execution/exec1.png)
 
 #### Backend (API) — Estado: ~70%
 
@@ -748,9 +748,10 @@ Captura del video → [https://linkcuts.org/5rwvpm3k](https://linkcuts.org/5rwvp
 - Creación y consulta de resources claves: supplies, custom-supplies, recipes, orders.  
 - Pruebas de cambio de estado en orders y creación de batches.
 
-**Video del Backend (demostración / pruebas):**  
-FALTAA
-Captura del video → [https://linkcuts.org/backend-demo](https://linkcuts.org/backend-demo)
+**Video del Backend (demostración / pruebas):** https://shorturl.at/CZzk9 
+
+![Execution Backend](assets/images/cap4/sprint1/execution/exec2.png)
+
 
 #### Aplicación Móvil (Administrador de Restaurantes — Android) — Pantallas integradas
 
@@ -796,9 +797,9 @@ Captura del video → [https://linkcuts.org/backend-demo](https://linkcuts.org/b
 - Conexión parcial con el backend: llamadas de lectura y ejemplos de POST/PUT donde se ha integrado.  
 - Comportamientos de validación y estados UI (loading / empty / success / error).
 
-**Video de Aplicación Móvil:** 
-FALTAAA 
-Captura del video → [https://linkcuts.org/mobile-demo](https://linkcuts.org/mobile-demo)
+**Video de Aplicación Móvil:** https://shorturl.at/8adxX
+
+![Execution Backend](assets/images/cap4/sprint1/execution/exec3.png)
 
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
 
