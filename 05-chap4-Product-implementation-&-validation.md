@@ -316,7 +316,7 @@ Esto se confirmará cuando aumente la cantidad de visitantes que se registren en
 
 #### 4.2.1.2. Sprint Backlog 1
 
-Nuestro principal objetivo con este primer sprint es desarrollar las funciones esenciales que permitan a los restaurantes y proveedores interesados en Restock informarse sobre su propósito, conocer sus características destacadas y entender las acciones que podrán realizar dentro de la aplicación móvil.
+Nuestro principal objetivo con este primer sprint es desarrollar las funciones esenciales que permitan a los restaurantes y proveedores interesados en Restock informarse sobre su propósito, conocer sus características destacadas y entender las acciones que podrán realizar dentro de la aplicación móvil..
 
 <table>
 	<tbody>
