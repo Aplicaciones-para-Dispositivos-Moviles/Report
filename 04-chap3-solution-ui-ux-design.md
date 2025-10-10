@@ -811,6 +811,120 @@ Cada Wireflow Diagram representa el recorrido visual e interactivo que realiza e
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
+##### Versión Mobile Mockups - Administrador de Restaurantes
+
+
+**Alertas**
+Vista general de alertas importantes para el administrador, con indicadores visuales de color. 
+<img src="assets/images/cap4/mobile_mockups/admin_alerts.png" alt="admin_alerts" width="600px">
+
+
+
+**Inventario**
+Listado general de insumos con opciones para editar, buscar y ver detalles. 
+<img src="assets/images/cap4/mobile_mockups/admin_inventory.png" alt="admin_inventory" width="600px">
+
+**Inventario (Editar/Crear)**
+Flujo para registrar o editar un insumo, incluye calendario para fecha de expiración. 
+<img src="assets/images/cap4/mobile_mockups/admin_inventory2.png" alt="admin_inventory2" width="600px">
+
+
+
+**Pedidos**
+Visualización de pedidos realizados, con filtros por estado.
+ <img src="assets/images/cap4/mobile_mockups/admin_orders.png" alt="admin_orders" width="600px">
+
+**Pedidos (Detalle/Editar)**
+Flujo detallado para ver y modificar un pedido específico. 
+<img src="assets/images/cap4/mobile_mockups/admin_orders2.png" alt="admin_orders2" width="600px">
+
+
+**Recetas**
+Listado de recetas disponibles, con imágenes y composición de insumos. 
+<img src="assets/images/cap4/mobile_mockups/admin_recipes.png" alt="admin_recipes" width="600px">
+
+**Recetas (Editar/Ver)**
+Flujo detallado para modificar recetas o ver su detalle completo. 
+<img src="assets/images/cap4/mobile_mockups/admin_recipes2.png" alt="admin_recipes2" width="600px">
+
+
+**Ventas**
+Historial de ventas con filtros por fecha y montos. 
+<img src="assets/images/cap4/mobile_mockups/admin_sale.png" alt="admin_sale" width="600px">
+
+**Ventas (Detalle)**
+Detalle específico de una venta con totales y acciones. 
+<img src="assets/images/cap4/mobile_mockups/admin_sale2.png" alt="admin_sale2" width="600px">
+
+**Ventas (Popup acción)**
+Confirmación para anular una venta mediante un diálogo de alerta. 
+<img src="assets/images/cap4/mobile_mockups/admin_sale3.png" alt="admin_sale3" width="600px">
+
+
+**Suscripciones**
+Vista de gestión de suscripciones y planes de pago. 
+<img src="assets/images/cap4/mobile_mockups/admin_subscriptions.png" alt="admin_subscriptions" width="600px">
+
+
+**Proveedores**
+Listado de proveedores registrados con métricas de ventas. 
+<img src="assets/images/cap4/mobile_mockups/admin_supplier.png" alt="admin_supplier" width="600px">
+
+
+**Dashboard / Resumen**
+Pantalla de resumen con estadísticas clave como pedidos pendientes y capacidad de stock.
+ <img src="assets/images/cap4/mobile_mockups/admin_summary.png" alt="admin_summary" width="600px">
+
+---
+
+##### Versión Mobile Mockups - Proveedores
+
+**Alertas**
+Resumen de alertas generadas por parte del restaurante. 
+<img src="assets/images/cap4/mobile_mockups/supplier_alerts.png" alt="supplier_alerts" width="600px">
+
+
+**Inventario**
+Vista del inventario ofrecido por el proveedor.
+ <img src="assets/images/cap4/mobile_mockups/supplier_inventory.png" alt="supplier_inventory" width="600px">
+
+**Inventario (Editar)**
+Formulario para edición o creación de productos ofrecidos. 
+<img src="assets/images/cap4/mobile_mockups/supplier_inventory2.png" alt="supplier_inventory2" width="600px">
+
+
+**Pedidos**
+Vista general de pedidos recibidos, con estado y fechas. 
+<img src="assets/images/cap4/mobile_mockups/supplier_orders.png" alt="supplier_orders" width="600px">
+
+**Pedidos (Detalle)**
+Vista ampliada para gestión individual de cada pedido.
+ <img src="assets/images/cap4/mobile_mockups/supplier_orders2.png" alt="supplier_orders2" width="600px">
+
+**Pedidos (Historial)**
+Listado cronológico de pedidos con estado y detalles. 
+<img src="assets/images/cap4/mobile_mockups/supplier_orders3.png" alt="supplier_orders3" width="600px">
+
+
+**Perfil**
+Datos personales, empresa, y configuración de cuenta.
+ <img src="assets/images/cap4/mobile_mockups/supplier_profile.png" alt="supplier_profile" width="600px">
+
+
+**Suscripciones**
+Panel para gestionar el plan de suscripción del proveedor. 
+<img src="assets/images/cap4/mobile_mockups/supplier_subscriptions.png" alt="supplier_subscriptions" width="600px">
+
+
+**Dashboard / Resumen**
+Resumen financiero y de pedidos con métricas clave para proveedores.
+<img src="assets/images/cap4/mobile_mockups/supplier_summary.png" alt="supplier_summary" width="600px">
+
+**Calificaciones**
+Valoraciones recibidas por parte de restaurantes con comentarios.
+ <img src="assets/images/cap4/mobile_mockups/suppliers_rating.png" alt="suppliers_rating" width="600px">
+
+
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
 #### User Flows Mobile
