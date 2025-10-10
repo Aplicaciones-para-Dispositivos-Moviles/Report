@@ -277,7 +277,123 @@
 <a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</a></p>
 
 
+
 #### 4.2.1.5. Execution Evidence for Sprint Review
+
+A continuación se presentan los materiales de evidencia correspondientes a los tres productos desarrollados durante el Sprint 1: Landing Page, Backend y Aplicación Móvil. Cada sección incluye una breve descripción del alcance entregado en este sprint, lo que se demuestra en el material audiovisual.
+
+#### Landing Page
+
+**Alcance entregado (Sprint 1)**  
+- Landing Page desplegada y accesible públicamente.  
+- Contenido explicativo sobre la propuesta de valor de RESTOCK: gestión de supplies para administradores de restaurantes y proveedores.  
+- Secciones principales implementadas: Hero / Valor diferencial, Funcionalidades clave, CTA para registro/inicio de sesión, y contacto.  
+- Diseño responsivo básico (desktop ↔ mobile) y coherencia visual con la identidad del producto.
+
+**Qué se demuestra en el video**  
+- Navegación entre secciones de la página.  
+- Comportamiento responsivo en distintas resoluciones.  
+- Enlaces hacia la zona de acceso (login/signup) y descripciones de las funcionalidades que conectan con la app móvil y el backend.
+
+**Video de Landing Page:**  https://shorturl.at/NOzSq
+
+![Execution Landing Page](assets/images/cap4/sprint1/execution/exec1.png)
+
+#### Backend (API) — Estado: ~70%
+
+**Alcance entregado (Sprint 1)**  
+- Implementación de los endpoints core para soportar la lógica básica de la plataforma: autenticación, users/profiles, supplies, custom-supplies, recipes, batches, orders, business-categories y roles.  
+- Documentación mínima de endpoints (endpoints listos para pruebas con Postman/Swagger).  
+- Pruebas funcionales de endpoints principales (autenticación, listado/consulta de supplies, creación/consulta de orders y CRUD básico de recipes y custom supplies).
+
+**Endpoints destacados implementados**  
+- **Autenticación**  
+  - `POST /api/v1/authentication/sign-up`  
+  - `POST /api/v1/authentication/sign-in`  
+- **Supplies (plataforma)**  
+  - `GET /api/v1/supplies`  
+  - `GET /api/v1/supplies/{supplyId}`  
+  - `GET /api/v1/supplies/categories`  
+- **Custom Supplies (usuario)**  
+  - `GET /api/v1/custom-supplies`  
+  - `POST /api/v1/custom-supplies`  
+  - `PUT /api/v1/custom-supplies/{id}`  
+  - `DELETE /api/v1/custom-supplies/{id}`  
+  - `GET /api/v1/custom-supplies/user/{userId}`  
+- **Recipes**  
+  - `GET /api/v1/recipes` / `GET /api/v1/recipes/{id}`  
+  - `POST /api/v1/recipes` / `PUT /api/v1/recipes/{id}` / `DELETE /api/v1/recipes/{id}`  
+  - `GET /api/v1/recipes/{id}/supplies` / `POST /api/v1/recipes/{id}/supplies`  
+  - `PUT /api/v1/recipes/{recipeId}/supplies/{supplyId}` / `DELETE /api/v1/recipes/{recipeId}/supplies/{supplyId}`  
+- **Orders & Batches**  
+  - `POST /api/v1/orders` / `GET /api/v1/orders` / `GET /api/v1/orders/{id}` / `DELETE /api/v1/orders/{id}`  
+  - `POST /api/v1/orders/{orderId}/batches` / `GET /api/v1/orders/{orderId}/batches`  
+  - `PUT /api/v1/orders/{id}/state`  
+  - Batches: `GET /api/v1/batches` / `GET /api/v1/batches/{id}` / `POST /api/v1/batches` / `PUT /api/v1/batches/{id}` / `DELETE /api/v1/batches/{id}` / `GET /api/v1/batches/user/{userId}`  
+- **Perfiles / Usuarios / Roles / Categorías**  
+  - `GET /api/v1/users` / `GET /api/v1/users/{userId}`  
+  - `PUT /api/v1/profiles/{userId}/personal` / `PUT /api/v1/profiles/{userId}/password` / `PUT /api/v1/profiles/{userId}/business` / `GET /api/v1/profiles/{userId}` / `DELETE /api/v1/profiles/{userId}`  
+  - `GET /api/v1/roles` / `GET /api/v1/business-categories`
+
+**Qué se demuestra en el video**  
+- Ejecución de requests sobre los endpoints principales con Postman/Swagger.  
+- Flujo de autenticación (sign-up / sign-in) y consumo de un endpoint protegido.  
+- Creación y consulta de resources claves: supplies, custom-supplies, recipes, orders.  
+- Pruebas de cambio de estado en orders y creación de batches.
+
+**Video del Backend (demostración / pruebas):** https://shorturl.at/CZzk9 
+
+![Execution Backend](assets/images/cap4/sprint1/execution/exec2.png)
+
+
+#### Aplicación Móvil (Administrador de Restaurantes — Android) — Pantallas integradas
+
+**Alcance entregado (Sprint 1)**  
+- Desarrollo e integración de las **pantallas core** del flujo administrativo en Android: listas principales, búsquedas y vistas detalle.  
+- Conexión parcial con el backend para operaciones de lectura y algunas operaciones CRUD (dependiendo del endpoint).  
+- Validaciones visuales y estados básicos (loading, empty state, error).
+
+**Pantallas incluidas (PRIMERA PARTE — ADMIN RESTAURANTES)**
+
+1. **Supplies — Lista y tabla**  
+   - Ver lista de supplies (datos desde `GET /api/v1/supplies` y `GET /api/v1/custom-supplies/user/{userId}` según contexto).  
+   - Barra de búsqueda con filtros (por categoría: `GET /api/v1/supplies/categories`).  
+   - Estado vacío cuando no hay supplies.
+
+2. **Modal / Interfaz CRUD de Supplies**  
+   - Modal para crear/editar supplies (consume `POST /api/v1/custom-supplies`, `PUT /api/v1/custom-supplies/{id}`, `DELETE /api/v1/custom-supplies/{id}`).  
+   - Alternativa: evaluación sobre si usar modal o pantalla separada según usabilidad.
+
+3. **Recipes — Interfaz y CRUD**  
+   - Pantalla de listado `GET /api/v1/recipes`.  
+   - Detalle de receta `GET /api/v1/recipes/{id}` y listado de supplies de receta `GET /api/v1/recipes/{id}/supplies`.  
+   - Agregar supplies a receta `POST /api/v1/recipes/{id}/supplies`.  
+   - Operaciones de creación/edición/eliminación: `POST /api/v1/recipes`, `PUT /api/v1/recipes/{id}`, `DELETE /api/v1/recipes/{id}`.
+
+4. **Sales — Primera parte (lista y búsqueda)**  
+   - Lista de sales disponibles (puede implementarse inicialmente con datos estáticos para mostrar UI).  
+   - Barra de búsqueda, filtros y mensaje “no hay elementos” cuando esté vacío.  
+   - Lista con botón de edición (navega a la segunda parte).
+
+5. **Sales — Segunda parte (CRUD conectado)**  
+   - Interfaz y lógica para agregar/actualizar/eliminar una sale, conectada al backend cuando los endpoints estén listos.
+
+**Mapeo rápido: pantallas → endpoints**  
+- Lista de Supplies (pantalla) → `GET /api/v1/supplies`, `GET /api/v1/custom-supplies/user/{userId}`  
+- Filtros por categoría → `GET /api/v1/supplies/categories`  
+- Crear/editar supply (modal) → `POST /api/v1/custom-supplies`, `PUT /api/v1/custom-supplies/{id}`, `DELETE /api/v1/custom-supplies/{id}`  
+- Recipes (lista, detalle, modificar) → endpoints bajo `/api/v1/recipes` (ver sección Recipes arriba)  
+- Orders / Batches (cuando se integre la gestión de compras) → endpoints bajo `/api/v1/orders` y `/api/v1/batches`  
+
+**Qué se demuestra en el video**  
+- Navegación por las pantallas core: lista de supplies, filtro/búsqueda, modal de creación/edición, listado y detalle de recipes.  
+- Conexión parcial con el backend: llamadas de lectura y ejemplos de POST/PUT donde se ha integrado.  
+- Comportamientos de validación y estados UI (loading / empty / success / error).
+
+**Video de Aplicación Móvil:** https://shorturl.at/8adxX
+
+![Execution Backend](assets/images/cap4/sprint1/execution/exec3.png)
+
 
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -344,6 +460,7 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
+
   
   <tr>
     <td>Segmento 2: Proveedores de Restaurantes</td>
@@ -387,4 +504,81 @@ Grabación de pantalla y voz: previa autorización, para análisis posterior.
 
 ### 4.3.2. Registro de Entrevistas
 
+A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
+
+#### **Entrevista 01 – Josue Ramírez**
+
+**Datos del entrevistado:**
+- **Nombre completo:** Josue Ramírez  
+- **Edad:** 26 años  
+- **Distrito:** Chorrillos  
+- **Segmento:** Proveedor de insumos gastronómicos  
+- **Fecha de entrevista:** 07 de octubre de 2025  
+- **Duración:** 8 minutos y 58 segundos  
+- **Registro audiovisual:**  https://shorturl.at/kaGl4
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Josue Ramírez indicó que el diseño del landing le pareció **claro y profesional**, destacando el mensaje principal que resalta la **conexión directa entre proveedores y administradores de restaurantes**.
+
+Comentó que el apartado de **“gestión de catálogo”** le resultó relevante, ya que permitiría mantener actualizados sus productos sin necesidad de depender de terceros. Asimismo, valoró positivamente la posibilidad de **recibir pedidos en tiempo real y mantener comunicación directa con los restaurantes** mediante la plataforma.
+
+Sin embargo, sugirió que sería útil incluir una sección más visible en el landing donde se expliquen los **beneficios específicos para proveedores**, como métricas de venta o testimonios de otros usuarios. También recomendó que el formulario de registro indique con mayor claridad los **requisitos de verificación** o documentos necesarios.
+
+En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
+
+**Conclusión general:**  
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
+
+
 ### 4.3.3. Evaluaciones según heurísticas
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
+  <thead>
+    <tr>
+      <th style="text-align: center">Segmento</th>
+      <th style="text-align: center">Elementos a validar</th>
+      <th style="text-align: center">Mobile User Flow</th>
+      <th style="text-align: center">Actividades durante la sesión</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: center">
+    <tr>
+      <td>Segmento 2: Proveedores de Restaurantes</td>
+      <td>
+        <ul>
+          <li>Claridad del mensaje del landing page y valor percibido.</li>
+          <li>Facilidad de registro como proveedor.</li>
+          <li>Publicación de productos y gestión del catálogo.</li>
+          <li>Recepción y actualización de pedidos.</li>
+          <li>Comunicación con administradores de restaurantes.</li>
+          <li>Visualización de historial de pedidos y métricas de venta.</li>
+          <li>Comprensión de alertas y notificaciones del sistema.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Registro como proveedor.</li>
+          <li>Creación y edición de productos en catálogo.</li>
+          <li>Recepción de pedidos y confirmación de entrega.</li>
+          <li>Gestión de pedidos activos y completados.</li>
+          <li>Mensajería con restaurantes asociados.</li>
+          <li>Revisión de métricas de desempeño (ventas, entregas, reseñas).</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Explorar el landing page e indicar qué entienden del servicio ofrecido.</li>
+          <li>Completar el flujo de registro como proveedor.</li>
+          <li>Publicar un nuevo producto y modificar su precio o stock.</li>
+          <li>Simular la recepción de un pedido y su actualización de estado.</li>
+          <li>Acceder a la bandeja de mensajes y enviar una respuesta a un restaurante.</li>
+          <li>Consultar las métricas de ventas y comentar su utilidad.</li>
+          <li>Comentar percepciones generales sobre la facilidad de uso y claridad del sistema.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
