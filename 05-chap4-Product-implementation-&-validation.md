@@ -1162,3 +1162,107 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
+  <thead>
+    <tr>
+      <th style="text-align: center">Segmento</th>
+      <th style="text-align: center">Elementos a validar</th>
+      <th style="text-align: center">Mobile User Flow</th>
+      <th style="text-align: center">Actividades durante la sesión</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: center">
+    <tr>
+      <td>Segmento 2: Proveedores de Restaurantes</td>
+      <td>
+        <ul>
+          <li>Claridad del mensaje del landing page y valor percibido.</li>
+          <li>Facilidad de registro como proveedor.</li>
+          <li>Publicación de productos y gestión del catálogo.</li>
+          <li>Recepción y actualización de pedidos.</li>
+          <li>Comunicación con administradores de restaurantes.</li>
+          <li>Visualización de historial de pedidos y métricas de venta.</li>
+          <li>Comprensión de alertas y notificaciones del sistema.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Registro como proveedor.</li>
+          <li>Creación y edición de productos en catálogo.</li>
+          <li>Recepción de pedidos y confirmación de entrega.</li>
+          <li>Gestión de pedidos activos y completados.</li>
+          <li>Mensajería con restaurantes asociados.</li>
+          <li>Revisión de métricas de desempeño (ventas, entregas, reseñas).</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Explorar el landing page e indicar qué entienden del servicio ofrecido.</li>
+          <li>Completar el flujo de registro como proveedor.</li>
+          <li>Publicar un nuevo producto y modificar su precio o stock.</li>
+          <li>Simular la recepción de un pedido y su actualización de estado.</li>
+          <li>Acceder a la bandeja de mensajes y enviar una respuesta a un restaurante.</li>
+          <li>Consultar las métricas de ventas y comentar su utilidad.</li>
+          <li>Comentar percepciones generales sobre la facilidad de uso y claridad del sistema.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### 4.3.2. Registro de Entrevistas
+
+A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
+
+#### **Entrevista 01 – Josue Ramírez**
+
+**Datos del entrevistado:**
+- **Nombre completo:** Josue Ramírez  
+- **Edad:** 26 años  
+- **Distrito:** Chorrillos  
+- **Segmento:** Proveedor de insumos gastronómicos  
+- **Fecha de entrevista:** 07 de octubre de 2025  
+- **Duración:** 8 minutos y 58 segundos  
+- **Registro audiovisual:**  https://shorturl.at/kaGl4
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Josue Ramírez indicó que el diseño del landing le pareció **claro y profesional**, destacando el mensaje principal que resalta la **conexión directa entre proveedores y administradores de restaurantes**.
+
+Comentó que el apartado de **“gestión de catálogo”** le resultó relevante, ya que permitiría mantener actualizados sus productos sin necesidad de depender de terceros. Asimismo, valoró positivamente la posibilidad de **recibir pedidos en tiempo real y mantener comunicación directa con los restaurantes** mediante la plataforma.
+
+Sin embargo, sugirió que sería útil incluir una sección más visible en el landing donde se expliquen los **beneficios específicos para proveedores**, como métricas de venta o testimonios de otros usuarios. También recomendó que el formulario de registro indique con mayor claridad los **requisitos de verificación** o documentos necesarios.
+
+En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
+
+**Conclusión general:**  
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
+
+#### **Entrevista 02 – Alicia Minaya**
+
+**Datos del entrevistado:**
+- **Nombre completo:** Alicia Soledad Minaya Maguiña  
+- **Edad:** 45 años  
+- **Distrito:** Chorrillos  
+- **Segmento:** Administradora de restaurantes  
+- **Fecha de entrevista:** 09 de octubre de 2025  
+- **Duración:** 8 minutos y 24 segundos  
+- **Registro audiovisual:**  [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/EV3jiWf-6jVMl50xDv9kLrcBLHD3N5U9uKAIh7VyXYtbdg?e=YSAKrh)
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint1/interviews/int-restaurant-managers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Alicia Minaya indicó que el diseño del landing le pareció **intuitivo y ordenado**, destacando el mensaje principal que resalta la **conexión directa entre administradores de restaurantes y su estado del inventario**. De esta manera afirma que la aplicación será de gran ayuda para tomar decisiones rápidas y acertadas en su negocio.
+
+Comentó que las alertas en tiempo real le resultarán relevantes para realizar un rebastecimiento de inventario constante y evitar pérdidas por productos vencidos. Asimismo, valoró positivamente la posibilidad de **recibir reportes y métricas de consumo** mediante la aplicación.
+
+Asimismo, no tuvo ninguna sugerencia para mejorar el landing page, ya que consideró que la información presentada es suficiente y clara.
+
+En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
+
+**Conclusión general:**  
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de administradores de restaurantes. Asimismo, no se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo.
