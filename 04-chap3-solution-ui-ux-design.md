@@ -594,7 +594,7 @@ Pantallas del módulo de Inventario para administrador: permite visualizar la li
 
 **Formulario de creación y edición de insumos**
 Pantallas del flujo de edición y creación de inventario: muestra formularios detallados con campos como nombre, unidad, categoría y fecha.
- `<img src="assets/images/cap4/mobile_wireframes/w_admin_inventory2.png" width="600px" alt="w_admin_inventory2">`
+<img src="assets/images/cap4/mobile_wireframes/w_admin_inventory2.png" width="600px" alt="w_admin_inventory2">
 
 ---
 
@@ -607,7 +607,7 @@ Pantallas del módulo de Pedidos para administrador: lista de pedidos, detalles 
 
 **Edición de pedido y asignación de proveedor**
 Pantallas complementarias del flujo de pedidos: edición de pedidos, selección de proveedores y fechas estimadas.
- `<img src="assets/images/cap4/mobile_wireframes/w_admin_orders2.png" width="600px" alt="w_admin_orders2">`
+<img src="assets/images/cap4/mobile_wireframes/w_admin_orders2.png" width="600px" alt="w_admin_orders2">
 
 ---
 
@@ -620,7 +620,7 @@ Pantallas del módulo de Recetas: listado de recetas con detalles sobre los insu
 
 **Formulario de creación y edición de recetas**
 Flujo de creación y edición de recetas: permite agregar o editar insumos y cantidades requeridas por receta.
- `<img src="assets/images/cap4/mobile_wireframes/w_admin_recipes2.png" width="600px" alt="w_admin_recipes2">`
+<img src="assets/images/cap4/mobile_wireframes/w_admin_recipes2.png" width="600px" alt="w_admin_recipes2">
 
 ---
 
@@ -633,7 +633,7 @@ Pantallas del módulo de Ventas: muestra historial de ventas, métricas clave y 
 
 **Confirmación de eliminación de venta**
 Popup de advertencia para confirmar acciones destructivas en la sección de ventas.
- `<img src="assets/images/cap4/mobile_wireframes/w_admin_sales2.png" width="600px" alt="w_admin_sales2">`
+ <img src="assets/images/cap4/mobile_wireframes/w_admin_sales2.png" width="600px" alt="w_admin_sales2">
 
 ---
 
@@ -684,11 +684,11 @@ Pedidos para proveedores: lista de pedidos realizados por restaurantes, detalles
 
 **Detalles de pedido**
 Pantallas de gestión de pedidos: incluye opciones para editar, cancelar o confirmar pedidos.
- `<img src="assets/images/cap4/mobile_wireframes/w_supplier_orders2.png" width="600px" alt="w_supplier_orders2">`
+ <img src="assets/images/cap4/mobile_wireframes/w_supplier_orders2.png" width="600px" alt="w_supplier_orders2">
 
 **Actualización de estado de pedidos**
 Actualización de estado de pedidos: permite al proveedor actualizar el estado de envío y entrega.
- `<img src="assets/images/cap4/mobile_wireframes/w_supplier_orders3.png" width="600px" alt="w_supplier_orders3">`
+ <img src="assets/images/cap4/mobile_wireframes/w_supplier_orders3.png" width="600px" alt="w_supplier_orders3">
 
 ---
 
