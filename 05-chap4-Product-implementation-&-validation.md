@@ -1210,3 +1210,33 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
     </tr>
   </tbody>
 </table>
+
+### 4.3.2. Registro de Entrevistas
+
+A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
+
+#### **Entrevista 01 – Josue Ramírez**
+
+**Datos del entrevistado:**
+- **Nombre completo:** Josue Ramírez  
+- **Edad:** 26 años  
+- **Distrito:** Chorrillos  
+- **Segmento:** Proveedor de insumos gastronómicos  
+- **Fecha de entrevista:** 07 de octubre de 2025  
+- **Duración:** 8 minutos y 58 segundos  
+- **Registro audiovisual:**  https://shorturl.at/kaGl4
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Josue Ramírez indicó que el diseño del landing le pareció **claro y profesional**, destacando el mensaje principal que resalta la **conexión directa entre proveedores y administradores de restaurantes**.
+
+Comentó que el apartado de **“gestión de catálogo”** le resultó relevante, ya que permitiría mantener actualizados sus productos sin necesidad de depender de terceros. Asimismo, valoró positivamente la posibilidad de **recibir pedidos en tiempo real y mantener comunicación directa con los restaurantes** mediante la plataforma.
+
+Sin embargo, sugirió que sería útil incluir una sección más visible en el landing donde se expliquen los **beneficios específicos para proveedores**, como métricas de venta o testimonios de otros usuarios. También recomendó que el formulario de registro indique con mayor claridad los **requisitos de verificación** o documentos necesarios.
+
+En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
+
+**Conclusión general:**  
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
