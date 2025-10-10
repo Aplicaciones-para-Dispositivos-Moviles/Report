@@ -1015,8 +1015,6 @@ Se guardaron los cambios para activar la publicación automática.
 
 ![Foto deployment step 4](assets/images/cap4/sprint1/step-4.png)
 
-Link del landing page desplegado:
-
 A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
 
 1. **Conexión del repositorio con Railway** : Se creó un nuevo proyecto en Railway y se conectó directamente el repositorio del backend desde GitHub.
