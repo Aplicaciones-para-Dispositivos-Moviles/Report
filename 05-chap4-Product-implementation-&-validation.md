@@ -64,66 +64,66 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 
 ##### Convenciones generales:
 
-- **Idioma**: Todo el código (nombres de paquetes, clases, variables, funciones, recursos) en **inglés**.  
-- **Indentación**: 4 espacios.  
-- **Formato de archivos**: `.kt` para Kotlin, `.xml` para layouts/resources, `build.gradle` / `build.gradle.kts` para scripts de Gradle.  
-- **Estilo de código adoptado**:  
-  - [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html)  
-  - [Android Kotlin Style Guide (Google)](https://developer.android.com/kotlin/style-guide)  
+- **Idioma**: Todo el código (nombres de paquetes, clases, variables, funciones, recursos) en **inglés**.
+- **Indentación**: 4 espacios.
+- **Formato de archivos**: `.kt` para Kotlin, `.xml` para layouts/resources, `build.gradle` / `build.gradle.kts` para scripts de Gradle.
+- **Estilo de código adoptado**:
+  - [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html)
+  - [Android Kotlin Style Guide (Google)](https://developer.android.com/kotlin/style-guide)
 - **Comportamiento asíncrono**: Usar **Kotlin Coroutines** y `suspend` functions para llamadas de red/IO; preferir **StateFlow** / **SharedFlow** o `LiveData` para exponer estados desde ViewModels.
 
 ##### Nomenclatura:
 
-- **Packages**: todo en minúsculas y con puntos (`com.project.restock.admin`).  
-- **Clases / Activities / ViewModels / Repositories**: `PascalCase` (ej. `InventoryViewModel`, `SuppliesRepository`).  
-- **Funciones y propiedades**: `camelCase` (ej. `fetchSupplies()` , `userId`).  
-- **Constantes**: `UPPER_SNAKE_CASE` (ej. `API_TIMEOUT_SECONDS`).  
-- **Composables (Jetpack Compose)**: `PascalCase` preferible y con sufijos claros cuando aplique (ej. `LoginScreen`, `SupplyItem`).  
-- **Archivos Kotlin**: `PascalCase` para clases (ej. `InventoryViewModel.kt`) o `snake_case` para ficheros que agrupen múltiples composables/pantallas (ej. `login_screen.kt`) según convención del equipo.  
-- **IDs y recursos (drawable, layout, string, color, dimens)**: `lowercase_snake_case` (ej. `activity_main.xml` → `@+id/btn_login`, `ic_supply_placeholder`, `color_primary`).  
-- **Nombres de layouts XML**: `lowercase_snake_case` con prefijos si aplica (ej. `activity_main.xml`, `fragment_recipe_list.xml`, `item_supply.xml`).  
+- **Packages**: todo en minúsculas y con puntos (`com.project.restock.admin`).
+- **Clases / Activities / ViewModels / Repositories**: `PascalCase` (ej. `InventoryViewModel`, `SuppliesRepository`).
+- **Funciones y propiedades**: `camelCase` (ej. `fetchSupplies()` , `userId`).
+- **Constantes**: `UPPER_SNAKE_CASE` (ej. `API_TIMEOUT_SECONDS`).
+- **Composables (Jetpack Compose)**: `PascalCase` preferible y con sufijos claros cuando aplique (ej. `LoginScreen`, `SupplyItem`).
+- **Archivos Kotlin**: `PascalCase` para clases (ej. `InventoryViewModel.kt`) o `snake_case` para ficheros que agrupen múltiples composables/pantallas (ej. `login_screen.kt`) según convención del equipo.
+- **IDs y recursos (drawable, layout, string, color, dimens)**: `lowercase_snake_case` (ej. `activity_main.xml` → `@+id/btn_login`, `ic_supply_placeholder`, `color_primary`).
+- **Nombres de layouts XML**: `lowercase_snake_case` con prefijos si aplica (ej. `activity_main.xml`, `fragment_recipe_list.xml`, `item_supply.xml`).
 - **Nombres de pruebas**: sufijo `Test` para unit/instrumented tests (ej. `InventoryViewModelTest`).
 
 ##### Archivos y recursos:
 
-- **Kotlin**: `.kt` (packages, ViewModels, Repositories, UseCases, Mappers).  
-- **Layouts**: `.xml` (si no se usa Compose) en `res/layout/`.  
-- **Drawables**: `res/drawable/` → `lowercase_snake_case`.  
-- **Strings**: `res/values/strings.xml` → keys en `lowercase_snake_case`.  
-- **Colors / Dimens / Styles**: `res/values/colors.xml`, `dimens.xml`, `styles.xml` → variables en `lowercase_snake_case`.  
+- **Kotlin**: `.kt` (packages, ViewModels, Repositories, UseCases, Mappers).
+- **Layouts**: `.xml` (si no se usa Compose) en `res/layout/`.
+- **Drawables**: `res/drawable/` → `lowercase_snake_case`.
+- **Strings**: `res/values/strings.xml` → keys en `lowercase_snake_case`.
+- **Colors / Dimens / Styles**: `res/values/colors.xml`, `dimens.xml`, `styles.xml` → variables en `lowercase_snake_case`.
 - **Build scripts**: `build.gradle` o `build.gradle.kts` (módulo/app) con dependencias centralizadas.
 
 ##### Arquitectura y patrones recomendados:
 
-- **Arquitectura**: MVVM (View — ViewModel — Repository) o MVI/Unidirectional UI (usando StateFlow) según preferencia del equipo.  
-- **Repository pattern**: separar acceso a datos (remote/local) y exponer modelos de dominio al ViewModel.  
-- **Use Cases / Interactors**: opcionalmente encapsular la lógica de negocio en casos de uso reutilizables.  
-- **Networking**: usar Retrofit + OkHttp + Moshi/Gson para serialización. Utilizar interceptors para auth/token.  
-- **Persistencia local**: Room para almacenamiento local (caches, offline support).  
-- **Asincronía**: Kotlin Coroutines + Flow / StateFlow para streams y estados reactivos.  
-- **State handling**: usar sealed classes o data classes para representar estados UI (Loading / Success / Error / Empty).  
+- **Arquitectura**: MVVM (View — ViewModel — Repository) o MVI/Unidirectional UI (usando StateFlow) según preferencia del equipo.
+- **Repository pattern**: separar acceso a datos (remote/local) y exponer modelos de dominio al ViewModel.
+- **Use Cases / Interactors**: opcionalmente encapsular la lógica de negocio en casos de uso reutilizables.
+- **Networking**: usar Retrofit + OkHttp + Moshi/Gson para serialización. Utilizar interceptors para auth/token.
+- **Persistencia local**: Room para almacenamiento local (caches, offline support).
+- **Asincronía**: Kotlin Coroutines + Flow / StateFlow para streams y estados reactivos.
+- **State handling**: usar sealed classes o data classes para representar estados UI (Loading / Success / Error / Empty).
 - **Navigation**: Jetpack Navigation Component (Fragments) o Navigation for Compose según stack elegido.
 
 ##### Buenas prácticas y recomendaciones:
 
-- **Código en inglés**: mensajes de commit, comentarios y nombres en inglés.  
-- **Suspension naming**: `suspend` functions con nombres verbales claros (`suspend fun fetchSupplies()`).  
-- **Error handling**: envolver llamadas de red en `Result`/`Either` o usar patrones claros para propagar errores al UI.  
-- **UI/UX**: manejar estados (loading, empty, error) en cada pantalla; mostrar mensajes claros para usuarios de restaurantes.  
-- **Testing**: escribir unit tests para ViewModels y repositorios; usar instrumented tests para flujos críticos.  
-- **Linting & formatting**: integrar `ktlint` y `detekt` en el pipeline; configurar `editorconfig` y `pre-commit hooks`.  
-- **Seguridad**: no guardar tokens en texto plano; usar `EncryptedSharedPreferences` o soluciones seguras.  
+- **Código en inglés**: mensajes de commit, comentarios y nombres en inglés.
+- **Suspension naming**: `suspend` functions con nombres verbales claros (`suspend fun fetchSupplies()`).
+- **Error handling**: envolver llamadas de red en `Result`/`Either` o usar patrones claros para propagar errores al UI.
+- **UI/UX**: manejar estados (loading, empty, error) en cada pantalla; mostrar mensajes claros para usuarios de restaurantes.
+- **Testing**: escribir unit tests para ViewModels y repositorios; usar instrumented tests para flujos críticos.
+- **Linting & formatting**: integrar `ktlint` y `detekt` en el pipeline; configurar `editorconfig` y `pre-commit hooks`.
+- **Seguridad**: no guardar tokens en texto plano; usar `EncryptedSharedPreferences` o soluciones seguras.
 - **Accesibilidad**: labels de contentDescription en imágenes, contrastes adecuados y soporte para tamaños de texto.
 
 ##### Herramientas / linters / utilidades:
 
-- **Ktlint** (formato y reglas de estilo).  
-- **Detekt** (análisis estático).  
-- **Android Lint** (recomendaciones Android).  
-- **Retrofit + OkHttp + Moshi/Gson** (networking).  
-- **Room** (persistencia local).  
-- **Jetpack Compose** (opcional para UI moderna) o XML + ViewBinding/Databinding.  
-- **Coroutines + Lifecycle (ViewModelScope)**.  
+- **Ktlint** (formato y reglas de estilo).
+- **Detekt** (análisis estático).
+- **Android Lint** (recomendaciones Android).
+- **Retrofit + OkHttp + Moshi/Gson** (networking).
+- **Room** (persistencia local).
+- **Jetpack Compose** (opcional para UI moderna) o XML + ViewBinding/Databinding.
+- **Coroutines + Lifecycle (ViewModelScope)**.
 - **Navigation Component** (navegación entre pantallas).
 
 ### 4.1.3. Source Code Style Guide & Conventions
@@ -691,15 +691,17 @@ A continuación se presentan los materiales de evidencia correspondientes a los 
 
 #### Landing Page
 
-**Alcance entregado (Sprint 1)**  
-- Landing Page desplegada y accesible públicamente.  
-- Contenido explicativo sobre la propuesta de valor de RESTOCK: gestión de supplies para administradores de restaurantes y proveedores.  
-- Secciones principales implementadas: Hero / Valor diferencial, Funcionalidades clave, CTA para registro/inicio de sesión, y contacto.  
+**Alcance entregado (Sprint 1)**
+
+- Landing Page desplegada y accesible públicamente.
+- Contenido explicativo sobre la propuesta de valor de RESTOCK: gestión de supplies para administradores de restaurantes y proveedores.
+- Secciones principales implementadas: Hero / Valor diferencial, Funcionalidades clave, CTA para registro/inicio de sesión, y contacto.
 - Diseño responsivo básico (desktop ↔ mobile) y coherencia visual con la identidad del producto.
 
-**Qué se demuestra en el video**  
-- Navegación entre secciones de la página.  
-- Comportamiento responsivo en distintas resoluciones.  
+**Qué se demuestra en el video**
+
+- Navegación entre secciones de la página.
+- Comportamiento responsivo en distintas resoluciones.
 - Enlaces hacia la zona de acceso (login/signup) y descripciones de las funcionalidades que conectan con la app móvil y el backend.
 
 **Video de Landing Page:**  https://shorturl.at/NOzSq
@@ -708,93 +710,99 @@ A continuación se presentan los materiales de evidencia correspondientes a los 
 
 #### Backend (API) — Estado: ~70%
 
-**Alcance entregado (Sprint 1)**  
-- Implementación de los endpoints core para soportar la lógica básica de la plataforma: autenticación, users/profiles, supplies, custom-supplies, recipes, batches, orders, business-categories y roles.  
-- Documentación mínima de endpoints (endpoints listos para pruebas con Postman/Swagger).  
+**Alcance entregado (Sprint 1)**
+
+- Implementación de los endpoints core para soportar la lógica básica de la plataforma: autenticación, users/profiles, supplies, custom-supplies, recipes, batches, orders, business-categories y roles.
+- Documentación mínima de endpoints (endpoints listos para pruebas con Postman/Swagger).
 - Pruebas funcionales de endpoints principales (autenticación, listado/consulta de supplies, creación/consulta de orders y CRUD básico de recipes y custom supplies).
 
-**Endpoints destacados implementados**  
-- **Autenticación**  
-  - `POST /api/v1/authentication/sign-up`  
-  - `POST /api/v1/authentication/sign-in`  
-- **Supplies (plataforma)**  
-  - `GET /api/v1/supplies`  
-  - `GET /api/v1/supplies/{supplyId}`  
-  - `GET /api/v1/supplies/categories`  
-- **Custom Supplies (usuario)**  
-  - `GET /api/v1/custom-supplies`  
-  - `POST /api/v1/custom-supplies`  
-  - `PUT /api/v1/custom-supplies/{id}`  
-  - `DELETE /api/v1/custom-supplies/{id}`  
-  - `GET /api/v1/custom-supplies/user/{userId}`  
-- **Recipes**  
-  - `GET /api/v1/recipes` / `GET /api/v1/recipes/{id}`  
-  - `POST /api/v1/recipes` / `PUT /api/v1/recipes/{id}` / `DELETE /api/v1/recipes/{id}`  
-  - `GET /api/v1/recipes/{id}/supplies` / `POST /api/v1/recipes/{id}/supplies`  
-  - `PUT /api/v1/recipes/{recipeId}/supplies/{supplyId}` / `DELETE /api/v1/recipes/{recipeId}/supplies/{supplyId}`  
-- **Orders & Batches**  
-  - `POST /api/v1/orders` / `GET /api/v1/orders` / `GET /api/v1/orders/{id}` / `DELETE /api/v1/orders/{id}`  
-  - `POST /api/v1/orders/{orderId}/batches` / `GET /api/v1/orders/{orderId}/batches`  
-  - `PUT /api/v1/orders/{id}/state`  
-  - Batches: `GET /api/v1/batches` / `GET /api/v1/batches/{id}` / `POST /api/v1/batches` / `PUT /api/v1/batches/{id}` / `DELETE /api/v1/batches/{id}` / `GET /api/v1/batches/user/{userId}`  
-- **Perfiles / Usuarios / Roles / Categorías**  
-  - `GET /api/v1/users` / `GET /api/v1/users/{userId}`  
-  - `PUT /api/v1/profiles/{userId}/personal` / `PUT /api/v1/profiles/{userId}/password` / `PUT /api/v1/profiles/{userId}/business` / `GET /api/v1/profiles/{userId}` / `DELETE /api/v1/profiles/{userId}`  
+**Endpoints destacados implementados**
+
+- **Autenticación**
+  - `POST /api/v1/authentication/sign-up`
+  - `POST /api/v1/authentication/sign-in`
+- **Supplies (plataforma)**
+  - `GET /api/v1/supplies`
+  - `GET /api/v1/supplies/{supplyId}`
+  - `GET /api/v1/supplies/categories`
+- **Custom Supplies (usuario)**
+  - `GET /api/v1/custom-supplies`
+  - `POST /api/v1/custom-supplies`
+  - `PUT /api/v1/custom-supplies/{id}`
+  - `DELETE /api/v1/custom-supplies/{id}`
+  - `GET /api/v1/custom-supplies/user/{userId}`
+- **Recipes**
+  - `GET /api/v1/recipes` / `GET /api/v1/recipes/{id}`
+  - `POST /api/v1/recipes` / `PUT /api/v1/recipes/{id}` / `DELETE /api/v1/recipes/{id}`
+  - `GET /api/v1/recipes/{id}/supplies` / `POST /api/v1/recipes/{id}/supplies`
+  - `PUT /api/v1/recipes/{recipeId}/supplies/{supplyId}` / `DELETE /api/v1/recipes/{recipeId}/supplies/{supplyId}`
+- **Orders & Batches**
+  - `POST /api/v1/orders` / `GET /api/v1/orders` / `GET /api/v1/orders/{id}` / `DELETE /api/v1/orders/{id}`
+  - `POST /api/v1/orders/{orderId}/batches` / `GET /api/v1/orders/{orderId}/batches`
+  - `PUT /api/v1/orders/{id}/state`
+  - Batches: `GET /api/v1/batches` / `GET /api/v1/batches/{id}` / `POST /api/v1/batches` / `PUT /api/v1/batches/{id}` / `DELETE /api/v1/batches/{id}` / `GET /api/v1/batches/user/{userId}`
+- **Perfiles / Usuarios / Roles / Categorías**
+  - `GET /api/v1/users` / `GET /api/v1/users/{userId}`
+  - `PUT /api/v1/profiles/{userId}/personal` / `PUT /api/v1/profiles/{userId}/password` / `PUT /api/v1/profiles/{userId}/business` / `GET /api/v1/profiles/{userId}` / `DELETE /api/v1/profiles/{userId}`
   - `GET /api/v1/roles` / `GET /api/v1/business-categories`
 
-**Qué se demuestra en el video**  
-- Ejecución de requests sobre los endpoints principales con Postman/Swagger.  
-- Flujo de autenticación (sign-up / sign-in) y consumo de un endpoint protegido.  
-- Creación y consulta de resources claves: supplies, custom-supplies, recipes, orders.  
+**Qué se demuestra en el video**
+
+- Ejecución de requests sobre los endpoints principales con Postman/Swagger.
+- Flujo de autenticación (sign-up / sign-in) y consumo de un endpoint protegido.
+- Creación y consulta de resources claves: supplies, custom-supplies, recipes, orders.
 - Pruebas de cambio de estado en orders y creación de batches.
 
-**Video del Backend (demostración / pruebas):** https://shorturl.at/CZzk9 
+**Video del Backend (demostración / pruebas):** https://shorturl.at/CZzk9
 
 ![Execution Backend](assets/images/cap4/sprint1/execution/exec2.png)
 
-
 #### Aplicación Móvil (Administrador de Restaurantes — Android) — Pantallas integradas
 
-**Alcance entregado (Sprint 1)**  
-- Desarrollo e integración de las **pantallas core** del flujo administrativo en Android: listas principales, búsquedas y vistas detalle.  
-- Conexión parcial con el backend para operaciones de lectura y algunas operaciones CRUD (dependiendo del endpoint).  
+**Alcance entregado (Sprint 1)**
+
+- Desarrollo e integración de las **pantallas core** del flujo administrativo en Android: listas principales, búsquedas y vistas detalle.
+- Conexión parcial con el backend para operaciones de lectura y algunas operaciones CRUD (dependiendo del endpoint).
 - Validaciones visuales y estados básicos (loading, empty state, error).
 
 **Pantallas incluidas (PRIMERA PARTE — ADMIN RESTAURANTES)**
 
-1. **Supplies — Lista y tabla**  
-   - Ver lista de supplies (datos desde `GET /api/v1/supplies` y `GET /api/v1/custom-supplies/user/{userId}` según contexto).  
-   - Barra de búsqueda con filtros (por categoría: `GET /api/v1/supplies/categories`).  
+1. **Supplies — Lista y tabla**
+
+   - Ver lista de supplies (datos desde `GET /api/v1/supplies` y `GET /api/v1/custom-supplies/user/{userId}` según contexto).
+   - Barra de búsqueda con filtros (por categoría: `GET /api/v1/supplies/categories`).
    - Estado vacío cuando no hay supplies.
+2. **Modal / Interfaz CRUD de Supplies**
 
-2. **Modal / Interfaz CRUD de Supplies**  
-   - Modal para crear/editar supplies (consume `POST /api/v1/custom-supplies`, `PUT /api/v1/custom-supplies/{id}`, `DELETE /api/v1/custom-supplies/{id}`).  
+   - Modal para crear/editar supplies (consume `POST /api/v1/custom-supplies`, `PUT /api/v1/custom-supplies/{id}`, `DELETE /api/v1/custom-supplies/{id}`).
    - Alternativa: evaluación sobre si usar modal o pantalla separada según usabilidad.
+3. **Recipes — Interfaz y CRUD**
 
-3. **Recipes — Interfaz y CRUD**  
-   - Pantalla de listado `GET /api/v1/recipes`.  
-   - Detalle de receta `GET /api/v1/recipes/{id}` y listado de supplies de receta `GET /api/v1/recipes/{id}/supplies`.  
-   - Agregar supplies a receta `POST /api/v1/recipes/{id}/supplies`.  
+   - Pantalla de listado `GET /api/v1/recipes`.
+   - Detalle de receta `GET /api/v1/recipes/{id}` y listado de supplies de receta `GET /api/v1/recipes/{id}/supplies`.
+   - Agregar supplies a receta `POST /api/v1/recipes/{id}/supplies`.
    - Operaciones de creación/edición/eliminación: `POST /api/v1/recipes`, `PUT /api/v1/recipes/{id}`, `DELETE /api/v1/recipes/{id}`.
+4. **Sales — Primera parte (lista y búsqueda)**
 
-4. **Sales — Primera parte (lista y búsqueda)**  
-   - Lista de sales disponibles (puede implementarse inicialmente con datos estáticos para mostrar UI).  
-   - Barra de búsqueda, filtros y mensaje “no hay elementos” cuando esté vacío.  
+   - Lista de sales disponibles (puede implementarse inicialmente con datos estáticos para mostrar UI).
+   - Barra de búsqueda, filtros y mensaje “no hay elementos” cuando esté vacío.
    - Lista con botón de edición (navega a la segunda parte).
+5. **Sales — Segunda parte (CRUD conectado)**
 
-5. **Sales — Segunda parte (CRUD conectado)**  
    - Interfaz y lógica para agregar/actualizar/eliminar una sale, conectada al backend cuando los endpoints estén listos.
 
-**Mapeo rápido: pantallas → endpoints**  
-- Lista de Supplies (pantalla) → `GET /api/v1/supplies`, `GET /api/v1/custom-supplies/user/{userId}`  
-- Filtros por categoría → `GET /api/v1/supplies/categories`  
-- Crear/editar supply (modal) → `POST /api/v1/custom-supplies`, `PUT /api/v1/custom-supplies/{id}`, `DELETE /api/v1/custom-supplies/{id}`  
-- Recipes (lista, detalle, modificar) → endpoints bajo `/api/v1/recipes` (ver sección Recipes arriba)  
-- Orders / Batches (cuando se integre la gestión de compras) → endpoints bajo `/api/v1/orders` y `/api/v1/batches`  
+**Mapeo rápido: pantallas → endpoints**
 
-**Qué se demuestra en el video**  
-- Navegación por las pantallas core: lista de supplies, filtro/búsqueda, modal de creación/edición, listado y detalle de recipes.  
-- Conexión parcial con el backend: llamadas de lectura y ejemplos de POST/PUT donde se ha integrado.  
+- Lista de Supplies (pantalla) → `GET /api/v1/supplies`, `GET /api/v1/custom-supplies/user/{userId}`
+- Filtros por categoría → `GET /api/v1/supplies/categories`
+- Crear/editar supply (modal) → `POST /api/v1/custom-supplies`, `PUT /api/v1/custom-supplies/{id}`, `DELETE /api/v1/custom-supplies/{id}`
+- Recipes (lista, detalle, modificar) → endpoints bajo `/api/v1/recipes` (ver sección Recipes arriba)
+- Orders / Batches (cuando se integre la gestión de compras) → endpoints bajo `/api/v1/orders` y `/api/v1/batches`
+
+**Qué se demuestra en el video**
+
+- Navegación por las pantallas core: lista de supplies, filtro/búsqueda, modal de creación/edición, listado y detalle de recipes.
+- Conexión parcial con el backend: llamadas de lectura y ejemplos de POST/PUT donde se ha integrado.
 - Comportamientos de validación y estados UI (loading / empty / success / error).
 
 **Video de Aplicación Móvil:** https://shorturl.at/8adxX
@@ -1007,7 +1015,7 @@ Se guardaron los cambios para activar la publicación automática.
 
 ![Foto deployment step 4](assets/images/cap4/sprint1/step-4.png)
 
-Link del landing page desplegado: https://aplicaciones-para-dispositivos-moviles.github.io/restock-landing-page/
+Link del landing page desplegado:
 
 A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
 
@@ -1023,23 +1031,17 @@ A continuación, se detallan los pasos realizados para asegurar el funcionamient
 4. **Selección del tipo de base de dato** Se seleccionó el motor de base de datos **MongoDB**.
 
    ![Evidence Step 4](assets/images/cap4/sprint1/evidence-step4.jpeg)
-5. **Despliegue de imagen MongoDB** Railway desplegó automáticamente una instancia de base de datos con sus credenciales correspondientes.
-
-   ![Evidence Step 5](assets/images/cap4/sprint1/evidence-step5.jpeg)
-6. **Obtención y configuración de credenciales**Se copiaron las credenciales de conexión (usuario, contraseña, host, puerto y nombre de base de datos) y se unificaron en una sola variable de entorno tipo `SPRING_DATASOURCE_URL`.
-
-   ![Evidence Step 6](assets/images/cap4/sprint1/evidence-step6.jpeg)
-7. **Habilitación del link Swagger en la configuración**En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
+5. **Habilitación del link Swagger en la configuración**En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
 
    ![Evidence Step 7](assets/images/cap4/sprint1/evidence-step7.jpeg)
-8. **Creación de variables de entorno en Railway**Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Railway.
+6. **Creación de variables de entorno en Railway**Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Railway.
 
    ![Evidence Step 8](assets/images/cap4/sprint1/evidence-step8.jpeg)
-9. **Despliegue del proyecto**Railway ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
+7. **Despliegue del proyecto** Railway ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
 
    ![Evidence Step 9](assets/images/cap4/sprint1/evidence-step9.jpeg)
-10. **Verificación con Swagger**
-    Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
+8. **Verificación con Swagger**
+   Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
 
    ![Evidence Step 10](assets/images/cap4/sprint1/evidence-step10.jpeg)
 
@@ -1048,60 +1050,60 @@ A continuación, se detallan los pasos realizados para asegurar el funcionamient
 #### Landing Page
 
 Durante el desarrollo de la Landing Page se aplicaron prácticas de colaboración que facilitaron la entrega de un front público coherente y responsivo. A continuación se detallan las prácticas aplicadas:
- 
-- Las tareas se distribuyeron por secciones (Hero, Funcionalidades, Casos de uso, CTA, Contacto) y cada sección quedó asignada a un responsable para acelerar la implementación.  
-- Se realizaron **commits frecuentes y atómicos** con mensajes descriptivos para facilitar revisiones y trazabilidad.  
-- Las integraciones se realizaron mediante *pull requests* hacia `develop` y se exigió una revisión mínima por otro miembro antes del merge.  
-- La comunicación se coordinó principalmente vía **Discord** y registros de decisiones quedaron documentados en el canal y en el README del submódulo.  
+
+- Las tareas se distribuyeron por secciones (Hero, Funcionalidades, Casos de uso, CTA, Contacto) y cada sección quedó asignada a un responsable para acelerar la implementación.
+- Se realizaron **commits frecuentes y atómicos** con mensajes descriptivos para facilitar revisiones y trazabilidad.
+- Las integraciones se realizaron mediante *pull requests* hacia `develop` y se exigió una revisión mínima por otro miembro antes del merge.
+- La comunicación se coordinó principalmente vía **Discord** y registros de decisiones quedaron documentados en el canal y en el README del submódulo.
 - Se emplearon revisiones visuales en distintos tamaños de pantalla y se ordenaron los assets en `assets/landing/`
 
 ##### **Analíticos de colaboración — Landing Page**
 
 ![Landing Collaboration](assets/images/cap4/collaboration/landing_ci_1.png)
 
-- Total de commits (Landing Page): **14**  
-- Total de autores contribuyentes: **5**  
-- Total de *pull requests* relacionadas: **12**  
+- Total de commits (Landing Page): **14**
+- Total de autores contribuyentes: **5**
+- Total de *pull requests* relacionadas: **12**
 - Observación: actividad concentrada en diseño inicial y ajustes de responsividad.
 
 #### Backend (API)
 
 El desarrollo del Backend siguió un flujo de trabajo enfocado en estabilidad y pruebas, garantizando que los endpoints core quedasen documentados y testeados:
 
-- Se trabajó por dominios funcionales creando ramas temáticas como `feature/auth`, `feature/resources`, `feature/monitoring` para permitir despliegue paralelo y revisiones independientes.  
-- Se usó Swagger como fuente de verdad para la documentación de endpoints; las colecciones se actualizaron junto con los cambios en código.  
-- Commits atómicos y PRs con descripciones técnicas claras permitieron revisiones eficaces por pares (covering: controllers/services).  
-- Pruebas unitarias básicas y logs de integración se incluyeron en los PRs para facilitar el QA.  
+- Se trabajó por dominios funcionales creando ramas temáticas como `feature/auth`, `feature/resources`, `feature/monitoring` para permitir despliegue paralelo y revisiones independientes.
+- Se usó Swagger como fuente de verdad para la documentación de endpoints; las colecciones se actualizaron junto con los cambios en código.
+- Commits atómicos y PRs con descripciones técnicas claras permitieron revisiones eficaces por pares (covering: controllers/services).
+- Pruebas unitarias básicas y logs de integración se incluyeron en los PRs para facilitar el QA.
 - Se definieron responsables por Bounded Context para planificar la migración a MongoDB y minimizar riesgos durante el cambio de persistencia.
 
 ##### **Analíticos de colaboración — Backend**
 
 ![Backend Collaboration](assets/images/cap4/collaboration/backend_ci_1.png)
 
-- Total de commits (Backend): **67**  
-- Total de autores contribuyentes: **5**  
-- Total de *pull requests* relacionadas: **2**  
-- Endpoints documentados en Postman/Swagger: **28**  
+- Total de commits (Backend): **67**
+- Total de autores contribuyentes: **5**
+- Total de *pull requests* relacionadas: **2**
+- Endpoints documentados en Postman/Swagger: **28**
 - Observación: respaldo sólido de pruebas y documentación para facilitar la futura migración de BD.
 
 #### Aplicación Móvil (Android)
 
 La colaboración en el módulo móvil se orientó a entregar pantallas core integradas con el backend y a mantener buena cohesión entre diseño y desarrollo:
 
-- Ramas `feature/*` por pantalla (resource, recipes, sales) para aislar cambios y facilitar PRs pequeños y revisables.  
-- Se adoptó MVVM y convenciones de Kotlin en todo el módulo; los PRs incluyeron ejemplos de ViewModel y pruebas unitarias cuando fue posible.  
-- Coordinación continua con los responsables del backend para definir contratos (DTOs/JSON) y evitar retrabajo.  
-- Commits regulares con mensajes que enlazaban a issues/tickets de la planificación del sprint.  
+- Ramas `feature/*` por pantalla (resource, recipes, sales) para aislar cambios y facilitar PRs pequeños y revisables.
+- Se adoptó MVVM y convenciones de Kotlin en todo el módulo; los PRs incluyeron ejemplos de ViewModel y pruebas unitarias cuando fue posible.
+- Coordinación continua con los responsables del backend para definir contratos (DTOs/JSON) y evitar retrabajo.
+- Commits regulares con mensajes que enlazaban a issues/tickets de la planificación del sprint.
 - Builds y APKs parciales compartidos en el canal de releases para revisión de UX y pruebas manuales.
 
 ##### **Analíticos de colaboración — Mobile**
 
 ![Mobile Collaboration](assets/images/cap4/collaboration/mobile_ci_1.png)
 
-- Total de commits (Mobile): **x**  
-- Total de autores contribuyentes: **x**  
-- Total de *pull requests* relacionadas: **x**  
-- Pantallas core implementadas: **5**  
+- Total de commits (Mobile): **x**
+- Total de autores contribuyentes: **x**
+- Total de *pull requests* relacionadas: **x**
+- Pantallas core implementadas: **5**
 
 ## 4.3. Validation Interviews
 
@@ -1162,107 +1164,3 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
-
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
-  <thead>
-    <tr>
-      <th style="text-align: center">Segmento</th>
-      <th style="text-align: center">Elementos a validar</th>
-      <th style="text-align: center">Mobile User Flow</th>
-      <th style="text-align: center">Actividades durante la sesión</th>
-    </tr>
-  </thead>
-  <tbody style="text-align: center">
-    <tr>
-      <td>Segmento 2: Proveedores de Restaurantes</td>
-      <td>
-        <ul>
-          <li>Claridad del mensaje del landing page y valor percibido.</li>
-          <li>Facilidad de registro como proveedor.</li>
-          <li>Publicación de productos y gestión del catálogo.</li>
-          <li>Recepción y actualización de pedidos.</li>
-          <li>Comunicación con administradores de restaurantes.</li>
-          <li>Visualización de historial de pedidos y métricas de venta.</li>
-          <li>Comprensión de alertas y notificaciones del sistema.</li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li>Registro como proveedor.</li>
-          <li>Creación y edición de productos en catálogo.</li>
-          <li>Recepción de pedidos y confirmación de entrega.</li>
-          <li>Gestión de pedidos activos y completados.</li>
-          <li>Mensajería con restaurantes asociados.</li>
-          <li>Revisión de métricas de desempeño (ventas, entregas, reseñas).</li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li>Explorar el landing page e indicar qué entienden del servicio ofrecido.</li>
-          <li>Completar el flujo de registro como proveedor.</li>
-          <li>Publicar un nuevo producto y modificar su precio o stock.</li>
-          <li>Simular la recepción de un pedido y su actualización de estado.</li>
-          <li>Acceder a la bandeja de mensajes y enviar una respuesta a un restaurante.</li>
-          <li>Consultar las métricas de ventas y comentar su utilidad.</li>
-          <li>Comentar percepciones generales sobre la facilidad de uso y claridad del sistema.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### 4.3.2. Registro de Entrevistas
-
-A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
-
-#### **Entrevista 01 – Josue Ramírez**
-
-**Datos del entrevistado:**
-- **Nombre completo:** Josue Ramírez  
-- **Edad:** 26 años  
-- **Distrito:** Chorrillos  
-- **Segmento:** Proveedor de insumos gastronómicos  
-- **Fecha de entrevista:** 07 de octubre de 2025  
-- **Duración:** 8 minutos y 58 segundos  
-- **Registro audiovisual:**  https://shorturl.at/kaGl4
-- **Captura de entrevista:**  
-  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
-
-#### **Resumen descriptivo de la entrevista:**
-
-Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Josue Ramírez indicó que el diseño del landing le pareció **claro y profesional**, destacando el mensaje principal que resalta la **conexión directa entre proveedores y administradores de restaurantes**.
-
-Comentó que el apartado de **“gestión de catálogo”** le resultó relevante, ya que permitiría mantener actualizados sus productos sin necesidad de depender de terceros. Asimismo, valoró positivamente la posibilidad de **recibir pedidos en tiempo real y mantener comunicación directa con los restaurantes** mediante la plataforma.
-
-Sin embargo, sugirió que sería útil incluir una sección más visible en el landing donde se expliquen los **beneficios específicos para proveedores**, como métricas de venta o testimonios de otros usuarios. También recomendó que el formulario de registro indique con mayor claridad los **requisitos de verificación** o documentos necesarios.
-
-En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
-
-**Conclusión general:**  
-La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
-
-#### **Entrevista 02 – Alicia Minaya**
-
-**Datos del entrevistado:**
-- **Nombre completo:** Alicia Soledad Minaya Maguiña  
-- **Edad:** 45 años  
-- **Distrito:** Chorrillos  
-- **Segmento:** Administradora de restaurantes  
-- **Fecha de entrevista:** 09 de octubre de 2025  
-- **Duración:** 8 minutos y 24 segundos  
-- **Registro audiovisual:**  [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/EV3jiWf-6jVMl50xDv9kLrcBLHD3N5U9uKAIh7VyXYtbdg?e=YSAKrh)
-- **Captura de entrevista:**  
-  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint1/interviews/int-restaurant-managers.png)
-
-#### **Resumen descriptivo de la entrevista:**
-
-Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Alicia Minaya indicó que el diseño del landing le pareció **intuitivo y ordenado**, destacando el mensaje principal que resalta la **conexión directa entre administradores de restaurantes y su estado del inventario**. De esta manera afirma que la aplicación será de gran ayuda para tomar decisiones rápidas y acertadas en su negocio.
-
-Comentó que las alertas en tiempo real le resultarán relevantes para realizar un rebastecimiento de inventario constante y evitar pérdidas por productos vencidos. Asimismo, valoró positivamente la posibilidad de **recibir reportes y métricas de consumo** mediante la aplicación.
-
-Asimismo, no tuvo ninguna sugerencia para mejorar el landing page, ya que consideró que la información presentada es suficiente y clara.
-
-En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
-
-**Conclusión general:**  
-La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de administradores de restaurantes. Asimismo, no se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo.
