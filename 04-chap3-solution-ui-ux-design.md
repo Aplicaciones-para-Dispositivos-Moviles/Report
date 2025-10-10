@@ -116,6 +116,26 @@ Se ha priorizado la claridad semántica y la coherencia con el lenguaje visual d
 - **My Products:** Catálogo editable con los productos que el proveedor ofrece. Incluye nombre, precio y stock.
 - **Sales History:** Registro de pedidos completados. Permite consultar por fechas o restaurante.
 
+**Aplicación Móvil – Administradores de Restaurantes**
+
+* **Home:** Pantalla principal con resumen rápido de stock, alertas y accesos directos a funciones clave.
+* **Stock:** Listado de insumos registrados. Muestra cantidades, fechas, vencimientos y permite edición rápida.
+* **Buy:** Registro de compras y agregados de nuevos insumos. Consulta historial de compras.
+* **Suppliers Orders:** Generación y seguimiento de pedidos a proveedores.
+* **Alerts:** Notificaciones de stock crítico, vencimientos y anomalías de consumo.
+* **Menu:** Registro de platos y vinculación con insumos para calcular consumo y optimizar compras.
+* **Reports:** Acceso rápido a reportes resumidos de consumo, compras y desempeño operativo.
+* **Profile:** Gestión de información del restaurante y configuración de notificaciones.
+
+**Aplicación Móvil – Proveedores**
+
+* **Home:** Resumen de pedidos recientes, stock disponible y alertas importantes.
+* **Orders:** Lista de órdenes recibidas de restaurantes con estado y detalles de entrega.
+* **Catalog:** Gestión del catálogo de productos ofrecidos, incluyendo precio, stock y descripción.
+* **Sales:** Historial de ventas completadas, filtrable por fecha o restaurante.
+* **Alerts:** Notificaciones de nuevos pedidos, cambios de estado o incidencias.
+* **Profile:** Información del proveedor y configuración de contacto y notificaciones.
+
 #### 3.1.2.3. SEO Tags and Meta Tags
 
 **1. Landing Page**
@@ -594,7 +614,7 @@ Pantallas del módulo de Inventario para administrador: permite visualizar la li
 
 **Formulario de creación y edición de insumos**
 Pantallas del flujo de edición y creación de inventario: muestra formularios detallados con campos como nombre, unidad, categoría y fecha.
- `<img src="assets/images/cap4/mobile_wireframes/w_admin_inventory2.png" width="600px" alt="w_admin_inventory2">`
+ <img src="assets/images/cap4/mobile_wireframes/w_admin_inventory2.png" width="600px" alt="w_admin_inventory2">
 
 ---
 
@@ -607,9 +627,7 @@ Pantallas del módulo de Pedidos para administrador: lista de pedidos, detalles 
 
 **Edición de pedido y asignación de proveedor**
 Pantallas complementarias del flujo de pedidos: edición de pedidos, selección de proveedores y fechas estimadas.
- `<img src="assets/images/cap4/mobile_wireframes/w_admin_orders2.png" width="600px" alt="w_admin_orders2">`
-
----
+<img src="assets/images/cap4/mobile_wireframes/w_admin_orders2.png" width="600px" alt="w_admin_orders2">
 
 ##### Recetas
 
@@ -620,9 +638,7 @@ Pantallas del módulo de Recetas: listado de recetas con detalles sobre los insu
 
 **Formulario de creación y edición de recetas**
 Flujo de creación y edición de recetas: permite agregar o editar insumos y cantidades requeridas por receta.
- `<img src="assets/images/cap4/mobile_wireframes/w_admin_recipes2.png" width="600px" alt="w_admin_recipes2">`
-
----
+<img src="assets/images/cap4/mobile_wireframes/w_admin_recipes2.png" width="600px" alt="w_admin_recipes2">
 
 ##### Ventas
 
@@ -633,9 +649,7 @@ Pantallas del módulo de Ventas: muestra historial de ventas, métricas clave y 
 
 **Confirmación de eliminación de venta**
 Popup de advertencia para confirmar acciones destructivas en la sección de ventas.
- `<img src="assets/images/cap4/mobile_wireframes/w_admin_sales2.png" width="600px" alt="w_admin_sales2">`
-
----
+<img src="assets/images/cap4/mobile_wireframes/w_admin_sales2.png" width="600px" alt="w_admin_sales2">
 
 ##### Suscripciones
 
@@ -644,8 +658,6 @@ Pantallas de Suscripciones: incluye vista de planes activos, cambios de plan y p
 
 <img src="assets/images/cap4/mobile_wireframes/w_admin_subs.png" width="600px" alt="w_admin_subs">
 
----
-
 ##### Perfil
 
 **Configuración y datos del perfil**
@@ -653,16 +665,12 @@ Pantallas del perfil del administrador: incluye información personal, configura
 
 <img src="assets/images/cap4/mobile_wireframes/w_admin_profile.png" width="600px" alt="w_admin_profile">
 
----
-
 ##### Resumen / Dashboard
 
 **Panel principal con métricas clave**
 Dashboard/resumen para administrador: muestra órdenes pendientes, alertas y notificaciones clave.
 
 <img src="assets/images/cap4/mobile_wireframes/w_admin_summary.png" width="600px" alt="w_admin_summary">
-
----
 
 #### Versión Mobile Web Browser - Proveedores
 
@@ -673,8 +681,6 @@ Pantallas de Inventario para proveedor: gestión de productos ofrecidos, precios
 
 <img src="assets/images/cap4/mobile_wireframes/w_supplier_inventory.png" width="600px" alt="w_supplier_inventory">
 
----
-
 ##### Pedidos
 
 **Lista y estado de pedidos recibidos**
@@ -684,13 +690,11 @@ Pedidos para proveedores: lista de pedidos realizados por restaurantes, detalles
 
 **Detalles de pedido**
 Pantallas de gestión de pedidos: incluye opciones para editar, cancelar o confirmar pedidos.
- `<img src="assets/images/cap4/mobile_wireframes/w_supplier_orders2.png" width="600px" alt="w_supplier_orders2">`
+<img src="assets/images/cap4/mobile_wireframes/w_supplier_orders2.png" width="600px" alt="w_supplier_orders2">
 
 **Actualización de estado de pedidos**
 Actualización de estado de pedidos: permite al proveedor actualizar el estado de envío y entrega.
- `<img src="assets/images/cap4/mobile_wireframes/w_supplier_orders3.png" width="600px" alt="w_supplier_orders3">`
-
----
+<img src="assets/images/cap4/mobile_wireframes/w_supplier_orders3.png" width="600px" alt="w_supplier_orders3">
 
 ##### Alertas
 
@@ -699,8 +703,6 @@ Pantallas de Alertas para proveedores: incluye alertas generadas por restaurante
 
 <img src="assets/images/cap4/mobile_wireframes/w_supplier_notification.png" width="600px" alt="w_supplier_alerts">
 
----
-
 ##### Calificaciones
 
 **Calificaciones de restaurantes**
@@ -708,16 +710,12 @@ Pantallas de calificaciones: permite al proveedor revisar las evaluaciones y com
 
 <img src="assets/images/cap4/mobile_wireframes/w_supplier_reviews.png" width="600px" alt="w_supplier_reviews">
 
----
-
 ##### Resumen / Dashboard
 
 **Panel principal con métricas clave**
 Pantallas de Resumen para proveedores: incluye métricas de clientes frecuentes, ganancias y alertas.
 
 <img src="assets/images/cap4/mobile_wireframes/w_supplier_summary.png" width="600px" alt="w_supplier_summary">
-
----
 
 ##### Perfil
 
@@ -728,7 +726,88 @@ Perfil del proveedor: información personal, métricas de ventas, y accesos ráp
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
+Cada Wireflow Diagram representa el recorrido visual e interactivo que realiza el usuario dentro de la aplicación para cumplir un objetivo específico (User Goal). En cada flujo se detalla la secuencia de pantallas y acciones que permiten alcanzar dicho propósito, desde la navegación inicial hasta la confirmación o registro de una tarea.
 
+<table width="100%">
+  <tr>
+    <th width="25%">User Goal</th>
+    <th width="75%">Imágen</th>
+  </tr>
+  <tr>
+    <td>UG-01 — Gestión de cuenta del suscriptor: El flujo muestra cómo el usuario accede a su perfil desde el menú principal para actualizar sus datos personales o modificar su contraseña. El proceso concluye al guardar los cambios, asegurando que la información de la cuenta se mantenga actualizada en todo momento.</td>
+    <td>
+      <img src="assets/images/cap3/ug-01.png" alt="Mobile Wireflow 1" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td> 
+      UG-02 — Adquisición de plan de suscripción: El diagrama evidencia el recorrido del suscriptor al revisar los planes disponibles, seleccionar uno y completar la información de pago. El flujo finaliza cuando la transacción es aceptada, habilitando las funciones premium de la plataforma.
+    </td>
+    <td>
+        <img src="assets/images/cap3/ug-02.png" alt="Mobile Wireflow 2" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td> UG-03 — Gestión manual del inventario de insumos: El flujo detalla cómo el usuario crea, edita o cancela insumos dentro del inventario, registrando información relevante como categoría, unidad de medida y stock. Este proceso garantiza un control manual y preciso de los recursos disponibles. </td>
+    <td>
+        <img src="assets/images/cap3/ug-03.png" alt="Mobile Wireflow 3" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td> UG-04 — Consulta del panel de alertas: El usuario accede a la sección de alertas para visualizar el estado de sus insumos, filtrarlos y revisar notificaciones de bajo o alto stock. Al seleccionar un elemento, puede conocer su ubicación y última actualización, facilitando la toma de decisiones.</td>
+    <td>
+        <img src="assets/images/cap3/ug-04.png" alt="Mobile Wireflow 4" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-05 — Consulta de información de proveedores: El diagrama presenta el acceso del administrador a la sección de proveedores, donde puede registrar nuevos contactos, consultar datos de empresas y ver las categorías de productos que ofrecen, manteniendo actualizada la base de proveedores del restaurante.</td>
+    <td>
+        <img src="assets/images/cap3/ug-05.png" alt="Mobile Wireflow 5" width="100%"><br>
+    </td> 
+  </tr>
+  <tr>
+    <td>UG-06 — Solicitud de pedidos a proveedores: Este flujo muestra cómo el administrador genera una nueva orden, selecciona los productos necesarios, define las cantidades y envía la solicitud. El pedido se registra en el sistema, quedando disponible para seguimiento posterior.</td>
+    <td>
+        <img src="assets/images/cap3/ug-06.png" alt="Mobile Wireflow 6" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-07 — Evaluación de pedidos recibidos: El administrador ingresa a la sección de reseñas para evaluar la calidad de los pedidos entregados por los proveedores. Puede calificar, comentar y registrar su experiencia, contribuyendo a un control de calidad y confiabilidad del abastecimiento.</td>
+    <td>
+        <img src="assets/images/cap3/ug-07.png" alt="Mobile Wireflow 7" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-08 — Registro de ventas del restaurante: El flujo describe cómo el empleado registra ventas completas desde la carta, seleccionando platos y agregando insumos adicionales. Cada venta queda vinculada al inventario, permitiendo actualizar automáticamente las existencias.</td>
+    <td>
+        <img src="assets/images/cap3/ug-08.png" alt="Mobile Wireflow 8" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-09 — Creación de recetas vinculadas al inventario: El administrador accede al módulo de recetas para definir nuevos platos, ingresar ingredientes, unidades y precios. Estas recetas se asocian al inventario, optimizando la gestión de insumos y el cálculo de costos de preparación.</td>
+    <td>
+        <img src="assets/images/cap3/ug-09.png" alt="Mobile Wireflow 9" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-10 — Gestión del catálogo de productos del proveedor: El proveedor ingresa a su sección de supplies para crear, editar o desactivar productos según disponibilidad. Este flujo asegura una administración flexible del catálogo, permitiendo actualizaciones sin afectar registros previos. </td>
+    <td>
+        <img src="assets/images/cap3/ug-10.png" alt="Mobile Wireflow 10" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td>UG-11 — Control de productos en el inventario del proveedor: El flujo evidencia cómo el proveedor revisa y actualiza el estado de sus productos, modificando unidades, corrigiendo información o eliminando ítems vencidos. Con ello, mantiene un inventario preciso y actualizado.</td>
+    <td>
+        <img src="assets/images/cap3/ug-11.png" alt="Mobile Wireflow 11" width="100%"><br>
+    </td>
+  </tr>
+  <tr>
+    <td> UG-12 — Gestión y actualización del estado de órdenes recibidas: El proveedor accede a la sección de órdenes para consultar solicitudes de restaurantes, revisar detalles y decidir si aprobarlas o rechazarlas. Este flujo permite mantener una comunicación ágil y transparente en la cadena de suministro.</td>
+    <td>
+        <img src="assets/images/cap3/ug-12.png" alt="Mobile Wireflow 12" width="100%"><br>
+    </td>
+  </tr>
+</table>
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
@@ -948,3 +1027,13 @@ El proveedor cuenta con una sección dedicada a la gestión de las órdenes real
 ![Mobile User Flow 12](assets/images/cap4/mobile_ug12.png)
 
 #### 3.1.4.5. Mobile Applications Prototyping
+
+En cuanto a la arquitectura de información, el prototipo móvil de RESTOCK emplea una navegación jerárquica clara, acompañada de flujos secuenciales en procesos clave como el registro de compras y la creación de recetas. También se definieron etiquetas intuitivas, categorías adaptadas a cada tipo de usuario y herramientas de búsqueda que facilitan una interacción fluida y dirigida.
+
+Asimismo, se implementaron interacciones responsivas (como estados active), validaciones visuales en formularios y retroalimentaciones inmediatas ante las acciones del usuario. Estos elementos garantizan que tanto el acceso a la información como la ejecución de tareas se realicen de forma eficiente y adaptada al contexto móvil.
+
+Además, se grabó un video donde se explican los principales flujos de interacción del prototipo móvil, mostrando cómo las decisiones de diseño se reflejan en la experiencia del usuario.
+
+![Mobile User Flow 12](assets/images/cap3/mobile/mobile-app-prototyping.png)
+
+Mobile Applications Prototyping: https://shorturl.at/DLy8l
