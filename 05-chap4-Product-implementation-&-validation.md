@@ -1240,3 +1240,29 @@ En general, el entrevistado expresó una **percepción positiva sobre la propues
 
 **Conclusión general:**  
 La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
+
+#### **Entrevista 02 – Alicia Minaya**
+
+**Datos del entrevistado:**
+- **Nombre completo:** Alicia Soledad Minaya Maguiña  
+- **Edad:** 45 años  
+- **Distrito:** Chorrillos  
+- **Segmento:** Administradora de restaurantes  
+- **Fecha de entrevista:** 09 de octubre de 2025  
+- **Duración:** 8 minutos y 24 segundos  
+- **Registro audiovisual:**  [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/EV3jiWf-6jVMl50xDv9kLrcBLHD3N5U9uKAIh7VyXYtbdg?e=YSAKrh)
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint1/interviews/int-restaurant-managers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Alicia Minaya indicó que el diseño del landing le pareció **intuitivo y ordenado**, destacando el mensaje principal que resalta la **conexión directa entre administradores de restaurantes y su estado del inventario**. De esta manera afirma que la aplicación será de gran ayuda para tomar decisiones rápidas y acertadas en su negocio.
+
+Comentó que las alertas en tiempo real le resultarán relevantes para realizar un rebastecimiento de inventario constante y evitar pérdidas por productos vencidos. Asimismo, valoró positivamente la posibilidad de **recibir reportes y métricas de consumo** mediante la aplicación.
+
+Asimismo, no tuvo ninguna sugerencia para mejorar el landing page, ya que consideró que la información presentada es suficiente y clara.
+
+En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
+
+**Conclusión general:**  
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de administradores de restaurantes. Asimismo, no se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo.
