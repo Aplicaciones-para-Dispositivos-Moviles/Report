@@ -1162,3 +1162,51 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
+  <thead>
+    <tr>
+      <th style="text-align: center">Segmento</th>
+      <th style="text-align: center">Elementos a validar</th>
+      <th style="text-align: center">Mobile User Flow</th>
+      <th style="text-align: center">Actividades durante la sesión</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: center">
+    <tr>
+      <td>Segmento 2: Proveedores de Restaurantes</td>
+      <td>
+        <ul>
+          <li>Claridad del mensaje del landing page y valor percibido.</li>
+          <li>Facilidad de registro como proveedor.</li>
+          <li>Publicación de productos y gestión del catálogo.</li>
+          <li>Recepción y actualización de pedidos.</li>
+          <li>Comunicación con administradores de restaurantes.</li>
+          <li>Visualización de historial de pedidos y métricas de venta.</li>
+          <li>Comprensión de alertas y notificaciones del sistema.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Registro como proveedor.</li>
+          <li>Creación y edición de productos en catálogo.</li>
+          <li>Recepción de pedidos y confirmación de entrega.</li>
+          <li>Gestión de pedidos activos y completados.</li>
+          <li>Mensajería con restaurantes asociados.</li>
+          <li>Revisión de métricas de desempeño (ventas, entregas, reseñas).</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Explorar el landing page e indicar qué entienden del servicio ofrecido.</li>
+          <li>Completar el flujo de registro como proveedor.</li>
+          <li>Publicar un nuevo producto y modificar su precio o stock.</li>
+          <li>Simular la recepción de un pedido y su actualización de estado.</li>
+          <li>Acceder a la bandeja de mensajes y enviar una respuesta a un restaurante.</li>
+          <li>Consultar las métricas de ventas y comentar su utilidad.</li>
+          <li>Comentar percepciones generales sobre la facilidad de uso y claridad del sistema.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
