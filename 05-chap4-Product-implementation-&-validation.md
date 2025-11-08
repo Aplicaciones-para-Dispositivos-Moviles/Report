@@ -2433,3 +2433,484 @@ En general , el entrevistado expresó una **percepción positiva sobre la propue
 
 **Conclusión general:**  
 La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de administradores de restaurantes. Asimismo, no se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo.
+
+### 4.3.3. Evaluaciones según heurísticas
+
+Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta.
+
+<h1 style="text-align: center; margin-top: 40px; margin-bottom: -50px">UX Heuristics & Principles Evaluation</h1>
+<h2 style="text-align: center; margin-top: 40px; margin-bottom: 0px;">Usability - Inclusive Design - Information Architecture</h2>
+<container style="text-align: left;">
+  <p style="margin-bottom: 0px;"><strong>CARRERA:</strong> Ingeniería de Software</p>
+  <p style="margin-bottom: 0px;"><strong>CURSO:</strong> CC238</p>
+  <p style="margin-bottom: 0px;"><strong>SECCIÓN:</strong> 12617</p>
+  <p style="margin-bottom: 0px;"><strong>PROFESORES:</strong> Todos</p>
+  <p style="margin-bottom: 0px;"><strong>AUDITOR:</strong> Grupo 2</p>
+  <p><strong>CLIENTES:</strong> Alicia Soledad Minaya Maguiña, Josue Ramírez, Alex Guardia, Lincoln Chauca Rubio, Amparo Soledad Robles Vásquez, José Santos Tapia Bustamente, Percy Polo Ferrera, Benjamín Pacheco Quesada</p>
+  <p><strong style="color: rgba(43, 101, 237, 1)">Site o App a Evaluar:</strong><br> Mobile App - Restock</p>
+  <p><strong style="color:  rgba(43, 101, 237, 1)">TAREAS A EVALUAR:</strong><br> 
+  <p>El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+  </p>
+</p>
+<p>
+<ol>
+    <li>Registro de un nuevo usuario</li>
+    <li>Actualizar Stock de Insumos </li>
+    <li>Recibir Notificaciones de Inventario</li>
+    <li>Registrar Calificaciones y Comentarios de Pedidos</li>
+    <li>Actualizar Productos de Proveedor (Catálogo)</li>
+    <li>Actualizar Recetas del Menú</li>
+    <li>Consultar Información Detallada de Receta</li>
+    <li>Actualizar Perfil de Usuario</li>
+    <li>Visualizar Notificaciones Recientes (Dashboard)</li>
+    <li>Registrar Registro de Ventas</li>
+    <li>Visualizar Detalles de Orden Específica</li>
+    <li>Registrar Calificación de Proveedor</li>
+    <li>Visualizar Proveedores Registrados</li>
+    <li>Visualizar Información Específica de Proveedor</li>
+    <li>Crear Pedido de Insumos</li>
+    <li>Visualizar Órdenes Enviadas</li>
+    <li>Visualizar Detalles de Orden Enviada</li>
+    <li>Visualizar Historial de Movimientos de Inventario</li>
+    <li>Cambiar Idioma de Interfaz</li>
+    <li>Actualizar los insumos de una venta</li>
+    <li>Eliminar una venta</li>
+</ol>
+  <p>
+  No están incluidas en esta versión de la evaluación las siguientes tareas:
+  </p>
+  <p>
+<ol>
+  <li>Actualizar Estado de Orden Enviada</li>
+  <li>Actualizar Estado Manual de Orden Enviada</li>
+  <li>Habilitar Navegación para Lector de Pantalla</li>
+  <li>Actualizar Estado de Orden (Proveedor)</li>
+  <li>Actualizar Estado de Entrega (Proveedor)</li>
+  <li>Presentar Beneficios por Perfil</li>
+</ol>
+  <p><strong style="color: rgba(43, 101, 237, 1)">ESCALA DE SEVERIDAD</strong><br>Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
+</p>
+</p>
+<table style="width:100%; margin-bottom:18px; text-align: center">
+  <thead>
+    <tr>
+      <th style="text-align: center">Heurística / Principio</th>
+      <th style="text-align: center">Descripción</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: left">
+  <tr>
+  <td>1</td>
+  <td>Problema superficial: Puede ser fácilmente superador por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo.</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Problema menor: Puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente reléase</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Problema mayor: Ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta.</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Problema muy grave: Un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento.</td>
+  </tr>
+  </tbody>
+</table>
+  <p><strong style="color: rgba(43, 101, 237, 1)">TABLA DE RESUMEN</strong><br></p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">#</th>
+      <th style="text-align: center">Problema</th>
+      <th style="text-align: center">Escala de severidad</th>
+      <th style="text-align: center">Heurística/Principio volada(o)</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: left">
+    <tr>
+      <td>1</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td></td>
+      <td>2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td></td>
+      <td>3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td></td>
+      <td>2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td></td>
+      <td>1</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+  <p><strong style="color: rgba(43, 101, 237, 1)">DESCRIPCIÓN DE PROBLEMAS</strong><br></p>
+<table>
+<tbody>
+<tr>
+  <td>
+    <strong>Problema #1:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #2:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #3:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #4:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #5:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #6:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #7:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #8:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #9:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #10:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #11:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #12:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #13:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #14:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #15:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #16:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #17:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #18:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #19:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #20:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #21:</strong> [name] <br>
+    <strong>Severidad:</strong> [escala_de_severdad] <br>
+    <strong>Heuristica violada:</strong> [heuristica_violada]<br>
+    <strong>Problema:</strong> [descripción_del_problema]<br>
+    <strong>Recomendación:</strong> [recomendación] 
+  </td>
+  <td>
+    [IMAGE]
+  </td>
+</tr>
+</tbody>
+</table>
+</container>
