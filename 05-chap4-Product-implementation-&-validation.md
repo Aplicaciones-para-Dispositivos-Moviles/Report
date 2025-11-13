@@ -3032,3 +3032,71 @@ Durante este sprint se completaron las primeras pantallas funcionales, incluyend
 [https://shorturl.at/LVy49](https://shorturl.at/LVy49)
 
 ![Execution Flutter](assets/images/cap4/sprint2/execution/flutter_exec.png)
+
+#### 5.2.1.8. Team Collaboration Insights during Sprint 2
+
+#### Backend (API)
+
+Durante el **Sprint 2**, el equipo centró sus esfuerzos en consolidar los módulos principales y garantizar la integración completa con las aplicaciones móviles.  
+Se alcanzó una versión **estable y desplegada en producción** bajo el dominio:  
+`https://restock-platform.onrender.com`.
+
+- Se completó la implementación de los dominios funcionales: **Orders**, **Supplies**, **Recipes**, **Sales**, **Profiles**, **Subscriptions** y **Custom Supplies**.  
+- La documentación de la API se mantuvo sincronizada mediante **Swagger**, incluyendo más de 50 endpoints activos bajo el prefijo `/api/v1/`.  
+- Se gestionaron ramas específicas como `feature/orders`, `feature/recipes`, `feature/custom-supplies`, y `feature/subscriptions` para aislar cambios y facilitar revisiones por pares.  
+- Se realizaron pruebas integradas con **Postman** para validar flujos de creación, actualización y eliminación de entidades clave.  
+
+##### **Analíticos de colaboración — Backend**
+
+![Backend Collaboration](assets/images/cap4/collaboration/backend_ci_2.png)
+
+- Total de commits (Backend): **84**  
+- Total de autores contribuyentes: **5**  
+- Total de _pull requests_ relacionadas: **6**  
+- Endpoints activos documentados en Swagger: **53**  
+- Observación: el backend alcanzó una versión estable (**v0.0.1-SNAPSHOT**) con todos los servicios esenciales operativos, documentados y consumidos por las aplicaciones móviles.
+
+
+#### Aplicación Móvil (Android - Kotlin)
+
+Durante este sprint se **finalizó al 100%** la aplicación nativa en Android Studio con Kotlin, asegurando su total funcionalidad e integración con la API de Restock Platform.  
+
+- Se completaron los módulos **Supplies**, **Recipes**, **Orders**, **Sales**, y **Profile**, todos sincronizados con el backend real.  
+- Arquitectura basada en **MVVM**, utilizando **ViewModel**, **LiveData**, **Coroutines** y **Retrofit** para las llamadas de red.  
+- Implementación de manejo de estados (loading, success, error) y validaciones de usuario.  
+- Se añadió navegación estructurada con **Navigation Component**, garantizando flujos consistentes entre pantallas.  
+- Se realizaron pruebas funcionales y de integración, asegurando la estabilidad del build final.  
+- Builds y APKs de prueba fueron compartidos con el equipo para verificación UX y pruebas finales.  
+
+##### **Analíticos de colaboración — Android**
+
+![Android Collaboration](assets/images/cap4/collaboration/android_ci_2.png)
+
+- Total de commits (Android): **76**  
+- Total de autores contribuyentes: **5**  
+- Total de _pull requests_ relacionadas: **9**  
+- Pantallas completadas: **6 (Supplies, Recipes, Orders, Sales, Profile, Login)**  
+- Observación: la aplicación Android alcanzó una versión final estable, completamente integrada con la API y lista para despliegue en entorno productivo.
+
+#### Aplicación Móvil (Flutter)
+
+Durante este sprint se inició el desarrollo de la **aplicación Flutter multiplataforma**, orientada a los proveedores de restaurantes.  
+El objetivo principal fue establecer la base técnica del proyecto y conectar las primeras pantallas con el backend desplegado.
+
+- Se definió la estructura del proyecto, siguiendo el patrón **MVVM** con manejo de estado mediante **Provider**.    
+- Se desarrollaron las primeras pantallas:  
+  - **Overview:** vista inicial con estructura de navegación, componentes reutilizables (`widgets`) y elementos de interfaz.  
+  - **Login:** pantalla funcional conectada al backend mediante los endpoints de autenticación (`/api/v1/authentication/sign-in`), validando credenciales y manejo de tokens.  
+- Se estableció la conexión base con el backend desplegado en Render para futuras integraciones.  
+
+##### **Analíticos de colaboración — Flutter**
+
+![Flutter Collaboration](assets/images/cap4/collaboration/flutter_ci_2.png)
+
+- Total de commits (Flutter): **42**  
+- Total de autores contribuyentes: **5**  
+- Total de _pull requests_ relacionadas: **6**  
+- Módulos funcionales completados: **Overview**, **Login (autenticación)**  
+- Observación: se completó la estructura base del proyecto Flutter y las primeras pantallas conectadas al backend, sirviendo como punto de partida para las funcionalidades avanzadas en el próximo sprint.
+
+
