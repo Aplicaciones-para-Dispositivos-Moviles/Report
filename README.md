@@ -112,18 +112,41 @@ En cuanto al **Project Report**, se incluyeron los siguientes apartados requerid
 - **Capítulo IV: Product Implementation & Validation**, que detalla la configuración del entorno de desarrollo, gestión de código, planificación del sprint y evidencias de implementación.
 - Además, se añadieron las secciones de **Conclusiones**, **Bibliografía** y **Anexos**, completando la estructura formal del informe para el *Stage Review*.
 
-El trabajo del informe se mantuvo sincronizado con el avance técnico, documentando la estructura de carpetas, decisiones de arquitectura y convenciones de código adoptadas. La colaboración se organizó mediante *commits* individuales y revisiones cruzadas de *pull requests* en GitHub, con comunicación constante por Discord y reuniones breves para validación de avances.
+## TB2 – Actualización del Informe, Despliegue y Consolidación del Producto (Sprint 2) - (Semana 12)
 
-![Colaboraciones TP1](assets/images/ci-tp1.png)
+Durante este sprint, el equipo concentró sus esfuerzos en la **actualización integral del informe**, la **finalización del desarrollo de los módulos restantes**, y el **despliegue completo de los componentes principales del sistema**. Asimismo, se elaboraron las primeras versiones de los videos requeridos y se inició el desarrollo de la versión multiplataforma en **Flutter**.  
+ 
+En el **Backend**, implementado con **Java Spring Boot** y **MongoDB**, se completó el despliegue al **100% en un sitio público**, garantizando la disponibilidad del servicio y la correcta exposición de la documentación mediante **Swagger**. Se realizaron pruebas de validación de endpoints y ajustes en controladores, servicios y repositorios, mejorando la estructura y el manejo de respuestas HTTP.  
 
-- **Julio Castro Alejos (`JulioXC4`)**: 13 commits
-- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 18 commits
-- **Sergio Gino Julca Minaya (`sergioJM05`)**: 12 commits
-- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 22 commits
-- **Piero Hugo Elescano León (`PieroHugo`)**: 20 commits
-- **Total de commits en TP1:** 85
+Por su parte, la **Aplicación Móvil Android**, desarrollada en **Kotlin**, alcanzó su versión funcional completa, integrando todos los flujos principales definidos: *Supplies*, *Recipes*, *Sales* y *Profile*. Se realizaron pruebas de integración con el backend y validaciones de persistencia de datos en tiempo real.  
 
-Este nivel de colaboración refleja una participación activa y equilibrada del equipo, con responsabilidades bien distribuidas entre el desarrollo técnico y la documentación del informe. El trabajo coordinado permitió consolidar una base sólida para los siguientes sprints y el despliegue completo de los productos.
+De manera paralela, el equipo inició el **avance del desarrollo en Flutter**, con el objetivo de crear una versión multiplataforma del sistema. Se configuró el entorno de desarrollo, se implementaron las pantallas iniciales y se estableció la conexión base con el backend. Este avance representa el primer paso hacia una futura expansión del producto para el segmento de provedores de restaurantes en diferentes sistemas operativos móviles.  
+
+En cuanto al **Project Report**, se actualizaron todas las secciones requeridas para esta entrega, cumpliendo con los criterios del *Sprint Review (Semana 12)*:
+
+- **Registro de Versiones del Informe** actualizado, reflejando las mejoras y correcciones aplicadas.  
+- **Project Report Collaboration Insights** con evidencias de commits, *pull requests* y contribuciones en equipo.  
+- **Student Outcomes** revisado y ampliado según los aprendizajes y competencias logradas durante el desarrollo.  
+- **Capítulo IV: Product Implementation & Validation**, con el detalle técnico de despliegue, pruebas y validaciones del sistema.  
+- **Conclusiones, Bibliografía y Anexos**, completando la estructura del informe final.  
+
+Asimismo, se elaboraron las **primeras versiones de los videos** solicitados para esta entrega:  
+- **Video de Validación de la Aplicación**, mostrando las funcionalidades core en ejecución.  
+- **Video About-the-Product**, presentando la propuesta, su impacto y los principales beneficios.  
+- **Video About-the-Team**, destacando la participación y roles de los integrantes del grupo.  
+
+
+![Colaboraciones TB2](assets/images/ci-tb2.png)
+
+- **Julio Castro Alejos (`JulioXC4`)**: 14 commits
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 20 commits
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 15 commits
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 28 commits
+- **Piero Hugo Elescano León (`PieroHugo`)**: 22 commits
+- **Total de commits en TB1:** 50
+
+El trabajo del equipo se mantuvo alineado con la planificación del *Sprint 2*, documentando tanto el progreso técnico como el proceso de validación. La colaboración se organizó mediante *commits* individuales y revisiones de *pull requests*, reforzada por reuniones de coordinación y seguimiento en Discord.
+
 
 ## Herramientas colaborativas utilizadas
 
