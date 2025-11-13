@@ -2902,3 +2902,133 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tbody>
 </table>
 </container>
+
+#### 5.2.1.5. Execution Evidence for Sprint Review 2
+
+A continuación se presentan los materiales de evidencia correspondientes a los productos desarrollados durante el **Sprint 2**: **Backend**, **Aplicación Móvil Android (Administrador de Restaurantes)** y **Aplicación Móvil Flutter (Proveedores de Restaurantes)**.  
+Cada sección describe el alcance técnico entregado y los avances demostrados en video.
+
+---
+
+#### Backend (API) — Estado: 100% completado y desplegado
+
+**Alcance entregado (Sprint 2)**
+
+Durante este sprint se completó el desarrollo total del backend de la plataforma, implementado en **Java Spring Boot** y **MongoDB**, y desplegado exitosamente en un entorno público en **Render**.  
+El backend integra todos los *bounded contexts* del sistema y expone la documentación completa de sus endpoints mediante **Swagger (OpenAPI 3.1)**.
+
+**URL de despliegue:**  
+[https://restock-platform.onrender.com](https://restock-platform.onrender.com)
+
+**Documentación técnica:**  
+[https://restock-platform.onrender.com/v3/api-docs](https://restock-platform.onrender.com/v3/api-docs)
+
+**Endpoints principales implementados**
+
+- **Authentication**
+  - `POST /api/v1/authentication/sign-up`
+  - `POST /api/v1/authentication/sign-in`
+- **Users & Profiles**
+  - `GET /api/v1/users`, `GET /api/v1/users/{userId}`, `PUT /api/v1/users/{userId}/subscription`
+  - `GET /api/v1/profiles/{userId}`, `PUT /api/v1/profiles/{userId}/personal`, `PUT /api/v1/profiles/{userId}/password`, `PUT /api/v1/profiles/{userId}/business`, `DELETE /api/v1/profiles/{userId}`
+- **Supplies & Custom Supplies**
+  - `GET /api/v1/supplies`, `GET /api/v1/supplies/{supplyId}`, `GET /api/v1/supplies/categories`
+  - `GET /api/v1/custom-supplies`, `GET /api/v1/custom-supplies/{id}`, `GET /api/v1/custom-supplies/user/{userId}`, `POST /api/v1/custom-supplies`, `PUT /api/v1/custom-supplies/{id}`, `DELETE /api/v1/custom-supplies/{id}`
+- **Recipes**
+  - `GET /api/v1/recipes`, `GET /api/v1/recipes/{id}`, `POST /api/v1/recipes`, `PUT /api/v1/recipes/{id}`, `DELETE /api/v1/recipes/{id}`
+  - `GET /api/v1/recipes/{id}/supplies`, `POST /api/v1/recipes/{id}/supplies`, `PUT /api/v1/recipes/{recipeId}/supplies/{supplyId}`, `DELETE /api/v1/recipes/{recipeId}/supplies/{supplyId}`
+- **Orders & Batches**
+  - `GET /api/v1/orders`, `GET /api/v1/orders/{id}`, `POST /api/v1/orders`, `DELETE /api/v1/orders/{id}`, `PUT /api/v1/orders/{id}/state`
+  - `GET /api/v1/batches`, `GET /api/v1/batches/{id}`, `POST /api/v1/batches`, `PUT /api/v1/batches/{id}`, `DELETE /api/v1/batches/{id}`, `GET /api/v1/batches/user/{userId}`
+- **Sales**
+  - `GET /api/v1/sales`, `GET /api/v1/sales/{id}`, `POST /api/v1/sales`, `DELETE /api/v1/sales/{id}`
+- **Subscriptions**
+  - `GET /api/v1/subscriptions`, `GET /api/v1/subscriptions/user/{userId}`, `POST /api/v1/subscriptions`, `PUT /api/v1/subscriptions/user/{userId}`
+- **Roles & Business Categories**
+  - `GET /api/v1/roles`, `GET /api/v1/business-categories`
+
+**Qué se demuestra en el video**
+
+- Pruebas funcionales de los endpoints principales (autenticación, supplies, recipes, orders, sales y subscriptions).
+- Flujo completo de registro, inicio de sesión y operaciones protegidas.
+- Interacción entre módulos y persistencia de datos en MongoDB.
+- Visualización de la documentación Swagger en el entorno desplegado.
+
+**Video del Backend:**  
+[https://shorturl.at/CZzk9](https://shorturl.at/CZzk9)
+
+![Execution Backend](assets/images/cap4/sprint2/execution/backend_exec.png)
+
+---
+
+#### Aplicación Móvil (Administrador de Restaurantes — Android) — Estado: 100% completada y desplegada
+
+**Alcance entregado (Sprint 2)**
+
+Durante este sprint se finalizó el desarrollo completo de la aplicación móvil para administradores de restaurantes, implementada en **Android Studio con Kotlin**.  
+La aplicación fue integrada y desplegada con el backend productivo, mostrando flujos funcionales completos para la gestión de insumos, recetas y ventas.
+
+**Pantallas funcionales**
+
+1. **Supplies Management**
+   - Listado dinámico con integración al backend (`GET /api/v1/supplies`, `GET /api/v1/custom-supplies/user/{userId}`).
+   - Creación, edición y eliminación de insumos (`POST`, `PUT`, `DELETE /api/v1/custom-supplies`).
+   - Filtros por categoría (`GET /api/v1/supplies/categories`).
+
+2. **Recipes**
+   - Listado y detalle de recetas (`GET /api/v1/recipes`, `GET /api/v1/recipes/{id}`).
+   - Asociación de insumos a recetas (`POST /api/v1/recipes/{id}/supplies`).
+   - CRUD completo de recetas.
+
+3. **Sales**
+   - Gestión visual de ventas, incluyendo búsqueda, filtros y operaciones CRUD (`GET /api/v1/sales`, `POST /api/v1/sales`, `DELETE /api/v1/sales/{id}`).
+
+4. **Authentication & Profiles**
+   - Inicio de sesión, registro y edición de perfil conectados al backend (`/api/v1/authentication`, `/api/v1/profiles`).
+
+**Qué se demuestra en el video**
+
+- Navegación fluida entre pantallas principales.
+- Consumo en tiempo real de endpoints REST.
+- Estados de interfaz manejados (loading, error, empty, success).
+- Validación completa de flujos de administración.
+
+**Video de Aplicación Android:**  
+[https://shorturl.at/8adxX](https://shorturl.at/8adxX)
+
+![Execution Android](assets/images/cap4/sprint2/execution/android_exec.png)
+
+---
+
+#### Aplicación Móvil (Proveedores de Restaurantes — Flutter) — Estado: En desarrollo (Sprint 2)
+
+**Alcance entregado (Sprint 2)**
+
+Se inició el desarrollo de la segunda aplicación móvil del ecosistema **Restock Platform**, dirigida a **proveedores de restaurantes**, implementada en **Flutter**.  
+Durante este sprint se completaron las primeras pantallas funcionales, incluyendo el flujo de autenticación y el *overview* general conectado al backend.
+
+**Avances actuales**
+
+- **Login Screen**
+  - Conectada al endpoint `POST /api/v1/authentication/sign-in`.
+  - Manejo de errores y validaciones de usuario.
+  - Persistencia temporal de sesión.
+- **Overview Screen**
+  - Pantalla principal con resumen informativo y estructura base del menú.
+  - Preparación para futuras integraciones de módulos (envío de productos, historial de ventas, y órdenes recibidas).
+- **Configuración técnica**
+  - Proyecto estructurado bajo el patrón **MVVM (Model-View-ViewModel)**.
+  - Conexión HTTP gestionada con **Dio**.
+  - Manejo de estado con **Provider**.
+  - Integración con el backend productivo desplegado en Render.
+
+**Qué se demuestra en el video**
+
+- Flujo funcional del login (conexión al backend y validación).
+- Navegación a la pantalla de overview con datos simulados.
+- Estructura inicial del flujo de proveedor.
+
+**Video de Aplicación Flutter:**  
+[https://shorturl.at/LVy49](https://shorturl.at/LVy49)
+
+![Execution Flutter](assets/images/cap4/sprint2/execution/flutter_exec.png)
