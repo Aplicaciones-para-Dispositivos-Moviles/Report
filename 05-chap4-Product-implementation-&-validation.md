@@ -126,6 +126,107 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 - **Coroutines + Lifecycle (ViewModelScope)**.
 - **Navigation Component** (navegación entre pantallas).
 
+#### Cross-platform (Flutter)
+
+##### Convenciones generales:
+
+- **Idioma**: Todo el código y los recursos con nombres y mensajes en **inglés**.  
+- **Indentación**: 2 espacios (estándar Dart/Flutter).  
+- **Formato de archivos**: `.dart`, `pubspec.yaml`, carpetas `android/`, `ios/`, `lib/`, `test/`.  
+- **Estilo de código adoptado**:
+  - [Effective Dart / Style Guide](https://dart.dev/guides/language/effective-dart/style)
+  - [Flutter Style Guide (community)](https://flutter.dev/docs/development/tools/formatting)
+- **Formateo**: usar `dart format` (o `flutter format`) automáticamente en pre-commit.
+
+##### Nomenclatura:
+
+- **Clases / Widgets**: `PascalCase` (ej. `LoginScreen`, `SupplyItemWidget`).  
+- **Funciones y variables**: `lowerCamelCase` (ej. `fetchSupplies`, `userId`).  
+- **Constantes**: `lowerCamelCase` o `kUpperCamelCase` prefijo `k` para constantes (ej. `kPrimaryColor`) — seguir la guía del equipo, preferible `lowerCamelCase` por la guía oficial.  
+- **Archivos**: `snake_case` (ej. `login_screen.dart`, `supply_item.dart`).  
+- **Rutas / Keys**: `kebab-case` o `snake_case` según convención del proyecto (ej. `/home`, `supply_item_key`).
+
+##### Archivos y estructura recomendada (ejemplo mínimo):
+
+- /lib
+- /src
+- /models
+- /services
+- /repositories
+- /ui
+- /screens
+- /widgets
+- /state (bloc/riverpod/providers)
+- /utils
+- main.dart
+- pubspec.yaml
+
+##### Patrones y arquitectura:
+
+- **Arquitectura**: Clean Architecture (Data — Domain — Presentation) o MVVM/BLoC según preferencia.  
+- **State management recomendada**: **Riverpod** o **Bloc**. *Provider* es aceptable para proyectos pequeños.  
+- **Dependencias recomendadas**:
+  - Estado: `flutter_riverpod` o `flutter_bloc`  
+  - Networking: `dio` o `http`  
+  - Serialización: `json_serializable` + `build_runner` o `freezed` para data classes/union types  
+  - Persistencia: `hive` o `sqflite` según necesidad; `shared_preferences` para settings simples  
+  - Seguridad: `flutter_secure_storage` para tokens  
+  - Otros: `connectivity_plus`, `flutter_local_notifications`, `firebase_core` / `cloud_firestore` (si aplica)
+- **Manejo de errores**: usar tipos `Result`/`Either` (con `dartz` / `sealed_unions` o `freezed`) y propagación clara al UI.
+
+##### Networking y serialización:
+
+- **Configuración**: manejar interceptors (auth, logging) en `dio` u `OkHttp`-like middlewares.  
+- **Modelos**: generar modelos con `json_serializable` o `freezed` para evitar mapeos manuales.  
+- **Timeouts y retries**: configurar políticas de reintentos/exponenciales si es necesario.
+
+##### State & UI:
+
+- **Patterns**: separar UI (Widgets) de la lógica de estado (Providers / Blocs / Notifiers).  
+- **Widgets**: componentes reutilizables y composables; mantener Screens ligeras y delegar lógica a controllers/providers.  
+- **Form handling**: usar validadores y providers para manejar estados de formulario.
+
+##### Plataforma y deploy:
+
+- **Builds**: `flutter build apk`, `flutter build appbundle`, `flutter build ios` (iOS requiere Xcode/macOS).  
+- **CI/CD**: GitHub Actions / Codemagic / Bitrise para automatizar builds, pruebas y deploy.  
+- **Code signing**: manejar certificados/keystores en secrets del CI.  
+- **Publicación**: Play Store / App Store (según ruta); testar App Bundle para Android.
+
+##### Testing:
+
+- **Tipos**: unit tests (modelos, utilidades), widget tests (UI components), integration tests (`integration_test` package).  
+- **Herramientas**: `flutter_test`, `mockito` o `mocktail` para mocks, `integration_test` para flujos E2E.
+
+##### Linting y calidad:
+
+- **Linters**: `flutter_lints` o `effective_dart` + reglas adicionales.  
+- **Formateo**: `dart format` en pre-commit.  
+- **Analyzer**: configurar `analysis_options.yaml` con reglas adaptadas al equipo.  
+- **Codemods & refactors**: usar `dart fix` y herramientas IDE.
+
+##### Buenas prácticas y recomendaciones específicas:
+
+- **Separación clara** entre UI y lógica (no lógica en build methods).  
+- **Minimizar rebuilds**: usar const widgets donde aplique, selectors/consumers para updates puntuales.  
+- **Gestión de recursos**: assets en `pubspec.yaml`, imágenes optimizadas y responsive.  
+- **Internacionalización (i18n)**: preparar `arb`/`intl` si aplica.  
+- **Accesibilidad**: labels, roles y navegación por teclado/gestos cuando aplique.  
+- **Seguridad**: no exponer claves en `pubspec.yaml` o repos remotos; usar variables de entorno/CI secrets.  
+- **Plataforma channels**: documentar cualquier uso de canales nativos (Android/iOS) y aislarlo detrás de un servicio.
+
+##### Herramientas / linters / utilidades recomendadas:
+
+- **Dart & Flutter format/analyze** (`dart format`, `flutter analyze`).  
+- **Linters**: `flutter_lints`, `effective_dart`.  
+- **Code generation**: `freezed`, `json_serializable`, `build_runner`.  
+- **State**: `flutter_riverpod`, `flutter_bloc`, `provider` (si aplica).  
+- **Networking**: `dio`.  
+- **Storage**: `hive`, `flutter_secure_storage`.  
+- **Testing**: `flutter_test`, `integration_test`, `mocktail`/`mockito`.  
+- **CI/CD**: GitHub Actions / Codemagic / Bitrise.
+
+
 ### 4.1.3. Source Code Style Guide & Conventions
 
 #### Mobile Frontend (Kotlin + Android Studio + Jetpack Compose)
