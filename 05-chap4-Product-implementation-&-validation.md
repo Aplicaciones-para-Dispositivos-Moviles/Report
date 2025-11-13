@@ -2364,9 +2364,9 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 
 ![Mobile Collaboration](assets/images/cap4/collaboration/mobile_ci_1.png)
 
-- Total de commits (Mobile): **x**
-- Total de autores contribuyentes: **x**
-- Total de _pull requests_ relacionadas: **x**
+- Total de commits (Mobile): **62**
+- Total de autores contribuyentes: **5**
+- Total de _pull requests_ relacionadas: **13**
 - Pantallas core implementadas: **5**
 
 ## 4.3. Validation Interviews
