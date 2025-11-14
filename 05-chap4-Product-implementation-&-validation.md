@@ -287,7 +287,7 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 
 ### 4.1.4. Software Deployment Configuration
 
-Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los componentes digitales de la solución Restock: la Landing Page, la aplicación móvil (Android) y los Web Services (backend), partiendo desde sus respectivos repositorios de código fuente.
+Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los componentes digitales de la solución Restock: la Landing Page, la aplicación móvil (frontend) y los Web Services (backend), partiendo desde sus respectivos repositorios de código fuente.
 
 #### 1. Landing Page - HTML, CSS y JavaScript
 
@@ -347,9 +347,34 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 - El despliegue es automático: cada push a la rama principal activa la reconstrucción y publicación en el servicio de hosting, sin necesidad de configurar pipelines de CI/CD adicionales.
 - La aplicación móvil consume la API pública del backend utilizando HTTP para acceder a los servicios.
 
+#### 4. Aplicación Móvil (Dart + Flutter)
+
+**Tecnología Base:**
+
+- Lenguaje: Dart
+- Framework: Flutter 
+- Distribución: APK para Android, IPA para iOS
+- Hosting de pruebas: Firebase App Distribution
+
+**Configuración y Despliegue:**
+
+- El código fuente se gestiona en un repositorio de GitHub.
+- Requisitos previos para construir:
+  - Instalar Flutter SDK (versión estable usada por el proyecto).
+  - Android: Android Studio + Android SDK (platforms y build-tools adecuados).
+  - iOS: macOS con Xcode instalado (para compilación y firma).
+- Para generar versiones de prueba (Android):
+  - APK: ejecutar `flutter build apk --release`
+- Para generar versiones de prueba (iOS, en macOS):
+  - IPA: usar `flutter build ipa --export-options-plist=<ruta>` o exportar desde Xcode (`Runner.xcworkspace`) y subir a TestFlight.
+- El artefacto generado (APK / IPA) se sube a Firebase App Distribution, Google Play (internal/closed track) o TestFlight para distribuir a testers.
+- El enlace de descarga se comparte con testers a través de correo, drive o la Landing Page, según el flujo del equipo.
+- Cada nueva versión para prueba se publica y gestiona mediante la plataforma de distribución elegida (Firebase / Play Console / App Store Connect).
+
+
 #### Referencias adicionales
 
-- Documentación oficial de [Spring Boot](https://spring.io/projects/spring-boot), [Spring Data MongoDB](https://spring.io/projects/spring-data-mongodb), [Docker](https://docs.docker.com/), [Android Studio](https://developer.android.com/studio), [Firebase App Distribution](https://firebase.google.com/products/app-distribution) y [GitHub Pages](https://pages.github.com/).
+- Documentación oficial de [Spring Boot](https://spring.io/projects/spring-boot), [Spring Data MongoDB](https://spring.io/projects/spring-data-mongodb), [Docker](https://docs.docker.com/), [Android Studio](https://developer.android.com/studio), [Firebase App Distribution](https://firebase.google.com/products/app-distribution), [Flutter](https://docs.flutter.dev/) y [GitHub Pages](https://pages.github.com/).
 - Para la gestión de variables de entorno y credenciales, se consulto las guías de los proveedores de hosting utilizados.
 
 ## 4.2. Landing Page & Mobile Application Implementation
