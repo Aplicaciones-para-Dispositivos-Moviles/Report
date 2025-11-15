@@ -2376,6 +2376,64 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 
 #### 4.2.2.1. Sprint Planning 2
 
+<table>
+  <tr>
+    <td>Sprint #</td>
+    <td>Sprint 2</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Planning Background</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>2025-10-20</td>
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td>08:00 pm (GMT-5)</td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>Modalidad remota mediante la plataforma Discord</td>
+  </tr>
+  <tr>
+    <td>Prepared By</td>
+    <td>Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Attendees (to planning meeting)</td>
+    <td>.Castro Alejos, Julio / Elescano Leon, Piero Hugo / Guerra Perez, José Jahaziel / Julca  Minaya, Sergio Gino / Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Review Summary</td>
+    <td> Durante el Sprint 1 se logró implementar en su totalidad la Landing Page del sistema Restock, desarrollando secciones clave como el header, footer, sección de beneficios y preguntas frecuentes, así como la integración inicial de estilos globales, tipografía y cambio de idioma. Asimismo, se logró realizar las secciones principales de la app Android, abarcando opciones de inventario, recetas y ventas. El equipo cumplió con los entregables establecidos, respetando el diseño de mockups y la guía de estilos. Se identificaron oportunidades de mejora en la velocidad de desarrollo  y gestión de tiempos.</td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Retrospective Summary</td>
+    <td>Durante el Sprint 1, el equipo logró avanzar de forma coordinada y efectiva en el desarrollo de la landing page y la app android, sin enfrentar mayores  dificultades. Cada integrante cumplió puntualmente con las secciones asignadas, lo que permitió avanzar según lo planificado. La adopción de convenciones comunes en el código y el diseño contribuyó a mantener la coherencia del producto y facilitó la integración entre partes. Como mejora para el siguiente sprint, se acordó implementar revisiones diarias (daily reviews) que permitan alinear mejor los  avances, detectar bloqueos tempranos y mejorar la comunicación  continua entre miembros.</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Goal & User Stories</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Goal</td>
+    <td>Nuestro enfoque está en refinar y habilitar funcionalidades clave para los administradores de restaurantes, como la gestión de inventario, la configuración de perfil, la gestión de recetas, la sección de ventas, suscripciones y la gestión de órdenes. Asimismo, en proporcionar puntos de acceso mediante el API de la plataforma, con el objetivo de que los desarrolladores frontend puedan integrar funcionalidades relacionadas con autenticación, perfil, suscripciones, inventario, recetas, ordenes y ventas dentro de la app.
+Creemos que esto mejora la eficiencia operativa de los administradores de restaurantes al facilitar la creación y gestión de ventas, órdenes e insumos desde la aplicación móvil. Además, permite a los desarrolladores frontend implementar funcionalidades esenciales de forma más eficiente, incluyendo autenticación, inventario, ventas, suscripciones, recetas, órdenes y perfil. 
+Esto se confirmará cuando se incremente la cantidad de ventas e insumos que registran administradores de restaurantes en la plataforma, así como la cantidad de pedidos realizados en la app. Por último, cuando los desarrolladores frontend aumenten la cantidad de funcionalidades relacionadas con ventas, recetas, inventario, órdenes, suscripciones y perfil en la app móvil.</td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Velocity</td>
+    <td>35</td>
+  </tr>
+  <tr>
+    <td>Sum of Story Points</td>
+    <td>39</td>
+  </tr>
+</table>
+
+
 #### 4.2.2.2. Sprint Backlog 2
 
 #### 4.2.2.3. Development Evidence for Sprint Review
@@ -2831,19 +2889,15 @@ A continuación, se detallan los pasos realizados para asegurar el funcionamient
 1. Creación de clúster en MongoDB Atlas para la base de datos
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_1.png" alt="Home" width="500px">
-
 2. **Conexión del repositorio con Render**: Se creó un nuevo proyecto en Render y se conectó directamente el repositorio del backend desde GitHub.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_2.png" alt="Home" width="600px">
-
 3. **Selección de rama principal (`main`)**: En la configuración del proyecto, se seleccionó la rama `main` como predeterminada para realizar el despliegue continuo.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_3.png" alt="Home" width="600px">
-
 4. **Creación de variables de entorno en Render**: Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Render.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_4.png" alt="Home" width="600px">
-
 5. **Habilitación del link Swagger en la configuración**: En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
 
 <img src="assets/images/cap4/sprint2/deploy/deploy_back_5.png" alt="Home" width="600px">
