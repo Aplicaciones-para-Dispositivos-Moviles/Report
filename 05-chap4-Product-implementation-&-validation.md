@@ -3108,18 +3108,6 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
     <li>Visualizar los detalles de una venta realizada</li>
     <li>Eliminar una venta</li>
 </ol>
-  <p>
-  No están incluidas en esta versión de la evaluación las siguientes tareas:
-  </p>
-  <p>
-<ol>
-  <li>Actualizar Estado de Orden Enviada</li>
-  <li>Actualizar Estado Manual de Orden Enviada</li>
-  <li>Habilitar Navegación para Lector de Pantalla</li>
-  <li>Actualizar Estado de Orden (Proveedor)</li>
-  <li>Actualizar Estado de Entrega (Proveedor)</li>
-  <li>Presentar Beneficios por Perfil</li>
-</ol>
   <p><strong style="color: rgba(43, 101, 237, 1)">ESCALA DE SEVERIDAD</strong><br>Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 </p>
 </p>
