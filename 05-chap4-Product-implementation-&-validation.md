@@ -2876,8 +2876,6 @@ A continuación se presenta una tabla resumen con los commits realizados por cad
 A continuación se presentan los materiales de evidencia correspondientes a los productos desarrollados durante el **Sprint 2**: **Backend**, **Aplicación Móvil Android (Administrador de Restaurantes)** y **Aplicación Móvil Flutter (Proveedores de Restaurantes)**.  
 Cada sección describe el alcance técnico entregado y los avances demostrados en video.
 
----
-
 #### Backend (API) — Estado: 100% completado y desplegado
 
 **Alcance entregado (Sprint 2)**
@@ -2923,11 +2921,10 @@ El backend integra todos los *bounded contexts* del sistema y expone la document
 - Visualización de la documentación Swagger en el entorno desplegado.
 
 **Video del Backend:**  
-[https://shorturl.at/CZzk9](https://shorturl.at/CZzk9)
+[https://shorturl.at/IG8Yi](https://shorturl.at/IG8Yi)
 
 ![Execution Backend](assets/images/cap4/sprint2/execution/backend_exec.png)
 
----
 
 #### Aplicación Móvil (Administrador de Restaurantes — Android) — Estado: 100% completada y desplegada
 
@@ -2962,11 +2959,10 @@ La aplicación fue integrada y desplegada con el backend productivo, mostrando f
 - Validación completa de flujos de administración.
 
 **Video de Aplicación Android:**  
-[https://shorturl.at/8adxX](https://shorturl.at/8adxX)
+[https://shorturl.at/lcETG](https://shorturl.at/lcETG)
 
 ![Execution Android](assets/images/cap4/sprint2/execution/android_exec.png)
 
----
 
 #### Aplicación Móvil (Proveedores de Restaurantes — Flutter) — Estado: En desarrollo (Sprint 2)
 
@@ -2997,7 +2993,7 @@ Durante este sprint se completaron las primeras pantallas funcionales, incluyend
 - Estructura inicial del flujo de proveedor.
 
 **Video de Aplicación Flutter:**  
-[https://shorturl.at/LVy49](https://shorturl.at/LVy49)
+[https://shorturl.at/BrF3r](https://shorturl.at/BrF3r)
 
 ![Execution Flutter](assets/images/cap4/sprint2/execution/flutter_exec.png)
 
