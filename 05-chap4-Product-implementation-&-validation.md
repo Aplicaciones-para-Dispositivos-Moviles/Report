@@ -1312,679 +1312,105 @@ fix(order): include full batch, custom supply, and supply details in order respo
 
 #### 4.2.1.4. Testing Suite Evidence for Sprint Review
 
-<p>A continuación, se presenta la evidencia de los commits relacionados con los <strong>Acceptance Tests</strong> automatizados del sprint, alojados en el repositorio <code>restock-acceptance-tests</code>. Cada archivo corresponde a un <em>Feature File</em> Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).</p>
+A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
 
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
+<table>
   <thead>
     <tr>
-      <th style="margin-bottom:18px; text-align: center">Repository</th>
-      <th style="margin-bottom:18px; text-align: center">Branch</th>
-      <th style="margin-bottom:18px; text-align: center">Commit id</th>
-      <th style="margin-bottom:18px; text-align: center">Commit Message/Body</th>
-      <th style="margin-bottom:18px; text-align: center">Commited on (Date)</th>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
     </tr>
   </thead>
-  <tbody style="margin-bottom:18px; text-align: center">
-  <tr>
-    <td colspan="5">Landing Page</td>
-  </tr>
-  <tr>
-    <td>sergioJM05/restock-landing-page</td>
-    <td>feature/project-structure</td>
-    <td>123dfg456dfgir78ryujk678ir8r133123218f7a</td>
-    <td>chore: add project structure</td>
-    <td>03/10/2025</td>
-  </tr>
-  <tr>
-    <td> JulioXC4/restock-landing-page</td>
-    <td>feature/menu</td>
-    <td>zxzxc42ds098hgjghxc3b0da42951331zzx18f7a</td>
-    <td>feat: add responsive menu</td>
-    <td>04/10/2025</td>
-  </tr>
-  <tr>
-    <td>Aplicaciones-para-Dispositivos-Moviles/restock-landing-page</td>
-    <td>feature/home</td>
-    <td>12xzx45fgb8cfzxz7533b0da4295133123218f7a</td>
-    <td>feat: add home section and first call to action</td>
-    <td>04/10/2025</td>
-  </tr>
-  <tr>
-    <td>PieroHugo/restock-landing-page</td>
-    <td>feature/about-us</td>
-    <td>l1p3ohjgffddzx123234565423dczxy623218f7a</td>
-    <td>feat: add about us section and development team presentation</td>
-    <td>04/10/2025</td>
-  </tr>
-  <tr>
-    <td>GrabrielaShapiama28/restock-landing-page</td>
-    <td>feature/benefits</td>
-    <td>5143132dsadasa887533b534765dfgsda3218f7a</td>
-    <td>feat: add benefits section to restaurant owners and restaurant suppliers</td>
-    <td>04/10/2025</td>
-  </tr>
-  <tr>
-    <td>sergioJM05/restock-landing-page</td>
-    <td>feature/testimonials</td>
-    <td>12dsfty56y45dxvxdkuh10da4295133123218f7a</td>
-    <td>feat: add representative testimonials section</td>
-    <td>04/10/2025</td>
-  </tr>
-  <tr>
-    <td>sergioJM05/restock-landing-page</td>
-    <td>feature/questions</td>
-    <td>gdfhrt567vbdfsd87533b0da4295133123218f7a</td>
-    <td>feat: add frequently questions</td>
-    <td>04/10/2025</td>
-  </tr>
-  <tr>
-    <td>GrabrielaShapiama28/restock-landing-page</td>
-    <td>feature/tutorial</td>
-    <td>12sxdcsdvadasa887533dfsghgfgdhdgf123767a</td>
-    <td>feat: add steps to download and use the app on phones.</td>
-    <td>04/10/2025</td>
-  </tr>
-  </tbody>
-  <tr>
-    <td>PieroHugo/restock-landing-page</td>
-    <td>feature/contact</td>
-    <td>7u6gfb98ftgfbds23213b0da429513312321r436</td>
-    <td>feat: add contact form.</td>
-    <td>04/10/2025</td>
-  </tr>
-  <tr>
-    <td>Aplicaciones-para-Dispositivos-Moviles/restock-landing-page</td>
-    <td>feature/download</td>
-    <td>565414352adasa887533b0da4295133123218f7a</td>
-    <td>feat: add call to action to download restock App</td>
-    <td>04/10/2025</td>
-  </tr>
+  <tbody>
     <tr>
-    <td>JulioXC4/restock-landing-page</td>
-    <td>feature/menu</td>
-    <td>5345342dsadasa887533b0da4295133123218f7a</td>
-    <td>feat: add internacionalization EN / ES</td>
-    <td>04/10/2025</td>
-  </tr>
-    <tr>
-    <td>sergioJM05/restock-landing-page</td>
-    <td>feature/footer</td>
-    <td>7cd72323c612fa887533b0da429513fe919b8f7a</td>
-    <td>feat: add footer with social medias and rights reserved</td>
-    <td>04/10/2025</td>
-  </tr>
-  <tr>
-    <td colspan="5">Mobile Frontend</td>
-  </tr>
-  <tr>
-    <td>PieroHugo/restock-mobile-android</td>
-    <td>feature/monitoring</td>
-    <td>fef3e1a27a0f178c8f066effd5d29a99caad8e95</td>
-    <td>chore: implement monitoring project structure</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>SergioJM05/restock-mobile-android</td>
-    <td>feature/monitoring</td>
-    <td>7cd72323c612fa887533b0da429513fe919b8f7a</td>
-    <td>feat: add models for monitoring</td>
-    <td>07/10/2025</td>
-  </tr>
-    <tr>
-    <td>SergioJM05/restock-mobile-android</td>
-    <td>feature/monitoring</td>
-    <td>8d76ca8be2788c2b3f930087f642a4a4d5a16c74</td>
-    <td>feat: add monitoring views</td>
-    <td>07/10/2025</td>
-  </tr>
-    <tr>
-    <td>SergioJM05/restock-mobile-android</td>
-    <td>feature/monitoring</td>
-    <td>254484e26868558fa4ae36595d456453944dabc7</td>
-    <td>feat: add monitoring logic</td>
-    <td>07/10/2025</td>
-  </tr>
-    <tr>
-    <td>PieroHugo/restock-mobile-android</td>
-    <td>feature/monitoring</td>
-    <td>036959bb72b0a1fb081ea5a8bdd0a262b29af800</td>
-    <td>feat: add monitoring static data</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>PieroHugo/restock-mobile-android</td>
-    <td>feature/monitoring</td>
-    <td>00f49314ae799242601d0348674ce47e2fda6171</td>
-    <td>feat: add monitoring actions</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>jahazielgg/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>20d2b439d5547a914b0ef27c16821ccd2c2a6579</td>
-    <td>feat: update HomeScreen title and provide RecipeApiService in NetworkModule</td>
-    <td>09/10/2025</td>
-  </tr>
-  <tr>
-    <td>jahazielgg/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>7849d9a949fccc045c728328880ae06057123a32</td>
-    <td>feat: enhance HomeScreen with navigation to Recipes and add drawer functionality</td>
-    <td>09/10/2025</td>
-  </tr>
-  <tr>
-    <td>jahazielgg/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>1e785049dffb38da9984657b909acfde46a94f23</td>
-    <td>feat: add Recipe, RecipeDto, RecipeApiService, RecipeMapper, and RecipeSupply for recipe management</td>
-    <td>07/10/2025</td>
-  </tr>
-    <tr>
-    <td>jahazielgg/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>543d362a9747dd74e6cd8b9899468b7b62481b9a</td>
-    <td>feat: add RecipeDetailScreen, RecipeFormScreen, and RecipesListScreen for recipe management</td>
-    <td>07/10/2025</td>
-  </tr>
-    <tr>
-    <td>jahazielgg/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>5686c76b169bef2e6cbb9a9347039277a0a5ad28</td>
-    <td>feat: add DTOs and requests for adding supplies to recipes and creating recipes</td>
-    <td>07/10/2025</td>
-  </tr>
-    <tr>
-    <td>JulioXC4/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>b9535b19b08f87ec760629c658847ba4fc51f2ff</td>
-    <td>feat(inventory):Improve SupplyFormScreen UI and fix dropdown not showing supply options</td>
-    <td>08/10/2025</td>
-  </tr>
-    <tr>
-    <td>JulioXC4/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>48af7393b36b41a95d6571849e65253b08fc4266</td>
-    <td>fix(navigation): unified and fixed SupplyFormScreen routes for add/edit supplies</td>
-    <td>08/10/2025</td>
-  </tr>
-    <tr>
-    <td>JulioXC4/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>097d5b40f983abb35ffda480b681fda323a0cbe9</td>
-    <td>feat(resources): completed custom supplies flow; pending batch management and UI polish</td>
-    <td>08/10/2025</td>
-  </tr>
-    <tr>
-    <td>JulioXC4/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>21ca973c6c0f186e22e3ae87557a154a6f72ba2e</td>
-    <td>feat: implement profile logout functionality and update profile data handling</td>
-    <td>08/10/2025</td>
-  </tr>
-    <tr>
-    <td>JulioXC4/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>3892d7782094c1007d72381450e2812fc4c8e862</td>
-    <td>feat: add description and phone fields to business and personal data screens</td>
-    <td>07/10/2025</td>
-  </tr>
-    <tr>
-    <td>jahzielgg/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>40d8c949c53307aa68b263c1ad12783e1f121967</td>
-    <td>feat: add avatar upload functionality with snackbar notifications in ProfileDetailScreen</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>jahzielgg/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>a7e21d4d54dc022f28a6441b824fe67e15554119</td>
-    <td>feat: update AndroidManifest to include permissions for external storage and media access</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>GabrielaShapiama28/restock-mobile-android</td>
-    <td>feature/resources</td>
-    <td>31a491d75c02127ba8b41bd7801c37f5737a0ac4</td>
-    <td>feat: add inventory repository information.</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>GabrielaShapiama28/restock-mobile-android</td>
-    <td>feature/resources</td>
-    <td>2a0d06ec43542c76237b82092408fb2a732dc61b</td>
-    <td>feat: add inventory repository information.</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>GabrielaShapiama28/restock-mobile-android</td>
-    <td>feature/resources</td>
-    <td>35fdba25224c6f89be1b9f493a0dc7ffae05819b</td>
-    <td>feat: add supply information.</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>GabrielaShapiama28/restock-mobile-android</td>
-    <td>feature/resources</td>
-    <td>d85559a4cdaa46e3edee710b6d15d3ddca052c54</td>
-    <td>feat: add inventory detail information.</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>GabrielaShapiama28/restock-mobile-android</td>
-    <td>feature/resources</td>
-    <td>a60c8c35d213e86849c38557d511ce32b1930fcf</td>
-    <td>feat: add information to supply detail.</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-    <td>GabrielaShapiama28/restock-mobile-android</td>
-    <td>feature/resources</td>
-    <td>864b066914fd7b81bfeb79ee22742925b86cad0c</td>
-    <td>feat: add attribute to Batch class.</td>
-    <td>07/10/2025</td>
-  </tr>
-    <tr>
-    <td>GabrielaShapiama28/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>31a491d75c02127ba8b41bd7801c37f5737a0ac4</td>
-    <td>feat: add inventory repository information.</td>
-    <td>02/10/2025</td>
-  </tr>
-      <tr>
-    <td>GabrielaShapiama28/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>2a0d06ec43542c76237b82092408fb2a732dc61b</td>
-    <td>feat: add inventory repository information.</td>
-    <td>02/10/2025</td>
-  </tr>
-        <tr>
-    <td>GabrielaShapiama28/restock-mobile-android</td>
-    <td>feature/planning</td>
-    <td>35fdba25224c6f89be1b9f493a0dc7ffae05819b</td>
-    <td>feat: add supply information.</td>
-    <td>02/10/2025</td>
-  </tr>
-  <tr>
-    <td colspan="5">Backend</td>
-  </tr>
-   <tr>
-    <td>GabrielaShapiama28/restock-platform</td>
-    <td>feature/resource</td>
-    <td>0dbd5a0c98550fe47fca3941a3a31dfaaeefa0b3</td>
-    <td>fix: change server url prd to dev.</td>
-    <td>07/10/2025</td>
-  </tr>
-  <tr>
-      <td>GabrielaShapiama28/restock-platform</td>
-      <td>feature/resource</td>
-      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
-      <td>feat: add sale information.</td>
-      <td>07/10/2025</td>
-    </tr>
-    <tr>
-      <td>GabrielaShapiama28/restock-platform</td>
-      <td>feature/resource</td>
-      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
-      <td>feat: add inventory update to applied after confirm resources.</td>
-      <td>07/10/2025</td> 
-    </tr>
-    <tr>
-      <td>GabrielaShapiama28/restock-platform</td>
-      <td>feature/resource</td>
-      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
-      <td>feat: add purchase order information.</td>
-      <td>07/10/2025</td>
-    </tr>
-    <tr>
-      <td>GabrielaShapiama28/restock-platform</td>
-      <td>feature/resource</td>
-      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
-      <td>feat: add goods receipt information.</td>
-      <td>07/10/2025</td>
-    </tr>
-    <tr>
-      <td>PieroHugo/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
-      <td>feat: add sale information.</td>
-      <td>07/10/2025</td>
-    </tr>
-<tr>
-      <td>PieroHugo/restock-platform</td>
-      <td>feature/monitoring</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
       <td>2685de9471a0f83ad75205b618863b31e14e6198</td>
-      <td>feat: add user login information.</td>
-      <td>07/10/2025</td>
+      <td>feat: add acceptance tests for user login scenarios (AT01.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
     <tr>
-      <td>PieroHugo/restock-platform</td>
-      <td>feature/monitoring</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
       <td>ed5ce3208cd2c63a242441f45fedae10d5425bec</td>
-      <td>feat: add sale CRUD information.</td>
-      <td>07/10/2025</td>
+      <td>feat: add CRUD acceptance tests for recipe management (AT02.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
     <tr>
-      <td>PieroHugo/restock-platform</td>
-      <td>feature/monitoring</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
       <td>d28da8da0545a20d228ebb03a345149eb03ce84a</td>
-      <td>feat: add sale repository.</td>
-      <td>07/10/2025</td>
+      <td>feat: add acceptance tests for recipe activation with valid and invalid supplies (AT03.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
     <tr>
-      <td>PieroHugo/restock-platform</td>
-      <td>feature/monitoring</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
       <td>8aef03d2070aa74505d3434024f1e71bdd1505ca</td>
-      <td>feat: add sale authentication.</td>
-      <td>07/10/2025</td>
+      <td>feat: add acceptance tests for menu grid search and pagination (AT04.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
     <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>4f67d20d5c85cd5040d1f2cda2555f92bd29e716</td>
-      <td>feat(monitoring): add unit sale value object.</td>
-      <td>07/10/2025</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
+      <td>feat: add acceptance tests for sale registration and validation (AT05.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
     <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>e1c4f3b6f4e8b6c3f4d5e6f7a8b9c0d1e2f3a4b5</td>
-      <td>feat(monitoring): add monitoring services.</td>
-      <td>07/10/2025</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
+      <td>feat: add acceptance test for marking inventory as applied after resource confirmation (AT06.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
     <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>c3b2a1d0e9f8b7a6c5d4e3f2a1b0c9d8e7f6a5b4</td>
-      <td>feat(monitoring): add monitoring controllers.</td>
-      <td>07/10/2025</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
+      <td>feat: add acceptance tests for Purchase Order lifecycle (AT07.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
     <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>a1b2c3d4e5f60718293a4b5c6d7e8f9a0b1c2d3e</td>
-      <td>feat(monitoring): add monitoring endpoints.</td>
-      <td>07/10/2025</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
+      <td>feat: add acceptance test for posting goods receipt and event publishing (AT08.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
     <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>f0e1d2c3b4a5968778695a4b3c2d1e0f9e8d7c6b</td>
-      <td>feat(monitoring): add monitoring services.</td>
-      <td>07/10/2025</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
+      <td>feat: add acceptance tests for restock functionality (supplier view and confirmation) (AT09.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
     <tr>
-      <td>jahzielgg/restock-platform</td>
-      <td>feature/resource</td>
-      <td>e9f8d7c6b5a4938271605f4e3d2c1b0a9f8e7d6c</td>
-      <td>feat(recipes): add CreateRecipeCommand and GetRecipeByIdQuery records</td>
-      <td>07/10/2025</td>
-    </tr>
-    <tr>
-      <td>jahzielgg/restock-platform</td>
-      <td>feature/resource</td>
-      <td>b6a5c4d3e2f10987654321a0b1c2d3e4f5a6b7c8</td>
-      <td>feat(recipes): add RecipeController with endpoints for creating and retrieving recipes</td>
-      <td>07/10/2025</td> 
-    </tr>
-    <tr>
-      <td>JulioXc4/restock-platform</td>
-      <td>feature/iam</td>
-      <td>c4d3e2f10987654321a0b1c2d3e4f5a6b7c8d9e0</td>
-      <td>feat(iam): add user aggregates, model, entities, valueobjects, commands and queries</td>
-      <td>07/10/2025</td>
-    </tr>
-    <tr>
-      <td>JulioXc4/restock-platform</td>
-      <td>feature/resource</td>
-      <td>f1e2d3c4b5a6978878695a4b3c2d1e0f9e8d7c6b</td>
-      <td>feat(resource): implement supply seeding and remove ReferenceSupply logic</td>
-      <td>07/10/2025</td>
-    </tr>
-    <tr>
-      <td>jahzielgg/restock-platform</td>
-      <td>feature/resource</td>
-      <td>bcdcea0f35aaf8850cc64290b34ab25d3e376cfc</td>
-      <td>feat(pom): update main class for Restock application</td>
-      <td>07/10/2025</td>
-    </tr>
-        <tr>
-      <td>jahzielgg/restock-platform</td>
-      <td>feature/resource</td>
-      <td>9d599e9b36571cf2f3d8e2ed5dcd41f8347fe4fd</td>
-      <td>feat(recipes): refactor Recipe and RecipeSupply classes to improve supply management</td>
-      <td>07/10/2025</td>
-    </tr>
-      <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>35d5bc2825c943fbff896a751236ae89dc137542</td>
-      <td>fix: allow local access to endpoints.</td>
-      <td>13/10/2025</td>
-    </tr>
-      <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>1db01cf7c0bebf961256427b415006b8579b535d</td>
-      <td>feat(monitoring): Add "findBySaleCode" function in sale repository.</td>
-      <td>13/10/2025</td>
-    </tr>
-    <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>c077892fe4e4d6fae891377ff11dd6d29dfa1b5a</td>
-      <td>feat(monitoring): Add controller with get and post of sale items and sales.</td>
-      <td>13/10/2025</td>
-    </tr>
-    <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>9ddef01c82ba3b67d332147cc2e93de71a0ce822</td>
-      <td>feat(monitoring): Add query service implementation.</td>
-      <td>13/10/2025</td>
-    </tr>
-    <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>8ff33620c3b7e453028fca7b91c4222486d80607</td>
-      <td>
-      feat(monitoring): Add interface query service.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-        <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>e79354fc230ccd5708293cbf577cb92c0d01d4c3</td>
-      <td>
-        feat(monitoring): Add interface command service.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-    <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>25449b1c16266366dc951b3c54043ae2870bb5af</td>
-      <td>
-        feat(monitoring): Add command service implementation.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-    <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>ad62116328ecda1d35137d79e519953963fc413b</td>
-      <td>
-feat(monitoring): Add query service implementation.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-        <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>059f3f4afea8f37992880f7b8fffcc188e377fea</td>
-      <td>
-feat(monitoring): Add queries contracts.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-    <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>0e226a66b1b11a531e9524267067146a66eaf25c</td>
-      <td>
-feat(monitoring): Add external planning service on monitoring through acl.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-        <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>a03d93eb060654848878147207954480c7525e70</td>
-      <td>
-feat(monitoring): Add monitoring value objects.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-    <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>7082712b604fb73ae58bdf5b27844cf4ba14242b</td>
-      <td>
-feat(monitoring): Add sale item entity.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-        <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>a17e9020c399608049ffb385b74ff35d3adeeb4b</td>
-      <td>
-feat(monitoring): Add sale aggregate root.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-<tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>fe3a17d93cc07d99c9bdc8d608a27c1e0dddffec</td>
-      <td>
-feat(planning): Add planning facade implementation.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-            <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>9444ff35a57be827b55410bdaa241055a4383a84</td>
-      <td>
-feat(planning): Add planning facade acl.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-            <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>724177af4b6e7dd51a2066bd35e6dd78a1829d71</td>
-      <td>
-feat(profile): Add profile facade implementation.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-            <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>e7d8ff33413e0b4430c3fbe724eb6d6ba1d4c022</td>
-      <td>
-      feat(profile): Add profile facade.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-            <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>776da11d3fb50d5916c8c83941fa08802ae4c6ac</td>
-      <td>
-feat(monitoring): Add sales commands.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-            <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>4564dd6e136d8e055d394d2d87127f0f504b3ce1</td>
-      <td>
-feat(monitoring): Add sales transform assemblers.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-            <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>a832e6ac8a3ce0d6b87704ebe12d13c7cb73917f</td>
-      <td>
-feat(monitoring): Add sales resources.
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-            <tr>
-      <td>sergioJM05/restock-platform</td>
-      <td>feature/monitoring</td>
-      <td>7e4f6e65c4da1e03a3356c445b77ccd918cd299d</td>
-      <td>
-feat(monitoring): Add sale item to sale command.     
-      </td>
-      <td>13/10/2025</td>
-    </tr>
-                <tr>
-      <td>JulioXC4/restock-platform</td>
-      <td>feature/resource</td>
-      <td>7c13f9db47824b3fd2bdbfdd8f19191cf3fcb03c</td>
-      <td>
-fix: update Batch models to align structure and field mappings
-      </td>
-      <td>04/10/2025</td>
-    </tr>
-    <tr>
-      <td>JulioXC4/restock-platform</td>
-      <td>feature/resource</td>
-      <td>bf7f1dba9ea912d7799397380ba099f2cd98ab7d</td>
-      <td>
-fix: update CustomSupply models to align structure and field mappings
-      </td>
-      <td>04/10/2025</td>
-    </tr>
-        <tr>
-      <td>JulioXC4/restock-platform</td>
-      <td>feature/resource</td>
-      <td>676be38006e3e197f0b3112f4a76310d25c9eb17</td>
-      <td>
-fix: update Supply and CustomSupply models to align structure and field mappings
-      <td>04/10/2025</td>
-    </tr>
-            <tr>
-      <td>JulioXC4/restock-platform</td>
-      <td>feature/resource</td>
-      <td>89a748566ed00e49c50e133a17cc566ea8255db9</td>
-      <td>
-refactor(order): remove all legacy OrderBatch entities, repositories, and references from SQL-based implementation
-    </td>
-      <td>04/10/2025</td>
-    </tr>
-    <tr>
-      <td>JulioXC4/restock-platform</td>
-      <td>feature/resource</td>
-      <td>38a962033a157623b80da0b4a6a78ca488e3c2a3</td>
-      <td>
-fix(order): include full batch, custom supply, and supply details in order responses
-    </td>
-      <td>04/10/2025</td>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>48d728c07104cb5cae35a48000f28c6891ba523b</td>
+      <td>feat: add acceptance tests for profile update and plan limits enforcement (AT10.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
     </tr>
   </tbody>
 </table>
 
 <p><strong>Enlace al repositorio:</strong>  
-<a href="https://shorturl.at/LFvuk" target="_blank">https://shorturl.at/LFvuk</a></p>
+<a href="https://shorturl.at/0Cvbk" target="_blank">https://shorturl.at/0Cvbk</a></p>
 
 #### 4.2.1.5. Execution Evidence for Sprint Review
 
@@ -2903,6 +2329,105 @@ A continuación se presenta una tabla resumen con los commits realizados por cad
 
 #### 4.2.2.4. Testing Suite Evidence for Sprint Review
 
+A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>2685de9471a0f83ad75205b618863b31e14e6198</td>
+      <td>feat: add acceptance tests for user login scenarios (AT01.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>ed5ce3208cd2c63a242441f45fedae10d5425bec</td>
+      <td>feat: add CRUD acceptance tests for recipe management (AT02.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>d28da8da0545a20d228ebb03a345149eb03ce84a</td>
+      <td>feat: add acceptance tests for recipe activation with valid and invalid supplies (AT03.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>8aef03d2070aa74505d3434024f1e71bdd1505ca</td>
+      <td>feat: add acceptance tests for menu grid search and pagination (AT04.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
+      <td>feat: add acceptance tests for sale registration and validation (AT05.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
+      <td>feat: add acceptance test for marking inventory as applied after resource confirmation (AT06.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
+      <td>feat: add acceptance tests for Purchase Order lifecycle (AT07.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
+      <td>feat: add acceptance test for posting goods receipt and event publishing (AT08.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
+      <td>feat: add acceptance tests for restock functionality (supplier view and confirmation) (AT09.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>48d728c07104cb5cae35a48000f28c6891ba523b</td>
+      <td>feat: add acceptance tests for profile update and plan limits enforcement (AT10.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Enlace al repositorio:</strong>  
+<a href="https://shorturl.at/0Cvbk" target="_blank">https://shorturl.at/0Cvbk</a></p>
 
 #### 4.2.2.5. Execution Evidence for Sprint Review
 A continuación se presentan los materiales de evidencia correspondientes a los productos desarrollados durante el **Sprint 2**: **Backend**, **Aplicación Móvil Android (Administrador de Restaurantes)** y **Aplicación Móvil Flutter (Proveedores de Restaurantes)**.  
