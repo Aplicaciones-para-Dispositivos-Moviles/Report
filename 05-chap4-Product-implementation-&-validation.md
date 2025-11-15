@@ -2428,9 +2428,172 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 ### 4.2.2. Sprint 2
 #### 4.2.2.1. Sprint Planning 2
 #### 4.2.2.2. Sprint Backlog 2
+
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Sprint #</strong></td>
+			<td colspan="7">Sprint 2</td>
+		</tr>
+		<tr>
+			<td colspan="2"><strong>User Story</strong></td>
+			<td colspan="6"><strong>Work-item / Task</strong></td>
+		</tr>
+		<tr>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Description</strong></td>
+			<td><strong>Estimation (Hours)</strong></td>
+			<td><strong>Assigned To</strong></td>
+			<td><strong>Status (To-do / In-Process / To-review / Done)</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-17-US19</td>
+			<td rowspan="3">Resource: Update Resources to match DB diagram (MongoDB)</td>
+			<td>T1</td>
+			<td>Update Resources schema (backend)</td>
+			<td>Actualizar el modelo de Resources en el backend para que coincida con el diagrama de BD (MongoDB): campos, colecciones y relaciones denormalizadas.</td>
+			<td>8</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T2</td>
+			<td>Seed & migration scripts</td>
+			<td>Crear scripts de seeding/migración para poblar/ajustar las colecciones de Resources y garantizar compatibilidad con los nuevos endpoints.</td>
+			<td>6</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T3</td>
+			<td>Align mobile inventory models</td>
+			<td>Actualizar modelos, repositorios y mappers en la app Android para reflejar la nueva estructura de Resources/Inventory del backend.</td>
+			<td>6</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-18-US20</td>
+			<td rowspan="3">Orders: Create Orders flow for Restaurant Administrators</td>
+			<td>T4</td>
+			<td>Design Orders API & DB model</td>
+			<td>Definir el modelo de datos de Orders en MongoDB y diseñar los endpoints REST necesarios (POST /orders, GET /orders, PUT state, etc.).</td>
+			<td>6</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T5</td>
+			<td>Implement Orders UI (Android)</td>
+			<td>Crear pantallas de creación, lista, detalle y actualización de órdenes para administradores en la app Android (incluye validaciones y estados).</td>
+			<td>8</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T6</td>
+			<td>Integrate Orders with backend</td>
+			<td>Conectar las pantallas de Orders con los endpoints del backend, manejar estados (pending/confirmed/shipped) y pruebas de integración end‑to‑end.</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-19-US21</td>
+			<td rowspan="3">Subscriptions: Manage user subscriptions and billing</td>
+			<td>T7</td>
+			<td>Implement Subscriptions endpoints</td>
+			<td>Agregar endpoints backend para crear/listar/actualizar suscripciones, integrar hooks de facturación y webhooks de la pasarela de pagos.</td>
+			<td>6</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T8</td>
+			<td>Subscriptions UI (Android)</td>
+			<td>Implementar pantallas de gestión de suscripciones en la app: ver planes, cambiar plan, cancelar y ver historial de facturación.</td>
+			<td>4</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T9</td>
+			<td>Payment confirmation & subscription flow</td>
+			<td>Integrar la confirmación de pago con la creación/activación de la suscripción, manejar errores y reintentos.</td>
+			<td>6</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-20-US22</td>
+			<td rowspan="3">Profiles & Preferences: User profile and preferences management</td>
+			<td>T10</td>
+			<td>Extend Profiles API for preferences</td>
+			<td>Actualizar endpoints de Profiles para soportar preferencias del usuario (notificaciones, idioma, alertas de stock, etc.).</td>
+			<td>5</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T11</td>
+			<td>Preferences UI (Android)</td>
+			<td>Agregar en la app una sección de Preferencias sincronizada con el backend para permitir al usuario configurar notificaciones, idioma y ajustes personales.</td>
+			<td>5</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T12</td>
+			<td>Sync and persistence</td>
+			<td>Asegurar sincronización de preferencias entre dispositivos y persistencia local segura (caché/room) con reconciliación contra el backend.</td>
+			<td>4</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-21-US23</td>
+			<td rowspan="2">Planning: Scheduling & planning features</td>
+			<td>T13</td>
+			<td>Planning domain APIs</td>
+			<td>Implementar endpoints para planificación (schedules, forecasts, suggested orders) y los modelos asociados en backend.</td>
+			<td>6</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T14</td>
+			<td>Planning UI components (Android)</td>
+			<td>Construir componentes de UI para visualización de planes, sugerencias de pedido y calendario en la app móvil.</td>
+			<td>6</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-22-US24</td>
+			<td rowspan="2">Monitoring: Telemetry, alerts and monitoring dashboard</td>
+			<td>T15</td>
+			<td>Monitoring endpoints</td>
+			<td>Implementar servicios de monitoring en el backend (endpoints para métricas, logs y alertas) y preparar integración con el sistema de dashboard.</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T16</td>
+			<td>Client monitoring views</td>
+			<td>Agregar en la app vistas para mostrar métricas clave, alertas recientes y notificaciones de estado (integración con endpoints de monitoring).</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+	</tbody>
+</table>
+
 #### 4.2.2.3. Development Evidence for Sprint Review
 A continuación se presenta una tabla resumen con los commits realizados por cada miembro del equipo durante el Sprint 2, detallando el repositorio, la rama, el ID del commit, el mensaje del commit y la fecha en que se realizó el commit.
-
 <table border="1" width="100%" style=" text-align: center">
   <thead>
     <tr>
@@ -3140,18 +3303,6 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
     <li>Visualizar los detalles de una venta realizada</li>
     <li>Eliminar una venta</li>
 </ol>
-  <p>
-  No están incluidas en esta versión de la evaluación las siguientes tareas:
-  </p>
-  <p>
-<ol>
-  <li>Actualizar Estado de Orden Enviada</li>
-  <li>Actualizar Estado Manual de Orden Enviada</li>
-  <li>Habilitar Navegación para Lector de Pantalla</li>
-  <li>Actualizar Estado de Orden (Proveedor)</li>
-  <li>Actualizar Estado de Entrega (Proveedor)</li>
-  <li>Presentar Beneficios por Perfil</li>
-</ol>
   <p><strong style="color: rgba(43, 101, 237, 1)">ESCALA DE SEVERIDAD</strong><br>Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 </p>
 </p>
@@ -3188,100 +3339,113 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
       <th style="text-align: center">#</th>
       <th style="text-align: center">Problema</th>
       <th style="text-align: center">Escala de severidad</th>
-      <th style="text-align: center">Heurística/Principio volada(o)</th>
+      <th style="text-align: center">Heurística/Principio violada(o)</th>
     </tr>
   </thead>
   <tbody style="text-align: left">
-      <tr>
+	<tr>
       <td>1</td>
+      <td>Ausencia de indicios y opciones de pago seguras en el checkout</td>
+      <td>4</td>
+      <td>Confianza y seguridad</td>
+    </tr>
+	<tr>
+      <td>2</td>
+      <td>Redundancia de beneficios en la pantalla de pago</td>
+      <td>3</td>
+      <td>Consistencia y estándares</td>
+    </tr>
+    <tr>
+      <td>3</td>
       <td>Problema de Espaciado y Usabilidad en Carrusel</td>
       <td>3</td>
       <td>Usability: Libertad y control del usuario</td>
     </tr>
     <tr>
-      <td>2</td>
+      <td>4</td>
       <td>Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma</td>
       <td>3</td>
       <td>Usability: Libertad y control del usuario</td>
     </tr>
     <tr>
-      <td>3</td>
+      <td>5</td>
       <td>Inconsistencia de Grosor de Líneas de Tabla</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>4</td>
+      <td>6</td>
       <td>Sombra de Botones Excesivamente Pesada</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>5</td>
+      <td>7</td>
       <td>Desalineación Vertical de Icono de Búsqueda</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>6</td>
+      <td>8</td>
       <td>Discrepancia de Jerarquía Tipográfica en Etiquetas</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>7</td>
+      <td>9</td>
       <td>Inconsistencia en el Tamaño de Títulos de Sección</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>8</td>
+      <td>10</td>
       <td>Baja Prominencia Visual del Botón "Reset"</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>9</td>
+      <td>11</td>
       <td>Inconsistencia en la Fuente del Número de Venta</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>12</td>
       <td>Falta de Consistencia Tipográfica en Estado</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>11</td>
+      <td>13</td>
       <td>Desequilibrio Visual en Icono de Descarga</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>12</td>
+      <td>14</td>
       <td>Bajo Contraste y Tamaño de Fuente de Paginación</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>13</td>
+      <td>15</td>
       <td>Inconsistencia Visual de Bordes y Margen</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>14</td>
+      <td>16</td>
       <td>Inconsistencia Cromática del Icono de Éxito</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
     <tr>
-      <td>15</td>
+      <td>17</td>
       <td>Efecto Visual de Flotación en Icono de Eliminación</td>
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
+	
 
   </tbody>
 </table>
@@ -3289,8 +3453,32 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 <table>
 <tbody>
 <tr>
+  <td>
+    <strong>Problema #1:</strong> Ausencia de indicios y opciones de pago seguras en el checkout <br>
+    <strong>Severidad:</strong> 4 <br>
+    <strong>Heuristica violada:</strong> Confianza y seguridad<br>
+    <strong>Problema:</strong> La pantalla de pago no muestra señales claras de que la transacción será procesada por una pasarela segura ni ofrece (o no evidencia) alternativas de pago confiables. La falta de badges de seguridad, logo de pasarela, texto sobre tokenización/almacenamiento seguro o métodos alternativos (Google Pay / Apple Pay / PayPal) reduce la percepción de seguridad y puede provocar rechazo del usuario a completar la transacción<br>
+    <strong>Recomendación:</strong> Incluir el logo de la pasarela de pagos empleada (por ejemplo: Stripe, PayPal) y pequeños badges de seguridad (candado, "Pago seguro", "PCI DSS compliant") cerca del formulario y del botón de pago.
+  </td>
+  <td>
+    <img src="assets/images/cap4/payment.png" alt="problem-15">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #2:</strong> Redundancia de beneficios en la pantalla de pago <br>
+    <strong>Severidad:</strong> 3 <br>
+    <strong>Heuristica violada:</strong> Consistencia y estándares<br>
+    <strong>Problema:</strong> En la pantalla de pago se muestran de forma prominente los beneficios del plan justo encima del formulario de tarjeta. Si esos beneficios ya fueron presentados en pasos previos, su repetición añade densidad visual y puede distraer al usuario en el momento crítico de completar el pago, aumentando la fricción y la posibilidad de abandono.<br>
+    <strong>Recomendación:</strong> Evitar la redundancia: eliminar o colapsar la lista de beneficios en el checkout. Sustituirla por un resumen muy breve (1–2 líneas) con el nombre del plan y el precio y un enlace “Ver detalles” que abra un modal o lleve a la página de detalles si el usuario quiere revisar los beneficios.
+  </td>
+  <td>
+    <img src="assets/images/cap4/payment.png" alt="problem-15">
+  </td>
+</tr>
+<tr>
   <td style="width:60%">
-    <strong>Problema #1:</strong> Problema de Espaciado y Usabilidad en Carrusel <br>
+    <strong>Problema #3:</strong> Problema de Espaciado y Usabilidad en Carrusel <br>
     <strong>Severidad:</strong> 3 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
     <strong>Problema:</strong> El borde que separa los dos elementos del carrusel de "Supplies" está demasiado cerca del texto interno ("Leche deslactosada"), haciendo que la columna de texto se sienta mínimamente apretada contra el límite de la tarjeta, pero es completamente legible. Asimismo falta un elemento visual para ingresar al detalle de cada supply<br>
@@ -3302,7 +3490,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #2:</strong> Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma <br>
+    <strong>Problema #4:</strong> Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma <br>
     <strong>Severidad:</strong> 3 <br>
     <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
     <strong>Problema:</strong> El enlace de registro "Don't have an account? Sign Up" utiliza un color verde que, aunque es consistente con la paleta de la aplicación, tiene un contraste ligeramente menor que el texto negro principal, lo que disminuye mínimamente su escaneabilidad. Además no existe un icono de accesibilidad para cambios de idioma.<br>
@@ -3314,7 +3502,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #3:</strong> Inconsistencia de Grosor de Líneas de Tabla <br>
+    <strong>Problema #5:</strong> Inconsistencia de Grosor de Líneas de Tabla <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
     <strong>Problema:</strong> La línea horizontal divisoria debajo de la cabecera de la tabla ("Ingredientes", "Estado", "Ver más") está ligeramente más gruesa que las líneas de separación entre las filas de datos, creando una mínima inconsistencia de estilo gráfico.<br>
@@ -3326,7 +3514,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #4:</strong> Sombra de Botones Excesivamente Pesada <br>
+    <strong>Problema #6:</strong> Sombra de Botones Excesivamente Pesada <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
     <strong>Problema:</strong> El botón "CANCEL" (rojo) y el botón "NEXT" (naranja) tienen una sombra de caja que es visualmente más pesada y distractora que el resto de los elementos del formulario, lo cual es una anomalía estética menor.<br>
@@ -3338,7 +3526,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #5:</strong> Desalineación Vertical de Icono de Búsqueda <br>
+    <strong>Problema #7:</strong> Desalineación Vertical de Icono de Búsqueda <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
     <strong>Problema:</strong> El icono de búsqueda (lupa) dentro del campo "Search recipes" no está perfectamente alineado verticalmente con el texto de placeholder ("Search recipes"), lo que representa una mínima imperfección visual que el usuario probablemente no notará.<br>
@@ -3350,7 +3538,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #6:</strong> Discrepancia de Jerarquía Tipográfica en Etiquetas <br>
+    <strong>Problema #8:</strong> Discrepancia de Jerarquía Tipográfica en Etiquetas <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
     <strong>Problema:</strong> Hay una discrepancia sutil en el tamaño de la fuente utilizada para las etiquetas de los campos (Name, Last names, Email, etc.) en comparación con el texto del título principal (Edit your information), lo que rompe la jerarquía visual mínima.<br>
@@ -3362,7 +3550,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #7:</strong> Inconsistencia en el Tamaño de Títulos de Sección <br>
+    <strong>Problema #9:</strong> Inconsistencia en el Tamaño de Títulos de Sección <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
     <strong>Problema:</strong> La tipografía utilizada para el título "Latest alerts" es notablemente más grande que la utilizada para los títulos de las secciones inferiores ("Account", "Frequent clients"), creando una inconsistencia visual en la jerarquía de títulos.<br>
@@ -3374,7 +3562,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #8:</strong>  Baja Prominencia Visual del Botón "Reset" <br>
+    <strong>Problema #10:</strong>  Baja Prominencia Visual del Botón "Reset" <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
     <strong>Problema:</strong> El botón "Reset" ubicado en la parte inferior carece de un color de fondo distintivo (es transparente/blanco), lo que lo hace visualmente menos prominente que los botones "Cancel" y "Add sale", creando una leve anomalía en la jerarquía de llamadas a la acción.<br>
@@ -3386,7 +3574,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #9:</strong> Inconsistencia en la Fuente del Número de Venta <br>
+    <strong>Problema #11:</strong> Inconsistencia en la Fuente del Número de Venta <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
     <strong>Problema:</strong> La fuente utilizada para el subtítulo "Sale number" es ligeramente más pequeña que la fuente utilizada para otros títulos de sección importantes (como "Total cost" o "Dishes (2)"), lo que resulta en una mínima inconsistencia en la jerarquía de la información dentro del resumen de venta.<br>
@@ -3398,7 +3586,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #10:</strong> Falta de Consistencia Tipográfica en Estado <br>
+    <strong>Problema #12:</strong> Falta de Consistencia Tipográfica en Estado <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
     <strong>Problema:</strong> El botón "Aprobado" dentro de la sección "Situation" no utiliza una convención de mayúsculas estándar (debería ser "Aprobado" o "APROBADO"), presentando una falta de consistencia tipográfica menor con el resto de los textos de la interfaz.<br>
@@ -3410,7 +3598,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #11:</strong> Desequilibrio Visual en Icono de Descarga <br>
+    <strong>Problema #13:</strong> Desequilibrio Visual en Icono de Descarga <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
     <strong>Problema:</strong> El icono utilizado para el botón "DESCAGAR HISTORIAL" (que parece ser un icono de descarga o archivo) es muy pequeño en relación con el tamaño del texto y el botón, lo que resulta en un desequilibrio visual menor y una estética subóptima.<br>
@@ -3422,7 +3610,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #12:</strong> Bajo Contraste y Tamaño de Fuente de Paginación <br>
+    <strong>Problema #14:</strong> Bajo Contraste y Tamaño de Fuente de Paginación <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
     <strong>Problema:</strong> El tamaño de la fuente para el texto de paginación (Rows per page, page 1 of 2) es ligeramente menor o tiene menos contraste que el resto de los textos informativos, haciendo que la sección de paginación sea mínimamente más difícil de leer.<br>
@@ -3434,7 +3622,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #13:</strong> Inconsistencia Visual de Bordes y Margen <br>
+    <strong>Problema #15:</strong> Inconsistencia Visual de Bordes y Margen <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
     <strong>Problema:</strong> La baja definición de los bordes de los campos de entrada, sumada a la mínima inconsistencia en la separación vertical antes del botón de acción, debilita levemente la estructura visual.<br>
@@ -3446,7 +3634,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #14:</strong> Inconsistencia Cromática del Icono de Éxito <br>
+    <strong>Problema #16:</strong> Inconsistencia Cromática del Icono de Éxito <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
     <strong>Problema:</strong> El icono de verificación (check mark) verde claro en la parte superior tiene un color de fondo (verde muy pálido/grisáceo) que no corresponde exactamente al color verde vibrante utilizado en el botón "Close" o en la paleta principal, creando una mínima falta de consistencia cromática.<br>
@@ -3458,7 +3646,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 </tr>
 <tr>
   <td>
-    <strong>Problema #15:</strong> Efecto Visual de Flotación en Icono de Eliminación <br>
+    <strong>Problema #17:</strong> Efecto Visual de Flotación en Icono de Eliminación <br>
     <strong>Severidad:</strong> 1 <br>
     <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
     <strong>Problema:</strong> El icono de la papelera (Delete) en la parte superior derecha tiene un sombreado o borde que lo hace parecer ligeramente desconectado o flotante respecto a los elementos adyacentes, lo cual es una anomalía estética menor en el uso de los efectos visuales.<br>
