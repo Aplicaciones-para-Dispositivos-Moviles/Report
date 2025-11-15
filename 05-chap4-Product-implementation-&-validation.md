@@ -248,6 +248,36 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 - **Layouts y recursos XML**: `snake_case` (ej. `activity_main.xml`, `user_profile_item.xml`).
 - **IDs en layouts**: `camelCase` (ej. `btnSubmit`, `txtUserName`).
 
+#### Mobile Frontend (Flutter + Dart)
+
+##### Convenciones generales:
+
+- **Idioma**: Todo el código, nombres de clases, funciones y variables en **inglés**.
+- **Indentación**: 2 espacios (convención oficial de Dart).
+- **Formato de archivos**: `.dart` (Dart).
+- **Estilo de código adoptado**:
+  - [Effective Dart Style Guide](https://dart.dev/guides/language/effective-dart/style)
+  - [Flutter Style Guide](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo)
+  - [Dart Code Linter (flutter_lints)](https://pub.dev/packages/flutter_lints)
+
+##### Nomenclatura:
+
+- **Clases y tipos**: `PascalCase` (ej. `UserProfileScreen`, `ProductRepository`).
+- **Funciones y variables**: `lowerCamelCase` (ej. `getUserName()`, `userList`).
+- **Constantes**: `lowerCamelCase` (ej. `defaultTimeout`, `maxRetries`).
+- **Archivos**: `snake_case` (ej. `user_profile_screen.dart`, `product_repository.dart`).
+- **Directorios**: `snake_case` (ej. `lib/features/auth/`, `lib/core/utils/`).
+- **Widgets**: `PascalCase` con sufijo descriptivo (ej. `CustomButton`, `ProductCard`).
+- **Enums**: `PascalCase` para el tipo, `lowerCamelCase` para valores (ej. `enum Status { loading, success, error }`).
+
+##### Buenas prácticas:
+
+- Uso de `const` constructors donde sea posible para optimización.
+- Organización de código por features/módulos.
+- Separación de lógica de negocio (BLoC/Provider/Riverpod) de la UI.
+- Uso de trailing commas para mejor formateo automático.
+- Documentación con `///` para elementos públicos.
+
 #### Backend (Java + Spring Boot + MongoDB)
 
 ##### Convenciones generales:
@@ -1278,9 +1308,176 @@ fix(order): include full batch, custom supply, and supply details in order respo
   </tbody>
 </table>
 
-#### 4.2.1.4. Testing Suite Evidence for Sprint Review
+#### 4.2.1.2. Sprint Backlog 1
 
-<p>A continuación, se presenta la evidencia de los commits relacionados con los <strong>Acceptance Tests</strong> automatizados del sprint, alojados en el repositorio <code>restock-acceptance-tests</code>. Cada archivo corresponde a un <em>Feature File</em> Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).</p>
+Nuestro principal objetivo con este primer sprint es desarrollar las funciones esenciales que permitan a los restaurantes y proveedores interesados en Restock informarse sobre su propósito, conocer sus características destacadas y entender las acciones que podrán realizar dentro de la aplicación móvil..
+
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Sprint #</strong></td>
+			<td colspan="7">Sprint 1</td>
+		</tr>
+		<tr>
+			<td colspan="2"><strong>User Story</strong></td>
+			<td colspan="6"><strong>Work-item / Task</strong></td>
+		</tr>
+		<tr>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Description</strong></td>
+			<td><strong>Estimation (Hours)</strong></td>
+			<td><strong>Assisgned To</strong></td>
+			<td><strong>Status (To-do / In-Process / To-review / Done)</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-01-US01</td>
+			<td rowspan="2">Presentar propuesta de valor y CTA en la Landing Page</td>
+			<td>T1</td>
+			<td>Diseñar sección Hero y propuesta de valor</td>
+			<td>Crear y estilizar la sección de bienvenida resaltando el propósito y ventajas de Restock.</td>
+			<td>2</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T2</td>
+			<td>Agregar botones de registro y descarga</td>
+			<td>Implementar CTA para registro y enlace de descarga de la app móvil.</td>
+			<td>1</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-02-US02</td>
+			<td rowspan="2">Accesibilidad y navegación responsiva</td>
+			<td>T3</td>
+			<td>Implementar menú de navegación responsivo</td>
+			<td>Diseñar el menú principal con acceso a secciones clave y adaptación a dispositivos móviles.</td>
+			<td>2</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T4</td>
+			<td>Estilizar y organizar secciones de la Landing Page</td>
+			<td>Aplicar estilos y organizar el contenido para una navegación clara y accesible.</td>
+			<td>1</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-03-US03</td>
+			<td rowspan="2">Gestión de autenticación y acceso</td>
+			<td>T5</td>
+			<td>Diseñar formulario de registro/login en Landing y App</td>
+			<td>Crear los formularios para registro, inicio de sesión y recuperación de contraseña.</td>
+			<td>2</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T6</td>
+			<td>Integrar validaciones básicas al formulario</td>
+			<td>Asegurar que los campos obligatorios validen correctamente en web y móvil.</td>
+			<td>1</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-06-US15</td>
+			<td rowspan="2">Listado y gestión de supplies (insumos)</td>
+			<td>T7</td>
+			<td>Desarrollar pantalla de lista de supplies en App móvil</td>
+			<td>Mostrar listado de insumos con filtros y barra de búsqueda conectada al backend.</td>
+			<td>2</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T8</td>
+			<td>Implementar modal de creación/edición de supplies</td>
+			<td>Permitir agregar, editar y eliminar insumos en la app móvil.</td>
+			<td>1</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-08-US10</td>
+			<td>Gestión de recetas</td>
+			<td>T9</td>
+			<td>Crear pantalla de listado y detalle de recetas</td>
+			<td>Desarrollar interfaz para mostrar recetas y sus insumos relacionados.</td>
+			<td>2</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-09-US11</td>
+			<td>Panel de estadísticas y métricas</td>
+			<td>T10</td>
+			<td>Implementar dashboard básico en app móvil</td>
+			<td>Mostrar métricas clave del restaurante (inventario, ventas, pedidos) en la app.</td>
+			<td>2</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-13-US16</td>
+			<td>Gestión de ventas</td>
+			<td>T11</td>
+			<td>Desarrollar pantalla de registro y gestión de ventas</td>
+			<td>Permitir registrar y consultar ventas vinculadas a supplies y recetas.</td>
+			<td>2</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-07-US12</td>
+			<td>Gestión de compras de insumos</td>
+			<td>T12</td>
+			<td>Desarrollar interfaz de registro y consulta de compras</td>
+			<td>Permitir a administradores registrar compras y visualizar el historial de abastecimiento.</td>
+			<td>2</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-12-US13</td>
+			<td>Notificaciones </td>
+			<td>T13</td>
+			<td>Configurar notificaciones de inventario y pedidos</td>
+			<td>Implementar alertas automáticas sobre bajo stock y eventos importantes en la app móvil.</td>
+			<td>2</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-14-US17</td>
+			<td>Gestión de órdenes para proveedores</td>
+			<td>T14</td>
+			<td>Desarrollar módulo de recepción y actualización de órdenes</td>
+			<td>Permitir a proveedores visualizar y actualizar el estado de pedidos recibidos desde restaurantes.</td>
+			<td>2</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-16-US18</td>
+			<td>Gestión de proveedores</td>
+			<td>T15</td>
+			<td>Implementar pantalla de gestión de proveedores</td>
+			<td>Agregar, editar, visualizar y eliminar proveedores en la plataforma.</td>
+			<td>2</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+	</tbody>
+</table>
+
+#### 4.2.1.3. Development Evidence for Sprint Review
 
 <table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
   <thead>
@@ -1951,8 +2148,107 @@ fix(order): include full batch, custom supply, and supply details in order respo
   </tbody>
 </table>
 
+#### 4.2.1.4. Testing Suite Evidence for Sprint Review
+
+A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>2685de9471a0f83ad75205b618863b31e14e6198</td>
+      <td>feat: add acceptance tests for user login scenarios (AT01.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>ed5ce3208cd2c63a242441f45fedae10d5425bec</td>
+      <td>feat: add CRUD acceptance tests for recipe management (AT02.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>d28da8da0545a20d228ebb03a345149eb03ce84a</td>
+      <td>feat: add acceptance tests for recipe activation with valid and invalid supplies (AT03.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>8aef03d2070aa74505d3434024f1e71bdd1505ca</td>
+      <td>feat: add acceptance tests for menu grid search and pagination (AT04.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
+      <td>feat: add acceptance tests for sale registration and validation (AT05.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
+      <td>feat: add acceptance test for marking inventory as applied after resource confirmation (AT06.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
+      <td>feat: add acceptance tests for Purchase Order lifecycle (AT07.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
+      <td>feat: add acceptance test for posting goods receipt and event publishing (AT08.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
+      <td>feat: add acceptance tests for restock functionality (supplier view and confirmation) (AT09.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>48d728c07104cb5cae35a48000f28c6891ba523b</td>
+      <td>feat: add acceptance tests for profile update and plan limits enforcement (AT10.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
 <p><strong>Enlace al repositorio:</strong>  
-<a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</a></p>
+<a href="https://shorturl.at/0Cvbk" target="_blank">https://shorturl.at/0Cvbk</a></p>
 
 #### 4.2.1.5. Execution Evidence for Sprint Review
 
@@ -2080,11 +2376,11 @@ A continuación se presentan los materiales de evidencia correspondientes a los 
 
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
 
-Durante este sprint se avanzó significativamente en la `<strong>`documentación de los servicios web (REST API)`</strong>` del sistema `<em>`Restock `</em>`, cubriendo los módulos de `<strong>`Profiles `</strong>`, `<strong>`Recipes `</strong>`, `<strong>`Batches `</strong>` y `<strong>`Authentication `</strong>`.
-La documentación se generó utilizando `<strong>`OpenAPI (Swagger)`</strong>` y fue validada mediante peticiones reales desde el entorno de desarrollo (`<em>`localhost `</em>` y Railway).
-Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP `<code>`GET `</code>`, `<code>`POST `</code>`, `<code>`PUT `</code>` y `<code>`DELETE `</code>`.
+Durante este sprint se avanzó significativamente en la documentación de los servicios web (REST API)del sistema Restock , cubriendo los módulos de Profiles , Recipes , Batches y Authentication .
+La documentación se generó utilizando OpenAPI (Swagger)y fue validada mediante peticiones reales desde el entorno de desarrollo (localhost  y Railway).
+Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP GET , POST , PUT  y DELETE .
 
-A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documentados `</strong>`, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+A continuación, se presenta la tabla resumen de los Endpoints documentados , incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
 
 <table>
   <thead>
@@ -2251,7 +2547,7 @@ A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documen
   </tbody>
 </table>
 
-Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (`<em>`Railway `</em>`).
+Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (Railway ).
 Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-backend" target="_blank">`https://github.com/Jahazielgg/restock-backend `</a>`
 Últimos commits relacionados con documentación:
 
@@ -2911,12 +3207,112 @@ A continuación se presenta una tabla resumen con los commits realizados por cad
 
 #### 4.2.2.4. Testing Suite Evidence for Sprint Review
 
+A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>2685de9471a0f83ad75205b618863b31e14e6198</td>
+      <td>feat: add acceptance tests for user login scenarios (AT01.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>ed5ce3208cd2c63a242441f45fedae10d5425bec</td>
+      <td>feat: add CRUD acceptance tests for recipe management (AT02.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>d28da8da0545a20d228ebb03a345149eb03ce84a</td>
+      <td>feat: add acceptance tests for recipe activation with valid and invalid supplies (AT03.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>8aef03d2070aa74505d3434024f1e71bdd1505ca</td>
+      <td>feat: add acceptance tests for menu grid search and pagination (AT04.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
+      <td>feat: add acceptance tests for sale registration and validation (AT05.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
+      <td>feat: add acceptance test for marking inventory as applied after resource confirmation (AT06.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
+      <td>feat: add acceptance tests for Purchase Order lifecycle (AT07.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
+      <td>feat: add acceptance test for posting goods receipt and event publishing (AT08.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
+      <td>feat: add acceptance tests for restock functionality (supplier view and confirmation) (AT09.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>48d728c07104cb5cae35a48000f28c6891ba523b</td>
+      <td>feat: add acceptance tests for profile update and plan limits enforcement (AT10.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Enlace al repositorio:</strong>  
+<a href="https://shorturl.at/0Cvbk" target="_blank">https://shorturl.at/0Cvbk</a></p>
+
 #### 4.2.2.5. Execution Evidence for Sprint Review
 
 A continuación se presentan los materiales de evidencia correspondientes a los productos desarrollados durante el **Sprint 2**: **Backend**, **Aplicación Móvil Android (Administrador de Restaurantes)** y **Aplicación Móvil Flutter (Proveedores de Restaurantes)**.
 Cada sección describe el alcance técnico entregado y los avances demostrados en video.
 
-#### Backend (API) — Estado: 100% completado y desplegado
+##### Backend (API) — Estado: 100% completado y desplegado
 
 **Alcance entregado (Sprint 2)**
 
@@ -2965,7 +3361,9 @@ El backend integra todos los *bounded contexts* del sistema y expone la document
 
 ![Execution Backend](assets/images/cap4/sprint2/execution/backend_exec.png)
 
-#### Aplicación Móvil (Administrador de Restaurantes — Android) — Estado: 100% completada y desplegada
+---
+
+##### Aplicación Móvil (Administrador de Restaurantes — Android) — Estado: 100% completada y desplegada
 
 **Alcance entregado (Sprint 2)**
 
@@ -3003,7 +3401,9 @@ La aplicación fue integrada y desplegada con el backend productivo, mostrando f
 
 ![Execution Android](assets/images/cap4/sprint2/execution/android_exec.png)
 
-#### Aplicación Móvil (Proveedores de Restaurantes — Flutter) — Estado: En desarrollo (Sprint 2)
+---
+
+##### Aplicación Móvil (Proveedores de Restaurantes — Flutter) — Estado: En desarrollo (Sprint 2)
 
 **Alcance entregado (Sprint 2)**
 
@@ -3067,8 +3467,7 @@ A continuación, se detallan los pasos realizados para asegurar el funcionamient
 <img src="assets/images/cap4/sprint2/deploy/deploy_back_7.png" alt="Home" width="600px">
 
 #### 4.2.2.8. Team Collaboration Insights during Sprint
-
-#### Backend (API)
+##### Backend (API)
 
 Durante el **Sprint 2**, el equipo centró sus esfuerzos en consolidar los módulos principales y garantizar la integración completa con las aplicaciones móviles.Se alcanzó una versión **estable y desplegada en producción** bajo el dominio:`https://restock-platform.onrender.com`.
 
@@ -3086,7 +3485,8 @@ Durante el **Sprint 2**, el equipo centró sus esfuerzos en consolidar los módu
 - Endpoints activos documentados en Swagger: **53**
 - Observación: el backend alcanzó una versión estable (**v0.0.1-SNAPSHOT**) con todos los servicios esenciales operativos, documentados y consumidos por las aplicaciones móviles.
 
-#### Aplicación Móvil (Android - Kotlin)
+
+##### Aplicación Móvil (Android - Kotlin)
 
 Durante este sprint se **finalizó al 100%** la aplicación nativa en Android Studio con Kotlin, asegurando su total funcionalidad e integración con la API de Restock Platform.
 
@@ -3106,7 +3506,7 @@ Durante este sprint se **finalizó al 100%** la aplicación nativa en Android St
 - Pantallas completadas: **7 (Inventory, Recipes, Orders, Sales, Suscription,Profile, Login)**
 - Observación: la aplicación Android alcanzó una versión final estable, completamente integrada con la API y lista para despliegue en entorno productivo.
 
-#### Aplicación Móvil (Flutter)
+##### Aplicación Móvil (Flutter)
 
 Durante este sprint se inició el desarrollo de la **aplicación Flutter multiplataforma**, orientada a los proveedores de restaurantes.El objetivo principal fue establecer la base técnica del proyecto y conectar las primeras pantallas con el backend desplegado.
 
