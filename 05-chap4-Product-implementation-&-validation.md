@@ -2289,32 +2289,28 @@ Link del landing page desplegado: https://aplicaciones-para-dispositivos-moviles
 A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
 
 1. Creación de clúster en MongoDB Atlas para la base de datos
-   
-   <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_1.png" alt="Home" width="400px">
 
+   <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_1.png" alt="Home" width="400px">
 2. **Conexión del repositorio con Railway**: Se creó un nuevo proyecto en Railway y se conectó directamente el repositorio del backend desde GitHub.
 
    <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_2.png" alt="Home" width="400px">
-
 3. **Selección de rama principal (`main`)**: En la configuración del proyecto, se seleccionó la rama `main` como predeterminada para realizar el despliegue continuo.
 
-    <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_3.jpeg" alt="Home" width="200px">
-
+   <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_3.jpeg" alt="Home" width="200px">
 4. **Habilitación del link Swagger en la configuración**: En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
 
-    <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_4.jpeg" alt="Home" width="600px">
-
+   <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_4.jpeg" alt="Home" width="600px">
 5. **Creación de variables de entorno en Railway**Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Railway.
 
-  <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_5.png" alt="Home" width="600px">
+<img src="assets/images/cap4/sprint1/deploy_back/deploy_back_5.png" alt="Home" width="600px">
 
 6. **Despliegue del proyecto**: Railway ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
 
-  <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_6.png" alt="Home" width="600px">
+<img src="assets/images/cap4/sprint1/deploy_back/deploy_back_6.png" alt="Home" width="600px">
 
 7. **Verificación con Swagger**: Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
 
-  <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_7.jpeg" alt="Home" width="600px">
+<img src="assets/images/cap4/sprint1/deploy_back/deploy_back_7.jpeg" alt="Home" width="600px">
 
 #### 4.2.1.8. Team Collaboration Insights during Sprint
 
@@ -2828,7 +2824,37 @@ Durante este sprint se completaron las primeras pantallas funcionales, incluyend
 
 #### 4.2.2.6. Services Documentation Evidence for Sprint Review
 
-#### 4.2.2.7. Software Deployment Evidence for Sprint Review
+#### 4.2.2.7. Software Deployment Evidence for Sprint Review 2
+
+A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
+
+1. Creación de clúster en MongoDB Atlas para la base de datos
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_1.png" alt="Home" width="500px">
+
+2. **Conexión del repositorio con Render**: Se creó un nuevo proyecto en Render y se conectó directamente el repositorio del backend desde GitHub.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_2.png" alt="Home" width="600px">
+
+3. **Selección de rama principal (`main`)**: En la configuración del proyecto, se seleccionó la rama `main` como predeterminada para realizar el despliegue continuo.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_3.png" alt="Home" width="600px">
+
+4. **Creación de variables de entorno en Render**: Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Render.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_4.png" alt="Home" width="600px">
+
+5. **Habilitación del link Swagger en la configuración**: En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_back_5.png" alt="Home" width="600px">
+
+6. **Despliegue del proyecto**: Render ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_back_6.png" alt="Home" width="600px">
+
+7. **Verificación con Swagger**: Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_back_7.png" alt="Home" width="600px">
 
 #### 4.2.2.8. Team Collaboration Insights during Sprint
 
@@ -2951,240 +2977,3 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
-
-### 4.3.2. Registro de Entrevistas
-
-A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
-
-#### **Entrevista 01 – Josue Ramírez**
-
-**Datos del entrevistado:**
-
-- **Nombre completo:** Josue Ramírez
-- **Edad:** 26 años
-- **Distrito:** Chorrillos
-- **Segmento:** Proveedor de insumos gastronómicos
-- **Fecha de entrevista:** 07 de octubre de 2025
-- **Duración:** 8 minutos y 58 segundos
-- **Registro audiovisual:** https://shorturl.at/kaGl4
-- **Captura de entrevista:**
-  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
-
-#### **Resumen descriptivo de la entrevista:**
-
-Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Josue Ramírez indicó que el diseño del landing le pareció **claro y profesional**, destacando el mensaje principal que resalta la **conexión directa entre proveedores y administradores de restaurantes**.
-
-Comentó que el apartado de **“gestión de catálogo”** le resultó relevante, ya que permitiría mantener actualizados sus productos sin necesidad de depender de terceros. Asimismo, valoró positivamente la posibilidad de **recibir pedidos en tiempo real y mantener comunicación directa con los restaurantes** mediante la plataforma.
-
-Sin embargo, sugirió que sería útil incluir una sección más visible en el landing donde se expliquen los **beneficios específicos para proveedores**, como métricas de venta o testimonios de otros usuarios. También recomendó que el formulario de registro indique con mayor claridad los **requisitos de verificación** o documentos necesarios.
-
-En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
-
-**Conclusión general:**
-La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
-
-#### **Entrevista 02 – Alicia Minaya**
-
-**Datos del entrevistado:**
-
-- **Nombre completo:** Alicia Soledad Minaya Maguiña
-- **Edad:** 45 años
-- **Distrito:** Chorrillos
-- **Segmento:** Administradora de restaurantes
-- **Fecha de entrevista:** 09 de octubre de 2025
-- **Duración:** 8 minutos y 24 segundos
-- **Registro audiovisual:** [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/EV3jiWf-6jVMl50xDv9kLrcBLHD3N5U9uKAIh7VyXYtbdg?e=YSAKrh)
-- **Captura de entrevista:**
-  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint1/interviews/int-restaurant-managers.png)
-
-#### **Resumen descriptivo de la entrevista:**
-
-Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Alicia Minaya indicó que el diseño del landing le pareció **intuitivo y ordenado**, destacando el mensaje principal que resalta la **conexión directa entre administradores de restaurantes y su estado del inventario**. De esta manera afirma que la aplicación será de gran ayuda para tomar decisiones rápidas y acertadas en su negocio.
-
-Comentó que las alertas en tiempo real le resultarán relevantes para realizar un rebastecimiento de inventario constante y evitar pérdidas por productos vencidos. Asimismo, valoró positivamente la posibilidad de **recibir reportes y métricas de consumo** mediante la aplicación.
-
-Asimismo, no tuvo ninguna sugerencia para mejorar el landing page, ya que consideró que la información presentada es suficiente y clara.
-
-En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
-
-**Conclusión general:**
-La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de administradores de restaurantes. Asimismo, no se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo.
-
-### 4.3.3. Evaluaciones según heurísticas
-
-Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta.
-
-<h1 style="text-align: center; margin-top: 40px; margin-bottom: -50px">UX Heuristics & Principles Evaluation</h1>
-<h2 style="text-align: center; margin-top: 40px; margin-bottom: 0px;">Usability - Inclusive Design - Information Architecture</h2>
-<container style="text-align: left;">
-  <p style="margin-bottom: 0px;"><strong>CARRERA:</strong> Ingeniería de Software</p>
-  <p style="margin-bottom: 0px;"><strong>CURSO:</strong> CC238</p>
-  <p style="margin-bottom: 0px;"><strong>SECCIÓN:</strong> 12617</p>
-  <p style="margin-bottom: 0px;"><strong>PROFESORES:</strong> Todos</p>
-  <p style="margin-bottom: 0px;"><strong>AUDITOR:</strong> Grupo 2</p>
-  <p><strong>CLIENTES:</strong> Alicia Soledad Minaya Maguiña, Josue Ramírez, Alex Guardia, Lincoln Chauca Rubio, Amparo Soledad Robles Vásquez, José Santos Tapia Bustamente, Percy Polo Ferrera, Benjamín Pacheco Quesada</p>
-  <p><strong style="color: rgba(43, 101, 237, 1)">Site o App a Evaluar:</strong><br> Mobile App - Restock</p>
-  <p><strong style="color:  rgba(43, 101, 237, 1)">TAREAS A EVALUAR:</strong><br> 
-  <p>El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
-  </p>
-</p>
-<p>
-<ol>
-    <li>Registro de un nuevo usuario</li>
-    <li>Actualizar Stock de Insumos </li>
-    <li>Recibir Notificaciones de Inventario</li>
-    <li>Actualizar Recetas del Menú</li>
-    <li>Consultar Información Detallada de Receta</li>
-    <li>Actualizar Perfil de Usuario</li>
-    <li>Visualizar Notificaciones Recientes (Dashboard)</li>
-    <li>Registrar Registro de Ventas</li>
-    <li>Visualizar Ventas</li>
-    <li>Visualizar estado de Orden Específica</li>
-    <li>Visualizar Órdenes Enviadas</li>
-    <li>Visualizar Detalles de Orden Enviada</li>
-    <li>Cambiar Idioma de Interfaz</li>
-    <li>Visualizar los detalles de una venta realizada</li>
-    <li>Eliminar una venta</li>
-</ol>
-  <p>
-  No están incluidas en esta versión de la evaluación las siguientes tareas:
-  </p>
-  <p>
-<ol>
-  <li>Actualizar Estado de Orden Enviada</li>
-  <li>Actualizar Estado Manual de Orden Enviada</li>
-  <li>Habilitar Navegación para Lector de Pantalla</li>
-  <li>Actualizar Estado de Orden (Proveedor)</li>
-  <li>Actualizar Estado de Entrega (Proveedor)</li>
-  <li>Presentar Beneficios por Perfil</li>
-</ol>
-  <p><strong style="color: rgba(43, 101, 237, 1)">ESCALA DE SEVERIDAD</strong><br>Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
-</p>
-</p>
-<table style="width:100%; margin-bottom:18px; text-align: center">
-  <thead>
-    <tr>
-      <th style="text-align: center">Heurística / Principio</th>
-      <th style="text-align: center">Descripción</th>
-    </tr>
-  </thead>
-  <tbody style="text-align: left">
-  <tr>
-  <td>1</td>
-  <td>Problema superficial: Puede ser fácilmente superador por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo.</td>
-  </tr>
-  <tr>
-  <td>2</td>
-  <td>Problema menor: Puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente reléase</td>
-  </tr>
-  <tr>
-  <td>3</td>
-  <td>Problema mayor: Ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta.</td>
-  </tr>
-  <tr>
-  <td>4</td>
-  <td>Problema muy grave: Un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento.</td>
-  </tr>
-  </tbody>
-</table>
-  <p><strong style="color: rgba(43, 101, 237, 1)">TABLA DE RESUMEN</strong><br></p>
-<table style= "width:100%">
-  <thead>
-    <tr>
-      <th style="text-align: center">#</th>
-      <th style="text-align: center">Problema</th>
-      <th style="text-align: center">Escala de severidad</th>
-      <th style="text-align: center">Heurística/Principio volada(o)</th>
-    </tr>
-  </thead>
-  <tbody style="text-align: left">
-      <tr>
-      <td>1</td>
-      <td>Problema de Espaciado y Usabilidad en Carrusel</td>
-      <td>3</td>
-      <td>Usability: Libertad y control del usuario</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma</td>
-      <td>3</td>
-      <td>Usability: Libertad y control del usuario</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Inconsistencia de Grosor de Líneas de Tabla</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Sombra de Botones Excesivamente Pesada</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Desalineación Vertical de Icono de Búsqueda</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Discrepancia de Jerarquía Tipográfica en Etiquetas</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Inconsistencia en el Tamaño de Títulos de Sección</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Baja Prominencia Visual del Botón "Reset"</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>Inconsistencia en la Fuente del Número de Venta</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>Falta de Consistencia Tipográfica en Estado</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>Desequilibrio Visual en Icono de Descarga</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>Bajo Contraste y Tamaño de Fuente de Paginación</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>Inconsistencia Visual de Bordes y Margen</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>Inconsistencia Cromática del Icono de Éxito</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>Efecto Visual de Flotación en Icono de Eliminación</td>
-      <td>1</td>
-      <td>Estética y Diseño Minimalista.</td>
-    </tr>
