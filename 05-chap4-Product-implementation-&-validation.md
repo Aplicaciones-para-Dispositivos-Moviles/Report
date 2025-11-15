@@ -3015,9 +3015,8 @@ Se alcanzó una versión **estable y desplegada en producción** bajo el dominio
 
 ![Backend Collaboration](assets/images/cap4/collaboration/backend_ci_2.png)
 
-- Total de commits (Backend): **84**  
+- Total de commits (Backend): **113**  
 - Total de autores contribuyentes: **5**  
-- Total de _pull requests_ relacionadas: **6**  
 - Endpoints activos documentados en Swagger: **53**  
 - Observación: el backend alcanzó una versión estable (**v0.0.1-SNAPSHOT**) con todos los servicios esenciales operativos, documentados y consumidos por las aplicaciones móviles.
 
@@ -3037,10 +3036,9 @@ Durante este sprint se **finalizó al 100%** la aplicación nativa en Android St
 
 ![Android Collaboration](assets/images/cap4/collaboration/android_ci_2.png)
 
-- Total de commits (Android): **76**  
+- Total de commits (Android): **64**  
 - Total de autores contribuyentes: **5**  
-- Total de _pull requests_ relacionadas: **9**  
-- Pantallas completadas: **6 (Supplies, Recipes, Orders, Sales, Profile, Login)**  
+- Pantallas completadas: **7 (Inventory, Recipes, Orders, Sales, Suscription,Profile, Login)**  
 - Observación: la aplicación Android alcanzó una versión final estable, completamente integrada con la API y lista para despliegue en entorno productivo.
 
 #### Aplicación Móvil (Flutter)
@@ -3058,10 +3056,9 @@ El objetivo principal fue establecer la base técnica del proyecto y conectar la
 
 ![Flutter Collaboration](assets/images/cap4/collaboration/flutter_ci_2.png)
 
-- Total de commits (Flutter): **42**  
-- Total de autores contribuyentes: **5**  
-- Total de _pull requests_ relacionadas: **6**  
-- Módulos funcionales completados: **Overview**, **Login (autenticación)**  
+- Total de commits (Flutter): **3**  
+- Total de autores contribuyentes: **1**  
+- Módulos funcionales completados: **Overview**, **Login and Register (autenticación)**  
 - Observación: se completó la estructura base del proyecto Flutter y las primeras pantallas conectadas al backend, sirviendo como punto de partida para las funcionalidades avanzadas en el próximo sprint.
 
 
