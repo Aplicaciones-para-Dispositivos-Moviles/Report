@@ -3278,7 +3278,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
     <strong>Recomendación:</strong> Incluir el logo de la pasarela de pagos empleada (por ejemplo: Stripe, PayPal) y pequeños badges de seguridad (candado, "Pago seguro", "PCI DSS compliant") cerca del formulario y del botón de pago.
   </td>
   <td>
-    <img src="assets/images/cap4/heuristics_evaluation/15.png" alt="problem-15">
+    <img src="assets/images/cap4/payment.png" alt="problem-15">
   </td>
 </tr>
 <tr>
@@ -3290,7 +3290,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
     <strong>Recomendación:</strong> Evitar la redundancia: eliminar o colapsar la lista de beneficios en el checkout. Sustituirla por un resumen muy breve (1–2 líneas) con el nombre del plan y el precio y un enlace “Ver detalles” que abra un modal o lleve a la página de detalles si el usuario quiere revisar los beneficios.
   </td>
   <td>
-    <img src="assets/images/cap4/heuristics_evaluation/15.png" alt="problem-15">
+    <img src="assets/images/cap4/payment.png" alt="problem-15">
   </td>
 </tr>
 <tr>
