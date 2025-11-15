@@ -3568,6 +3568,459 @@ Durante este sprint se completaron las primeras pantallas funcionales, incluyend
 
 #### 4.2.2.6. Services Documentation Evidence for Sprint Review
 
+Durante el Sprint 2 se consolidó la documentación completa de los servicios web (REST API) del sistema Restock, expandiendo significativamente la cobertura alcanzada en el Sprint 1. Se documentaron los módulos de **Orders**, **Supplies**, **Custom Supplies**, **Sales**, **Subscriptions**, **Users** y **Roles**, complementando los módulos existentes de **Profiles**, **Recipes**, **Batches** y **Authentication**.
+
+La documentación se generó y mantuvo actualizada utilizando **OpenAPI (Swagger)** y fue validada mediante peticiones reales desde el entorno de producción desplegado en **Render** (`https://restock-platform.onrender.com`). Se registraron más de **53 endpoints activos** relacionados con la gestión completa del sistema, cubriendo los métodos HTTP **GET**, **POST**, **PUT** y **DELETE**.
+
+A continuación, se presenta la tabla resumen de los **Endpoints documentados en el Sprint 2**, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+
+<table>
+  <thead>
+    <tr style="background-color:#f2f2f2;">
+      <th>Endpoint</th>
+      <th>Acción</th>
+      <th>Verbo HTTP</th>
+      <th>Parámetros / Request Body</th>
+      <th>Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/api/v1/supplies</td>
+      <td>Obtener todos los insumos de la plataforma</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "sup_001",
+    "name": "Carne de res",
+    "category": "Carnes",
+    "unit": "kg"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/supplies/{supplyId}</td>
+      <td>Obtener un insumo específico por ID</td>
+      <td>GET</td>
+      <td><pre>Path: supplyId (string)</pre></td>
+      <td><pre>GET /api/v1/supplies/sup_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/supplies/categories</td>
+      <td>Obtener todas las categorías de insumos</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  "Carnes",
+  "Vegetales",
+  "Lácteos",
+  "Especias"
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies</td>
+      <td>Obtener todos los insumos personalizados</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "cs_001",
+    "name": "Salsa especial de la casa",
+    "userId": "user_123"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies</td>
+      <td>Crear un insumo personalizado</td>
+      <td>POST</td>
+      <td><pre>{
+  "name": "string",
+  "category": "string",
+  "unit": "string",
+  "userId": "string"
+}</pre></td>
+      <td><pre>{
+  "name": "Salsa BBQ casera",
+  "category": "Salsas",
+  "unit": "litros",
+  "userId": "user_123"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Obtener un insumo personalizado por ID</td>
+      <td>GET</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>GET /api/v1/custom-supplies/cs_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Actualizar un insumo personalizado</td>
+      <td>PUT</td>
+      <td><pre>{
+  "name": "string",
+  "category": "string",
+  "unit": "string"
+}</pre></td>
+      <td><pre>{
+  "name": "Salsa BBQ premium",
+  "category": "Salsas",
+  "unit": "litros"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Eliminar un insumo personalizado</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/custom-supplies/cs_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/user/{userId}</td>
+      <td>Obtener todos los insumos personalizados de un usuario</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/custom-supplies/user/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders</td>
+      <td>Obtener todas las órdenes</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "ord_001",
+    "providerId": "prov_123",
+    "status": "PENDING",
+    "total": 500.00
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders</td>
+      <td>Crear una nueva orden</td>
+      <td>POST</td>
+      <td><pre>{
+  "providerId": "string",
+  "items": [
+    {
+      "supplyId": "string",
+      "quantity": "number"
+    }
+  ]
+}</pre></td>
+      <td><pre>{
+  "providerId": "prov_456",
+  "items": [
+    {
+      "supplyId": "sup_001",
+      "quantity": 10
+    }
+  ]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}</td>
+      <td>Obtener una orden específica por ID</td>
+      <td>GET</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>GET /api/v1/orders/ord_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}</td>
+      <td>Eliminar una orden (solo si está en estado PENDING)</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/orders/ord_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}/state</td>
+      <td>Actualizar el estado de una orden</td>
+      <td>PUT</td>
+      <td><pre>{
+  "status": "string"
+}</pre></td>
+      <td><pre>{
+  "status": "COMPLETED"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{orderId}/batches</td>
+      <td>Crear batches asociados a una orden</td>
+      <td>POST</td>
+      <td><pre>{
+  "batches": [
+    {
+      "supplyId": "string",
+      "quantity": "number",
+      "expirationDate": "string"
+    }
+  ]
+}</pre></td>
+      <td><pre>{
+  "batches": [
+    {
+      "supplyId": "sup_001",
+      "quantity": 5,
+      "expirationDate": "2025-06-30"
+    }
+  ]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{orderId}/batches</td>
+      <td>Obtener todos los batches de una orden</td>
+      <td>GET</td>
+      <td><pre>Path: orderId (string)</pre></td>
+      <td><pre>GET /api/v1/orders/ord_001/batches</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/batches/user/{userId}</td>
+      <td>Obtener todos los batches de un usuario/proveedor</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/batches/user/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales</td>
+      <td>Obtener todas las ventas</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "sale_001",
+    "recipeId": "rec_001",
+    "quantity": 5,
+    "total": 144.50,
+    "date": "2025-01-15"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales</td>
+      <td>Registrar una nueva venta</td>
+      <td>POST</td>
+      <td><pre>{
+  "recipeId": "string",
+  "quantity": "number",
+  "date": "string"
+}</pre></td>
+      <td><pre>{
+  "recipeId": "rec_002",
+  "quantity": 3,
+  "date": "2025-01-16"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales/{id}</td>
+      <td>Obtener una venta específica por ID</td>
+      <td>GET</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>GET /api/v1/sales/sale_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales/{id}</td>
+      <td>Eliminar una venta</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/sales/sale_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{recipeId}/supplies/{supplyId}</td>
+      <td>Actualizar la cantidad de un insumo en una receta</td>
+      <td>PUT</td>
+      <td><pre>{
+  "quantity": "number"
+}</pre></td>
+      <td><pre>{
+  "quantity": 0.75
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{recipeId}/supplies/{supplyId}</td>
+      <td>Eliminar un insumo de una receta</td>
+      <td>DELETE</td>
+      <td><pre>Path: recipeId, supplyId (string)</pre></td>
+      <td><pre>DELETE /api/v1/recipes/rec_001/supplies/sup_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{id}</td>
+      <td>Eliminar una receta</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/recipes/rec_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/users</td>
+      <td>Obtener todos los usuarios</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "user_001",
+    "email": "admin@restock.com",
+    "role": "ADMIN"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/users/{userId}</td>
+      <td>Obtener un usuario específico por ID</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/users/user_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/users/{userId}/subscription</td>
+      <td>Actualizar la suscripción de un usuario</td>
+      <td>PUT</td>
+      <td><pre>{
+  "subscriptionId": "string"
+}</pre></td>
+      <td><pre>{
+  "subscriptionId": "sub_premium"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions</td>
+      <td>Obtener todos los planes de suscripción</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "sub_basic",
+    "name": "Basic",
+    "price": 0.00
+  },
+  {
+    "id": "sub_premium",
+    "name": "Premium",
+    "price": 29.99
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions</td>
+      <td>Crear un nuevo plan de suscripción</td>
+      <td>POST</td>
+      <td><pre>{
+  "name": "string",
+  "description": "string",
+  "price": "number",
+  "features": ["string"]
+}</pre></td>
+      <td><pre>{
+  "name": "Enterprise",
+  "description": "Plan empresarial",
+  "price": 99.99,
+  "features": ["Unlimited users", "24/7 support"]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions/user/{userId}</td>
+      <td>Obtener la suscripción actual de un usuario</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/subscriptions/user/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions/user/{userId}</td>
+      <td>Actualizar la suscripción de un usuario</td>
+      <td>PUT</td>
+      <td><pre>{
+  "subscriptionId": "string"
+}</pre></td>
+      <td><pre>{
+  "subscriptionId": "sub_enterprise"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/roles</td>
+      <td>Obtener todos los roles disponibles</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "role_admin",
+    "name": "ADMIN"
+  },
+  {
+    "id": "role_user",
+    "name": "USER"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/business-categories</td>
+      <td>Obtener todas las categorías de negocio</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "cat_01",
+    "name": "Restaurante"
+  },
+  {
+    "id": "cat_02",
+    "name": "Cafetería"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}</td>
+      <td>Obtener el perfil completo de un usuario</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/profiles/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}</td>
+      <td>Eliminar el perfil de un usuario</td>
+      <td>DELETE</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>DELETE /api/v1/profiles/user_123</pre></td>
+    </tr>
+  </tbody>
+</table>
+
+Los endpoints fueron probados exhaustivamente con datos de muestra y documentados con **Swagger UI**, disponible en el entorno de producción desplegado en **Render** (`https://restock-platform.onrender.com/swagger/index.html`).
+
+**Repositorio de Web Services:** <a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform</a>
+
+**Últimos commits relacionados con documentación del Sprint 2:**
+
+<ul>
+  <li><code>e1f3g5h</code> – feat(subscriptions): implement endpoint for user subscription update</li>
+  <li><code>7g8h9i0</code> – feat(iam): implement sign-up endpoint logic POST /api/v1/authentication/sign-up</li>
+  <li><code>8h9i0j1</code> – feat(resources): implement endpoint to list supply categories GET /api/v1/supplies/categories</li>
+  <li><code>a2b3c4d</code> – feat(batches): implement GET /api/v1/batches/user/{userId} for provider access</li>
+  <li><code>7n5o6p7</code> – feat(resources): add DELETE /api/v1/custom-supplies/{id} endpoint</li>
+  <li><code>8o6p7q8</code> – feat(iam): implement business categories resource GET /api/v1/business-categories</li>
+  <li><code>9p7q8r9</code> – feat(sales): add DELETE /api/v1/sales/{id} endpoint and logic</li>
+  <li><code>0q8r9s0</code> – feat(recipes): implement DELETE /api/v1/recipes/{recipeId}/supplies/{supplyId}</li>
+  <li><code>1r9s0t1</code> – feat(iam): add roles resource GET /api/v1/roles for user assignment</li>
+  <li><code>4u2v3w4</code> – feat(profiles): implement profile deletion endpoint DELETE /api/v1/profiles/{userId}</li>
+  <li><code>5v3w4x5</code> – feat(orders): add DELETE /api/v1/orders/{id} endpoint with status check</li>
+  <li><code>f5g6h7i</code> – feat(orders): implement PUT /api/v1/orders/{id}/state for order status update</li>
+</ul>
+
+**Capturas de pantalla de Swagger UI en producción:**
+
+<img src="assets/images/cap4/sprint2/swagger/swagger_ui_overview.png" alt="Swagger UI Overview" width="700px">
+
+Durante este sprint se alcanzó una cobertura del **100%** de los dominios funcionales del sistema, garantizando que todas las operaciones CRUD y flujos de negocio estén correctamente documentados y disponibles para su consumo por las aplicaciones móviles (Android y Flutter).
+
 #### 4.2.2.7. Software Deployment Evidence for Sprint Review 2
 
 A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
@@ -3795,8 +4248,39 @@ Asimismo, no tuvo ninguna sugerencia para mejorar la aplicación, ya que conside
 
 En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podrá optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
 
-**Conclusión general:**  
+**Conclusión general:**
 Se concluye que se ha realizado una aplicación funcional, útil, eficaz y eficiente para los adminsitradores de restaurantes. De manera que se llegó a automatizar al 100% los procesos de ventas y suministro de productos.
+
+#### **Entrevista 04 – Lucia Herrera**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Lucia Herrera
+- **Edad:** 25 años
+- **Distrito:** Chorrillos
+- **Segmento:** Administradora de restaurantes
+- **Fecha de entrevista:** 14 de Noviembre de 2025
+- **Duración:** 11 minutos y 20 segundos
+- **Registro audiovisual:** [Pendiente de enlace]
+- **Captura de entrevista:**
+  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint2/interviews/validation_interview_lucia_herrera.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se presentó la **aplicación móvil de Restock en su versión Android desplegada y funcional** a la entrevistada con el propósito de validar su usabilidad, funcionalidad y capacidad para cubrir las necesidades reales del segmento de administradores de restaurantes. Lucia Herrera, quien tiene experiencia gestionando un restaurante de comida criolla, mostró gran interés en las funcionalidades presentadas.
+
+La entrevistada destacó que la **interfaz de usuario es clara, moderna y fácil de navegar**, enfatizando que la estructura de menús y la organización de las secciones le resultaron **intuitivas desde el primer uso**. Comentó que el módulo de **gestión de inventario** es particularmente útil, ya que le permitiría tener un control visual y en tiempo real del estado de sus insumos, evitando desabastecimientos que puedan afectar la operación diaria del restaurante.
+
+Asimismo, valoró positivamente la funcionalidad de **alertas y notificaciones automáticas** para productos próximos a vencer, indicando que esto representaría un ahorro significativo al reducir el desperdicio de alimentos y optimizar las compras. También expresó interés en el **módulo de recetas**, señalando que poder calcular automáticamente los costos de cada plato en función de los insumos utilizados sería una herramienta invaluable para la fijación de precios y el control de márgenes de ganancia.
+
+La entrevistada mencionó que la posibilidad de **gestionar pedidos a proveedores directamente desde la aplicación** simplificaría enormemente su flujo de trabajo actual, que depende de llamadas telefónicas y mensajes de WhatsApp, lo cual a veces genera confusiones o errores en los pedidos. Consideró que la **trazabilidad de órdenes y la confirmación en tiempo real** son características diferenciadoras que aumentarían la confiabilidad del proceso.
+
+En cuanto a sugerencias de mejora, Alicia Herrera recomendó incluir una **opción de exportación de reportes en formato PDF o Excel**, para facilitar la presentación de información financiera y operativa a los socios del negocio. También sugirió agregar un **tutorial interactivo o guía de inicio rápido** para usuarios que utilicen la aplicación por primera vez, especialmente aquellos que no tienen mucha experiencia con aplicaciones móviles de gestión.
+
+En general, la entrevistada expresó una **percepción muy positiva sobre la propuesta de Restock**, considerando que la aplicación tiene un gran potencial para transformar la manera en que los restaurantes pequeños y medianos gestionan sus operaciones diarias. Destacó que la combinación de funcionalidades de inventario, recetas, ventas y pedidos en una sola plataforma representa un valor agregado significativo.
+
+**Conclusión general:**
+La entrevista permitió validar que la aplicación móvil de Restock cumple con las expectativas y necesidades del segmento objetivo de administradores de restaurantes. Se identificó que las funcionalidades implementadas son percibidas como útiles, relevantes y fáciles de usar. Las sugerencias proporcionadas serán consideradas para futuras iteraciones del producto, con el objetivo de mejorar la experiencia de usuario y ampliar las capacidades de generación de reportes.
 
 ### 4.3.3. Evaluaciones según heurísticas
 
