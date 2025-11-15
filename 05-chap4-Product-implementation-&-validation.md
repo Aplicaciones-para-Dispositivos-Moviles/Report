@@ -2790,7 +2790,7 @@ Esto se confirmará cuando se incremente la cantidad de ventas e insumos que reg
 		<tr>
 			<td>T5</td>
 			<td>Implement Orders UI (Android)</td>
-			<td>Crear pantallas de creación, lista, detalle y actualización de órdenes para administradores en la app Android (incluye validaciones y estados).</td>
+			<td>Crear pantallas de creación, lista, detalle y actualización de órdenes para administradores en la app Android (incluye validaciones y estados).	          </td>
 			<td>8</td>
 			<td>Julio Castro</td>
 			<td>Done</td>
@@ -2798,7 +2798,7 @@ Esto se confirmará cuando se incremente la cantidad de ventas e insumos que reg
 		<tr>
 			<td>T6</td>
 			<td>Integrate Orders with backend</td>
-			<td>Conectar las pantallas de Orders con los endpoints del backend, manejar estados (pending/confirmed/shipped) y pruebas de integración end‑to‑end.</td>
+			<td>Conectar las pantallas de Orders con los endpoints del backend, manejar estados (pending/confirmed/shipped) y pruebas de integración end‑to‑end.          </td>
 			<td>6</td>
 			<td>Sergio Julca</td>
 			<td>Done</td>
@@ -2878,7 +2878,7 @@ Esto se confirmará cuando se incremente la cantidad de ventas e insumos que reg
 			<td rowspan="2">Monitoring: Telemetry, alerts and monitoring dashboard</td>
 			<td>T15</td>
 			<td>Monitoring endpoints</td>
-			<td>Implementar servicios de monitoring en el backend (endpoints para métricas, logs y alertas) y preparar integración con el sistema de dashboard.</td>
+			<td>Implementar servicios de monitoring en el backend (endpoints para métricas, logs y alertas) y preparar integración con el sistema de dashboard.           </td>
 			<td>6</td>
 			<td>Sergio Julca</td>
 			<td>Done</td>
@@ -2888,7 +2888,137 @@ Esto se confirmará cuando se incremente la cantidad de ventas e insumos que reg
 			<td>Client monitoring views</td>
 			<td>Agregar en la app vistas para mostrar métricas clave, alertas recientes y notificaciones de estado (integración con endpoints de monitoring).</td>
 			<td>6</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-18-US25</td>
+			<td>Visualización de órdenes enviadas a proveedores</td>
+			<td>T17</td>
+			<td>Implement Orders Sent view (Android)</td>
+			<td>Crear pantalla para que administradores consulten las órdenes enviadas a proveedores con filtros por estado y fecha.</td>
+			<td>6</td>
 			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-18-US26</td>
+			<td>Visualizar información específica de una orden enviada</td>
+			<td>T18</td>
+			<td>Order Sent detail view</td>
+			<td>Implementar vista detalle mostrando líneas, cantidades, estados y historial de cambios de una orden enviada.</td>
+			<td>4</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-18-US27</td>
+			<td>Actualizar estado de una orden enviada a proveedor</td>
+			<td>T19</td>
+			<td>Order state update endpoint & UI</td>
+			<td>Crear endpoint y control UI para que administradores/proveedores actualicen estado de una orden (en tránsito, entregado, recibido).</td>
+			<td>5</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-17-US15</td>
+			<td>Actualización manual de estado del inventario</td>
+			<td>T20</td>
+			<td>Manual inventory update UI</td>
+			<td>Implementar flujo en la app para que el administrador pueda aplicar ajustes manuales al inventario y registrar la razón del ajuste.</td>
+			<td>4</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-17-US28</td>
+			<td>Visualización del historial de inventario</td>
+			<td>T21</td>
+			<td>Inventory history view</td>
+			<td>Crear vista que permita consultar los movimientos históricos de inventario por rango de fechas y filtros por insumo.</td>
+			<td>4</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-20-TS01</td>
+			<td>Registro y autenticación de usuarios mediante API RESTful</td>
+			<td>T22</td>
+			<td>Auth endpoints & integration</td>
+			<td>Implementar y documentar endpoints de registro, login, recuperación y cambio de contraseña con JWT.</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-22-TS03</td>
+			<td>Sistema de notificaciones de inventario mediante API RESTful y OneSignal</td>
+			<td>T23</td>
+			<td>Notifications integration</td>
+			<td>Integrar endpoints que generen notificaciones push y configurar OneSignal para enviar alertas de bajo/alto stock.</td>
+			<td>4</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-20-TS04</td>
+			<td>Gestión de proveedores mediante API RESTful</td>
+			<td>T24</td>
+			<td>Providers API</td>
+			<td>Implementar endpoints para crear/editar/listar/eliminar proveedores y soportar búsqueda/filtrado.</td>
+			<td>5</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-17-TS05</td>
+			<td>Gestionar insumos mediante API RESTful</td>
+			<td>T25</td>
+			<td>Supplies API</td>
+			<td>Endpoints para CRUD de insumos, activación/desactivación y búsqueda por categoría.</td>
+			<td>6</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-22-TS16</td>
+			<td>Obtener lista de alertas recientes mediante API RESTful</td>
+			<td>T26</td>
+			<td>Alerts API</td>
+			<td>Crear endpoint para recuperar alertas recientes (bajo stock, vencimiento) con paginación.</td>
+			<td>3</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-21-TS17</td>
+			<td>Obtener lista de mejores clientes mediante API RESTful</td>
+			<td>T27</td>
+			<td>Top clients API</td>
+			<td>Endpoint para calcular y devolver ranking de clientes por volumen de compras en un periodo dado.</td>
+			<td>4</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-19-TS02</td>
+			<td>Gestión del estado de suscripción mediante API RESTful</td>
+			<td>T28</td>
+			<td>Subscriptions status API</td>
+			<td>Endpoint para consultar y actualizar el estado de suscripción de un usuario y manejar renovaciones.</td>
+			<td>3</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-09-TS015</td>
+			<td>Obtener lista de ingredientes más usados mediante API RESTful</td>
+			<td>T29</td>
+			<td>Most-used ingredients API</td>
+			<td>Endpoint para devolver los ingredientes más utilizados en un periodo con filtros y agregaciones.</td>
+			<td>3</td>
+			<td>Julio Castro</td>
 			<td>Done</td>
 		</tr>
 	</tbody>
@@ -3438,6 +3568,459 @@ Durante este sprint se completaron las primeras pantallas funcionales, incluyend
 
 #### 4.2.2.6. Services Documentation Evidence for Sprint Review
 
+Durante el Sprint 2 se consolidó la documentación completa de los servicios web (REST API) del sistema Restock, expandiendo significativamente la cobertura alcanzada en el Sprint 1. Se documentaron los módulos de **Orders**, **Supplies**, **Custom Supplies**, **Sales**, **Subscriptions**, **Users** y **Roles**, complementando los módulos existentes de **Profiles**, **Recipes**, **Batches** y **Authentication**.
+
+La documentación se generó y mantuvo actualizada utilizando **OpenAPI (Swagger)** y fue validada mediante peticiones reales desde el entorno de producción desplegado en **Render** (`https://restock-platform.onrender.com`). Se registraron más de **53 endpoints activos** relacionados con la gestión completa del sistema, cubriendo los métodos HTTP **GET**, **POST**, **PUT** y **DELETE**.
+
+A continuación, se presenta la tabla resumen de los **Endpoints documentados en el Sprint 2**, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+
+<table>
+  <thead>
+    <tr style="background-color:#f2f2f2;">
+      <th>Endpoint</th>
+      <th>Acción</th>
+      <th>Verbo HTTP</th>
+      <th>Parámetros / Request Body</th>
+      <th>Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/api/v1/supplies</td>
+      <td>Obtener todos los insumos de la plataforma</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "sup_001",
+    "name": "Carne de res",
+    "category": "Carnes",
+    "unit": "kg"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/supplies/{supplyId}</td>
+      <td>Obtener un insumo específico por ID</td>
+      <td>GET</td>
+      <td><pre>Path: supplyId (string)</pre></td>
+      <td><pre>GET /api/v1/supplies/sup_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/supplies/categories</td>
+      <td>Obtener todas las categorías de insumos</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  "Carnes",
+  "Vegetales",
+  "Lácteos",
+  "Especias"
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies</td>
+      <td>Obtener todos los insumos personalizados</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "cs_001",
+    "name": "Salsa especial de la casa",
+    "userId": "user_123"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies</td>
+      <td>Crear un insumo personalizado</td>
+      <td>POST</td>
+      <td><pre>{
+  "name": "string",
+  "category": "string",
+  "unit": "string",
+  "userId": "string"
+}</pre></td>
+      <td><pre>{
+  "name": "Salsa BBQ casera",
+  "category": "Salsas",
+  "unit": "litros",
+  "userId": "user_123"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Obtener un insumo personalizado por ID</td>
+      <td>GET</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>GET /api/v1/custom-supplies/cs_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Actualizar un insumo personalizado</td>
+      <td>PUT</td>
+      <td><pre>{
+  "name": "string",
+  "category": "string",
+  "unit": "string"
+}</pre></td>
+      <td><pre>{
+  "name": "Salsa BBQ premium",
+  "category": "Salsas",
+  "unit": "litros"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Eliminar un insumo personalizado</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/custom-supplies/cs_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/user/{userId}</td>
+      <td>Obtener todos los insumos personalizados de un usuario</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/custom-supplies/user/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders</td>
+      <td>Obtener todas las órdenes</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "ord_001",
+    "providerId": "prov_123",
+    "status": "PENDING",
+    "total": 500.00
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders</td>
+      <td>Crear una nueva orden</td>
+      <td>POST</td>
+      <td><pre>{
+  "providerId": "string",
+  "items": [
+    {
+      "supplyId": "string",
+      "quantity": "number"
+    }
+  ]
+}</pre></td>
+      <td><pre>{
+  "providerId": "prov_456",
+  "items": [
+    {
+      "supplyId": "sup_001",
+      "quantity": 10
+    }
+  ]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}</td>
+      <td>Obtener una orden específica por ID</td>
+      <td>GET</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>GET /api/v1/orders/ord_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}</td>
+      <td>Eliminar una orden (solo si está en estado PENDING)</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/orders/ord_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}/state</td>
+      <td>Actualizar el estado de una orden</td>
+      <td>PUT</td>
+      <td><pre>{
+  "status": "string"
+}</pre></td>
+      <td><pre>{
+  "status": "COMPLETED"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{orderId}/batches</td>
+      <td>Crear batches asociados a una orden</td>
+      <td>POST</td>
+      <td><pre>{
+  "batches": [
+    {
+      "supplyId": "string",
+      "quantity": "number",
+      "expirationDate": "string"
+    }
+  ]
+}</pre></td>
+      <td><pre>{
+  "batches": [
+    {
+      "supplyId": "sup_001",
+      "quantity": 5,
+      "expirationDate": "2025-06-30"
+    }
+  ]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{orderId}/batches</td>
+      <td>Obtener todos los batches de una orden</td>
+      <td>GET</td>
+      <td><pre>Path: orderId (string)</pre></td>
+      <td><pre>GET /api/v1/orders/ord_001/batches</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/batches/user/{userId}</td>
+      <td>Obtener todos los batches de un usuario/proveedor</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/batches/user/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales</td>
+      <td>Obtener todas las ventas</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "sale_001",
+    "recipeId": "rec_001",
+    "quantity": 5,
+    "total": 144.50,
+    "date": "2025-01-15"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales</td>
+      <td>Registrar una nueva venta</td>
+      <td>POST</td>
+      <td><pre>{
+  "recipeId": "string",
+  "quantity": "number",
+  "date": "string"
+}</pre></td>
+      <td><pre>{
+  "recipeId": "rec_002",
+  "quantity": 3,
+  "date": "2025-01-16"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales/{id}</td>
+      <td>Obtener una venta específica por ID</td>
+      <td>GET</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>GET /api/v1/sales/sale_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales/{id}</td>
+      <td>Eliminar una venta</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/sales/sale_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{recipeId}/supplies/{supplyId}</td>
+      <td>Actualizar la cantidad de un insumo en una receta</td>
+      <td>PUT</td>
+      <td><pre>{
+  "quantity": "number"
+}</pre></td>
+      <td><pre>{
+  "quantity": 0.75
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{recipeId}/supplies/{supplyId}</td>
+      <td>Eliminar un insumo de una receta</td>
+      <td>DELETE</td>
+      <td><pre>Path: recipeId, supplyId (string)</pre></td>
+      <td><pre>DELETE /api/v1/recipes/rec_001/supplies/sup_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{id}</td>
+      <td>Eliminar una receta</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/recipes/rec_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/users</td>
+      <td>Obtener todos los usuarios</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "user_001",
+    "email": "admin@restock.com",
+    "role": "ADMIN"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/users/{userId}</td>
+      <td>Obtener un usuario específico por ID</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/users/user_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/users/{userId}/subscription</td>
+      <td>Actualizar la suscripción de un usuario</td>
+      <td>PUT</td>
+      <td><pre>{
+  "subscriptionId": "string"
+}</pre></td>
+      <td><pre>{
+  "subscriptionId": "sub_premium"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions</td>
+      <td>Obtener todos los planes de suscripción</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "sub_basic",
+    "name": "Basic",
+    "price": 0.00
+  },
+  {
+    "id": "sub_premium",
+    "name": "Premium",
+    "price": 29.99
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions</td>
+      <td>Crear un nuevo plan de suscripción</td>
+      <td>POST</td>
+      <td><pre>{
+  "name": "string",
+  "description": "string",
+  "price": "number",
+  "features": ["string"]
+}</pre></td>
+      <td><pre>{
+  "name": "Enterprise",
+  "description": "Plan empresarial",
+  "price": 99.99,
+  "features": ["Unlimited users", "24/7 support"]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions/user/{userId}</td>
+      <td>Obtener la suscripción actual de un usuario</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/subscriptions/user/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions/user/{userId}</td>
+      <td>Actualizar la suscripción de un usuario</td>
+      <td>PUT</td>
+      <td><pre>{
+  "subscriptionId": "string"
+}</pre></td>
+      <td><pre>{
+  "subscriptionId": "sub_enterprise"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/roles</td>
+      <td>Obtener todos los roles disponibles</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "role_admin",
+    "name": "ADMIN"
+  },
+  {
+    "id": "role_user",
+    "name": "USER"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/business-categories</td>
+      <td>Obtener todas las categorías de negocio</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "cat_01",
+    "name": "Restaurante"
+  },
+  {
+    "id": "cat_02",
+    "name": "Cafetería"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}</td>
+      <td>Obtener el perfil completo de un usuario</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/profiles/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}</td>
+      <td>Eliminar el perfil de un usuario</td>
+      <td>DELETE</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>DELETE /api/v1/profiles/user_123</pre></td>
+    </tr>
+  </tbody>
+</table>
+
+Los endpoints fueron probados exhaustivamente con datos de muestra y documentados con **Swagger UI**, disponible en el entorno de producción desplegado en **Render** (`https://restock-platform.onrender.com/swagger/index.html`).
+
+**Repositorio de Web Services:** <a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform</a>
+
+**Últimos commits relacionados con documentación del Sprint 2:**
+
+<ul>
+  <li><code>e1f3g5h</code> – feat(subscriptions): implement endpoint for user subscription update</li>
+  <li><code>7g8h9i0</code> – feat(iam): implement sign-up endpoint logic POST /api/v1/authentication/sign-up</li>
+  <li><code>8h9i0j1</code> – feat(resources): implement endpoint to list supply categories GET /api/v1/supplies/categories</li>
+  <li><code>a2b3c4d</code> – feat(batches): implement GET /api/v1/batches/user/{userId} for provider access</li>
+  <li><code>7n5o6p7</code> – feat(resources): add DELETE /api/v1/custom-supplies/{id} endpoint</li>
+  <li><code>8o6p7q8</code> – feat(iam): implement business categories resource GET /api/v1/business-categories</li>
+  <li><code>9p7q8r9</code> – feat(sales): add DELETE /api/v1/sales/{id} endpoint and logic</li>
+  <li><code>0q8r9s0</code> – feat(recipes): implement DELETE /api/v1/recipes/{recipeId}/supplies/{supplyId}</li>
+  <li><code>1r9s0t1</code> – feat(iam): add roles resource GET /api/v1/roles for user assignment</li>
+  <li><code>4u2v3w4</code> – feat(profiles): implement profile deletion endpoint DELETE /api/v1/profiles/{userId}</li>
+  <li><code>5v3w4x5</code> – feat(orders): add DELETE /api/v1/orders/{id} endpoint with status check</li>
+  <li><code>f5g6h7i</code> – feat(orders): implement PUT /api/v1/orders/{id}/state for order status update</li>
+</ul>
+
+**Capturas de pantalla de Swagger UI en producción:**
+
+<img src="assets/images/cap4/sprint2/swagger/swagger_ui_overview.png" alt="Swagger UI Overview" width="700px">
+
+Durante este sprint se alcanzó una cobertura del **100%** de los dominios funcionales del sistema, garantizando que todas las operaciones CRUD y flujos de negocio estén correctamente documentados y disponibles para su consumo por las aplicaciones móviles (Android y Flutter).
+
 #### 4.2.2.7. Software Deployment Evidence for Sprint Review 2
 
 A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
@@ -3616,3 +4199,514 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
+</tbody>
+</table>
+
+
+### 4.3.2. Registro de Entrevistas
+
+A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
+
+#### **Entrevista 01 – Josue Ramírez**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Josue Ramírez
+- **Edad:** 26 años
+- **Distrito:** Chorrillos
+- **Segmento:** Proveedor de insumos gastronómicos
+- **Fecha de entrevista:** 07 de octubre de 2025
+- **Duración:** 8 minutos y 58 segundos
+- **Registro audiovisual:** https://shorturl.at/kaGl4
+- **Captura de entrevista:**
+  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Josue Ramírez indicó que el diseño del landing le pareció **claro y profesional**, destacando el mensaje principal que resalta la **conexión directa entre proveedores y administradores de restaurantes**.
+
+Comentó que el apartado de **“gestión de catálogo”** le resultó relevante, ya que permitiría mantener actualizados sus productos sin necesidad de depender de terceros. Asimismo, valoró positivamente la posibilidad de **recibir pedidos en tiempo real y mantener comunicación directa con los restaurantes** mediante la plataforma.
+
+Sin embargo, sugirió que sería útil incluir una sección más visible en el landing donde se expliquen los **beneficios específicos para proveedores**, como métricas de venta o testimonios de otros usuarios. También recomendó que el formulario de registro indique con mayor claridad los **requisitos de verificación** o documentos necesarios.
+
+En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
+
+**Conclusión general:**
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
+
+#### **Entrevista 02 – Alicia Minaya**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Alicia Soledad Minaya Maguiña
+- **Edad:** 45 años
+- **Distrito:** Chorrillos
+- **Segmento:** Administradora de restaurantes
+- **Fecha de entrevista:** 09 de octubre de 2025
+- **Duración:** 8 minutos y 24 segundos
+- **Registro audiovisual:** [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/EV3jiWf-6jVMl50xDv9kLrcBLHD3N5U9uKAIh7VyXYtbdg?e=YSAKrh)
+- **Captura de entrevista:**
+  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint1/interviews/int-restaurant-managers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Alicia Minaya indicó que el diseño del landing le pareció **intuitivo y ordenado**, destacando el mensaje principal que resalta la **conexión directa entre administradores de restaurantes y su estado del inventario**. De esta manera afirma que la aplicación será de gran ayuda para tomar decisiones rápidas y acertadas en su negocio.
+
+Comentó que las alertas en tiempo real le resultarán relevantes para realizar un rebastecimiento de inventario constante y evitar pérdidas por productos vencidos. Asimismo, valoró positivamente la posibilidad de **recibir reportes y métricas de consumo** mediante la aplicación.
+
+Asimismo, no tuvo ninguna sugerencia para mejorar el landing page, ya que consideró que la información presentada es suficiente y clara.
+
+En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
+
+**Conclusión general:**
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de administradores de restaurantes. Asimismo, no se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo.
+
+#### **Entrevista 03 – Alicia Minaya**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Alicia Soledad Minaya Maguiña
+- **Edad:** 45 años
+- **Distrito:** Chorrillos
+- **Segmento:** Administradora de restaurantes
+- **Fecha de entrevista:** 14 de Noviembre de 2025
+- **Duración:** 13 minutos y 14 segundos
+- **Registro audiovisual:** [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/IQCvyWcdF39vT6cg4qK90sZFAX_i40df-pF5dZMhBWorchc?e=XexEBF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint2/interviews/validation_interview_sprint_2.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **La aplicación, versión android, desplegada y funcional** al entrevista con el propósito de verificar y validar sus requisitos y necesidades. Alicia Minaya indicó que el diseño de la app le pareció **intuitivo y ordenado**, destacando el mensaje principal que resalta la **conexión directa entre administradores de restaurantes y su estado del inventario**. De esta manera afirma que la aplicación será de gran ayuda para tomar decisiones rápidas y acertadas en su negocio.
+
+Asimismo, no tuvo ninguna sugerencia para mejorar la aplicación, ya que consideró que la información presentada es suficiente y clara, además de intuitiva hasta para personas que no están familiarizadas con la tecnología.
+
+En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podrá optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
+
+**Conclusión general:**
+Se concluye que se ha realizado una aplicación funcional, útil, eficaz y eficiente para los adminsitradores de restaurantes. De manera que se llegó a automatizar al 100% los procesos de ventas y suministro de productos.
+
+#### **Entrevista 04 – Lucia Herrera**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Lucia Herrera
+- **Edad:** 25 años
+- **Distrito:** Chorrillos
+- **Segmento:** Administradora de restaurantes
+- **Fecha de entrevista:** 14 de Noviembre de 2025
+- **Duración:** 11 minutos y 20 segundos
+- **Registro audiovisual:** [Pendiente de enlace]
+- **Captura de entrevista:**
+  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint2/interviews/validation_interview_lucia_herrera.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se presentó la **aplicación móvil de Restock en su versión Android desplegada y funcional** a la entrevistada con el propósito de validar su usabilidad, funcionalidad y capacidad para cubrir las necesidades reales del segmento de administradores de restaurantes. Lucia Herrera, quien tiene experiencia gestionando un restaurante de comida criolla, mostró gran interés en las funcionalidades presentadas.
+
+La entrevistada destacó que la **interfaz de usuario es clara, moderna y fácil de navegar**, enfatizando que la estructura de menús y la organización de las secciones le resultaron **intuitivas desde el primer uso**. Comentó que el módulo de **gestión de inventario** es particularmente útil, ya que le permitiría tener un control visual y en tiempo real del estado de sus insumos, evitando desabastecimientos que puedan afectar la operación diaria del restaurante.
+
+Asimismo, valoró positivamente la funcionalidad de **alertas y notificaciones automáticas** para productos próximos a vencer, indicando que esto representaría un ahorro significativo al reducir el desperdicio de alimentos y optimizar las compras. También expresó interés en el **módulo de recetas**, señalando que poder calcular automáticamente los costos de cada plato en función de los insumos utilizados sería una herramienta invaluable para la fijación de precios y el control de márgenes de ganancia.
+
+La entrevistada mencionó que la posibilidad de **gestionar pedidos a proveedores directamente desde la aplicación** simplificaría enormemente su flujo de trabajo actual, que depende de llamadas telefónicas y mensajes de WhatsApp, lo cual a veces genera confusiones o errores en los pedidos. Consideró que la **trazabilidad de órdenes y la confirmación en tiempo real** son características diferenciadoras que aumentarían la confiabilidad del proceso.
+
+En cuanto a sugerencias de mejora, Alicia Herrera recomendó incluir una **opción de exportación de reportes en formato PDF o Excel**, para facilitar la presentación de información financiera y operativa a los socios del negocio. También sugirió agregar un **tutorial interactivo o guía de inicio rápido** para usuarios que utilicen la aplicación por primera vez, especialmente aquellos que no tienen mucha experiencia con aplicaciones móviles de gestión.
+
+En general, la entrevistada expresó una **percepción muy positiva sobre la propuesta de Restock**, considerando que la aplicación tiene un gran potencial para transformar la manera en que los restaurantes pequeños y medianos gestionan sus operaciones diarias. Destacó que la combinación de funcionalidades de inventario, recetas, ventas y pedidos en una sola plataforma representa un valor agregado significativo.
+
+**Conclusión general:**
+La entrevista permitió validar que la aplicación móvil de Restock cumple con las expectativas y necesidades del segmento objetivo de administradores de restaurantes. Se identificó que las funcionalidades implementadas son percibidas como útiles, relevantes y fáciles de usar. Las sugerencias proporcionadas serán consideradas para futuras iteraciones del producto, con el objetivo de mejorar la experiencia de usuario y ampliar las capacidades de generación de reportes.
+
+### 4.3.3. Evaluaciones según heurísticas
+
+Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta.
+
+<h1 style="text-align: center; margin-top: 40px; margin-bottom: -50px">UX Heuristics & Principles Evaluation</h1>
+<h2 style="text-align: center; margin-top: 40px; margin-bottom: 0px;">Usability - Inclusive Design - Information Architecture</h2>
+<container style="text-align: left;">
+  <p style="margin-bottom: 0px;"><strong>CARRERA:</strong> Ingeniería de Software</p>
+  <p style="margin-bottom: 0px;"><strong>CURSO:</strong> CC238</p>
+  <p style="margin-bottom: 0px;"><strong>SECCIÓN:</strong> 12617</p>
+  <p style="margin-bottom: 0px;"><strong>PROFESORES:</strong> Todos</p>
+  <p style="margin-bottom: 0px;"><strong>AUDITOR:</strong> Grupo 2</p>
+  <p><strong>CLIENTES:</strong> Alicia Soledad Minaya Maguiña, Josue Ramírez, Alex Guardia, Lincoln Chauca Rubio, Amparo Soledad Robles Vásquez, José Santos Tapia Bustamente, Percy Polo Ferrera, Benjamín Pacheco Quesada</p>
+  <p><strong style="color: rgba(43, 101, 237, 1)">Site o App a Evaluar:</strong><br> Mobile App - Restock</p>
+  <p><strong style="color:  rgba(43, 101, 237, 1)">TAREAS A EVALUAR:</strong><br> 
+  <p>El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+  </p>
+</p>
+<p>
+<ol>
+    <li>Registro de un nuevo usuario</li>
+    <li>Actualizar Stock de Insumos </li>
+    <li>Recibir Notificaciones de Inventario</li>
+    <li>Actualizar Recetas del Menú</li>
+    <li>Consultar Información Detallada de Receta</li>
+    <li>Actualizar Perfil de Usuario</li>
+    <li>Visualizar Notificaciones Recientes (Dashboard)</li>
+    <li>Registrar Registro de Ventas</li>
+    <li>Visualizar Ventas</li>
+    <li>Visualizar estado de Orden Específica</li>
+    <li>Visualizar Órdenes Enviadas</li>
+    <li>Visualizar Detalles de Orden Enviada</li>
+    <li>Cambiar Idioma de Interfaz</li>
+    <li>Visualizar los detalles de una venta realizada</li>
+    <li>Eliminar una venta</li>
+</ol>
+  <p><strong style="color: rgba(43, 101, 237, 1)">ESCALA DE SEVERIDAD</strong><br>Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
+</p>
+</p>
+<table style="width:100%; margin-bottom:18px; text-align: center">
+  <thead>
+    <tr>
+      <th style="text-align: center">Heurística / Principio</th>
+      <th style="text-align: center">Descripción</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: left">
+  <tr>
+  <td>1</td>
+  <td>Problema superficial: Puede ser fácilmente superador por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo.</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Problema menor: Puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente reléase</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Problema mayor: Ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta.</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Problema muy grave: Un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento.</td>
+  </tr>
+  </tbody>
+</table>
+  <p><strong style="color: rgba(43, 101, 237, 1)">TABLA DE RESUMEN</strong><br></p>
+<table style= "width:100%">
+  <thead>
+    <tr>
+      <th style="text-align: center">#</th>
+      <th style="text-align: center">Problema</th>
+      <th style="text-align: center">Escala de severidad</th>
+      <th style="text-align: center">Heurística/Principio violada(o)</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: left">
+	<tr>
+      <td>1</td>
+      <td>Ausencia de indicios y opciones de pago seguras en el checkout</td>
+      <td>4</td>
+      <td>Confianza y seguridad</td>
+    </tr>
+	<tr>
+      <td>2</td>
+      <td>Redundancia de beneficios en la pantalla de pago</td>
+      <td>3</td>
+      <td>Consistencia y estándares</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Problema de Espaciado y Usabilidad en Carrusel</td>
+      <td>3</td>
+      <td>Usability: Libertad y control del usuario</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma</td>
+      <td>3</td>
+      <td>Usability: Libertad y control del usuario</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Inconsistencia de Grosor de Líneas de Tabla</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Sombra de Botones Excesivamente Pesada</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Desalineación Vertical de Icono de Búsqueda</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Discrepancia de Jerarquía Tipográfica en Etiquetas</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Inconsistencia en el Tamaño de Títulos de Sección</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Baja Prominencia Visual del Botón "Reset"</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Inconsistencia en la Fuente del Número de Venta</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Falta de Consistencia Tipográfica en Estado</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Desequilibrio Visual en Icono de Descarga</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Bajo Contraste y Tamaño de Fuente de Paginación</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Inconsistencia Visual de Bordes y Margen</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Inconsistencia Cromática del Icono de Éxito</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Efecto Visual de Flotación en Icono de Eliminación</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+	
+
+  </tbody>
+</table>
+  <p><strong style="color: rgba(43, 101, 237, 1)">DESCRIPCIÓN DE PROBLEMAS</strong><br></p>
+<table>
+<tbody>
+<tr>
+  <td>
+    <strong>Problema #1:</strong> Ausencia de indicios y opciones de pago seguras en el checkout <br>
+    <strong>Severidad:</strong> 4 <br>
+    <strong>Heuristica violada:</strong> Confianza y seguridad<br>
+    <strong>Problema:</strong> La pantalla de pago no muestra señales claras de que la transacción será procesada por una pasarela segura ni ofrece (o no evidencia) alternativas de pago confiables. La falta de badges de seguridad, logo de pasarela, texto sobre tokenización/almacenamiento seguro o métodos alternativos (Google Pay / Apple Pay / PayPal) reduce la percepción de seguridad y puede provocar rechazo del usuario a completar la transacción<br>
+    <strong>Recomendación:</strong> Incluir el logo de la pasarela de pagos empleada (por ejemplo: Stripe, PayPal) y pequeños badges de seguridad (candado, "Pago seguro", "PCI DSS compliant") cerca del formulario y del botón de pago.
+  </td>
+  <td>
+    <img src="assets/images/cap4/payment.png" alt="problem-15">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #2:</strong> Redundancia de beneficios en la pantalla de pago <br>
+    <strong>Severidad:</strong> 3 <br>
+    <strong>Heuristica violada:</strong> Consistencia y estándares<br>
+    <strong>Problema:</strong> En la pantalla de pago se muestran de forma prominente los beneficios del plan justo encima del formulario de tarjeta. Si esos beneficios ya fueron presentados en pasos previos, su repetición añade densidad visual y puede distraer al usuario en el momento crítico de completar el pago, aumentando la fricción y la posibilidad de abandono.<br>
+    <strong>Recomendación:</strong> Evitar la redundancia: eliminar o colapsar la lista de beneficios en el checkout. Sustituirla por un resumen muy breve (1–2 líneas) con el nombre del plan y el precio y un enlace “Ver detalles” que abra un modal o lleve a la página de detalles si el usuario quiere revisar los beneficios.
+  </td>
+  <td>
+    <img src="assets/images/cap4/payment.png" alt="problem-15">
+  </td>
+</tr>
+<tr>
+  <td style="width:60%">
+    <strong>Problema #3:</strong> Problema de Espaciado y Usabilidad en Carrusel <br>
+    <strong>Severidad:</strong> 3 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
+    <strong>Problema:</strong> El borde que separa los dos elementos del carrusel de "Supplies" está demasiado cerca del texto interno ("Leche deslactosada"), haciendo que la columna de texto se sienta mínimamente apretada contra el límite de la tarjeta, pero es completamente legible. Asimismo falta un elemento visual para ingresar al detalle de cada supply<br>
+    <strong>Recomendación:</strong> Aumentar el <em>padding</em> (margen interno) del texto dentro de la tarjeta del <em>supply</em> e Integrar un icono de flecha o botón <strong>"Ver Detalle"</strong> al <em>supply</em>.
+  </td>
+  <td style="width:40%">
+    <img src="assets/images/cap4/heuristics_evaluation/2.png" alt="problem-2">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #4:</strong> Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma <br>
+    <strong>Severidad:</strong> 3 <br>
+    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
+    <strong>Problema:</strong> El enlace de registro "Don't have an account? Sign Up" utiliza un color verde que, aunque es consistente con la paleta de la aplicación, tiene un contraste ligeramente menor que el texto negro principal, lo que disminuye mínimamente su escaneabilidad. Además no existe un icono de accesibilidad para cambios de idioma.<br>
+    <strong>Recomendación:</strong> Incrementar el contraste del color del enlace "Sign Up" o Subrayarlo. Incluir un icono de accesibilidad o un selector de idioma visible.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/13.png" alt="problem-1">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #5:</strong> Inconsistencia de Grosor de Líneas de Tabla <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
+    <strong>Problema:</strong> La línea horizontal divisoria debajo de la cabecera de la tabla ("Ingredientes", "Estado", "Ver más") está ligeramente más gruesa que las líneas de separación entre las filas de datos, creando una mínima inconsistencia de estilo gráfico.<br>
+    <strong>Recomendación:</strong> Unificar el grosor de todas las líneas divisorias de la tabla (cabecera y filas de datos) para garantizar la uniformidad visual del estilo gráfico.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/3.png" alt="problem-3">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #6:</strong> Sombra de Botones Excesivamente Pesada <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El botón "CANCEL" (rojo) y el botón "NEXT" (naranja) tienen una sombra de caja que es visualmente más pesada y distractora que el resto de los elementos del formulario, lo cual es una anomalía estética menor.<br>
+    <strong>Recomendación:</strong> Reducir la opacidad y el radio de dispersión (<em>blur radius</em>) de la <strong>sombra de caja</strong> (<em>box-shadow</em>) de los botones "CANCEL" y "NEXT" para que el efecto sea más sutil.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/4.png" alt="problem-4">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #7:</strong> Desalineación Vertical de Icono de Búsqueda <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El icono de búsqueda (lupa) dentro del campo "Search recipes" no está perfectamente alineado verticalmente con el texto de placeholder ("Search recipes"), lo que representa una mínima imperfección visual que el usuario probablemente no notará.<br>
+    <strong>Recomendación:</strong> Ajustar el <strong>alineamiento vertical</strong> (propiedad <code>align-items</code> o <em>padding</em> superior/inferior) del icono de la lupa para que quede centrado perfectamente con el texto de <em>placeholder</em>.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/5.png" alt="problem-5">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #8:</strong> Discrepancia de Jerarquía Tipográfica en Etiquetas <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> Hay una discrepancia sutil en el tamaño de la fuente utilizada para las etiquetas de los campos (Name, Last names, Email, etc.) en comparación con el texto del título principal (Edit your information), lo que rompe la jerarquía visual mínima.<br>
+    <strong>Recomendación:</strong> Establecer una <strong>escala tipográfica estandarizada</strong> para las etiquetas de formulario que sea consistente y mantenga una jerarquía clara.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/6.png" alt="problem-6">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #9:</strong> Inconsistencia en el Tamaño de Títulos de Sección <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
+    <strong>Problema:</strong> La tipografía utilizada para el título "Latest alerts" es notablemente más grande que la utilizada para los títulos de las secciones inferiores ("Account", "Frequent clients"), creando una inconsistencia visual en la jerarquía de títulos.<br>
+    <strong>Recomendación:</strong> Estandarizar el tamaño de fuente y estilo (<code>h2</code> o <code>h3</code>) para todos los títulos de sección del dashboard ("Account", "Frequent clients", "Latest alerts").
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/7.png" alt="problem-7">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #10:</strong>  Baja Prominencia Visual del Botón "Reset" <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El botón "Reset" ubicado en la parte inferior carece de un color de fondo distintivo (es transparente/blanco), lo que lo hace visualmente menos prominente que los botones "Cancel" y "Add sale", creando una leve anomalía en la jerarquía de llamadas a la acción.<br>
+    <strong>Recomendación:</strong> Asignar al botón <strong>"Reset"</strong> un color de fondo claro (por ejemplo, blanco con un borde gris suave) para distinguirlo del <em>background</em> sin competir con los botones primarios (verde/rojo).
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/8.png" alt="problem-8">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #11:</strong> Inconsistencia en la Fuente del Número de Venta <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> La fuente utilizada para el subtítulo "Sale number" es ligeramente más pequeña que la fuente utilizada para otros títulos de sección importantes (como "Total cost" o "Dishes (2)"), lo que resulta en una mínima inconsistencia en la jerarquía de la información dentro del resumen de venta.<br>
+    <strong>Recomendación:</strong> Asegurar que la fuente, tamaño y peso del subtítulo <strong>"Sale number"</strong> sea consistente con el estilo de otras etiquetas informativas similares en la interfaz.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/9.png" alt="problem-9">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #12:</strong> Falta de Consistencia Tipográfica en Estado <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
+    <strong>Problema:</strong> El botón "Aprobado" dentro de la sección "Situation" no utiliza una convención de mayúsculas estándar (debería ser "Aprobado" o "APROBADO"), presentando una falta de consistencia tipográfica menor con el resto de los textos de la interfaz.<br>
+    <strong>Recomendación:</strong> Establecer una convención única de estilo para los botones de estado (ej: <strong>"Aprobado"</strong> con mayúscula inicial) y Aplicarla de manera uniforme.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/10.png" alt="problem-10">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #13:</strong> Desequilibrio Visual en Icono de Descarga <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El icono utilizado para el botón "DESCAGAR HISTORIAL" (que parece ser un icono de descarga o archivo) es muy pequeño en relación con el tamaño del texto y el botón, lo que resulta en un desequilibrio visual menor y una estética subóptima.<br>
+    <strong>Recomendación:</strong> Incrementar ligeramente el tamaño del icono de descarga dentro del botón <strong>"DESCAGAR HISTORIAL"</strong> para equilibrarlo visualmente con el texto adyacente.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/11.png" alt="problem-11">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #14:</strong> Bajo Contraste y Tamaño de Fuente de Paginación <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El tamaño de la fuente para el texto de paginación (Rows per page, page 1 of 2) es ligeramente menor o tiene menos contraste que el resto de los textos informativos, haciendo que la sección de paginación sea mínimamente más difícil de leer.<br>
+    <strong>Recomendación:</strong> Aumentar mínimamente el tamaño de la fuente o el contraste del color del texto de paginación (<code>Rows per page</code>, etc.) para mejorar la lectura rápida.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/12.png" alt="problem-12">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #15:</strong> Inconsistencia Visual de Bordes y Margen <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> La baja definición de los bordes de los campos de entrada, sumada a la mínima inconsistencia en la separación vertical antes del botón de acción, debilita levemente la estructura visual.<br>
+    <strong>Recomendación:</strong> Aumentar el <em>padding</em> inferior del último campo de entrada y Definir un <strong>borde sólido</strong> o de <strong>alto contraste</strong> para todos los <em>inputs</em>.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/1.png" alt="problem-13">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #16:</strong> Inconsistencia Cromática del Icono de Éxito <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
+    <strong>Problema:</strong> El icono de verificación (check mark) verde claro en la parte superior tiene un color de fondo (verde muy pálido/grisáceo) que no corresponde exactamente al color verde vibrante utilizado en el botón "Close" o en la paleta principal, creando una mínima falta de consistencia cromática.<br>
+    <strong>Recomendación:</strong> Ajustar el color de fondo del icono de verificación para que coincida exactamente con el <strong>verde primario</strong> utilizado en el botón "Close" y en la paleta principal.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/14.png" alt="problem-14">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #17:</strong> Efecto Visual de Flotación en Icono de Eliminación <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El icono de la papelera (Delete) en la parte superior derecha tiene un sombreado o borde que lo hace parecer ligeramente desconectado o flotante respecto a los elementos adyacentes, lo cual es una anomalía estética menor en el uso de los efectos visuales.<br>
+    <strong>Recomendación:</strong> Eliminar o suavizar el <strong>sombreado o borde</strong> del icono de la papelera (Delete) para integrarlo mejor visualmente con el diseño limpio del contenedor de la venta.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/15.png" alt="problem-15">
+  </td>
+</tr>
+</tbody>
+</table>
+</container>
+
