@@ -2398,9 +2398,172 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 ### 4.2.2. Sprint 2
 #### 4.2.2.1. Sprint Planning 2
 #### 4.2.2.2. Sprint Backlog 2
+
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Sprint #</strong></td>
+			<td colspan="7">Sprint 2</td>
+		</tr>
+		<tr>
+			<td colspan="2"><strong>User Story</strong></td>
+			<td colspan="6"><strong>Work-item / Task</strong></td>
+		</tr>
+		<tr>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Description</strong></td>
+			<td><strong>Estimation (Hours)</strong></td>
+			<td><strong>Assigned To</strong></td>
+			<td><strong>Status (To-do / In-Process / To-review / Done)</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-17-US19</td>
+			<td rowspan="3">Resource: Update Resources to match DB diagram (MongoDB)</td>
+			<td>T1</td>
+			<td>Update Resources schema (backend)</td>
+			<td>Actualizar el modelo de Resources en el backend para que coincida con el diagrama de BD (MongoDB): campos, colecciones y relaciones denormalizadas.</td>
+			<td>8</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T2</td>
+			<td>Seed & migration scripts</td>
+			<td>Crear scripts de seeding/migración para poblar/ajustar las colecciones de Resources y garantizar compatibilidad con los nuevos endpoints.</td>
+			<td>6</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T3</td>
+			<td>Align mobile inventory models</td>
+			<td>Actualizar modelos, repositorios y mappers en la app Android para reflejar la nueva estructura de Resources/Inventory del backend.</td>
+			<td>6</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-18-US20</td>
+			<td rowspan="3">Orders: Create Orders flow for Restaurant Administrators</td>
+			<td>T4</td>
+			<td>Design Orders API & DB model</td>
+			<td>Definir el modelo de datos de Orders en MongoDB y diseñar los endpoints REST necesarios (POST /orders, GET /orders, PUT state, etc.).</td>
+			<td>6</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T5</td>
+			<td>Implement Orders UI (Android)</td>
+			<td>Crear pantallas de creación, lista, detalle y actualización de órdenes para administradores en la app Android (incluye validaciones y estados).</td>
+			<td>8</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T6</td>
+			<td>Integrate Orders with backend</td>
+			<td>Conectar las pantallas de Orders con los endpoints del backend, manejar estados (pending/confirmed/shipped) y pruebas de integración end‑to‑end.</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-19-US21</td>
+			<td rowspan="3">Subscriptions: Manage user subscriptions and billing</td>
+			<td>T7</td>
+			<td>Implement Subscriptions endpoints</td>
+			<td>Agregar endpoints backend para crear/listar/actualizar suscripciones, integrar hooks de facturación y webhooks de la pasarela de pagos.</td>
+			<td>6</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T8</td>
+			<td>Subscriptions UI (Android)</td>
+			<td>Implementar pantallas de gestión de suscripciones en la app: ver planes, cambiar plan, cancelar y ver historial de facturación.</td>
+			<td>4</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T9</td>
+			<td>Payment confirmation & subscription flow</td>
+			<td>Integrar la confirmación de pago con la creación/activación de la suscripción, manejar errores y reintentos.</td>
+			<td>6</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-20-US22</td>
+			<td rowspan="3">Profiles & Preferences: User profile and preferences management</td>
+			<td>T10</td>
+			<td>Extend Profiles API for preferences</td>
+			<td>Actualizar endpoints de Profiles para soportar preferencias del usuario (notificaciones, idioma, alertas de stock, etc.).</td>
+			<td>5</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T11</td>
+			<td>Preferences UI (Android)</td>
+			<td>Agregar en la app una sección de Preferencias sincronizada con el backend para permitir al usuario configurar notificaciones, idioma y ajustes personales.</td>
+			<td>5</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T12</td>
+			<td>Sync and persistence</td>
+			<td>Asegurar sincronización de preferencias entre dispositivos y persistencia local segura (caché/room) con reconciliación contra el backend.</td>
+			<td>4</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-21-US23</td>
+			<td rowspan="2">Planning: Scheduling & planning features</td>
+			<td>T13</td>
+			<td>Planning domain APIs</td>
+			<td>Implementar endpoints para planificación (schedules, forecasts, suggested orders) y los modelos asociados en backend.</td>
+			<td>6</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T14</td>
+			<td>Planning UI components (Android)</td>
+			<td>Construir componentes de UI para visualización de planes, sugerencias de pedido y calendario en la app móvil.</td>
+			<td>6</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-22-US24</td>
+			<td rowspan="2">Monitoring: Telemetry, alerts and monitoring dashboard</td>
+			<td>T15</td>
+			<td>Monitoring endpoints</td>
+			<td>Implementar servicios de monitoring en el backend (endpoints para métricas, logs y alertas) y preparar integración con el sistema de dashboard.</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T16</td>
+			<td>Client monitoring views</td>
+			<td>Agregar en la app vistas para mostrar métricas clave, alertas recientes y notificaciones de estado (integración con endpoints de monitoring).</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+	</tbody>
+</table>
+
 #### 4.2.2.3. Development Evidence for Sprint Review
 A continuación se presenta una tabla resumen con los commits realizados por cada miembro del equipo durante el Sprint 2, detallando el repositorio, la rama, el ID del commit, el mensaje del commit y la fecha en que se realizó el commit.
-
 <table border="1" width="100%" style=" text-align: center">
   <thead>
     <tr>
