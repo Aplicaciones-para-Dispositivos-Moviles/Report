@@ -112,6 +112,17 @@ En cuanto al **Project Report**, se incluyeron los siguientes apartados requerid
 - **Capítulo IV: Product Implementation & Validation**, que detalla la configuración del entorno de desarrollo, gestión de código, planificación del sprint y evidencias de implementación.
 - Además, se añadieron las secciones de **Conclusiones**, **Bibliografía** y **Anexos**, completando la estructura formal del informe para el *Stage Review*.
 
+![Colaboraciones TP1](assets/images/ci-tp1.png)
+
+- **Julio Castro Alejos (`JulioXC4`)**: 14 commits
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 18 commits
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 21 commits
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 15 commits
+- **Piero Hugo Elescano León (`PieroHugo`)**: 17 commits
+- **Total de commits en TP1:** 85
+
+La colaboración fue activa y equitativa, con aportes sustanciales de todos los integrantes en la redacción y organización del informe.
+
 ## TB2 – Actualización del Informe, Despliegue y Consolidación del Producto (Sprint 2) - (Semana 12)
 
 Durante este sprint, el equipo concentró sus esfuerzos en la **actualización integral del informe**, la **finalización del desarrollo de los módulos restantes**, y el **despliegue completo de los componentes principales del sistema**. Asimismo, se elaboraron las primeras versiones de los videos requeridos y se inició el desarrollo de la versión multiplataforma en **Flutter**.  
@@ -138,12 +149,12 @@ Asimismo, se elaboraron las **primeras versiones de los videos** solicitados par
 
 ![Colaboraciones TB2](assets/images/ci-tb2.png)
 
-- **Julio Castro Alejos (`JulioXC4`)**: 14 commits
-- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 20 commits
-- **Sergio Gino Julca Minaya (`sergioJM05`)**: 15 commits
-- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 28 commits
-- **Piero Hugo Elescano León (`PieroHugo`)**: 22 commits
-- **Total de commits en TB1:** 50
+- **Julio Castro Alejos (`JulioXC4`)**: 7 commits
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 2 commits
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 4 commits
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 3 commits
+- **Piero Hugo Elescano León (`PieroHugo`)**: 6 commits
+- **Total de commits en TB2:** 21
 
 El trabajo del equipo se mantuvo alineado con la planificación del *Sprint 2*, documentando tanto el progreso técnico como el proceso de validación. La colaboración se organizó mediante *commits* individuales y revisiones de *pull requests*, reforzada por reuniones de coordinación y seguimiento en Discord.
 
