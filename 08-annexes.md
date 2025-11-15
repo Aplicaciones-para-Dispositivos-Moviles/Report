@@ -29,10 +29,15 @@
 - Link del Stratic Domain Driven Design: https://tinyurl.com/mt3j4knz
 
 <img src="assets/images/annexes/annexes-E.png" alt=“DDD” height="500px">
-  
+
 ## Anexo F Organizacion de GitHub
 
 - Link de la Organización GitHub: https://shorturl.at/tUbc6
 
 <img src="assets/images/annexes/annexes-F.png" alt=“DDD” height="500px">
 
+## Anexo G Video Exposición TB2
+
+- Link del video: https://drive.google.com/drive/folders/1CMhJrgJB3TtqhftKHbo4hGs5nWxApzfd?usp=sharing
+
+<img src="assets/images/annexes/annexes-G.png" alt=“DDD” height="500px">

@@ -4049,7 +4049,40 @@ A continuación, se detallan los pasos realizados para asegurar el funcionamient
 
 <img src="assets/images/cap4/sprint2/deploy/deploy_back_7.png" alt="Home" width="600px">
 
+A continuación, se explicará el despliegue de la aplicación Android en Firebase.
+
+1. Creación de proyecto en Firebase.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android1.png" alt="Home" width="600px">
+
+2. En la sección de App Distribution, se selecciona la opción Android.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android2.png" alt="Home" width="600px">
+
+3. Se indica el nombre del paquete del proyecto para crear la app.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android3.png" alt="Home" width="600px">
+
+4. Configuración final para agrega Firebase a la app.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android4.png" alt="Home" width="600px">
+
+5. Carga del APK en la sección de App Distribution.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android5.png" alt="Home" width="600px">
+
+6. Envío de aplicación a verificadores seleccionados.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android6.png" alt="Home" width="600px">
+
+7. Evidencia de solicitud de descarga de la aplicación a verificadores seleccionados.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android7.png" alt="Home" width="600px">
+
+#### 4
+
 #### 4.2.2.8. Team Collaboration Insights during Sprint
+
 ##### Backend (API)
 
 Durante el **Sprint 2**, el equipo centró sus esfuerzos en consolidar los módulos principales y garantizar la integración completa con las aplicaciones móviles.Se alcanzó una versión **estable y desplegada en producción** bajo el dominio:`https://restock-platform.onrender.com`.
@@ -4067,7 +4100,6 @@ Durante el **Sprint 2**, el equipo centró sus esfuerzos en consolidar los módu
 - Total de autores contribuyentes: **5**
 - Endpoints activos documentados en Swagger: **53**
 - Observación: el backend alcanzó una versión estable (**v0.0.1-SNAPSHOT**) con todos los servicios esenciales operativos, documentados y consumidos por las aplicaciones móviles.
-
 
 ##### Aplicación Móvil (Android - Kotlin)
 
