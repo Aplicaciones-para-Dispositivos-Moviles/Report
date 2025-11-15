@@ -2436,10 +2436,172 @@ Esto se confirmará cuando se incremente la cantidad de ventas e insumos que reg
 
 #### 4.2.2.2. Sprint Backlog 2
 
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Sprint #</strong></td>
+			<td colspan="7">Sprint 2</td>
+		</tr>
+		<tr>
+			<td colspan="2"><strong>User Story</strong></td>
+			<td colspan="6"><strong>Work-item / Task</strong></td>
+		</tr>
+		<tr>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Description</strong></td>
+			<td><strong>Estimation (Hours)</strong></td>
+			<td><strong>Assigned To</strong></td>
+			<td><strong>Status (To-do / In-Process / To-review / Done)</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-17-US19</td>
+			<td rowspan="3">Resource: Update Resources to match DB diagram (MongoDB)</td>
+			<td>T1</td>
+			<td>Update Resources schema (backend)</td>
+			<td>Actualizar el modelo de Resources en el backend para que coincida con el diagrama de BD (MongoDB): campos, colecciones y relaciones denormalizadas.</td>
+			<td>8</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T2</td>
+			<td>Seed & migration scripts</td>
+			<td>Crear scripts de seeding/migración para poblar/ajustar las colecciones de Resources y garantizar compatibilidad con los nuevos endpoints.</td>
+			<td>6</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T3</td>
+			<td>Align mobile inventory models</td>
+			<td>Actualizar modelos, repositorios y mappers en la app Android para reflejar la nueva estructura de Resources/Inventory del backend.</td>
+			<td>6</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-18-US20</td>
+			<td rowspan="3">Orders: Create Orders flow for Restaurant Administrators</td>
+			<td>T4</td>
+			<td>Design Orders API & DB model</td>
+			<td>Definir el modelo de datos de Orders en MongoDB y diseñar los endpoints REST necesarios (POST /orders, GET /orders, PUT state, etc.).</td>
+			<td>6</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T5</td>
+			<td>Implement Orders UI (Android)</td>
+			<td>Crear pantallas de creación, lista, detalle y actualización de órdenes para administradores en la app Android (incluye validaciones y estados).</td>
+			<td>8</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T6</td>
+			<td>Integrate Orders with backend</td>
+			<td>Conectar las pantallas de Orders con los endpoints del backend, manejar estados (pending/confirmed/shipped) y pruebas de integración end‑to‑end.</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-19-US21</td>
+			<td rowspan="3">Subscriptions: Manage user subscriptions and billing</td>
+			<td>T7</td>
+			<td>Implement Subscriptions endpoints</td>
+			<td>Agregar endpoints backend para crear/listar/actualizar suscripciones, integrar hooks de facturación y webhooks de la pasarela de pagos.</td>
+			<td>6</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T8</td>
+			<td>Subscriptions UI (Android)</td>
+			<td>Implementar pantallas de gestión de suscripciones en la app: ver planes, cambiar plan, cancelar y ver historial de facturación.</td>
+			<td>4</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T9</td>
+			<td>Payment confirmation & subscription flow</td>
+			<td>Integrar la confirmación de pago con la creación/activación de la suscripción, manejar errores y reintentos.</td>
+			<td>6</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="3">EP-20-US22</td>
+			<td rowspan="3">Profiles & Preferences: User profile and preferences management</td>
+			<td>T10</td>
+			<td>Extend Profiles API for preferences</td>
+			<td>Actualizar endpoints de Profiles para soportar preferencias del usuario (notificaciones, idioma, alertas de stock, etc.).</td>
+			<td>5</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T11</td>
+			<td>Preferences UI (Android)</td>
+			<td>Agregar en la app una sección de Preferencias sincronizada con el backend para permitir al usuario configurar notificaciones, idioma y ajustes personales.</td>
+			<td>5</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T12</td>
+			<td>Sync and persistence</td>
+			<td>Asegurar sincronización de preferencias entre dispositivos y persistencia local segura (caché/room) con reconciliación contra el backend.</td>
+			<td>4</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-21-US23</td>
+			<td rowspan="2">Planning: Scheduling & planning features</td>
+			<td>T13</td>
+			<td>Planning domain APIs</td>
+			<td>Implementar endpoints para planificación (schedules, forecasts, suggested orders) y los modelos asociados en backend.</td>
+			<td>6</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T14</td>
+			<td>Planning UI components (Android)</td>
+			<td>Construir componentes de UI para visualización de planes, sugerencias de pedido y calendario en la app móvil.</td>
+			<td>6</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-22-US24</td>
+			<td rowspan="2">Monitoring: Telemetry, alerts and monitoring dashboard</td>
+			<td>T15</td>
+			<td>Monitoring endpoints</td>
+			<td>Implementar servicios de monitoring en el backend (endpoints para métricas, logs y alertas) y preparar integración con el sistema de dashboard.</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T16</td>
+			<td>Client monitoring views</td>
+			<td>Agregar en la app vistas para mostrar métricas clave, alertas recientes y notificaciones de estado (integración con endpoints de monitoring).</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+	</tbody>
+</table>
+
 #### 4.2.2.3. Development Evidence for Sprint Review
 
 A continuación se presenta una tabla resumen con los commits realizados por cada miembro del equipo durante el Sprint 2, detallando el repositorio, la rama, el ID del commit, el mensaje del commit y la fecha en que se realizó el commit.
-
 <table border="1" width="100%" style=" text-align: center">
   <thead>
     <tr>
@@ -2754,8 +2916,6 @@ A continuación se presenta una tabla resumen con los commits realizados por cad
 A continuación se presentan los materiales de evidencia correspondientes a los productos desarrollados durante el **Sprint 2**: **Backend**, **Aplicación Móvil Android (Administrador de Restaurantes)** y **Aplicación Móvil Flutter (Proveedores de Restaurantes)**.
 Cada sección describe el alcance técnico entregado y los avances demostrados en video.
 
----
-
 #### Backend (API) — Estado: 100% completado y desplegado
 
 **Alcance entregado (Sprint 2)**
@@ -2800,12 +2960,11 @@ El backend integra todos los *bounded contexts* del sistema y expone la document
 - Interacción entre módulos y persistencia de datos en MongoDB.
 - Visualización de la documentación Swagger en el entorno desplegado.
 
-**Video del Backend:**
-[https://shorturl.at/CZzk9](https://shorturl.at/CZzk9)
+**Video del Backend:**  
+[https://shorturl.at/IG8Yi](https://shorturl.at/IG8Yi)
 
 ![Execution Backend](assets/images/cap4/sprint2/execution/backend_exec.png)
 
----
 
 #### Aplicación Móvil (Administrador de Restaurantes — Android) — Estado: 100% completada y desplegada
 
@@ -2840,12 +2999,11 @@ La aplicación fue integrada y desplegada con el backend productivo, mostrando f
 - Estados de interfaz manejados (loading, error, empty, success).
 - Validación completa de flujos de administración.
 
-**Video de Aplicación Android:**
-[https://shorturl.at/8adxX](https://shorturl.at/8adxX)
+**Video de Aplicación Android:**  
+[https://shorturl.at/lcETG](https://shorturl.at/lcETG)
 
 ![Execution Android](assets/images/cap4/sprint2/execution/android_exec.png)
 
----
 
 #### Aplicación Móvil (Proveedores de Restaurantes — Flutter) — Estado: En desarrollo (Sprint 2)
 
@@ -2875,8 +3033,8 @@ Durante este sprint se completaron las primeras pantallas funcionales, incluyend
 - Navegación a la pantalla de overview con datos simulados.
 - Estructura inicial del flujo de proveedor.
 
-**Video de Aplicación Flutter:**
-[https://shorturl.at/LVy49](https://shorturl.at/LVy49)
+**Video de Aplicación Flutter:**  
+[https://shorturl.at/BrF3r](https://shorturl.at/BrF3r)
 
 ![Execution Flutter](assets/images/cap4/sprint2/execution/flutter_exec.png)
 
@@ -2925,10 +3083,9 @@ Durante el **Sprint 2**, el equipo centró sus esfuerzos en consolidar los módu
 
 ![Backend Collaboration](assets/images/cap4/collaboration/backend_ci_2.png)
 
-- Total de commits (Backend): **84**
-- Total de autores contribuyentes: **5**
-- Total de _pull requests_ relacionadas: **6**
-- Endpoints activos documentados en Swagger: **53**
+- Total de commits (Backend): **113**  
+- Total de autores contribuyentes: **5**  
+- Endpoints activos documentados en Swagger: **53**  
 - Observación: el backend alcanzó una versión estable (**v0.0.1-SNAPSHOT**) con todos los servicios esenciales operativos, documentados y consumidos por las aplicaciones móviles.
 
 #### Aplicación Móvil (Android - Kotlin)
@@ -2946,10 +3103,9 @@ Durante este sprint se **finalizó al 100%** la aplicación nativa en Android St
 
 ![Android Collaboration](assets/images/cap4/collaboration/android_ci_2.png)
 
-- Total de commits (Android): **76**
-- Total de autores contribuyentes: **5**
-- Total de _pull requests_ relacionadas: **9**
-- Pantallas completadas: **6 (Supplies, Recipes, Orders, Sales, Profile, Login)**
+- Total de commits (Android): **64**  
+- Total de autores contribuyentes: **5**  
+- Pantallas completadas: **7 (Inventory, Recipes, Orders, Sales, Suscription,Profile, Login)**  
 - Observación: la aplicación Android alcanzó una versión final estable, completamente integrada con la API y lista para despliegue en entorno productivo.
 
 #### Aplicación Móvil (Flutter)
@@ -2966,10 +3122,9 @@ Durante este sprint se inició el desarrollo de la **aplicación Flutter multipl
 
 ![Flutter Collaboration](assets/images/cap4/collaboration/flutter_ci_2.png)
 
-- Total de commits (Flutter): **42**
-- Total de autores contribuyentes: **5**
-- Total de _pull requests_ relacionadas: **6**
-- Módulos funcionales completados: **Overview**, **Login (autenticación)**
+- Total de commits (Flutter): **3**  
+- Total de autores contribuyentes: **1**  
+- Módulos funcionales completados: **Overview**, **Login and Register (autenticación)**  
 - Observación: se completó la estructura base del proyecto Flutter y las primeras pantallas conectadas al backend, sirviendo como punto de partida para las funcionalidades avanzadas en el próximo sprint.
 
 ## 4.3. Validation Interviews
@@ -3031,3 +3186,503 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
+  <thead>
+    <tr>
+      <th style="text-align: center">Segmento</th>
+      <th style="text-align: center">Elementos a validar</th>
+      <th style="text-align: center">Mobile User Flow</th>
+      <th style="text-align: center">Actividades durante la sesión</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: center">
+    <tr>
+      <td>Segmento 2: Proveedores de Restaurantes</td>
+      <td>
+        <ul>
+          <li>Claridad del mensaje del landing page y valor percibido.</li>
+          <li>Facilidad de registro como proveedor.</li>
+          <li>Publicación de productos y gestión del catálogo.</li>
+          <li>Recepción y actualización de pedidos.</li>
+          <li>Comunicación con administradores de restaurantes.</li>
+          <li>Visualización de historial de pedidos y métricas de venta.</li>
+          <li>Comprensión de alertas y notificaciones del sistema.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Registro como proveedor.</li>
+          <li>Creación y edición de productos en catálogo.</li>
+          <li>Recepción de pedidos y confirmación de entrega.</li>
+          <li>Gestión de pedidos activos y completados.</li>
+          <li>Mensajería con restaurantes asociados.</li>
+          <li>Revisión de métricas de desempeño (ventas, entregas, reseñas).</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Explorar el landing page e indicar qué entienden del servicio ofrecido.</li>
+          <li>Completar el flujo de registro como proveedor.</li>
+          <li>Publicar un nuevo producto y modificar su precio o stock.</li>
+          <li>Simular la recepción de un pedido y su actualización de estado.</li>
+          <li>Acceder a la bandeja de mensajes y enviar una respuesta a un restaurante.</li>
+          <li>Consultar las métricas de ventas y comentar su utilidad.</li>
+          <li>Comentar percepciones generales sobre la facilidad de uso y claridad del sistema.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### 4.3.2. Registro de Entrevistas
+
+A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
+
+#### **Entrevista 01 – Josue Ramírez**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Josue Ramírez
+- **Edad:** 26 años
+- **Distrito:** Chorrillos
+- **Segmento:** Proveedor de insumos gastronómicos
+- **Fecha de entrevista:** 07 de octubre de 2025
+- **Duración:** 8 minutos y 58 segundos
+- **Registro audiovisual:** https://shorturl.at/kaGl4
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Josue Ramírez indicó que el diseño del landing le pareció **claro y profesional**, destacando el mensaje principal que resalta la **conexión directa entre proveedores y administradores de restaurantes**.
+
+Comentó que el apartado de **“gestión de catálogo”** le resultó relevante, ya que permitiría mantener actualizados sus productos sin necesidad de depender de terceros. Asimismo, valoró positivamente la posibilidad de **recibir pedidos en tiempo real y mantener comunicación directa con los restaurantes** mediante la plataforma.
+
+Sin embargo, sugirió que sería útil incluir una sección más visible en el landing donde se expliquen los **beneficios específicos para proveedores**, como métricas de venta o testimonios de otros usuarios. También recomendó que el formulario de registro indique con mayor claridad los **requisitos de verificación** o documentos necesarios.
+
+En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
+
+**Conclusión general:**  
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
+
+#### **Entrevista 02 – Alicia Minaya**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Alicia Soledad Minaya Maguiña
+- **Edad:** 45 años
+- **Distrito:** Chorrillos
+- **Segmento:** Administradora de restaurantes
+- **Fecha de entrevista:** 09 de octubre de 2025
+- **Duración:** 8 minutos y 24 segundos
+- **Registro audiovisual:** [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/EV3jiWf-6jVMl50xDv9kLrcBLHD3N5U9uKAIh7VyXYtbdg?e=YSAKrh)
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint1/interviews/int-restaurant-managers.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **Landing Page de Restock** al entrevistado con el propósito de evaluar su comprensión del producto y su percepción sobre la utilidad para proveedores. Alicia Minaya indicó que el diseño del landing le pareció **intuitivo y ordenado**, destacando el mensaje principal que resalta la **conexión directa entre administradores de restaurantes y su estado del inventario**. De esta manera afirma que la aplicación será de gran ayuda para tomar decisiones rápidas y acertadas en su negocio.
+
+Comentó que las alertas en tiempo real le resultarán relevantes para realizar un rebastecimiento de inventario constante y evitar pérdidas por productos vencidos. Asimismo, valoró positivamente la posibilidad de **recibir reportes y métricas de consumo** mediante la aplicación.
+
+Asimismo, no tuvo ninguna sugerencia para mejorar el landing page, ya que consideró que la información presentada es suficiente y clara.
+
+En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
+
+**Conclusión general:**  
+La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de administradores de restaurantes. Asimismo, no se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo.
+
+### 4.3.3. Evaluaciones según heurísticas
+
+Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta.
+
+<h1 style="text-align: center; margin-top: 40px; margin-bottom: -50px">UX Heuristics & Principles Evaluation</h1>
+<h2 style="text-align: center; margin-top: 40px; margin-bottom: 0px;">Usability - Inclusive Design - Information Architecture</h2>
+<container style="text-align: left;">
+  <p style="margin-bottom: 0px;"><strong>CARRERA:</strong> Ingeniería de Software</p>
+  <p style="margin-bottom: 0px;"><strong>CURSO:</strong> CC238</p>
+  <p style="margin-bottom: 0px;"><strong>SECCIÓN:</strong> 12617</p>
+  <p style="margin-bottom: 0px;"><strong>PROFESORES:</strong> Todos</p>
+  <p style="margin-bottom: 0px;"><strong>AUDITOR:</strong> Grupo 2</p>
+  <p><strong>CLIENTES:</strong> Alicia Soledad Minaya Maguiña, Josue Ramírez, Alex Guardia, Lincoln Chauca Rubio, Amparo Soledad Robles Vásquez, José Santos Tapia Bustamente, Percy Polo Ferrera, Benjamín Pacheco Quesada</p>
+  <p><strong style="color: rgba(43, 101, 237, 1)">Site o App a Evaluar:</strong><br> Mobile App - Restock</p>
+  <p><strong style="color:  rgba(43, 101, 237, 1)">TAREAS A EVALUAR:</strong><br> 
+  <p>El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+  </p>
+</p>
+<p>
+<ol>
+    <li>Registro de un nuevo usuario</li>
+    <li>Actualizar Stock de Insumos </li>
+    <li>Recibir Notificaciones de Inventario</li>
+    <li>Actualizar Recetas del Menú</li>
+    <li>Consultar Información Detallada de Receta</li>
+    <li>Actualizar Perfil de Usuario</li>
+    <li>Visualizar Notificaciones Recientes (Dashboard)</li>
+    <li>Registrar Registro de Ventas</li>
+    <li>Visualizar Ventas</li>
+    <li>Visualizar estado de Orden Específica</li>
+    <li>Visualizar Órdenes Enviadas</li>
+    <li>Visualizar Detalles de Orden Enviada</li>
+    <li>Cambiar Idioma de Interfaz</li>
+    <li>Visualizar los detalles de una venta realizada</li>
+    <li>Eliminar una venta</li>
+</ol>
+  <p><strong style="color: rgba(43, 101, 237, 1)">ESCALA DE SEVERIDAD</strong><br>Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
+</p>
+</p>
+<table style="width:100%; margin-bottom:18px; text-align: center">
+  <thead>
+    <tr>
+      <th style="text-align: center">Heurística / Principio</th>
+      <th style="text-align: center">Descripción</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: left">
+  <tr>
+  <td>1</td>
+  <td>Problema superficial: Puede ser fácilmente superador por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo.</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Problema menor: Puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente reléase</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Problema mayor: Ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta.</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Problema muy grave: Un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento.</td>
+  </tr>
+  </tbody>
+</table>
+  <p><strong style="color: rgba(43, 101, 237, 1)">TABLA DE RESUMEN</strong><br></p>
+<table style= "width:100%">
+  <thead>
+    <tr>
+      <th style="text-align: center">#</th>
+      <th style="text-align: center">Problema</th>
+      <th style="text-align: center">Escala de severidad</th>
+      <th style="text-align: center">Heurística/Principio violada(o)</th>
+    </tr>
+  </thead>
+  <tbody style="text-align: left">
+	<tr>
+      <td>1</td>
+      <td>Ausencia de indicios y opciones de pago seguras en el checkout</td>
+      <td>4</td>
+      <td>Confianza y seguridad</td>
+    </tr>
+	<tr>
+      <td>2</td>
+      <td>Redundancia de beneficios en la pantalla de pago</td>
+      <td>3</td>
+      <td>Consistencia y estándares</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Problema de Espaciado y Usabilidad en Carrusel</td>
+      <td>3</td>
+      <td>Usability: Libertad y control del usuario</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma</td>
+      <td>3</td>
+      <td>Usability: Libertad y control del usuario</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Inconsistencia de Grosor de Líneas de Tabla</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Sombra de Botones Excesivamente Pesada</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Desalineación Vertical de Icono de Búsqueda</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Discrepancia de Jerarquía Tipográfica en Etiquetas</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Inconsistencia en el Tamaño de Títulos de Sección</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Baja Prominencia Visual del Botón "Reset"</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Inconsistencia en la Fuente del Número de Venta</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Falta de Consistencia Tipográfica en Estado</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Desequilibrio Visual en Icono de Descarga</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Bajo Contraste y Tamaño de Fuente de Paginación</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Inconsistencia Visual de Bordes y Margen</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Inconsistencia Cromática del Icono de Éxito</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Efecto Visual de Flotación en Icono de Eliminación</td>
+      <td>1</td>
+      <td>Estética y Diseño Minimalista.</td>
+    </tr>
+	
+
+  </tbody>
+</table>
+  <p><strong style="color: rgba(43, 101, 237, 1)">DESCRIPCIÓN DE PROBLEMAS</strong><br></p>
+<table>
+<tbody>
+<tr>
+  <td>
+    <strong>Problema #1:</strong> Ausencia de indicios y opciones de pago seguras en el checkout <br>
+    <strong>Severidad:</strong> 4 <br>
+    <strong>Heuristica violada:</strong> Confianza y seguridad<br>
+    <strong>Problema:</strong> La pantalla de pago no muestra señales claras de que la transacción será procesada por una pasarela segura ni ofrece (o no evidencia) alternativas de pago confiables. La falta de badges de seguridad, logo de pasarela, texto sobre tokenización/almacenamiento seguro o métodos alternativos (Google Pay / Apple Pay / PayPal) reduce la percepción de seguridad y puede provocar rechazo del usuario a completar la transacción<br>
+    <strong>Recomendación:</strong> Incluir el logo de la pasarela de pagos empleada (por ejemplo: Stripe, PayPal) y pequeños badges de seguridad (candado, "Pago seguro", "PCI DSS compliant") cerca del formulario y del botón de pago.
+  </td>
+  <td>
+    <img src="assets/images/cap4/payment.png" alt="problem-15">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #2:</strong> Redundancia de beneficios en la pantalla de pago <br>
+    <strong>Severidad:</strong> 3 <br>
+    <strong>Heuristica violada:</strong> Consistencia y estándares<br>
+    <strong>Problema:</strong> En la pantalla de pago se muestran de forma prominente los beneficios del plan justo encima del formulario de tarjeta. Si esos beneficios ya fueron presentados en pasos previos, su repetición añade densidad visual y puede distraer al usuario en el momento crítico de completar el pago, aumentando la fricción y la posibilidad de abandono.<br>
+    <strong>Recomendación:</strong> Evitar la redundancia: eliminar o colapsar la lista de beneficios en el checkout. Sustituirla por un resumen muy breve (1–2 líneas) con el nombre del plan y el precio y un enlace “Ver detalles” que abra un modal o lleve a la página de detalles si el usuario quiere revisar los beneficios.
+  </td>
+  <td>
+    <img src="assets/images/cap4/payment.png" alt="problem-15">
+  </td>
+</tr>
+<tr>
+  <td style="width:60%">
+    <strong>Problema #3:</strong> Problema de Espaciado y Usabilidad en Carrusel <br>
+    <strong>Severidad:</strong> 3 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
+    <strong>Problema:</strong> El borde que separa los dos elementos del carrusel de "Supplies" está demasiado cerca del texto interno ("Leche deslactosada"), haciendo que la columna de texto se sienta mínimamente apretada contra el límite de la tarjeta, pero es completamente legible. Asimismo falta un elemento visual para ingresar al detalle de cada supply<br>
+    <strong>Recomendación:</strong> Aumentar el <em>padding</em> (margen interno) del texto dentro de la tarjeta del <em>supply</em> e Integrar un icono de flecha o botón <strong>"Ver Detalle"</strong> al <em>supply</em>.
+  </td>
+  <td style="width:40%">
+    <img src="assets/images/cap4/heuristics_evaluation/2.png" alt="problem-2">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #4:</strong> Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma <br>
+    <strong>Severidad:</strong> 3 <br>
+    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
+    <strong>Problema:</strong> El enlace de registro "Don't have an account? Sign Up" utiliza un color verde que, aunque es consistente con la paleta de la aplicación, tiene un contraste ligeramente menor que el texto negro principal, lo que disminuye mínimamente su escaneabilidad. Además no existe un icono de accesibilidad para cambios de idioma.<br>
+    <strong>Recomendación:</strong> Incrementar el contraste del color del enlace "Sign Up" o Subrayarlo. Incluir un icono de accesibilidad o un selector de idioma visible.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/13.png" alt="problem-1">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #5:</strong> Inconsistencia de Grosor de Líneas de Tabla <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
+    <strong>Problema:</strong> La línea horizontal divisoria debajo de la cabecera de la tabla ("Ingredientes", "Estado", "Ver más") está ligeramente más gruesa que las líneas de separación entre las filas de datos, creando una mínima inconsistencia de estilo gráfico.<br>
+    <strong>Recomendación:</strong> Unificar el grosor de todas las líneas divisorias de la tabla (cabecera y filas de datos) para garantizar la uniformidad visual del estilo gráfico.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/3.png" alt="problem-3">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #6:</strong> Sombra de Botones Excesivamente Pesada <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El botón "CANCEL" (rojo) y el botón "NEXT" (naranja) tienen una sombra de caja que es visualmente más pesada y distractora que el resto de los elementos del formulario, lo cual es una anomalía estética menor.<br>
+    <strong>Recomendación:</strong> Reducir la opacidad y el radio de dispersión (<em>blur radius</em>) de la <strong>sombra de caja</strong> (<em>box-shadow</em>) de los botones "CANCEL" y "NEXT" para que el efecto sea más sutil.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/4.png" alt="problem-4">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #7:</strong> Desalineación Vertical de Icono de Búsqueda <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El icono de búsqueda (lupa) dentro del campo "Search recipes" no está perfectamente alineado verticalmente con el texto de placeholder ("Search recipes"), lo que representa una mínima imperfección visual que el usuario probablemente no notará.<br>
+    <strong>Recomendación:</strong> Ajustar el <strong>alineamiento vertical</strong> (propiedad <code>align-items</code> o <em>padding</em> superior/inferior) del icono de la lupa para que quede centrado perfectamente con el texto de <em>placeholder</em>.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/5.png" alt="problem-5">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #8:</strong> Discrepancia de Jerarquía Tipográfica en Etiquetas <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> Hay una discrepancia sutil en el tamaño de la fuente utilizada para las etiquetas de los campos (Name, Last names, Email, etc.) en comparación con el texto del título principal (Edit your information), lo que rompe la jerarquía visual mínima.<br>
+    <strong>Recomendación:</strong> Establecer una <strong>escala tipográfica estandarizada</strong> para las etiquetas de formulario que sea consistente y mantenga una jerarquía clara.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/6.png" alt="problem-6">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #9:</strong> Inconsistencia en el Tamaño de Títulos de Sección <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
+    <strong>Problema:</strong> La tipografía utilizada para el título "Latest alerts" es notablemente más grande que la utilizada para los títulos de las secciones inferiores ("Account", "Frequent clients"), creando una inconsistencia visual en la jerarquía de títulos.<br>
+    <strong>Recomendación:</strong> Estandarizar el tamaño de fuente y estilo (<code>h2</code> o <code>h3</code>) para todos los títulos de sección del dashboard ("Account", "Frequent clients", "Latest alerts").
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/7.png" alt="problem-7">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #10:</strong>  Baja Prominencia Visual del Botón "Reset" <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El botón "Reset" ubicado en la parte inferior carece de un color de fondo distintivo (es transparente/blanco), lo que lo hace visualmente menos prominente que los botones "Cancel" y "Add sale", creando una leve anomalía en la jerarquía de llamadas a la acción.<br>
+    <strong>Recomendación:</strong> Asignar al botón <strong>"Reset"</strong> un color de fondo claro (por ejemplo, blanco con un borde gris suave) para distinguirlo del <em>background</em> sin competir con los botones primarios (verde/rojo).
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/8.png" alt="problem-8">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #11:</strong> Inconsistencia en la Fuente del Número de Venta <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> La fuente utilizada para el subtítulo "Sale number" es ligeramente más pequeña que la fuente utilizada para otros títulos de sección importantes (como "Total cost" o "Dishes (2)"), lo que resulta en una mínima inconsistencia en la jerarquía de la información dentro del resumen de venta.<br>
+    <strong>Recomendación:</strong> Asegurar que la fuente, tamaño y peso del subtítulo <strong>"Sale number"</strong> sea consistente con el estilo de otras etiquetas informativas similares en la interfaz.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/9.png" alt="problem-9">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #12:</strong> Falta de Consistencia Tipográfica en Estado <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
+    <strong>Problema:</strong> El botón "Aprobado" dentro de la sección "Situation" no utiliza una convención de mayúsculas estándar (debería ser "Aprobado" o "APROBADO"), presentando una falta de consistencia tipográfica menor con el resto de los textos de la interfaz.<br>
+    <strong>Recomendación:</strong> Establecer una convención única de estilo para los botones de estado (ej: <strong>"Aprobado"</strong> con mayúscula inicial) y Aplicarla de manera uniforme.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/10.png" alt="problem-10">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #13:</strong> Desequilibrio Visual en Icono de Descarga <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El icono utilizado para el botón "DESCAGAR HISTORIAL" (que parece ser un icono de descarga o archivo) es muy pequeño en relación con el tamaño del texto y el botón, lo que resulta en un desequilibrio visual menor y una estética subóptima.<br>
+    <strong>Recomendación:</strong> Incrementar ligeramente el tamaño del icono de descarga dentro del botón <strong>"DESCAGAR HISTORIAL"</strong> para equilibrarlo visualmente con el texto adyacente.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/11.png" alt="problem-11">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #14:</strong> Bajo Contraste y Tamaño de Fuente de Paginación <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El tamaño de la fuente para el texto de paginación (Rows per page, page 1 of 2) es ligeramente menor o tiene menos contraste que el resto de los textos informativos, haciendo que la sección de paginación sea mínimamente más difícil de leer.<br>
+    <strong>Recomendación:</strong> Aumentar mínimamente el tamaño de la fuente o el contraste del color del texto de paginación (<code>Rows per page</code>, etc.) para mejorar la lectura rápida.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/12.png" alt="problem-12">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #15:</strong> Inconsistencia Visual de Bordes y Margen <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> La baja definición de los bordes de los campos de entrada, sumada a la mínima inconsistencia en la separación vertical antes del botón de acción, debilita levemente la estructura visual.<br>
+    <strong>Recomendación:</strong> Aumentar el <em>padding</em> inferior del último campo de entrada y Definir un <strong>borde sólido</strong> o de <strong>alto contraste</strong> para todos los <em>inputs</em>.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/1.png" alt="problem-13">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #16:</strong> Inconsistencia Cromática del Icono de Éxito <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
+    <strong>Problema:</strong> El icono de verificación (check mark) verde claro en la parte superior tiene un color de fondo (verde muy pálido/grisáceo) que no corresponde exactamente al color verde vibrante utilizado en el botón "Close" o en la paleta principal, creando una mínima falta de consistencia cromática.<br>
+    <strong>Recomendación:</strong> Ajustar el color de fondo del icono de verificación para que coincida exactamente con el <strong>verde primario</strong> utilizado en el botón "Close" y en la paleta principal.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/14.png" alt="problem-14">
+  </td>
+</tr>
+<tr>
+  <td>
+    <strong>Problema #17:</strong> Efecto Visual de Flotación en Icono de Eliminación <br>
+    <strong>Severidad:</strong> 1 <br>
+    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
+    <strong>Problema:</strong> El icono de la papelera (Delete) en la parte superior derecha tiene un sombreado o borde que lo hace parecer ligeramente desconectado o flotante respecto a los elementos adyacentes, lo cual es una anomalía estética menor en el uso de los efectos visuales.<br>
+    <strong>Recomendación:</strong> Eliminar o suavizar el <strong>sombreado o borde</strong> del icono de la papelera (Delete) para integrarlo mejor visualmente con el diseño limpio del contenedor de la venta.
+  </td>
+  <td>
+    <img src="assets/images/cap4/heuristics_evaluation/15.png" alt="problem-15">
+  </td>
+</tr>
+</tbody>
+</table>
+</container>
+
