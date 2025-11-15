@@ -249,6 +249,36 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 - **Layouts y recursos XML**: `snake_case` (ej. `activity_main.xml`, `user_profile_item.xml`).
 - **IDs en layouts**: `camelCase` (ej. `btnSubmit`, `txtUserName`).
 
+#### Mobile Frontend (Flutter + Dart)
+
+##### Convenciones generales:
+
+- **Idioma**: Todo el código, nombres de clases, funciones y variables en **inglés**.
+- **Indentación**: 2 espacios (convención oficial de Dart).
+- **Formato de archivos**: `.dart` (Dart).
+- **Estilo de código adoptado**:
+  - [Effective Dart Style Guide](https://dart.dev/guides/language/effective-dart/style)
+  - [Flutter Style Guide](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo)
+  - [Dart Code Linter (flutter_lints)](https://pub.dev/packages/flutter_lints)
+
+##### Nomenclatura:
+
+- **Clases y tipos**: `PascalCase` (ej. `UserProfileScreen`, `ProductRepository`).
+- **Funciones y variables**: `lowerCamelCase` (ej. `getUserName()`, `userList`).
+- **Constantes**: `lowerCamelCase` (ej. `defaultTimeout`, `maxRetries`).
+- **Archivos**: `snake_case` (ej. `user_profile_screen.dart`, `product_repository.dart`).
+- **Directorios**: `snake_case` (ej. `lib/features/auth/`, `lib/core/utils/`).
+- **Widgets**: `PascalCase` con sufijo descriptivo (ej. `CustomButton`, `ProductCard`).
+- **Enums**: `PascalCase` para el tipo, `lowerCamelCase` para valores (ej. `enum Status { loading, success, error }`).
+
+##### Buenas prácticas:
+
+- Uso de `const` constructors donde sea posible para optimización.
+- Organización de código por features/módulos.
+- Separación de lógica de negocio (BLoC/Provider/Riverpod) de la UI.
+- Uso de trailing commas para mejor formateo automático.
+- Documentación con `///` para elementos públicos.
+
 #### Backend (Java + Spring Boot + MongoDB)
 
 ##### Convenciones generales:
@@ -1954,7 +1984,7 @@ fix(order): include full batch, custom supply, and supply details in order respo
 </table>
 
 <p><strong>Enlace al repositorio:</strong>  
-<a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</a></p>
+<a href="https://shorturl.at/LFvuk" target="_blank">https://shorturl.at/LFvuk</a></p>
 
 #### 4.2.1.5. Execution Evidence for Sprint Review
 
@@ -2085,11 +2115,11 @@ A continuación se presentan los materiales de evidencia correspondientes a los 
 
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
 
-Durante este sprint se avanzó significativamente en la `<strong>`documentación de los servicios web (REST API)`</strong>` del sistema `<em>`Restock `</em>`, cubriendo los módulos de `<strong>`Profiles `</strong>`, `<strong>`Recipes `</strong>`, `<strong>`Batches `</strong>` y `<strong>`Authentication `</strong>`.
-La documentación se generó utilizando `<strong>`OpenAPI (Swagger)`</strong>` y fue validada mediante peticiones reales desde el entorno de desarrollo (`<em>`localhost `</em>` y Railway).
-Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP `<code>`GET `</code>`, `<code>`POST `</code>`, `<code>`PUT `</code>` y `<code>`DELETE `</code>`.
+Durante este sprint se avanzó significativamente en la documentación de los servicios web (REST API)del sistema Restock , cubriendo los módulos de Profiles , Recipes , Batches y Authentication .
+La documentación se generó utilizando OpenAPI (Swagger)y fue validada mediante peticiones reales desde el entorno de desarrollo (localhost  y Railway).
+Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP GET , POST , PUT  y DELETE .
 
-A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documentados `</strong>`, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+A continuación, se presenta la tabla resumen de los Endpoints documentados , incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
 
 <table>
   <thead>
@@ -2256,7 +2286,7 @@ A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documen
   </tbody>
 </table>
 
-Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (`<em>`Railway `</em>`).
+Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (Railway ).
 Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-backend" target="_blank">`https://github.com/Jahazielgg/restock-backend `</a>`
 Últimos commits relacionados con documentación:
 
@@ -2709,13 +2739,15 @@ A continuación se presenta una tabla resumen con los commits realizados por cad
 </table>
 
 #### 4.2.2.4. Testing Suite Evidence for Sprint Review
+
+
 #### 4.2.2.5. Execution Evidence for Sprint Review
 A continuación se presentan los materiales de evidencia correspondientes a los productos desarrollados durante el **Sprint 2**: **Backend**, **Aplicación Móvil Android (Administrador de Restaurantes)** y **Aplicación Móvil Flutter (Proveedores de Restaurantes)**.  
 Cada sección describe el alcance técnico entregado y los avances demostrados en video.
 
 ---
 
-#### Backend (API) — Estado: 100% completado y desplegado
+##### Backend (API) — Estado: 100% completado y desplegado
 
 **Alcance entregado (Sprint 2)**
 
@@ -2766,7 +2798,7 @@ El backend integra todos los *bounded contexts* del sistema y expone la document
 
 ---
 
-#### Aplicación Móvil (Administrador de Restaurantes — Android) — Estado: 100% completada y desplegada
+##### Aplicación Móvil (Administrador de Restaurantes — Android) — Estado: 100% completada y desplegada
 
 **Alcance entregado (Sprint 2)**
 
@@ -2805,7 +2837,7 @@ La aplicación fue integrada y desplegada con el backend productivo, mostrando f
 
 ---
 
-#### Aplicación Móvil (Proveedores de Restaurantes — Flutter) — Estado: En desarrollo (Sprint 2)
+##### Aplicación Móvil (Proveedores de Restaurantes — Flutter) — Estado: En desarrollo (Sprint 2)
 
 **Alcance entregado (Sprint 2)**
 
@@ -2841,7 +2873,7 @@ Durante este sprint se completaron las primeras pantallas funcionales, incluyend
 #### 4.2.2.6. Services Documentation Evidence for Sprint Review
 #### 4.2.2.7. Software Deployment Evidence for Sprint Review
 #### 4.2.2.8. Team Collaboration Insights during Sprint
-#### Backend (API)
+##### Backend (API)
 
 Durante el **Sprint 2**, el equipo centró sus esfuerzos en consolidar los módulos principales y garantizar la integración completa con las aplicaciones móviles.  
 Se alcanzó una versión **estable y desplegada en producción** bajo el dominio:  
@@ -2863,7 +2895,7 @@ Se alcanzó una versión **estable y desplegada en producción** bajo el dominio
 - Observación: el backend alcanzó una versión estable (**v0.0.1-SNAPSHOT**) con todos los servicios esenciales operativos, documentados y consumidos por las aplicaciones móviles.
 
 
-#### Aplicación Móvil (Android - Kotlin)
+##### Aplicación Móvil (Android - Kotlin)
 
 Durante este sprint se **finalizó al 100%** la aplicación nativa en Android Studio con Kotlin, asegurando su total funcionalidad e integración con la API de Restock Platform.  
 
@@ -2884,7 +2916,7 @@ Durante este sprint se **finalizó al 100%** la aplicación nativa en Android St
 - Pantallas completadas: **6 (Supplies, Recipes, Orders, Sales, Profile, Login)**  
 - Observación: la aplicación Android alcanzó una versión final estable, completamente integrada con la API y lista para despliegue en entorno productivo.
 
-#### Aplicación Móvil (Flutter)
+##### Aplicación Móvil (Flutter)
 
 Durante este sprint se inició el desarrollo de la **aplicación Flutter multiplataforma**, orientada a los proveedores de restaurantes.  
 El objetivo principal fue establecer la base técnica del proyecto y conectar las primeras pantallas con el backend desplegado.
