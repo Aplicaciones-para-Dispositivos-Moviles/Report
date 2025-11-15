@@ -4167,6 +4167,9 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
+</tbody>
+</table>
+
 
 ### 4.3.2. Registro de Entrevistas
 
