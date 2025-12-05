@@ -28,7 +28,7 @@
 
 - Link del Event Storming: https://shorturl.at/e40OQ
 
-<img src="assets/images/annexes/annexes-D.png" alt=“DDD” height="500px">
+<img src="assets/images/annexes/annexes-D.jpg" alt=“DDD” height="500px">
 
 <div class="page"></div>
 

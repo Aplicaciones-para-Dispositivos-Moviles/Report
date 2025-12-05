@@ -61,6 +61,16 @@ _Agosto 2025_
 |     2.3     | 07/10/25 | Jahaziel Guerra   | Se redactó analisis competitivo, User Stories, Ubiquitous Language, Product Backlog y Software Architecture Deployment Diagrams.                                        |
 |     2.4     | 07/10/25 | Sergio Julca      | Mobile Applications Wireflow Diagrams, Diseño de Entrevistas, Registro de Entrevistas yDevelopment Evidence for Sprint Review.                                          |
 |     2.5     | 07/10/25 | Gabriela Shapiama | Registro de Versiones del Informe, Labelling Systems, Software Development Environment Configuration, Sprint Planning 1, Software Deployment Evidence.                   |
+|     3.1     | 12/11/25 | Julio Castro      | Execution Evidence for Sprint Review 2, Team Collaboration Insights during Sprint 2 y Video About the product   |
+|     3.2     | 12/11/25 | Piero Elescano    | Sprint Backlog 2 y anexos.                 |
+|     3.3     | 12/11/25 | Jahaziel Guerra   | Testing Suite Evidence for Sprint Review 2, Services Documentation Evidence for Sprint Review 2, Evaluaciones segun heuristicas.                                        |
+|     3.4     | 13/11/25 | Sergio Julca      | Evaluaciones según heurísticas, Development Evidence for Sprint Review 2, Bibliografia, conclusiones y recomendaciones.                      |
+|     3.5     | 13/11/25 | Gabriela Shapiama | Software Deployment Evidence for Sprint Review 2, formato documento y Desarrollo de entrevistas.       |
+|     4.1     | 02/12/25 | Julio Castro      | Execution Evidence for Sprint Review 3, Team Collaboration Insights during Sprint 3, Video About the product y Desarrollo de entrevistas.  |
+|     4.2     | 03/12/25 | Piero Elescano    | Sprint Backlog 3 y anexos.                 |
+|     4.3     | 03/12/25 | Jahaziel Guerra   | Testing Suite Evidence for Sprint Review 3, Services Documentation Evidence for Sprint Review 3, Evaluaciones segun heuristicas.                                        |
+|     4.4     | 03/12/25 | Sergio Julca      | Evaluaciones según heurísticas, Development Evidence for Sprint Review 3, Bibliografia, conclusiones y recomendaciones.                      |
+|     4.5     | 03/12/25 | Gabriela Shapiama | Software Deployment Evidence for Sprint Review 3, formato documento y Desarrollo de entrevistas.       |
 
 # Project Report Collaboration Insights
 

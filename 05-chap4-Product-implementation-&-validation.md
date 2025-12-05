@@ -3996,7 +3996,7 @@ A continuación, se presenta la tabla resumen de los **Endpoints documentados en
 
 Los endpoints fueron probados exhaustivamente con datos de muestra y documentados con **Swagger UI**, disponible en el entorno de producción desplegado en **Render** (`https://restock-platform.onrender.com/swagger/index.html`).
 
-**Repositorio de Web Services:** <a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform</a>
+**Repositorio de Web Services:** `<a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform" target="_blank">`https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform `</a>`
 
 **Últimos commits relacionados con documentación del Sprint 2:**
 
@@ -4202,7 +4202,6 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
 </tbody>
 </table>
 
-
 ### 4.3.2. Registro de Entrevistas
 
 A continuación, se presenta el registro correspondiente a la entrevista realizada con un representante del segmento de **proveedores de restaurantes**, quien participó en la validación del **Landing Page** de la plataforma **Restock**. El objetivo fue evaluar la claridad del mensaje, la propuesta de valor y la percepción de utilidad del sistema desde la perspectiva de un proveedor.
@@ -4272,7 +4271,7 @@ La entrevista permitió validar que el mensaje principal del Landing Page es cla
 - **Fecha de entrevista:** 14 de Noviembre de 2025
 - **Duración:** 13 minutos y 14 segundos
 - **Registro audiovisual:** [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/IQCvyWcdF39vT6cg4qK90sZFAX_i40df-pF5dZMhBWorchc?e=XexEBF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
-- **Captura de entrevista:**  
+- **Captura de entrevista:**
   ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint2/interviews/validation_interview_sprint_2.png)
 
 #### **Resumen descriptivo de la entrevista:**
@@ -4321,10 +4320,13 @@ La entrevista permitió validar que la aplicación móvil de Restock cumple con 
 
 Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta.
 
-<h1 style="text-align: center; margin-top: 40px; margin-bottom: -50px">UX Heuristics & Principles Evaluation</h1>
-<h2 style="text-align: center; margin-top: 40px; margin-bottom: 0px;">Usability - Inclusive Design - Information Architecture</h2>
-<container style="text-align: left;">
-  <p style="margin-bottom: 0px;"><strong>CARRERA:</strong> Ingeniería de Software</p>
+<p></p>
+
+<p style="text-align: center">--- UX Heuristics & Principles Evaluation ---</p>
+
+<p style="text-align: center">-- Usability - Inclusive Design - Information Architecture --</p>
+
+<p style="margin-bottom: 0px;"><strong>CARRERA:</strong> Ingeniería de Software</p>
   <p style="margin-bottom: 0px;"><strong>CURSO:</strong> CC238</p>
   <p style="margin-bottom: 0px;"><strong>SECCIÓN:</strong> 12617</p>
   <p style="margin-bottom: 0px;"><strong>PROFESORES:</strong> Todos</p>
@@ -4495,218 +4497,3 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
-	
-
-  </tbody>
-</table>
-  <p><strong style="color: rgba(43, 101, 237, 1)">DESCRIPCIÓN DE PROBLEMAS</strong><br></p>
-<table>
-<tbody>
-<tr>
-  <td>
-    <strong>Problema #1:</strong> Ausencia de indicios y opciones de pago seguras en el checkout <br>
-    <strong>Severidad:</strong> 4 <br>
-    <strong>Heuristica violada:</strong> Confianza y seguridad<br>
-    <strong>Problema:</strong> La pantalla de pago no muestra señales claras de que la transacción será procesada por una pasarela segura ni ofrece (o no evidencia) alternativas de pago confiables. La falta de badges de seguridad, logo de pasarela, texto sobre tokenización/almacenamiento seguro o métodos alternativos (Google Pay / Apple Pay / PayPal) reduce la percepción de seguridad y puede provocar rechazo del usuario a completar la transacción<br>
-    <strong>Recomendación:</strong> Incluir el logo de la pasarela de pagos empleada (por ejemplo: Stripe, PayPal) y pequeños badges de seguridad (candado, "Pago seguro", "PCI DSS compliant") cerca del formulario y del botón de pago.
-  </td>
-  <td>
-    <img src="assets/images/cap4/payment.png" alt="problem-15">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #2:</strong> Redundancia de beneficios en la pantalla de pago <br>
-    <strong>Severidad:</strong> 3 <br>
-    <strong>Heuristica violada:</strong> Consistencia y estándares<br>
-    <strong>Problema:</strong> En la pantalla de pago se muestran de forma prominente los beneficios del plan justo encima del formulario de tarjeta. Si esos beneficios ya fueron presentados en pasos previos, su repetición añade densidad visual y puede distraer al usuario en el momento crítico de completar el pago, aumentando la fricción y la posibilidad de abandono.<br>
-    <strong>Recomendación:</strong> Evitar la redundancia: eliminar o colapsar la lista de beneficios en el checkout. Sustituirla por un resumen muy breve (1–2 líneas) con el nombre del plan y el precio y un enlace “Ver detalles” que abra un modal o lleve a la página de detalles si el usuario quiere revisar los beneficios.
-  </td>
-  <td>
-    <img src="assets/images/cap4/payment.png" alt="problem-15">
-  </td>
-</tr>
-<tr>
-  <td style="width:60%">
-    <strong>Problema #3:</strong> Problema de Espaciado y Usabilidad en Carrusel <br>
-    <strong>Severidad:</strong> 3 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
-    <strong>Problema:</strong> El borde que separa los dos elementos del carrusel de "Supplies" está demasiado cerca del texto interno ("Leche deslactosada"), haciendo que la columna de texto se sienta mínimamente apretada contra el límite de la tarjeta, pero es completamente legible. Asimismo falta un elemento visual para ingresar al detalle de cada supply<br>
-    <strong>Recomendación:</strong> Aumentar el <em>padding</em> (margen interno) del texto dentro de la tarjeta del <em>supply</em> e Integrar un icono de flecha o botón <strong>"Ver Detalle"</strong> al <em>supply</em>.
-  </td>
-  <td style="width:40%">
-    <img src="assets/images/cap4/heuristics_evaluation/2.png" alt="problem-2">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #4:</strong> Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma <br>
-    <strong>Severidad:</strong> 3 <br>
-    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
-    <strong>Problema:</strong> El enlace de registro "Don't have an account? Sign Up" utiliza un color verde que, aunque es consistente con la paleta de la aplicación, tiene un contraste ligeramente menor que el texto negro principal, lo que disminuye mínimamente su escaneabilidad. Además no existe un icono de accesibilidad para cambios de idioma.<br>
-    <strong>Recomendación:</strong> Incrementar el contraste del color del enlace "Sign Up" o Subrayarlo. Incluir un icono de accesibilidad o un selector de idioma visible.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/13.png" alt="problem-1">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #5:</strong> Inconsistencia de Grosor de Líneas de Tabla <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
-    <strong>Problema:</strong> La línea horizontal divisoria debajo de la cabecera de la tabla ("Ingredientes", "Estado", "Ver más") está ligeramente más gruesa que las líneas de separación entre las filas de datos, creando una mínima inconsistencia de estilo gráfico.<br>
-    <strong>Recomendación:</strong> Unificar el grosor de todas las líneas divisorias de la tabla (cabecera y filas de datos) para garantizar la uniformidad visual del estilo gráfico.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/3.png" alt="problem-3">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #6:</strong> Sombra de Botones Excesivamente Pesada <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El botón "CANCEL" (rojo) y el botón "NEXT" (naranja) tienen una sombra de caja que es visualmente más pesada y distractora que el resto de los elementos del formulario, lo cual es una anomalía estética menor.<br>
-    <strong>Recomendación:</strong> Reducir la opacidad y el radio de dispersión (<em>blur radius</em>) de la <strong>sombra de caja</strong> (<em>box-shadow</em>) de los botones "CANCEL" y "NEXT" para que el efecto sea más sutil.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/4.png" alt="problem-4">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #7:</strong> Desalineación Vertical de Icono de Búsqueda <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El icono de búsqueda (lupa) dentro del campo "Search recipes" no está perfectamente alineado verticalmente con el texto de placeholder ("Search recipes"), lo que representa una mínima imperfección visual que el usuario probablemente no notará.<br>
-    <strong>Recomendación:</strong> Ajustar el <strong>alineamiento vertical</strong> (propiedad <code>align-items</code> o <em>padding</em> superior/inferior) del icono de la lupa para que quede centrado perfectamente con el texto de <em>placeholder</em>.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/5.png" alt="problem-5">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #8:</strong> Discrepancia de Jerarquía Tipográfica en Etiquetas <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> Hay una discrepancia sutil en el tamaño de la fuente utilizada para las etiquetas de los campos (Name, Last names, Email, etc.) en comparación con el texto del título principal (Edit your information), lo que rompe la jerarquía visual mínima.<br>
-    <strong>Recomendación:</strong> Establecer una <strong>escala tipográfica estandarizada</strong> para las etiquetas de formulario que sea consistente y mantenga una jerarquía clara.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/6.png" alt="problem-6">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #9:</strong> Inconsistencia en el Tamaño de Títulos de Sección <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
-    <strong>Problema:</strong> La tipografía utilizada para el título "Latest alerts" es notablemente más grande que la utilizada para los títulos de las secciones inferiores ("Account", "Frequent clients"), creando una inconsistencia visual en la jerarquía de títulos.<br>
-    <strong>Recomendación:</strong> Estandarizar el tamaño de fuente y estilo (<code>h2</code> o <code>h3</code>) para todos los títulos de sección del dashboard ("Account", "Frequent clients", "Latest alerts").
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/7.png" alt="problem-7">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #10:</strong>  Baja Prominencia Visual del Botón "Reset" <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El botón "Reset" ubicado en la parte inferior carece de un color de fondo distintivo (es transparente/blanco), lo que lo hace visualmente menos prominente que los botones "Cancel" y "Add sale", creando una leve anomalía en la jerarquía de llamadas a la acción.<br>
-    <strong>Recomendación:</strong> Asignar al botón <strong>"Reset"</strong> un color de fondo claro (por ejemplo, blanco con un borde gris suave) para distinguirlo del <em>background</em> sin competir con los botones primarios (verde/rojo).
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/8.png" alt="problem-8">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #11:</strong> Inconsistencia en la Fuente del Número de Venta <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> La fuente utilizada para el subtítulo "Sale number" es ligeramente más pequeña que la fuente utilizada para otros títulos de sección importantes (como "Total cost" o "Dishes (2)"), lo que resulta en una mínima inconsistencia en la jerarquía de la información dentro del resumen de venta.<br>
-    <strong>Recomendación:</strong> Asegurar que la fuente, tamaño y peso del subtítulo <strong>"Sale number"</strong> sea consistente con el estilo de otras etiquetas informativas similares en la interfaz.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/9.png" alt="problem-9">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #12:</strong> Falta de Consistencia Tipográfica en Estado <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
-    <strong>Problema:</strong> El botón "Aprobado" dentro de la sección "Situation" no utiliza una convención de mayúsculas estándar (debería ser "Aprobado" o "APROBADO"), presentando una falta de consistencia tipográfica menor con el resto de los textos de la interfaz.<br>
-    <strong>Recomendación:</strong> Establecer una convención única de estilo para los botones de estado (ej: <strong>"Aprobado"</strong> con mayúscula inicial) y Aplicarla de manera uniforme.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/10.png" alt="problem-10">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #13:</strong> Desequilibrio Visual en Icono de Descarga <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El icono utilizado para el botón "DESCAGAR HISTORIAL" (que parece ser un icono de descarga o archivo) es muy pequeño en relación con el tamaño del texto y el botón, lo que resulta en un desequilibrio visual menor y una estética subóptima.<br>
-    <strong>Recomendación:</strong> Incrementar ligeramente el tamaño del icono de descarga dentro del botón <strong>"DESCAGAR HISTORIAL"</strong> para equilibrarlo visualmente con el texto adyacente.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/11.png" alt="problem-11">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #14:</strong> Bajo Contraste y Tamaño de Fuente de Paginación <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El tamaño de la fuente para el texto de paginación (Rows per page, page 1 of 2) es ligeramente menor o tiene menos contraste que el resto de los textos informativos, haciendo que la sección de paginación sea mínimamente más difícil de leer.<br>
-    <strong>Recomendación:</strong> Aumentar mínimamente el tamaño de la fuente o el contraste del color del texto de paginación (<code>Rows per page</code>, etc.) para mejorar la lectura rápida.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/12.png" alt="problem-12">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #15:</strong> Inconsistencia Visual de Bordes y Margen <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> La baja definición de los bordes de los campos de entrada, sumada a la mínima inconsistencia en la separación vertical antes del botón de acción, debilita levemente la estructura visual.<br>
-    <strong>Recomendación:</strong> Aumentar el <em>padding</em> inferior del último campo de entrada y Definir un <strong>borde sólido</strong> o de <strong>alto contraste</strong> para todos los <em>inputs</em>.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/1.png" alt="problem-13">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #16:</strong> Inconsistencia Cromática del Icono de Éxito <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
-    <strong>Problema:</strong> El icono de verificación (check mark) verde claro en la parte superior tiene un color de fondo (verde muy pálido/grisáceo) que no corresponde exactamente al color verde vibrante utilizado en el botón "Close" o en la paleta principal, creando una mínima falta de consistencia cromática.<br>
-    <strong>Recomendación:</strong> Ajustar el color de fondo del icono de verificación para que coincida exactamente con el <strong>verde primario</strong> utilizado en el botón "Close" y en la paleta principal.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/14.png" alt="problem-14">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #17:</strong> Efecto Visual de Flotación en Icono de Eliminación <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El icono de la papelera (Delete) en la parte superior derecha tiene un sombreado o borde que lo hace parecer ligeramente desconectado o flotante respecto a los elementos adyacentes, lo cual es una anomalía estética menor en el uso de los efectos visuales.<br>
-    <strong>Recomendación:</strong> Eliminar o suavizar el <strong>sombreado o borde</strong> del icono de la papelera (Delete) para integrarlo mejor visualmente con el diseño limpio del contenedor de la venta.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/15.png" alt="problem-15">
-  </td>
-</tr>
-</tbody>
-</table>
-</container>
-
