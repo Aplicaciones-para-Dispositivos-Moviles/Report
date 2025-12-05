@@ -2668,7 +2668,7 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 - Total de _pull requests_ relacionadas: **13**
 - Pantallas core implementadas: **5**
 
-### 4.2.2. Sprint 2
+#### 4.2.2. Sprint 2
 
 #### 4.2.2.1. Sprint Planning 2
 
