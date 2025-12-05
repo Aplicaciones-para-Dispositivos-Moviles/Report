@@ -160,6 +160,55 @@ Asimismo, se elaboraron las **primeras versiones de los videos** solicitados par
 
 El trabajo del equipo se mantuvo alineado con la planificación del *Sprint 2*, documentando tanto el progreso técnico como el proceso de validación. La colaboración se organizó mediante *commits* individuales y revisiones de *pull requests*, reforzada por reuniones de coordinación y seguimiento en Discord.
 
+## TF1 – Release Review, Cierre del Informe, Validación Final y Despliegues Completos (Semana 15)
+
+En este hito final, el equipo consolidó todas las actividades técnicas, documentales y de validación necesarias para completar el producto y dejarlo apto para su despliegue final. Durante la **Release Review**, se revisaron y corrigieron todos los artefactos previamente presentados, asegurando consistencia técnica, cumplimiento de los criterios de evaluación y alineación con los objetivos del proyecto Restock.
+
+Como parte de las actividades centrales del TF1, se elaboró la **versión actualizada y definitiva del Project Report**, la cual incluyó:
+
+- **Registro de Versiones del Informe** actualizado con los cambios efectuados en las semanas finales.
+- Una **sección ampliada de Project Report Collaboration Insights**, consolidando commits, pull requests, revisiones y evidencia de trabajo colaborativo.
+- La **versión final de Student Outcomes**, integrando reflexiones individuales y competencias adquiridas.
+- La versión final del **Capítulo IV: Product Implementation & Validation**, incluyendo el Sprint 3 y sus evidencias.
+- La integración definitiva de **Conclusiones, Bibliografía y Anexos**, completando la estructura final del informe conforme a los lineamientos del curso.
+
+En cuanto al **despliegue del producto**, el equipo logró entregar todos los componentes funcionales requeridos para el proyecto:
+
+- La **Landing Page** quedó desplegada públicamente en su versión final.
+- El **Backend** se desplegó al 100% en un servidor público, manteniendo su documentación completa mediante Swagger.
+- La **Aplicación Móvil Android** (desarrollada para *administradores de restaurantes*) quedó completamente funcional y distribuida mediante **Firebase App Distribution**, permitiendo pruebas reales en dispositivos móviles.
+- La **Aplicación Móvil Flutter** (desarrollada para *proveedores*) fue completada durante este hito y desplegada exitosamente, integrándose con los servicios del backend y mostrando las funcionalidades clave para el flujo de abastecimiento.
+
+Asimismo, se presentaron las **versiones finales de los videos** requeridos:
+
+- Video de validación de la aplicación.
+- Video About-the-Product.
+- Video About-the-Team.
+
+También se perfeccionaron los artefactos técnicos del Sprint 3, integrando evidencias de pruebas, documentación complementaria y capturas finales de las aplicaciones desplegadas.
+
+![Colaboraciones TF1](assets/images/ci-tf1.png)
+
+- **Julio Castro Alejos (`JulioXC4`)**: x commits 
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: x commits  
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: x commits 
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: x commits  
+- **Piero Hugo Elescano León (`PieroHugo`)**: x commits
+
+El trabajo del equipo se mantuvo enfocado en asegurar un cierre técnico y documental impecable. La coordinación entre los integrantes permitió refinar la calidad de ambas aplicaciones móviles (Android para administradores y Flutter para proveedores), mejorar artefactos previos y garantizar que el sistema desplegado cumpliera con las funcionalidades y requisitos establecidos en el *product backlog*. Las actividades realizadas durante este hito reflejan una ejecución madura, consistente y alineada con las prácticas profesionales del desarrollo de software.
+
+
+![Colaboraciones TF1](assets/images/ci-tf1.png)
+
+- **Julio Castro Alejos (`JulioXC4`)**: 20 actividades completadas  
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 20 actividades completadas  
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 20 actividades completadas  
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 20 actividades completadas  
+- **Piero Hugo Elescano León (`PieroHugo`)**: 20 actividades completadas  
+- **Total de actividades en TF1:** 100 (100% completadas)
+
+El trabajo del equipo se mantuvo enfocado en asegurar un cierre técnico y documental impecable. La coordinación entre los integrantes permitió refinar la calidad de la aplicación, mejorar artefactos previos y garantizar que el sistema desplegado cumpliera con las funcionalidades y requisitos establecidos en el *product backlog*. Las actividades realizadas durante este hito reflejan una ejecución madura, consistente y alineada con las prácticas profesionales del desarrollo de software.
+
 
 ## Herramientas colaborativas utilizadas
 
