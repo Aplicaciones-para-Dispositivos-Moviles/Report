@@ -45,6 +45,8 @@ _Agosto 2025_
 
 </div>
 
+<div class="page"></div>
+
 ## Registro de Versiones
 
 | *Versión* | *Fecha* | *Autor*         | *Descripción de modificación*                                                                                                                                        |

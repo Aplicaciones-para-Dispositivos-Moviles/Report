@@ -6,11 +6,15 @@
 
 <img src="assets/images/annexes/annexes-A.png" alt=“DDD” height="500px">
 
+<div class="page"></div>
+
 ## Anexo B Trello de Sprint Backlogs
 
 - Link de Trello de Sprint Backlogs: https://short-link.me/11-Cx
 
 <img src="assets/images/annexes/annexes-B.jpg" alt=“DDD” height="600px">
+
+<div class="page"></div>
 
 ## Anexo C Diagrama de clases
 
@@ -18,11 +22,15 @@
 
 <img src="assets/images/annexes/annexes-C.png" alt=“DDD” height="700px">
 
+<div class="page"></div>
+
 ## Anexo D Event Storming
 
 - Link del Event Storming: https://shorturl.at/e40OQ
 
 <img src="assets/images/annexes/annexes-D.png" alt=“DDD” height="500px">
+
+<div class="page"></div>
 
 ## Anexo E Stratic Domain Driven Design
 
@@ -30,11 +38,15 @@
 
 <img src="assets/images/annexes/annexes-E.png" alt=“DDD” height="500px">
 
+<div class="page"></div>
+
 ## Anexo F Organizacion de GitHub
 
 - Link de la Organización GitHub: https://shorturl.at/tUbc6
 
 <img src="assets/images/annexes/annexes-F.png" alt=“DDD” height="500px">
+
+<div class="page"></div>
 
 ## Anexo G Video Exposición TB2
 
