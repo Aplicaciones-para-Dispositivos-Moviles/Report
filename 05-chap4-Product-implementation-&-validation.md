@@ -4139,6 +4139,11 @@ Durante este sprint se inició el desarrollo de la **aplicación Flutter multipl
 - Total de autores contribuyentes: **1**
 - Módulos funcionales completados: **Overview**, **Login and Register (autenticación)**
 - Observación: se completó la estructura base del proyecto Flutter y las primeras pantallas conectadas al backend, sirviendo como punto de partida para las funcionalidades avanzadas en el próximo sprint.
+### 4.2.2. Sprint 3
+
+#### 4.2.2.1. Sprint Planning 3
+
+#### 4.2.3.2. Sprint Backlog 3
 
 ## 4.3. Validation Interviews
 
