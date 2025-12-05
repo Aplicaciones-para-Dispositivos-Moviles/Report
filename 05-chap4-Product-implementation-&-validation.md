@@ -4140,9 +4140,9 @@ Durante este sprint se inició el desarrollo de la **aplicación Flutter multipl
 - Módulos funcionales completados: **Overview**, **Login and Register (autenticación)**
 - Observación: se completó la estructura base del proyecto Flutter y las primeras pantallas conectadas al backend, sirviendo como punto de partida para las funcionalidades avanzadas en el próximo sprint.
 
-## 4. 2. 3.  Sprint 3
+## 4.2.3.  Sprint 3
 
-### 4.2.3.1. Sprint Planning 3
+#### 4.2.3.1. Sprint Planning 3
 
 <table>
   <tr>
@@ -4199,7 +4199,7 @@ Durante este sprint se inició el desarrollo de la **aplicación Flutter multipl
   </tr>
 </table>
 
-### 4.2.3.2. Sprint Backlog 3
+#### 4.2.3.2. Sprint Backlog 3
 
 El objetivo principal de este tercer sprint es completar al 100% las aplicaciones móviles para ambos segmentos de usuarios (administradores de restaurantes y proveedores), integrando todas las funcionalidades pendientes con el backend y asegurando una experiencia de usuario completa y consistente. 
 
