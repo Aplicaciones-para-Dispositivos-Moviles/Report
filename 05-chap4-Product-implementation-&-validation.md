@@ -2668,7 +2668,7 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 - Total de _pull requests_ relacionadas: **13**
 - Pantallas core implementadas: **5**
 
-### 4.2.2. Sprint 2
+#### 4.2.2. Sprint 2
 
 #### 4.2.2.1. Sprint Planning 2
 
@@ -4140,6 +4140,362 @@ Durante este sprint se inició el desarrollo de la **aplicación Flutter multipl
 - Módulos funcionales completados: **Overview**, **Login and Register (autenticación)**
 - Observación: se completó la estructura base del proyecto Flutter y las primeras pantallas conectadas al backend, sirviendo como punto de partida para las funcionalidades avanzadas en el próximo sprint.
 
+### 4.2.3. Sprint 3
+
+#### 4.2.3.1. Sprint Planning 3
+
+<table>
+  <tr>
+    <td>Sprint #</td>
+    <td>Sprint 3</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Planning Background</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>2025-11-20</td>
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td>08:00 pm (GMT-5)</td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>Modalidad remota mediante la plataforma Discord</td>
+  </tr>
+  <tr>
+    <td>Prepared By</td>
+    <td>Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Attendees (to planning meeting)</td>
+    <td>Castro Alejos, Julio / Elescano Leon, Piero Hugo / Guerra Perez, José Jahaziel / Julca Minaya, Sergio Gino / Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Sprint 2 Review Summary</td>
+    <td>Durante el Sprint 2 se completó el 100% del backend desplegado en Render, se finalizó la aplicación Android para administradores de restaurantes con integración completa a la API, y se inició el desarrollo de la aplicación Flutter para proveedores con las pantallas de autenticación y overview funcionales.</td>
+  </tr>
+  <tr>
+    <td>Sprint 2 Retrospective Summary</td>
+    <td>El equipo identificó la necesidad de acelerar el desarrollo de la aplicación Flutter para proveedores y asegurar la paridad de funcionalidades entre ambas aplicaciones móviles. Se destacó la importancia de completar los flujos de órdenes bidireccionales y las funcionalidades de calificación y feedback.</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Goal & User Stories</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sprint 3 Goal</td>
+    <td>Nuestro enfoque está en completar al 100% las aplicaciones móviles tanto en Android (Kotlin) para administradores de restaurantes como en Flutter para proveedores, asegurando la integración total con el backend desplegado.  Además, implementar las funcionalidades pendientes de gestión de órdenes, calificaciones a proveedores, seguimiento de entregas y notificaciones inteligentes.  Creemos que esto ofrece una experiencia completa y fluida para ambos segmentos de usuarios, permitiendo la gestión integral del inventario, pedidos y relaciones comerciales entre restaurantes y proveedores.  Esto se confirmará cuando ambas aplicaciones móviles estén completamente funcionales, integradas con el backend y listas para despliegue en producción, con todos los flujos de usuario validados end-to-end. </td>
+  </tr>
+  <tr>
+    <td>Sprint 3 Velocity</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Sum of Story Points</td>
+    <td>42</td>
+  </tr>
+</table>
+
+#### 4.2.3.2. Sprint Backlog 3
+
+El objetivo principal de este tercer sprint es completar al 100% las aplicaciones móviles para ambos segmentos de usuarios (administradores de restaurantes y proveedores), integrando todas las funcionalidades pendientes con el backend y asegurando una experiencia de usuario completa y consistente. 
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Sprint #</strong></td>
+      <td colspan="7">Sprint 3</td>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>User Story</strong></td>
+      <td colspan="6"><strong>Work-item / Task</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Id</strong></td>
+      <td><strong>Title</strong></td>
+      <td><strong>Id</strong></td>
+      <td><strong>Title</strong></td>
+      <td><strong>Description</strong></td>
+      <td><strong>Estimation (Hours)</strong></td>
+      <td><strong>Assigned To</strong></td>
+      <td><strong>Status (To-do / In-Process / To-review / Done)</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-17</td>
+      <td rowspan="2">Seguimiento de una orden</td>
+      <td>T1</td>
+      <td>Implementar pantalla de seguimiento de órdenes (Flutter)</td>
+      <td>Desarrollar la interfaz para que proveedores puedan visualizar y actualizar el estado de las órdenes recibidas.</td>
+      <td>6</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T2</td>
+      <td>Integrar endpoints de actualización de estado</td>
+      <td>Conectar la pantalla con PUT /api/v1/orders/{id}/state para cambiar estados (pendiente, preparando, en camino, entregado).</td>
+      <td>4</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-18</td>
+      <td rowspan="2">Visualización de calificaciones recibidas</td>
+      <td>T3</td>
+      <td>Desarrollar pantalla de calificaciones (Flutter)</td>
+      <td>Crear interfaz para que proveedores visualicen comentarios y calificaciones de órdenes completadas.</td>
+      <td>5</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T4</td>
+      <td>Implementar cálculo de promedio de calificaciones</td>
+      <td>Mostrar el promedio total de calificaciones y listado histórico de feedback recibido.</td>
+      <td>3</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-19</td>
+      <td rowspan="2">Visualizar y gestionar órdenes recibidas</td>
+      <td>T5</td>
+      <td>Implementar listado de órdenes entrantes (Flutter)</td>
+      <td>Desarrollar pantalla que muestre todas las órdenes pendientes asignadas al proveedor con filtros por estado.</td>
+      <td>6</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T6</td>
+      <td>Agregar acciones de confirmar/rechazar orden</td>
+      <td>Implementar botones y lógica para confirmar o rechazar órdenes, notificando al restaurante.</td>
+      <td>4</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-20</td>
+      <td rowspan="2">Visualizar información específica de una orden</td>
+      <td>T7</td>
+      <td>Desarrollar pantalla de detalle de orden (Flutter)</td>
+      <td>Mostrar información completa de una orden: productos, cantidades, precios, dirección de entrega y notas.</td>
+      <td>5</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T8</td>
+      <td>Integrar con endpoint GET /api/v1/orders/{id}</td>
+      <td>Conectar la vista de detalle con el backend para obtener datos actualizados de la orden.</td>
+      <td>3</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-21</td>
+      <td rowspan="2">Registrar calificación a proveedor</td>
+      <td>T9</td>
+      <td>Implementar modal de calificación (Android)</td>
+      <td>Desarrollar interfaz para que administradores califiquen y comenten sobre proveedores tras recibir una orden.</td>
+      <td>5</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T10</td>
+      <td>Integrar endpoint POST /api/v1/feedback</td>
+      <td>Conectar el formulario de calificación con el backend para persistir la retroalimentación.</td>
+      <td>3</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-22</td>
+      <td rowspan="2">Gestión de proveedores registrados</td>
+      <td>T11</td>
+      <td>Desarrollar pantalla de listado de proveedores (Android)</td>
+      <td>Crear interfaz para visualizar proveedores disponibles con información de contacto y calificación promedio.</td>
+      <td>5</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T12</td>
+      <td>Implementar funcionalidad de eliminación de proveedor</td>
+      <td>Agregar opción para dejar de trabajar con un proveedor y actualizar la lista. </td>
+      <td>3</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-23</td>
+      <td rowspan="2">Visualizar información específica de proveedor</td>
+      <td>T13</td>
+      <td>Implementar pantalla de detalle de proveedor (Android)</td>
+      <td>Mostrar información completa del proveedor: catálogo de productos, calificación, datos de contacto. </td>
+      <td>4</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T14</td>
+      <td>Conectar con endpoints de proveedores y productos</td>
+      <td>Integrar la vista con GET /api/v1/proveedores/{id} y productos asociados.</td>
+      <td>3</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-24</td>
+      <td rowspan="2">Gestión de pedidos de insumos a proveedor</td>
+      <td>T15</td>
+      <td>Desarrollar flujo de creación de pedido (Android)</td>
+      <td>Implementar pantalla para seleccionar proveedor, productos, cantidades y generar un nuevo pedido.</td>
+      <td>6</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T16</td>
+      <td>Integrar con POST /api/v1/orders</td>
+      <td>Conectar el formulario de pedido con el backend y manejar confirmación/errores.</td>
+      <td>4</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-25</td>
+      <td rowspan="2">Visualización de órdenes enviadas a proveedores</td>
+      <td>T17</td>
+      <td>Implementar listado de órdenes enviadas (Android)</td>
+      <td>Desarrollar pantalla con historial de pedidos realizados, con filtros por estado y fecha.</td>
+      <td>5</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T18</td>
+      <td>Integrar con GET /api/v1/orders</td>
+      <td>Conectar la lista con el backend para obtener órdenes del usuario autenticado.</td>
+      <td>3</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-26</td>
+      <td rowspan="2">Visualizar información específica de una orden enviada</td>
+      <td>T19</td>
+      <td>Desarrollar pantalla de detalle de orden enviada (Android)</td>
+      <td>Mostrar información completa de la orden: insumos solicitados, estado actual, proveedor y fechas. </td>
+      <td>4</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T20</td>
+      <td>Implementar actualización de estado desde restaurante</td>
+      <td>Agregar funcionalidad para marcar orden como recibida desde la app del administrador.</td>
+      <td>3</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-27</td>
+      <td rowspan="2">Actualizar estado de una orden enviada a proveedor</td>
+      <td>T21</td>
+      <td>Implementar selector de estado de orden (Android)</td>
+      <td>Crear componente para actualizar el estado de una orden (en espera, recibido) con confirmación.</td>
+      <td>4</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T22</td>
+      <td>Sincronizar cambio de estado con backend</td>
+      <td>Integrar con PUT /api/v1/orders/{id}/state y actualizar inventario si aplica.</td>
+      <td>4</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-28</td>
+      <td rowspan="2">Visualización del historial de inventario</td>
+      <td>T23</td>
+      <td>Desarrollar pantalla de historial de movimientos (Android)</td>
+      <td>Mostrar registro de cambios en inventario: ventas, compras, ajustes manuales con fechas y cantidades.</td>
+      <td>5</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T24</td>
+      <td>Implementar filtros por rango de fechas</td>
+      <td>Agregar selector de fechas para filtrar el historial de movimientos de inventario.</td>
+      <td>3</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-05</td>
+      <td rowspan="2">Gestión integral de notificaciones de inventario</td>
+      <td>T25</td>
+      <td>Implementar centro de notificaciones (Android)</td>
+      <td>Desarrollar pantalla de notificaciones con alertas de vencimiento, bajo stock y exceso de inventario.</td>
+      <td>5</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T26</td>
+      <td>Integrar con sistema de push notifications</td>
+      <td>Configurar OneSignal para recibir notificaciones en tiempo real sobre eventos de inventario.</td>
+      <td>4</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-07</td>
+      <td rowspan="2">Gestionar productos en el inventario (Proveedor)</td>
+      <td>T27</td>
+      <td>Desarrollar CRUD de productos (Flutter)</td>
+      <td>Implementar pantallas para que proveedores gestionen su catálogo de productos: crear, editar, eliminar.</td>
+      <td>6</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T28</td>
+      <td>Integrar con endpoints de supplies del proveedor</td>
+      <td>Conectar las operaciones CRUD con el backend para persistir cambios en el catálogo. </td>
+      <td>4</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-36</td>
+      <td rowspan="2">Marcar estado de entrega (Proveedor)</td>
+      <td>T29</td>
+      <td>Implementar actualización de estado de entrega (Flutter)</td>
+      <td>Desarrollar funcionalidad para que proveedores marquen el progreso de entrega de pedidos.</td>
+      <td>4</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T30</td>
+      <td>Notificar al restaurante sobre cambios de estado</td>
+      <td>Integrar notificaciones push para informar al administrador sobre actualizaciones de entrega. </td>
+      <td>3</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+  </tbody>
+</table>
+
 #### 4.2.3.5. Execution Evidence for Sprint Review
 
 En este último sprint, el equipo se enfocó en la **consolidación final del sistema**, corrigiendo errores detectados en los artefactos anteriores, completando el desarrollo de la aplicación Flutter para proveedores y realizando mejoras específicas en el backend para asegurar estabilidad, consistencia y compatibilidad con ambos clientes móviles.
@@ -4297,6 +4653,7 @@ El trabajo realizado durante este sprint incluyó:
 - Total de autores contribuyentes: **2**
 - Módulos completados: **Login**, **Overview**, **Navegación y Estado**, **Integración Backend**
 - Observación: la aplicación Flutter alcanzó su primera versión completa, estable y plenamente funcional, convirtiéndose en el segundo cliente oficial del ecosistema Restock Platform.
+
 
 ## 4.3. Validation Interviews
 
