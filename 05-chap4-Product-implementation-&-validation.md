@@ -4140,6 +4140,92 @@ Durante este sprint se inició el desarrollo de la **aplicación Flutter multipl
 - Módulos funcionales completados: **Overview**, **Login and Register (autenticación)**
 - Observación: se completó la estructura base del proyecto Flutter y las primeras pantallas conectadas al backend, sirviendo como punto de partida para las funcionalidades avanzadas en el próximo sprint.
 
+#### 4.2.3.5. Execution Evidence for Sprint Review
+
+En este último sprint, el equipo se enfocó en la **consolidación final del sistema**, corrigiendo errores detectados en los artefactos anteriores, completando el desarrollo de la aplicación Flutter para proveedores y realizando mejoras específicas en el backend para asegurar estabilidad, consistencia y compatibilidad con ambos clientes móviles.
+
+Este sprint representa la etapa de cierre técnico previo al Release Review del TF1 y reúne todas las mejoras finales necesarias para garantizar la correcta operación del ecosistema Restock Platform.
+
+### Backend (API) — Estado: 100% operativo y refinado en Sprint 3
+
+**Alcance entregado (Sprint 3)**
+
+Durante este sprint se realizaron ajustes y mejoras orientadas a optimizar la comunicación tanto con la **aplicación Android de administradores** como con la **aplicación Flutter de proveedores**, garantizando la integridad del flujo de datos y la estabilidad del servicio. Las actualizaciones principales fueron:
+
+- Corrección de inconsistencias en modelos de datos utilizados por Android y Flutter.
+- Refinamiento de respuestas HTTP para mejorar manejo de errores en ambas apps.
+- Ajustes en endpoints de *Supplies*, *Recipes* y *Profiles* para mejorar validaciones.
+- Optimización general del comportamiento de los controladores.
+- Actualización final de la documentación en Swagger (OpenAPI 3.1).
+- Limpieza y estandarización de DTOs y respuestas paginadas.
+- Pruebas finales del despliegue y estabilidad del servidor en Render.
+
+**Qué se demuestra en el video (Sprint 3)**
+
+- Validación de los endpoints corregidos.
+- Revisiones finales en Swagger y comportamiento del backend.
+- Funcionamiento estable con ambas aplicaciones móviles.
+
+![Execution Backend S3](assets/images/cap4/sprint3/execution/backend_exec_s3.png)
+
+---
+
+### Aplicación Móvil (Administrador de Restaurantes — Android)  
+**Estado: 100% completada, corregida y validada**
+
+**Alcance entregado (Sprint 3)**
+
+En este sprint se realizaron **correcciones finales** necesarias para consolidar la experiencia de los administradores de restaurantes. Entre los ajustes completados se encuentran:
+
+- Corrección de fallos en el módulo *Supplies* relacionados con actualizaciones de Custom Supplies.
+- Ajustes de navegación y manejo de estado en pantallas con múltiples flujos.
+- Corrección del manejo de recetas y sus insumos asociados.
+- Ajustes en el módulo *Sales* (validaciones, filtrado y render de listas).
+- Refinamiento del proceso de autenticación y actualización del perfil.
+- Aseguramiento del consumo correcto de endpoints corregidos en el backend.
+- Optimización visual de listas, tarjetas y formularios.
+- Mejoras en mensajes de error, loaders, feedback visual y vacíos (“no data”).
+
+**Qué se demuestra en el video (Sprint 3)**
+
+- Flujos corregidos y funcionando sin errores.
+- Interfaz final con ajustes visuales aplicados.
+- Conectividad estable con el backend.
+- Validación de CRUD completo de Supplies, Recipes y Sales.
+
+![Execution Android S3](assets/images/cap4/sprint3/execution/android_exec_s3.png)
+
+### Aplicación Móvil (Proveedores — Flutter)  
+**Estado: 100% completada, integrada y desplegada**
+
+**Alcance entregado (Sprint 3)**
+
+Durante este sprint se completó al 100% la **aplicación móvil Flutter** destinada a proveedores de restaurantes. El trabajo incluyó:
+
+- Finalización del módulo de autenticación y persistencia segura de sesión.
+- Implementación completa de las pantallas principales para proveedores.
+- Integración total con el backend mediante servicios organizados con **Dio**.
+- Estructuración definitiva del proyecto bajo el patrón **MVVM**.
+- Manejo de estado con **Provider** totalmente implementado.
+- Optimización de navegación, layouts y manejo de excepciones.
+- Implementación de listas dinámicas basadas en datos reales del backend.
+- Validación del flujo principal del proveedor:
+  - Inicio de sesión  
+  - Vista principal (overview)  
+  - Gestión de productos y abastecimiento (si aplica)  
+  - Visualización de estados y datos remotos  
+
+Además, la aplicación fue **desplegada como APK** para pruebas y validación final en dispositivos reales.
+
+**Qué se demuestra en el video (Sprint 3)**
+
+- Flujo completo de login y navegación estable.
+- Integración total con los endpoints corregidos del backend.
+- Operación fluida de las pantallas terminadas.
+- Comportamiento final en entorno productivo.
+
+![Execution Flutter S3](assets/images/cap4/sprint3/execution/flutter_exec_s3.png)
+
 ## 4.3. Validation Interviews
 
 ### 4.3.1. Diseño de Entrevistas
