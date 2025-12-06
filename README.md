@@ -1,47 +1,63 @@
-<div id="cover-page">
-
----
-
-# **Informe de Trabajo Final**
-
----
-
+<div style="text-align: center;" id="cover-page">
+<br>
 <img src="assets/images/presentation/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
 
-_Universidad Peruana de Ciencias Aplicadas_
+**_Universidad Peruana de Ciencias Aplicadas_**
 
-_Ingeniería de Software_
+**_Ingeniería de Software_**
 
-_2025-20_
+_**Periodo:** 2025-20_
 
-**Curso:** _Aplicaciones para Dispositivos Móviles - 12617_
+_**Curso:**  1ACC0238 - Aplicaciones para Dispositivos Móviles_
 
-_Sección 12617_
+_**NRC:** 12617_
 
-_Prof. Jorge Luis, Mayta Guillermo_
+_**Docente:** Prof. Jorge Luis, Mayta Guillermo_
 
-## Nombre del Startup
+### Informe de Trabajo Final
 
-**Nombre:** _UI-Topic_
+_**Startup:** UI-Topic_
 
-## Nombre del Producto
+_**Producto:** Restock_
 
-**Producto:** _Restock_
+### Relación de Integrantes
 
-## Relación de Integrantes
-
-|  Código  |       Apellidos y Nombres       |
-| :--------: | :------------------------------: |
-| u202021885 |       Castro Alejos, Julio       |
-| u202313354 |    Elescano Leon, Piero Hugo    |
-| u202319831 |   Guerra Perez, José Jahaziel   |
-| u202318274 |    Julca Minaya, Sergio Gino    |
-| u202319448 | Shapiama Rivera, Gabriela Nicole |
+<div style="text-align: left; display: inline-block; margin-top: 0px;">
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center;">Código</th>
+      <th style="text-align: center;">Apellidos y Nombres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">u202021885</td>
+      <td style="text-align: center;">Castro Alejos, Julio</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">u202313354</td>
+      <td style="text-align: center;">Elescano Leon, Piero Hugo</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">u202319831</td>
+      <td style="text-align: center;">Guerra Perez, José Jahaziel</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">u202318274</td>
+      <td style="text-align: center;">Julca Minaya, Sergio Gino</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">u202319448</td>
+      <td style="text-align: center;">Shapiama Rivera, Gabriela Nicole</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ---
 
-**Mes y Año**
-_Agosto 2025_
+_**Mes y Año**: Diciembre 2025_
 
 </div>
 
