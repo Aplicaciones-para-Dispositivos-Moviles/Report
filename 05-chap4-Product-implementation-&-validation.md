@@ -5670,6 +5670,87 @@ La documentación completa de todos los endpoints (incluyendo las optimizaciones
 
 Las optimizaciones implementadas durante el Sprint 3 permitieron alcanzar una estabilidad del 100% en producción, eliminando prácticamente todos los errores de integración reportados por ambas aplicaciones móviles. Esto garantiza una experiencia unificada, robusta y confiable tanto para los administradores de restaurantes (Android) como para los proveedores (Flutter), consolidando la plataforma Restock como un sistema listo para operación real.
 
+#### 4.2.3.7. Software Deployment Evidence for Sprint Review 
+
+A continuación, se describen las actividades realizadas durante el Sprint 3 para asegurar el correcto despliegue y funcionamiento del servicio backend y de la aplicación Android. Debido a que el despliegue se ejecutó nuevamente en la misma plataforma, se reutilizaron y ajustaron los pasos establecidos previamente.
+
+## Despliegue del Backend en Render y conexión con MongoDB Atlas
+
+1. **Creación del clúster en MongoDB Atlas**  
+   Se configuró un clúster dedicado para la base de datos del proyecto, asegurando disponibilidad y conexión estable con el backend.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_1.png" alt="Home" width="500px">
+
+2. **Conexión del repositorio con Render**  
+   Se generó un nuevo servicio en Render, enlazándolo directamente con el repositorio GitHub del backend para manejar el despliegue automático.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_2.png" alt="Home" width="600px">
+
+3. **Selección de la rama principal (`main`)**  
+   Render fue configurado para tomar la rama `main` como fuente del deploy continuo, facilitando actualizaciones futuras.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_3.png" alt="Home" width="600px">
+
+4. **Configuración de variables de entorno**  
+   Se registraron manualmente las variables de entorno necesarias para la conexión con MongoDB y para la ejecución del backend en Render.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_4.png" alt="Home" width="600px">
+
+5. **Habilitación de Swagger en producción**  
+   Dentro del archivo `OpenApiConfiguration.java`, se habilitó el contexto necesario para exponer la documentación Swagger en el entorno desplegado.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_5.png" alt="Home" width="600px">
+
+6. **Ejecución automática del despliegue**  
+   Render inició el proceso de build y despliegue al detectar cambios en la rama configurada. Se revisaron los logs para confirmar el arranque sin errores.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_6.png" alt="Home" width="600px">
+
+7. **Validación mediante Swagger**  
+   Se ingresó a `/swagger/index.html` dentro del dominio generado para comprobar la correcta disponibilidad y funcionamiento de los endpoints.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_7.png" alt="Home" width="600px">
+
+
+## Despliegue de la aplicación Android mediante Firebase App Distribution
+
+1. **Creación del proyecto Firebase**  
+   Se generó un nuevo proyecto en Firebase para administrar la distribución de la aplicación Android durante las pruebas.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android1.png" alt="Home" width="600px">
+
+2. **Selección de plataforma Android en App Distribution**  
+   Desde App Distribution, se escogió la opción correspondiente para iniciar el proceso de registro de la app.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android2.png" alt="Home" width="600px">
+
+3. **Registro del paquete de la aplicación**  
+   Se ingresó el nombre del paquete del proyecto para crear y asociar la app al entorno Firebase.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android3.png" alt="Home" width="600px">
+
+4. **Integración de Firebase con la aplicación**  
+   Se completaron los últimos pasos de configuración para vincular el proyecto Android con Firebase.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android4.png" alt="Home" width="600px">
+
+5. **Carga del APK para distribución**  
+   El archivo APK generado en el Sprint 3 fue cargado en la sección de App Distribution para la fase de pruebas.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android5.png" alt="Home" width="600px">
+
+6. **Envío de la aplicación a los testers**  
+   Se seleccionaron los evaluadores y se distribuyó la aplicación desde Firebase.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android6.png" alt="Home" width="600px">
+
+7. **Confirmación de solicitud de descarga**  
+   Se evidencia la notificación enviada a los testers para proceder con la descarga de la nueva versión de la app.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android7.png" alt="Home" width="600px">
+
+
+
 #### 4.2.3.8. Team Collaboration Insights during Sprint 
 
 ##### Backend (API)
