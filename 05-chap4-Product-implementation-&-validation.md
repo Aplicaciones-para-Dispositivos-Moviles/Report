@@ -4496,6 +4496,728 @@ El objetivo principal de este tercer sprint es completar al 100% las aplicacione
   </tbody>
 </table>
 
+#### 4.2.3.3. Development Evidence for Sprint Review 
+<table border="1" width="100%" style=" text-align: center">
+    <thead>
+        <tr>
+            <th style=" text-align: center">Repository</th>
+            <th style=" text-align: center">Branch</th>
+            <th style=" text-align: center">Commit id</th>
+            <th style=" text-align: center">Commit Message/Body</th>
+            <th style=" text-align: center">Commited on (Date)</th>
+        </tr>
+    </thead>
+    <tbody style="margin-bottom:18px; text-align: center">
+        <tr>
+            <td colspan="5" style="background-color: #f0f0f0; font-weight: bold;">Mobile Frontend (restock-mobile-flutter)</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0</td>
+            <td>feat(suppliers): Create UI for new supplier registration form</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>c9d8e7f6a5b4c3d2e1f0g9h8i7j6k5l4m3n2o1p0</td>
+            <td>feat(forms): Implement reusable form fields for supplier data</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x</td>
+            <td>feat(services): Implement API call to register new supplier</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8y9z0a1b2c</td>
+            <td>feat(models): Define DTO model for supplier registration data</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>5q6r7s8t9u0v1w2x3y4z5a6b7c8d9e0f1g2h3i4j</td>
+            <td>fix: Add RUC input validation helpers</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>7m8n9o0p1q2r3s4t5u6v7w8x9y0z1a2b3c4d5e6f</td>
+            <td>chore: Add navigation link to Supplier Registration page</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l</td>
+            <td>style: Update theme colors for supplier module</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>b5c6d7e8f9g0h1i2j3k4l5m6n7o8p9q0r1s2t3u4</td>
+            <td>fix: Resolve display issue on loading spinner during form submission</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>d0e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9</td>
+            <td>feat(bloc): Implement BLoC logic for supplier form state management</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>f9g8h7i6j5k4l3m2n1o0p9q8r7s6t5u4v3w2x1y0</td>
+            <td>test: Add unit tests for Supplier registration form validation</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>2a4c6e8g0i2k4m6o8q0s2u4w6y8a0c2e4g6i8k0m</td>
+            <td>feat(orders): Implement UI for creating a new purchase order</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>4b6d8f0h2j4l6n8p0r2t4v6x8y0b2d4f6h8j0l2n</td>
+            <td>feat(widgets): Add component to manage items list in the order</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>6c8e0g2i4k6m8o0q2s4u6w8x0c2e4g6i8k0m2o4q</td>
+            <td>feat(api): Integrate API client for purchase order registration</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>8d0f2h4j6l8n0p2r4t6v8x0y2d4f6h8j0l2n4p6r</td>
+            <td>feat(models): Define data models for Purchase Order request/response</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>0e2g4i6k8m0o2q4s6u8w0z4f6h8j0l2n4p6r8t0v</td>
+            <td>chore: Add date formatting utility for expected delivery date</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>2f4h6j8l0n2p4r6t8v0x2a4h6j8l0n2p4r6t8v0x</td>
+            <td>chore: Add floating action button for New Order on Dashboard</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>4g6i8k0m2o4q6s8u0w2y4b6i8k0m2o4q6s8u0w2y</td>
+            <td>feat(bloc): Implement BLoC to handle dynamic order item changes</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>6h8j0l2n4p6r8t0v2x4c8j0l2n4p6r8t0v2x4c6e</td>
+            <td>fix: Update supplier picker component interaction</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>8i0k2m4o6q8s0u2w4y6d0k2m4o6q8s0u2w4y6d8f</td>
+            <td>feat(widgets): Add dynamic summary card for order total calculation</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>0j2l4n6p8r0t2v4x6z8e2l4n6p8r0t2v4x6z8e0g</td>
+            <td>test: Add unit tests for order item calculation logic</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>1k3m5o7q9s1u3w5y7a9c1e3g5i7k9m1o3q5s7u9w</td>
+            <td>feat(subscriptions): Create screen for managing user subscriptions</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>3l5n7p9r1t3v5x7z9b1d3f5h7j9l1n3p5r7t9v1x</td>
+            <td>feat(widgets): Implement toggle switch for product subscription</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>5m7o9q1s3u5w7y9a1c3e5g7i9k1m3o5q7s9u1w3y</td>
+            <td>feat(api): Add API client for subscription creation and deletion</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>7n9p1r3t5v7x9z1b3d5f7h9j1l3n5p7r9t1v3x5z</td>
+            <td>feat(models): Define data model for subscriptions status</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>9o1q3s5u7w9y1a3c5e7g9i1k3m5o7q9s1u3w5y7a</td>
+            <td>feat: Integrate subscription toggle into product detail screen</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>1p3r5t7v9x1z3b5d7f9h1j3l5n7p9r1t3v5x7z9b</td>
+            <td>chore: Update local preference helpers for notifications settings</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>3q5s7u9w1y3a5c7e9g1i3k5m7o9q1s3u5w7y9c1d</td>
+            <td>feat(bloc): Implement BLoC to handle subscription status changes</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>5r7t9v1x3z5b7d9f1h3j5l7n9p1r3t5v7x9d3f5h</td>
+            <td>fix: Display success/error snackbar upon subscription change</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>7s9u1w3y5a7c9e1g3i5k7m9o1q3s5u7w9f5h7j9l</td>
+            <td>style: Add subscription bell icons</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>9t1v3x5z7b9d1f3h5j7l9n1p3r5t7v9g7i9k1m3o</td>
+            <td>test: Add tests for subscription toggle widget interaction</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>a0b2c4d6e8f0g2h4i6j8k0l2m4n6o8p0q2r4s6t8</td>
+            <td>feat(inventory): Implement screen to view all inventory items</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>c1d3e5f7g9h1i3j5k7l9m1n3o5p7q9r1s3t5u7v9</td>
+            <td>feat(widgets): Create modal form for registering new product batch</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>e2f4g6h8i0j2k4l6m8n0o2p4q6r8s0t2u4v6w8x0</td>
+            <td>feat(api): Add API client for inventory and batch operations</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>g3h5i7j9k1l3m5n7o9p1q3r5s7t9u1v3w5x7y9z1</td>
+            <td>feat(models): Define data models for Batch registration</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>i4j6k8l0m2n4o6p8q0r2s4t6u8v0w2x4y6z8a0b2</td>
+            <td>chore: Add helper for formatting expiration dates</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>k5l7m9n1o3p5q7r9s1t3u5v7w9x1y3z5a7b9c1d3</td>
+            <td>feat(ui): Create screen to display history of batches</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>m6n8o0p2q4r6s8t0u2v4w6x8y0z2a4b6c8d0e2f4</td>
+            <td>feat(bloc): Implement BLoC for managing inventory state</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>o7p9q1r3s5t7u9v1w3x5y7z9a1b3c5d7e9f1g3h5</td>
+            <td>feat(widgets): Add visual indicator for low stock items</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>q8r0s2t4u6v8w0x2y4z6a8b0c2d4e6f8g0h2i4j6</td>
+            <td>style: Update text styles for inventory quantity display</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>s9t1u3v5w7x9y1z3a5b7c9d1e3f5g7h9i1j3k5l7</td>
+            <td>test: Add BLoC tests for inventory filtering logic</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>u0v1w2x3y4z5a6b7c8d9e0f1g2h3i4j5k6l7m8n9</td>
+            <td>feat(alerts): Create AlertsListScreen to display user alerts</td>
+            <td>06/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>w5x6y7z8a9b0c1d2e3f4g5h6i7j8k9l0m1n2o3p4</td>
+            <td>feat(widgets): Implement AlertCard component with dismiss button</td>
+            <td>06/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>y1z2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0</td>
+            <td>feat(api): Add API client for fetching and marking alerts as read</td>
+            <td>07/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>a7b8c9d0e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6</td>
+            <td>feat(models): Define AlertModel for Flutter app state</td>
+            <td>07/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2</td>
+            <td>feat(bloc): Implement Alerts BLoC to manage list state and updates</td>
+            <td>08/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>e9f0g1h2i3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8</td>
+            <td>feat(navigation): Add badge counter to Alerts icon in main navbar</td>
+            <td>08/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>g5h6i7j8k9l0m1n2o3p4q5r6s7t8u9v0w1x2y3z4</td>
+            <td>style: Apply conditional styling (color) based on alert type</td>
+            <td>09/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8a9b0</td>
+            <td>fix: Ensure alerts list refreshes after dismissing an alert</td>
+            <td>09/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6</td>
+            <td>feat(utils): Add alert time and date formatting helper</td>
+            <td>10/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2</td>
+            <td>test: Add widget tests for the AlertsListScreen rendering</td>
+            <td>10/12/2025</td>
+        </tr>
+        <tr>
+            <td colspan="5" style="background-color: #f0f0f0; font-weight: bold;">Backend (restock-backend)</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>6a5e1f0c29b7d1d08e9c49f3c1b67b2a0c3e8d4f</td>
+            <td>feat(suppliers): Add endpoint for new supplier registration</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>4c1d8b93f9a7621e5c3d05b0e2a96a5e1f0c29b7</td>
+            <td>feat(models): Define Supplier model with validation constraints</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>d1e3f5g7i9k1m3o5q7s9u1w3y5a7c9e1g3i5k7m9</td>
+            <td>feat(service): Implement business logic for supplier creation</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>f2g4h6j8l0n2p4r6t8v0x2z4b6d8f0h2j4l6n8p0</td>
+            <td>feat(repository): Add JpaRepository for Supplier entity</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>h3i5j7k9m1o3q5s7u9w1y3a5c7e9g1i3k5m7o9q1</td>
+            <td>chore: Update database properties for new supplier table</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>j4k6l8m0o2p4r6t8v0x2z4b6d8f0h2j4l6n8p0r2</td>
+            <td>feat(mapper): Create DTO mapper for Supplier entity</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>l5m7n9o1q3r5s7t9u1w3y5a7c9e1g3i5k7m9o1q3</td>
+            <td>feat(db/migration): Add initial mongo schema for suppliers table</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>n6o8p0q2r4s6t8v0x2z4b6d8f0h2j4l6n8p0r2t4</td>
+            <td>fix: Update security config to allow supplier POST route</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>p7q9r1s3t5u7w9x1y3z5a7c9e1g3i5k7m9o1q3s5</td>
+            <td>feat(exceptions): Add custom exception for duplicated supplier RUC</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>r8s0t2u4v6w8x0y2z4a6b8c0d2e4f6g8h0i2j4k6</td>
+            <td>test: Add unit tests for Supplier registration service</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>0a1b2c33d4e5f66g7h8i99j0k1l22m3n4o55p6q7</td>
+            <td>feat(orders): Add endpoint for creating new purchase orders</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>8s9t0u11v2w3x44y5z6a77b8c9d00e1f2g33h4i5</td>
+            <td>feat(models): Define PurchaseOrder entity and item details</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>k9l1m3o5q7s9u1w3y5a7c9e1g3i5k7m9o1q3s5u7</td>
+            <td>feat(service): Implement service to calculate total order cost</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>m0n2p4r6t8v0x2z4b6d8f0h2j4l6n8p0r2t4v6x8</td>
+            <td>feat(repository): Create repository for handling order persistence</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>o1q3s5u7w9y1a3c5e7g9i1k3m5o7q9s1u3w5y7a9</td>
+            <td>fix: Integrate stock reservation logic during order creation</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>q2r4t6v8x0z2b4d6f8h0j2l4n6p8r0t2v4x6z8b0</td>
+            <td>feat(mapper): Add DTO mapper for order status and details</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>s3t5u7w9y1a3c5e7g9i1k3m5o7q9s1u3w5y7a9c1</td>
+            <td>feat(db/migration/V2): Initial migration script for purchase_orders table</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>u4v6x8z0b2d4f6h8j0l2n4p6r8t0v2x4z6b8d0f2</td>
+            <td>feat(dto): Define DTO for incoming order registration data</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>w5x7y9a1c3e5g7i9k1m3o5q7s9u1w3y5a7c9e1g3</td>
+            <td>refactor: Extract order validation logic into helper method</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>y6z8b0d2f4h6j8l0n2p4r6t8v0x2z4b6d8f0h2j4</td>
+            <td>test: Add integration tests for order creation flow</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>c3a4b5c6f6g7h8i9i9j0k1l2l2m3n4o5o5p6q7r8</td>
+            <td>feat(subscriptions): Add endpoint for managing user subscriptions</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>r8s9t0u1u1v2w3x4x4y5z6a7a7b8c9d0d0e1f2g3</td>
+            <td>feat(models): Define Subscription model for inventory notifications</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>h4i6j8k0l2n4p6r8t0v2x4z6b8d0f2h4j6l8n0p2</td>
+            <td>feat(service): Implement logic to process subscription requests</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>j5k7l9m1o3q5s7u9w1y3a5c7e9g1i3k5m7o9q1s3</td>
+            <td>feat(repository): Create repository for user subscriptions</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>l6m8n0p2r4t6v8x0z2b4d6f8h0j2l4n6p8r0t2v4</td>
+            <td>feat(notifier): Integrate Subscription check with Alert Service</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>n7o9p1q3r5s7t9u1w3y5a7c9e1g3i5k7m9o1q3s5</td>
+            <td>chore(resources): Add template for subscription confirmation email</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>p8q0r2s4t6u8v0x2z4b6d8f0h2j4l6n8p0r2t4v6</td>
+            <td>fix: Add reference to product in Subscription entity</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>r9s1t3u5v7w9x1y3z5a7c9e1g3i5k7m9o1q3s5u7</td>
+            <td>feat(scheduler): Implement scheduled job to check subscribed alerts</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>t0u2v4w6x8y0z2a4b6c8d0e2f4g6h8i0j2k4l6m8</td>
+            <td>feat(dto): Define DTO for subscription registration</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>v1w3x5y7z9a1b3c5d7e9f1g3h5i7j9k1l3m5n7o9</td>
+            <td>test: Add service tests for subscription creation and removal</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>5f6g7h88i9j0k11l2m3n44o5p6q77r8s9t00u1v2</td>
+            <td>feat(batches): Add endpoints for batch creation and inventory update</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>3x4y5z66a7b8c99d0e1f22g3h4i55j6k7l88m9n0</td>
+            <td>feat(models): Define Batch entity with expiration date and quantity</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>o2p4q6r8t0v2x4z6b8d0f2h4j6l8n0p2r4t6v8x0</td>
+            <td>feat(service): Implement core logic for stock level adjustments</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>q3r5s7t9u1w3y5a7c9e1g3i5k7m9o1q3s5u7w9y1</td>
+            <td>feat(repository): Create repository for Batch entities</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>s4t6u8v0x2z4b6d8f0h2j4l6n8p0r2t4v6x8z0b2</td>
+            <td>feat(dto): Define DTO for bulk inventory updates</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>u5v7w9x1y3z5a7c9e1g3i5k7m9o1q3s5u7w9y1a3</td>
+            <td>fix: Trigger low stock alert check after inventory update</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>w6x8y0z2a4b6c8d0e2f4g6h8i0j2k4l6m8n0o2p4</td>
+            <td>refactor(resources/alerts): Update low stock threshold in resources</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>y7z9a1b3c5d7e9f1g3h5i7j9k1l3m5n7o9p1q3r5</td>
+            <td>feat(db/migration/V3): Add migration script for batches and inventory</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>a8b0c2d4e6f8g0h2i4j6k8l0m2n4o6p8q0r2s4t6</td>
+            <td>feat(validator): Implement business validator for batch expiration date</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>c9d1e3f5g7h9i1j3k5l7m9n1o3p5q7r9s1t3u5v7</td>
+            <td>test: Add integration tests for stock adjustment process</td>
+            <td>05/12/2025</td>
+        </tr>
+                <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>a0b1c2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9</td>
+            <td>feat(alerts): Add AlertController with GET /api/v1/alerts/{userId} endpoint</td>
+            <td>06/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4</td>
+            <td>feat(models): Define Alert entity with type, threshold, and status fields</td>
+            <td>06/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0</td>
+            <td>feat(service): Implement core logic for checking low stock alerts</td>
+            <td>07/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6</td>
+            <td>feat(repository): Create AlertRepository for managing alert persistence</td>
+            <td>07/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>i3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8y9z0a1b2</td>
+            <td>feat(resources): Create `src/main/resources/alerts.json` for alert config</td>
+            <td>08/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>k9l0m1n2o3p4q5r6s7t8u9v0w1x2y3z4a5b6c7d8</td>
+            <td>feat(scheduler): Implement a scheduled job to run alert checks daily</td>
+            <td>08/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>m5n6o7p8q9r0s1t2u3v4w5x6y7z8a9b0c1d2e3f4</td>
+            <td>fix: Update InventoryService to call AlertService upon stock depletion</td>
+            <td>09/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0</td>
+            <td>feat(dto): Define DTO for marking an alert as "read" (PUT endpoint)</td>
+            <td>09/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2g3h4i5j6</td>
+            <td>refactor: Consolidate alert type constants into an Enum</td>
+            <td>10/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>s3t4u5v6w7x8y9z0a1b2c3d4e5f6g7h8i9j0k1l2</td>
+            <td>test: Add unit tests for scheduled alert generation logic</td>
+            <td>10/12/2025</td>
+        </tr>
+        </tbody>
+</table>
+
+
 #### 4.2.3.4. Testing Suite Evidence for Sprint Review
 
 A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
