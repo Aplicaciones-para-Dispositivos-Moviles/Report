@@ -53,3 +53,15 @@
 - Link del video: https://drive.google.com/drive/folders/1CMhJrgJB3TtqhftKHbo4hGs5nWxApzfd?usp=sharing
 
 <img src="assets/images/annexes/annexes-G.png" alt=“DDD” height="500px">
+
+## Anexo H Video About the Team 
+
+- Link del video: https://youtu.be/KrsjIP4Q0gA?si=F6yenv8QVfBHazOk
+
+## Anexo I Video About the Product - Android 
+
+- Link del video: https://youtu.be/REKL5xWLfiU
+
+## Anexo J Video About the Product - Flutter 
+
+- Link del video: https://youtu.be/V6TO7UBEsTM
