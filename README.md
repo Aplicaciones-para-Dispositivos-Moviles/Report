@@ -1,49 +1,67 @@
-<div id="cover-page">
-
----
-
-# **Informe de Trabajo Final**
-
----
-
+<div style="text-align: center;" id="cover-page">
+<br>
 <img src="assets/images/presentation/logo-upc.png" alt="Logo UPC" style="width: 150px; height: auto;" />
 
-_Universidad Peruana de Ciencias Aplicadas_
+**_Universidad Peruana de Ciencias Aplicadas_**
 
-_Ingeniería de Software_
+**_Ingeniería de Software_**
 
-_2025-20_
+_**Periodo:** 2025-20_
 
-**Curso:** _Aplicaciones para Dispositivos Móviles - 12617_
+_**Curso:**  1ACC0238 - Aplicaciones para Dispositivos Móviles_
 
-_Sección 12617_
+_**NRC:** 12617_
 
-_Prof. Jorge Luis, Mayta Guillermo_
+_**Docente:** Prof. Jorge Luis, Mayta Guillermo_
 
-## Nombre del Startup
+### Informe de Trabajo Final
 
-**Nombre:** _UI-Topic_
+_**Startup:** UI-Topic_
 
-## Nombre del Producto
+_**Producto:** Restock_
 
-**Producto:** _Restock_
+### Relación de Integrantes
 
-## Relación de Integrantes
-
-|  Código  |       Apellidos y Nombres       |
-| :--------: | :------------------------------: |
-| u202021885 |       Castro Alejos, Julio       |
-| u202313354 |    Elescano Leon, Piero Hugo    |
-| u202319831 |   Guerra Perez, José Jahaziel   |
-| u202318274 |    Julca Minaya, Sergio Gino    |
-| u202319448 | Shapiama Rivera, Gabriela Nicole |
+<div style="text-align: left; display: inline-block; margin-top: 0px;">
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center;">Código</th>
+      <th style="text-align: center;">Apellidos y Nombres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">u202021885</td>
+      <td style="text-align: center;">Castro Alejos, Julio</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">u202313354</td>
+      <td style="text-align: center;">Elescano Leon, Piero Hugo</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">u202319831</td>
+      <td style="text-align: center;">Guerra Perez, José Jahaziel</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">u202318274</td>
+      <td style="text-align: center;">Julca Minaya, Sergio Gino</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">u202319448</td>
+      <td style="text-align: center;">Shapiama Rivera, Gabriela Nicole</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ---
 
-**Mes y Año**
-_Agosto 2025_
+_**Mes y Año**: Diciembre 2025_
 
 </div>
+
+<div class="page"></div>
 
 ## Registro de Versiones
 
@@ -59,6 +77,16 @@ _Agosto 2025_
 |     2.3     | 07/10/25 | Jahaziel Guerra   | Se redactó analisis competitivo, User Stories, Ubiquitous Language, Product Backlog y Software Architecture Deployment Diagrams.                                        |
 |     2.4     | 07/10/25 | Sergio Julca      | Mobile Applications Wireflow Diagrams, Diseño de Entrevistas, Registro de Entrevistas yDevelopment Evidence for Sprint Review.                                          |
 |     2.5     | 07/10/25 | Gabriela Shapiama | Registro de Versiones del Informe, Labelling Systems, Software Development Environment Configuration, Sprint Planning 1, Software Deployment Evidence.                   |
+|     3.1     | 12/11/25 | Julio Castro      | Execution Evidence for Sprint Review 2, Team Collaboration Insights during Sprint 2 y Video About the product   |
+|     3.2     | 12/11/25 | Piero Elescano    | Sprint Backlog 2 y anexos.                 |
+|     3.3     | 12/11/25 | Jahaziel Guerra   | Testing Suite Evidence for Sprint Review 2, Services Documentation Evidence for Sprint Review 2, Evaluaciones segun heuristicas.                                        |
+|     3.4     | 13/11/25 | Sergio Julca      | Evaluaciones según heurísticas, Development Evidence for Sprint Review 2, Bibliografia, conclusiones y recomendaciones.                      |
+|     3.5     | 13/11/25 | Gabriela Shapiama | Software Deployment Evidence for Sprint Review 2, formato documento y Desarrollo de entrevistas.       |
+|     4.1     | 02/12/25 | Julio Castro      | Execution Evidence for Sprint Review 3, Team Collaboration Insights during Sprint 3, Video About the product y Desarrollo de entrevistas.  |
+|     4.2     | 03/12/25 | Piero Elescano    | Sprint Backlog 3 y anexos.                 |
+|     4.3     | 03/12/25 | Jahaziel Guerra   | Testing Suite Evidence for Sprint Review 3, Services Documentation Evidence for Sprint Review 3, Evaluaciones segun heuristicas.                                        |
+|     4.4     | 03/12/25 | Sergio Julca      | Evaluaciones según heurísticas, Development Evidence for Sprint Review 3, Bibliografia, conclusiones y recomendaciones.                      |
+|     4.5     | 03/12/25 | Gabriela Shapiama | Software Deployment Evidence for Sprint Review 3, formato documento y Desarrollo de entrevistas.       |
 
 # Project Report Collaboration Insights
 
@@ -112,6 +140,17 @@ En cuanto al **Project Report**, se incluyeron los siguientes apartados requerid
 - **Capítulo IV: Product Implementation & Validation**, que detalla la configuración del entorno de desarrollo, gestión de código, planificación del sprint y evidencias de implementación.
 - Además, se añadieron las secciones de **Conclusiones**, **Bibliografía** y **Anexos**, completando la estructura formal del informe para el *Stage Review*.
 
+![Colaboraciones TP1](assets/images/ci-tp1.png)
+
+- **Julio Castro Alejos (`JulioXC4`)**: 14 commits
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 18 commits
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 21 commits
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 15 commits
+- **Piero Hugo Elescano León (`PieroHugo`)**: 17 commits
+- **Total de commits en TP1:** 85
+
+La colaboración fue activa y equitativa, con aportes sustanciales de todos los integrantes en la redacción y organización del informe.
+
 ## TB2 – Actualización del Informe, Despliegue y Consolidación del Producto (Sprint 2) - (Semana 12)
 
 Durante este sprint, el equipo concentró sus esfuerzos en la **actualización integral del informe**, la **finalización del desarrollo de los módulos restantes**, y el **despliegue completo de los componentes principales del sistema**. Asimismo, se elaboraron las primeras versiones de los videos requeridos y se inició el desarrollo de la versión multiplataforma en **Flutter**.  
@@ -138,14 +177,63 @@ Asimismo, se elaboraron las **primeras versiones de los videos** solicitados par
 
 ![Colaboraciones TB2](assets/images/ci-tb2.png)
 
-- **Julio Castro Alejos (`JulioXC4`)**: 14 commits
-- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 20 commits
-- **Sergio Gino Julca Minaya (`sergioJM05`)**: 15 commits
-- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 28 commits
-- **Piero Hugo Elescano León (`PieroHugo`)**: 22 commits
-- **Total de commits en TB1:** 50
+- **Julio Castro Alejos (`JulioXC4`)**: 7 commits
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 2 commits
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 4 commits
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 3 commits
+- **Piero Hugo Elescano León (`PieroHugo`)**: 6 commits
+- **Total de commits en TB2:** 21
 
 El trabajo del equipo se mantuvo alineado con la planificación del *Sprint 2*, documentando tanto el progreso técnico como el proceso de validación. La colaboración se organizó mediante *commits* individuales y revisiones de *pull requests*, reforzada por reuniones de coordinación y seguimiento en Discord.
+
+## TF1 – Release Review, Cierre del Informe, Validación Final y Despliegues Completos (Semana 15)
+
+En este hito final, el equipo consolidó todas las actividades técnicas, documentales y de validación necesarias para completar el producto y dejarlo apto para su despliegue final. Durante la **Release Review**, se revisaron y corrigieron todos los artefactos previamente presentados, asegurando consistencia técnica, cumplimiento de los criterios de evaluación y alineación con los objetivos del proyecto Restock.
+
+Como parte de las actividades centrales del TF1, se elaboró la **versión actualizada y definitiva del Project Report**, la cual incluyó:
+
+- **Registro de Versiones del Informe** actualizado con los cambios efectuados en las semanas finales.
+- Una **sección ampliada de Project Report Collaboration Insights**, consolidando commits, pull requests, revisiones y evidencia de trabajo colaborativo.
+- La **versión final de Student Outcomes**, integrando reflexiones individuales y competencias adquiridas.
+- La versión final del **Capítulo IV: Product Implementation & Validation**, incluyendo el Sprint 3 y sus evidencias.
+- La integración definitiva de **Conclusiones, Bibliografía y Anexos**, completando la estructura final del informe conforme a los lineamientos del curso.
+
+En cuanto al **despliegue del producto**, el equipo logró entregar todos los componentes funcionales requeridos para el proyecto:
+
+- La **Landing Page** quedó desplegada públicamente en su versión final.
+- El **Backend** se desplegó al 100% en un servidor público, manteniendo su documentación completa mediante Swagger.
+- La **Aplicación Móvil Android** (desarrollada para *administradores de restaurantes*) quedó completamente funcional y distribuida mediante **Firebase App Distribution**, permitiendo pruebas reales en dispositivos móviles.
+- La **Aplicación Móvil Flutter** (desarrollada para *proveedores*) fue completada durante este hito y desplegada exitosamente, integrándose con los servicios del backend y mostrando las funcionalidades clave para el flujo de abastecimiento.
+
+Asimismo, se presentaron las **versiones finales de los videos** requeridos:
+
+- Video de validación de la aplicación.
+- Video About-the-Product.
+- Video About-the-Team.
+
+También se perfeccionaron los artefactos técnicos del Sprint 3, integrando evidencias de pruebas, documentación complementaria y capturas finales de las aplicaciones desplegadas.
+
+![Colaboraciones TF1](assets/images/ci-tf1.png)
+
+- **Julio Castro Alejos (`JulioXC4`)**: x commits 
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: x commits  
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: x commits 
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: x commits  
+- **Piero Hugo Elescano León (`PieroHugo`)**: x commits
+
+El trabajo del equipo se mantuvo enfocado en asegurar un cierre técnico y documental impecable. La coordinación entre los integrantes permitió refinar la calidad de ambas aplicaciones móviles (Android para administradores y Flutter para proveedores), mejorar artefactos previos y garantizar que el sistema desplegado cumpliera con las funcionalidades y requisitos establecidos en el *product backlog*. Las actividades realizadas durante este hito reflejan una ejecución madura, consistente y alineada con las prácticas profesionales del desarrollo de software.
+
+
+![Colaboraciones TF1](assets/images/ci-tf1.png)
+
+- **Julio Castro Alejos (`JulioXC4`)**: 20 actividades completadas  
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 20 actividades completadas  
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 20 actividades completadas  
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 20 actividades completadas  
+- **Piero Hugo Elescano León (`PieroHugo`)**: 20 actividades completadas  
+- **Total de actividades en TF1:** 100 (100% completadas)
+
+El trabajo del equipo se mantuvo enfocado en asegurar un cierre técnico y documental impecable. La coordinación entre los integrantes permitió refinar la calidad de la aplicación, mejorar artefactos previos y garantizar que el sistema desplegado cumpliera con las funcionalidades y requisitos establecidos en el *product backlog*. Las actividades realizadas durante este hito reflejan una ejecución madura, consistente y alineada con las prácticas profesionales del desarrollo de software.
 
 
 ## Herramientas colaborativas utilizadas
@@ -317,16 +405,36 @@ El trabajo del equipo se mantuvo alineado con la planificación del *Sprint 2*, 
   * [4.1.4 Software Deployment Configuration](05-chap4-product-implementation-&-validation.md#414-software-deployment-configuration)
 * [4.2 Landing Page & Mobile Application Implementation](05-chap4-product-implementation-&-validation.md#42-landing-page--mobile-application-implementation)
 
-  * [4.2.1 Sprint n](05-chap4-product-implementation-&-validation.md#421-sprint-n)
+  * [4.2.1 Sprint 1](05-chap4-product-implementation-&-validation.md#421-sprint-1)
 
-    * [4.2.1.1 Sprint Planning n](05-chap4-product-implementation-&-validation.md#4211-sprint-planning-n)
-    * [4.2.1.2 Sprint Backlog n](05-chap4-product-implementation-&-validation.md#4212-sprint-backlog-n)
+    * [4.2.1.1 Sprint Planning 1](05-chap4-product-implementation-&-validation.md#4211-sprint-planning-1)
+    * [4.2.1.2 Sprint Backlog 1](05-chap4-product-implementation-&-validation.md#4212-sprint-backlog-1)
     * [4.2.1.3 Development Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4213-development-evidence-for-sprint-review)
     * [4.2.1.4 Testing Suite Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4214-testing-suite-evidence-for-sprint-review)
     * [4.2.1.5 Execution Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4215-execution-evidence-for-sprint-review)
     * [4.2.1.6 Services Documentation Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4216-services-documentation-evidence-for-sprint-review)
     * [4.2.1.7 Software Deployment Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4217-software-deployment-evidence-for-sprint-review)
     * [4.2.1.8 Team Collaboration Insights during Sprint](05-chap4-product-implementation-&-validation.md#4218-team-collaboration-insights-during-sprint)
+  * [4.2.2 Sprint 2](05-chap4-product-implementation-&-validation.md#422-sprint-2)
+    * [4.2.2.1 Sprint Planning 2](05-chap4-product-implementation-&-validation.md#4221-sprint-planning-2)
+    * [4.2.2.2 Sprint Backlog 2](05-chap4-product-implementation-&-validation.md#4222-sprint-backlog-2)
+    * [4.2.2.3 Development Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4223-development-evidence-for-sprint-review)
+    * [4.2.2.4 Testing Suite Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4224-testing-suite-evidence-for-sprint-review)
+    * [4.2.2.5 Execution Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4225-execution-evidence-for-sprint-review)
+    * [4.2.2.6 Services Documentation Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4226-services-documentation-evidence-for-sprint-review)
+    * [4.2.2.7 Software Deployment Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4227-software-deployment-evidence-for-sprint-review)
+    * [4.2.2.8 Team Collaboration Insights during Sprint](05-chap4-product-implementation-&-validation.md#4228-team-collaboration-insights-during-sprint)
+  * [4.2.3 Sprint 3](05-chap4-product-implementation-&-validation.md#423-sprint-3)
+    * [4.2.3.1 Sprint Planning 3](05-chap4-product-implementation-&-validation.md#4231-sprint-planning-3)
+    * [4.2.3.2 Sprint Backlog 3](05-chap4-product-implementation-&-validation.md#4232-sprint-backlog-3)
+    * [4.2.3.3 Development Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4233-development-evidence-for-sprint-review)
+    * [4.2.3.4 Testing Suite Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4234-testing-suite-evidence-for-sprint-review)
+    * [4.2.3.5 Execution Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4235-execution-evidence-for-sprint-review)
+    * [4.2.3.6 Services Documentation Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4236-services-documentation-evidence-for-sprint-review)
+    * [4.2.3.7 Software Deployment Evidence for Sprint Review](05-chap4-product-implementation-&-validation.md#4237-software-deployment-evidence-for-sprint-review)
+    * [4.2.3.8 Team Collaboration Insights during Sprint](05-chap4-product-implementation-&-validation.md#4238-team-collaboration-insights-during-sprint)
+
+  
 * [4.3 Validation Interviews](05-chap4-product-implementation-&-validation.md#43-validation-interviews)
 
   * [4.3.1 Diseño de Entrevistas](05-chap4-product-implementation-&-validation.md#431-diseño-de-entrevistas)
@@ -360,8 +468,9 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | -------------------- | ------------------ | ------------- |
-| **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.** | **Julio Castro Alejos** <br />TB1: Segmentos objetivo: Aplicó métodos de identificación de usuarios y mercados relevantes.<br />Diseño y registro de entrevistas : Aprendió técnicas de levantamiento de información cualitativa.<br />User Journey Mapping : Desarrolló habilidades de representación de experiencias de usuario para mejorar el diseño de soluciones.<br /><br />**TP1:** <br />Project Report Collaboration Insights: Fortaleció habilidades de documentación colaborativa en entornos GitHub.<br />Mobile Applications Prototyping: Aprendió a integrar diseño UX con desarrollo móvil en Android Studio y Kotlin.<br />Source Code Management: Aplicó principios de control de versiones y ramas temáticas.<br />Team Collaboration Insights: Adquirió conocimientos sobre métricas de colaboración y flujos de revisión de código.<br />Bounded Context Resource (Backend): Profundizó en el uso de APIs REST y estructura por dominios.<br />Interfaz móvil para Supplies: Aplicó buenas prácticas de consumo de APIs y manejo de listas dinámicas.<br /><br />**TB2:** <br />Actualización del Project Report: Documentó la versión final del informe integrando evidencias de despliegue, videos y validaciones.<br />Desarrollo completo del módulo de Inventario (Supplies) en Android: Finalizó la implementación, pruebas y conexión con backend.<br />Refactorización y optimización del Backend: Mejoró la estructura de controladores, servicios y repositorios en Spring Boot.<br />Avance en la aplicación Flutter: Inició el desarrollo de una versión multiplataforma con configuración de entorno y pantallas base.<br />Videos About the Product y About the Team: Participó en la grabación y revisión de los videos de validación y presentación del proyecto.<br /><br />**Piero Hugo Elescano Leon** <br />TB1: Descripción de la Startup : Estudió la estructura de negocio digital como base del proyecto.<br />Lean UX Hypothesis Statements : Aplicó nuevas técnicas para plantear hipótesis y validar supuestos.<br />Estrategias frente a competidores : Adquirió nociones de benchmarking estratégico.<br />User Personas y Empathy Mapping : Profundizó en metodologías de caracterización de usuarios.<br /><br />**TP1:** <br />SEO Tags and Meta Tags: Aprendió conceptos de optimización SEO y metadatos para visibilidad web.<br />Sprint Backlog 1: Desarrolló competencias en planificación y priorización ágil.<br />Software Deployment Configuration: Aplicó conocimientos en despliegue y configuración de entornos.<br />Interfaz móvil de Sales (Parte 1): Profundizó en estructuras de UI dinámicas y comunicación con backend.<br />Landing Page Mockups y código: Mejoró conocimientos en diseño responsivo y arquitectura web.<br />Bounded Context Monitoring: Aprendió sobre seguimiento de procesos y monitoreo de datos desde backend.<br /><br />**TB2:** <br />Sprint Backlog 2 y corrección de despliegues: Colaboró en la planificación y actualización del entorno productivo.<br />Desarrollo del módulo de Suscripciones (Subscriptions): Participó en el modelado de su bounded context y en la integración con backend.<br />Optimización de la Landing Page desplegada: Ajustó secciones visuales y metadatos SEO en el entorno público.<br />Apoyo en los videos de entrega: Contribuyó en la edición del video About the Team.<br /><br />**José Jahaziel Guerra Pérez** <br />TB1: Antecedentes y problemática : Investigó conceptos clave del sector gastronómico y tecnológico.<br />Análisis competitivo : Aprendió a comparar fortalezas y debilidades frente al mercado.<br />Ubiquitous Language : Incorporó conocimientos de DDD para uniformizar términos del proyecto.<br />Product Backlog : Aplicó prácticas de gestión ágil en el levantamiento de requerimientos.<br /><br />**TP1:** <br />Source Code Style Guide & Conventions: Aplicó estándares de codificación profesional en Java y Kotlin.<br />Mobile Mock-ups: Aprendió a traducir prototipos visuales a vistas funcionales móviles.<br />Testing Suite Evidence: Incorporó buenas prácticas de pruebas de software y validación.<br />Services Documentation: Desarrolló habilidades de documentación técnica para APIs REST.<br />Interfaces de Recipes (CRUD): Integró operaciones de base de datos con interfaz móvil.<br />Bounded Contexts (Planning, Profiles, Identity): Aplicó principios de DDD en el desarrollo backend con MongoDB.<br /><br />**TB2:** <br />Testing Suite y validación de endpoints: Implementó pruebas de integración para los servicios del backend desplegado.<br />Actualización del módulo Recipes en Android: Culminó la integración con el backend y validación de flujos CRUD.<br />Corrección de documentación Swagger: Ajustó la descripción de rutas y modelos para mayor consistencia técnica.<br />Apoyo en grabación del video About the Product: Participó mostrando la interacción del usuario con la aplicación móvil.<br /><br />**Sergio Gino Julca Minaya** <br />TB1: Lean UX Problem Statements y Assumptions : Practicó la definición de problemas y supuestos.<br />Análisis de entrevistas : Adquirió experiencia en síntesis de datos cualitativos.<br />Context Mapping : Incorporó técnicas para identificar relaciones entre actores y procesos.<br />User Task Matrix : Estructuró las tareas de usuarios en función de objetivos de negocio.<br /><br />**TP1:** <br />Wireflow Diagrams: Aprendió a representar flujos interactivos en prototipos móviles.<br />Diseño y Registro de Entrevistas: Fortaleció habilidades de documentación y análisis de validaciones.<br />Development Evidence: Incorporó estrategias de recolección de evidencia técnica.<br />Interfaz móvil de Sales (Parte 2): Adquirió experiencia en operaciones CRUD con backend.<br />Bounded Context Monitoring: Aplicó control de seguimiento de eventos y procesos.<br /><br />**TB2:** <br />Finalización del módulo Sales en Android: Implementó y probó las operaciones de venta integradas al backend.<br />Evaluación de usabilidad heurística: Aplicó criterios de Nielsen para evaluar la interfaz móvil.<br />Corrección de evidencias de desarrollo: Revisó documentación y capturas para el Sprint Review.<br />Colaboración en el video de validación: Explicó el flujo principal del sistema y sus mejoras.<br /><br />**Gabriela Nicole Shapiama Rivera** <br />TB1: Lean UX Canvas : Aprendió a integrar problemas, hipótesis y métricas en un marco visual.<br />Competidores : Desarrolló habilidades de análisis comparativo.<br />Registro de entrevistas : Practicó técnicas de documentación y organización de hallazgos.<br />Impact Mapping : Profundizó en la representación de impactos y objetivos estratégicos.<br /><br />**TP1:** <br />Registro de Versiones del Informe: Consolidó conocimientos sobre control documental y versionamiento colaborativo.<br />Labelling Systems: Aprendió a estructurar taxonomías y sistemas de etiquetas en UI.<br />Software Development Environment Configuration: Aplicó conceptos de configuración de entornos multi-producto.<br />Sprint Planning 1: Fortaleció su capacidad de organización y liderazgo ágil.<br />Software Deployment Evidence: Aprendió a documentar despliegues y flujos de entrega.<br />CRUD de Supplies (Mobile): Integró conocimientos de UI/UX con programación funcional en Kotlin.<br /><br />**TB2:** <br />Actualización del Registro de Versiones y Student Outcomes: Coordinó la actualización completa del informe y su documentación técnica.<br />Despliegue completo del Backend: Lideró la publicación del backend en un entorno público con documentación en Swagger.<br />Evidencias de Deployment y Testing: Documentó resultados de pruebas y evidencias de integración final.<br />Desarrollo del módulo Orders en Android: Implementó su funcionalidad y validó la comunicación con la base de datos en MongoDB Atlas.<br />Planificación del Sprint 2: Coordinó actividades y validaciones del equipo para la entrega final.<br />Participación en videos de entrega: Dirigió la grabación y presentación del video About the Team.<br /> | **TB1:**<br />Cada integrante incorporó nuevos conceptos y metodologías (Lean UX, entrevistas, análisis competitivo, mapeos, backlog ágil). Esto fortaleció su capacidad de adquirir conocimientos aplicables en la construcción del proyecto, alineando investigación, diseño estratégico y gestión de software.<br /><br />**TP1:**<br />Durante el segundo hito, los miembros ampliaron sus conocimientos técnicos y metodológicos al trabajar con herramientas de desarrollo profesional (Spring Boot, MongoDB, Android Studio, Kotlin) y técnicas de documentación colaborativa (GitHub, reportes técnicos, control de versiones). La integración entre diseño, backend y desarrollo móvil demostró una aplicación práctica del aprendizaje continuo y la capacidad de adaptación tecnológica.<br /><br />**TB2:**<br />En este tercer hito, el equipo consolidó el aprendizaje adquirido y lo aplicó en la fase final del proyecto. Se completaron los módulos móviles, el backend fue desplegado en un entorno público y se elaboraron las evidencias audiovisuales del producto. La incorporación de Flutter marcó una ampliación de competencias hacia el desarrollo multiplataforma, demostrando capacidad de adaptación, actualización tecnológica y autonomía profesional. |
-| **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.** | **Julio Castro Alejos** <br />TB1: Detectó la importancia del aprendizaje continuo al aplicar entrevistas y journey mapping para identificar nuevas necesidades de usuarios.<br /><br />**TP1:** <br />Reconoció la necesidad de actualización constante al integrar backend y app móvil, adaptando flujos y modelos a nuevas tecnologías (Kotlin, REST APIs).<br /><br />**TB2:** <br />Reforzó su compromiso con el aprendizaje permanente al actualizar el informe final, documentar el despliegue del backend y participar en la creación de videos demostrativos, aplicando nuevas técnicas de comunicación técnica y presentación de producto.<br /><br />**Piero Hugo Elescano Leon** <br />TB1: Comprendió que el aprendizaje permanente es clave al generar hipótesis Lean UX y analizar competidores de manera iterativa.<br /><br />**TP1:** <br />Identificó la importancia del aprendizaje continuo al documentar SEO y aplicar despliegues en distintos entornos, comprendiendo el valor de la optimización constante en proyectos reales.<br /><br />**TB2:** <br />Reconoció la necesidad de actualizar conocimientos al trabajar con nuevos módulos backend y coordinar despliegues, fortaleciendo su comprensión sobre entornos de producción y documentación técnica.<br /><br />**José Jahaziel Guerra Perez** <br />TB1: Reconoció que debe actualizarse constantemente al investigar antecedentes, problemáticas y aplicar backlog en metodologías ágiles.<br /><br />**TP1:** <br />Reafirmó la necesidad del aprendizaje permanente al enfrentarse a configuraciones de backend complejas y aplicar nuevas convenciones de estilo de código profesional.<br /><br />**TB2:** <br />Demostró aprendizaje permanente al implementar pruebas automatizadas y corregir documentación técnica, consolidando habilidades en mantenimiento y aseguramiento de calidad de software.<br /><br />**Julca Minaya, Sergio Gino** <br />TB1: Entendió la importancia del aprendizaje continuo al analizar entrevistas y usar context mapping para representar dinámicas cambiantes.<br /><br />**TP1:** <br />Reconoció la necesidad de aprendizaje permanente al incorporar nuevas herramientas para wireflows, evidencias técnicas y conexión entre interfaz y backend.<br /><br />**TB2:** <br />Reafirmó la importancia del aprendizaje continuo al aplicar evaluaciones heurísticas de usabilidad y realizar mejoras en la interfaz móvil, demostrando la aplicación práctica de metodologías de evaluación profesional.<br /><br />**Gabriela Nicole Shapiama Rivera** <br />TB1: Reafirmó la necesidad del aprendizaje permanente mediante el uso de herramientas de diseño estratégico (Lean UX Canvas, Impact Mapping) y el registro de entrevistas.<br /><br />**TP1:** <br />Demostró aprendizaje continuo al asumir liderazgo en la documentación, planificación y despliegue, gestionando procesos técnicos complejos y guiando la integración de nuevos conocimientos dentro del equipo.<br /><br />**TB2:** <br />Consolidó su rol de liderazgo en la gestión documental y despliegue, demostrando una actitud de aprendizaje constante al coordinar procesos técnicos y mantener la coherencia del producto final. | **TB1:**<br />El equipo evidenció que el aprendizaje permanente es indispensable. La investigación constante, la validación de supuestos y la aplicación de metodologías ágiles y de diseño estratégico muestran cómo el conocimiento debe renovarse y ampliarse de manera continua para el éxito de un proyecto de software.<br /><br />**TP1:**<br />El equipo reafirmó su compromiso con el aprendizaje permanente al integrar tecnologías nuevas, frameworks y prácticas profesionales en la construcción de sus productos. La capacidad de adaptarse a nuevas herramientas y documentarlas correctamente evidenció un proceso de formación continua alineado al perfil del ingeniero de software.<br /><br />**TB2:**<br />Durante esta fase, los integrantes demostraron un alto nivel de autonomía y aprendizaje permanente al culminar el desarrollo, desplegar servicios en producción y ampliar el alcance tecnológico del proyecto. La aplicación de buenas prácticas de documentación, despliegue y validación de producto consolidó su perfil profesional orientado a la mejora continua. |
+| **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.** | **Julio Castro Alejos** <br />TB1: Segmentos objetivo: Aplicó métodos de identificación de usuarios y mercados relevantes.<br />Diseño y registro de entrevistas : Aprendió técnicas de levantamiento de información cualitativa.<br />User Journey Mapping : Desarrolló habilidades de representación de experiencias de usuario para mejorar el diseño de soluciones.<br /><br />**TP1:** <br />Project Report Collaboration Insights: Fortaleció habilidades de documentación colaborativa en entornos GitHub.<br />Mobile Applications Prototyping: Aprendió a integrar diseño UX con desarrollo móvil en Android Studio y Kotlin.<br />Source Code Management: Aplicó principios de control de versiones y ramas temáticas.<br />Team Collaboration Insights: Adquirió conocimientos sobre métricas de colaboración y flujos de revisión de código.<br />Bounded Context Resource (Backend): Profundizó en el uso de APIs REST y estructura por dominios.<br />Interfaz móvil para Supplies: Aplicó buenas prácticas de consumo de APIs y manejo de listas dinámicas.<br /><br />**TB2:** <br />Actualización del Project Report: Documentó la versión final del informe integrando evidencias de despliegue, videos y validaciones.<br />Desarrollo completo del módulo de Inventario (Supplies) en Android: Finalizó la implementación, pruebas y conexión con backend.<br />Refactorización y optimización del Backend: Mejoró la estructura de controladores, servicios y repositorios en Spring Boot.<br />Avance en la aplicación Flutter: Inició el desarrollo de una versión multiplataforma con configuración de entorno y pantallas base.<br />Videos About the Product y About the Team: Participó en la grabación y revisión de los videos de validación y presentación del proyecto.<br /><br />**TF1:**<br />Durante el desarrollo del TF1, reforzó su capacidad de actualización tecnológica al completar todas sus responsabilidades, integrando evidencias técnicas del Sprint Review 3, consolidando su dominio en el módulo de Inventario tanto en Android como en Flutter y aplicando nuevas estrategias de documentación audiovisual. Profundizó en el trabajo colaborativo, fortaleciendo la conexión entre mobile y backend, y aplicó métodos de levantamiento de información al realizar entrevistas adicionales para enriquecer la validación del producto.<br /><br /><br />**Piero Hugo Elescano Leon** <br />TB1: Descripción de la Startup : Estudió la estructura de negocio digital como base del proyecto.<br />Lean UX Hypothesis Statements : Aplicó nuevas técnicas para plantear hipótesis y validar supuestos.<br />Estrategias frente a competidores : Adquirió nociones de benchmarking estratégico.<br />User Personas y Empathy Mapping : Profundizó en metodologías de caracterización de usuarios.<br /><br />**TP1:** <br />SEO Tags and Meta Tags: Aprendió conceptos de optimización SEO y metadatos para visibilidad web.<br />Sprint Backlog 1: Desarrolló competencias en planificación y priorización ágil.<br />Software Deployment Configuration: Aplicó conocimientos en despliegue y configuración de entornos.<br />Interfaz móvil de Sales (Parte 1): Profundizó en estructuras de UI dinámicas y comunicación con backend.<br />Landing Page Mockups y código: Mejoró conocimientos en diseño responsivo y arquitectura web.<br />Bounded Context Monitoring: Aprendió sobre seguimiento de procesos y monitoreo de datos desde backend.<br /><br />**TB2:** <br />Sprint Backlog 2 y corrección de despliegues: Colaboró en la planificación y actualización del entorno productivo.<br />Desarrollo del módulo de Suscripciones (Subscriptions): Participó en el modelado de su bounded context y en la integración con backend.<br />Optimización de la Landing Page desplegada: Ajustó secciones visuales y metadatos SEO en el entorno público.<br />Apoyo en los videos de entrega: Contribuyó en la edición del video About the Team.<br /><br />**TF1:**<br />En el TF1 fortaleció su capacidad para integrar nuevos conocimientos al liderar actividades de planificación avanzada del Sprint 3, mejorar la arquitectura del módulo de Suscripciones en Flutter y actualizar componentes clave del backend asociados al monitoreo. Profundizó en la comprensión de flujo de ventas al completar el módulo móvil de Sales y reforzó competencias de comunicación técnica mediante su participación en la elaboración del video del equipo.<br /><br /><br />**José Jahaziel Guerra Pérez** <br />TB1: Antecedentes y problemática : Investigó conceptos clave del sector gastronómico y tecnológico.<br />Análisis competitivo : Aprendió a comparar fortalezas y debilidades frente al mercado.<br />Ubiquitous Language : Incorporó conocimientos de DDD para uniformizar términos del proyecto.<br />Product Backlog : Aplicó prácticas de gestión ágil en el levantamiento de requerimientos.<br /><br />**TP1:** <br />Source Code Style Guide & Conventions: Aplicó estándares de codificación profesional en Java y Kotlin.<br />Mobile Mock-ups: Aprendió a traducir prototipos visuales a vistas funcionales móviles.<br />Testing Suite Evidence: Incorporó buenas prácticas de pruebas de software y validación.<br />Services Documentation: Desarrolló habilidades de documentación técnica para APIs REST.<br />Interfaces de Recipes (CRUD): Integró operaciones de base de datos con interfaz móvil.<br />Bounded Contexts (Planning, Profiles, Identity): Aplicó principios de DDD en el desarrollo backend con MongoDB.<br /><br />**TB2:** <br />Testing Suite y validación de endpoints: Implementó pruebas de integración para los servicios del backend desplegado.<br />Actualización del módulo Recipes en Android: Culminó la integración con el backend y validación de flujos CRUD.<br />Corrección de documentación Swagger: Ajustó la descripción de rutas y modelos para mayor consistencia técnica.<br />Apoyo en grabación del video About the Product: Participó mostrando la interacción del usuario con la aplicación móvil.<br /><br />**TF1:**<br />En el TF1 demostró un progreso significativo en su capacidad para adquirir nuevos conocimientos al realizar evaluaciones heurísticas avanzadas, consolidar la documentación técnica del backend y ampliar funcionalidades en Flutter mediante la implementación del módulo de Profiles. Elabora evidencias técnicas para el Sprint Review 3, fortaleciendo su dominio en validación, pruebas, documentación y desarrollo móvil consistente.<br /><br /><br />**Sergio Gino Julca Minaya** <br />TB1: Lean UX Problem Statements y Assumptions : Practicó la definición de problemas y supuestos.<br />Análisis de entrevistas : Adquirió experiencia en síntesis de datos cualitativos.<br />Context Mapping : Incorporó técnicas para identificar relaciones entre actores y procesos.<br />User Task Matrix : Estructuró las tareas de usuarios en función de objetivos de negocio.<br /><br />**TP1:** <br />Wireflow Diagrams: Aprendió a representar flujos interactivos en prototipos móviles.<br />Diseño y Registro de Entrevistas: Fortaleció habilidades de documentación y análisis de validaciones.<br />Development Evidence: Incorporó estrategias de recolección de evidencia técnica.<br />Interfaz móvil de Sales (Parte 2): Adquirió experiencia en operaciones CRUD con backend.<br />Bounded Context Monitoring: Aplicó control de seguimiento de eventos y procesos.<br /><br />**TB2:** <br />Finalización del módulo Sales en Android: Implementó y probó las operaciones de venta integradas al backend.<br />Evaluación de usabilidad heurística: Aplicó criterios de Nielsen para evaluar la interfaz móvil.<br />Corrección de evidencias de desarrollo: Revisó documentación y capturas para el Sprint Review.<br />Colaboración en el video de validación: Explicó el flujo principal del sistema y sus mejoras.<br /><br />**TF1:**<br />Durante el TF1 reforzó su actualización profesional al implementar mejoras avanzadas en el backend, ampliando los bounded contexts de Recursos mediante alertas y calificaciones. Desarrolló nuevas capacidades en Flutter al integrar estos módulos en la aplicación y fortaleció su capacidad de evaluación y documentación al entregar evidencias completas para el Sprint Review 3. Su participación en el video del equipo complementó su aprendizaje en comunicación técnica.<br /><br /><br />**Gabriela Nicole Shapiama Rivera** <br />TB1: Lean UX Canvas : Aprendió a integrar problemas, hipótesis y métricas en un marco visual.<br />Competidores : Desarrolló habilidades de análisis comparativo.<br />Registro de entrevistas : Practicó técnicas de documentación y organización de hallazgos.<br />Impact Mapping : Profundizó en la representación de impactos y objetivos estratégicos.<br /><br />**TP1:** <br />Registro de Versiones del Informe: Consolidó conocimientos sobre control documental y versionamiento colaborativo.<br />Labelling Systems: Aprendió a estructurar taxonomías y sistemas de etiquetas en UI.<br />Software Development Environment Configuration: Aplicó conceptos de configuración de entornos multi-producto.<br />Sprint Planning 1: Fortaleció su capacidad de organización y liderazgo ágil.<br />Software Deployment Evidence: Aprendió a documentar despliegues y flujos de entrega.<br />CRUD de Supplies (Mobile): Integró conocimientos de UI/UX con programación funcional en Kotlin.<br /><br />**TB2:** <br />Actualización del Registro de Versiones y Student Outcomes: Coordinó la actualización completa del informe y su documentación técnica.<br />Despliegue completo del Backend: Lideró la publicación del backend en un entorno público con documentación en Swagger.<br />Evidencias de Deployment y Testing: Documentó resultados de pruebas y evidencias de integración final.<br />Desarrollo del módulo Orders en Android: Implementó su funcionalidad y validó la comunicación con la base de datos en MongoDB Atlas.<br />Planificación del Sprint 2: Coordinó actividades y validaciones del equipo para la entrega final.<br />Participación en videos de entrega: Dirigió la grabación y presentación del video About the Team.<br /><br />**TF1:**<br />En el TF1 consolidó su rol de liderazgo técnico al revisar y perfeccionar el formato final del informe, aplicar correcciones en los módulos de Orders para Android y Flutter, y dirigir la documentación y evidencias de despliegue para el Sprint Review 3. Aumentó su dominio en despliegues reales al gestionar la publicación final del backend y fortaleció habilidades de coordinación al liderar actividades audiovisuales y técnicas del equipo.<br /> | **TB1:**<br />Cada integrante incorporó nuevos conceptos y metodologías (Lean UX, entrevistas, análisis competitivo, mapeos, backlog ágil). Esto fortaleció su capacidad de adquirir conocimientos aplicables en la construcción del proyecto, alineando investigación, diseño estratégico y gestión de software.<br /><br />**TP1:**<br />Durante el segundo hito, los miembros ampliaron sus conocimientos técnicos y metodológicos al trabajar con herramientas de desarrollo profesional (Spring Boot, MongoDB, Android Studio, Kotlin) y técnicas de documentación colaborativa (GitHub, reportes técnicos, control de versiones). La integración entre diseño, backend y desarrollo móvil demostró una aplicación práctica del aprendizaje continuo y la capacidad de adaptación tecnológica.<br /><br />**TB2:**<br />En este tercer hito, el equipo consolidó el aprendizaje adquirido y lo aplicó en la fase final del proyecto. Se completaron los módulos móviles, el backend fue desplegado en un entorno público y se elaboraron las evidencias audiovisuales del producto. La incorporación de Flutter marcó una ampliación de competencias hacia el desarrollo multiplataforma, demostrando capacidad de adaptación, actualización tecnológica y autonomía profesional.<br /><br />**TF1:**<br />En el último hito, los integrantes integraron nuevos conocimientos mediante la ejecución de actividades avanzadas en backend, Flutter, Android y documentación técnica. El desarrollo de evidencias audiovisuales, la consolidación de Sprint Review 3 y la actualización final del informe demostraron una madurez profesional creciente, así como la capacidad del equipo para adaptarse rápidamente a nuevas herramientas, reforzar sus competencias técnicas y gestionar entregables complejos de manera autónoma. |
+| **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.** | **Julio Castro Alejos** <br />TB1: Detectó la importancia del aprendizaje continuo al aplicar entrevistas y journey mapping para identificar nuevas necesidades de usuarios.<br /><br />**TP1:** <br />Reconoció la necesidad de actualización constante al integrar backend y app móvil, adaptando flujos y modelos a nuevas tecnologías (Kotlin, REST APIs).<br /><br />**TB2:** <br />Reforzó su compromiso con el aprendizaje permanente al actualizar el informe final, documentar el despliegue del backend y participar en la creación de videos demostrativos, aplicando nuevas técnicas de comunicación técnica y presentación de producto.<br /><br />**TF1:**<br />Durante este hito reafirmó la necesidad de actualización continua al integrar nuevas evidencias técnicas, completar módulos en Android y Flutter y participar activamente en la comunicación técnica del proyecto a través de videos y entrevistas.<br /><br /><br />**Piero Hugo Elescano Leon** <br />TB1: Comprendió que el aprendizaje permanente es clave al generar hipótesis Lean UX y analizar competidores de manera iterativa.<br /><br />**TP1:** <br />Identificó la importancia del aprendizaje continuo al documentar SEO y aplicar despliegues en distintos entornos, comprendiendo el valor de la optimización constante en proyectos reales.<br /><br />**TB2:** <br />Reconoció la necesidad de actualizar conocimientos al trabajar con nuevos módulos backend y coordinar despliegues, fortaleciendo su comprensión sobre entornos de producción y documentación técnica.<br /><br />**TF1:**<br />Percibió la necesidad de seguir aprendiendo al asumir tareas avanzadas en Flutter, actualizar bounded contexts y colaborar en actividades audiovisuales, lo que reafirmó su visión de mejora continua.<br /><br /><br />**José Jahaziel Guerra Perez** <br />TB1: Reconoció que debe actualizarse constantemente al investigar antecedentes, problemáticas y aplicar backlog en metodologías ágiles.<br /><br />**TP1:** <br />Reafirmó la necesidad del aprendizaje permanente al enfrentarse a configuraciones de backend complejas y aplicar nuevas convenciones de estilo de código profesional.<br /><br />**TB2:** <br />Demostró aprendizaje permanente al implementar pruebas automatizadas y corregir documentación técnica, consolidando habilidades en mantenimiento y aseguramiento de calidad de software.<br /><br />**TF1:**<br />Reforzó su desarrollo continuo al aplicar heurísticas avanzadas, ampliar el módulo de Profiles en Flutter y generar evidencias técnicas sólidas para la validación del producto.<br /><br /><br />**Julca Minaya, Sergio Gino** <br />TB1: Entendió la importancia del aprendizaje continuo al analizar entrevistas y usar context mapping para representar dinámicas cambiantes.<br /><br />**TP1:** <br />Reconoció la necesidad de aprendizaje permanente al incorporar nuevas herramientas para wireflows, evidencias técnicas y conexión entre interfaz y backend.<br /><br />**TB2:** <br />Reafirmó la importancia del aprendizaje continuo al aplicar evaluaciones heurísticas de usabilidad y realizar mejoras en la interfaz móvil, demostrando la aplicación práctica de metodologías de evaluación profesional.<br /><br />**TF1:**<br />Profundizó su aprendizaje continuo al ajustar bounded contexts, expandir módulos en Flutter y desarrollar nuevas estrategias de documentación para el Sprint Review.<br /><br /><br />**Gabriela Nicole Shapiama Rivera** <br />TB1: Reafirmó la necesidad del aprendizaje permanente mediante el uso de herramientas de diseño estratégico (Lean UX Canvas, Impact Mapping) y el registro de entrevistas.<br /><br />**TP1:** <br />Demostró aprendizaje continuo al asumir liderazgo en la documentación, planificación y despliegue, gestionando procesos técnicos complejos y guiando la integración de nuevos conocimientos dentro del equipo.<br /><br />**TB2:** <br />Consolidó su rol de liderazgo en la gestión documental y despliegue, demostrando una actitud de aprendizaje constante al coordinar procesos técnicos y mantener la coherencia del producto final.<br /><br />**TF1:**<br />Continuó fortaleciendo su aprendizaje permanente al liderar nuevamente la documentación final, modularización en Android y Flutter, despliegues técnicos y actividades de comunicación del equipo, demostrando autonomía y mejora continua.<br /> | **TB1:**<br />El equipo evidenció que el aprendizaje permanente es indispensable. La investigación constante, la validación de supuestos y la aplicación de metodologías ágiles y de diseño estratégico muestran cómo el conocimiento debe renovarse y ampliarse de manera continua para el éxito de un proyecto de software.<br /><br />**TP1:**<br />El equipo reafirmó su compromiso con el aprendizaje permanente al integrar tecnologías nuevas, frameworks y prácticas profesionales en la construcción de sus productos. La capacidad de adaptarse a nuevas herramientas y documentarlas correctamente evidenció un proceso de formación continua alineado al perfil del ingeniero de software.<br /><br />**TB2:**<br />Durante esta fase, los integrantes demostraron un alto nivel de autonomía y aprendizaje permanente al culminar el desarrollo, desplegar servicios en producción y ampliar el alcance tecnológico del proyecto. La aplicación de buenas prácticas de documentación, despliegue y validación de producto consolidó su perfil profesional orientado a la mejora continua.<br /><br />**TF1:**<br />El equipo consolidó un ciclo completo de aprendizaje continuo al integrar resultados técnicos avanzados, generar evidencias eficientes para el Sprint Review 3, finalizar módulos clave en backend, Android y Flutter, y perfeccionar la documentación general del proyecto. Este hito final demuestra una madurez profesional fortalecida por la actualización constante, la autoevaluación y la colaboración técnica avanzada. |
+
 
 # Objetivos SMART
 

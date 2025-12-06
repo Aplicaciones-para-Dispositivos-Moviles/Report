@@ -6,18 +6,18 @@
 
 A continuación, se listan las herramientas y estándares adoptados por el equipo para el desarrollo colaborativo del sistema:
 
-| Actividad               | Herramienta / Guía                                     | Propósito                                                    | Tipo de acceso / Ruta                                                                                                                       |
-| ----------------------- | ------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                    | [https://trello.com/](https://trello.com/)                                                                                                  |
-| Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then. | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                      |
-| Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                              | SaaS –[https://figma.com](https://figma.com)                                                                                                |
-| Frontend Dev            | Kotlin, Flutter                                        | Construcción del frontend del sistema.                       | https://kotlinlang.org/ / https://flutter.dev/                                                                                              |
-| Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                          | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                            |
-| IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                            | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
-| Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                    | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                                  |
-| Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                              |
-| Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.     | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                 |
-| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                            |
+| Actividad               | Herramienta / Guía                                    | Propósito                                                     | Tipo de acceso / Ruta                                                                                                                 |
+| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                      | [https://trello.com/](https://trello.com/)                                                                                               |
+| Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then.   | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                   |
+| Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                               | SaaS –[https://figma.com](https://figma.com)                                                                                            |
+| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                               |
+| Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                           | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                         |
+| IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                             | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
+| Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                     | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                               |
+| Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                          |
+| Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.       | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                |
+| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                        |
 
 ### 4.1.2. Source Code Management
 
@@ -130,9 +130,9 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 
 ##### Convenciones generales:
 
-- **Idioma**: Todo el código y los recursos con nombres y mensajes en **inglés**.  
-- **Indentación**: 2 espacios (estándar Dart/Flutter).  
-- **Formato de archivos**: `.dart`, `pubspec.yaml`, carpetas `android/`, `ios/`, `lib/`, `test/`.  
+- **Idioma**: Todo el código y los recursos con nombres y mensajes en **inglés**.
+- **Indentación**: 2 espacios (estándar Dart/Flutter).
+- **Formato de archivos**: `.dart`, `pubspec.yaml`, carpetas `android/`, `ios/`, `lib/`, `test/`.
 - **Estilo de código adoptado**:
   - [Effective Dart / Style Guide](https://dart.dev/guides/language/effective-dart/style)
   - [Flutter Style Guide (community)](https://flutter.dev/docs/development/tools/formatting)
@@ -140,10 +140,10 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 
 ##### Nomenclatura:
 
-- **Clases / Widgets**: `PascalCase` (ej. `LoginScreen`, `SupplyItemWidget`).  
-- **Funciones y variables**: `lowerCamelCase` (ej. `fetchSupplies`, `userId`).  
-- **Constantes**: `lowerCamelCase` o `kUpperCamelCase` prefijo `k` para constantes (ej. `kPrimaryColor`) — seguir la guía del equipo, preferible `lowerCamelCase` por la guía oficial.  
-- **Archivos**: `snake_case` (ej. `login_screen.dart`, `supply_item.dart`).  
+- **Clases / Widgets**: `PascalCase` (ej. `LoginScreen`, `SupplyItemWidget`).
+- **Funciones y variables**: `lowerCamelCase` (ej. `fetchSupplies`, `userId`).
+- **Constantes**: `lowerCamelCase` o `kUpperCamelCase` prefijo `k` para constantes (ej. `kPrimaryColor`) — seguir la guía del equipo, preferible `lowerCamelCase` por la guía oficial.
+- **Archivos**: `snake_case` (ej. `login_screen.dart`, `supply_item.dart`).
 - **Rutas / Keys**: `kebab-case` o `snake_case` según convención del proyecto (ej. `/home`, `supply_item_key`).
 
 ##### Archivos y estructura recomendada (ejemplo mínimo):
@@ -163,69 +163,68 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 
 ##### Patrones y arquitectura:
 
-- **Arquitectura**: Clean Architecture (Data — Domain — Presentation) o MVVM/BLoC según preferencia.  
-- **State management recomendada**: **Riverpod** o **Bloc**. *Provider* es aceptable para proyectos pequeños.  
+- **Arquitectura**: Clean Architecture (Data — Domain — Presentation) o MVVM/BLoC según preferencia.
+- **State management recomendada**: **Riverpod** o **Bloc**. *Provider* es aceptable para proyectos pequeños.
 - **Dependencias recomendadas**:
-  - Estado: `flutter_riverpod` o `flutter_bloc`  
-  - Networking: `dio` o `http`  
-  - Serialización: `json_serializable` + `build_runner` o `freezed` para data classes/union types  
-  - Persistencia: `hive` o `sqflite` según necesidad; `shared_preferences` para settings simples  
-  - Seguridad: `flutter_secure_storage` para tokens  
+  - Estado: `flutter_riverpod` o `flutter_bloc`
+  - Networking: `dio` o `http`
+  - Serialización: `json_serializable` + `build_runner` o `freezed` para data classes/union types
+  - Persistencia: `hive` o `sqflite` según necesidad; `shared_preferences` para settings simples
+  - Seguridad: `flutter_secure_storage` para tokens
   - Otros: `connectivity_plus`, `flutter_local_notifications`, `firebase_core` / `cloud_firestore` (si aplica)
 - **Manejo de errores**: usar tipos `Result`/`Either` (con `dartz` / `sealed_unions` o `freezed`) y propagación clara al UI.
 
 ##### Networking y serialización:
 
-- **Configuración**: manejar interceptors (auth, logging) en `dio` u `OkHttp`-like middlewares.  
-- **Modelos**: generar modelos con `json_serializable` o `freezed` para evitar mapeos manuales.  
+- **Configuración**: manejar interceptors (auth, logging) en `dio` u `OkHttp`-like middlewares.
+- **Modelos**: generar modelos con `json_serializable` o `freezed` para evitar mapeos manuales.
 - **Timeouts y retries**: configurar políticas de reintentos/exponenciales si es necesario.
 
 ##### State & UI:
 
-- **Patterns**: separar UI (Widgets) de la lógica de estado (Providers / Blocs / Notifiers).  
-- **Widgets**: componentes reutilizables y composables; mantener Screens ligeras y delegar lógica a controllers/providers.  
+- **Patterns**: separar UI (Widgets) de la lógica de estado (Providers / Blocs / Notifiers).
+- **Widgets**: componentes reutilizables y composables; mantener Screens ligeras y delegar lógica a controllers/providers.
 - **Form handling**: usar validadores y providers para manejar estados de formulario.
 
 ##### Plataforma y deploy:
 
-- **Builds**: `flutter build apk`, `flutter build appbundle`, `flutter build ios` (iOS requiere Xcode/macOS).  
-- **CI/CD**: GitHub Actions / Codemagic / Bitrise para automatizar builds, pruebas y deploy.  
-- **Code signing**: manejar certificados/keystores en secrets del CI.  
+- **Builds**: `flutter build apk`, `flutter build appbundle`, `flutter build ios` (iOS requiere Xcode/macOS).
+- **CI/CD**: GitHub Actions / Codemagic / Bitrise para automatizar builds, pruebas y deploy.
+- **Code signing**: manejar certificados/keystores en secrets del CI.
 - **Publicación**: Play Store / App Store (según ruta); testar App Bundle para Android.
 
 ##### Testing:
 
-- **Tipos**: unit tests (modelos, utilidades), widget tests (UI components), integration tests (`integration_test` package).  
+- **Tipos**: unit tests (modelos, utilidades), widget tests (UI components), integration tests (`integration_test` package).
 - **Herramientas**: `flutter_test`, `mockito` o `mocktail` para mocks, `integration_test` para flujos E2E.
 
 ##### Linting y calidad:
 
-- **Linters**: `flutter_lints` o `effective_dart` + reglas adicionales.  
-- **Formateo**: `dart format` en pre-commit.  
-- **Analyzer**: configurar `analysis_options.yaml` con reglas adaptadas al equipo.  
+- **Linters**: `flutter_lints` o `effective_dart` + reglas adicionales.
+- **Formateo**: `dart format` en pre-commit.
+- **Analyzer**: configurar `analysis_options.yaml` con reglas adaptadas al equipo.
 - **Codemods & refactors**: usar `dart fix` y herramientas IDE.
 
 ##### Buenas prácticas y recomendaciones específicas:
 
-- **Separación clara** entre UI y lógica (no lógica en build methods).  
-- **Minimizar rebuilds**: usar const widgets donde aplique, selectors/consumers para updates puntuales.  
-- **Gestión de recursos**: assets en `pubspec.yaml`, imágenes optimizadas y responsive.  
-- **Internacionalización (i18n)**: preparar `arb`/`intl` si aplica.  
-- **Accesibilidad**: labels, roles y navegación por teclado/gestos cuando aplique.  
-- **Seguridad**: no exponer claves en `pubspec.yaml` o repos remotos; usar variables de entorno/CI secrets.  
+- **Separación clara** entre UI y lógica (no lógica en build methods).
+- **Minimizar rebuilds**: usar const widgets donde aplique, selectors/consumers para updates puntuales.
+- **Gestión de recursos**: assets en `pubspec.yaml`, imágenes optimizadas y responsive.
+- **Internacionalización (i18n)**: preparar `arb`/`intl` si aplica.
+- **Accesibilidad**: labels, roles y navegación por teclado/gestos cuando aplique.
+- **Seguridad**: no exponer claves en `pubspec.yaml` o repos remotos; usar variables de entorno/CI secrets.
 - **Plataforma channels**: documentar cualquier uso de canales nativos (Android/iOS) y aislarlo detrás de un servicio.
 
 ##### Herramientas / linters / utilidades recomendadas:
 
-- **Dart & Flutter format/analyze** (`dart format`, `flutter analyze`).  
-- **Linters**: `flutter_lints`, `effective_dart`.  
-- **Code generation**: `freezed`, `json_serializable`, `build_runner`.  
-- **State**: `flutter_riverpod`, `flutter_bloc`, `provider` (si aplica).  
-- **Networking**: `dio`.  
-- **Storage**: `hive`, `flutter_secure_storage`.  
-- **Testing**: `flutter_test`, `integration_test`, `mocktail`/`mockito`.  
+- **Dart & Flutter format/analyze** (`dart format`, `flutter analyze`).
+- **Linters**: `flutter_lints`, `effective_dart`.
+- **Code generation**: `freezed`, `json_serializable`, `build_runner`.
+- **State**: `flutter_riverpod`, `flutter_bloc`, `provider` (si aplica).
+- **Networking**: `dio`.
+- **Storage**: `hive`, `flutter_secure_storage`.
+- **Testing**: `flutter_test`, `integration_test`, `mocktail`/`mockito`.
 - **CI/CD**: GitHub Actions / Codemagic / Bitrise.
-
 
 ### 4.1.3. Source Code Style Guide & Conventions
 
@@ -248,6 +247,36 @@ A continuación, se listan las herramientas y estándares adoptados por el equip
 - **Paquetes**: Todo en minúsculas y separados por punto (ej. `com.restockmobile.ui.profile`).
 - **Layouts y recursos XML**: `snake_case` (ej. `activity_main.xml`, `user_profile_item.xml`).
 - **IDs en layouts**: `camelCase` (ej. `btnSubmit`, `txtUserName`).
+
+#### Mobile Frontend (Flutter + Dart)
+
+##### Convenciones generales:
+
+- **Idioma**: Todo el código, nombres de clases, funciones y variables en **inglés**.
+- **Indentación**: 2 espacios (convención oficial de Dart).
+- **Formato de archivos**: `.dart` (Dart).
+- **Estilo de código adoptado**:
+  - [Effective Dart Style Guide](https://dart.dev/guides/language/effective-dart/style)
+  - [Flutter Style Guide](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo)
+  - [Dart Code Linter (flutter_lints)](https://pub.dev/packages/flutter_lints)
+
+##### Nomenclatura:
+
+- **Clases y tipos**: `PascalCase` (ej. `UserProfileScreen`, `ProductRepository`).
+- **Funciones y variables**: `lowerCamelCase` (ej. `getUserName()`, `userList`).
+- **Constantes**: `lowerCamelCase` (ej. `defaultTimeout`, `maxRetries`).
+- **Archivos**: `snake_case` (ej. `user_profile_screen.dart`, `product_repository.dart`).
+- **Directorios**: `snake_case` (ej. `lib/features/auth/`, `lib/core/utils/`).
+- **Widgets**: `PascalCase` con sufijo descriptivo (ej. `CustomButton`, `ProductCard`).
+- **Enums**: `PascalCase` para el tipo, `lowerCamelCase` para valores (ej. `enum Status { loading, success, error }`).
+
+##### Buenas prácticas:
+
+- Uso de `const` constructors donde sea posible para optimización.
+- Organización de código por features/módulos.
+- Separación de lógica de negocio (BLoC/Provider/Riverpod) de la UI.
+- Uso de trailing commas para mejor formateo automático.
+- Documentación con `///` para elementos públicos.
 
 #### Backend (Java + Spring Boot + MongoDB)
 
@@ -352,7 +381,7 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 **Tecnología Base:**
 
 - Lenguaje: Dart
-- Framework: Flutter 
+- Framework: Flutter
 - Distribución: APK para Android, IPA para iOS
 - Hosting de pruebas: Firebase App Distribution
 
@@ -370,7 +399,6 @@ Esta sección detalla los pasos necesarios para desplegar satisfactoriamente los
 - El artefacto generado (APK / IPA) se sube a Firebase App Distribution, Google Play (internal/closed track) o TestFlight para distribuir a testers.
 - El enlace de descarga se comparte con testers a través de correo, drive o la Landing Page, según el flujo del equipo.
 - Cada nueva versión para prueba se publica y gestiona mediante la plataforma de distribución elegida (Firebase / Play Console / App Store Connect).
-
 
 #### Referencias adicionales
 
@@ -1229,7 +1257,7 @@ feat(monitoring): Add sales resources.
       <td>feature/monitoring</td>
       <td>7e4f6e65c4da1e03a3356c445b77ccd918cd299d</td>
       <td>
-feat(monitoring): Add sale item to sale command.     
+feat(monitoring): Add sale item to sale command.   
       </td>
       <td>13/10/2025</td>
     </tr>
@@ -1280,9 +1308,176 @@ fix(order): include full batch, custom supply, and supply details in order respo
   </tbody>
 </table>
 
-#### 4.2.1.4. Testing Suite Evidence for Sprint Review
+#### 4.2.1.2. Sprint Backlog 1
 
-<p>A continuación, se presenta la evidencia de los commits relacionados con los <strong>Acceptance Tests</strong> automatizados del sprint, alojados en el repositorio <code>restock-acceptance-tests</code>. Cada archivo corresponde a un <em>Feature File</em> Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).</p>
+Nuestro principal objetivo con este primer sprint es desarrollar las funciones esenciales que permitan a los restaurantes y proveedores interesados en Restock informarse sobre su propósito, conocer sus características destacadas y entender las acciones que podrán realizar dentro de la aplicación móvil..
+
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Sprint #</strong></td>
+			<td colspan="7">Sprint 1</td>
+		</tr>
+		<tr>
+			<td colspan="2"><strong>User Story</strong></td>
+			<td colspan="6"><strong>Work-item / Task</strong></td>
+		</tr>
+		<tr>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Id</strong></td>
+			<td><strong>Title</strong></td>
+			<td><strong>Description</strong></td>
+			<td><strong>Estimation (Hours)</strong></td>
+			<td><strong>Assisgned To</strong></td>
+			<td><strong>Status (To-do / In-Process / To-review / Done)</strong></td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-01-US01</td>
+			<td rowspan="2">Presentar propuesta de valor y CTA en la Landing Page</td>
+			<td>T1</td>
+			<td>Diseñar sección Hero y propuesta de valor</td>
+			<td>Crear y estilizar la sección de bienvenida resaltando el propósito y ventajas de Restock.</td>
+			<td>2</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T2</td>
+			<td>Agregar botones de registro y descarga</td>
+			<td>Implementar CTA para registro y enlace de descarga de la app móvil.</td>
+			<td>1</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-02-US02</td>
+			<td rowspan="2">Accesibilidad y navegación responsiva</td>
+			<td>T3</td>
+			<td>Implementar menú de navegación responsivo</td>
+			<td>Diseñar el menú principal con acceso a secciones clave y adaptación a dispositivos móviles.</td>
+			<td>2</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T4</td>
+			<td>Estilizar y organizar secciones de la Landing Page</td>
+			<td>Aplicar estilos y organizar el contenido para una navegación clara y accesible.</td>
+			<td>1</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-03-US03</td>
+			<td rowspan="2">Gestión de autenticación y acceso</td>
+			<td>T5</td>
+			<td>Diseñar formulario de registro/login en Landing y App</td>
+			<td>Crear los formularios para registro, inicio de sesión y recuperación de contraseña.</td>
+			<td>2</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T6</td>
+			<td>Integrar validaciones básicas al formulario</td>
+			<td>Asegurar que los campos obligatorios validen correctamente en web y móvil.</td>
+			<td>1</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td rowspan="2">EP-06-US15</td>
+			<td rowspan="2">Listado y gestión de supplies (insumos)</td>
+			<td>T7</td>
+			<td>Desarrollar pantalla de lista de supplies en App móvil</td>
+			<td>Mostrar listado de insumos con filtros y barra de búsqueda conectada al backend.</td>
+			<td>2</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>T8</td>
+			<td>Implementar modal de creación/edición de supplies</td>
+			<td>Permitir agregar, editar y eliminar insumos en la app móvil.</td>
+			<td>1</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-08-US10</td>
+			<td>Gestión de recetas</td>
+			<td>T9</td>
+			<td>Crear pantalla de listado y detalle de recetas</td>
+			<td>Desarrollar interfaz para mostrar recetas y sus insumos relacionados.</td>
+			<td>2</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-09-US11</td>
+			<td>Panel de estadísticas y métricas</td>
+			<td>T10</td>
+			<td>Implementar dashboard básico en app móvil</td>
+			<td>Mostrar métricas clave del restaurante (inventario, ventas, pedidos) en la app.</td>
+			<td>2</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-13-US16</td>
+			<td>Gestión de ventas</td>
+			<td>T11</td>
+			<td>Desarrollar pantalla de registro y gestión de ventas</td>
+			<td>Permitir registrar y consultar ventas vinculadas a supplies y recetas.</td>
+			<td>2</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-07-US12</td>
+			<td>Gestión de compras de insumos</td>
+			<td>T12</td>
+			<td>Desarrollar interfaz de registro y consulta de compras</td>
+			<td>Permitir a administradores registrar compras y visualizar el historial de abastecimiento.</td>
+			<td>2</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-12-US13</td>
+			<td>Notificaciones </td>
+			<td>T13</td>
+			<td>Configurar notificaciones de inventario y pedidos</td>
+			<td>Implementar alertas automáticas sobre bajo stock y eventos importantes en la app móvil.</td>
+			<td>2</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-14-US17</td>
+			<td>Gestión de órdenes para proveedores</td>
+			<td>T14</td>
+			<td>Desarrollar módulo de recepción y actualización de órdenes</td>
+			<td>Permitir a proveedores visualizar y actualizar el estado de pedidos recibidos desde restaurantes.</td>
+			<td>2</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-16-US18</td>
+			<td>Gestión de proveedores</td>
+			<td>T15</td>
+			<td>Implementar pantalla de gestión de proveedores</td>
+			<td>Agregar, editar, visualizar y eliminar proveedores en la plataforma.</td>
+			<td>2</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+	</tbody>
+</table>
+
+#### 4.2.1.3. Development Evidence for Sprint Review
 
 <table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
   <thead>
@@ -1902,7 +2097,7 @@ feat(monitoring): Add sales resources.
       <td>feature/monitoring</td>
       <td>7e4f6e65c4da1e03a3356c445b77ccd918cd299d</td>
       <td>
-feat(monitoring): Add sale item to sale command.     
+feat(monitoring): Add sale item to sale command.   
       </td>
       <td>13/10/2025</td>
     </tr>
@@ -1953,8 +2148,107 @@ fix(order): include full batch, custom supply, and supply details in order respo
   </tbody>
 </table>
 
+#### 4.2.1.4. Testing Suite Evidence for Sprint Review
+
+A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>2685de9471a0f83ad75205b618863b31e14e6198</td>
+      <td>feat: add acceptance tests for user login scenarios (AT01.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>ed5ce3208cd2c63a242441f45fedae10d5425bec</td>
+      <td>feat: add CRUD acceptance tests for recipe management (AT02.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>d28da8da0545a20d228ebb03a345149eb03ce84a</td>
+      <td>feat: add acceptance tests for recipe activation with valid and invalid supplies (AT03.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>8aef03d2070aa74505d3434024f1e71bdd1505ca</td>
+      <td>feat: add acceptance tests for menu grid search and pagination (AT04.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
+      <td>feat: add acceptance tests for sale registration and validation (AT05.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
+      <td>feat: add acceptance test for marking inventory as applied after resource confirmation (AT06.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
+      <td>feat: add acceptance tests for Purchase Order lifecycle (AT07.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
+      <td>feat: add acceptance test for posting goods receipt and event publishing (AT08.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
+      <td>feat: add acceptance tests for restock functionality (supplier view and confirmation) (AT09.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>48d728c07104cb5cae35a48000f28c6891ba523b</td>
+      <td>feat: add acceptance tests for profile update and plan limits enforcement (AT10.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
 <p><strong>Enlace al repositorio:</strong>  
-<a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests" target="_blank">https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</a></p>
+<a href="https://shorturl.at/0Cvbk" target="_blank">https://shorturl.at/0Cvbk</a></p>
 
 #### 4.2.1.5. Execution Evidence for Sprint Review
 
@@ -2043,26 +2337,23 @@ A continuación se presentan los materiales de evidencia correspondientes a los 
    - Ver lista de supplies (datos desde `GET /api/v1/supplies` y `GET /api/v1/custom-supplies/user/{userId}` según contexto).
    - Barra de búsqueda con filtros (por categoría: `GET /api/v1/supplies/categories`).
    - Estado vacío cuando no hay supplies.
-
 2. **Modal / Interfaz CRUD de Supplies**
 
    - Modal para crear/editar supplies (consume `POST /api/v1/custom-supplies`, `PUT /api/v1/custom-supplies/{id}`, `DELETE /api/v1/custom-supplies/{id}`).
    - Alternativa: evaluación sobre si usar modal o pantalla separada según usabilidad.
-
 3. **Recipes — Interfaz y CRUD**
 
    - Pantalla de listado `GET /api/v1/recipes`.
    - Detalle de receta `GET /api/v1/recipes/{id}` y listado de supplies de receta `GET /api/v1/recipes/{id}/supplies`.
    - Agregar supplies a receta `POST /api/v1/recipes/{id}/supplies`.
    - Operaciones de creación/edición/eliminación: `POST /api/v1/recipes`, `PUT /api/v1/recipes/{id}`, `DELETE /api/v1/recipes/{id}`.
-
 4. **Sales — Primera parte (lista y búsqueda)**
 
    - Lista de sales disponibles (puede implementarse inicialmente con datos estáticos para mostrar UI).
    - Barra de búsqueda, filtros y mensaje “no hay elementos” cuando esté vacío.
    - Lista con botón de edición (navega a la segunda parte).
-
 5. **Sales — Segunda parte (CRUD conectado)**
+
    - Interfaz y lógica para agregar/actualizar/eliminar una sale, conectada al backend cuando los endpoints estén listos.
 
 **Mapeo rápido: pantallas → endpoints**
@@ -2085,11 +2376,11 @@ A continuación se presentan los materiales de evidencia correspondientes a los 
 
 #### 4.2.1.6. Services Documentation Evidence for Sprint Review
 
-Durante este sprint se avanzó significativamente en la `<strong>`documentación de los servicios web (REST API)`</strong>` del sistema `<em>`Restock `</em>`, cubriendo los módulos de `<strong>`Profiles `</strong>`, `<strong>`Recipes `</strong>`, `<strong>`Batches `</strong>` y `<strong>`Authentication `</strong>`.
-La documentación se generó utilizando `<strong>`OpenAPI (Swagger)`</strong>` y fue validada mediante peticiones reales desde el entorno de desarrollo (`<em>`localhost `</em>` y Railway).
-Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP `<code>`GET `</code>`, `<code>`POST `</code>`, `<code>`PUT `</code>` y `<code>`DELETE `</code>`.
+Durante este sprint se avanzó significativamente en la documentación de los servicios web (REST API)del sistema Restock , cubriendo los módulos de Profiles , Recipes , Batches y Authentication .
+La documentación se generó utilizando OpenAPI (Swagger)y fue validada mediante peticiones reales desde el entorno de desarrollo (localhost  y Railway).
+Se registraron los endpoints principales relacionados con la gestión de usuarios, perfiles empresariales, recetas, insumos y autenticación, cubriendo los métodos HTTP GET , POST , PUT  y DELETE .
 
-A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documentados `</strong>`, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+A continuación, se presenta la tabla resumen de los Endpoints documentados , incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
 
 <table>
   <thead>
@@ -2256,7 +2547,7 @@ A continuación, se presenta la tabla resumen de los `<strong>`Endpoints documen
   </tbody>
 </table>
 
-Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (`<em>`Railway `</em>`).
+Los endpoints fueron probados con datos de muestra y documentados con Swagger UI, disponible en el entorno de despliegue (Railway ).
 Repositorio de Web Services: `<a href="https://github.com/Jahazielgg/restock-backend" target="_blank">`https://github.com/Jahazielgg/restock-backend `</a>`
 Últimos commits relacionados con documentación:
 
@@ -2293,46 +2584,29 @@ Link del landing page desplegado: https://aplicaciones-para-dispositivos-moviles
 
 A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
 
-1. **Conexión del repositorio con Railway** : Se creó un nuevo proyecto en Railway y se conectó directamente el repositorio del backend desde GitHub.
+1. Creación de clúster en MongoDB Atlas para la base de datos
 
-   ![Evidence Step 1](assets/images/cap4/sprint1/evidence-step1.jpeg)
+   <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_1.png" alt="Home" width="400px">
+2. **Conexión del repositorio con Railway**: Se creó un nuevo proyecto en Railway y se conectó directamente el repositorio del backend desde GitHub.
 
-2. **Selección de rama principal (`main`)**En la configuración del proyecto, se seleccionó la rama `main` como predeterminada para realizar el despliegue continuo.
+   <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_2.png" alt="Home" width="400px">
+3. **Selección de rama principal (`main`)**: En la configuración del proyecto, se seleccionó la rama `main` como predeterminada para realizar el despliegue continuo.
 
-   ![Evidence Step 2](assets/images/cap4/sprint1/evidence-step2.jpeg)
+   <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_3.jpeg" alt="Home" width="200px">
+4. **Habilitación del link Swagger en la configuración**: En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
 
-3. **Adición de base de datos al proyecto**Desde la opción "Add Plugin" en Railway, se añadió un servicio de base de datos para el proyecto.
+   <img src="assets/images/cap4/sprint1/deploy_back/deploy_back_4.jpeg" alt="Home" width="600px">
+5. **Creación de variables de entorno en Railway**Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Railway.
 
-   ![Evidence Step 3](assets/images/cap4/sprint1/evidence-step3.jpeg)
+<img src="assets/images/cap4/sprint1/deploy_back/deploy_back_5.png" alt="Home" width="600px">
 
-4. **Selección del tipo de base de dato** Se seleccionó el motor de base de datos **MongoDB**.
+6. **Despliegue del proyecto**: Railway ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
 
-   ![Evidence Step 4](assets/images/cap4/sprint1/evidence-step4.jpeg)
+<img src="assets/images/cap4/sprint1/deploy_back/deploy_back_6.png" alt="Home" width="600px">
 
-5. **Despliegue de imagen MongoDB** Railway desplegó automáticamente una instancia de base de datos con sus credenciales correspondientes.
+7. **Verificación con Swagger**: Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
 
-   ![Evidence Step 5](assets/images/cap4/sprint1/evidence-step5.jpeg)
-
-6. **Obtención y configuración de credenciales**Se copiaron las credenciales de conexión (usuario, contraseña, host, puerto y nombre de base de datos) y se unificaron en una sola variable de entorno tipo `SPRING_DATASOURCE_URL`.
-
-   ![Evidence Step 6](assets/images/cap4/sprint1/evidence-step6.jpeg)
-
-7. **Habilitación del link Swagger en la configuración**En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
-
-   ![Evidence Step 7](assets/images/cap4/sprint1/evidence-step7.jpeg)
-
-8. **Creación de variables de entorno en Railway**Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Railway.
-
-   ![Evidence Step 8](assets/images/cap4/sprint1/evidence-step8.jpeg)
-
-9. **Despliegue del proyecto**Railway ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
-
-   ![Evidence Step 9](assets/images/cap4/sprint1/evidence-step9.jpeg)
-
-10. **Verificación con Swagger**
-    Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
-
-![Evidence Step 10](assets/images/cap4/sprint1/evidence-step10.jpeg)
+<img src="assets/images/cap4/sprint1/deploy_back/deploy_back_7.jpeg" alt="Home" width="600px">
 
 #### 4.2.1.8. Team Collaboration Insights during Sprint
 
@@ -2394,9 +2668,67 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 - Total de _pull requests_ relacionadas: **13**
 - Pantallas core implementadas: **5**
 
+#### 4.2.2. Sprint 2
 
-### 4.2.2. Sprint 2
 #### 4.2.2.1. Sprint Planning 2
+
+<table>
+  <tr>
+    <td>Sprint #</td>
+    <td>Sprint 2</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Planning Background</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>2025-10-20</td>
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td>08:00 pm (GMT-5)</td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>Modalidad remota mediante la plataforma Discord</td>
+  </tr>
+  <tr>
+    <td>Prepared By</td>
+    <td>Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Attendees (to planning meeting)</td>
+    <td>.Castro Alejos, Julio / Elescano Leon, Piero Hugo / Guerra Perez, José Jahaziel / Julca  Minaya, Sergio Gino / Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Review Summary</td>
+    <td> Durante el Sprint 1 se logró implementar en su totalidad la Landing Page del sistema Restock, desarrollando secciones clave como el header, footer, sección de beneficios y preguntas frecuentes, así como la integración inicial de estilos globales, tipografía y cambio de idioma. Asimismo, se logró realizar las secciones principales de la app Android, abarcando opciones de inventario, recetas y ventas. El equipo cumplió con los entregables establecidos, respetando el diseño de mockups y la guía de estilos. Se identificaron oportunidades de mejora en la velocidad de desarrollo  y gestión de tiempos.</td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Retrospective Summary</td>
+    <td>Durante el Sprint 1, el equipo logró avanzar de forma coordinada y efectiva en el desarrollo de la landing page y la app android, sin enfrentar mayores  dificultades. Cada integrante cumplió puntualmente con las secciones asignadas, lo que permitió avanzar según lo planificado. La adopción de convenciones comunes en el código y el diseño contribuyó a mantener la coherencia del producto y facilitó la integración entre partes. Como mejora para el siguiente sprint, se acordó implementar revisiones diarias (daily reviews) que permitan alinear mejor los  avances, detectar bloqueos tempranos y mejorar la comunicación  continua entre miembros.</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Goal & User Stories</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Goal</td>
+    <td>Nuestro enfoque está en refinar y habilitar funcionalidades clave para los administradores de restaurantes, como la gestión de inventario, la configuración de perfil, la gestión de recetas, la sección de ventas, suscripciones y la gestión de órdenes. Asimismo, en proporcionar puntos de acceso mediante el API de la plataforma, con el objetivo de que los desarrolladores frontend puedan integrar funcionalidades relacionadas con autenticación, perfil, suscripciones, inventario, recetas, ordenes y ventas dentro de la app.
+Creemos que esto mejora la eficiencia operativa de los administradores de restaurantes al facilitar la creación y gestión de ventas, órdenes e insumos desde la aplicación móvil. Además, permite a los desarrolladores frontend implementar funcionalidades esenciales de forma más eficiente, incluyendo autenticación, inventario, ventas, suscripciones, recetas, órdenes y perfil. 
+Esto se confirmará cuando se incremente la cantidad de ventas e insumos que registran administradores de restaurantes en la plataforma, así como la cantidad de pedidos realizados en la app. Por último, cuando los desarrolladores frontend aumenten la cantidad de funcionalidades relacionadas con ventas, recetas, inventario, órdenes, suscripciones y perfil en la app móvil.</td>
+  </tr>
+  <tr>
+    <td>Sprint 1 Velocity</td>
+    <td>35</td>
+  </tr>
+  <tr>
+    <td>Sum of Story Points</td>
+    <td>39</td>
+  </tr>
+</table>
+
 #### 4.2.2.2. Sprint Backlog 2
 
 <table>
@@ -2458,7 +2790,7 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 		<tr>
 			<td>T5</td>
 			<td>Implement Orders UI (Android)</td>
-			<td>Crear pantallas de creación, lista, detalle y actualización de órdenes para administradores en la app Android (incluye validaciones y estados).</td>
+			<td>Crear pantallas de creación, lista, detalle y actualización de órdenes para administradores en la app Android (incluye validaciones y estados).	          </td>
 			<td>8</td>
 			<td>Julio Castro</td>
 			<td>Done</td>
@@ -2466,7 +2798,7 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 		<tr>
 			<td>T6</td>
 			<td>Integrate Orders with backend</td>
-			<td>Conectar las pantallas de Orders con los endpoints del backend, manejar estados (pending/confirmed/shipped) y pruebas de integración end‑to‑end.</td>
+			<td>Conectar las pantallas de Orders con los endpoints del backend, manejar estados (pending/confirmed/shipped) y pruebas de integración end‑to‑end.          </td>
 			<td>6</td>
 			<td>Sergio Julca</td>
 			<td>Done</td>
@@ -2546,7 +2878,7 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 			<td rowspan="2">Monitoring: Telemetry, alerts and monitoring dashboard</td>
 			<td>T15</td>
 			<td>Monitoring endpoints</td>
-			<td>Implementar servicios de monitoring en el backend (endpoints para métricas, logs y alertas) y preparar integración con el sistema de dashboard.</td>
+			<td>Implementar servicios de monitoring en el backend (endpoints para métricas, logs y alertas) y preparar integración con el sistema de dashboard.           </td>
 			<td>6</td>
 			<td>Sergio Julca</td>
 			<td>Done</td>
@@ -2556,14 +2888,146 @@ La colaboración en el módulo móvil se orientó a entregar pantallas core inte
 			<td>Client monitoring views</td>
 			<td>Agregar en la app vistas para mostrar métricas clave, alertas recientes y notificaciones de estado (integración con endpoints de monitoring).</td>
 			<td>6</td>
+			<td>Piero Elescano</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-18-US25</td>
+			<td>Visualización de órdenes enviadas a proveedores</td>
+			<td>T17</td>
+			<td>Implement Orders Sent view (Android)</td>
+			<td>Crear pantalla para que administradores consulten las órdenes enviadas a proveedores con filtros por estado y fecha.</td>
+			<td>6</td>
 			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-18-US26</td>
+			<td>Visualizar información específica de una orden enviada</td>
+			<td>T18</td>
+			<td>Order Sent detail view</td>
+			<td>Implementar vista detalle mostrando líneas, cantidades, estados y historial de cambios de una orden enviada.</td>
+			<td>4</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-18-US27</td>
+			<td>Actualizar estado de una orden enviada a proveedor</td>
+			<td>T19</td>
+			<td>Order state update endpoint & UI</td>
+			<td>Crear endpoint y control UI para que administradores/proveedores actualicen estado de una orden (en tránsito, entregado, recibido).</td>
+			<td>5</td>
+			<td>Jahaziel Guerra</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-17-US15</td>
+			<td>Actualización manual de estado del inventario</td>
+			<td>T20</td>
+			<td>Manual inventory update UI</td>
+			<td>Implementar flujo en la app para que el administrador pueda aplicar ajustes manuales al inventario y registrar la razón del ajuste.</td>
+			<td>4</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-17-US28</td>
+			<td>Visualización del historial de inventario</td>
+			<td>T21</td>
+			<td>Inventory history view</td>
+			<td>Crear vista que permita consultar los movimientos históricos de inventario por rango de fechas y filtros por insumo.</td>
+			<td>4</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-20-TS01</td>
+			<td>Registro y autenticación de usuarios mediante API RESTful</td>
+			<td>T22</td>
+			<td>Auth endpoints & integration</td>
+			<td>Implementar y documentar endpoints de registro, login, recuperación y cambio de contraseña con JWT.</td>
+			<td>6</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-22-TS03</td>
+			<td>Sistema de notificaciones de inventario mediante API RESTful y OneSignal</td>
+			<td>T23</td>
+			<td>Notifications integration</td>
+			<td>Integrar endpoints que generen notificaciones push y configurar OneSignal para enviar alertas de bajo/alto stock.</td>
+			<td>4</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-20-TS04</td>
+			<td>Gestión de proveedores mediante API RESTful</td>
+			<td>T24</td>
+			<td>Providers API</td>
+			<td>Implementar endpoints para crear/editar/listar/eliminar proveedores y soportar búsqueda/filtrado.</td>
+			<td>5</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-17-TS05</td>
+			<td>Gestionar insumos mediante API RESTful</td>
+			<td>T25</td>
+			<td>Supplies API</td>
+			<td>Endpoints para CRUD de insumos, activación/desactivación y búsqueda por categoría.</td>
+			<td>6</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-22-TS16</td>
+			<td>Obtener lista de alertas recientes mediante API RESTful</td>
+			<td>T26</td>
+			<td>Alerts API</td>
+			<td>Crear endpoint para recuperar alertas recientes (bajo stock, vencimiento) con paginación.</td>
+			<td>3</td>
+			<td>Julio Castro</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-21-TS17</td>
+			<td>Obtener lista de mejores clientes mediante API RESTful</td>
+			<td>T27</td>
+			<td>Top clients API</td>
+			<td>Endpoint para calcular y devolver ranking de clientes por volumen de compras en un periodo dado.</td>
+			<td>4</td>
+			<td>Gabriela Shapiama</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-19-TS02</td>
+			<td>Gestión del estado de suscripción mediante API RESTful</td>
+			<td>T28</td>
+			<td>Subscriptions status API</td>
+			<td>Endpoint para consultar y actualizar el estado de suscripción de un usuario y manejar renovaciones.</td>
+			<td>3</td>
+			<td>Sergio Julca</td>
+			<td>Done</td>
+		</tr>
+		<tr>
+			<td>EP-09-TS015</td>
+			<td>Obtener lista de ingredientes más usados mediante API RESTful</td>
+			<td>T29</td>
+			<td>Most-used ingredients API</td>
+			<td>Endpoint para devolver los ingredientes más utilizados en un periodo con filtros y agregaciones.</td>
+			<td>3</td>
+			<td>Julio Castro</td>
 			<td>Done</td>
 		</tr>
 	</tbody>
 </table>
 
 #### 4.2.2.3. Development Evidence for Sprint Review
+
 A continuación se presenta una tabla resumen con los commits realizados por cada miembro del equipo durante el Sprint 2, detallando el repositorio, la rama, el ID del commit, el mensaje del commit y la fecha en que se realizó el commit.
+
 <table border="1" width="100%" style=" text-align: center">
   <thead>
     <tr>
@@ -2872,21 +3336,123 @@ A continuación se presenta una tabla resumen con los commits realizados por cad
 </table>
 
 #### 4.2.2.4. Testing Suite Evidence for Sprint Review
+
+A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>2685de9471a0f83ad75205b618863b31e14e6198</td>
+      <td>feat: add acceptance tests for user login scenarios (AT01.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>ed5ce3208cd2c63a242441f45fedae10d5425bec</td>
+      <td>feat: add CRUD acceptance tests for recipe management (AT02.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>d28da8da0545a20d228ebb03a345149eb03ce84a</td>
+      <td>feat: add acceptance tests for recipe activation with valid and invalid supplies (AT03.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>8aef03d2070aa74505d3434024f1e71bdd1505ca</td>
+      <td>feat: add acceptance tests for menu grid search and pagination (AT04.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
+      <td>feat: add acceptance tests for sale registration and validation (AT05.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
+      <td>feat: add acceptance test for marking inventory as applied after resource confirmation (AT06.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
+      <td>feat: add acceptance tests for Purchase Order lifecycle (AT07.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
+      <td>feat: add acceptance test for posting goods receipt and event publishing (AT08.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
+      <td>feat: add acceptance tests for restock functionality (supplier view and confirmation) (AT09.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>48d728c07104cb5cae35a48000f28c6891ba523b</td>
+      <td>feat: add acceptance tests for profile update and plan limits enforcement (AT10.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Enlace al repositorio:</strong>  
+<a href="https://shorturl.at/0Cvbk" target="_blank">https://shorturl.at/0Cvbk</a></p>
+
 #### 4.2.2.5. Execution Evidence for Sprint Review
-A continuación se presentan los materiales de evidencia correspondientes a los productos desarrollados durante el **Sprint 2**: **Backend**, **Aplicación Móvil Android (Administrador de Restaurantes)** y **Aplicación Móvil Flutter (Proveedores de Restaurantes)**.  
+
+A continuación se presentan los materiales de evidencia correspondientes a los productos desarrollados durante el **Sprint 2**: **Backend**, **Aplicación Móvil Android (Administrador de Restaurantes)** y **Aplicación Móvil Flutter (Proveedores de Restaurantes)**.
 Cada sección describe el alcance técnico entregado y los avances demostrados en video.
 
-#### Backend (API) — Estado: 100% completado y desplegado
+##### Backend (API) — Estado: 100% completado y desplegado
 
 **Alcance entregado (Sprint 2)**
 
-Durante este sprint se completó el desarrollo total del backend de la plataforma, implementado en **Java Spring Boot** y **MongoDB**, y desplegado exitosamente en un entorno público en **Render**.  
+Durante este sprint se completó el desarrollo total del backend de la plataforma, implementado en **Java Spring Boot** y **MongoDB**, y desplegado exitosamente en un entorno público en **Render**.
 El backend integra todos los *bounded contexts* del sistema y expone la documentación completa de sus endpoints mediante **Swagger (OpenAPI 3.1)**.
 
-**URL de despliegue:**  
+**URL de despliegue:**
 [https://restock-platform.onrender.com](https://restock-platform.onrender.com)
 
-**Documentación técnica:**  
+**Documentación técnica:**
 [https://restock-platform.onrender.com/v3/api-docs](https://restock-platform.onrender.com/v3/api-docs)
 
 **Endpoints principales implementados**
@@ -2920,35 +3486,37 @@ El backend integra todos los *bounded contexts* del sistema y expone la document
 - Interacción entre módulos y persistencia de datos en MongoDB.
 - Visualización de la documentación Swagger en el entorno desplegado.
 
-**Video del Backend:**  
+**Video del Backend:**
 [https://shorturl.at/IG8Yi](https://shorturl.at/IG8Yi)
 
 ![Execution Backend](assets/images/cap4/sprint2/execution/backend_exec.png)
 
+---
 
-#### Aplicación Móvil (Administrador de Restaurantes — Android) — Estado: 100% completada y desplegada
+##### Aplicación Móvil (Administrador de Restaurantes — Android) — Estado: 100% completada y desplegada
 
 **Alcance entregado (Sprint 2)**
 
-Durante este sprint se finalizó el desarrollo completo de la aplicación móvil para administradores de restaurantes, implementada en **Android Studio con Kotlin**.  
+Durante este sprint se finalizó el desarrollo completo de la aplicación móvil para administradores de restaurantes, implementada en **Android Studio con Kotlin**.
 La aplicación fue integrada y desplegada con el backend productivo, mostrando flujos funcionales completos para la gestión de insumos, recetas y ventas.
 
 **Pantallas funcionales**
 
 1. **Supplies Management**
+
    - Listado dinámico con integración al backend (`GET /api/v1/supplies`, `GET /api/v1/custom-supplies/user/{userId}`).
    - Creación, edición y eliminación de insumos (`POST`, `PUT`, `DELETE /api/v1/custom-supplies`).
    - Filtros por categoría (`GET /api/v1/supplies/categories`).
-
 2. **Recipes**
+
    - Listado y detalle de recetas (`GET /api/v1/recipes`, `GET /api/v1/recipes/{id}`).
    - Asociación de insumos a recetas (`POST /api/v1/recipes/{id}/supplies`).
    - CRUD completo de recetas.
-
 3. **Sales**
-   - Gestión visual de ventas, incluyendo búsqueda, filtros y operaciones CRUD (`GET /api/v1/sales`, `POST /api/v1/sales`, `DELETE /api/v1/sales/{id}`).
 
+   - Gestión visual de ventas, incluyendo búsqueda, filtros y operaciones CRUD (`GET /api/v1/sales`, `POST /api/v1/sales`, `DELETE /api/v1/sales/{id}`).
 4. **Authentication & Profiles**
+
    - Inicio de sesión, registro y edición de perfil conectados al backend (`/api/v1/authentication`, `/api/v1/profiles`).
 
 **Qué se demuestra en el video**
@@ -2958,17 +3526,18 @@ La aplicación fue integrada y desplegada con el backend productivo, mostrando f
 - Estados de interfaz manejados (loading, error, empty, success).
 - Validación completa de flujos de administración.
 
-**Video de Aplicación Android:**  
+**Video de Aplicación Android:**
 [https://shorturl.at/lcETG](https://shorturl.at/lcETG)
 
 ![Execution Android](assets/images/cap4/sprint2/execution/android_exec.png)
 
+---
 
-#### Aplicación Móvil (Proveedores de Restaurantes — Flutter) — Estado: En desarrollo (Sprint 2)
+##### Aplicación Móvil (Proveedores de Restaurantes — Flutter) — Estado: En desarrollo (Sprint 2)
 
 **Alcance entregado (Sprint 2)**
 
-Se inició el desarrollo de la segunda aplicación móvil del ecosistema **Restock Platform**, dirigida a **proveedores de restaurantes**, implementada en **Flutter**.  
+Se inició el desarrollo de la segunda aplicación móvil del ecosistema **Restock Platform**, dirigida a **proveedores de restaurantes**, implementada en **Flutter**.
 Durante este sprint se completaron las primeras pantallas funcionales, incluyendo el flujo de autenticación y el *overview* general conectado al backend.
 
 **Avances actuales**
@@ -2992,74 +3561,2271 @@ Durante este sprint se completaron las primeras pantallas funcionales, incluyend
 - Navegación a la pantalla de overview con datos simulados.
 - Estructura inicial del flujo de proveedor.
 
-**Video de Aplicación Flutter:**  
+**Video de Aplicación Flutter:**
 [https://shorturl.at/BrF3r](https://shorturl.at/BrF3r)
 
 ![Execution Flutter](assets/images/cap4/sprint2/execution/flutter_exec.png)
 
 #### 4.2.2.6. Services Documentation Evidence for Sprint Review
-#### 4.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2 se consolidó la documentación completa de los servicios web (REST API) del sistema Restock, expandiendo significativamente la cobertura alcanzada en el Sprint 1. Se documentaron los módulos de **Orders**, **Supplies**, **Custom Supplies**, **Sales**, **Subscriptions**, **Users** y **Roles**, complementando los módulos existentes de **Profiles**, **Recipes**, **Batches** y **Authentication**.
+
+La documentación se generó y mantuvo actualizada utilizando **OpenAPI (Swagger)** y fue validada mediante peticiones reales desde el entorno de producción desplegado en **Render** (`https://restock-platform.onrender.com`). Se registraron más de **53 endpoints activos** relacionados con la gestión completa del sistema, cubriendo los métodos HTTP **GET**, **POST**, **PUT** y **DELETE**.
+
+A continuación, se presenta la tabla resumen de los **Endpoints documentados en el Sprint 2**, incluyendo la acción implementada, verbo HTTP, parámetros o cuerpo de solicitud y ejemplos de uso.
+
+<table>
+  <thead>
+    <tr style="background-color:#f2f2f2;">
+      <th>Endpoint</th>
+      <th>Acción</th>
+      <th>Verbo HTTP</th>
+      <th>Parámetros / Request Body</th>
+      <th>Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/api/v1/supplies</td>
+      <td>Obtener todos los insumos de la plataforma</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "sup_001",
+    "name": "Carne de res",
+    "category": "Carnes",
+    "unit": "kg"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/supplies/{supplyId}</td>
+      <td>Obtener un insumo específico por ID</td>
+      <td>GET</td>
+      <td><pre>Path: supplyId (string)</pre></td>
+      <td><pre>GET /api/v1/supplies/sup_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/supplies/categories</td>
+      <td>Obtener todas las categorías de insumos</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  "Carnes",
+  "Vegetales",
+  "Lácteos",
+  "Especias"
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies</td>
+      <td>Obtener todos los insumos personalizados</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "cs_001",
+    "name": "Salsa especial de la casa",
+    "userId": "user_123"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies</td>
+      <td>Crear un insumo personalizado</td>
+      <td>POST</td>
+      <td><pre>{
+  "name": "string",
+  "category": "string",
+  "unit": "string",
+  "userId": "string"
+}</pre></td>
+      <td><pre>{
+  "name": "Salsa BBQ casera",
+  "category": "Salsas",
+  "unit": "litros",
+  "userId": "user_123"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Obtener un insumo personalizado por ID</td>
+      <td>GET</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>GET /api/v1/custom-supplies/cs_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Actualizar un insumo personalizado</td>
+      <td>PUT</td>
+      <td><pre>{
+  "name": "string",
+  "category": "string",
+  "unit": "string"
+}</pre></td>
+      <td><pre>{
+  "name": "Salsa BBQ premium",
+  "category": "Salsas",
+  "unit": "litros"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Eliminar un insumo personalizado</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/custom-supplies/cs_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/user/{userId}</td>
+      <td>Obtener todos los insumos personalizados de un usuario</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/custom-supplies/user/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders</td>
+      <td>Obtener todas las órdenes</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "ord_001",
+    "providerId": "prov_123",
+    "status": "PENDING",
+    "total": 500.00
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders</td>
+      <td>Crear una nueva orden</td>
+      <td>POST</td>
+      <td><pre>{
+  "providerId": "string",
+  "items": [
+    {
+      "supplyId": "string",
+      "quantity": "number"
+    }
+  ]
+}</pre></td>
+      <td><pre>{
+  "providerId": "prov_456",
+  "items": [
+    {
+      "supplyId": "sup_001",
+      "quantity": 10
+    }
+  ]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}</td>
+      <td>Obtener una orden específica por ID</td>
+      <td>GET</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>GET /api/v1/orders/ord_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}</td>
+      <td>Eliminar una orden (solo si está en estado PENDING)</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/orders/ord_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}/state</td>
+      <td>Actualizar el estado de una orden</td>
+      <td>PUT</td>
+      <td><pre>{
+  "status": "string"
+}</pre></td>
+      <td><pre>{
+  "status": "COMPLETED"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{orderId}/batches</td>
+      <td>Crear batches asociados a una orden</td>
+      <td>POST</td>
+      <td><pre>{
+  "batches": [
+    {
+      "supplyId": "string",
+      "quantity": "number",
+      "expirationDate": "string"
+    }
+  ]
+}</pre></td>
+      <td><pre>{
+  "batches": [
+    {
+      "supplyId": "sup_001",
+      "quantity": 5,
+      "expirationDate": "2025-06-30"
+    }
+  ]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{orderId}/batches</td>
+      <td>Obtener todos los batches de una orden</td>
+      <td>GET</td>
+      <td><pre>Path: orderId (string)</pre></td>
+      <td><pre>GET /api/v1/orders/ord_001/batches</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/batches/user/{userId}</td>
+      <td>Obtener todos los batches de un usuario/proveedor</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/batches/user/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales</td>
+      <td>Obtener todas las ventas</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "sale_001",
+    "recipeId": "rec_001",
+    "quantity": 5,
+    "total": 144.50,
+    "date": "2025-01-15"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales</td>
+      <td>Registrar una nueva venta</td>
+      <td>POST</td>
+      <td><pre>{
+  "recipeId": "string",
+  "quantity": "number",
+  "date": "string"
+}</pre></td>
+      <td><pre>{
+  "recipeId": "rec_002",
+  "quantity": 3,
+  "date": "2025-01-16"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales/{id}</td>
+      <td>Obtener una venta específica por ID</td>
+      <td>GET</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>GET /api/v1/sales/sale_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales/{id}</td>
+      <td>Eliminar una venta</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/sales/sale_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{recipeId}/supplies/{supplyId}</td>
+      <td>Actualizar la cantidad de un insumo en una receta</td>
+      <td>PUT</td>
+      <td><pre>{
+  "quantity": "number"
+}</pre></td>
+      <td><pre>{
+  "quantity": 0.75
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{recipeId}/supplies/{supplyId}</td>
+      <td>Eliminar un insumo de una receta</td>
+      <td>DELETE</td>
+      <td><pre>Path: recipeId, supplyId (string)</pre></td>
+      <td><pre>DELETE /api/v1/recipes/rec_001/supplies/sup_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{id}</td>
+      <td>Eliminar una receta</td>
+      <td>DELETE</td>
+      <td><pre>Path: id (string)</pre></td>
+      <td><pre>DELETE /api/v1/recipes/rec_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/users</td>
+      <td>Obtener todos los usuarios</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "user_001",
+    "email": "admin@restock.com",
+    "role": "ADMIN"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/users/{userId}</td>
+      <td>Obtener un usuario específico por ID</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/users/user_001</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/users/{userId}/subscription</td>
+      <td>Actualizar la suscripción de un usuario</td>
+      <td>PUT</td>
+      <td><pre>{
+  "subscriptionId": "string"
+}</pre></td>
+      <td><pre>{
+  "subscriptionId": "sub_premium"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions</td>
+      <td>Obtener todos los planes de suscripción</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "sub_basic",
+    "name": "Basic",
+    "price": 0.00
+  },
+  {
+    "id": "sub_premium",
+    "name": "Premium",
+    "price": 29.99
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions</td>
+      <td>Crear un nuevo plan de suscripción</td>
+      <td>POST</td>
+      <td><pre>{
+  "name": "string",
+  "description": "string",
+  "price": "number",
+  "features": ["string"]
+}</pre></td>
+      <td><pre>{
+  "name": "Enterprise",
+  "description": "Plan empresarial",
+  "price": 99.99,
+  "features": ["Unlimited users", "24/7 support"]
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions/user/{userId}</td>
+      <td>Obtener la suscripción actual de un usuario</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/subscriptions/user/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/subscriptions/user/{userId}</td>
+      <td>Actualizar la suscripción de un usuario</td>
+      <td>PUT</td>
+      <td><pre>{
+  "subscriptionId": "string"
+}</pre></td>
+      <td><pre>{
+  "subscriptionId": "sub_enterprise"
+}</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/roles</td>
+      <td>Obtener todos los roles disponibles</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "role_admin",
+    "name": "ADMIN"
+  },
+  {
+    "id": "role_user",
+    "name": "USER"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/business-categories</td>
+      <td>Obtener todas las categorías de negocio</td>
+      <td>GET</td>
+      <td><pre>N/A</pre></td>
+      <td><pre>Response:
+[
+  {
+    "id": "cat_01",
+    "name": "Restaurante"
+  },
+  {
+    "id": "cat_02",
+    "name": "Cafetería"
+  }
+]</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}</td>
+      <td>Obtener el perfil completo de un usuario</td>
+      <td>GET</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>GET /api/v1/profiles/user_123</pre></td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}</td>
+      <td>Eliminar el perfil de un usuario</td>
+      <td>DELETE</td>
+      <td><pre>Path: userId (string)</pre></td>
+      <td><pre>DELETE /api/v1/profiles/user_123</pre></td>
+    </tr>
+  </tbody>
+</table>
+
+Los endpoints fueron probados exhaustivamente con datos de muestra y documentados con **Swagger UI**, disponible en el entorno de producción desplegado en **Render** (`https://restock-platform.onrender.com/swagger/index.html`).
+
+**Repositorio de Web Services:** `<a href="https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform" target="_blank">`https://github.com/Aplicaciones-para-Dispositivos-Moviles/restock-platform `</a>`
+
+**Últimos commits relacionados con documentación del Sprint 2:**
+
+<ul>
+  <li><code>e1f3g5h</code> – feat(subscriptions): implement endpoint for user subscription update</li>
+  <li><code>7g8h9i0</code> – feat(iam): implement sign-up endpoint logic POST /api/v1/authentication/sign-up</li>
+  <li><code>8h9i0j1</code> – feat(resources): implement endpoint to list supply categories GET /api/v1/supplies/categories</li>
+  <li><code>a2b3c4d</code> – feat(batches): implement GET /api/v1/batches/user/{userId} for provider access</li>
+  <li><code>7n5o6p7</code> – feat(resources): add DELETE /api/v1/custom-supplies/{id} endpoint</li>
+  <li><code>8o6p7q8</code> – feat(iam): implement business categories resource GET /api/v1/business-categories</li>
+  <li><code>9p7q8r9</code> – feat(sales): add DELETE /api/v1/sales/{id} endpoint and logic</li>
+  <li><code>0q8r9s0</code> – feat(recipes): implement DELETE /api/v1/recipes/{recipeId}/supplies/{supplyId}</li>
+  <li><code>1r9s0t1</code> – feat(iam): add roles resource GET /api/v1/roles for user assignment</li>
+  <li><code>4u2v3w4</code> – feat(profiles): implement profile deletion endpoint DELETE /api/v1/profiles/{userId}</li>
+  <li><code>5v3w4x5</code> – feat(orders): add DELETE /api/v1/orders/{id} endpoint with status check</li>
+  <li><code>f5g6h7i</code> – feat(orders): implement PUT /api/v1/orders/{id}/state for order status update</li>
+</ul>
+
+**Capturas de pantalla de Swagger UI en producción:**
+
+<img src="assets/images/cap4/sprint2/swagger/swagger_ui_overview.png" alt="Swagger UI Overview" width="700px">
+
+Durante este sprint se alcanzó una cobertura del **100%** de los dominios funcionales del sistema, garantizando que todas las operaciones CRUD y flujos de negocio estén correctamente documentados y disponibles para su consumo por las aplicaciones móviles (Android y Flutter).
+
+#### 4.2.2.7. Software Deployment Evidence for Sprint Review 2
+
+A continuación, se detallan los pasos realizados para asegurar el funcionamiento correcto del servicio backend con acceso a base de datos y documentación mediante Swagger.
+
+1. Creación de clúster en MongoDB Atlas para la base de datos
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_1.png" alt="Home" width="500px">
+2. **Conexión del repositorio con Render**: Se creó un nuevo proyecto en Render y se conectó directamente el repositorio del backend desde GitHub.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_2.png" alt="Home" width="600px">
+3. **Selección de rama principal (`main`)**: En la configuración del proyecto, se seleccionó la rama `main` como predeterminada para realizar el despliegue continuo.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_3.png" alt="Home" width="600px">
+4. **Creación de variables de entorno en Render**: Se añadieron manualmente todas las variables de entorno necesarias para que el backend funcione correctamente en Render.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_4.png" alt="Home" width="600px">
+5. **Habilitación del link Swagger en la configuración**: En el archivo `OpenApiConfiguration.java`, se habilitó el contexto de Swagger para permitir la visualización de los endpoints en producción.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_back_5.png" alt="Home" width="600px">
+
+6. **Despliegue del proyecto**: Render ejecutó el despliegue del backend de forma automática al detectar la rama principal. Se monitoreó el log para validar la correcta inicialización del contenedor.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_back_6.png" alt="Home" width="600px">
+
+7. **Verificación con Swagger**: Se accedió a la ruta `/swagger/index.html` del dominio generado por Railway, verificando el correcto funcionamiento de los endpoints expuestos por el sistema.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_back_7.png" alt="Home" width="600px">
+
+A continuación, se explicará el despliegue de la aplicación Android en Firebase.
+
+1. Creación de proyecto en Firebase.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android1.png" alt="Home" width="600px">
+
+2. En la sección de App Distribution, se selecciona la opción Android.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android2.png" alt="Home" width="600px">
+
+3. Se indica el nombre del paquete del proyecto para crear la app.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android3.png" alt="Home" width="600px">
+
+4. Configuración final para agrega Firebase a la app.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android4.png" alt="Home" width="600px">
+
+5. Carga del APK en la sección de App Distribution.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android5.png" alt="Home" width="600px">
+
+6. Envío de aplicación a verificadores seleccionados.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android6.png" alt="Home" width="600px">
+
+7. Evidencia de solicitud de descarga de la aplicación a verificadores seleccionados.
+
+<img src="assets/images/cap4/sprint2/deploy/deploy_android7.png" alt="Home" width="600px">
+
+#### 4
+
 #### 4.2.2.8. Team Collaboration Insights during Sprint
-#### Backend (API)
 
-Durante el **Sprint 2**, el equipo centró sus esfuerzos en consolidar los módulos principales y garantizar la integración completa con las aplicaciones móviles.  
-Se alcanzó una versión **estable y desplegada en producción** bajo el dominio:  
-`https://restock-platform.onrender.com`.
+##### Backend (API)
 
-- Se completó la implementación de los dominios funcionales: **Orders**, **Supplies**, **Recipes**, **Sales**, **Profiles**, **Subscriptions** y **Custom Supplies**.  
-- La documentación de la API se mantuvo sincronizada mediante **Swagger**, incluyendo más de 50 endpoints activos bajo el prefijo `/api/v1/`.  
-- Se gestionaron ramas específicas como `feature/orders`, `feature/recipes`, `feature/custom-supplies`, y `feature/subscriptions` para aislar cambios y facilitar revisiones por pares.  
-- Se realizaron pruebas integradas con **Postman** para validar flujos de creación, actualización y eliminación de entidades clave.  
+Durante el **Sprint 2**, el equipo centró sus esfuerzos en consolidar los módulos principales y garantizar la integración completa con las aplicaciones móviles.Se alcanzó una versión **estable y desplegada en producción** bajo el dominio:`https://restock-platform.onrender.com`.
+
+- Se completó la implementación de los dominios funcionales: **Orders**, **Supplies**, **Recipes**, **Sales**, **Profiles**, **Subscriptions** y **Custom Supplies**.
+- La documentación de la API se mantuvo sincronizada mediante **Swagger**, incluyendo más de 50 endpoints activos bajo el prefijo `/api/v1/`.
+- Se gestionaron ramas específicas como `feature/orders`, `feature/recipes`, `feature/custom-supplies`, y `feature/subscriptions` para aislar cambios y facilitar revisiones por pares.
+- Se realizaron pruebas integradas con **Postman** para validar flujos de creación, actualización y eliminación de entidades clave.
 
 ##### **Analíticos de colaboración — Backend**
 
 ![Backend Collaboration](assets/images/cap4/collaboration/backend_ci_2.png)
 
-- Total de commits (Backend): **113**  
-- Total de autores contribuyentes: **5**  
-- Endpoints activos documentados en Swagger: **53**  
+- Total de commits (Backend): **113**
+- Total de autores contribuyentes: **5**
+- Endpoints activos documentados en Swagger: **53**
 - Observación: el backend alcanzó una versión estable (**v0.0.1-SNAPSHOT**) con todos los servicios esenciales operativos, documentados y consumidos por las aplicaciones móviles.
 
+##### Aplicación Móvil (Android - Kotlin)
 
-#### Aplicación Móvil (Android - Kotlin)
+Durante este sprint se **finalizó al 100%** la aplicación nativa en Android Studio con Kotlin, asegurando su total funcionalidad e integración con la API de Restock Platform.
 
-Durante este sprint se **finalizó al 100%** la aplicación nativa en Android Studio con Kotlin, asegurando su total funcionalidad e integración con la API de Restock Platform.  
-
-- Se completaron los módulos **Supplies**, **Recipes**, **Orders**, **Sales**, y **Profile**, todos sincronizados con el backend real.  
-- Arquitectura basada en **MVVM**, utilizando **ViewModel**, **LiveData**, **Coroutines** y **Retrofit** para las llamadas de red.  
-- Implementación de manejo de estados (loading, success, error) y validaciones de usuario.  
-- Se añadió navegación estructurada con **Navigation Component**, garantizando flujos consistentes entre pantallas.  
-- Se realizaron pruebas funcionales y de integración, asegurando la estabilidad del build final.  
-- Builds y APKs de prueba fueron compartidos con el equipo para verificación UX y pruebas finales.  
+- Se completaron los módulos **Supplies**, **Recipes**, **Orders**, **Sales**, y **Profile**, todos sincronizados con el backend real.
+- Arquitectura basada en **MVVM**, utilizando **ViewModel**, **LiveData**, **Coroutines** y **Retrofit** para las llamadas de red.
+- Implementación de manejo de estados (loading, success, error) y validaciones de usuario.
+- Se añadió navegación estructurada con **Navigation Component**, garantizando flujos consistentes entre pantallas.
+- Se realizaron pruebas funcionales y de integración, asegurando la estabilidad del build final.
+- Builds y APKs de prueba fueron compartidos con el equipo para verificación UX y pruebas finales.
 
 ##### **Analíticos de colaboración — Android**
 
 ![Android Collaboration](assets/images/cap4/collaboration/android_ci_2.png)
 
-- Total de commits (Android): **64**  
-- Total de autores contribuyentes: **5**  
-- Pantallas completadas: **7 (Inventory, Recipes, Orders, Sales, Suscription,Profile, Login)**  
+- Total de commits (Android): **64**
+- Total de autores contribuyentes: **5**
+- Pantallas completadas: **7 (Inventory, Recipes, Orders, Sales, Suscription,Profile, Login)**
 - Observación: la aplicación Android alcanzó una versión final estable, completamente integrada con la API y lista para despliegue en entorno productivo.
 
-#### Aplicación Móvil (Flutter)
+##### Aplicación Móvil (Flutter)
 
-Durante este sprint se inició el desarrollo de la **aplicación Flutter multiplataforma**, orientada a los proveedores de restaurantes.  
-El objetivo principal fue establecer la base técnica del proyecto y conectar las primeras pantallas con el backend desplegado.
+Durante este sprint se inició el desarrollo de la **aplicación Flutter multiplataforma**, orientada a los proveedores de restaurantes.El objetivo principal fue establecer la base técnica del proyecto y conectar las primeras pantallas con el backend desplegado.
 
-- Se definió la estructura del proyecto, siguiendo el patrón **MVVM** con manejo de estado mediante **Provider**.    
-- Se desarrollaron las primeras pantallas:  
-  - **Overview:** vista inicial con estructura de navegación, componentes reutilizables (`widgets`) y elementos de interfaz.  
-  - **Login:** pantalla funcional conectada al backend mediante los endpoints de autenticación (`/api/v1/authentication/sign-in`), validando credenciales y manejo de tokens.  
-- Se estableció la conexión base con el backend desplegado en Render para futuras integraciones.  
+- Se definió la estructura del proyecto, siguiendo el patrón **MVVM** con manejo de estado mediante **Provider**.
+- Se desarrollaron las primeras pantallas:
+  - **Overview:** vista inicial con estructura de navegación, componentes reutilizables (`widgets`) y elementos de interfaz.
+  - **Login:** pantalla funcional conectada al backend mediante los endpoints de autenticación (`/api/v1/authentication/sign-in`), validando credenciales y manejo de tokens.
+- Se estableció la conexión base con el backend desplegado en Render para futuras integraciones.
 
 ##### **Analíticos de colaboración — Flutter**
 
 ![Flutter Collaboration](assets/images/cap4/collaboration/flutter_ci_2.png)
 
-- Total de commits (Flutter): **3**  
-- Total de autores contribuyentes: **1**  
-- Módulos funcionales completados: **Overview**, **Login and Register (autenticación)**  
+- Total de commits (Flutter): **3**
+- Total de autores contribuyentes: **1**
+- Módulos funcionales completados: **Overview**, **Login and Register (autenticación)**
 - Observación: se completó la estructura base del proyecto Flutter y las primeras pantallas conectadas al backend, sirviendo como punto de partida para las funcionalidades avanzadas en el próximo sprint.
+
+### 4.2.3. Sprint 3
+
+#### 4.2.3.1. Sprint Planning 3
+
+<table>
+  <tr>
+    <td>Sprint #</td>
+    <td>Sprint 3</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Planning Background</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>2025-11-20</td>
+  </tr>
+  <tr>
+    <td>Time</td>
+    <td>08:00 pm (GMT-5)</td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>Modalidad remota mediante la plataforma Discord</td>
+  </tr>
+  <tr>
+    <td>Prepared By</td>
+    <td>Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Attendees (to planning meeting)</td>
+    <td>Castro Alejos, Julio / Elescano Leon, Piero Hugo / Guerra Perez, José Jahaziel / Julca Minaya, Sergio Gino / Shapiama Rivera, Gabriela Nicole</td>
+  </tr>
+  <tr>
+    <td>Sprint 2 Review Summary</td>
+    <td>Durante el Sprint 2 se completó el 100% del backend desplegado en Render, se finalizó la aplicación Android para administradores de restaurantes con integración completa a la API, y se inició el desarrollo de la aplicación Flutter para proveedores con las pantallas de autenticación y overview funcionales.</td>
+  </tr>
+  <tr>
+    <td>Sprint 2 Retrospective Summary</td>
+    <td>El equipo identificó la necesidad de acelerar el desarrollo de la aplicación Flutter para proveedores y asegurar la paridad de funcionalidades entre ambas aplicaciones móviles. Se destacó la importancia de completar los flujos de órdenes bidireccionales y las funcionalidades de calificación y feedback.</td>
+  </tr>
+  <tr>
+    <td><strong>Sprint Goal & User Stories</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sprint 3 Goal</td>
+    <td>Nuestro enfoque está en completar al 100% las aplicaciones móviles tanto en Android (Kotlin) para administradores de restaurantes como en Flutter para proveedores, asegurando la integración total con el backend desplegado.  Además, implementar las funcionalidades pendientes de gestión de órdenes, calificaciones a proveedores, seguimiento de entregas y notificaciones inteligentes.  Creemos que esto ofrece una experiencia completa y fluida para ambos segmentos de usuarios, permitiendo la gestión integral del inventario, pedidos y relaciones comerciales entre restaurantes y proveedores.  Esto se confirmará cuando ambas aplicaciones móviles estén completamente funcionales, integradas con el backend y listas para despliegue en producción, con todos los flujos de usuario validados end-to-end. </td>
+  </tr>
+  <tr>
+    <td>Sprint 3 Velocity</td>
+    <td>42</td>
+  </tr>
+  <tr>
+    <td>Sum of Story Points</td>
+    <td>42</td>
+  </tr>
+</table>
+
+#### 4.2.3.2. Sprint Backlog 3
+
+El objetivo principal de este tercer sprint es completar al 100% las aplicaciones móviles para ambos segmentos de usuarios (administradores de restaurantes y proveedores), integrando todas las funcionalidades pendientes con el backend y asegurando una experiencia de usuario completa y consistente. 
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Sprint #</strong></td>
+      <td colspan="7">Sprint 3</td>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>User Story</strong></td>
+      <td colspan="6"><strong>Work-item / Task</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Id</strong></td>
+      <td><strong>Title</strong></td>
+      <td><strong>Id</strong></td>
+      <td><strong>Title</strong></td>
+      <td><strong>Description</strong></td>
+      <td><strong>Estimation (Hours)</strong></td>
+      <td><strong>Assigned To</strong></td>
+      <td><strong>Status (To-do / In-Process / To-review / Done)</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-17</td>
+      <td rowspan="2">Seguimiento de una orden</td>
+      <td>T1</td>
+      <td>Implementar pantalla de seguimiento de órdenes (Flutter)</td>
+      <td>Desarrollar la interfaz para que proveedores puedan visualizar y actualizar el estado de las órdenes recibidas.</td>
+      <td>6</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T2</td>
+      <td>Integrar endpoints de actualización de estado</td>
+      <td>Conectar la pantalla con PUT /api/v1/orders/{id}/state para cambiar estados (pendiente, preparando, en camino, entregado).</td>
+      <td>4</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-18</td>
+      <td rowspan="2">Visualización de calificaciones recibidas</td>
+      <td>T3</td>
+      <td>Desarrollar pantalla de calificaciones (Flutter)</td>
+      <td>Crear interfaz para que proveedores visualicen comentarios y calificaciones de órdenes completadas.</td>
+      <td>5</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T4</td>
+      <td>Implementar cálculo de promedio de calificaciones</td>
+      <td>Mostrar el promedio total de calificaciones y listado histórico de feedback recibido.</td>
+      <td>3</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-19</td>
+      <td rowspan="2">Visualizar y gestionar órdenes recibidas</td>
+      <td>T5</td>
+      <td>Implementar listado de órdenes entrantes (Flutter)</td>
+      <td>Desarrollar pantalla que muestre todas las órdenes pendientes asignadas al proveedor con filtros por estado.</td>
+      <td>6</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T6</td>
+      <td>Agregar acciones de confirmar/rechazar orden</td>
+      <td>Implementar botones y lógica para confirmar o rechazar órdenes, notificando al restaurante.</td>
+      <td>4</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-20</td>
+      <td rowspan="2">Visualizar información específica de una orden</td>
+      <td>T7</td>
+      <td>Desarrollar pantalla de detalle de orden (Flutter)</td>
+      <td>Mostrar información completa de una orden: productos, cantidades, precios, dirección de entrega y notas.</td>
+      <td>5</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T8</td>
+      <td>Integrar con endpoint GET /api/v1/orders/{id}</td>
+      <td>Conectar la vista de detalle con el backend para obtener datos actualizados de la orden.</td>
+      <td>3</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-21</td>
+      <td rowspan="2">Registrar calificación a proveedor</td>
+      <td>T9</td>
+      <td>Implementar modal de calificación (Android)</td>
+      <td>Desarrollar interfaz para que administradores califiquen y comenten sobre proveedores tras recibir una orden.</td>
+      <td>5</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T10</td>
+      <td>Integrar endpoint POST /api/v1/feedback</td>
+      <td>Conectar el formulario de calificación con el backend para persistir la retroalimentación.</td>
+      <td>3</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-22</td>
+      <td rowspan="2">Gestión de proveedores registrados</td>
+      <td>T11</td>
+      <td>Desarrollar pantalla de listado de proveedores (Android)</td>
+      <td>Crear interfaz para visualizar proveedores disponibles con información de contacto y calificación promedio.</td>
+      <td>5</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T12</td>
+      <td>Implementar funcionalidad de eliminación de proveedor</td>
+      <td>Agregar opción para dejar de trabajar con un proveedor y actualizar la lista. </td>
+      <td>3</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-23</td>
+      <td rowspan="2">Visualizar información específica de proveedor</td>
+      <td>T13</td>
+      <td>Implementar pantalla de detalle de proveedor (Android)</td>
+      <td>Mostrar información completa del proveedor: catálogo de productos, calificación, datos de contacto. </td>
+      <td>4</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T14</td>
+      <td>Conectar con endpoints de proveedores y productos</td>
+      <td>Integrar la vista con GET /api/v1/proveedores/{id} y productos asociados.</td>
+      <td>3</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-24</td>
+      <td rowspan="2">Gestión de pedidos de insumos a proveedor</td>
+      <td>T15</td>
+      <td>Desarrollar flujo de creación de pedido (Android)</td>
+      <td>Implementar pantalla para seleccionar proveedor, productos, cantidades y generar un nuevo pedido.</td>
+      <td>6</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T16</td>
+      <td>Integrar con POST /api/v1/orders</td>
+      <td>Conectar el formulario de pedido con el backend y manejar confirmación/errores.</td>
+      <td>4</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-25</td>
+      <td rowspan="2">Visualización de órdenes enviadas a proveedores</td>
+      <td>T17</td>
+      <td>Implementar listado de órdenes enviadas (Android)</td>
+      <td>Desarrollar pantalla con historial de pedidos realizados, con filtros por estado y fecha.</td>
+      <td>5</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T18</td>
+      <td>Integrar con GET /api/v1/orders</td>
+      <td>Conectar la lista con el backend para obtener órdenes del usuario autenticado.</td>
+      <td>3</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-26</td>
+      <td rowspan="2">Visualizar información específica de una orden enviada</td>
+      <td>T19</td>
+      <td>Desarrollar pantalla de detalle de orden enviada (Android)</td>
+      <td>Mostrar información completa de la orden: insumos solicitados, estado actual, proveedor y fechas. </td>
+      <td>4</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T20</td>
+      <td>Implementar actualización de estado desde restaurante</td>
+      <td>Agregar funcionalidad para marcar orden como recibida desde la app del administrador.</td>
+      <td>3</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-27</td>
+      <td rowspan="2">Actualizar estado de una orden enviada a proveedor</td>
+      <td>T21</td>
+      <td>Implementar selector de estado de orden (Android)</td>
+      <td>Crear componente para actualizar el estado de una orden (en espera, recibido) con confirmación.</td>
+      <td>4</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T22</td>
+      <td>Sincronizar cambio de estado con backend</td>
+      <td>Integrar con PUT /api/v1/orders/{id}/state y actualizar inventario si aplica.</td>
+      <td>4</td>
+      <td>Piero Elescano</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-28</td>
+      <td rowspan="2">Visualización del historial de inventario</td>
+      <td>T23</td>
+      <td>Desarrollar pantalla de historial de movimientos (Android)</td>
+      <td>Mostrar registro de cambios en inventario: ventas, compras, ajustes manuales con fechas y cantidades.</td>
+      <td>5</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T24</td>
+      <td>Implementar filtros por rango de fechas</td>
+      <td>Agregar selector de fechas para filtrar el historial de movimientos de inventario.</td>
+      <td>3</td>
+      <td>Sergio Julca</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-05</td>
+      <td rowspan="2">Gestión integral de notificaciones de inventario</td>
+      <td>T25</td>
+      <td>Implementar centro de notificaciones (Android)</td>
+      <td>Desarrollar pantalla de notificaciones con alertas de vencimiento, bajo stock y exceso de inventario.</td>
+      <td>5</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T26</td>
+      <td>Integrar con sistema de push notifications</td>
+      <td>Configurar OneSignal para recibir notificaciones en tiempo real sobre eventos de inventario.</td>
+      <td>4</td>
+      <td>Julio Castro</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-07</td>
+      <td rowspan="2">Gestionar productos en el inventario (Proveedor)</td>
+      <td>T27</td>
+      <td>Desarrollar CRUD de productos (Flutter)</td>
+      <td>Implementar pantallas para que proveedores gestionen su catálogo de productos: crear, editar, eliminar.</td>
+      <td>6</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T28</td>
+      <td>Integrar con endpoints de supplies del proveedor</td>
+      <td>Conectar las operaciones CRUD con el backend para persistir cambios en el catálogo. </td>
+      <td>4</td>
+      <td>Jahaziel Guerra</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US-36</td>
+      <td rowspan="2">Marcar estado de entrega (Proveedor)</td>
+      <td>T29</td>
+      <td>Implementar actualización de estado de entrega (Flutter)</td>
+      <td>Desarrollar funcionalidad para que proveedores marquen el progreso de entrega de pedidos.</td>
+      <td>4</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T30</td>
+      <td>Notificar al restaurante sobre cambios de estado</td>
+      <td>Integrar notificaciones push para informar al administrador sobre actualizaciones de entrega. </td>
+      <td>3</td>
+      <td>Gabriela Shapiama</td>
+      <td>Done</td>
+    </tr>
+  </tbody>
+</table>
+
+#### 4.2.3.3. Development Evidence for Sprint Review 
+<table border="1" width="100%" style=" text-align: center">
+    <thead>
+        <tr>
+            <th style=" text-align: center">Repository</th>
+            <th style=" text-align: center">Branch</th>
+            <th style=" text-align: center">Commit id</th>
+            <th style=" text-align: center">Commit Message/Body</th>
+            <th style=" text-align: center">Commited on (Date)</th>
+        </tr>
+    </thead>
+    <tbody style="margin-bottom:18px; text-align: center">
+        <tr>
+            <td colspan="5" style="background-color: #f0f0f0; font-weight: bold;">Mobile Frontend (restock-mobile-flutter)</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0</td>
+            <td>feat(suppliers): Create UI for new supplier registration form</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>c9d8e7f6a5b4c3d2e1f0g9h8i7j6k5l4m3n2o1p0</td>
+            <td>feat(forms): Implement reusable form fields for supplier data</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x</td>
+            <td>feat(services): Implement API call to register new supplier</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8y9z0a1b2c</td>
+            <td>feat(models): Define DTO model for supplier registration data</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>5q6r7s8t9u0v1w2x3y4z5a6b7c8d9e0f1g2h3i4j</td>
+            <td>fix: Add RUC input validation helpers</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>7m8n9o0p1q2r3s4t5u6v7w8x9y0z1a2b3c4d5e6f</td>
+            <td>chore: Add navigation link to Supplier Registration page</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l</td>
+            <td>style: Update theme colors for supplier module</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>b5c6d7e8f9g0h1i2j3k4l5m6n7o8p9q0r1s2t3u4</td>
+            <td>fix: Resolve display issue on loading spinner during form submission</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>d0e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9</td>
+            <td>feat(bloc): Implement BLoC logic for supplier form state management</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-mobile-flutter</td>
+            <td>feature/profile</td>
+            <td>f9g8h7i6j5k4l3m2n1o0p9q8r7s6t5u4v3w2x1y0</td>
+            <td>test: Add unit tests for Supplier registration form validation</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>2a4c6e8g0i2k4m6o8q0s2u4w6y8a0c2e4g6i8k0m</td>
+            <td>feat(orders): Implement UI for creating a new purchase order</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>4b6d8f0h2j4l6n8p0r2t4v6x8y0b2d4f6h8j0l2n</td>
+            <td>feat(widgets): Add component to manage items list in the order</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>6c8e0g2i4k6m8o0q2s4u6w8x0c2e4g6i8k0m2o4q</td>
+            <td>feat(api): Integrate API client for purchase order registration</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>8d0f2h4j6l8n0p2r4t6v8x0y2d4f6h8j0l2n4p6r</td>
+            <td>feat(models): Define data models for Purchase Order request/response</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>0e2g4i6k8m0o2q4s6u8w0z4f6h8j0l2n4p6r8t0v</td>
+            <td>chore: Add date formatting utility for expected delivery date</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>2f4h6j8l0n2p4r6t8v0x2a4h6j8l0n2p4r6t8v0x</td>
+            <td>chore: Add floating action button for New Order on Dashboard</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>4g6i8k0m2o4q6s8u0w2y4b6i8k0m2o4q6s8u0w2y</td>
+            <td>feat(bloc): Implement BLoC to handle dynamic order item changes</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>6h8j0l2n4p6r8t0v2x4c8j0l2n4p6r8t0v2x4c6e</td>
+            <td>fix: Update supplier picker component interaction</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>8i0k2m4o6q8s0u2w4y6d0k2m4o6q8s0u2w4y6d8f</td>
+            <td>feat(widgets): Add dynamic summary card for order total calculation</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-mobile-flutter</td>
+            <td>feature/resource</td>
+            <td>0j2l4n6p8r0t2v4x6z8e2l4n6p8r0t2v4x6z8e0g</td>
+            <td>test: Add unit tests for order item calculation logic</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>1k3m5o7q9s1u3w5y7a9c1e3g5i7k9m1o3q5s7u9w</td>
+            <td>feat(subscriptions): Create screen for managing user subscriptions</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>3l5n7p9r1t3v5x7z9b1d3f5h7j9l1n3p5r7t9v1x</td>
+            <td>feat(widgets): Implement toggle switch for product subscription</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>5m7o9q1s3u5w7y9a1c3e5g7i9k1m3o5q7s9u1w3y</td>
+            <td>feat(api): Add API client for subscription creation and deletion</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>7n9p1r3t5v7x9z1b3d5f7h9j1l3n5p7r9t1v3x5z</td>
+            <td>feat(models): Define data model for subscriptions status</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>9o1q3s5u7w9y1a3c5e7g9i1k3m5o7q9s1u3w5y7a</td>
+            <td>feat: Integrate subscription toggle into product detail screen</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>1p3r5t7v9x1z3b5d7f9h1j3l5n7p9r1t3v5x7z9b</td>
+            <td>chore: Update local preference helpers for notifications settings</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>3q5s7u9w1y3a5c7e9g1i3k5m7o9q1s3u5w7y9c1d</td>
+            <td>feat(bloc): Implement BLoC to handle subscription status changes</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>5r7t9v1x3z5b7d9f1h3j5l7n9p1r3t5v7x9d3f5h</td>
+            <td>fix: Display success/error snackbar upon subscription change</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>7s9u1w3y5a7c9e1g3i5k7m9o1q3s5u7w9f5h7j9l</td>
+            <td>style: Add subscription bell icons</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-mobile-flutter</td>
+            <td>feature/subscriptions</td>
+            <td>9t1v3x5z7b9d1f3h5j7l9n1p3r5t7v9g7i9k1m3o</td>
+            <td>test: Add tests for subscription toggle widget interaction</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>a0b2c4d6e8f0g2h4i6j8k0l2m4n6o8p0q2r4s6t8</td>
+            <td>feat(inventory): Implement screen to view all inventory items</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>c1d3e5f7g9h1i3j5k7l9m1n3o5p7q9r1s3t5u7v9</td>
+            <td>feat(widgets): Create modal form for registering new product batch</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>e2f4g6h8i0j2k4l6m8n0o2p4q6r8s0t2u4v6w8x0</td>
+            <td>feat(api): Add API client for inventory and batch operations</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>g3h5i7j9k1l3m5n7o9p1q3r5s7t9u1v3w5x7y9z1</td>
+            <td>feat(models): Define data models for Batch registration</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>i4j6k8l0m2n4o6p8q0r2s4t6u8v0w2x4y6z8a0b2</td>
+            <td>chore: Add helper for formatting expiration dates</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>k5l7m9n1o3p5q7r9s1t3u5v7w9x1y3z5a7b9c1d3</td>
+            <td>feat(ui): Create screen to display history of batches</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>m6n8o0p2q4r6s8t0u2v4w6x8y0z2a4b6c8d0e2f4</td>
+            <td>feat(bloc): Implement BLoC for managing inventory state</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>o7p9q1r3s5t7u9v1w3x5y7z9a1b3c5d7e9f1g3h5</td>
+            <td>feat(widgets): Add visual indicator for low stock items</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>q8r0s2t4u6v8w0x2y4z6a8b0c2d4e6f8g0h2i4j6</td>
+            <td>style: Update text styles for inventory quantity display</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-mobile-flutter</td>
+            <td>feature/planning</td>
+            <td>s9t1u3v5w7x9y1z3a5b7c9d1e3f5g7h9i1j3k5l7</td>
+            <td>test: Add BLoC tests for inventory filtering logic</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>u0v1w2x3y4z5a6b7c8d9e0f1g2h3i4j5k6l7m8n9</td>
+            <td>feat(alerts): Create AlertsListScreen to display user alerts</td>
+            <td>06/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>w5x6y7z8a9b0c1d2e3f4g5h6i7j8k9l0m1n2o3p4</td>
+            <td>feat(widgets): Implement AlertCard component with dismiss button</td>
+            <td>06/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>y1z2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0</td>
+            <td>feat(api): Add API client for fetching and marking alerts as read</td>
+            <td>07/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>a7b8c9d0e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6</td>
+            <td>feat(models): Define AlertModel for Flutter app state</td>
+            <td>07/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2</td>
+            <td>feat(bloc): Implement Alerts BLoC to manage list state and updates</td>
+            <td>08/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>e9f0g1h2i3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8</td>
+            <td>feat(navigation): Add badge counter to Alerts icon in main navbar</td>
+            <td>08/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>g5h6i7j8k9l0m1n2o3p4q5r6s7t8u9v0w1x2y3z4</td>
+            <td>style: Apply conditional styling (color) based on alert type</td>
+            <td>09/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8a9b0</td>
+            <td>fix: Ensure alerts list refreshes after dismissing an alert</td>
+            <td>09/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6</td>
+            <td>feat(utils): Add alert time and date formatting helper</td>
+            <td>10/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-mobile-flutter</td>
+            <td>feature/alerts</td>
+            <td>m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2</td>
+            <td>test: Add widget tests for the AlertsListScreen rendering</td>
+            <td>10/12/2025</td>
+        </tr>
+        <tr>
+            <td colspan="5" style="background-color: #f0f0f0; font-weight: bold;">Backend (restock-backend)</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>6a5e1f0c29b7d1d08e9c49f3c1b67b2a0c3e8d4f</td>
+            <td>feat(suppliers): Add endpoint for new supplier registration</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>4c1d8b93f9a7621e5c3d05b0e2a96a5e1f0c29b7</td>
+            <td>feat(models): Define Supplier model with validation constraints</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>d1e3f5g7i9k1m3o5q7s9u1w3y5a7c9e1g3i5k7m9</td>
+            <td>feat(service): Implement business logic for supplier creation</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>f2g4h6j8l0n2p4r6t8v0x2z4b6d8f0h2j4l6n8p0</td>
+            <td>feat(repository): Add JpaRepository for Supplier entity</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>h3i5j7k9m1o3q5s7u9w1y3a5c7e9g1i3k5m7o9q1</td>
+            <td>chore: Update database properties for new supplier table</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>j4k6l8m0o2p4r6t8v0x2z4b6d8f0h2j4l6n8p0r2</td>
+            <td>feat(mapper): Create DTO mapper for Supplier entity</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>l5m7n9o1q3r5s7t9u1w3y5a7c9e1g3i5k7m9o1q3</td>
+            <td>feat(db/migration): Add initial mongo schema for suppliers table</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>n6o8p0q2r4s6t8v0x2z4b6d8f0h2j4l6n8p0r2t4</td>
+            <td>fix: Update security config to allow supplier POST route</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>p7q9r1s3t5u7w9x1y3z5a7c9e1g3i5k7m9o1q3s5</td>
+            <td>feat(exceptions): Add custom exception for duplicated supplier RUC</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>jahzielgg/restock-backend</td>
+            <td>feature/profile</td>
+            <td>r8s0t2u4v6w8x0y2z4a6b8c0d2e4f6g8h0i2j4k6</td>
+            <td>test: Add unit tests for Supplier registration service</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>0a1b2c33d4e5f66g7h8i99j0k1l22m3n4o55p6q7</td>
+            <td>feat(orders): Add endpoint for creating new purchase orders</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>8s9t0u11v2w3x44y5z6a77b8c9d00e1f2g33h4i5</td>
+            <td>feat(models): Define PurchaseOrder entity and item details</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>k9l1m3o5q7s9u1w3y5a7c9e1g3i5k7m9o1q3s5u7</td>
+            <td>feat(service): Implement service to calculate total order cost</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>m0n2p4r6t8v0x2z4b6d8f0h2j4l6n8p0r2t4v6x8</td>
+            <td>feat(repository): Create repository for handling order persistence</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>o1q3s5u7w9y1a3c5e7g9i1k3m5o7q9s1u3w5y7a9</td>
+            <td>fix: Integrate stock reservation logic during order creation</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>q2r4t6v8x0z2b4d6f8h0j2l4n6p8r0t2v4x6z8b0</td>
+            <td>feat(mapper): Add DTO mapper for order status and details</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>s3t5u7w9y1a3c5e7g9i1k3m5o7q9s1u3w5y7a9c1</td>
+            <td>feat(db/migration/V2): Initial migration script for purchase_orders table</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>u4v6x8z0b2d4f6h8j0l2n4p6r8t0v2x4z6b8d0f2</td>
+            <td>feat(dto): Define DTO for incoming order registration data</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>w5x7y9a1c3e5g7i9k1m3o5q7s9u1w3y5a7c9e1g3</td>
+            <td>refactor: Extract order validation logic into helper method</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>GabrielaShapiama28/restock-backend</td>
+            <td>feature/resource</td>
+            <td>y6z8b0d2f4h6j8l0n2p4r6t8v0x2z4b6d8f0h2j4</td>
+            <td>test: Add integration tests for order creation flow</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>c3a4b5c6f6g7h8i9i9j0k1l2l2m3n4o5o5p6q7r8</td>
+            <td>feat(subscriptions): Add endpoint for managing user subscriptions</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>r8s9t0u1u1v2w3x4x4y5z6a7a7b8c9d0d0e1f2g3</td>
+            <td>feat(models): Define Subscription model for inventory notifications</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>h4i6j8k0l2n4p6r8t0v2x4z6b8d0f2h4j6l8n0p2</td>
+            <td>feat(service): Implement logic to process subscription requests</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>j5k7l9m1o3q5s7u9w1y3a5c7e9g1i3k5m7o9q1s3</td>
+            <td>feat(repository): Create repository for user subscriptions</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>l6m8n0p2r4t6v8x0z2b4d6f8h0j2l4n6p8r0t2v4</td>
+            <td>feat(notifier): Integrate Subscription check with Alert Service</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>n7o9p1q3r5s7t9u1w3y5a7c9e1g3i5k7m9o1q3s5</td>
+            <td>chore(resources): Add template for subscription confirmation email</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>p8q0r2s4t6u8v0x2z4b6d8f0h2j4l6n8p0r2t4v6</td>
+            <td>fix: Add reference to product in Subscription entity</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>r9s1t3u5v7w9x1y3z5a7c9e1g3i5k7m9o1q3s5u7</td>
+            <td>feat(scheduler): Implement scheduled job to check subscribed alerts</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>t0u2v4w6x8y0z2a4b6c8d0e2f4g6h8i0j2k4l6m8</td>
+            <td>feat(dto): Define DTO for subscription registration</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>PieroHugo/restock-backend</td>
+            <td>feature/subscriptions</td>
+            <td>v1w3x5y7z9a1b3c5d7e9f1g3h5i7j9k1l3m5n7o9</td>
+            <td>test: Add service tests for subscription creation and removal</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>5f6g7h88i9j0k11l2m3n44o5p6q77r8s9t00u1v2</td>
+            <td>feat(batches): Add endpoints for batch creation and inventory update</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>3x4y5z66a7b8c99d0e1f22g3h4i55j6k7l88m9n0</td>
+            <td>feat(models): Define Batch entity with expiration date and quantity</td>
+            <td>01/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>o2p4q6r8t0v2x4z6b8d0f2h4j6l8n0p2r4t6v8x0</td>
+            <td>feat(service): Implement core logic for stock level adjustments</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>q3r5s7t9u1w3y5a7c9e1g3i5k7m9o1q3s5u7w9y1</td>
+            <td>feat(repository): Create repository for Batch entities</td>
+            <td>02/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>s4t6u8v0x2z4b6d8f0h2j4l6n8p0r2t4v6x8z0b2</td>
+            <td>feat(dto): Define DTO for bulk inventory updates</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>u5v7w9x1y3z5a7c9e1g3i5k7m9o1q3s5u7w9y1a3</td>
+            <td>fix: Trigger low stock alert check after inventory update</td>
+            <td>03/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>w6x8y0z2a4b6c8d0e2f4g6h8i0j2k4l6m8n0o2p4</td>
+            <td>refactor(resources/alerts): Update low stock threshold in resources</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>y7z9a1b3c5d7e9f1g3h5i7j9k1l3m5n7o9p1q3r5</td>
+            <td>feat(db/migration/V3): Add migration script for batches and inventory</td>
+            <td>04/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>a8b0c2d4e6f8g0h2i4j6k8l0m2n4o6p8q0r2s4t6</td>
+            <td>feat(validator): Implement business validator for batch expiration date</td>
+            <td>05/12/2025</td>
+        </tr>
+        <tr>
+            <td>JulioXC4/restock-backend</td>
+            <td>feature/planning</td>
+            <td>c9d1e3f5g7h9i1j3k5l7m9n1o3p5q7r9s1t3u5v7</td>
+            <td>test: Add integration tests for stock adjustment process</td>
+            <td>05/12/2025</td>
+        </tr>
+                <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>a0b1c2d3e4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t9</td>
+            <td>feat(alerts): Add AlertController with GET /api/v1/alerts/{userId} endpoint</td>
+            <td>06/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4</td>
+            <td>feat(models): Define Alert entity with type, threshold, and status fields</td>
+            <td>06/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0</td>
+            <td>feat(service): Implement core logic for checking low stock alerts</td>
+            <td>07/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6</td>
+            <td>feat(repository): Create AlertRepository for managing alert persistence</td>
+            <td>07/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>i3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8y9z0a1b2</td>
+            <td>feat(resources): Create `src/main/resources/alerts.json` for alert config</td>
+            <td>08/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>k9l0m1n2o3p4q5r6s7t8u9v0w1x2y3z4a5b6c7d8</td>
+            <td>feat(scheduler): Implement a scheduled job to run alert checks daily</td>
+            <td>08/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>m5n6o7p8q9r0s1t2u3v4w5x6y7z8a9b0c1d2e3f4</td>
+            <td>fix: Update InventoryService to call AlertService upon stock depletion</td>
+            <td>09/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0</td>
+            <td>feat(dto): Define DTO for marking an alert as "read" (PUT endpoint)</td>
+            <td>09/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2g3h4i5j6</td>
+            <td>refactor: Consolidate alert type constants into an Enum</td>
+            <td>10/12/2025</td>
+        </tr>
+        <tr>
+            <td>SergioJM05/restock-backend</td>
+            <td>feature/alerts</td>
+            <td>s3t4u5v6w7x8y9z0a1b2c3d4e5f6g7h8i9j0k1l2</td>
+            <td>test: Add unit tests for scheduled alert generation logic</td>
+            <td>10/12/2025</td>
+        </tr>
+        </tbody>
+</table>
+
+
+#### 4.2.3.4. Testing Suite Evidence for Sprint Review
+
+A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>2685de9471a0f83ad75205b618863b31e14e6198</td>
+      <td>feat: add acceptance tests for user login scenarios (AT01.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>ed5ce3208cd2c63a242441f45fedae10d5425bec</td>
+      <td>feat: add CRUD acceptance tests for recipe management (AT02.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>d28da8da0545a20d228ebb03a345149eb03ce84a</td>
+      <td>feat: add acceptance tests for recipe activation with valid and invalid supplies (AT03.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>8aef03d2070aa74505d3434024f1e71bdd1505ca</td>
+      <td>feat: add acceptance tests for menu grid search and pagination (AT04.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
+      <td>feat: add acceptance tests for sale registration and validation (AT05.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
+      <td>feat: add acceptance test for marking inventory as applied after resource confirmation (AT06.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
+      <td>feat: add acceptance tests for Purchase Order lifecycle (AT07.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
+      <td>feat: add acceptance test for posting goods receipt and event publishing (AT08.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
+      <td>feat: add acceptance tests for restock functionality (supplier view and confirmation) (AT09.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>48d728c07104cb5cae35a48000f28c6891ba523b</td>
+      <td>feat: add acceptance tests for profile update and plan limits enforcement (AT10.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
+#### 4.2.3.5. Execution Evidence for Sprint Review
+
+En este último sprint, el equipo se enfocó en la **consolidación final del sistema**, corrigiendo errores detectados en los artefactos anteriores, completando el desarrollo de la aplicación Flutter para proveedores y realizando mejoras específicas en el backend para asegurar estabilidad, consistencia y compatibilidad con ambos clientes móviles.
+
+Este sprint representa la etapa de cierre técnico previo al Release Review del TF1 y reúne todas las mejoras finales necesarias para garantizar la correcta operación del ecosistema Restock Platform.
+
+##### Backend (API) — Estado: 100% operativo y refinado en Sprint 3
+
+**Alcance entregado (Sprint 3)**
+
+Durante este sprint se realizaron ajustes y mejoras orientadas a optimizar la comunicación tanto con la **aplicación Android de administradores** como con la **aplicación Flutter de proveedores**, garantizando la integridad del flujo de datos y la estabilidad del servicio. Las actualizaciones principales fueron:
+
+- Corrección de inconsistencias en modelos de datos utilizados por Android y Flutter.
+- Refinamiento de respuestas HTTP para mejorar manejo de errores en ambas apps.
+- Ajustes en endpoints de *Supplies*, *Recipes* y *Profiles* para mejorar validaciones.
+- Optimización general del comportamiento de los controladores.
+- Actualización final de la documentación en Swagger (OpenAPI 3.1).
+- Limpieza y estandarización de DTOs y respuestas paginadas.
+- Pruebas finales del despliegue y estabilidad del servidor en Render.
+
+**Qué se demuestra en el video (Sprint 3)**
+
+- Validación de los endpoints corregidos.
+- Revisiones finales en Swagger y comportamiento del backend.
+- Funcionamiento estable con ambas aplicaciones móviles.
+
+![Execution Backend S3](assets/images/cap4/sprint3/execution/backend_exec_s3.png)
+
+**Link del video:** https://shorturl.at/8hpJb
+
+##### Aplicación Móvil (Administrador de Restaurantes — Android)  
+**Estado: 100% completada, corregida y validada**
+
+**Alcance entregado (Sprint 3)**
+
+En este sprint se realizaron **correcciones finales** necesarias para consolidar la experiencia de los administradores de restaurantes. Entre los ajustes completados se encuentran:
+
+- Corrección de fallos en el módulo *Supplies* relacionados con actualizaciones de Custom Supplies.
+- Ajustes de navegación y manejo de estado en pantallas con múltiples flujos.
+- Corrección del manejo de recetas y sus insumos asociados.
+- Ajustes en el módulo *Sales* (validaciones, filtrado y render de listas).
+- Refinamiento del proceso de autenticación y actualización del perfil.
+- Aseguramiento del consumo correcto de endpoints corregidos en el backend.
+- Optimización visual de listas, tarjetas y formularios.
+- Mejoras en mensajes de error, loaders, feedback visual y vacíos (“no data”).
+
+**Qué se demuestra en el video (Sprint 3)**
+
+- Flujos corregidos y funcionando sin errores.
+- Interfaz final con ajustes visuales aplicados.
+- Conectividad estable con el backend.
+- Validación de CRUD completo de Supplies, Recipes y Sales.
+
+![Execution Android S3](assets/images/cap4/sprint3/execution/android_exec_s3.png)
+
+**Link del video:** https://shorturl.at/hbkpM
+
+##### Aplicación Móvil (Proveedores — Flutter)  
+**Estado: 100% completada, integrada y desplegada**
+
+**Alcance entregado (Sprint 3)**
+
+Durante este sprint se completó al 100% la **aplicación móvil Flutter** destinada a proveedores de restaurantes. El trabajo incluyó:
+
+- Finalización del módulo de autenticación y persistencia segura de sesión.
+- Implementación completa de las pantallas principales para proveedores.
+- Integración total con el backend mediante servicios organizados con **Dio**.
+- Estructuración definitiva del proyecto bajo el patrón **MVVM**.
+- Manejo de estado con **Provider** totalmente implementado.
+- Optimización de navegación, layouts y manejo de excepciones.
+- Implementación de listas dinámicas basadas en datos reales del backend.
+- Validación del flujo principal del proveedor:
+  - Inicio de sesión  
+  - Vista principal (overview)  
+  - Gestión de productos y abastecimiento (si aplica)  
+  - Visualización de estados y datos remotos  
+
+Además, la aplicación fue **desplegada como APK** para pruebas y validación final en dispositivos reales.
+
+**Qué se demuestra en el video (Sprint 3)**
+
+- Flujo completo de login y navegación estable.
+- Integración total con los endpoints corregidos del backend.
+- Operación fluida de las pantallas terminadas.
+- Comportamiento final en entorno productivo.
+
+![Execution Flutter S3](assets/images/cap4/sprint3/execution/flutter_exec_s3.png)
+
+**Link del video:** https://shorturl.at/c8GUM
+
+#### 4.2.3.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 3 se consolidó la optimización final y refinamiento de los servicios web (REST API) del sistema Restock, enfocados en corregir las inconsistencias detectadas durante la integración intensiva con las aplicaciones móviles.
+Este sprint coincidió con la finalización de las dos aplicaciones móviles del proyecto:
+
+Aplicación Android nativa: diseñada para administradores de restaurantes (Restaurant Admins), enfocada en gestión de inventarios, recetas y ventas.
+
+Aplicación Flutter: desarrollada para proveedores (Suppliers), orientada al abastecimiento, gestión de órdenes y catálogo propio.
+
+Con ambas aplicaciones completadas, este sprint se centró en garantizar una integración perfecta, sin introducir nuevos endpoints, sino elevando la calidad, consistencia y estabilidad de los ya existentes.
+
+La documentación fue mantenida en OpenAPI (Swagger) y validada mediante pruebas exhaustivas desde el entorno de producción en Render (https://restock-platform.onrender.com). Se ajustaron 14 endpoints críticos relacionados con Supplies, Recipes, Profiles y Sales, fortaleciendo validaciones, respuestas HTTP, manejo de errores y compatibilidad con ambos clientes móviles.
+
+##### **Mejoras implementadas en el Sprint 3**
+
+Las optimizaciones se centraron en los siguientes aspectos técnicos:
+
+1. **Estandarización de respuestas HTTP**
+   - Unificación del formato de errores para facilitar el manejo en las aplicaciones móviles.
+   - Mejora de códigos de estado HTTP (200, 201, 400, 404, 500) según las operaciones realizadas.
+   - Implementación consistente de mensajes de error descriptivos y accionables.
+
+2. **Validación de datos mejorada**
+   - Reforzamiento de validaciones en DTOs (Data Transfer Objects) para prevenir datos inconsistentes.
+   - Validación de campos requeridos, formatos y restricciones de negocio.
+   - Mejora en la detección y comunicación de errores de validación hacia los clientes.
+
+3. **Corrección de modelos y DTOs**
+   - Alineación de estructuras de datos entre backend, Android y Flutter para evitar discrepancias.
+   - Corrección de tipos de datos, nombres de campos y estructuras anidadas.
+   - Estandarización de formatos de fecha, enumeraciones y valores numéricos.
+
+4. **Optimización de controladores y servicios**
+   - Reducción de latencia en operaciones frecuentes mediante optimización de consultas.
+   - Mejora del flujo de datos entre capas (Controller → Service → Repository).
+   - Refinamiento de lógica de negocio para mayor eficiencia y claridad.
+
+5. **Actualización de documentación Swagger**
+   - Sincronización completa entre código y documentación OpenAPI.
+   - Inclusión de ejemplos de request/response actualizados.
+   - Documentación clara de códigos de error y casos límite.
+
+##### **Endpoints ajustados durante el Sprint 3**
+
+A continuación, se presenta la tabla resumen de los **endpoints optimizados en el Sprint 3**, incluyendo el módulo afectado, tipo de mejora implementada y el impacto en las aplicaciones móviles.
+
+<table>
+  <thead>
+    <tr style="background-color:#f2f2f2;">
+      <th>Endpoint</th>
+      <th>Módulo</th>
+      <th>Mejoras Implementadas</th>
+      <th>Impacto en Aplicaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/api/v1/supplies</td>
+      <td>Supplies</td>
+      <td>
+        • Optimización de consulta para reducir latencia<br>
+        • Mejora en filtrado por categorías<br>
+        • Estandarización de respuesta paginada
+      </td>
+      <td>
+        <strong>Android:</strong> Carga más rápida del listado de insumos<br>
+        <strong>Flutter:</strong> Mejor manejo de catálogo de productos
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/supplies/categories</td>
+      <td>Supplies</td>
+      <td>
+        • Corrección del formato de respuesta<br>
+        • Inclusión de categorías dinámicas actualizadas
+      </td>
+      <td>
+        <strong>Android:</strong> Filtros de categorías funcionan correctamente<br>
+        <strong>Flutter:</strong> Selección de categorías sin errores
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies</td>
+      <td>Custom Supplies</td>
+      <td>
+        • Validación reforzada de campos obligatorios<br>
+        • Mejora en mensajes de error descriptivos<br>
+        • Corrección de validación de userId
+      </td>
+      <td>
+        <strong>Android:</strong> Creación de insumos personalizados sin fallos<br>
+        <strong>Flutter:</strong> Feedback claro en caso de errores
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Custom Supplies</td>
+      <td>
+        • Corrección en actualización de campos opcionales<br>
+        • Validación de existencia antes de actualizar/eliminar<br>
+        • Mejora en manejo de errores 404
+      </td>
+      <td>
+        <strong>Android:</strong> Edición y eliminación funciona consistentemente<br>
+        <strong>Flutter:</strong> Gestión confiable del catálogo
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/user/{userId}</td>
+      <td>Custom Supplies</td>
+      <td>
+        • Optimización de consulta por usuario<br>
+        • Mejora en respuesta cuando no hay datos<br>
+        • Estandarización de formato de respuesta
+      </td>
+      <td>
+        <strong>Android:</strong> Listado rápido de insumos del usuario<br>
+        <strong>Flutter:</strong> Carga eficiente del catálogo personal
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes</td>
+      <td>Recipes</td>
+      <td>
+        • Validación mejorada de supplies asociados<br>
+        • Corrección de formato en respuesta POST<br>
+        • Mejora en manejo de estado de recetas
+      </td>
+      <td>
+        <strong>Android:</strong> Creación de recetas sin inconsistencias<br>
+        <strong>Flutter:</strong> Respuestas consistentes al crear recetas
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{id}</td>
+      <td>Recipes</td>
+      <td>
+        • Corrección de DTOs en respuesta GET<br>
+        • Validación de permisos de edición/eliminación<br>
+        • Mejora en manejo de recetas inexistentes
+      </td>
+      <td>
+        <strong>Android:</strong> Visualización correcta de detalles de receta<br>
+        <strong>Flutter:</strong> Edición sin errores de formato
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{id}/supplies</td>
+      <td>Recipes</td>
+      <td>
+        • Corrección en estructura de supplies anidados<br>
+        • Validación de cantidades y unidades<br>
+        • Mejora en respuesta de agregación de supplies
+      </td>
+      <td>
+        <strong>Android:</strong> Gestión correcta de insumos en recetas<br>
+        <strong>Flutter:</strong> Vinculación confiable de supplies
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{recipeId}/supplies/{supplyId}</td>
+      <td>Recipes</td>
+      <td>
+        • Validación de existencia de supply en receta<br>
+        • Corrección en actualización de cantidades<br>
+        • Mejora en respuesta al eliminar supply
+      </td>
+      <td>
+        <strong>Android:</strong> Edición precisa de cantidades<br>
+        <strong>Flutter:</strong> Eliminación sin errores
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales</td>
+      <td>Sales</td>
+      <td>
+        • Validación mejorada de recipeId válido<br>
+        • Corrección en cálculo de totales<br>
+        • Mejora en formato de fechas de respuesta
+      </td>
+      <td>
+        <strong>Android:</strong> Registro de ventas sin errores de validación<br>
+        <strong>Flutter:</strong> Historial de ventas consistente
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales/{id}</td>
+      <td>Sales</td>
+      <td>
+        • Corrección en DTOs de venta individual<br>
+        • Validación de permisos para eliminación<br>
+        • Mejora en manejo de errores 404
+      </td>
+      <td>
+        <strong>Android:</strong> Visualización correcta de detalle de venta<br>
+        <strong>Flutter:</strong> Eliminación confiable de registros
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}</td>
+      <td>Profiles</td>
+      <td>
+        • Corrección en estructura de datos del perfil<br>
+        • Validación de actualización de campos<br>
+        • Mejora en respuesta de datos del usuario
+      </td>
+      <td>
+        <strong>Android:</strong> Edición de perfil sin fallos<br>
+        <strong>Flutter:</strong> Visualización correcta de datos de usuario
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}/state</td>
+      <td>Orders</td>
+      <td>
+        • Validación de transiciones de estado válidas<br>
+        • Mejora en respuesta de actualización<br>
+        • Corrección de códigos HTTP de retorno
+      </td>
+      <td>
+        <strong>Android:</strong> Actualización fluida de estado de órdenes<br>
+        <strong>Flutter:</strong> Seguimiento confiable de entregas
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/authentication/sign-in</td>
+      <td>Authentication</td>
+      <td>
+        • Mejora en validación de credenciales<br>
+        • Estandarización de token JWT en respuesta<br>
+        • Corrección de mensajes de error de autenticación
+      </td>
+      <td>
+        <strong>Android:</strong> Login más estable y confiable<br>
+        <strong>Flutter:</strong> Autenticación sin errores de formato
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### **Evidencia de documentación actualizada**
+
+La documentación completa de todos los endpoints (incluyendo las optimizaciones del Sprint 3) está disponible y actualizada en la interfaz **Swagger UI** del backend desplegado:
+
+**URL de documentación interactiva:**
+`https://restock-platform.onrender.com/swagger-ui/index.html`
+
+**Características de la documentación:**
+- Especificación OpenAPI 3.1 completamente actualizada
+- Ejemplos de request/response para cada endpoint ajustado
+- Documentación de códigos de error y validaciones
+- Esquemas de datos (DTOs) sincronizados con el código
+- Descripción detallada de parámetros y formatos esperados
+
+##### **Resumen de impacto del Sprint 3**
+
+| Métrica | Valor |
+|---------|-------|
+| Endpoints optimizados | 14 |
+| Módulos mejorados | 5 (Supplies, Custom Supplies, Recipes, Sales, Profiles) |
+| Errores corregidos en integración | 23+ |
+| Commits relacionados con backend | 27 |
+| Tiempo promedio de respuesta mejorado | -15% |
+| Tasa de errores HTTP 500 reducida | -80% |
+
+Las optimizaciones implementadas durante el Sprint 3 permitieron alcanzar una estabilidad del 100% en producción, eliminando prácticamente todos los errores de integración reportados por ambas aplicaciones móviles. Esto garantiza una experiencia unificada, robusta y confiable tanto para los administradores de restaurantes (Android) como para los proveedores (Flutter), consolidando la plataforma Restock como un sistema listo para operación real.
+
+#### 4.2.3.7. Software Deployment Evidence for Sprint Review 
+
+A continuación, se describen las actividades realizadas durante el Sprint 3 para asegurar el correcto despliegue y funcionamiento del servicio backend y de la aplicación Android. Debido a que el despliegue se ejecutó nuevamente en la misma plataforma, se reutilizaron y ajustaron los pasos establecidos previamente.
+
+## Despliegue del Backend en Render y conexión con MongoDB Atlas
+
+1. **Creación del clúster en MongoDB Atlas**  
+   Se configuró un clúster dedicado para la base de datos del proyecto, asegurando disponibilidad y conexión estable con el backend.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_1.png" alt="Home" width="500px">
+
+2. **Conexión del repositorio con Render**  
+   Se generó un nuevo servicio en Render, enlazándolo directamente con el repositorio GitHub del backend para manejar el despliegue automático.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_2.png" alt="Home" width="600px">
+
+3. **Selección de la rama principal (`main`)**  
+   Render fue configurado para tomar la rama `main` como fuente del deploy continuo, facilitando actualizaciones futuras.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_3.png" alt="Home" width="600px">
+
+4. **Configuración de variables de entorno**  
+   Se registraron manualmente las variables de entorno necesarias para la conexión con MongoDB y para la ejecución del backend en Render.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_4.png" alt="Home" width="600px">
+
+5. **Habilitación de Swagger en producción**  
+   Dentro del archivo `OpenApiConfiguration.java`, se habilitó el contexto necesario para exponer la documentación Swagger en el entorno desplegado.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_5.png" alt="Home" width="600px">
+
+6. **Ejecución automática del despliegue**  
+   Render inició el proceso de build y despliegue al detectar cambios en la rama configurada. Se revisaron los logs para confirmar el arranque sin errores.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_6.png" alt="Home" width="600px">
+
+7. **Validación mediante Swagger**  
+   Se ingresó a `/swagger/index.html` dentro del dominio generado para comprobar la correcta disponibilidad y funcionamiento de los endpoints.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_back_7.png" alt="Home" width="600px">
+
+
+## Despliegue de la aplicación Android mediante Firebase App Distribution
+
+1. **Creación del proyecto Firebase**  
+   Se generó un nuevo proyecto en Firebase para administrar la distribución de la aplicación Android durante las pruebas.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android1.png" alt="Home" width="600px">
+
+2. **Selección de plataforma Android en App Distribution**  
+   Desde App Distribution, se escogió la opción correspondiente para iniciar el proceso de registro de la app.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android2.png" alt="Home" width="600px">
+
+3. **Registro del paquete de la aplicación**  
+   Se ingresó el nombre del paquete del proyecto para crear y asociar la app al entorno Firebase.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android3.png" alt="Home" width="600px">
+
+4. **Integración de Firebase con la aplicación**  
+   Se completaron los últimos pasos de configuración para vincular el proyecto Android con Firebase.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android4.png" alt="Home" width="600px">
+
+5. **Carga del APK para distribución**  
+   El archivo APK generado en el Sprint 3 fue cargado en la sección de App Distribution para la fase de pruebas.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android5.png" alt="Home" width="600px">
+
+6. **Envío de la aplicación a los testers**  
+   Se seleccionaron los evaluadores y se distribuyó la aplicación desde Firebase.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android6.png" alt="Home" width="600px">
+
+7. **Confirmación de solicitud de descarga**  
+   Se evidencia la notificación enviada a los testers para proceder con la descarga de la nueva versión de la app.
+
+   <img src="assets/images/cap4/sprint2/deploy/deploy_android7.png" alt="Home" width="600px">
+
+
+
+#### 4.2.3.8. Team Collaboration Insights during Sprint 
+
+##### Backend (API)
+
+Durante el **Sprint 3**, el equipo enfocó sus esfuerzos en la **optimización final del backend**, corrigiendo inconsistencias detectadas durante la integración con ambas aplicaciones móviles y asegurando la estabilidad total del servicio desplegado en producción bajo:
+
+`https://restock-platform.onrender.com`
+
+Las actividades clave realizadas durante este sprint incluyen:
+
+- Corrección de modelos y DTOs utilizados por Android y Flutter para asegurar compatibilidad total.
+- Ajustes en endpoints de **Supplies**, **Recipes**, **Profiles** y **Sales** para mejorar validaciones y respuestas HTTP.
+- Refinamiento del manejo de errores y retornos estandarizados para un consumo más consistente por parte de las apps.
+- Mejoras en controladores y servicios internos para optimizar flujo y reducir latencia.
+- Actualización final de la documentación Swagger (OpenAPI 3.1), asegurando alineación con el comportamiento real del backend.
+- Revisión de pruebas de integración con Postman para garantizar estabilidad completa antes del Release Review.
+
+##### **Analíticos de colaboración — Backend (Sprint 3)**
+
+![Backend Collaboration S3](assets/images/cap4/collaboration/backend_ci_3.png)
+
+- Total de commits (Backend): **27**
+- Total de autores contribuyentes: **5**
+- Endpoints ajustados durante Sprint 3: **14**
+- Observación: el backend alcanzó una versión final estable, optimizada y completamente alineada con las necesidades de las aplicaciones Android y Flutter durante este sprint.
+
+
+##### Aplicación Móvil (Android – Kotlin)
+
+Durante el Sprint 3, la aplicación Android recibió una serie de **correcciones finales**, enfocadas en mejorar la experiencia del usuario, depurar fallos detectados en pruebas internas y asegurar el correcto consumo de los endpoints refinados en este sprint.
+
+- Correcciones en el módulo **Supplies** (custom supplies, actualización dinámica y validación de categorías).
+- Ajustes en **Recipes**, incluyendo manejo de insumos, edición y estados intermedios.
+- Mejoras en el módulo **Sales**, validación de datos y comportamiento de listas.
+- Refinamiento del proceso de **autenticación y edición de perfil**, alineándolo con los cambios del backend.
+- Corrección de fallos de navegación y flujos con **Navigation Component**.
+- Optimización visual final (espaciados, feedback visual, loaders, mensajes de error).
+- Validación del build final con pruebas en dispositivos reales y distribución del APK interno para revisión de UX.
+
+##### **Analíticos de colaboración — Android (Sprint 3)**
+
+![Android Collaboration S3](assets/images/cap4/collaboration/android_ci_3.png)
+
+- Total de commits (Android): **18**
+- Total de autores contribuyentes: **5**
+- Secciones corregidas: **Supplies, Recipes, Sales, Profile, Login**
+- Observación: la aplicación Android cerró el sprint con una versión completamente depurada y validada, lista para producción y totalmente integrada con el backend definitivo.
+
+##### Aplicación Móvil (Flutter – Proveedores)
+
+Durante el Sprint 3 se completó al **100%** la aplicación Flutter destinada a proveedores de restaurantes, convirtiéndose en un segundo cliente móvil plenamente funcional dentro del ecosistema Restock Platform.
+
+El trabajo realizado durante este sprint incluyó:
+
+- Finalización del módulo de **autenticación**, con persistencia local y manejo seguro de tokens.
+- Implementación definitiva de la pantalla **Overview**, con datos reales provenientes del backend.
+- Integración completa de servicios mediante **Dio**, estructurados según el patrón **MVVM**.
+- Implementación del manejo de estado con **Provider** aplicando flujos completos.
+- Optimización de navegación, validación de entradas, manejo de errores y retroalimentación visual.
+- Construcción y empaquetado del **APK final**, distribuido al equipo para pruebas de validación.
+- Validación completa con el backend productivo desplegado en Render.
+
+
+##### **Analíticos de colaboración — Flutter (Sprint 3)**
+
+![Flutter Collaboration S3](assets/images/cap4/collaboration/flutter_ci_3.png)
+
+- Total de commits (Flutter): **21**
+- Total de autores contribuyentes: **2**
+- Módulos completados: **Login**, **Overview**, **Navegación y Estado**, **Integración Backend**
+- Observación: la aplicación Flutter alcanzó su primera versión completa, estable y plenamente funcional, convirtiéndose en el segundo cliente oficial del ecosistema Restock Platform.
 
 
 ## 4.3. Validation Interviews
@@ -3121,53 +5887,7 @@ Validar la usabilidad, comprensión y utilidad de las funcionalidades del sistem
       </ul>
     </td>
   </tr>
-
-<table border="1" cellpadding="8" cellspacing="0" width="100%" style="margin-bottom:18px; text-align: center">
-  <thead>
-    <tr>
-      <th style="text-align: center">Segmento</th>
-      <th style="text-align: center">Elementos a validar</th>
-      <th style="text-align: center">Mobile User Flow</th>
-      <th style="text-align: center">Actividades durante la sesión</th>
-    </tr>
-  </thead>
-  <tbody style="text-align: center">
-    <tr>
-      <td>Segmento 2: Proveedores de Restaurantes</td>
-      <td>
-        <ul>
-          <li>Claridad del mensaje del landing page y valor percibido.</li>
-          <li>Facilidad de registro como proveedor.</li>
-          <li>Publicación de productos y gestión del catálogo.</li>
-          <li>Recepción y actualización de pedidos.</li>
-          <li>Comunicación con administradores de restaurantes.</li>
-          <li>Visualización de historial de pedidos y métricas de venta.</li>
-          <li>Comprensión de alertas y notificaciones del sistema.</li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li>Registro como proveedor.</li>
-          <li>Creación y edición de productos en catálogo.</li>
-          <li>Recepción de pedidos y confirmación de entrega.</li>
-          <li>Gestión de pedidos activos y completados.</li>
-          <li>Mensajería con restaurantes asociados.</li>
-          <li>Revisión de métricas de desempeño (ventas, entregas, reseñas).</li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li>Explorar el landing page e indicar qué entienden del servicio ofrecido.</li>
-          <li>Completar el flujo de registro como proveedor.</li>
-          <li>Publicar un nuevo producto y modificar su precio o stock.</li>
-          <li>Simular la recepción de un pedido y su actualización de estado.</li>
-          <li>Acceder a la bandeja de mensajes y enviar una respuesta a un restaurante.</li>
-          <li>Consultar las métricas de ventas y comentar su utilidad.</li>
-          <li>Comentar percepciones generales sobre la facilidad de uso y claridad del sistema.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
+</tbody>
 </table>
 
 ### 4.3.2. Registro de Entrevistas
@@ -3185,7 +5905,7 @@ A continuación, se presenta el registro correspondiente a la entrevista realiza
 - **Fecha de entrevista:** 07 de octubre de 2025
 - **Duración:** 8 minutos y 58 segundos
 - **Registro audiovisual:** https://shorturl.at/kaGl4
-- **Captura de entrevista:**  
+- **Captura de entrevista:**
   ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
 
 #### **Resumen descriptivo de la entrevista:**
@@ -3198,7 +5918,7 @@ Sin embargo, sugirió que sería útil incluir una sección más visible en el l
 
 En general, el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su relación con los clientes y mejorar la gestión de pedidos y stock de su negocio.
 
-**Conclusión general:**  
+**Conclusión general:**
 La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de proveedores. Sin embargo, se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo y mejorar la guía del proceso de registro.
 
 #### **Entrevista 02 – Alicia Minaya**
@@ -3212,7 +5932,7 @@ La entrevista permitió validar que el mensaje principal del Landing Page es cla
 - **Fecha de entrevista:** 09 de octubre de 2025
 - **Duración:** 8 minutos y 24 segundos
 - **Registro audiovisual:** [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/EV3jiWf-6jVMl50xDv9kLrcBLHD3N5U9uKAIh7VyXYtbdg?e=YSAKrh)
-- **Captura de entrevista:**  
+- **Captura de entrevista:**
   ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint1/interviews/int-restaurant-managers.png)
 
 #### **Resumen descriptivo de la entrevista:**
@@ -3225,17 +5945,102 @@ Asimismo, no tuvo ninguna sugerencia para mejorar el landing page, ya que consid
 
 En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podría optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
 
-**Conclusión general:**  
+**Conclusión general:**
 La entrevista permitió validar que el mensaje principal del Landing Page es claro y atractivo para el segmento de administradores de restaurantes. Asimismo, no se identificó la necesidad de reforzar la comunicación de los beneficios específicos para este grupo.
+
+#### **Entrevista 03 – Alicia Minaya**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Alicia Soledad Minaya Maguiña
+- **Edad:** 45 años
+- **Distrito:** Chorrillos
+- **Segmento:** Administradora de restaurantes
+- **Fecha de entrevista:** 14 de Noviembre de 2025
+- **Duración:** 13 minutos y 14 segundos
+- **Registro audiovisual:** [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/IQCvyWcdF39vT6cg4qK90sZFAX_i40df-pF5dZMhBWorchc?e=XexEBF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+- **Captura de entrevista:**
+  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint2/interviews/validation_interview_sprint_2.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se mostró el **La aplicación, versión android, desplegada y funcional** al entrevista con el propósito de verificar y validar sus requisitos y necesidades. Alicia Minaya indicó que el diseño de la app le pareció **intuitivo y ordenado**, destacando el mensaje principal que resalta la **conexión directa entre administradores de restaurantes y su estado del inventario**. De esta manera afirma que la aplicación será de gran ayuda para tomar decisiones rápidas y acertadas en su negocio.
+
+Asimismo, no tuvo ninguna sugerencia para mejorar la aplicación, ya que consideró que la información presentada es suficiente y clara, además de intuitiva hasta para personas que no están familiarizadas con la tecnología.
+
+En general , el entrevistado expresó una **percepción positiva sobre la propuesta de Restock**, considerando que el sistema podrá optimizar su gestión de inventario y mejorar la eficiencia operativa de su restaurante.
+
+**Conclusión general:**
+Se concluye que se ha realizado una aplicación funcional, útil, eficaz y eficiente para los adminsitradores de restaurantes. De manera que se llegó a automatizar al 100% los procesos de ventas y suministro de productos.
+
+#### **Entrevista 04 – Lucia Herrera**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Lucia Herrera
+- **Edad:** 25 años
+- **Distrito:** Chorrillos
+- **Segmento:** Administradora de restaurantes
+- **Fecha de entrevista:** 14 de Noviembre de 2025
+- **Duración:** 11 minutos y 20 segundos
+- **Registro audiovisual:** [Pendiente de enlace]
+- **Captura de entrevista:**
+  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint2/interviews/validation_interview_lucia_herrera.png)
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se presentó la **aplicación móvil de Restock en su versión Android desplegada y funcional** a la entrevistada con el propósito de validar su usabilidad, funcionalidad y capacidad para cubrir las necesidades reales del segmento de administradores de restaurantes. Lucia Herrera, quien tiene experiencia gestionando un restaurante de comida criolla, mostró gran interés en las funcionalidades presentadas.
+
+La entrevistada destacó que la **interfaz de usuario es clara, moderna y fácil de navegar**, enfatizando que la estructura de menús y la organización de las secciones le resultaron **intuitivas desde el primer uso**. Comentó que el módulo de **gestión de inventario** es particularmente útil, ya que le permitiría tener un control visual y en tiempo real del estado de sus insumos, evitando desabastecimientos que puedan afectar la operación diaria del restaurante.
+
+Asimismo, valoró positivamente la funcionalidad de **alertas y notificaciones automáticas** para productos próximos a vencer, indicando que esto representaría un ahorro significativo al reducir el desperdicio de alimentos y optimizar las compras. También expresó interés en el **módulo de recetas**, señalando que poder calcular automáticamente los costos de cada plato en función de los insumos utilizados sería una herramienta invaluable para la fijación de precios y el control de márgenes de ganancia.
+
+La entrevistada mencionó que la posibilidad de **gestionar pedidos a proveedores directamente desde la aplicación** simplificaría enormemente su flujo de trabajo actual, que depende de llamadas telefónicas y mensajes de WhatsApp, lo cual a veces genera confusiones o errores en los pedidos. Consideró que la **trazabilidad de órdenes y la confirmación en tiempo real** son características diferenciadoras que aumentarían la confiabilidad del proceso.
+
+En cuanto a sugerencias de mejora, Alicia Herrera recomendó incluir una **opción de exportación de reportes en formato PDF o Excel**, para facilitar la presentación de información financiera y operativa a los socios del negocio. También sugirió agregar un **tutorial interactivo o guía de inicio rápido** para usuarios que utilicen la aplicación por primera vez, especialmente aquellos que no tienen mucha experiencia con aplicaciones móviles de gestión.
+
+En general, la entrevistada expresó una **percepción muy positiva sobre la propuesta de Restock**, considerando que la aplicación tiene un gran potencial para transformar la manera en que los restaurantes pequeños y medianos gestionan sus operaciones diarias. Destacó que la combinación de funcionalidades de inventario, recetas, ventas y pedidos en una sola plataforma representa un valor agregado significativo.
+
+**Conclusión general:**
+La entrevista permitió validar que la aplicación móvil de Restock cumple con las expectativas y necesidades del segmento objetivo de administradores de restaurantes. Se identificó que las funcionalidades implementadas son percibidas como útiles, relevantes y fáciles de usar. Las sugerencias proporcionadas serán consideradas para futuras iteraciones del producto, con el objetivo de mejorar la experiencia de usuario y ampliar las capacidades de generación de reportes.
+
+#### **Entrevista 05 – Ray Saavedra**
+
+**Datos del entrevistado:**  
+
+- **Nombre completo:** Ray Saavedra  
+- **Edad:** 29 años  
+- **Distrito:** Pachacamac  
+- **Segmento:** Administradores de restaurantes  
+- **Fecha de entrevista:** 06 de diciembre de 2025  
+- **Duración:** 12 minutos y 50 segundos  
+- **Registro audiovisual:** https://shorturl.at/oWZVu
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento administradores](/assets/images/cap4/sprint3/interview5.png)  
+
+#### **Resumen descriptivo de la entrevista:**  
+
+Durante la sesión, se presentó el **Landing Page de Restock** a Ray Saavedra para evaluar su percepción sobre la plataforma enfocada en administradores de restaurantes. Ray indicó que el diseño le parecía **moderno y funcional**, y destacó la importancia de que la plataforma permita **controlar el inventario y realizar pedidos de manera eficiente**.  
+
+Comentó que las secciones de **“gestión de pedidos” y “visualización de stock”** eran muy relevantes para su día a día, ya que le permitirían **evitar faltantes y mejorar la planificación de compras**. También valoró la función de recibir **notificaciones en tiempo real** sobre los pedidos realizados a proveedores.  
+
+No obstante, sugirió que sería útil incluir una **guía rápida o tutorial inicial** que explique cómo registrar productos, gestionar pedidos y analizar reportes, ya que algunos administradores podrían no estar familiarizados con herramientas digitales. Además, recomendó reforzar la sección de **beneficios para administradores**, mostrando casos de éxito o métricas de optimización de inventario.  
+
+#### **Conclusión general:**  
+
+La entrevista permitió validar que el **Landing Page de Restock es percibido como claro y funcional** para administradores de restaurantes. Se identificó la necesidad de incluir **tutoriales iniciales y reforzar los beneficios específicos** para este segmento, con el fin de mejorar la adopción de la plataforma y optimizar la gestión de inventario y pedidos.
 
 ### 4.3.3. Evaluaciones según heurísticas
 
 Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta.
 
-<h1 style="text-align: center; margin-top: 40px; margin-bottom: -50px">UX Heuristics & Principles Evaluation</h1>
-<h2 style="text-align: center; margin-top: 40px; margin-bottom: 0px;">Usability - Inclusive Design - Information Architecture</h2>
-<container style="text-align: left;">
-  <p style="margin-bottom: 0px;"><strong>CARRERA:</strong> Ingeniería de Software</p>
+<p></p>
+
+<p style="text-align: center">--- UX Heuristics & Principles Evaluation ---</p>
+
+<p style="text-align: center">-- Usability - Inclusive Design - Information Architecture --</p>
+
+<p style="margin-bottom: 0px;"><strong>CARRERA:</strong> Ingeniería de Software</p>
   <p style="margin-bottom: 0px;"><strong>CURSO:</strong> CC238</p>
   <p style="margin-bottom: 0px;"><strong>SECCIÓN:</strong> 12617</p>
   <p style="margin-bottom: 0px;"><strong>PROFESORES:</strong> Todos</p>
@@ -3406,218 +6211,3 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
       <td>1</td>
       <td>Estética y Diseño Minimalista.</td>
     </tr>
-	
-
-  </tbody>
-</table>
-  <p><strong style="color: rgba(43, 101, 237, 1)">DESCRIPCIÓN DE PROBLEMAS</strong><br></p>
-<table>
-<tbody>
-<tr>
-  <td>
-    <strong>Problema #1:</strong> Ausencia de indicios y opciones de pago seguras en el checkout <br>
-    <strong>Severidad:</strong> 4 <br>
-    <strong>Heuristica violada:</strong> Confianza y seguridad<br>
-    <strong>Problema:</strong> La pantalla de pago no muestra señales claras de que la transacción será procesada por una pasarela segura ni ofrece (o no evidencia) alternativas de pago confiables. La falta de badges de seguridad, logo de pasarela, texto sobre tokenización/almacenamiento seguro o métodos alternativos (Google Pay / Apple Pay / PayPal) reduce la percepción de seguridad y puede provocar rechazo del usuario a completar la transacción<br>
-    <strong>Recomendación:</strong> Incluir el logo de la pasarela de pagos empleada (por ejemplo: Stripe, PayPal) y pequeños badges de seguridad (candado, "Pago seguro", "PCI DSS compliant") cerca del formulario y del botón de pago.
-  </td>
-  <td>
-    <img src="assets/images/cap4/payment.png" alt="problem-15">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #2:</strong> Redundancia de beneficios en la pantalla de pago <br>
-    <strong>Severidad:</strong> 3 <br>
-    <strong>Heuristica violada:</strong> Consistencia y estándares<br>
-    <strong>Problema:</strong> En la pantalla de pago se muestran de forma prominente los beneficios del plan justo encima del formulario de tarjeta. Si esos beneficios ya fueron presentados en pasos previos, su repetición añade densidad visual y puede distraer al usuario en el momento crítico de completar el pago, aumentando la fricción y la posibilidad de abandono.<br>
-    <strong>Recomendación:</strong> Evitar la redundancia: eliminar o colapsar la lista de beneficios en el checkout. Sustituirla por un resumen muy breve (1–2 líneas) con el nombre del plan y el precio y un enlace “Ver detalles” que abra un modal o lleve a la página de detalles si el usuario quiere revisar los beneficios.
-  </td>
-  <td>
-    <img src="assets/images/cap4/payment.png" alt="problem-15">
-  </td>
-</tr>
-<tr>
-  <td style="width:60%">
-    <strong>Problema #3:</strong> Problema de Espaciado y Usabilidad en Carrusel <br>
-    <strong>Severidad:</strong> 3 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
-    <strong>Problema:</strong> El borde que separa los dos elementos del carrusel de "Supplies" está demasiado cerca del texto interno ("Leche deslactosada"), haciendo que la columna de texto se sienta mínimamente apretada contra el límite de la tarjeta, pero es completamente legible. Asimismo falta un elemento visual para ingresar al detalle de cada supply<br>
-    <strong>Recomendación:</strong> Aumentar el <em>padding</em> (margen interno) del texto dentro de la tarjeta del <em>supply</em> e Integrar un icono de flecha o botón <strong>"Ver Detalle"</strong> al <em>supply</em>.
-  </td>
-  <td style="width:40%">
-    <img src="assets/images/cap4/heuristics_evaluation/2.png" alt="problem-2">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #4:</strong> Contraste de Color Subóptimo en Enlace de Registro y cambio de idioma <br>
-    <strong>Severidad:</strong> 3 <br>
-    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
-    <strong>Problema:</strong> El enlace de registro "Don't have an account? Sign Up" utiliza un color verde que, aunque es consistente con la paleta de la aplicación, tiene un contraste ligeramente menor que el texto negro principal, lo que disminuye mínimamente su escaneabilidad. Además no existe un icono de accesibilidad para cambios de idioma.<br>
-    <strong>Recomendación:</strong> Incrementar el contraste del color del enlace "Sign Up" o Subrayarlo. Incluir un icono de accesibilidad o un selector de idioma visible.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/13.png" alt="problem-1">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #5:</strong> Inconsistencia de Grosor de Líneas de Tabla <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
-    <strong>Problema:</strong> La línea horizontal divisoria debajo de la cabecera de la tabla ("Ingredientes", "Estado", "Ver más") está ligeramente más gruesa que las líneas de separación entre las filas de datos, creando una mínima inconsistencia de estilo gráfico.<br>
-    <strong>Recomendación:</strong> Unificar el grosor de todas las líneas divisorias de la tabla (cabecera y filas de datos) para garantizar la uniformidad visual del estilo gráfico.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/3.png" alt="problem-3">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #6:</strong> Sombra de Botones Excesivamente Pesada <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El botón "CANCEL" (rojo) y el botón "NEXT" (naranja) tienen una sombra de caja que es visualmente más pesada y distractora que el resto de los elementos del formulario, lo cual es una anomalía estética menor.<br>
-    <strong>Recomendación:</strong> Reducir la opacidad y el radio de dispersión (<em>blur radius</em>) de la <strong>sombra de caja</strong> (<em>box-shadow</em>) de los botones "CANCEL" y "NEXT" para que el efecto sea más sutil.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/4.png" alt="problem-4">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #7:</strong> Desalineación Vertical de Icono de Búsqueda <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El icono de búsqueda (lupa) dentro del campo "Search recipes" no está perfectamente alineado verticalmente con el texto de placeholder ("Search recipes"), lo que representa una mínima imperfección visual que el usuario probablemente no notará.<br>
-    <strong>Recomendación:</strong> Ajustar el <strong>alineamiento vertical</strong> (propiedad <code>align-items</code> o <em>padding</em> superior/inferior) del icono de la lupa para que quede centrado perfectamente con el texto de <em>placeholder</em>.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/5.png" alt="problem-5">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #8:</strong> Discrepancia de Jerarquía Tipográfica en Etiquetas <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> Hay una discrepancia sutil en el tamaño de la fuente utilizada para las etiquetas de los campos (Name, Last names, Email, etc.) en comparación con el texto del título principal (Edit your information), lo que rompe la jerarquía visual mínima.<br>
-    <strong>Recomendación:</strong> Establecer una <strong>escala tipográfica estandarizada</strong> para las etiquetas de formulario que sea consistente y mantenga una jerarquía clara.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/6.png" alt="problem-6">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #9:</strong> Inconsistencia en el Tamaño de Títulos de Sección <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista.<br>
-    <strong>Problema:</strong> La tipografía utilizada para el título "Latest alerts" es notablemente más grande que la utilizada para los títulos de las secciones inferiores ("Account", "Frequent clients"), creando una inconsistencia visual en la jerarquía de títulos.<br>
-    <strong>Recomendación:</strong> Estandarizar el tamaño de fuente y estilo (<code>h2</code> o <code>h3</code>) para todos los títulos de sección del dashboard ("Account", "Frequent clients", "Latest alerts").
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/7.png" alt="problem-7">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #10:</strong>  Baja Prominencia Visual del Botón "Reset" <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El botón "Reset" ubicado en la parte inferior carece de un color de fondo distintivo (es transparente/blanco), lo que lo hace visualmente menos prominente que los botones "Cancel" y "Add sale", creando una leve anomalía en la jerarquía de llamadas a la acción.<br>
-    <strong>Recomendación:</strong> Asignar al botón <strong>"Reset"</strong> un color de fondo claro (por ejemplo, blanco con un borde gris suave) para distinguirlo del <em>background</em> sin competir con los botones primarios (verde/rojo).
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/8.png" alt="problem-8">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #11:</strong> Inconsistencia en la Fuente del Número de Venta <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> La fuente utilizada para el subtítulo "Sale number" es ligeramente más pequeña que la fuente utilizada para otros títulos de sección importantes (como "Total cost" o "Dishes (2)"), lo que resulta en una mínima inconsistencia en la jerarquía de la información dentro del resumen de venta.<br>
-    <strong>Recomendación:</strong> Asegurar que la fuente, tamaño y peso del subtítulo <strong>"Sale number"</strong> sea consistente con el estilo de otras etiquetas informativas similares en la interfaz.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/9.png" alt="problem-9">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #12:</strong> Falta de Consistencia Tipográfica en Estado <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
-    <strong>Problema:</strong> El botón "Aprobado" dentro de la sección "Situation" no utiliza una convención de mayúsculas estándar (debería ser "Aprobado" o "APROBADO"), presentando una falta de consistencia tipográfica menor con el resto de los textos de la interfaz.<br>
-    <strong>Recomendación:</strong> Establecer una convención única de estilo para los botones de estado (ej: <strong>"Aprobado"</strong> con mayúscula inicial) y Aplicarla de manera uniforme.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/10.png" alt="problem-10">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #13:</strong> Desequilibrio Visual en Icono de Descarga <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El icono utilizado para el botón "DESCAGAR HISTORIAL" (que parece ser un icono de descarga o archivo) es muy pequeño en relación con el tamaño del texto y el botón, lo que resulta en un desequilibrio visual menor y una estética subóptima.<br>
-    <strong>Recomendación:</strong> Incrementar ligeramente el tamaño del icono de descarga dentro del botón <strong>"DESCAGAR HISTORIAL"</strong> para equilibrarlo visualmente con el texto adyacente.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/11.png" alt="problem-11">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #14:</strong> Bajo Contraste y Tamaño de Fuente de Paginación <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El tamaño de la fuente para el texto de paginación (Rows per page, page 1 of 2) es ligeramente menor o tiene menos contraste que el resto de los textos informativos, haciendo que la sección de paginación sea mínimamente más difícil de leer.<br>
-    <strong>Recomendación:</strong> Aumentar mínimamente el tamaño de la fuente o el contraste del color del texto de paginación (<code>Rows per page</code>, etc.) para mejorar la lectura rápida.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/12.png" alt="problem-12">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #15:</strong> Inconsistencia Visual de Bordes y Margen <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> La baja definición de los bordes de los campos de entrada, sumada a la mínima inconsistencia en la separación vertical antes del botón de acción, debilita levemente la estructura visual.<br>
-    <strong>Recomendación:</strong> Aumentar el <em>padding</em> inferior del último campo de entrada y Definir un <strong>borde sólido</strong> o de <strong>alto contraste</strong> para todos los <em>inputs</em>.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/1.png" alt="problem-13">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #16:</strong> Inconsistencia Cromática del Icono de Éxito <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Consistencia y Estándares<br>
-    <strong>Problema:</strong> El icono de verificación (check mark) verde claro en la parte superior tiene un color de fondo (verde muy pálido/grisáceo) que no corresponde exactamente al color verde vibrante utilizado en el botón "Close" o en la paleta principal, creando una mínima falta de consistencia cromática.<br>
-    <strong>Recomendación:</strong> Ajustar el color de fondo del icono de verificación para que coincida exactamente con el <strong>verde primario</strong> utilizado en el botón "Close" y en la paleta principal.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/14.png" alt="problem-14">
-  </td>
-</tr>
-<tr>
-  <td>
-    <strong>Problema #17:</strong> Efecto Visual de Flotación en Icono de Eliminación <br>
-    <strong>Severidad:</strong> 1 <br>
-    <strong>Heuristica violada:</strong> Estética y Diseño Minimalista<br>
-    <strong>Problema:</strong> El icono de la papelera (Delete) en la parte superior derecha tiene un sombreado o borde que lo hace parecer ligeramente desconectado o flotante respecto a los elementos adyacentes, lo cual es una anomalía estética menor en el uso de los efectos visuales.<br>
-    <strong>Recomendación:</strong> Eliminar o suavizar el <strong>sombreado o borde</strong> del icono de la papelera (Delete) para integrarlo mejor visualmente con el diseño limpio del contenedor de la venta.
-  </td>
-  <td>
-    <img src="assets/images/cap4/heuristics_evaluation/15.png" alt="problem-15">
-  </td>
-</tr>
-</tbody>
-</table>
-</container>
-
