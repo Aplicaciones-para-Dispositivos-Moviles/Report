@@ -27,3 +27,13 @@ El proyecto ha creado exitosamente un "puente digital" entre la demanda y la ofe
 
 5. Clean Code y Mantenibilidad
    - La decisión de aplicar rigurosamente Clean Code, Clean Architecture y el principio de Separación de Intereses en todas las capas del proyecto (desde el backend hasta las UI de Flutter y Kotlin) constituye uno de los logros técnicos más significativos, ya que este enfoque disminuyó la deuda técnica al estructurar el código en capas bien definidas que son altamente testeables y modificables de forma aislada. Esto asegura que cualquier cambio futuro en las reglas de negocio, como la lógica de las Alertas o la estructura de las Órdenes, pueda implementarse rápidamente sin generar efectos secundarios no deseados en otras funcionalidades; además, la consistencia y legibilidad del código facilitan la incorporación de nuevos desarrolladores al proyecto, reduciendo drásticamente el tiempo de onboarding y garantizando la sostenibilidad y evolución continua de la plataforma a largo plazo.
+
+# Recomendaciones
+Para futuros desarrollos y mejoras en la plataforma, se recomienda:
+1. Implementar pruebas automatizadas (unitarias, de integración y end-to-end) para asegurar la calidad continua del software y facilitar futuras modificaciones.
+2. Establecer un proceso de revisión de código riguroso para mantener los estándares de Clean Code y asegurar la calidad del código a lo largo del tiempo.
+3. Documentar exhaustivamente la arquitectura y las decisiones de diseño para facilitar el mantenimiento y la escalabilidad futura.
+4. Considerar la adopción de metodologías ágiles para gestionar el desarrollo continuo y la incorporación de nuevas funcionalidades basadas en las necesidades del usuario.
+5. Evaluar regularmente el rendimiento de la plataforma y optimizar las consultas y operaciones del backend para asegurar una experiencia de usuario fluida a medida que la base de usuarios crece.
+6. Mantenerse actualizado con las mejores prácticas y tendencias en desarrollo móvil y backend para asegurar que la plataforma siga siendo competitiva y relevante en el mercado.
+7. Fomentar la retroalimentación continua de los usuarios (administradores de restaurantes y proveedores) para identificar áreas de mejora y nuevas funcionalidades que puedan agregar valor a la plataforma.
