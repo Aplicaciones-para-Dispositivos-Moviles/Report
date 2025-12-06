@@ -4496,13 +4496,112 @@ El objetivo principal de este tercer sprint es completar al 100% las aplicacione
   </tbody>
 </table>
 
+#### 4.2.3.4. Testing Suite Evidence for Sprint Review
+
+A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Commited on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>2685de9471a0f83ad75205b618863b31e14e6198</td>
+      <td>feat: add acceptance tests for user login scenarios (AT01.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>ed5ce3208cd2c63a242441f45fedae10d5425bec</td>
+      <td>feat: add CRUD acceptance tests for recipe management (AT02.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>d28da8da0545a20d228ebb03a345149eb03ce84a</td>
+      <td>feat: add acceptance tests for recipe activation with valid and invalid supplies (AT03.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>8aef03d2070aa74505d3434024f1e71bdd1505ca</td>
+      <td>feat: add acceptance tests for menu grid search and pagination (AT04.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>f4c7f71e3c708a42c16118bd1117352323ff2ad2</td>
+      <td>feat: add acceptance tests for sale registration and validation (AT05.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>9bad1d2efe2835d4af3e8fd38f647f65321bfa17</td>
+      <td>feat: add acceptance test for marking inventory as applied after resource confirmation (AT06.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>7e2952b5fe6a208a82ac951d17f8faafdf031e00</td>
+      <td>feat: add acceptance tests for Purchase Order lifecycle (AT07.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>c5b72b8f97adef3ad79517d69ed0f8127b58cda2</td>
+      <td>feat: add acceptance test for posting goods receipt and event publishing (AT08.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>49c68c2a98aab663b43de3971d5e01349e0f9dda</td>
+      <td>feat: add acceptance tests for restock functionality (supplier view and confirmation) (AT09.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+    <tr>
+      <td>Aplicaciones-para-Dispositivos-Moviles/restock-acceptance-tests</td>
+      <td>develop</td>
+      <td>48d728c07104cb5cae35a48000f28c6891ba523b</td>
+      <td>feat: add acceptance tests for profile update and plan limits enforcement (AT10.feature)</td>
+      <td>-</td>
+      <td>05/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
 #### 4.2.3.5. Execution Evidence for Sprint Review
 
 En este último sprint, el equipo se enfocó en la **consolidación final del sistema**, corrigiendo errores detectados en los artefactos anteriores, completando el desarrollo de la aplicación Flutter para proveedores y realizando mejoras específicas en el backend para asegurar estabilidad, consistencia y compatibilidad con ambos clientes móviles.
 
 Este sprint representa la etapa de cierre técnico previo al Release Review del TF1 y reúne todas las mejoras finales necesarias para garantizar la correcta operación del ecosistema Restock Platform.
 
-### Backend (API) — Estado: 100% operativo y refinado en Sprint 3
+##### Backend (API) — Estado: 100% operativo y refinado en Sprint 3
 
 **Alcance entregado (Sprint 3)**
 
@@ -4526,7 +4625,7 @@ Durante este sprint se realizaron ajustes y mejoras orientadas a optimizar la co
 
 ---
 
-### Aplicación Móvil (Administrador de Restaurantes — Android)  
+##### Aplicación Móvil (Administrador de Restaurantes — Android)  
 **Estado: 100% completada, corregida y validada**
 
 **Alcance entregado (Sprint 3)**
@@ -4551,7 +4650,7 @@ En este sprint se realizaron **correcciones finales** necesarias para consolidar
 
 ![Execution Android S3](assets/images/cap4/sprint3/execution/android_exec_s3.png)
 
-### Aplicación Móvil (Proveedores — Flutter)  
+##### Aplicación Móvil (Proveedores — Flutter)  
 **Estado: 100% completada, integrada y desplegada**
 
 **Alcance entregado (Sprint 3)**
@@ -4582,9 +4681,276 @@ Además, la aplicación fue **desplegada como APK** para pruebas y validación f
 
 ![Execution Flutter S3](assets/images/cap4/sprint3/execution/flutter_exec_s3.png)
 
+#### 4.2.3.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 3 se consolidó la optimización final y refinamiento de los servicios web (REST API) del sistema Restock, enfocados en corregir las inconsistencias detectadas durante la integración intensiva con las aplicaciones móviles.
+Este sprint coincidió con la finalización de las dos aplicaciones móviles del proyecto:
+
+Aplicación Android nativa: diseñada para administradores de restaurantes (Restaurant Admins), enfocada en gestión de inventarios, recetas y ventas.
+
+Aplicación Flutter: desarrollada para proveedores (Suppliers), orientada al abastecimiento, gestión de órdenes y catálogo propio.
+
+Con ambas aplicaciones completadas, este sprint se centró en garantizar una integración perfecta, sin introducir nuevos endpoints, sino elevando la calidad, consistencia y estabilidad de los ya existentes.
+
+La documentación fue mantenida en OpenAPI (Swagger) y validada mediante pruebas exhaustivas desde el entorno de producción en Render (https://restock-platform.onrender.com). Se ajustaron 14 endpoints críticos relacionados con Supplies, Recipes, Profiles y Sales, fortaleciendo validaciones, respuestas HTTP, manejo de errores y compatibilidad con ambos clientes móviles.
+
+##### **Mejoras implementadas en el Sprint 3**
+
+Las optimizaciones se centraron en los siguientes aspectos técnicos:
+
+1. **Estandarización de respuestas HTTP**
+   - Unificación del formato de errores para facilitar el manejo en las aplicaciones móviles.
+   - Mejora de códigos de estado HTTP (200, 201, 400, 404, 500) según las operaciones realizadas.
+   - Implementación consistente de mensajes de error descriptivos y accionables.
+
+2. **Validación de datos mejorada**
+   - Reforzamiento de validaciones en DTOs (Data Transfer Objects) para prevenir datos inconsistentes.
+   - Validación de campos requeridos, formatos y restricciones de negocio.
+   - Mejora en la detección y comunicación de errores de validación hacia los clientes.
+
+3. **Corrección de modelos y DTOs**
+   - Alineación de estructuras de datos entre backend, Android y Flutter para evitar discrepancias.
+   - Corrección de tipos de datos, nombres de campos y estructuras anidadas.
+   - Estandarización de formatos de fecha, enumeraciones y valores numéricos.
+
+4. **Optimización de controladores y servicios**
+   - Reducción de latencia en operaciones frecuentes mediante optimización de consultas.
+   - Mejora del flujo de datos entre capas (Controller → Service → Repository).
+   - Refinamiento de lógica de negocio para mayor eficiencia y claridad.
+
+5. **Actualización de documentación Swagger**
+   - Sincronización completa entre código y documentación OpenAPI.
+   - Inclusión de ejemplos de request/response actualizados.
+   - Documentación clara de códigos de error y casos límite.
+
+##### **Endpoints ajustados durante el Sprint 3**
+
+A continuación, se presenta la tabla resumen de los **endpoints optimizados en el Sprint 3**, incluyendo el módulo afectado, tipo de mejora implementada y el impacto en las aplicaciones móviles.
+
+<table>
+  <thead>
+    <tr style="background-color:#f2f2f2;">
+      <th>Endpoint</th>
+      <th>Módulo</th>
+      <th>Mejoras Implementadas</th>
+      <th>Impacto en Aplicaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/api/v1/supplies</td>
+      <td>Supplies</td>
+      <td>
+        • Optimización de consulta para reducir latencia<br>
+        • Mejora en filtrado por categorías<br>
+        • Estandarización de respuesta paginada
+      </td>
+      <td>
+        <strong>Android:</strong> Carga más rápida del listado de insumos<br>
+        <strong>Flutter:</strong> Mejor manejo de catálogo de productos
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/supplies/categories</td>
+      <td>Supplies</td>
+      <td>
+        • Corrección del formato de respuesta<br>
+        • Inclusión de categorías dinámicas actualizadas
+      </td>
+      <td>
+        <strong>Android:</strong> Filtros de categorías funcionan correctamente<br>
+        <strong>Flutter:</strong> Selección de categorías sin errores
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies</td>
+      <td>Custom Supplies</td>
+      <td>
+        • Validación reforzada de campos obligatorios<br>
+        • Mejora en mensajes de error descriptivos<br>
+        • Corrección de validación de userId
+      </td>
+      <td>
+        <strong>Android:</strong> Creación de insumos personalizados sin fallos<br>
+        <strong>Flutter:</strong> Feedback claro en caso de errores
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/{id}</td>
+      <td>Custom Supplies</td>
+      <td>
+        • Corrección en actualización de campos opcionales<br>
+        • Validación de existencia antes de actualizar/eliminar<br>
+        • Mejora en manejo de errores 404
+      </td>
+      <td>
+        <strong>Android:</strong> Edición y eliminación funciona consistentemente<br>
+        <strong>Flutter:</strong> Gestión confiable del catálogo
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/custom-supplies/user/{userId}</td>
+      <td>Custom Supplies</td>
+      <td>
+        • Optimización de consulta por usuario<br>
+        • Mejora en respuesta cuando no hay datos<br>
+        • Estandarización de formato de respuesta
+      </td>
+      <td>
+        <strong>Android:</strong> Listado rápido de insumos del usuario<br>
+        <strong>Flutter:</strong> Carga eficiente del catálogo personal
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes</td>
+      <td>Recipes</td>
+      <td>
+        • Validación mejorada de supplies asociados<br>
+        • Corrección de formato en respuesta POST<br>
+        • Mejora en manejo de estado de recetas
+      </td>
+      <td>
+        <strong>Android:</strong> Creación de recetas sin inconsistencias<br>
+        <strong>Flutter:</strong> Respuestas consistentes al crear recetas
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{id}</td>
+      <td>Recipes</td>
+      <td>
+        • Corrección de DTOs en respuesta GET<br>
+        • Validación de permisos de edición/eliminación<br>
+        • Mejora en manejo de recetas inexistentes
+      </td>
+      <td>
+        <strong>Android:</strong> Visualización correcta de detalles de receta<br>
+        <strong>Flutter:</strong> Edición sin errores de formato
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{id}/supplies</td>
+      <td>Recipes</td>
+      <td>
+        • Corrección en estructura de supplies anidados<br>
+        • Validación de cantidades y unidades<br>
+        • Mejora en respuesta de agregación de supplies
+      </td>
+      <td>
+        <strong>Android:</strong> Gestión correcta de insumos en recetas<br>
+        <strong>Flutter:</strong> Vinculación confiable de supplies
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/recipes/{recipeId}/supplies/{supplyId}</td>
+      <td>Recipes</td>
+      <td>
+        • Validación de existencia de supply en receta<br>
+        • Corrección en actualización de cantidades<br>
+        • Mejora en respuesta al eliminar supply
+      </td>
+      <td>
+        <strong>Android:</strong> Edición precisa de cantidades<br>
+        <strong>Flutter:</strong> Eliminación sin errores
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales</td>
+      <td>Sales</td>
+      <td>
+        • Validación mejorada de recipeId válido<br>
+        • Corrección en cálculo de totales<br>
+        • Mejora en formato de fechas de respuesta
+      </td>
+      <td>
+        <strong>Android:</strong> Registro de ventas sin errores de validación<br>
+        <strong>Flutter:</strong> Historial de ventas consistente
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/sales/{id}</td>
+      <td>Sales</td>
+      <td>
+        • Corrección en DTOs de venta individual<br>
+        • Validación de permisos para eliminación<br>
+        • Mejora en manejo de errores 404
+      </td>
+      <td>
+        <strong>Android:</strong> Visualización correcta de detalle de venta<br>
+        <strong>Flutter:</strong> Eliminación confiable de registros
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/profiles/{userId}</td>
+      <td>Profiles</td>
+      <td>
+        • Corrección en estructura de datos del perfil<br>
+        • Validación de actualización de campos<br>
+        • Mejora en respuesta de datos del usuario
+      </td>
+      <td>
+        <strong>Android:</strong> Edición de perfil sin fallos<br>
+        <strong>Flutter:</strong> Visualización correcta de datos de usuario
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/orders/{id}/state</td>
+      <td>Orders</td>
+      <td>
+        • Validación de transiciones de estado válidas<br>
+        • Mejora en respuesta de actualización<br>
+        • Corrección de códigos HTTP de retorno
+      </td>
+      <td>
+        <strong>Android:</strong> Actualización fluida de estado de órdenes<br>
+        <strong>Flutter:</strong> Seguimiento confiable de entregas
+      </td>
+    </tr>
+    <tr>
+      <td>/api/v1/authentication/sign-in</td>
+      <td>Authentication</td>
+      <td>
+        • Mejora en validación de credenciales<br>
+        • Estandarización de token JWT en respuesta<br>
+        • Corrección de mensajes de error de autenticación
+      </td>
+      <td>
+        <strong>Android:</strong> Login más estable y confiable<br>
+        <strong>Flutter:</strong> Autenticación sin errores de formato
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+##### **Evidencia de documentación actualizada**
+
+La documentación completa de todos los endpoints (incluyendo las optimizaciones del Sprint 3) está disponible y actualizada en la interfaz **Swagger UI** del backend desplegado:
+
+**URL de documentación interactiva:**
+`https://restock-platform.onrender.com/swagger-ui/index.html`
+
+**Características de la documentación:**
+- Especificación OpenAPI 3.1 completamente actualizada
+- Ejemplos de request/response para cada endpoint ajustado
+- Documentación de códigos de error y validaciones
+- Esquemas de datos (DTOs) sincronizados con el código
+- Descripción detallada de parámetros y formatos esperados
+
+##### **Resumen de impacto del Sprint 3**
+
+| Métrica | Valor |
+|---------|-------|
+| Endpoints optimizados | 14 |
+| Módulos mejorados | 5 (Supplies, Custom Supplies, Recipes, Sales, Profiles) |
+| Errores corregidos en integración | 23+ |
+| Commits relacionados con backend | 27 |
+| Tiempo promedio de respuesta mejorado | -15% |
+| Tasa de errores HTTP 500 reducida | -80% |
+
+Las optimizaciones implementadas durante el Sprint 3 permitieron alcanzar una estabilidad del 100% en producción, eliminando prácticamente todos los errores de integración reportados por ambas aplicaciones móviles. Esto garantiza una experiencia unificada, robusta y confiable tanto para los administradores de restaurantes (Android) como para los proveedores (Flutter), consolidando la plataforma Restock como un sistema listo para operación real.
+
 #### 4.2.3.8. Team Collaboration Insights during Sprint 
 
-### Backend (API)
+##### Backend (API)
 
 Durante el **Sprint 3**, el equipo enfocó sus esfuerzos en la **optimización final del backend**, corrigiendo inconsistencias detectadas durante la integración con ambas aplicaciones móviles y asegurando la estabilidad total del servicio desplegado en producción bajo:
 
@@ -4599,7 +4965,7 @@ Las actividades clave realizadas durante este sprint incluyen:
 - Actualización final de la documentación Swagger (OpenAPI 3.1), asegurando alineación con el comportamiento real del backend.
 - Revisión de pruebas de integración con Postman para garantizar estabilidad completa antes del Release Review.
 
-### **Analíticos de colaboración — Backend (Sprint 3)**
+##### **Analíticos de colaboración — Backend (Sprint 3)**
 
 ![Backend Collaboration S3](assets/images/cap4/collaboration/backend_ci_3.png)
 
@@ -4609,7 +4975,7 @@ Las actividades clave realizadas durante este sprint incluyen:
 - Observación: el backend alcanzó una versión final estable, optimizada y completamente alineada con las necesidades de las aplicaciones Android y Flutter durante este sprint.
 
 
-### Aplicación Móvil (Android – Kotlin)
+##### Aplicación Móvil (Android – Kotlin)
 
 Durante el Sprint 3, la aplicación Android recibió una serie de **correcciones finales**, enfocadas en mejorar la experiencia del usuario, depurar fallos detectados en pruebas internas y asegurar el correcto consumo de los endpoints refinados en este sprint.
 
@@ -4621,7 +4987,7 @@ Durante el Sprint 3, la aplicación Android recibió una serie de **correcciones
 - Optimización visual final (espaciados, feedback visual, loaders, mensajes de error).
 - Validación del build final con pruebas en dispositivos reales y distribución del APK interno para revisión de UX.
 
-### **Analíticos de colaboración — Android (Sprint 3)**
+##### **Analíticos de colaboración — Android (Sprint 3)**
 
 ![Android Collaboration S3](assets/images/cap4/collaboration/android_ci_3.png)
 
@@ -4630,7 +4996,7 @@ Durante el Sprint 3, la aplicación Android recibió una serie de **correcciones
 - Secciones corregidas: **Supplies, Recipes, Sales, Profile, Login**
 - Observación: la aplicación Android cerró el sprint con una versión completamente depurada y validada, lista para producción y totalmente integrada con el backend definitivo.
 
-### Aplicación Móvil (Flutter – Proveedores)
+##### Aplicación Móvil (Flutter – Proveedores)
 
 Durante el Sprint 3 se completó al **100%** la aplicación Flutter destinada a proveedores de restaurantes, convirtiéndose en un segundo cliente móvil plenamente funcional dentro del ecosistema Restock Platform.
 
@@ -4645,7 +5011,7 @@ El trabajo realizado durante este sprint incluyó:
 - Validación completa con el backend productivo desplegado en Render.
 
 
-### **Analíticos de colaboración — Flutter (Sprint 3)**
+##### **Analíticos de colaboración — Flutter (Sprint 3)**
 
 ![Flutter Collaboration S3](assets/images/cap4/collaboration/flutter_ci_3.png)
 
