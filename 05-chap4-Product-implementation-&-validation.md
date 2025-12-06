@@ -6004,6 +6004,32 @@ En general, la entrevistada expresó una **percepción muy positiva sobre la pro
 **Conclusión general:**
 La entrevista permitió validar que la aplicación móvil de Restock cumple con las expectativas y necesidades del segmento objetivo de administradores de restaurantes. Se identificó que las funcionalidades implementadas son percibidas como útiles, relevantes y fáciles de usar. Las sugerencias proporcionadas serán consideradas para futuras iteraciones del producto, con el objetivo de mejorar la experiencia de usuario y ampliar las capacidades de generación de reportes.
 
+#### **Entrevista 05 – Ray Saavedra**
+
+**Datos del entrevistado:**  
+
+- **Nombre completo:** Ray Saavedra  
+- **Edad:** 29 años  
+- **Distrito:** Pachacamac  
+- **Segmento:** Administradores de restaurantes  
+- **Fecha de entrevista:** 06 de diciembre de 2025  
+- **Duración:** 12 minutos y 50 segundos  
+- **Registro audiovisual:** https://shorturl.at/oWZVu
+- **Captura de entrevista:**  
+  ![Captura de entrevista a segmento administradores](/assets/images/cap4/sprint3/interview5.png)  
+
+#### **Resumen descriptivo de la entrevista:**  
+
+Durante la sesión, se presentó el **Landing Page de Restock** a Ray Saavedra para evaluar su percepción sobre la plataforma enfocada en administradores de restaurantes. Ray indicó que el diseño le parecía **moderno y funcional**, y destacó la importancia de que la plataforma permita **controlar el inventario y realizar pedidos de manera eficiente**.  
+
+Comentó que las secciones de **“gestión de pedidos” y “visualización de stock”** eran muy relevantes para su día a día, ya que le permitirían **evitar faltantes y mejorar la planificación de compras**. También valoró la función de recibir **notificaciones en tiempo real** sobre los pedidos realizados a proveedores.  
+
+No obstante, sugirió que sería útil incluir una **guía rápida o tutorial inicial** que explique cómo registrar productos, gestionar pedidos y analizar reportes, ya que algunos administradores podrían no estar familiarizados con herramientas digitales. Además, recomendó reforzar la sección de **beneficios para administradores**, mostrando casos de éxito o métricas de optimización de inventario.  
+
+#### **Conclusión general:**  
+
+La entrevista permitió validar que el **Landing Page de Restock es percibido como claro y funcional** para administradores de restaurantes. Se identificó la necesidad de incluir **tutoriales iniciales y reforzar los beneficios específicos** para este segmento, con el fin de mejorar la adopción de la plataforma y optimizar la gestión de inventario y pedidos.
+
 ### 4.3.3. Evaluaciones según heurísticas
 
 Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta.
