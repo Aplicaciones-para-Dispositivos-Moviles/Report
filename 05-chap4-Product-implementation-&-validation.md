@@ -6,18 +6,18 @@
 
 A continuación, se listan las herramientas y estándares adoptados por el equipo para el desarrollo colaborativo del sistema:
 
-| Actividad               | Herramienta / Guía                                     | Propósito                                                    | Tipo de acceso / Ruta                                                                                                                       |
-| ----------------------- | ------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                    | [https://trello.com/](https://trello.com/)                                                                                                  |
-| Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then. | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                      |
-| Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                              | SaaS –[https://figma.com](https://figma.com)                                                                                                |
-| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                       | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                                      |
-| Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                          | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                            |
-| IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                            | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
-| Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                    | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                                  |
-| Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                              |
-| Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.     | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                 |
-| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                            |
+| Actividad               | Herramienta / Guía                                    | Propósito                                                     | Tipo de acceso / Ruta                                                                                                                 |
+| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                      | [https://trello.com/](https://trello.com/)                                                                                               |
+| Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then.   | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                   |
+| Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                               | SaaS –[https://figma.com](https://figma.com)                                                                                            |
+| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                               |
+| Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                           | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                         |
+| IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                             | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
+| Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                     | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                               |
+| Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                          |
+| Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.       | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                |
+| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                        |
 
 ### 4.1.2. Source Code Management
 
@@ -4201,7 +4201,7 @@ Durante este sprint se inició el desarrollo de la **aplicación Flutter multipl
 
 #### 4.2.3.2. Sprint Backlog 3
 
-El objetivo principal de este tercer sprint es completar al 100% las aplicaciones móviles para ambos segmentos de usuarios (administradores de restaurantes y proveedores), integrando todas las funcionalidades pendientes con el backend y asegurando una experiencia de usuario completa y consistente. 
+El objetivo principal de este tercer sprint es completar al 100% las aplicaciones móviles para ambos segmentos de usuarios (administradores de restaurantes y proveedores), integrando todas las funcionalidades pendientes con el backend y asegurando una experiencia de usuario completa y consistente.
 
 <table>
   <tbody>
@@ -4496,7 +4496,8 @@ El objetivo principal de este tercer sprint es completar al 100% las aplicacione
   </tbody>
 </table>
 
-#### 4.2.3.3. Development Evidence for Sprint Review 
+#### 4.2.3.3. Development Evidence for Sprint Review
+
 <table border="1" width="100%" style=" text-align: center">
     <thead>
         <tr>
@@ -5217,7 +5218,6 @@ El objetivo principal de este tercer sprint es completar al 100% las aplicacione
         </tbody>
 </table>
 
-
 #### 4.2.3.4. Testing Suite Evidence for Sprint Review
 
 A continuación, se presenta la evidencia de los commits relacionados con los Acceptance Tests automatizados del sprint, alojados en el repositorio restock-acceptance-tests. Cada archivo corresponde a un Feature File Gherkin que cubre escenarios de pruebas de aceptación para los diferentes Bounded Contexts (SDP, SOM, IAM, Profiles y Subscriptions).
@@ -5347,7 +5347,8 @@ Durante este sprint se realizaron ajustes y mejoras orientadas a optimizar la co
 
 **Link del video:** https://shorturl.at/8hpJb
 
-##### Aplicación Móvil (Administrador de Restaurantes — Android)  
+##### Aplicación Móvil (Administrador de Restaurantes — Android)
+
 **Estado: 100% completada, corregida y validada**
 
 **Alcance entregado (Sprint 3)**
@@ -5374,7 +5375,8 @@ En este sprint se realizaron **correcciones finales** necesarias para consolidar
 
 **Link del video:** https://shorturl.at/hbkpM
 
-##### Aplicación Móvil (Proveedores — Flutter)  
+##### Aplicación Móvil (Proveedores — Flutter)
+
 **Estado: 100% completada, integrada y desplegada**
 
 **Alcance entregado (Sprint 3)**
@@ -5389,10 +5391,10 @@ Durante este sprint se completó al 100% la **aplicación móvil Flutter** desti
 - Optimización de navegación, layouts y manejo de excepciones.
 - Implementación de listas dinámicas basadas en datos reales del backend.
 - Validación del flujo principal del proveedor:
-  - Inicio de sesión  
-  - Vista principal (overview)  
-  - Gestión de productos y abastecimiento (si aplica)  
-  - Visualización de estados y datos remotos  
+  - Inicio de sesión
+  - Vista principal (overview)
+  - Gestión de productos y abastecimiento (si aplica)
+  - Visualización de estados y datos remotos
 
 Además, la aplicación fue **desplegada como APK** para pruebas y validación final en dispositivos reales.
 
@@ -5425,26 +5427,27 @@ La documentación fue mantenida en OpenAPI (Swagger) y validada mediante pruebas
 Las optimizaciones se centraron en los siguientes aspectos técnicos:
 
 1. **Estandarización de respuestas HTTP**
+
    - Unificación del formato de errores para facilitar el manejo en las aplicaciones móviles.
    - Mejora de códigos de estado HTTP (200, 201, 400, 404, 500) según las operaciones realizadas.
    - Implementación consistente de mensajes de error descriptivos y accionables.
-
 2. **Validación de datos mejorada**
+
    - Reforzamiento de validaciones en DTOs (Data Transfer Objects) para prevenir datos inconsistentes.
    - Validación de campos requeridos, formatos y restricciones de negocio.
    - Mejora en la detección y comunicación de errores de validación hacia los clientes.
-
 3. **Corrección de modelos y DTOs**
+
    - Alineación de estructuras de datos entre backend, Android y Flutter para evitar discrepancias.
    - Corrección de tipos de datos, nombres de campos y estructuras anidadas.
    - Estandarización de formatos de fecha, enumeraciones y valores numéricos.
-
 4. **Optimización de controladores y servicios**
+
    - Reducción de latencia en operaciones frecuentes mediante optimización de consultas.
    - Mejora del flujo de datos entre capas (Controller → Service → Repository).
    - Refinamiento de lógica de negocio para mayor eficiencia y claridad.
-
 5. **Actualización de documentación Swagger**
+
    - Sincronización completa entre código y documentación OpenAPI.
    - Inclusión de ejemplos de request/response actualizados.
    - Documentación clara de códigos de error y casos límite.
@@ -5655,6 +5658,7 @@ La documentación completa de todos los endpoints (incluyendo las optimizaciones
 `https://restock-platform.onrender.com/swagger-ui/index.html`
 
 **Características de la documentación:**
+
 - Especificación OpenAPI 3.1 completamente actualizada
 - Ejemplos de request/response para cada endpoint ajustado
 - Documentación de códigos de error y validaciones
@@ -5663,134 +5667,109 @@ La documentación completa de todos los endpoints (incluyendo las optimizaciones
 
 ##### **Resumen de impacto del Sprint 3**
 
-| Métrica                               | Valor                                                   |
+| Métrica                              | Valor                                                   |
 | ------------------------------------- | ------------------------------------------------------- |
 | Endpoints optimizados                 | 14                                                      |
-| Módulos mejorados                     | 5 (Supplies, Custom Supplies, Recipes, Sales, Profiles) |
-| Errores corregidos en integración     | 23+                                                     |
+| Módulos mejorados                    | 5 (Supplies, Custom Supplies, Recipes, Sales, Profiles) |
+| Errores corregidos en integración    | 23+                                                     |
 | Commits relacionados con backend      | 27                                                      |
 | Tiempo promedio de respuesta mejorado | -15%                                                    |
 | Tasa de errores HTTP 500 reducida     | -80%                                                    |
 
 Las optimizaciones implementadas durante el Sprint 3 permitieron alcanzar una estabilidad del 100% en producción, eliminando prácticamente todos los errores de integración reportados por ambas aplicaciones móviles. Esto garantiza una experiencia unificada, robusta y confiable tanto para los administradores de restaurantes (Android) como para los proveedores (Flutter), consolidando la plataforma Restock como un sistema listo para operación real.
 
-#### 4.2.3.7. Software Deployment Evidence for Sprint Review 
+#### 4.2.3.7. Software Deployment Evidence for Sprint Review
 
 A continuación, se describen las actividades realizadas durante el Sprint 3 para asegurar el correcto despliegue y funcionamiento del servicio backend, de la aplicación Android y la aplicacion en Flutter. Debido a que el despliegue se ejecutó nuevamente en la misma plataforma, se reutilizaron y ajustaron los pasos establecidos previamente.
 
 ## Despliegue del Backend en Render y conexión con MongoDB Atlas
 
-1. **Creación del clúster en MongoDB Atlas**  
-   Se configuró un clúster dedicado para la base de datos del proyecto, asegurando disponibilidad y conexión estable con el backend.
+1. **Creación del clúster en MongoDB Atlas**Se configuró un clúster dedicado para la base de datos del proyecto, asegurando disponibilidad y conexión estable con el backend.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_1.png" alt="Home" width="500px">
-
-2. **Conexión del repositorio con Render**  
-   Se generó un nuevo servicio en Render, enlazándolo directamente con el repositorio GitHub del backend para manejar el despliegue automático.
+2. **Conexión del repositorio con Render**Se generó un nuevo servicio en Render, enlazándolo directamente con el repositorio GitHub del backend para manejar el despliegue automático.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_2.png" alt="Home" width="600px">
-
-3. **Selección de la rama principal (`main`)**  
-   Render fue configurado para tomar la rama `main` como fuente del deploy continuo, facilitando actualizaciones futuras.
+3. **Selección de la rama principal (`main`)**Render fue configurado para tomar la rama `main` como fuente del deploy continuo, facilitando actualizaciones futuras.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_3.png" alt="Home" width="600px">
-
-4. **Configuración de variables de entorno**  
-   Se registraron manualmente las variables de entorno necesarias para la conexión con MongoDB y para la ejecución del backend en Render.
+4. **Configuración de variables de entorno**Se registraron manualmente las variables de entorno necesarias para la conexión con MongoDB y para la ejecución del backend en Render.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_4.png" alt="Home" width="600px">
-
-5. **Habilitación de Swagger en producción**  
-   Dentro del archivo `OpenApiConfiguration.java`, se habilitó el contexto necesario para exponer la documentación Swagger en el entorno desplegado.
+5. **Habilitación de Swagger en producción**Dentro del archivo `OpenApiConfiguration.java`, se habilitó el contexto necesario para exponer la documentación Swagger en el entorno desplegado.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_5.png" alt="Home" width="600px">
-
-6. **Ejecución automática del despliegue**  
-   Render inició el proceso de build y despliegue al detectar cambios en la rama configurada. Se revisaron los logs para confirmar el arranque sin errores.
+6. **Ejecución automática del despliegue**Render inició el proceso de build y despliegue al detectar cambios en la rama configurada. Se revisaron los logs para confirmar el arranque sin errores.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_6.png" alt="Home" width="600px">
-
-7. **Validación mediante Swagger**  
+7. **Validación mediante Swagger**
    Se ingresó a `/swagger/index.html` dentro del dominio generado para comprobar la correcta disponibilidad y funcionamiento de los endpoints.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_back_7.png" alt="Home" width="600px">
 
-
 ## Despliegue de la aplicación Android mediante Firebase App Distribution
 
-1. **Creación del proyecto Firebase**  
-   Se generó un nuevo proyecto en Firebase para administrar la distribución de la aplicación Android durante las pruebas.
+1. **Creación del proyecto Firebase**Se generó un nuevo proyecto en Firebase para administrar la distribución de la aplicación Android durante las pruebas.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_android1.png" alt="Home" width="600px">
-
-2. **Selección de plataforma Android en App Distribution**  
-   Desde App Distribution, se escogió la opción correspondiente para iniciar el proceso de registro de la app.
+2. **Selección de plataforma Android en App Distribution**Desde App Distribution, se escogió la opción correspondiente para iniciar el proceso de registro de la app.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_android2.png" alt="Home" width="600px">
-
-3. **Registro del paquete de la aplicación**  
-   Se ingresó el nombre del paquete del proyecto para crear y asociar la app al entorno Firebase.
+3. **Registro del paquete de la aplicación**Se ingresó el nombre del paquete del proyecto para crear y asociar la app al entorno Firebase.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_android3.png" alt="Home" width="600px">
-
-4. **Integración de Firebase con la aplicación**  
-   Se completaron los últimos pasos de configuración para vincular el proyecto Android con Firebase.
+4. **Integración de Firebase con la aplicación**Se completaron los últimos pasos de configuración para vincular el proyecto Android con Firebase.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_android4.png" alt="Home" width="600px">
-
-5. **Carga del APK para distribución**  
-   El archivo APK generado en el Sprint 3 fue cargado en la sección de App Distribution para la fase de pruebas.
+5. **Carga del APK para distribución**El archivo APK generado en el Sprint 3 fue cargado en la sección de App Distribution para la fase de pruebas.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_android5.png" alt="Home" width="600px">
-
-6. **Envío de la aplicación a los testers**  
-   Se seleccionaron los evaluadores y se distribuyó la aplicación desde Firebase.
+6. **Envío de la aplicación a los testers**Se seleccionaron los evaluadores y se distribuyó la aplicación desde Firebase.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_android6.png" alt="Home" width="600px">
-
-7. **Confirmación de solicitud de descarga**  
+7. **Confirmación de solicitud de descarga**
    Se evidencia la notificación enviada a los testers para proceder con la descarga de la nueva versión de la app.
 
    <img src="assets/images/cap4/sprint2/deploy/deploy_android7.png" alt="Home" width="600px">
 
-
 ## Despliegue de la aplicación Flutter Android mediante Firebase App Distribution
 
-1. **Revisión de configuración en build.gradle**  
-   Se verificó el archivo `android/app/build.gradle` para confirmar que los parámetros como `applicationId`, `minSdkVersion`, `targetSdkVersion`, `versionCode` y `versionName` estaban correctamente configurados.
+1. **Revisión de configuración en build.gradle**Se verificó el archivo `android/app/build.gradle` para confirmar que los parámetros como `applicationId`, `minSdkVersion`, `targetSdkVersion`, `versionCode` y `versionName` estaban correctamente configurados.
 
    <img src="assets/images/cap4/sprint3/deploy/deploy_android1.png" alt="Revisión build.gradle" width="600px">
-
-2. **Construcción del APK**  
+2. **Construcción del APK**
    Se generó el APK en modo release mediante los siguientes comandos:
+
    ```bash
    flutter clean
    flutter pub get
    flutter build apk --release
+   ```
+
 <img src="assets/images/cap4/sprint3/deploy/deploy_android2.png" alt="Construcción del APK" width="600px">
 
-3. **Ubicación del APK generado**  
+3. **Ubicación del APK generado**
    El archivo APK se encuentra en:
-    build/app/outputs/flutter-apk/app-release.apk
+   build/app/outputs/flutter-apk/app-release.apk
 
 <img src="assets/images/cap4/sprint3/deploy/deploy_android3.png" alt="Ubicación del APK" width="600px">
 
-4. **Registro de la aplicación en Firebase App Distribution**  
+4. **Registro de la aplicación en Firebase App Distribution**
    Se accedió a App Distribution en Firebase y se ingresó el nombre del paquete de la app para registrarla y vincularla al proyecto Firebase.
 
 <img src="assets/images/cap4/sprint3/deploy/deploy_android4.png" alt="Registro en Firebase" width="600px">
 
-5. **Carga del APK en Firebase**  
+5. **Carga del APK en Firebase**
    Se subió el archivo APK generado a la sección de App Distribution para preparar la distribución a los testers.
 
 <img src="assets/images/cap4/sprint3/deploy/deploy_android5.png" alt="Carga del APK en Firebase" width="600px">
 
-6. **Finalización de la distribución**  
-  Se completó la distribución seleccionando los testers y confirmando los detalles de la release.
+6. **Finalización de la distribución**
+   Se completó la distribución seleccionando los testers y confirmando los detalles de la release.
 
 <img src="assets/images/cap4/sprint3/deploy/deploy_android6.png" alt="Finalización de la distribución" width="600px">
 
-#### 4.2.3.8. Team Collaboration Insights during Sprint 
+#### 4.2.3.8. Team Collaboration Insights during Sprint
 
 ##### Backend (API)
 
@@ -5815,7 +5794,6 @@ Las actividades clave realizadas durante este sprint incluyen:
 - Total de autores contribuyentes: **3**
 - Endpoints ajustados durante Sprint 3: **6**
 - Observación: el backend alcanzó una versión final estable, optimizada y completamente alineada con las necesidades de las aplicaciones Android y Flutter durante este sprint.
-
 
 ##### Aplicación Móvil (Android – Kotlin)
 
@@ -5850,7 +5828,6 @@ El trabajo realizado durante este sprint incluyó:
 - Construcción y empaquetado del **APK final**, distribuido al equipo para pruebas de validación.
 - Validación completa con el backend productivo desplegado en Render.
 
-
 ##### **Analíticos de colaboración — Flutter (Sprint 3)**
 
 ![Flutter Collaboration S3](assets/images/cap4/collaboration/flutter_ci_3.png)
@@ -5859,7 +5836,6 @@ El trabajo realizado durante este sprint incluyó:
 - Total de autores contribuyentes: **5**
 - Módulos completados: **Login**, **Overview**, **Navegación y Estado**, **Integración Backend**
 - Observación: la aplicación Flutter alcanzó su primera versión completa, estable y plenamente funcional, convirtiéndose en el segundo cliente oficial del ecosistema Restock Platform.
-
 
 ## 4.3. Validation Interviews
 
@@ -5939,7 +5915,8 @@ A continuación, se presenta el registro correspondiente a la entrevista realiza
 - **Duración:** 8 minutos y 58 segundos
 - **Registro audiovisual:** https://shorturl.at/kaGl4
 - **Captura de entrevista:**
-  ![Captura de entrevista a segmento provedores](/assets/images/cap4/sprint1/interviews/int-providers.png)
+
+  <img src="assets/images/cap4/sprint1/interviews/int-providers.png" alt=“Footer” width="300px">
 
 #### **Resumen descriptivo de la entrevista:**
 
@@ -5966,7 +5943,9 @@ La entrevista permitió validar que el mensaje principal del Landing Page es cla
 - **Duración:** 8 minutos y 24 segundos
 - **Registro audiovisual:** [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/EV3jiWf-6jVMl50xDv9kLrcBLHD3N5U9uKAIh7VyXYtbdg?e=YSAKrh)
 - **Captura de entrevista:**
-  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint1/interviews/int-restaurant-managers.png)
+
+  <img src="assets/images/cap4/sprint1/interviews/int-restaurant-managers.png" alt=“Footer” width="300px">
+
 
 #### **Resumen descriptivo de la entrevista:**
 
@@ -5993,7 +5972,9 @@ La entrevista permitió validar que el mensaje principal del Landing Page es cla
 - **Duración:** 13 minutos y 14 segundos
 - **Registro audiovisual:** [https://shorturl.at/admnprov](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318274_upc_edu_pe/IQCvyWcdF39vT6cg4qK90sZFAX_i40df-pF5dZMhBWorchc?e=XexEBF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 - **Captura de entrevista:**
-  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint2/interviews/validation_interview_sprint_2.png)
+
+  <img src="assets/images/cap4/sprint2/interviews/validation_interview_sprint_2.png" alt=“Footer” width="300px">
+
 
 #### **Resumen descriptivo de la entrevista:**
 
@@ -6018,7 +5999,8 @@ Se concluye que se ha realizado una aplicación funcional, útil, eficaz y efici
 - **Duración:** 11 minutos y 20 segundos
 - **Registro audiovisual:** [Pendiente de enlace]
 - **Captura de entrevista:**
-  ![Captura de entrevista a segmento administradores de restaurantes](/assets/images/cap4/sprint2/interviews/validation_interview_lucia_herrera.png)
+  
+<img src="assets/images/cap4/sprint2/interviews/validation_interview_lucia_herrera.png" alt=“Footer” width="300px">
 
 #### **Resumen descriptivo de la entrevista:**
 
@@ -6039,29 +6021,57 @@ La entrevista permitió validar que la aplicación móvil de Restock cumple con 
 
 #### **Entrevista 05 – Ray Saavedra**
 
-**Datos del entrevistado:**  
+**Datos del entrevistado:**
 
-- **Nombre completo:** Ray Saavedra  
-- **Edad:** 29 años  
-- **Distrito:** Pachacamac  
-- **Segmento:** Administradores de restaurantes  
-- **Fecha de entrevista:** 06 de diciembre de 2025  
-- **Duración:** 12 minutos y 50 segundos  
+- **Nombre completo:** Ray Saavedra
+- **Edad:** 29 años
+- **Distrito:** Pachacamac
+- **Segmento:** Administradores de restaurantes
+- **Fecha de entrevista:** 06 de diciembre de 2025
+- **Duración:** 12 minutos y 50 segundos
 - **Registro audiovisual:** https://shorturl.at/oWZVu
-- **Captura de entrevista:**  
-  ![Captura de entrevista a segmento administradores](/assets/images/cap4/sprint3/interview5.png)  
+- **Captura de entrevista:** 
+  
+<img src="assets/images/cap4/sprint3/interview5.png" alt=“Footer” width="300px">
 
-#### **Resumen descriptivo de la entrevista:**  
+#### **Resumen descriptivo de la entrevista:**
 
-Durante la sesión, se presentó el **Landing Page de Restock** a Ray Saavedra para evaluar su percepción sobre la plataforma enfocada en administradores de restaurantes. Ray indicó que el diseño le parecía **moderno y funcional**, y destacó la importancia de que la plataforma permita **controlar el inventario y realizar pedidos de manera eficiente**.  
+Durante la sesión, se presentó el **Landing Page de Restock** a Ray Saavedra para evaluar su percepción sobre la plataforma enfocada en administradores de restaurantes. Ray indicó que el diseño le parecía **moderno y funcional**, y destacó la importancia de que la plataforma permita **controlar el inventario y realizar pedidos de manera eficiente**.
 
-Comentó que las secciones de **“gestión de pedidos” y “visualización de stock”** eran muy relevantes para su día a día, ya que le permitirían **evitar faltantes y mejorar la planificación de compras**. También valoró la función de recibir **notificaciones en tiempo real** sobre los pedidos realizados a proveedores.  
+Comentó que las secciones de **“gestión de pedidos” y “visualización de stock”** eran muy relevantes para su día a día, ya que le permitirían **evitar faltantes y mejorar la planificación de compras**. También valoró la función de recibir **notificaciones en tiempo real** sobre los pedidos realizados a proveedores.
 
-No obstante, sugirió que sería útil incluir una **guía rápida o tutorial inicial** que explique cómo registrar productos, gestionar pedidos y analizar reportes, ya que algunos administradores podrían no estar familiarizados con herramientas digitales. Además, recomendó reforzar la sección de **beneficios para administradores**, mostrando casos de éxito o métricas de optimización de inventario.  
+No obstante, sugirió que sería útil incluir una **guía rápida o tutorial inicial** que explique cómo registrar productos, gestionar pedidos y analizar reportes, ya que algunos administradores podrían no estar familiarizados con herramientas digitales. Además, recomendó reforzar la sección de **beneficios para administradores**, mostrando casos de éxito o métricas de optimización de inventario.
 
-#### **Conclusión general:**  
 
-La entrevista permitió validar que el **Landing Page de Restock es percibido como claro y funcional** para administradores de restaurantes. Se identificó la necesidad de incluir **tutoriales iniciales y reforzar los beneficios específicos** para este segmento, con el fin de mejorar la adopción de la plataforma y optimizar la gestión de inventario y pedidos.
+
+#### **Entrevista 06 – Angel Rivera**
+
+**Datos del entrevistado:**
+
+- **Nombre completo:** Angel Rivera
+- **Edad:** 24 años
+- **Distrito:** Chorrillos
+- **Segmento:** Proveedor de restaurantes
+- **Fecha de entrevista:** 06 de diciembre de 2025
+- **Duración:** 17 minutos y 56 segundos
+- **Registro audiovisual:** https://shorturl.at/uJU1z
+- **Captura de entrevista:**
+
+<img src="assets/images/cap4/sprint3/interview6.png" alt=“Footer” width="300px">
+
+
+#### **Resumen descriptivo de la entrevista:**
+
+Durante la sesión, se presentó la **Aplicación de proveedores de Restock** a Angel Rivera para evaluar su percepción sobre la plataforma enfocada en proveedores de restaurantes. Angel indicó que el diseño le parecía **moderno y funcional**, y destacó la importancia de que la plataforma permita **controlar el inventario y órdenes que recibe**.
+
+Comentó que las secciones de **“gestión de pedidos” y “visualización de stock”** eran muy relevantes para su día a día, ya que le permitirían **evitar faltantes y mejorar la planificación de compras**. También valoró la función de recibir **notificaciones en tiempo real** sobre los pedidos recibidos.
+
+No obstante, sugirió que sería útil incluir una **sección de ingreso de descuentos** para sus clientes más frecuentes. Además, recomendó reforzar la sección de **beneficios para proveedores**, mostrando casos de éxito o métricas de optimización de inventario.
+
+
+#### **Conclusión general:**
+
+La entrevista permitió validar que  la **Aplicación de proveedores de Restock es percibido como clara y funcional** para proveedores de restaurantes. Se identificó la necesidad de incluir **secciones de descuentos** para este segmento, con el fin de mejorar la adopción de la plataforma y optimizar la gestión de inventario y órdenes.
 
 ### 4.3.3. Evaluaciones según heurísticas
 
