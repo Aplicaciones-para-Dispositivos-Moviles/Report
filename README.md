@@ -215,11 +215,11 @@ También se perfeccionaron los artefactos técnicos del Sprint 3, integrando evi
 
 ![Colaboraciones TF1](assets/images/ci-tf1.png)
 
-- **Julio Castro Alejos (`JulioXC4`)**: x commits 
-- **José Jahaziel Guerra Pérez (`jahazielgg`)**: x commits  
-- **Sergio Gino Julca Minaya (`sergioJM05`)**: x commits 
-- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: x commits  
-- **Piero Hugo Elescano León (`PieroHugo`)**: x commits
+- **Julio Castro Alejos (`JulioXC4`)**: 15 commits 
+- **José Jahaziel Guerra Pérez (`jahazielgg`)**: 5 commits  
+- **Sergio Gino Julca Minaya (`sergioJM05`)**: 13 commits 
+- **Gabriela Nicole Shapiama Rivera (`GabrielaShapiama28`)**: 10 commits  
+- **Piero Hugo Elescano León (`PieroHugo`)**: 13 commits
 
 El trabajo del equipo se mantuvo enfocado en asegurar un cierre técnico y documental impecable. La coordinación entre los integrantes permitió refinar la calidad de ambas aplicaciones móviles (Android para administradores y Flutter para proveedores), mejorar artefactos previos y garantizar que el sistema desplegado cumpliera con las funcionalidades y requisitos establecidos en el *product backlog*. Las actividades realizadas durante este hito reflejan una ejecución madura, consistente y alineada con las prácticas profesionales del desarrollo de software.
 
