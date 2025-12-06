@@ -5776,9 +5776,9 @@ Las actividades clave realizadas durante este sprint incluyen:
 
 ![Backend Collaboration S3](assets/images/cap4/collaboration/backend_ci_3.png)
 
-- Total de commits (Backend): **27**
-- Total de autores contribuyentes: **5**
-- Endpoints ajustados durante Sprint 3: **14**
+- Total de commits (Backend): **31**
+- Total de autores contribuyentes: **3**
+- Endpoints ajustados durante Sprint 3: **6**
 - Observación: el backend alcanzó una versión final estable, optimizada y completamente alineada con las necesidades de las aplicaciones Android y Flutter durante este sprint.
 
 
@@ -5798,7 +5798,7 @@ Durante el Sprint 3, la aplicación Android recibió una serie de **correcciones
 
 ![Android Collaboration S3](assets/images/cap4/collaboration/android_ci_3.png)
 
-- Total de commits (Android): **18**
+- Total de commits (Android): **50**
 - Total de autores contribuyentes: **5**
 - Secciones corregidas: **Supplies, Recipes, Sales, Profile, Login**
 - Observación: la aplicación Android cerró el sprint con una versión completamente depurada y validada, lista para producción y totalmente integrada con el backend definitivo.
@@ -5809,11 +5809,9 @@ Durante el Sprint 3 se completó al **100%** la aplicación Flutter destinada a 
 
 El trabajo realizado durante este sprint incluyó:
 
-- Finalización del módulo de **autenticación**, con persistencia local y manejo seguro de tokens.
-- Implementación definitiva de la pantalla **Overview**, con datos reales provenientes del backend.
-- Integración completa de servicios mediante **Dio**, estructurados según el patrón **MVVM**.
-- Implementación del manejo de estado con **Provider** aplicando flujos completos.
-- Optimización de navegación, validación de entradas, manejo de errores y retroalimentación visual.
+- Finalización del módulo de **autenticación (Auth)**, con persistencia local y manejo seguro de tokens.
+- Implementación definitiva de los módulos de **Inventario, Orders y Notifications**, integrados con datos reales provenientes del backend.
+- Optimización de la navegación, validación de entradas, manejo de errores y retroalimentación visual en todas las pantallas.
 - Construcción y empaquetado del **APK final**, distribuido al equipo para pruebas de validación.
 - Validación completa con el backend productivo desplegado en Render.
 
@@ -5822,8 +5820,8 @@ El trabajo realizado durante este sprint incluyó:
 
 ![Flutter Collaboration S3](assets/images/cap4/collaboration/flutter_ci_3.png)
 
-- Total de commits (Flutter): **21**
-- Total de autores contribuyentes: **2**
+- Total de commits (Flutter): **49**
+- Total de autores contribuyentes: **5**
 - Módulos completados: **Login**, **Overview**, **Navegación y Estado**, **Integración Backend**
 - Observación: la aplicación Flutter alcanzó su primera versión completa, estable y plenamente funcional, convirtiéndose en el segundo cliente oficial del ecosistema Restock Platform.
 
