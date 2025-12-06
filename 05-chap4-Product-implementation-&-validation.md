@@ -6,18 +6,18 @@
 
 A continuación, se listan las herramientas y estándares adoptados por el equipo para el desarrollo colaborativo del sistema:
 
-| Actividad               | Herramienta / Guía                                    | Propósito                                                     | Tipo de acceso / Ruta                                                                                                                 |
-| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                      | [https://trello.com/](https://trello.com/)                                                                                               |
-| Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then.   | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                   |
-| Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                               | SaaS –[https://figma.com](https://figma.com)                                                                                            |
-| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                        | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                               |
-| Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                           | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                         |
-| IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                             | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
-| Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                     | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                               |
-| Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                          |
-| Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.       | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                |
-| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                        |
+| Actividad               | Herramienta / Guía                                     | Propósito                                                    | Tipo de acceso / Ruta                                                                                                                       |
+| ----------------------- | ------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Project Management      | Trello                                                 | Seguimiento de backlog, tareas y sprints.                    | [https://trello.com/](https://trello.com/)                                                                                                  |
+| Requirements Management | Gherkin Conventions                                    | Escritura legible de requisitos con formato Given/When/Then. | [https://cucumber.io/docs/gherkin/](https://cucumber.io/docs/gherkin/)                                                                      |
+| Product UX/UI Design    | Figma                                                  | Prototipos y diseño responsive.                              | SaaS –[https://figma.com](https://figma.com)                                                                                                |
+| Frontend Dev            | Kotlin, Flutter, Dart                                  | Construcción del frontend del sistema.                       | https://kotlinlang.org/ / https://flutter.dev/   /   https://dart.dev/                                                                      |
+| Backend Dev             | Java + Spring Boot                                     | Lógica de negocio y servicios REST.                          | [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)                                                            |
+| IDE                     | IntelliJ IDEA + Android Studio                         | Desarrollo, depuración y pruebas.                            | [https://www.jetbrains.com/idea](https://www.jetbrains.com/idea) / [https://www.jetbrains.com/webstorm](https://www.jetbrains.com/webstorm) |
+| Code Standards          | Google Java Style Guide, Google TypeScript Style Guide | Mantener un código consistente y legible.                    | [https://google.github.io/styleguide](https://google.github.io/styleguide)                                                                  |
+| Version Control         | Git + GitHub                                           | Gestión colaborativa del código fuente.                      | SaaS –[https://github.com](https://github.com)                                                                                              |
+| Software Deployment     | Github pages                                           | Despliegue continuo del sistema en ambientes de testing.     | SaaS –[https://railway.app](https://railway.app) / [https://render.com](https://render.com)                                                 |
+| Software Documentation  | Swagger                                                | Documentación de APIs, funcionalidades y criterios técnicos. | SaaS –[https://swagger.io/](https://swagger.io/)                                                                                            |
 
 ### 4.1.2. Source Code Management
 
@@ -5663,20 +5663,20 @@ La documentación completa de todos los endpoints (incluyendo las optimizaciones
 
 ##### **Resumen de impacto del Sprint 3**
 
-| Métrica | Valor |
-|---------|-------|
-| Endpoints optimizados | 14 |
-| Módulos mejorados | 5 (Supplies, Custom Supplies, Recipes, Sales, Profiles) |
-| Errores corregidos en integración | 23+ |
-| Commits relacionados con backend | 27 |
-| Tiempo promedio de respuesta mejorado | -15% |
-| Tasa de errores HTTP 500 reducida | -80% |
+| Métrica                               | Valor                                                   |
+| ------------------------------------- | ------------------------------------------------------- |
+| Endpoints optimizados                 | 14                                                      |
+| Módulos mejorados                     | 5 (Supplies, Custom Supplies, Recipes, Sales, Profiles) |
+| Errores corregidos en integración     | 23+                                                     |
+| Commits relacionados con backend      | 27                                                      |
+| Tiempo promedio de respuesta mejorado | -15%                                                    |
+| Tasa de errores HTTP 500 reducida     | -80%                                                    |
 
 Las optimizaciones implementadas durante el Sprint 3 permitieron alcanzar una estabilidad del 100% en producción, eliminando prácticamente todos los errores de integración reportados por ambas aplicaciones móviles. Esto garantiza una experiencia unificada, robusta y confiable tanto para los administradores de restaurantes (Android) como para los proveedores (Flutter), consolidando la plataforma Restock como un sistema listo para operación real.
 
 #### 4.2.3.7. Software Deployment Evidence for Sprint Review 
 
-A continuación, se describen las actividades realizadas durante el Sprint 3 para asegurar el correcto despliegue y funcionamiento del servicio backend y de la aplicación Android. Debido a que el despliegue se ejecutó nuevamente en la misma plataforma, se reutilizaron y ajustaron los pasos establecidos previamente.
+A continuación, se describen las actividades realizadas durante el Sprint 3 para asegurar el correcto despliegue y funcionamiento del servicio backend, de la aplicación Android y la aplicacion en Flutter. Debido a que el despliegue se ejecutó nuevamente en la misma plataforma, se reutilizaron y ajustaron los pasos establecidos previamente.
 
 ## Despliegue del Backend en Render y conexión con MongoDB Atlas
 
@@ -5754,6 +5754,41 @@ A continuación, se describen las actividades realizadas durante el Sprint 3 par
    <img src="assets/images/cap4/sprint2/deploy/deploy_android7.png" alt="Home" width="600px">
 
 
+## Despliegue de la aplicación Flutter Android mediante Firebase App Distribution
+
+1. **Revisión de configuración en build.gradle**  
+   Se verificó el archivo `android/app/build.gradle` para confirmar que los parámetros como `applicationId`, `minSdkVersion`, `targetSdkVersion`, `versionCode` y `versionName` estaban correctamente configurados.
+
+   <img src="assets/images/cap4/sprint3/deploy/deploy_android1.png" alt="Revisión build.gradle" width="600px">
+
+2. **Construcción del APK**  
+   Se generó el APK en modo release mediante los siguientes comandos:
+   ```bash
+   flutter clean
+   flutter pub get
+   flutter build apk --release
+<img src="assets/images/cap4/sprint3/deploy/deploy_android2.png" alt="Construcción del APK" width="600px">
+
+3. **Ubicación del APK generado**  
+   El archivo APK se encuentra en:
+    build/app/outputs/flutter-apk/app-release.apk
+
+<img src="assets/images/cap4/sprint3/deploy/deploy_android3.png" alt="Ubicación del APK" width="600px">
+
+4. **Registro de la aplicación en Firebase App Distribution**  
+   Se accedió a App Distribution en Firebase y se ingresó el nombre del paquete de la app para registrarla y vincularla al proyecto Firebase.
+
+<img src="assets/images/cap4/sprint3/deploy/deploy_android4.png" alt="Registro en Firebase" width="600px">
+
+5. **Carga del APK en Firebase**  
+   Se subió el archivo APK generado a la sección de App Distribution para preparar la distribución a los testers.
+
+<img src="assets/images/cap4/sprint3/deploy/deploy_android5.png" alt="Carga del APK en Firebase" width="600px">
+
+6. **Finalización de la distribución**  
+  Se completó la distribución seleccionando los testers y confirmando los detalles de la release.
+
+<img src="assets/images/cap4/sprint3/deploy/deploy_android6.png" alt="Finalización de la distribución" width="600px">
 
 #### 4.2.3.8. Team Collaboration Insights during Sprint 
 
