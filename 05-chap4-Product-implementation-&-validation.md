@@ -5345,7 +5345,7 @@ Durante este sprint se realizaron ajustes y mejoras orientadas a optimizar la co
 
 ![Execution Backend S3](assets/images/cap4/sprint3/execution/backend_exec_s3.png)
 
----
+**Link del video:** https://shorturl.at/8hpJb
 
 ##### Aplicación Móvil (Administrador de Restaurantes — Android)  
 **Estado: 100% completada, corregida y validada**
@@ -5371,6 +5371,8 @@ En este sprint se realizaron **correcciones finales** necesarias para consolidar
 - Validación de CRUD completo de Supplies, Recipes y Sales.
 
 ![Execution Android S3](assets/images/cap4/sprint3/execution/android_exec_s3.png)
+
+**Link del video:** https://shorturl.at/hbkpM
 
 ##### Aplicación Móvil (Proveedores — Flutter)  
 **Estado: 100% completada, integrada y desplegada**
@@ -5402,6 +5404,8 @@ Además, la aplicación fue **desplegada como APK** para pruebas y validación f
 - Comportamiento final en entorno productivo.
 
 ![Execution Flutter S3](assets/images/cap4/sprint3/execution/flutter_exec_s3.png)
+
+**Link del video:** https://shorturl.at/c8GUM
 
 #### 4.2.3.6. Services Documentation Evidence for Sprint Review
 
